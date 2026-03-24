@@ -87,7 +87,7 @@
 	<title>Introduction to Propositional Logic | Adaptive Logic Tutor</title>
 	<meta
 		name="description"
-		content="Master propositional logic in 29 lessons with adaptive practice, instant feedback, and spaced repetition."
+		content="Master propositional logic across 29 topics with adaptive practice, instant feedback, and spaced repetition."
 	/>
 	<link rel="canonical" href={canonicalUrl} />
 	<meta property="og:url" content={canonicalUrl} />

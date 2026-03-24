@@ -27,7 +27,7 @@
 	<meta property="og:title" content="Introduction to Propositional Logic" />
 	<meta
 		property="og:description"
-		content="Learn logical reasoning through adaptive practice. Arguments, validity, connectives, truth tables—all auto-graded with spaced repetition."
+		content="Learn logical reasoning through adaptive practice. Covers 29 topics including arguments, validity, connectives, and truth tables, with spaced repetition."
 	/>
 	<meta property="og:image" content="/og-image.png" />
 	<meta property="og:url" content="/" />
@@ -36,7 +36,7 @@
 	<meta name="twitter:title" content="Introduction to Propositional Logic" />
 	<meta
 		name="twitter:description"
-		content="Adaptive tutoring for propositional logic across 29 lessons."
+		content="Adaptive tutoring for propositional logic across 29 topics."
 	/>
 	<meta name="twitter:image" content="/og-image.png" />
 

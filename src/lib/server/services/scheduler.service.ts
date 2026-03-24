@@ -49,10 +49,10 @@ export class SchedulerService {
 			if (isNew) {
 				const prereqs = knowledgeGraph.topics[topicId]?.prerequisites || [];
 
-			const allPrereqsReady = prereqs.every((p) => {
-				const pState = stateMap.get(p.id);
-				return pState && (pState.state === State.Review || pState.state === State.Learning);
-			});
+				const allPrereqsReady = prereqs.every((p) => {
+					const pState = stateMap.get(p.id);
+					return pState && (pState.state === State.Review || pState.state === State.Learning);
+				});
 
 				if (allPrereqsReady) {
 					newTopics.push(topicId);
