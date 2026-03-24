@@ -1,0 +1,5 @@
+export const TASKS_PER_SESSION = 4;
+
+export const SESSION_DURATION_HOURS = 18;
+
+export const DIAGNOSTIC_KNOWN_STABILITY_DAYS = 100;

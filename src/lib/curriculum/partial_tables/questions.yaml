@@ -1,0 +1,698 @@
+- type: mcq
+  question: 'To show $(P \to Q) \land (Q \to R)$ is NOT a tautology, you need:'
+  answer: 3
+  options:
+    - A complete truth table showing all rows
+    - Two rows where it is false
+    - One row where the formula is false
+    - A proof that it is a contradiction
+  hint: 'One counterexample is enough to disprove "always true."'
+  walkthrough: |
+    1. A tautology is true on every row.
+    2. One row where the formula is false disproves this.
+    3. A single counterexample suffices.
+    4. One row where the formula is false is enough.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Find a valuation that makes $(P \land Q) \to R$ false.'
+  answer: 2
+  options:
+    - '$P$=T, $Q$=F, $R$=F'
+    - '$P$=T, $Q$=T, $R$=F'
+    - '$P$=F, $Q$=F, $R$=F'
+    - '$P$=T, $Q$=T, $R$=T'
+  hint: A conditional is false only when the antecedent is true and consequent is false.
+  walkthrough: |
+    1. The main operator is $\to$. It is false when antecedent=T and consequent=F.
+    2. Antecedent $(P \land Q)$=T requires $P$=T and $Q$=T.
+    3. Consequent $R$=F.
+    4. Check: (T$\land$T)$\to$F = T$\to$F = F.
+    5. The correct valuation is $P$=T, $Q$=T, $R$=F.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To show $(P \lor Q)$ is NOT a contradiction, you need:'
+  answer: 1
+  options:
+    - One row where the formula is true
+    - All rows where it is true
+    - A proof that it is a tautology
+    - Two rows where it is true
+  hint: A contradiction is false on every row. One true row disproves this.
+  walkthrough: |
+    1. A contradiction is false on every row.
+    2. Finding one row where the formula is true proves it is not a contradiction.
+    3. Try $P$=T, $Q$=F: T$\lor$F = T. Done.
+    4. One row where the formula is true is enough.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To show $P \to Q$ and $Q \to P$ are NOT equivalent, you need:'
+  answer: 4
+  options:
+    - A complete truth table
+    - A row where both are false
+    - A row where both are true
+    - A row where they have different truth values
+  hint: Equivalence fails when the formulas differ on at least one row.
+  walkthrough: |
+    1. Equivalence means matching on every row.
+    2. One row where they differ breaks equivalence.
+    3. Try $P$=T, $Q$=F: $P \to Q$=F, $Q \to P$=T. They differ.
+    4. A row where they have different truth values disproves equivalence.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: When should you use a complete truth table instead of a partial one?
+  answer: 3
+  options:
+    - When proving a formula is not a tautology
+    - When proving an argument is invalid
+    - When proving a formula IS a tautology (true on every row)
+    - When proving a set is satisfiable
+  hint: 'Partial tables show one row. Proving "for all rows" requires checking all rows.'
+  walkthrough: |
+    1. A partial table finds one example; it cannot prove "for all rows."
+    2. Proving a tautology requires confirming every row is T.
+    3. Only a complete truth table can do this.
+    4. A complete truth table is needed to prove a formula is a tautology.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To prove $P \to Q$, $Q$ $\therefore$ $P$ is invalid, work backward. Set the conclusion $P$=F. What must $Q$ be?'
+  answer: 2
+  options:
+    - $Q$=F to make both premises true
+    - $Q$=T to make premise 2 true
+    - $Q$ can be either; it does not matter
+    - $Q$=F to make the conclusion false
+  hint: 'Premise 2 is $Q$. For it to be true, $Q$ must be T.'
+  walkthrough: |
+    1. Start: $P$=F (conclusion false).
+    2. Premise 2 is $Q$. For it to be true, $Q$=T.
+    3. Check premise 1: $P \to Q$ = F$\to$T = T.
+    4. Both premises true, conclusion false. Bad row found.
+    5. $Q$=T is needed to make premise 2 true.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $A \to B$, $A \to C$ $\therefore$ $B \to C$ is invalid, which assignment works?'
+  answer: 4
+  options:
+    - '$A$=T, $B$=T, $C$=T'
+    - '$A$=T, $B$=F, $C$=T'
+    - '$A$=T, $B$=T, $C$=F'
+    - '$A$=F, $B$=T, $C$=F'
+  hint: 'Force the conclusion $B \to C$ to be false: $B$=T, $C$=F. Then choose $A$ to make premises true.'
+  walkthrough: |
+    1. Conclusion $B \to C$=F requires $B$=T, $C$=F.
+    2. Try $A$=F: $A \to B$=F$\to$T=T. $A \to C$=F$\to$F=T.
+    3. Both premises true, conclusion false.
+    4. The correct assignment is $A$=F, $B$=T, $C$=F.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'Working backward: the conclusion is $\neg P$. To make it false, $P$ must be:'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Either; it does not matter
+    - Cannot be determined
+  hint: '$\neg P$ is false when $P$ is true.'
+  walkthrough: |
+    1. $\neg P$=F requires $P$=T.
+    2. Start with $P$=T, then check whether the premises can all be true.
+    3. $P$ must be true to make $\neg P$ false.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: Can a partial truth table prove an argument is VALID?
+  answer: 3
+  options:
+    - Yes; one row showing premises true and conclusion true is enough
+    - Yes; if the conclusion is always true
+    - No; proving validity requires checking every row for bad rows
+    - No; partial tables can only prove satisfiability
+  hint: Validity means no bad row exists in ANY row. A partial table checks only one.
+  walkthrough: |
+    1. Validity requires: no row has all premises true and conclusion false.
+    2. A partial table checks one row; it cannot guarantee all rows.
+    3. A complete truth table is needed to prove validity.
+    4. No: proving validity requires checking every row, so a complete truth table is needed.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'Working backward to test $P \lor Q$, $\neg P$ $\therefore$ $\neg Q$: set $\neg Q$=F (so $Q$=T). Is there a bad row?'
+  answer: 2
+  options:
+    - No; no assignment makes both premises true
+    - 'Yes; $P$=F, $Q$=T makes both premises true and the conclusion false'
+    - No; $P$ must be true
+    - 'Yes; $P$=T, $Q$=T works'
+  hint: 'Set $Q$=T (conclusion false). Then $\neg P$=T requires $P$=F. Check $P \lor Q$.'
+  walkthrough: |
+    1. Conclusion $\neg Q$=F requires $Q$=T.
+    2. Premise 2: $\neg P$=T requires $P$=F.
+    3. Premise 1: $P \lor Q$ = F$\lor$T = T.
+    4. Both premises true, conclusion false. Bad row found.
+    5. Yes: $P$=F, $Q$=T makes both premises true and the conclusion false.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: What is the purpose of a partial truth table?
+  answer: 4
+  options:
+    - To prove a formula is a tautology
+    - To evaluate every row of a truth table
+    - To prove an argument is valid
+    - 'To find a single row that disproves a claim (e.g., invalidity, non-tautology)'
+  hint: 'Partial tables find one counterexample, not a universal proof.'
+  walkthrough: |
+    1. A partial truth table constructs one row to answer a specific question.
+    2. It can show invalidity (one bad row), non-tautology (one false row), etc.
+    3. It cannot prove universal claims (validity, tautology) that require all rows.
+    4. A partial truth table finds a single row that disproves a claim.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'Find a valuation that makes $\neg (P \to Q)$ true.'
+  answer: 3
+  options:
+    - '$P$=F, $Q$=F'
+    - '$P$=F, $Q$=T'
+    - '$P$=T, $Q$=F'
+    - '$P$=T, $Q$=T'
+  hint: '$\neg (P \to Q)$ is true when $P \to Q$ is false. When is a conditional false?'
+  walkthrough: |
+    1. $\neg (P \to Q)$ is true when $P \to Q$ is false.
+    2. A conditional is false only when the antecedent is true and the consequent is false.
+    3. So $P$=T and $Q$=F makes $P \to Q$=F, and $\neg$(F)=T.
+    4. The correct valuation is $P$=T, $Q$=F.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Which valuation shows $(P \land Q) \lor (P \land R)$ is not a tautology?'
+  answer: 1
+  options:
+    - '$P$=F, $Q$=T, $R$=T'
+    - '$P$=T, $Q$=T, $R$=T'
+    - '$P$=T, $Q$=F, $R$=T'
+    - '$P$=T, $Q$=T, $R$=F'
+  hint: Both disjuncts have $P$ as part of a conjunction. What if $P$ is false?
+  walkthrough: |
+    1. Both disjuncts require $P$=T for the conjunction to be true.
+    2. Set $P$=F: $(F \land T) \lor (F \land T)$ = F $\lor$ F = F.
+    3. The formula is false, so it is not a tautology.
+    4. The correct valuation is $P$=F, $Q$=T, $R$=T.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To show $P \to (Q \to P)$ is NOT a contradiction, find one true row. Which works?'
+  answer: 2
+  options:
+    - '$P$=F, $Q$=F'
+    - '$P$=T, $Q$=T (formula is true)'
+    - '$P$=F, $Q$=T'
+    - No row makes it true
+  hint: 'Try $P$=T. Then the consequent $Q \to P$ becomes $Q \to T$, which is always true.'
+  walkthrough: |
+    1. Set $P$=T, $Q$=T.
+    2. $Q \to P$ = T $\to$ T = T.
+    3. $P \to (Q \to P)$ = T $\to$ T = T.
+    4. The formula is true, so it is not a contradiction. The correct valuation is $P$=T, $Q$=T.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Find a valuation that makes $(P \to Q) \land (P \to \neg Q)$ true.'
+  answer: 4
+  options:
+    - '$P$=T, $Q$=T'
+    - '$P$=T, $Q$=F'
+    - No valuation makes it true
+    - '$P$=F, $Q$=T'
+  hint: Both conjuncts must be true. A conditional with a false antecedent is true.
+  walkthrough: |
+    1. Both conjuncts are conditionals with antecedent $P$.
+    2. Set $P$=F: $F \to Q$=T and $F \to \neg Q$=T regardless of $Q$.
+    3. T $\land$ T = T.
+    4. The correct valuation is $P$=F, $Q$=T (or $Q$=F).
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Which valuation makes $\neg P \land \neg Q$ true?'
+  answer: 3
+  options:
+    - '$P$=T, $Q$=T'
+    - '$P$=T, $Q$=F'
+    - '$P$=F, $Q$=F'
+    - '$P$=F, $Q$=T'
+  hint: 'Both $\neg P$ and $\neg Q$ must be true.'
+  walkthrough: |
+    1. $\neg P$=T requires $P$=F.
+    2. $\neg Q$=T requires $Q$=F.
+    3. Check: $\neg$F $\land$ $\neg$F = T $\land$ T = T.
+    4. The correct valuation is $P$=F, $Q$=F.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To show $P \land \neg P$ is not a tautology, what valuation do you need?'
+  answer: 1
+  options:
+    - 'Any valuation works; $P \land \neg P$ is false on every row'
+    - Only $P$=T works
+    - Only $P$=F works
+    - No single row can show this
+  hint: 'Can $P$ and $\neg P$ ever both be true?'
+  walkthrough: |
+    1. $P \land \neg P$ requires $P$=T and $P$=F simultaneously, which is impossible.
+    2. The formula is false on every row.
+    3. Any valuation produces F, so any valuation shows it is not a tautology.
+    4. Any valuation works.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Find a row where $(P \lor Q) \to P$ is false.'
+  answer: 4
+  options:
+    - '$P$=T, $Q$=T'
+    - '$P$=T, $Q$=F'
+    - '$P$=F, $Q$=F'
+    - '$P$=F, $Q$=T'
+  hint: 'A conditional is false when the antecedent is true and consequent is false. Make $P \lor Q$=T and $P$=F.'
+  walkthrough: |
+    1. The conditional is false when $(P \lor Q)$=T and $P$=F.
+    2. $P$=F means we need $Q$=T for the disjunction to be true.
+    3. Check: $(F \lor T) \to F$ = T $\to$ F = F.
+    4. The correct valuation is $P$=F, $Q$=T.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To show $P \to Q$ and $\neg P \lor Q$ are NOT equivalent, you would need:'
+  answer: 2
+  options:
+    - A row where both are true
+    - A row where they differ in truth value
+    - A row where both are false
+    - A complete truth table
+  hint: Equivalence breaks when two formulas differ on at least one row.
+  walkthrough: |
+    1. Equivalence means matching truth values on every row.
+    2. One row where they differ would disprove equivalence.
+    3. (In fact, $P \to Q$ and $\neg P \lor Q$ are equivalent, so no such row exists.)
+    4. To disprove equivalence, you would need a row where they differ in truth value.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Which row shows $(P \land Q) \to (P \lor Q)$ is not a contradiction?'
+  answer: 3
+  options:
+    - No row makes it true
+    - '$P$=T, $Q$=F only'
+    - '$P$=T, $Q$=T (formula is true)'
+    - '$P$=F, $Q$=F only'
+  hint: 'Try making the antecedent true. If the consequent is also true, the conditional is true.'
+  walkthrough: |
+    1. Set $P$=T, $Q$=T.
+    2. Antecedent: T $\land$ T = T. Consequent: T $\lor$ T = T.
+    3. T $\to$ T = T.
+    4. The formula is true, so it is not a contradiction. The correct valuation is $P$=T, $Q$=T.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Find a valuation making $\neg (P \lor Q)$ true.'
+  answer: 2
+  options:
+    - '$P$=T, $Q$=F'
+    - '$P$=F, $Q$=F'
+    - '$P$=T, $Q$=T'
+    - '$P$=F, $Q$=T'
+  hint: '$\neg (P \lor Q)$ is true when $P \lor Q$ is false.'
+  walkthrough: |
+    1. $\neg (P \lor Q)$ is true when $P \lor Q$ is false.
+    2. A disjunction is false only when both disjuncts are false.
+    3. Set $P$=F, $Q$=F: $\neg$(F $\lor$ F) = $\neg$F = T.
+    4. The correct valuation is $P$=F, $Q$=F.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: Can a partial truth table show that a formula IS a tautology?
+  answer: 1
+  options:
+    - 'No; showing "true on every row" requires checking all rows'
+    - Yes; one true row is enough
+    - Yes; if the formula has no negations
+    - No; partial tables can only show contradictions
+  hint: A tautology is true on every row. Can one row prove that?
+  walkthrough: |
+    1. A tautology requires truth on every row.
+    2. A partial table checks only one row.
+    3. One true row does not prove all rows are true.
+    4. No: showing "true on every row" requires a complete truth table.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Find a valuation making $(P \to Q) \land P \land \neg Q$ true.'
+  answer: 4
+  options:
+    - '$P$=T, $Q$=F'
+    - '$P$=F, $Q$=T'
+    - '$P$=T, $Q$=T'
+    - No valuation makes it true
+  hint: 'The formula requires $P$=T, $\neg Q$=T (so $Q$=F), and $P \to Q$=T. Can all three hold?'
+  walkthrough: |
+    1. $P$=T is required (from the $P$ conjunct).
+    2. $\neg Q$=T requires $Q$=F.
+    3. $P \to Q$ = T $\to$ F = F.
+    4. F $\land$ T $\land$ T = F. No valuation makes the formula true; it is a contradiction.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Which row makes $\neg P \to (Q \lor R)$ false?'
+  answer: 3
+  options:
+    - '$P$=T, $Q$=F, $R$=F'
+    - '$P$=F, $Q$=T, $R$=F'
+    - '$P$=F, $Q$=F, $R$=F'
+    - '$P$=T, $Q$=T, $R$=T'
+  hint: 'A conditional is false when antecedent=T, consequent=F. Make $\neg P$=T and $Q \lor R$=F.'
+  walkthrough: |
+    1. $\neg P$=T requires $P$=F.
+    2. $Q \lor R$=F requires $Q$=F and $R$=F.
+    3. Check: $\neg$F $\to$ (F $\lor$ F) = T $\to$ F = F.
+    4. The correct valuation is $P$=F, $Q$=F, $R$=F.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To show that $P$ and $\neg P$ are not equivalent, which row works?'
+  answer: 1
+  options:
+    - '$P$=T: $P$=T but $\neg P$=F (they differ)'
+    - '$P$=F: both are false'
+    - No row shows a difference
+    - A complete table is required
+  hint: 'Pick any value for $P$ and check whether $P$ and $\neg P$ match.'
+  walkthrough: |
+    1. Set $P$=T: $P$=T but $\neg P$=F.
+    2. They differ on this row.
+    3. One differing row is enough to disprove equivalence.
+    4. $P$=T shows they differ: $P$=T but $\neg P$=F.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'Find a valuation making $(P \land Q) \land \neg P$ true.'
+  answer: 2
+  options:
+    - '$P$=T, $Q$=T'
+    - No valuation makes it true
+    - '$P$=F, $Q$=T'
+    - '$P$=F, $Q$=F'
+  hint: 'The formula requires $P$=T (from $P \land Q$) and $P$=F (from $\neg P$). Can both hold?'
+  walkthrough: |
+    1. $P \land Q$ requires $P$=T.
+    2. $\neg P$ requires $P$=F.
+    3. $P$ cannot be both T and F, so no valuation makes this true.
+    4. No valuation makes it true; the formula is a contradiction.
+  tags:
+    - partial-table-single
+
+- type: mcq
+  question: 'To show $P \lor Q$, $\neg Q$ $\therefore$ $P$ is invalid, set $P$=F. Can you find a bad row?'
+  answer: 4
+  options:
+    - Yes; set $Q$=T
+    - Yes; set $Q$=F
+    - No; you need $P$=T instead
+    - 'No; when $P$=F, making both premises true forces a contradiction'
+  hint: 'If $P$=F, then $P \lor Q$ requires $Q$=T. But $\neg Q$ requires $Q$=F.'
+  walkthrough: |
+    1. Set $P$=F (conclusion false).
+    2. Premise 1: $P \lor Q$ = F $\lor$ Q. For this to be true, $Q$=T.
+    3. Premise 2: $\neg Q$. For this to be true, $Q$=F.
+    4. $Q$ cannot be both T and F. No bad row exists with $P$=F; the argument may be valid.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $P \to Q$, $R \to Q$ $\therefore$ $P \to R$ is invalid, which assignment works?'
+  answer: 1
+  options:
+    - '$P$=T, $Q$=T, $R$=F'
+    - '$P$=T, $Q$=F, $R$=T'
+    - '$P$=F, $Q$=F, $R$=F'
+    - '$P$=T, $Q$=T, $R$=T'
+  hint: 'Make conclusion $P \to R$ false: $P$=T, $R$=F. Then find $Q$ to make both premises true.'
+  walkthrough: |
+    1. Conclusion $P \to R$=F requires $P$=T, $R$=F.
+    2. Premise 1: $P \to Q$ = T $\to$ Q. For this to be true, $Q$=T.
+    3. Premise 2: $R \to Q$ = F $\to$ T = T.
+    4. Both premises true, conclusion false. The correct assignment is $P$=T, $Q$=T, $R$=F.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'Working backward: the conclusion is $P \land Q$. To make it false, what are the options?'
+  answer: 3
+  options:
+    - 'Only $P$=F, $Q$=F'
+    - 'Only $P$=F, $Q$=T'
+    - 'Any row where at least one of $P$, $Q$ is false'
+    - 'Only $P$=T, $Q$=F'
+  hint: A conjunction is false when at least one conjunct is false.
+  walkthrough: |
+    1. $P \land Q$ is false when $P$=F, or $Q$=F, or both are false.
+    2. Three out of four rows make the conjunction false.
+    3. You can try any of these to search for a bad row.
+    4. Any row where at least one of $P$, $Q$ is false makes the conclusion false.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $P \to Q$, $\neg P$ $\therefore$ $\neg Q$ is invalid, which assignment works?'
+  answer: 2
+  options:
+    - '$P$=T, $Q$=T'
+    - '$P$=F, $Q$=T'
+    - '$P$=F, $Q$=F'
+    - '$P$=T, $Q$=F'
+  hint: 'Make conclusion $\neg Q$ false: $Q$=T. Then make $\neg P$ true: $P$=F. Check premise 1.'
+  walkthrough: |
+    1. Conclusion $\neg Q$=F requires $Q$=T.
+    2. Premise 2: $\neg P$=T requires $P$=F.
+    3. Premise 1: $P \to Q$ = F $\to$ T = T.
+    4. Both premises true, conclusion false. The correct assignment is $P$=F, $Q$=T.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To show $P \to Q$, $P \to R$ $\therefore$ $Q \land R$ is invalid, work backward. Set $Q \land R$=F with $Q$=F, $R$=T. What must $P$ be?'
+  answer: 4
+  options:
+    - $P$=T
+    - Either value works
+    - No value of $P$ works
+    - '$P$=F (to make $P \to Q$ true despite $Q$=F)'
+  hint: '$P \to Q$ = $P \to$ F. This is true only when $P$=F.'
+  walkthrough: |
+    1. $Q$=F, $R$=T. Conclusion $Q \land R$ = F $\land$ T = F. Good.
+    2. Premise 1: $P \to Q$ = $P \to$ F. True only if $P$=F.
+    3. Premise 2: $P \to R$ = F $\to$ T = T.
+    4. $P$=F makes both premises true and the conclusion false.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $P \lor Q$ $\therefore$ $P \land Q$ is invalid, which assignment works?'
+  answer: 3
+  options:
+    - '$P$=T, $Q$=T'
+    - '$P$=F, $Q$=F'
+    - '$P$=T, $Q$=F'
+    - No assignment works; the argument is valid
+  hint: 'Make the conclusion $P \land Q$ false while keeping $P \lor Q$ true.'
+  walkthrough: |
+    1. Conclusion $P \land Q$=F: try $P$=T, $Q$=F.
+    2. Premise: $P \lor Q$ = T $\lor$ F = T.
+    3. Premise true, conclusion false.
+    4. The correct assignment is $P$=T, $Q$=F.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To show $\neg P \to Q$, $\neg Q$ $\therefore$ $P$ is invalid, set $P$=F. Does a bad row exist?'
+  answer: 1
+  options:
+    - 'No; $P$=F forces $\neg P$=T, $\neg Q$ forces $Q$=F, and $\neg P \to Q$ = T $\to$ F = F, so premise 1 fails'
+    - Yes; set $Q$=T
+    - Yes; set $Q$=F
+    - No; the argument has no premises
+  hint: 'With $P$=F, $\neg P$=T. Premise 2 requires $Q$=F. Check premise 1: $T \to F$.'
+  walkthrough: |
+    1. Set $P$=F (conclusion false). Then $\neg P$=T.
+    2. Premise 2: $\neg Q$=T requires $Q$=F.
+    3. Premise 1: $\neg P \to Q$ = T $\to$ F = F. Premise 1 is false.
+    4. No bad row exists with $P$=F; the argument may be valid (this is modus tollens in disguise).
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $(P \land Q) \to R$, $R$ $\therefore$ $P$ is invalid, which assignment works?'
+  answer: 2
+  options:
+    - '$P$=T, $Q$=T, $R$=T'
+    - '$P$=F, $Q$=F, $R$=T'
+    - '$P$=T, $Q$=F, $R$=F'
+    - '$P$=F, $Q$=T, $R$=F'
+  hint: Make conclusion $P$=F. Premise 2 requires $R$=T. Then check premise 1.
+  walkthrough: |
+    1. Conclusion $P$=F.
+    2. Premise 2: $R$=T.
+    3. Premise 1: $(P \land Q) \to R$ = (F $\land$ Q) $\to$ T = F $\to$ T = T.
+    4. Both premises true, conclusion false. The correct assignment is $P$=F, $Q$=F, $R$=T.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $P \to Q$, $P \to R$ $\therefore$ $Q \to R$ is invalid, which assignment works?'
+  answer: 1
+  options:
+    - '$P$=F, $Q$=T, $R$=F'
+    - '$P$=T, $Q$=T, $R$=T'
+    - '$P$=T, $Q$=F, $R$=T'
+    - '$P$=F, $Q$=F, $R$=T'
+  hint: 'Make conclusion $Q \to R$ false: $Q$=T, $R$=F. Then choose $P$ to make both premises true.'
+  walkthrough: |
+    1. Conclusion $Q \to R$=F requires $Q$=T, $R$=F.
+    2. Try $P$=F: $P \to Q$ = F$\to$T = T. $P \to R$ = F$\to$F = T. Both premises true.
+    3. Both premises true, conclusion false.
+    4. The correct assignment is $P$=F, $Q$=T, $R$=F.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'Working backward: the conclusion is $P \lor Q$. To make it false, what values are forced?'
+  answer: 3
+  options:
+    - '$P$=T, $Q$=F'
+    - '$P$=F, $Q$=T'
+    - '$P$=F, $Q$=F'
+    - Any combination where one is false
+  hint: A disjunction is false only when both disjuncts are false.
+  walkthrough: |
+    1. $P \lor Q$=F requires both $P$=F and $Q$=F.
+    2. This is the only row where a disjunction is false.
+    3. Working backward from a false disjunction leaves no flexibility.
+    4. Both $P$=F and $Q$=F are forced.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $P \to Q$, $Q \to R$ $\therefore$ $R \to P$ is invalid, which assignment works?'
+  answer: 1
+  options:
+    - '$P$=F, $Q$=F, $R$=T'
+    - '$P$=T, $Q$=T, $R$=T'
+    - '$P$=T, $Q$=F, $R$=T'
+    - '$P$=F, $Q$=T, $R$=F'
+  hint: 'Make conclusion $R \to P$ false: $R$=T, $P$=F. Check if premises can be true. If not, try another approach.'
+  walkthrough: |
+    1. Conclusion $R \to P$=F requires $R$=T, $P$=F.
+    2. Premise 2: $Q \to R$ = $Q \to$ T = T (for any $Q$).
+    3. Premise 1: $P \to Q$ = F $\to$ Q = T (for any $Q$). Set $Q$=F.
+    4. Both premises true, conclusion false. The correct assignment is $P$=F, $Q$=F, $R$=T. Wait: $R$=T was needed. Let me re-check. $P$=F, $Q$=F, $R$=T: premise 1 = F$\to$F=T, premise 2 = F$\to$T=T, conclusion = T$\to$F=F. Correct.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $P$, $Q$ $\therefore$ $P \land Q \land R$ is invalid, which approach works?'
+  answer: 2
+  options:
+    - Set $P$=F
+    - 'Set $R$=F while keeping $P$=T, $Q$=T'
+    - Set $Q$=F
+    - No assignment works; the argument is valid
+  hint: The conclusion has an extra variable $R$ not in the premises.
+  walkthrough: |
+    1. Conclusion $P \land Q \land R$=F: try $R$=F while $P$=T, $Q$=T.
+    2. Premise 1: $P$=T. True.
+    3. Premise 2: $Q$=T. True.
+    4. Conclusion: T $\land$ T $\land$ F = F. Both premises true, conclusion false. Set $R$=F while keeping $P$=T, $Q$=T.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'When working backward, if forcing the conclusion false leads to a premise being false for every attempt, what should you conclude?'
+  answer: 3
+  options:
+    - The argument is definitely invalid
+    - The partial table method has failed
+    - The argument may be valid; a complete truth table is needed to confirm
+    - The argument is definitely valid
+  hint: 'A partial table can only show invalidity, not prove validity.'
+  walkthrough: |
+    1. A partial table searches for a bad row (premises true, conclusion false).
+    2. If no bad row is found, it does not prove validity; there may be untried rows.
+    3. A complete truth table is needed to confirm validity.
+    4. The argument may be valid, but a complete truth table is needed to confirm.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $P \lor Q$, $P \to R$, $Q \to R$ $\therefore$ $R$ is invalid, can you find a bad row?'
+  answer: 4
+  options:
+    - 'Yes; $P$=T, $Q$=T, $R$=F'
+    - 'Yes; $P$=F, $Q$=F, $R$=F'
+    - 'Yes; $P$=T, $Q$=F, $R$=F'
+    - No; every attempt to make $R$=F with premises true fails
+  hint: 'Set $R$=F. Then $P \to R$ requires $P$=F, and $Q \to R$ requires $Q$=F. But $P \lor Q$ = F $\lor$ F = F.'
+  walkthrough: |
+    1. Set $R$=F (conclusion false).
+    2. Premise 2: $P \to R$ = $P \to$ F. True only if $P$=F.
+    3. Premise 3: $Q \to R$ = $Q \to$ F. True only if $Q$=F.
+    4. Premise 1: $P \lor Q$ = F $\lor$ F = F. Premise 1 fails. No bad row exists; the argument may be valid.
+  tags:
+    - partial-table-invalidity
+
+- type: mcq
+  question: 'To prove $\neg P \to Q$, $\neg Q \to P$ $\therefore$ $P \lor Q$ is invalid, can you find a bad row?'
+  answer: 2
+  options:
+    - 'Yes; $P$=T, $Q$=F'
+    - 'No; forcing $P \lor Q$=F means $P$=F and $Q$=F, which makes both premises false'
+    - 'Yes; $P$=F, $Q$=T'
+    - 'Yes; $P$=F, $Q$=F'
+  hint: 'Conclusion $P \lor Q$=F forces $P$=F, $Q$=F. Check the premises.'
+  walkthrough: |
+    1. Conclusion $P \lor Q$=F requires $P$=F, $Q$=F.
+    2. Premise 1: $\neg P \to Q$ = T $\to$ F = F. Premise 1 fails.
+    3. No bad row exists; every way to falsify the conclusion breaks a premise.
+    4. No bad row can be found; the argument may be valid.
+  tags:
+    - partial-table-invalidity

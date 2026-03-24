@@ -1,0 +1,1275 @@
+- type: formula-builder
+  question: 'Translate: "The alarm sounds if and only if there is smoke."'
+  answer: '$(A \leftrightarrow S)$'
+  variableMap:
+    A: The alarm sounds
+    S: There is smoke
+  hint: '"If and only if" signals a biconditional.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $A$. Right side: $S$.
+    3. The translation is $(A \leftrightarrow S)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The door is locked if and only if the key is turned."'
+  answer: '$(D \leftrightarrow K)$'
+  variableMap:
+    D: The door is locked
+    K: The key is turned
+  hint: '"If and only if" signals a biconditional: each side implies the other.'
+  walkthrough: |
+    1. "If and only if" means both directions: $D \to K$ and $K \to D$.
+    2. Together these form the biconditional $\leftrightarrow$: true when both sides share the same truth value.
+    3. Left side: $D$. Right side: $K$.
+    4. The translation is $(D \leftrightarrow K)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "You pass the course if and only if you pass the final."'
+  answer: '$(C \leftrightarrow F)$'
+  variableMap:
+    C: You pass the course
+    F: You pass the final
+  hint: '"If and only if" means each side implies the other.'
+  walkthrough: |
+    1. "If and only if" captures both $C \to F$ (passing the course requires passing the final) and $F \to C$ (passing the final guarantees passing the course).
+    2. This mutual implication is the biconditional $\leftrightarrow$.
+    3. Left side: $C$. Right side: $F$.
+    4. The translation is $(C \leftrightarrow F)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The light is on if and only if the switch is flipped."'
+  answer: '$(L \leftrightarrow S)$'
+  variableMap:
+    L: The light is on
+    S: The switch is flipped
+  hint: '"If and only if" connects two mutually dependent claims.'
+  walkthrough: |
+    1. "If and only if" means $L$ and $S$ rise and fall together: the light is on exactly when the switch is flipped, and off exactly when it is not.
+    2. This mutual dependence is expressed by the biconditional $\leftrightarrow$.
+    3. Left side: $L$. Right side: $S$.
+    4. The translation is $(L \leftrightarrow S)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The circuit is complete if and only if the wire is connected."'
+  answer: '$(C \leftrightarrow W)$'
+  variableMap:
+    C: The circuit is complete
+    W: The wire is connected
+  hint: 'Biconditional: both must share the same truth value.'
+  walkthrough: |
+    1. "If and only if" means $C \leftrightarrow W$: the circuit is complete precisely when the wire is connected, and incomplete precisely when the wire is not connected.
+    2. Left side: $C$. Right side: $W$.
+    3. The translation is $(C \leftrightarrow W)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The heater runs just in case the thermostat detects cold."'
+  answer: '$(H \leftrightarrow T)$'
+  variableMap:
+    H: The heater runs
+    T: The thermostat detects cold
+  hint: '"Just in case" signals a biconditional.'
+  walkthrough: |
+    1. "Just in case" = "if and only if."
+    2. Left side: $H$. Right side: $T$.
+    3. The translation is $(H \leftrightarrow T)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The gate opens exactly when the card is scanned."'
+  answer: '$(G \leftrightarrow C)$'
+  variableMap:
+    G: The gate opens
+    C: The card is scanned
+  hint: '"Exactly when" signals a biconditional.'
+  walkthrough: |
+    1. "Exactly when" = "if and only if."
+    2. Left side: $G$. Right side: $C$.
+    3. The translation is $(G \leftrightarrow C)$.
+  tags:
+    - biconditional-phrases
+
+- type: mcq
+  question: 'Which English phrase does NOT mean the same as "if and only if"?'
+  answer: 4
+  options:
+    - '"just in case"'
+    - '"exactly when"'
+    - '"iff"'
+    - '"only if"'
+  hint: '"Only if" gives just one direction of the conditional, not both.'
+  walkthrough: |
+    1. "Just in case," "exactly when," and "iff" all mean biconditional (both directions).
+    2. "Only if" gives only one direction: $P$ only if $Q$ is $(P \to Q)$, not $(P \leftrightarrow Q)$.
+    3. "Only if" is weaker than "if and only if."
+    4. The answer is "only if": it gives just one direction, not the biconditional.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The backup runs iff the main system fails."'
+  answer: '$(B \leftrightarrow F)$'
+  variableMap:
+    B: The backup runs
+    F: The main system fails
+  hint: '"Iff" (two f''s) is shorthand for "if and only if."'
+  walkthrough: |
+    1. "Iff" = "if and only if" = biconditional.
+    2. Left side: $B$. Right side: $F$.
+    3. The translation is $(B \leftrightarrow F)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The sprinklers activate just in case the temperature exceeds 70°C."'
+  answer: '$(S \leftrightarrow T)$'
+  variableMap:
+    S: The sprinklers activate
+    T: The temperature exceeds 70°C
+  hint: '"Just in case" = biconditional.'
+  walkthrough: |
+    1. "Just in case" signals $\leftrightarrow$.
+    2. Left side: $S$. Right side: $T$.
+    3. The translation is $(S \leftrightarrow T)$.
+  tags:
+    - biconditional-phrases
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is true, what is $(P \leftrightarrow Q)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True only under certain conditions
+  hint: The biconditional is true when both sides have the same truth value.
+  walkthrough: |
+    1. $P$ and $Q$ are both true: same truth values.
+    2. The biconditional is true when both sides match; false when they differ.
+    3. $(P \leftrightarrow Q)$ is true.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $A$ is true and $B$ is false, what is $(A \leftrightarrow B)$?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - 'True, because $A$ is true'
+  hint: Different truth values make the biconditional false.
+  walkthrough: |
+    1. $A$ is true, $B$ is false: different truth values.
+    2. The biconditional is true when both sides match; false when they differ.
+    3. $(A \leftrightarrow B)$ is false.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $R$ is false and $S$ is false, what is $(R \leftrightarrow S)$?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - False; both being false makes it false
+    - Cannot be determined
+  hint: Same truth values (both false) make the biconditional true.
+  walkthrough: |
+    1. $R$ and $S$ are both false: same truth values.
+    2. The biconditional is true when both sides match, even when both are false.
+    3. $(R \leftrightarrow S)$ is true.
+  tags:
+    - compute-biconditional
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \leftrightarrow Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \leftrightarrow Q)$'
+  hiddenFormulas:
+    - '$(P \leftrightarrow Q)$'
+  hint: True when both match; false when they differ.
+  walkthrough: |
+    1. Row 1: T, T → same → T.
+    2. Row 2: T, F → different → F.
+    3. Row 3: F, T → different → F.
+    4. Row 4: F, F → same → T.
+    5. The values are: T, F, F, T.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $X$ is false and $Y$ is true, what is $(X \leftrightarrow Y)$?'
+  answer: 4
+  options:
+    - 'True'
+    - True; at least one is true
+    - Cannot be determined
+    - 'False'
+  hint: Different truth values make the biconditional false.
+  walkthrough: |
+    1. $X$ is false, $Y$ is true: different truth values.
+    2. The biconditional is true when both sides match; false when they differ.
+    3. $(X \leftrightarrow Y)$ is false.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: '$(P \leftrightarrow Q)$ is logically equivalent to which formula?'
+  answer: 2
+  options:
+    - '$(P \to Q)$'
+    - '$(P \to Q) \land (Q \to P)$'
+    - '$(P \to Q) \lor (Q \to P)$'
+    - '$(P \land Q) \to (Q \land P)$'
+  hint: The biconditional is the conjunction of both conditional directions.
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$ means $P$ and $Q$ have the same truth value.
+    2. $(P \to Q)$ gives one direction; $(Q \to P)$ gives the other.
+    3. Both together ($\land$) capture both directions.
+    4. The correct answer is $(P \to Q) \land (Q \to P)$.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'When $P$ = T and $Q$ = F, what is $(P \to Q) \land (Q \to P)$?'
+  answer: 3
+  options:
+    - 'True'
+    - True; one direction is true
+    - 'False'
+    - Cannot be determined
+  hint: 'Compute each conditional, then conjoin.'
+  walkthrough: |
+    1. $(P \to Q)$ = T $\to$ F = F.
+    2. $(Q \to P)$ = F $\to$ T = T.
+    3. F $\land$ T = F.
+    4. This matches $(P \leftrightarrow Q)$ = F (different truth values).
+    5. $(P \to Q) \land (Q \to P)$ is false.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'When $P$ = F and $Q$ = F, what is $(P \to Q) \land (Q \to P)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - False; both conditionals are vacuously true but the conjunction is false
+  hint: 'Both conditionals have false antecedents: vacuously true.'
+  walkthrough: |
+    1. $(P \to Q)$ = F $\to$ F = T (vacuous truth).
+    2. $(Q \to P)$ = F $\to$ F = T (vacuous truth).
+    3. T $\land$ T = T.
+    4. This matches $(P \leftrightarrow Q)$ = T (same truth values).
+    5. $(P \to Q) \land (Q \to P)$ is true.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'Why is $(P \leftrightarrow Q)$ called a "bi-conditional"?'
+  answer: 4
+  options:
+    - It uses two sentence letters
+    - It has two truth values
+    - It has two rows in its truth table
+    - 'It combines two conditionals: $(P \to Q)$ and $(Q \to P)$'
+  hint: '"Bi" means "two." The biconditional is both directions of the conditional.'
+  walkthrough: |
+    1. "Bi" means two.
+    2. The biconditional represents both $P \to Q$ and $Q \to P$.
+    3. It captures the conditional in both directions.
+    4. The biconditional combines two conditionals: $(P \to Q)$ and $(Q \to P)$.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'When $P$ = T and $Q$ = T, do $(P \leftrightarrow Q)$ and $(P \to Q) \land (Q \to P)$ agree?'
+  answer: 1
+  options:
+    - Yes; both evaluate to true
+    - No; the biconditional is true but the conjunction is false
+    - Yes; both evaluate to false
+    - No; they only agree when inputs differ
+  hint: 'Compute both formulas with $P$ = T, $Q$ = T.'
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$: same truth values → T.
+    2. $(P \to Q)$ = T $\to$ T = T. $(Q \to P)$ = T $\to$ T = T. T $\land$ T = T.
+    3. Both give true.
+    4. Yes: both $(P \leftrightarrow Q)$ and $(P \to Q) \land (Q \to P)$ evaluate to true.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'If $A$ is true and $B$ is false, what is $(A \leftrightarrow B)$?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True; $A$ is true
+  hint: The biconditional is true when both sides match; false when they differ.
+  walkthrough: |
+    1. $A$ is true, $B$ is false: different truth values.
+    2. The biconditional is false.
+    3. $(A \leftrightarrow B)$ is false.
+    4. The biconditional is false because the sides differ.
+  tags:
+    - diagnostic
+
+# ===== NEW translate-biconditional questions (15) =====
+
+- type: formula-builder
+  question: 'Translate: "The engine starts if and only if there is fuel."'
+  answer: '$(E \leftrightarrow F)$'
+  variableMap:
+    E: The engine starts
+    F: There is fuel
+  hint: '"If and only if" signals a biconditional.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $E$. Right side: $F$.
+    3. The translation is $(E \leftrightarrow F)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The student graduates if and only if all requirements are met."'
+  answer: '$(G \leftrightarrow R)$'
+  variableMap:
+    G: The student graduates
+    R: All requirements are met
+  hint: '"If and only if" connects two mutually dependent conditions.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $G$. Right side: $R$.
+    3. The translation is $(G \leftrightarrow R)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The pool is open if and only if the lifeguard is on duty."'
+  answer: '$(P \leftrightarrow L)$'
+  variableMap:
+    P: The pool is open
+    L: The lifeguard is on duty
+  hint: Both sides must share the same truth value.
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $P$. Right side: $L$.
+    3. The translation is $(P \leftrightarrow L)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "You earn a bonus if and only if you exceed the sales target."'
+  answer: '$(B \leftrightarrow E)$'
+  variableMap:
+    B: You earn a bonus
+    E: You exceed the sales target
+  hint: 'This is a biconditional: each side implies the other.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $B$. Right side: $E$.
+    3. The translation is $(B \leftrightarrow E)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The file is saved if and only if you press the button."'
+  answer: '$(F \leftrightarrow B)$'
+  variableMap:
+    F: The file is saved
+    B: You press the button
+  hint: 'Biconditional: saved precisely when the button is pressed.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $F$. Right side: $B$.
+    3. The translation is $(F \leftrightarrow B)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The bridge is safe if and only if it passes inspection."'
+  answer: '$(B \leftrightarrow I)$'
+  variableMap:
+    B: The bridge is safe
+    I: The bridge passes inspection
+  hint: '"If and only if" = biconditional.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $B$. Right side: $I$.
+    3. The translation is $(B \leftrightarrow I)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The concert is sold out if and only if every ticket is purchased."'
+  answer: '$(C \leftrightarrow T)$'
+  variableMap:
+    C: The concert is sold out
+    T: Every ticket is purchased
+  hint: 'Standard biconditional form: both sides match in truth value.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $C$. Right side: $T$.
+    3. The translation is $(C \leftrightarrow T)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The server crashes if and only if memory runs out."'
+  answer: '$(S \leftrightarrow M)$'
+  variableMap:
+    S: The server crashes
+    M: Memory runs out
+  hint: 'Biconditional: crash happens precisely when memory is exhausted.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $S$. Right side: $M$.
+    3. The translation is $(S \leftrightarrow M)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The plant grows if and only if it receives sunlight."'
+  answer: '$(G \leftrightarrow S)$'
+  variableMap:
+    G: The plant grows
+    S: The plant receives sunlight
+  hint: '"If and only if" creates a biconditional linking the two claims.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $G$. Right side: $S$.
+    3. The translation is $(G \leftrightarrow S)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The election is valid if and only if a quorum is present."'
+  answer: '$(E \leftrightarrow Q)$'
+  variableMap:
+    E: The election is valid
+    Q: A quorum is present
+  hint: 'Both conditions rise and fall together: biconditional.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $E$. Right side: $Q$.
+    3. The translation is $(E \leftrightarrow Q)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The experiment succeeds if and only if the hypothesis is correct."'
+  answer: '$(E \leftrightarrow H)$'
+  variableMap:
+    E: The experiment succeeds
+    H: The hypothesis is correct
+  hint: 'Biconditional: success matches correctness of the hypothesis.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $E$. Right side: $H$.
+    3. The translation is $(E \leftrightarrow H)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "You get dessert if and only if you finish your dinner."'
+  answer: '$(D \leftrightarrow F)$'
+  variableMap:
+    D: You get dessert
+    F: You finish your dinner
+  hint: '"If and only if" signals $\leftrightarrow$.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $D$. Right side: $F$.
+    3. The translation is $(D \leftrightarrow F)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The account is active if and only if the subscription is paid."'
+  answer: '$(A \leftrightarrow S)$'
+  variableMap:
+    A: The account is active
+    S: The subscription is paid
+  hint: 'Biconditional: active precisely when paid.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $A$. Right side: $S$.
+    3. The translation is $(A \leftrightarrow S)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The road is closed if and only if construction is underway."'
+  answer: '$(R \leftrightarrow C)$'
+  variableMap:
+    R: The road is closed
+    C: Construction is underway
+  hint: 'Both conditions are equivalent: biconditional.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $R$. Right side: $C$.
+    3. The translation is $(R \leftrightarrow C)$.
+  tags:
+    - translate-biconditional
+
+- type: formula-builder
+  question: 'Translate: "The test is graded if and only if all students have submitted."'
+  answer: '$(T \leftrightarrow S)$'
+  variableMap:
+    T: The test is graded
+    S: All students have submitted
+  hint: '"If and only if" = biconditional.'
+  walkthrough: |
+    1. "If and only if" signals $\leftrightarrow$.
+    2. Left side: $T$. Right side: $S$.
+    3. The translation is $(T \leftrightarrow S)$.
+  tags:
+    - translate-biconditional
+
+# ===== NEW biconditional-phrases questions (15) =====
+
+- type: formula-builder
+  question: 'Translate: "The sensor triggers just in case motion is detected."'
+  answer: '$(S \leftrightarrow M)$'
+  variableMap:
+    S: The sensor triggers
+    M: Motion is detected
+  hint: '"Just in case" signals a biconditional.'
+  walkthrough: |
+    1. "Just in case" = "if and only if."
+    2. Left side: $S$. Right side: $M$.
+    3. The translation is $(S \leftrightarrow M)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The museum is free exactly when it is the first Sunday of the month."'
+  answer: '$(F \leftrightarrow S)$'
+  variableMap:
+    F: The museum is free
+    S: It is the first Sunday of the month
+  hint: '"Exactly when" signals a biconditional.'
+  walkthrough: |
+    1. "Exactly when" = "if and only if."
+    2. Left side: $F$. Right side: $S$.
+    3. The translation is $(F \leftrightarrow S)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The network is secure iff the firewall is active."'
+  answer: '$(N \leftrightarrow F)$'
+  variableMap:
+    N: The network is secure
+    F: The firewall is active
+  hint: '"Iff" (two f''s) is shorthand for "if and only if."'
+  walkthrough: |
+    1. "Iff" = "if and only if" = biconditional.
+    2. Left side: $N$. Right side: $F$.
+    3. The translation is $(N \leftrightarrow F)$.
+  tags:
+    - biconditional-phrases
+
+- type: mcq
+  question: Which phrase signals a biconditional?
+  answer: 3
+  options:
+    - '"If...then"'
+    - '"Unless"'
+    - '"Exactly when"'
+    - '"Or"'
+  hint: A biconditional requires both directions of implication.
+  walkthrough: |
+    1. "If...then" is a one-direction conditional. "Unless" is a form of disjunction. "Or" is disjunction.
+    2. "Exactly when" means "if and only if," which is the biconditional.
+    3. The correct answer is "exactly when."
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The project is approved just in case the budget is sufficient."'
+  answer: '$(P \leftrightarrow B)$'
+  variableMap:
+    P: The project is approved
+    B: The budget is sufficient
+  hint: '"Just in case" = biconditional.'
+  walkthrough: |
+    1. "Just in case" signals $\leftrightarrow$.
+    2. Left side: $P$. Right side: $B$.
+    3. The translation is $(P \leftrightarrow B)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "You qualify for the discount exactly when you are a member."'
+  answer: '$(D \leftrightarrow M)$'
+  variableMap:
+    D: You qualify for the discount
+    M: You are a member
+  hint: '"Exactly when" = "if and only if."'
+  walkthrough: |
+    1. "Exactly when" signals $\leftrightarrow$.
+    2. Left side: $D$. Right side: $M$.
+    3. The translation is $(D \leftrightarrow M)$.
+  tags:
+    - biconditional-phrases
+
+- type: mcq
+  question: 'What is the difference between "if" and "iff"?'
+  answer: 4
+  options:
+    - 'They mean the same thing; "iff" is just informal'
+    - '"Iff" means "only if" while "if" means "if...then"'
+    - '"If" is a biconditional while "iff" is a conditional'
+    - '"If" gives one direction (conditional); "iff" gives both directions (biconditional)'
+  hint: '"Iff" has two f''s and two directions.'
+  walkthrough: |
+    1. "If P then Q" gives one direction: $P \to Q$.
+    2. "P iff Q" gives both directions: $P \to Q$ and $Q \to P$, combined as $P \leftrightarrow Q$.
+    3. The extra "f" signals the extra direction.
+    4. "If" gives one direction (conditional); "iff" gives both directions (biconditional).
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The contract is binding iff both parties have signed."'
+  answer: '$(C \leftrightarrow S)$'
+  variableMap:
+    C: The contract is binding
+    S: Both parties have signed
+  hint: '"Iff" = biconditional.'
+  walkthrough: |
+    1. "Iff" = "if and only if."
+    2. Left side: $C$. Right side: $S$.
+    3. The translation is $(C \leftrightarrow S)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The train departs exactly when the signal turns green."'
+  answer: '$(T \leftrightarrow G)$'
+  variableMap:
+    T: The train departs
+    G: The signal turns green
+  hint: '"Exactly when" signals a biconditional.'
+  walkthrough: |
+    1. "Exactly when" = "if and only if."
+    2. Left side: $T$. Right side: $G$.
+    3. The translation is $(T \leftrightarrow G)$.
+  tags:
+    - biconditional-phrases
+
+- type: mcq
+  question: 'Which of the following correctly translates "P just in case Q"?'
+  answer: 1
+  options:
+    - '$(P \leftrightarrow Q)$'
+    - '$(P \to Q)$'
+    - '$(Q \to P)$'
+    - '$(P \land Q)$'
+  hint: '"Just in case" means "if and only if."'
+  walkthrough: |
+    1. "Just in case" is a biconditional phrase meaning "if and only if."
+    2. "If and only if" translates to $\leftrightarrow$.
+    3. The correct translation is $(P \leftrightarrow Q)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The warning light is on just in case the oil pressure is low."'
+  answer: '$(W \leftrightarrow O)$'
+  variableMap:
+    W: The warning light is on
+    O: The oil pressure is low
+  hint: '"Just in case" = "if and only if."'
+  walkthrough: |
+    1. "Just in case" signals $\leftrightarrow$.
+    2. Left side: $W$. Right side: $O$.
+    3. The translation is $(W \leftrightarrow O)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The door unlocks exactly when the correct code is entered."'
+  answer: '$(D \leftrightarrow C)$'
+  variableMap:
+    D: The door unlocks
+    C: The correct code is entered
+  hint: '"Exactly when" = biconditional.'
+  walkthrough: |
+    1. "Exactly when" = "if and only if."
+    2. Left side: $D$. Right side: $C$.
+    3. The translation is $(D \leftrightarrow C)$.
+  tags:
+    - biconditional-phrases
+
+- type: mcq
+  question: Which of these phrases does NOT express a biconditional?
+  answer: 2
+  options:
+    - '"P iff Q"'
+    - '"P whenever Q"'
+    - '"P just in case Q"'
+    - '"P exactly when Q"'
+  hint: '"Whenever" gives only one direction: it means "if Q then P."'
+  walkthrough: |
+    1. "Iff," "just in case," and "exactly when" all mean "if and only if" (biconditional).
+    2. "Whenever" means "if Q then P," which is only one direction: a conditional, not a biconditional.
+    3. The answer is "P whenever Q": it does not express a biconditional.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The program compiles iff there are no syntax errors."'
+  answer: '$(P \leftrightarrow N)$'
+  variableMap:
+    P: The program compiles
+    N: There are no syntax errors
+  hint: '"Iff" = "if and only if."'
+  walkthrough: |
+    1. "Iff" = "if and only if" = biconditional.
+    2. Left side: $P$. Right side: $N$.
+    3. The translation is $(P \leftrightarrow N)$.
+  tags:
+    - biconditional-phrases
+
+- type: formula-builder
+  question: 'Translate: "The vote passes just in case a majority agrees."'
+  answer: '$(V \leftrightarrow M)$'
+  variableMap:
+    V: The vote passes
+    M: A majority agrees
+  hint: '"Just in case" = biconditional.'
+  walkthrough: |
+    1. "Just in case" signals $\leftrightarrow$.
+    2. Left side: $V$. Right side: $M$.
+    3. The translation is $(V \leftrightarrow M)$.
+  tags:
+    - biconditional-phrases
+
+# ===== NEW compute-biconditional questions (15) =====
+
+- type: mcq
+  question: 'If $M$ is true and $N$ is true, what is $(M \leftrightarrow N)$?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - False; both being true does not help
+  hint: Same truth values make the biconditional true.
+  walkthrough: |
+    1. $M$ is true, $N$ is true: same truth values.
+    2. The biconditional is true when both sides match.
+    3. $(M \leftrightarrow N)$ is true.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $C$ is false and $D$ is true, what is $(C \leftrightarrow D)$?'
+  answer: 3
+  options:
+    - 'True'
+    - True; at least one side is true
+    - 'False'
+    - Cannot be determined
+  hint: Different truth values make the biconditional false.
+  walkthrough: |
+    1. $C$ is false, $D$ is true: different truth values.
+    2. The biconditional requires matching values to be true.
+    3. $(C \leftrightarrow D)$ is false.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $E$ is false and $F$ is false, what is $(E \leftrightarrow F)$?'
+  answer: 1
+  options:
+    - 'True'
+    - False; both false means the biconditional is false
+    - 'False'
+    - Cannot be determined
+  hint: 'Both sides are false, so they match.'
+  walkthrough: |
+    1. $E$ is false, $F$ is false: same truth values.
+    2. The biconditional is true when both sides match, even if both are false.
+    3. $(E \leftrightarrow F)$ is true.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $G$ is true and $H$ is false, what is $(G \leftrightarrow H)$?'
+  answer: 4
+  options:
+    - 'True'
+    - True; $G$ being true is sufficient
+    - Cannot be determined
+    - 'False'
+  hint: Different truth values make the biconditional false.
+  walkthrough: |
+    1. $G$ is true, $H$ is false: different truth values.
+    2. The biconditional requires both sides to match.
+    3. $(G \leftrightarrow H)$ is false.
+  tags:
+    - compute-biconditional
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \leftrightarrow B)$.'
+  formulas:
+    - $A$
+    - $B$
+    - '$(A \leftrightarrow B)$'
+  hiddenFormulas:
+    - '$(A \leftrightarrow B)$'
+  hint: The biconditional is true when both sides match.
+  walkthrough: |
+    1. Row 1: T, T: same: T.
+    2. Row 2: T, F: different: F.
+    3. Row 3: F, T: different: F.
+    4. Row 4: F, F: same: T.
+    5. The values are: T, F, F, T.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: How many rows of the biconditional truth table yield true?
+  answer: 2
+  options:
+    - One
+    - Two
+    - Three
+    - Four
+  hint: The biconditional is true when both sides match. How many matching rows are there?
+  walkthrough: |
+    1. The biconditional is true when both are true (row 1) and when both are false (row 4).
+    2. It is false in the other two rows (T/F and F/T).
+    3. Two rows yield true.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is false, what is $\neg(P \leftrightarrow Q)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True only if $P$ is also false
+  hint: 'First compute $(P \leftrightarrow Q)$, then negate.'
+  walkthrough: |
+    1. $P$ = true, $Q$ = false: different truth values.
+    2. $(P \leftrightarrow Q)$ = false.
+    3. $\neg$false = true.
+    4. $\neg(P \leftrightarrow Q)$ is true.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $A$ is false and $B$ is false, what is $\neg(A \leftrightarrow B)$?'
+  answer: 3
+  options:
+    - 'True'
+    - True; negation flips the result
+    - 'False'
+    - Cannot be determined
+  hint: 'First compute the biconditional, then negate.'
+  walkthrough: |
+    1. $A$ = false, $B$ = false: same truth values.
+    2. $(A \leftrightarrow B)$ = true.
+    3. $\neg$true = false.
+    4. $\neg(A \leftrightarrow B)$ is false.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'The biconditional $(P \leftrightarrow Q)$ is false. What can you conclude?'
+  answer: 4
+  options:
+    - Both $P$ and $Q$ are false
+    - Both $P$ and $Q$ are true
+    - $P$ and $Q$ have the same truth value
+    - $P$ and $Q$ have different truth values
+  hint: The biconditional is false exactly when the two sides differ.
+  walkthrough: |
+    1. The biconditional is true when both sides match and false when they differ.
+    2. If $(P \leftrightarrow Q)$ is false, $P$ and $Q$ must have different truth values.
+    3. One is true and the other is false, though we do not know which is which.
+    4. $P$ and $Q$ have different truth values.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $P$ is true, $Q$ is false, and $R$ is true, what is $(P \leftrightarrow Q) \lor R$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - False; the biconditional fails
+  hint: 'Compute the biconditional first, then the disjunction.'
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$: T and F differ, so false.
+    2. $(P \leftrightarrow Q) \lor R$ = F $\lor$ T = true.
+    3. The disjunction is true because $R$ is true.
+    4. $(P \leftrightarrow Q) \lor R$ is true.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $P$ is true, $Q$ is true, and $R$ is false, what is $(P \leftrightarrow Q) \land R$?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - True; the biconditional is true
+    - Cannot be determined
+  hint: 'Compute the biconditional first, then the conjunction.'
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$: T and T match, so true.
+    2. $(P \leftrightarrow Q) \land R$ = T $\land$ F = false.
+    3. The conjunction is false because $R$ is false.
+    4. $(P \leftrightarrow Q) \land R$ is false.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'Which truth-value assignment makes $(P \leftrightarrow Q)$ true?'
+  answer: 3
+  options:
+    - '$P$ = T, $Q$ = F'
+    - '$P$ = F, $Q$ = T'
+    - '$P$ = F, $Q$ = F'
+    - No assignment makes it true
+  hint: The biconditional is true when both sides match.
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$ is true when $P$ and $Q$ have the same truth value.
+    2. $P$ = T, $Q$ = F: different: false. $P$ = F, $Q$ = T: different: false.
+    3. $P$ = F, $Q$ = F: same: true.
+    4. $P$ = F and $Q$ = F makes the biconditional true.
+  tags:
+    - compute-biconditional
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg(P \leftrightarrow Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg(P \leftrightarrow Q)$'
+  hiddenFormulas:
+    - '$\neg(P \leftrightarrow Q)$'
+  hint: 'Compute $(P \leftrightarrow Q)$ first, then negate each row.'
+  walkthrough: |
+    1. Row 1: T, T: biconditional = T, negated = F.
+    2. Row 2: T, F: biconditional = F, negated = T.
+    3. Row 3: F, T: biconditional = F, negated = T.
+    4. Row 4: F, F: biconditional = T, negated = F.
+    5. The values are: F, T, T, F.
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'The biconditional $(P \leftrightarrow Q)$ is true. What can you conclude?'
+  answer: 2
+  options:
+    - Both $P$ and $Q$ must be true
+    - $P$ and $Q$ have the same truth value (both true or both false)
+    - $P$ and $Q$ have different truth values
+    - At least one of $P$ or $Q$ is true
+  hint: 'The biconditional is true in two cases: TT and FF.'
+  walkthrough: |
+    1. The biconditional is true when both sides match.
+    2. This can happen when both are true or when both are false.
+    3. We cannot determine which case holds, only that $P$ and $Q$ agree.
+    4. $P$ and $Q$ have the same truth value (both true or both false).
+  tags:
+    - compute-biconditional
+
+- type: mcq
+  question: 'If $P$ is false, $Q$ is true, and $R$ is false, what is $(P \leftrightarrow Q) \leftrightarrow R$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True only if $R$ is true
+  hint: 'Compute the inner biconditional first, then the outer one.'
+  walkthrough: |
+    1. Inner: $(P \leftrightarrow Q)$ = F $\leftrightarrow$ T = false (different values).
+    2. Outer: false $\leftrightarrow R$ = F $\leftrightarrow$ F = true (same values).
+    3. $(P \leftrightarrow Q) \leftrightarrow R$ is true.
+  tags:
+    - compute-biconditional
+
+# ===== NEW double-conditional questions (15) =====
+
+- type: mcq
+  question: 'When $P$ = T and $Q$ = T, what is $(P \to Q) \land (Q \to P)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True only if both conditionals are independently true
+  hint: 'Compute each conditional separately, then conjoin.'
+  walkthrough: |
+    1. $(P \to Q)$ = T $\to$ T = T.
+    2. $(Q \to P)$ = T $\to$ T = T.
+    3. T $\land$ T = T.
+    4. $(P \to Q) \land (Q \to P)$ is true.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'When $P$ = F and $Q$ = T, what is $(P \to Q) \land (Q \to P)$?'
+  answer: 3
+  options:
+    - 'True'
+    - True; both conditionals are vacuously true
+    - 'False'
+    - Cannot be determined
+  hint: 'One conditional has a false antecedent; the other has T $\to$ F.'
+  walkthrough: |
+    1. $(P \to Q)$ = F $\to$ T = T (vacuously true).
+    2. $(Q \to P)$ = T $\to$ F = F.
+    3. T $\land$ F = F.
+    4. $(P \to Q) \land (Q \to P)$ is false.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'Why does $(P \leftrightarrow Q)$ require BOTH directions of the conditional?'
+  answer: 2
+  options:
+    - Because one direction is always false
+    - 'Because $P \to Q$ alone allows $Q$ to be true without $P$; adding $Q \to P$ closes that gap'
+    - Because two conditionals are always stronger than one
+    - 'Because $P \to Q$ and $Q \to P$ are always equivalent'
+  hint: '$P \to Q$ alone permits $P$ = F and $Q$ = T. Does the biconditional allow that?'
+  walkthrough: |
+    1. $(P \to Q)$ alone is true when $P$ = F and $Q$ = T.
+    2. But $(P \leftrightarrow Q)$ is false when $P$ and $Q$ differ.
+    3. Adding $(Q \to P)$ rules out $Q$ = T, $P$ = F, closing the gap.
+    4. $P \to Q$ alone allows $Q$ to be true without $P$; adding $Q \to P$ closes that gap.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'Is $(P \to Q)$ by itself equivalent to $(P \leftrightarrow Q)$?'
+  answer: 4
+  options:
+    - Yes; both say $P$ and $Q$ are related
+    - Yes; the biconditional is just another way to write a conditional
+    - 'No; $(P \to Q)$ is stronger than $(P \leftrightarrow Q)$'
+    - 'No; $(P \to Q)$ gives only one direction while the biconditional requires both'
+  hint: Check whether they agree on all four rows of the truth table.
+  walkthrough: |
+    1. When $P$ = F and $Q$ = T: $(P \to Q)$ = T, but $(P \leftrightarrow Q)$ = F.
+    2. They disagree, so they are not equivalent.
+    3. The conditional gives only one direction; the biconditional requires both.
+    4. No: $(P \to Q)$ gives only one direction while the biconditional requires both.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'When $P$ = F and $Q$ = F, does $(P \leftrightarrow Q)$ agree with $(P \to Q) \land (Q \to P)$?'
+  answer: 1
+  options:
+    - Yes; both evaluate to true
+    - No; the biconditional is false but the conjunction is true
+    - Yes; both evaluate to false
+    - No; they disagree when both inputs are false
+  hint: Both conditionals have false antecedents.
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$: F and F match, so true.
+    2. $(P \to Q)$ = F $\to$ F = T. $(Q \to P)$ = F $\to$ F = T. T $\land$ T = T.
+    3. Both formulas give true.
+    4. Yes: both evaluate to true.
+  tags:
+    - double-conditional
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q) \land (Q \to P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \to Q) \land (Q \to P)$'
+  hiddenFormulas:
+    - '$(P \to Q) \land (Q \to P)$'
+  hint: 'Compute each conditional per row, then conjoin.'
+  walkthrough: |
+    1. Row 1: T, T: (T$\to$T) $\land$ (T$\to$T) = T $\land$ T = T.
+    2. Row 2: T, F: (T$\to$F) $\land$ (F$\to$T) = F $\land$ T = F.
+    3. Row 3: F, T: (F$\to$T) $\land$ (T$\to$F) = T $\land$ F = F.
+    4. Row 4: F, F: (F$\to$F) $\land$ (F$\to$F) = T $\land$ T = T.
+    5. The values match $(P \leftrightarrow Q)$: T, F, F, T.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'Which formula is logically equivalent to $(A \leftrightarrow B)$?'
+  answer: 3
+  options:
+    - '$(A \to B) \lor (B \to A)$'
+    - '$(A \land B) \to (A \lor B)$'
+    - '$(A \to B) \land (B \to A)$'
+    - '$(A \lor B) \to (A \land B)$'
+  hint: The biconditional is the conjunction of both conditional directions.
+  walkthrough: |
+    1. $(A \leftrightarrow B)$ means $A$ and $B$ share the same truth value.
+    2. $(A \to B)$ gives one direction. $(B \to A)$ gives the other.
+    3. Their conjunction captures both directions.
+    4. The correct answer is $(A \to B) \land (B \to A)$.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: '$(P \to Q) \lor (Q \to P)$ is a tautology. Is it equivalent to $(P \leftrightarrow Q)$?'
+  answer: 2
+  options:
+    - Yes; disjunction and conjunction of the same parts are equivalent
+    - 'No; the disjunction is always true, but the biconditional is not'
+    - Yes; both express the biconditional
+    - No; the disjunction is never true
+  hint: 'A tautology is true in all rows. Is $(P \leftrightarrow Q)$ true in all rows?'
+  walkthrough: |
+    1. $(P \to Q) \lor (Q \to P)$ is always true (a tautology).
+    2. $(P \leftrightarrow Q)$ is false when $P$ and $Q$ differ (e.g., T, F).
+    3. They disagree in at least one row, so they are not equivalent.
+    4. No: the disjunction is always true, but the biconditional is not.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'What does the "bi" in "biconditional" refer to?'
+  answer: 4
+  options:
+    - Two sentence letters
+    - Two truth values
+    - Two rows in the truth table
+    - Two directions of implication
+  hint: '"Bi" means two. What two things does the biconditional combine?'
+  walkthrough: |
+    1. The biconditional combines $P \to Q$ (one direction) and $Q \to P$ (the other).
+    2. "Bi" refers to these two conditional directions.
+    3. The biconditional is the conjunction of both directions.
+    4. "Bi" refers to two directions of implication.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'If $(P \to Q)$ is true and $(Q \to P)$ is false, what is $(P \leftrightarrow Q)$?'
+  answer: 3
+  options:
+    - True; one direction being true is enough
+    - Cannot be determined
+    - False; the biconditional requires both directions to be true
+    - True; the first conditional is what matters
+  hint: The biconditional equals the conjunction of both conditionals.
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$ = $(P \to Q) \land (Q \to P)$.
+    2. T $\land$ F = F.
+    3. One direction failing is enough to make the biconditional false.
+    4. False: the biconditional requires both directions to be true.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'If $(P \to Q)$ is true and $(Q \to P)$ is true, what is $(P \leftrightarrow Q)$?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True; both directions hold, so the biconditional holds'
+    - Cannot be determined without knowing $P$ and $Q$
+    - True only if $P$ equals $Q$
+  hint: The biconditional is the conjunction of both directions.
+  walkthrough: |
+    1. $(P \leftrightarrow Q)$ = $(P \to Q) \land (Q \to P)$.
+    2. T $\land$ T = T.
+    3. Both directions hold, so the biconditional is true.
+    4. True: both directions hold, so the biconditional holds.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'When $P$ = T and $Q$ = F, which of the two conditionals in the double-conditional is false?'
+  answer: 1
+  options:
+    - '$(P \to Q)$, because T $\to$ F = F'
+    - '$(Q \to P)$, because F $\to$ T = F'
+    - Both are false
+    - Neither; both are true
+  hint: 'Compute each conditional: $P \to Q$ and $Q \to P$.'
+  walkthrough: |
+    1. $(P \to Q)$ = T $\to$ F = F.
+    2. $(Q \to P)$ = F $\to$ T = T.
+    3. Only $(P \to Q)$ is false.
+    4. $(P \to Q)$ is false, because T $\to$ F = F.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'When $P$ = F and $Q$ = T, which of the two conditionals in the double-conditional is false?'
+  answer: 4
+  options:
+    - '$(P \to Q)$, because F $\to$ T = F'
+    - Both are false
+    - Neither; both are true
+    - '$(Q \to P)$, because T $\to$ F = F'
+  hint: A conditional with a false antecedent is vacuously true.
+  walkthrough: |
+    1. $(P \to Q)$ = F $\to$ T = T (vacuously true).
+    2. $(Q \to P)$ = T $\to$ F = F.
+    3. Only $(Q \to P)$ is false.
+    4. $(Q \to P)$ is false, because T $\to$ F = F.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'Compare the truth tables of $(P \leftrightarrow Q)$ and $(P \to Q) \land (Q \to P)$. In how many rows do they agree?'
+  answer: 3
+  options:
+    - Two
+    - Three
+    - All four
+    - They never agree
+  hint: 'They are logically equivalent, so they agree everywhere.'
+  walkthrough: |
+    1. Row 1 (T,T): biconditional = T, conjunction = T. Agree.
+    2. Row 2 (T,F): biconditional = F, conjunction = F. Agree.
+    3. Row 3 (F,T): biconditional = F, conjunction = F. Agree.
+    4. Row 4 (F,F): biconditional = T, conjunction = T. Agree.
+    5. They agree in all four rows because they are logically equivalent.
+  tags:
+    - double-conditional
+
+- type: mcq
+  question: 'If someone says "$P$ if and only if $Q$," they are asserting two claims. Which two?'
+  answer: 2
+  options:
+    - '"$P$ or $Q$" and "$Q$ or $P$"'
+    - '"If $P$ then $Q$" and "if $Q$ then $P$"'
+    - '"$P$ and $Q$" and "not $P$ and not $Q$"'
+    - '"$P$ is true" and "$Q$ is true"'
+  hint: '"If and only if" breaks into "if" (one direction) and "only if" (the other).'
+  walkthrough: |
+    1. "P if Q" means $Q \to P$. "P only if Q" means $P \to Q$.
+    2. Together: $P \to Q$ and $Q \to P$, which is the biconditional.
+    3. The two claims are "if $P$ then $Q$" and "if $Q$ then $P$."
+  tags:
+    - double-conditional

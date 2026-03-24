@@ -1,0 +1,922 @@
+- type: formula-builder
+  question: 'Translate: "The flight departs only if the weather is clear."'
+  answer: '$(D \to W)$'
+  variableMap:
+    D: The flight departs
+    W: The weather is clear
+  hint: '"A only if B" translates to $(A \to B)$. The clause before "only if" is the antecedent.'
+  walkthrough: |
+    1. "Only if" identifies the consequent: "the weather is clear" = $W$.
+    2. The clause before "only if" is the antecedent: "the flight departs" = $D$.
+    3. "A only if B" becomes $(A \to B)$.
+    4. The translation is $(D \to W)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "You graduate only if you complete all courses."'
+  answer: '$(G \to C)$'
+  variableMap:
+    G: You graduate
+    C: You complete all courses
+  hint: '"A only if B" means $(A \to B)$.'
+  walkthrough: |
+    1. Antecedent (before "only if"): "You graduate" = $G$.
+    2. Consequent (after "only if"): "You complete all courses" = $C$.
+    3. The translation is $(G \to C)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The door opens only if you scan your badge."'
+  answer: '$(D \to S)$'
+  variableMap:
+    D: The door opens
+    S: You scan your badge
+  hint: 'The clause after "only if" is the consequent.'
+  walkthrough: |
+    1. Antecedent: "The door opens" = $D$.
+    2. Consequent: "You scan your badge" = $S$.
+    3. The translation is $(D \to S)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "Only if the test is negative may you enter."'
+  answer: '$(E \to N)$'
+  variableMap:
+    E: You may enter
+    N: The test is negative
+  hint: '"Only if" still points to the consequent, even when at the start.'
+  walkthrough: |
+    1. "Only if" introduces the consequent: "the test is negative" = $N$.
+    2. The remaining clause is the antecedent: "you may enter" = $E$.
+    3. The translation is $(E \to N)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The plant blooms only if it gets sunlight."'
+  answer: '$(B \to S)$'
+  variableMap:
+    B: The plant blooms
+    S: The plant gets sunlight
+  hint: '"A only if B" translates to $(A \to B)$.'
+  walkthrough: |
+    1. Antecedent: "The plant blooms" = $B$.
+    2. Consequent: "The plant gets sunlight" = $S$.
+    3. The translation is $(B \to S)$.
+  tags:
+    - translate-only-if
+
+- type: mcq
+  question: 'In $(P \to Q)$, which is the sufficient condition?'
+  answer: 1
+  options:
+    - $P$ (the antecedent)
+    - $Q$ (the consequent)
+    - Both $P$ and $Q$
+    - Neither
+  hint: 'The antecedent is sufficient: if it is true, the consequent must follow.'
+  walkthrough: |
+    1. "Sufficient" means "enough to guarantee."
+    2. If $P$ is true, $Q$ must be true.
+    3. $P$ alone is enough, making it the sufficient condition.
+    4. The sufficient condition is $P$ (the antecedent).
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'In $(P \to Q)$, which is the necessary condition?'
+  answer: 3
+  options:
+    - $P$
+    - Both
+    - $Q$ (the consequent)
+    - Neither
+  hint: '"Necessary" means "required." $P$ cannot be true without $Q$.'
+  walkthrough: |
+    1. "Necessary" means "required for the antecedent to hold."
+    2. If $Q$ is false, $P$ must be false (contrapositive).
+    3. $Q$ is necessary for $P$.
+    4. The necessary condition is $Q$ (the consequent).
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Having oxygen is necessary for fire." Which conditional does this translate to?'
+  answer: 2
+  options:
+    - '$(O \to F)$: oxygen is sufficient for fire'
+    - '$(F \to O)$: fire requires oxygen'
+    - '$(O \to F)$: oxygen guarantees fire'
+    - '$(F \to O)$: fire is sufficient for oxygen'
+  hint: '"Necessary" signals the consequent. Fire cannot exist without oxygen.'
+  walkthrough: |
+    1. "Oxygen is necessary for fire" means fire cannot occur without oxygen.
+    2. If there is fire, there must be oxygen: $(F \to O)$.
+    3. The necessary condition (oxygen) is the consequent.
+    4. The correct translation is $(F \to O)$: fire requires oxygen.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Passing the exam is sufficient for graduation." Which conditional?'
+  answer: 4
+  options:
+    - '$(G \to E)$'
+    - '$(G \to E)$: graduation implies passing'
+    - '$(E \to G)$: passing is necessary'
+    - '$(E \to G)$: passing guarantees graduation'
+  hint: '"Sufficient" signals the antecedent.'
+  walkthrough: |
+    1. "Sufficient" means "enough to guarantee."
+    2. Passing the exam ($E$) guarantees graduation ($G$).
+    3. The sufficient condition is the antecedent: $(E \to G)$.
+    4. The correct answer is $(E \to G)$: passing guarantees graduation.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'In "If the switch is on, the light is on," is the switch being on necessary or sufficient for the light?'
+  answer: 1
+  options:
+    - Sufficient; the switch being on guarantees the light is on
+    - Necessary; the switch must be on for the light
+    - Both necessary and sufficient
+    - Neither
+  hint: The antecedent (switch on) is the sufficient condition.
+  walkthrough: |
+    1. The switch being on ($S$) is the antecedent.
+    2. The antecedent is the sufficient condition: it guarantees the consequent.
+    3. If the switch is on, the light is on. That is "enough."
+    4. The switch being on is sufficient for the light.
+  tags:
+    - necessary-sufficient
+
+- type: formula-builder
+  question: 'Translate: "For the alarm to activate, it is necessary that the sensor detects motion."'
+  answer: '$(A \to S)$'
+  variableMap:
+    A: The alarm activates
+    S: The sensor detects motion
+  hint: '"Necessary" signals the consequent.'
+  walkthrough: |
+    1. "Necessary for the alarm to activate" means: if the alarm activates, the sensor detected motion.
+    2. The necessary condition ($S$) is the consequent.
+    3. The translation is $(A \to S)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Winning the lottery is sufficient for being rich."'
+  answer: '$(W \to R)$'
+  variableMap:
+    W: You win the lottery
+    R: You are rich
+  hint: '"Sufficient" signals the antecedent.'
+  walkthrough: |
+    1. "Sufficient" means the antecedent guarantees the consequent.
+    2. Winning ($W$) is the antecedent; being rich ($R$) is the consequent.
+    3. The translation is $(W \to R)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "A passport is necessary for international travel."'
+  answer: '$(T \to P)$'
+  variableMap:
+    T: You travel internationally
+    P: You have a passport
+  hint: '"Necessary for travel" means travel cannot happen without a passport.'
+  walkthrough: |
+    1. If you travel internationally, you must have a passport.
+    2. The necessary condition (passport) is the consequent.
+    3. The translation is $(T \to P)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Being a citizen is sufficient for voting."'
+  answer: '$(C \to V)$'
+  variableMap:
+    C: You are a citizen
+    V: You can vote
+  hint: '"Sufficient" makes the condition the antecedent.'
+  walkthrough: |
+    1. Citizenship ($C$) guarantees voting rights ($V$).
+    2. The sufficient condition is the antecedent.
+    3. The translation is $(C \to V)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "For the cake to rise, it is necessary that baking powder is added."'
+  answer: '$(R \to B)$'
+  variableMap:
+    R: The cake rises
+    B: Baking powder is added
+  hint: '"Necessary for rising" means rising requires baking powder.'
+  walkthrough: |
+    1. If the cake rises, baking powder must have been added.
+    2. The necessary condition ($B$) is the consequent.
+    3. The translation is $(R \to B)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "The car starts only if the key is inserted."'
+  answer: '$(C \to K)$'
+  variableMap:
+    C: The car starts
+    K: The key is inserted
+  hint: '"A only if B" translates to $(A \to B)$.'
+  walkthrough: |
+    1. "Only if" identifies the consequent: "the key is inserted" = $K$.
+    2. The antecedent: "the car starts" = $C$.
+    3. The translation is $(C \to K)$.
+  tags:
+    - diagnostic
+
+# ── translate-only-if: new questions 6-20 ──
+
+- type: formula-builder
+  question: 'Translate: "The concert proceeds only if tickets sell out."'
+  answer: '$(C \to T)$'
+  variableMap:
+    C: The concert proceeds
+    T: Tickets sell out
+  hint: '"A only if B" means $(A \to B)$. The clause before "only if" is the antecedent.'
+  walkthrough: |
+    1. Identify "only if." The clause before it: "the concert proceeds" = $C$.
+    2. The clause after "only if": "tickets sell out" = $T$.
+    3. "A only if B" becomes $(A \to B)$.
+    4. The translation is $(C \to T)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The bridge opens only if the river level drops."'
+  answer: '$(B \to R)$'
+  variableMap:
+    B: The bridge opens
+    R: The river level drops
+  hint: 'The clause after "only if" is the consequent.'
+  walkthrough: |
+    1. Antecedent (before "only if"): "the bridge opens" = $B$.
+    2. Consequent (after "only if"): "the river level drops" = $R$.
+    3. "A only if B" translates to $(A \to B)$.
+    4. The translation is $(B \to R)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "Only if the password is correct can you log in."'
+  answer: '$(L \to P)$'
+  variableMap:
+    L: You can log in
+    P: The password is correct
+  hint: '"Only if" at the start still points to the consequent.'
+  walkthrough: |
+    1. "Only if" introduces the consequent: "the password is correct" = $P$.
+    2. The remaining clause is the antecedent: "you can log in" = $L$.
+    3. The translation is $(L \to P)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The school closes only if the storm warning is issued."'
+  answer: '$(S \to W)$'
+  variableMap:
+    S: The school closes
+    W: The storm warning is issued
+  hint: '"A only if B" translates to $(A \to B)$.'
+  walkthrough: |
+    1. Antecedent: "the school closes" = $S$.
+    2. Consequent: "the storm warning is issued" = $W$.
+    3. The translation is $(S \to W)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "You get dessert only if you finish dinner."'
+  answer: '$(D \to F)$'
+  variableMap:
+    D: You get dessert
+    F: You finish dinner
+  hint: 'The clause before "only if" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "you get dessert" = $D$.
+    2. Consequent: "you finish dinner" = $F$.
+    3. The translation is $(D \to F)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "Only if the witness testifies will the case proceed."'
+  answer: '$(C \to W)$'
+  variableMap:
+    C: The case proceeds
+    W: The witness testifies
+  hint: '"Only if" introduces the consequent, even when placed at the beginning.'
+  walkthrough: |
+    1. "Only if" introduces the consequent: "the witness testifies" = $W$.
+    2. The antecedent is the remaining clause: "the case proceeds" = $C$.
+    3. The translation is $(C \to W)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The train departs only if the signal is green."'
+  answer: '$(T \to G)$'
+  variableMap:
+    T: The train departs
+    G: The signal is green
+  hint: '"A only if B" translates to $(A \to B)$.'
+  walkthrough: |
+    1. Antecedent: "the train departs" = $T$.
+    2. Consequent: "the signal is green" = $G$.
+    3. The translation is $(T \to G)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The experiment succeeds only if the temperature is stable."'
+  answer: '$(E \to T)$'
+  variableMap:
+    E: The experiment succeeds
+    T: The temperature is stable
+  hint: 'The clause after "only if" is the consequent.'
+  walkthrough: |
+    1. Antecedent: "the experiment succeeds" = $E$.
+    2. Consequent: "the temperature is stable" = $T$.
+    3. The translation is $(E \to T)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "Only if the jury agrees is the defendant convicted."'
+  answer: '$(C \to J)$'
+  variableMap:
+    C: The defendant is convicted
+    J: The jury agrees
+  hint: '"Only if" still identifies the consequent, even at the start of the sentence.'
+  walkthrough: |
+    1. "Only if" introduces the consequent: "the jury agrees" = $J$.
+    2. The antecedent: "the defendant is convicted" = $C$.
+    3. The translation is $(C \to J)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The library lends books only if you have a membership card."'
+  answer: '$(L \to M)$'
+  variableMap:
+    L: The library lends books
+    M: You have a membership card
+  hint: '"A only if B" translates to $(A \to B)$.'
+  walkthrough: |
+    1. Antecedent: "the library lends books" = $L$.
+    2. Consequent: "you have a membership card" = $M$.
+    3. The translation is $(L \to M)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The software compiles only if there are no syntax errors."'
+  answer: '$(C \to N)$'
+  variableMap:
+    C: The software compiles
+    N: There are no syntax errors
+  hint: 'The clause after "only if" becomes the consequent.'
+  walkthrough: |
+    1. Antecedent: "the software compiles" = $C$.
+    2. Consequent: "there are no syntax errors" = $N$.
+    3. The translation is $(C \to N)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "You receive a refund only if you return the item within 30 days."'
+  answer: '$(R \to D)$'
+  variableMap:
+    R: You receive a refund
+    D: You return the item within 30 days
+  hint: '"A only if B" means $(A \to B)$.'
+  walkthrough: |
+    1. Antecedent: "you receive a refund" = $R$.
+    2. Consequent: "you return the item within 30 days" = $D$.
+    3. The translation is $(R \to D)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "Only if the tank is full does the rocket launch."'
+  answer: '$(L \to F)$'
+  variableMap:
+    L: The rocket launches
+    F: The tank is full
+  hint: '"Only if" introduces the consequent even at the beginning of the sentence.'
+  walkthrough: |
+    1. "Only if" introduces the consequent: "the tank is full" = $F$.
+    2. The antecedent: "the rocket launches" = $L$.
+    3. The translation is $(L \to F)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "The garden flourishes only if it is watered regularly."'
+  answer: '$(G \to W)$'
+  variableMap:
+    G: The garden flourishes
+    W: The garden is watered regularly
+  hint: '"A only if B" translates to $(A \to B)$.'
+  walkthrough: |
+    1. Antecedent: "the garden flourishes" = $G$.
+    2. Consequent: "the garden is watered regularly" = $W$.
+    3. The translation is $(G \to W)$.
+  tags:
+    - translate-only-if
+
+- type: formula-builder
+  question: 'Translate: "Only if the contract is signed does the project begin."'
+  answer: '$(P \to C)$'
+  variableMap:
+    P: The project begins
+    C: The contract is signed
+  hint: '"Only if" at the start still points to the consequent.'
+  walkthrough: |
+    1. "Only if" introduces the consequent: "the contract is signed" = $C$.
+    2. The antecedent: "the project begins" = $P$.
+    3. The translation is $(P \to C)$.
+  tags:
+    - translate-only-if
+
+# ── necessary-sufficient: new questions 6-20 ──
+
+- type: mcq
+  question: 'In "If the dam breaks, the town floods," what kind of condition is the dam breaking?'
+  answer: 2
+  options:
+    - Necessary for the town flooding
+    - Sufficient for the town flooding
+    - Both necessary and sufficient
+    - Neither necessary nor sufficient
+  hint: The antecedent of a conditional is the sufficient condition.
+  walkthrough: |
+    1. "If the dam breaks, the town floods" has the form $(D \to F)$.
+    2. The dam breaking ($D$) is the antecedent.
+    3. The antecedent is the sufficient condition: it guarantees the consequent.
+    4. The dam breaking is sufficient for the town flooding.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'In "If the dam breaks, the town floods," what kind of condition is the town flooding?'
+  answer: 3
+  options:
+    - Sufficient for the dam breaking
+    - Both necessary and sufficient
+    - Necessary for the dam breaking
+    - Neither
+  hint: The consequent is the necessary condition.
+  walkthrough: |
+    1. The town flooding ($F$) is the consequent of $(D \to F)$.
+    2. The consequent is the necessary condition for the antecedent.
+    3. If the town does not flood, the dam did not break (contrapositive).
+    4. The town flooding is necessary for the dam breaking.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Fuel is necessary for the engine to run." Which is the antecedent in the corresponding conditional?'
+  answer: 4
+  options:
+    - Fuel
+    - Both fuel and the engine running
+    - Neither
+    - The engine runs
+  hint: '"Necessary" signals the consequent, so the other claim is the antecedent.'
+  walkthrough: |
+    1. Fuel is necessary for the engine to run.
+    2. "Necessary" marks fuel as the consequent.
+    3. The engine running is the antecedent: $(R \to F)$.
+    4. The antecedent is "the engine runs."
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Electricity is sufficient for the heater to work." What role does the heater working play?'
+  answer: 1
+  options:
+    - It is the necessary condition (consequent)
+    - It is the sufficient condition (antecedent)
+    - It is both necessary and sufficient
+    - It plays no role in the conditional
+  hint: '"Sufficient" marks the antecedent; what is left over?'
+  walkthrough: |
+    1. Electricity is the sufficient condition (antecedent): $(E \to H)$.
+    2. The heater working ($H$) is the consequent.
+    3. The consequent is the necessary condition.
+    4. The heater working is the necessary condition (consequent).
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'If $A$ is sufficient for $B$, and $B$ is false, what can we conclude about $A$?'
+  answer: 2
+  options:
+    - $A$ must be true
+    - $A$ must be false
+    - $A$ could be true or false
+    - Nothing can be concluded
+  hint: 'If $A$ is sufficient for $B$, then $(A \to B)$. Apply the contrapositive.'
+  walkthrough: |
+    1. $A$ sufficient for $B$ means $(A \to B)$.
+    2. The contrapositive: if $B$ is false, $A$ is false.
+    3. Since $B$ is false, $A$ must be false.
+    4. $A$ must be false.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'If $Q$ is necessary for $P$, and $P$ is true, what can we conclude about $Q$?'
+  answer: 3
+  options:
+    - $Q$ must be false
+    - $Q$ could be true or false
+    - $Q$ must be true
+    - Nothing can be concluded
+  hint: '$Q$ necessary for $P$ means $(P \to Q)$. If $P$ is true, what follows?'
+  walkthrough: |
+    1. $Q$ necessary for $P$ means $(P \to Q)$.
+    2. $P$ is true.
+    3. By modus ponens, $Q$ must be true.
+    4. $Q$ must be true.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Rain is sufficient for wet streets." Which statement also follows?'
+  answer: 4
+  options:
+    - Wet streets are sufficient for rain
+    - Rain is necessary for wet streets
+    - Dry streets guarantee rain
+    - Wet streets are necessary for rain
+  hint: 'If rain is sufficient for wet streets, $(R \to W)$. What is the necessary condition?'
+  walkthrough: |
+    1. Rain sufficient for wet streets: $(R \to W)$.
+    2. The consequent ($W$) is the necessary condition for the antecedent ($R$).
+    3. Wet streets are necessary for rain: if streets are dry, it is not raining.
+    4. Wet streets are necessary for rain.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'Which pair correctly identifies the roles in $(H \to G)$?'
+  answer: 1
+  options:
+    - $H$ is sufficient for $G$; $G$ is necessary for $H$
+    - $G$ is sufficient for $H$; $H$ is necessary for $G$
+    - $H$ is necessary for $G$; $G$ is sufficient for $H$
+    - Both are sufficient for each other
+  hint: The antecedent is sufficient; the consequent is necessary.
+  walkthrough: |
+    1. In $(H \to G)$, $H$ is the antecedent and $G$ is the consequent.
+    2. The antecedent is the sufficient condition.
+    3. The consequent is the necessary condition.
+    4. $H$ is sufficient for $G$; $G$ is necessary for $H$.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Being a mammal is necessary for being a dog." Which conditional expresses this?'
+  answer: 3
+  options:
+    - '$(M \to D)$'
+    - '$(M \to D)$: mammal guarantees dog'
+    - '$(D \to M)$: being a dog requires being a mammal'
+    - '$(D \to M)$: being a dog is necessary for being a mammal'
+  hint: '"Necessary" marks the consequent. Being a mammal is the consequent.'
+  walkthrough: |
+    1. "Being a mammal is necessary for being a dog" means: if something is a dog, it must be a mammal.
+    2. Dog ($D$) is the antecedent; mammal ($M$) is the consequent.
+    3. The conditional is $(D \to M)$.
+    4. The correct translation is $(D \to M)$: being a dog requires being a mammal.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Sunlight is sufficient for photosynthesis." If photosynthesis is not occurring, what follows?'
+  answer: 2
+  options:
+    - Sunlight must be present
+    - Sunlight must be absent
+    - Sunlight may or may not be present
+    - Photosynthesis is still possible
+  hint: 'Apply the contrapositive of $(S \to P)$.'
+  walkthrough: |
+    1. Sunlight sufficient for photosynthesis: $(S \to P)$.
+    2. Contrapositive: if no photosynthesis, then no sunlight.
+    3. Photosynthesis is not occurring, so sunlight must be absent.
+    4. Sunlight must be absent.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: Which of these correctly states a necessary condition?
+  answer: 4
+  options:
+    - '"If you study, you pass" means studying is necessary for passing'
+    - '"If you study, you pass" means passing is sufficient for studying'
+    - '"If you study, you pass" means studying is both necessary and sufficient'
+    - '"If you study, you pass" means passing is necessary for studying'
+  hint: 'In $(S \to P)$, the consequent $P$ is the necessary condition for $S$.'
+  walkthrough: |
+    1. "If you study, you pass" translates to $(S \to P)$.
+    2. The antecedent ($S$) is sufficient; the consequent ($P$) is necessary.
+    3. Passing is necessary for studying: if you did not pass, you did not study (contrapositive).
+    4. Passing is necessary for studying.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"A ticket is necessary for entry." If you have a ticket, can you conclude that you will enter?'
+  answer: 3
+  options:
+    - Yes; a ticket guarantees entry
+    - Yes; necessary means guaranteed
+    - No; a ticket is necessary but not sufficient for entry
+    - No; tickets and entry are unrelated
+  hint: 'Necessary means required, not guaranteed. Having what is required does not mean the outcome follows.'
+  walkthrough: |
+    1. "A ticket is necessary for entry" means $(E \to T)$.
+    2. Having a ticket ($T$ true) does not let us conclude entry ($E$).
+    3. The ticket is required but not enough by itself.
+    4. A ticket is necessary but not sufficient for entry.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'In "If you are a citizen, you may vote," is voting necessary or sufficient for citizenship?'
+  answer: 1
+  options:
+    - Voting is necessary for citizenship
+    - Voting is sufficient for citizenship
+    - Voting is both necessary and sufficient
+    - Voting is neither necessary nor sufficient
+  hint: The consequent (voting) is the necessary condition for the antecedent (citizenship).
+  walkthrough: |
+    1. The conditional is $(C \to V)$.
+    2. Citizenship ($C$) is the antecedent (sufficient condition).
+    3. Voting ($V$) is the consequent (necessary condition).
+    4. Voting is necessary for citizenship.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: '"Completing training is sufficient for certification." Can someone be certified without completing training?'
+  answer: 2
+  options:
+    - No; training is the only way to be certified
+    - Yes; training is sufficient but may not be the only path to certification
+    - No; sufficient means it is the only condition
+    - 'Yes, but only if they also pass a test'
+  hint: 'Sufficient means "enough," but other paths to the consequent may exist.'
+  walkthrough: |
+    1. "Training is sufficient for certification" means $(T \to C)$.
+    2. Training guarantees certification, but the conditional does not rule out other paths.
+    3. Someone could be certified through a different route.
+    4. Training is sufficient but may not be the only path to certification.
+  tags:
+    - necessary-sufficient
+
+- type: mcq
+  question: 'Which of the following is the contrapositive of "If it is a square, it has four sides"?'
+  answer: 3
+  options:
+    - 'If it has four sides, it is a square'
+    - 'If it is not a square, it does not have four sides'
+    - 'If it does not have four sides, it is not a square'
+    - 'If it is a square, it does not have four sides'
+  hint: 'The contrapositive of $(P \to Q)$ is $(\neg Q \to \neg P)$. Negate both and swap.'
+  walkthrough: |
+    1. The original: $(S \to F)$ where $S$ = square, $F$ = four sides.
+    2. Contrapositive: $(\neg F \to \neg S)$.
+    3. In English: "If it does not have four sides, it is not a square."
+    4. The correct answer is "If it does not have four sides, it is not a square."
+  tags:
+    - necessary-sufficient
+
+# ── translate-nec-suff: new questions 6-20 ──
+
+- type: formula-builder
+  question: 'Translate: "Having a license is necessary for driving legally."'
+  answer: '$(D \to L)$'
+  variableMap:
+    D: You drive legally
+    L: You have a license
+  hint: '"Necessary for driving" means driving requires a license.'
+  walkthrough: |
+    1. "Necessary for driving" means: if you drive legally, you have a license.
+    2. The necessary condition ($L$) is the consequent.
+    3. The translation is $(D \to L)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Studying hard is sufficient for passing the test."'
+  answer: '$(S \to P)$'
+  variableMap:
+    S: You study hard
+    P: You pass the test
+  hint: '"Sufficient" signals the antecedent.'
+  walkthrough: |
+    1. Studying hard is the sufficient condition (antecedent).
+    2. Passing the test is the consequent.
+    3. The translation is $(S \to P)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "For the bridge to be safe, an inspection is necessary."'
+  answer: '$(S \to I)$'
+  variableMap:
+    S: The bridge is safe
+    I: An inspection is conducted
+  hint: '"Necessary for safety" means safety requires an inspection.'
+  walkthrough: |
+    1. If the bridge is safe, an inspection was conducted.
+    2. The necessary condition (inspection) is the consequent.
+    3. The translation is $(S \to I)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Being enrolled is sufficient for accessing the library."'
+  answer: '$(E \to A)$'
+  variableMap:
+    E: You are enrolled
+    A: You can access the library
+  hint: The sufficient condition becomes the antecedent.
+  walkthrough: |
+    1. Enrollment ($E$) is sufficient: it guarantees library access ($A$).
+    2. The sufficient condition is the antecedent.
+    3. The translation is $(E \to A)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Oxygen is necessary for combustion."'
+  answer: '$(C \to O)$'
+  variableMap:
+    C: Combustion occurs
+    O: Oxygen is present
+  hint: '"Necessary for combustion" means combustion cannot occur without oxygen.'
+  walkthrough: |
+    1. If combustion occurs, oxygen must be present.
+    2. Oxygen ($O$) is the necessary condition (consequent).
+    3. The translation is $(C \to O)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Pressing the button is sufficient for opening the gate."'
+  answer: '$(P \to G)$'
+  variableMap:
+    P: You press the button
+    G: The gate opens
+  hint: '"Sufficient" means the antecedent guarantees the consequent.'
+  walkthrough: |
+    1. Pressing the button ($P$) is sufficient: it guarantees the gate opens ($G$).
+    2. The sufficient condition is the antecedent.
+    3. The translation is $(P \to G)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Sunlight is necessary for the flowers to bloom."'
+  answer: '$(B \to S)$'
+  variableMap:
+    B: The flowers bloom
+    S: There is sunlight
+  hint: '"Necessary for blooming" means blooming requires sunlight.'
+  walkthrough: |
+    1. If the flowers bloom, there must be sunlight.
+    2. Sunlight ($S$) is the necessary condition (consequent).
+    3. The translation is $(B \to S)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "A valid ticket is sufficient for boarding the train."'
+  answer: '$(V \to B)$'
+  variableMap:
+    V: You have a valid ticket
+    B: You board the train
+  hint: The sufficient condition is the antecedent.
+  walkthrough: |
+    1. Having a valid ticket ($V$) guarantees boarding ($B$).
+    2. The sufficient condition is the antecedent.
+    3. The translation is $(V \to B)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "For the treaty to be ratified, it is necessary that the senate votes."'
+  answer: '$(R \to V)$'
+  variableMap:
+    R: The treaty is ratified
+    V: The senate votes
+  hint: '"Necessary for ratification" means ratification requires a senate vote.'
+  walkthrough: |
+    1. If the treaty is ratified, the senate must have voted.
+    2. The necessary condition (senate vote) is the consequent.
+    3. The translation is $(R \to V)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Completing the prerequisites is sufficient for registering."'
+  answer: '$(P \to R)$'
+  variableMap:
+    P: You complete the prerequisites
+    R: You can register
+  hint: '"Sufficient" signals the antecedent.'
+  walkthrough: |
+    1. Completing prerequisites ($P$) guarantees registration ($R$).
+    2. The sufficient condition is the antecedent.
+    3. The translation is $(P \to R)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "A majority vote is necessary for the bill to pass."'
+  answer: '$(B \to M)$'
+  variableMap:
+    B: The bill passes
+    M: There is a majority vote
+  hint: '"Necessary for passing" means passing requires a majority vote.'
+  walkthrough: |
+    1. If the bill passes, there must be a majority vote.
+    2. The necessary condition (majority vote) is the consequent.
+    3. The translation is $(B \to M)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Paying the fee is sufficient for membership."'
+  answer: '$(F \to M)$'
+  variableMap:
+    F: You pay the fee
+    M: You have membership
+  hint: The sufficient condition is the antecedent.
+  walkthrough: |
+    1. Paying the fee ($F$) guarantees membership ($M$).
+    2. The sufficient condition is the antecedent.
+    3. The translation is $(F \to M)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Consent is necessary for the surgery to proceed."'
+  answer: '$(S \to C)$'
+  variableMap:
+    S: The surgery proceeds
+    C: Consent is given
+  hint: '"Necessary for surgery" means surgery cannot proceed without consent.'
+  walkthrough: |
+    1. If the surgery proceeds, consent must have been given.
+    2. Consent ($C$) is the necessary condition (consequent).
+    3. The translation is $(S \to C)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "Warm weather is sufficient for the pool to open."'
+  answer: '$(W \to P)$'
+  variableMap:
+    W: The weather is warm
+    P: The pool opens
+  hint: '"Sufficient" signals the antecedent.'
+  walkthrough: |
+    1. Warm weather ($W$) guarantees the pool opens ($P$).
+    2. The sufficient condition is the antecedent.
+    3. The translation is $(W \to P)$.
+  tags:
+    - translate-nec-suff
+
+- type: formula-builder
+  question: 'Translate: "For the website to load, an internet connection is necessary."'
+  answer: '$(L \to I)$'
+  variableMap:
+    L: The website loads
+    I: There is an internet connection
+  hint: '"Necessary for loading" means loading requires a connection.'
+  walkthrough: |
+    1. If the website loads, there must be an internet connection.
+    2. The necessary condition (internet connection) is the consequent.
+    3. The translation is $(L \to I)$.
+  tags:
+    - translate-nec-suff

@@ -1,0 +1,1043 @@
+- type: mcq
+  question: 'What is the logical form of: 1. All students are learners. 2. Emma is a student. 3. Therefore, Emma is a learner.'
+  answer: 2
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - '$A$ and $B$. Therefore, $A$.'
+  hint: Replace the specific content words with variables and find the pattern.
+  walkthrough: |
+    1. "Students" maps to $A$, "learners" to $B$, "Emma" to $C$.
+    2. The pattern: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. This matches the "All...are" form.
+    4. The form is: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If the alarm rings, we evacuate. 2. The alarm rings. 3. Therefore, we evacuate.'
+  answer: 1
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+    - 'Either $A$ or $B$. $A$. Therefore, not $B$.'
+  hint: 'Replace "the alarm rings" with $A$ and "we evacuate" with $B$.'
+  walkthrough: |
+    1. "The alarm rings" maps to $A$, "we evacuate" to $B$.
+    2. The pattern: If $A$, then $B$. $A$. Therefore, $B$.
+    3. This is the "if...then" pattern.
+    4. The form is: If $A$, then $B$. $A$. Therefore, $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. Either the power is on or the generator is running. 2. The power is not on. 3. Therefore, the generator is running.'
+  answer: 4
+  options:
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'If $A$, then $B$. Not $A$. Therefore, not $B$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+  hint: 'The argument uses "either...or" and eliminates one option.'
+  walkthrough: |
+    1. "The power is on" maps to $A$, "the generator is running" to $B$.
+    2. The pattern: Either $A$ or $B$. Not $A$. Therefore, $B$.
+    3. This is the disjunctive elimination form.
+    4. The form is: Either $A$ or $B$. Not $A$. Therefore, $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If it is Tuesday, the market is open. 2. The market is open. 3. Therefore, it is Tuesday.'
+  answer: 3
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+  hint: 'The second premise matches the consequent, not the antecedent.'
+  walkthrough: |
+    1. "It is Tuesday" maps to $A$, "the market is open" to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: $B$. Conclusion: $A$.
+    3. This is the pattern: If $A$, then $B$. $B$. Therefore, $A$.
+    4. The form is: If $A$, then $B$. $B$. Therefore, $A$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. All trees are plants. 2. This oak is a tree. 3. Therefore, this oak is a plant.'
+  answer: 2
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - '$A$ and $B$. Therefore, $A$.'
+    - 'Either $A$ or $B$. $A$. Therefore, not $B$.'
+  hint: 'Replace "trees" with $A$, "plants" with $B$, "this oak" with $C$.'
+  walkthrough: |
+    1. "Trees" maps to $A$, "plants" to $B$, "this oak" to $C$.
+    2. The pattern: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. This is the universal category form.
+    4. The form is: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "All fish swim. Salmon are fish. So salmon swim." Arg 2: "All cars have wheels. A Tesla is a car. So a Tesla has wheels."'
+  answer: 1
+  options:
+    - 'Yes; both have the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'No; one is about animals, the other about vehicles'
+    - No; the subjects are different
+    - 'Yes, but only because both conclusions are true'
+  hint: Replace the content words with variables. Do the patterns match?
+  walkthrough: |
+    1. Arg 1: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    2. Arg 2: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. The patterns match exactly.
+    4. Yes; both share the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If it rains, we stay inside. It rained. So we stayed inside." Arg 2: "All mammals breathe air. Whales are mammals. So whales breathe air."'
+  answer: 4
+  options:
+    - Yes; both are valid arguments
+    - Yes; both have two premises and one conclusion
+    - No; one has three premises
+    - 'No; one uses "If...then" and the other uses "All...are"'
+  hint: 'Compare the abstract patterns, not just the number of sentences.'
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. $A$. Therefore, $B$.
+    2. Arg 2: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. The patterns are structurally different.
+    4. No; "If...then" and "All...are" are structurally different forms.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "Either it is sunny or cloudy. It is not sunny. So it is cloudy." Arg 2: "Either the door is locked or unlocked. The door is not locked. So it is unlocked."'
+  answer: 3
+  options:
+    - No; one is about weather and the other about a door
+    - No; they have different conclusions
+    - 'Yes; both have the form: Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'Yes, but only because both are valid'
+  hint: Extract the abstract pattern from each argument.
+  walkthrough: |
+    1. Arg 1: Either $A$ or $B$. Not $A$. Therefore, $B$.
+    2. Arg 2: Either $A$ or $B$. Not $A$. Therefore, $B$.
+    3. The patterns are identical.
+    4. Yes; both share the form: Either $A$ or $B$. Not $A$. Therefore, $B$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If the test passes, we ship. The test passed. So we ship." Arg 2: "If the test passes, we ship. We shipped. So the test passed."'
+  answer: 2
+  options:
+    - Yes; both are about testing and shipping
+    - 'No; Arg 1 is "If $A$ then $B$. $A$. Therefore $B$." while Arg 2 is "If $A$ then $B$. $B$. Therefore $A$."'
+    - 'Yes; both have the form "If $A$ then $B$"'
+    - No; Arg 2 is missing a premise
+  hint: Look at which part of the conditional each argument affirms.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. $A$. Therefore, $B$. (Affirms the antecedent.)
+    2. Arg 2: If $A$, then $B$. $B$. Therefore, $A$. (Affirms the consequent.)
+    3. Different second premises yield different forms.
+    4. No; Arg 1 affirms the antecedent while Arg 2 affirms the consequent.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Two arguments share the same logical form. If one is formally valid, what about the other?'
+  answer: 1
+  options:
+    - It must also be valid; formal validity depends only on form
+    - It might be valid or invalid
+    - It must be sound
+    - It must be invalid because different content can change validity
+  hint: Formal validity means every argument with that form is valid.
+  walkthrough: |
+    1. Formal validity means the form itself guarantees validity.
+    2. Any argument sharing that form inherits the guarantee.
+    3. Both arguments must be valid.
+    4. It must also be valid; formal validity depends only on form.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Is this argument formally valid? 1. Alex is a bachelor. 2. Therefore, Alex is unmarried.'
+  answer: 3
+  options:
+    - Yes; the conclusion follows from the premise
+    - 'Yes; it has the form "All $A$ are $B$"'
+    - 'No; it is only conceptually valid, relying on the meaning of "bachelor"'
+    - No; the argument is invalid
+  hint: 'Try substituting different words. Is the form "$A$ is an $X$. Therefore, $A$ is a $Y$" always valid?'
+  walkthrough: |
+    1. The form is: $A$ is an $X$. Therefore, $A$ is a $Y$.
+    2. Substitution: "Alex is a teacher. Therefore, Alex is a painter." This is invalid.
+    3. The original only works because "bachelor" means "unmarried man."
+    4. It is only conceptually valid, relying on the meaning of "bachelor."
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this argument formally valid? 1. Either the light is on or off. 2. The light is not on. 3. Therefore, the light is off.'
+  answer: 2
+  options:
+    - 'Only conceptually valid; it depends on the meaning of "on" and "off"'
+    - 'Formally valid; every argument of the form "Either $A$ or $B$. Not $A$. Therefore $B$." is valid'
+    - Invalid
+    - Formally valid only if both options are exhaustive
+  hint: Try any substitution for $A$ and $B$ in the form.
+  walkthrough: |
+    1. The form is: Either $A$ or $B$. Not $A$. Therefore, $B$.
+    2. Any substitution produces a valid argument.
+    3. The form alone guarantees validity.
+    4. It is formally valid; every argument of this form is valid.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. The shape is a square. 2. Therefore, the shape has four sides.'
+  answer: 4
+  options:
+    - Formally valid
+    - Invalid
+    - Formally valid because all squares have four sides
+    - 'Conceptually valid; it depends on the definition of "square"'
+  hint: 'Test the form: "$A$ is an $X$. Therefore, $A$ is a $Y$." Does it always work?'
+  walkthrough: |
+    1. The form: $A$ is an $X$. Therefore, $A$ is a $Y$.
+    2. Substitution: "The shape is a circle. Therefore, the shape has four sides." Invalid.
+    3. The original works only because "square" means a four-sided figure.
+    4. It is conceptually valid; the definition of "square" does the work.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: How do you test whether an argument is formally valid or only conceptually valid?
+  answer: 1
+  options:
+    - 'Substitute different content into the form; if any substitution produces an invalid argument, it is only conceptually valid'
+    - Check if the conclusion is true
+    - Check if the premises are true
+    - Count the number of premises
+  hint: 'Formal validity depends on the form alone, not the specific content.'
+  walkthrough: |
+    1. Extract the logical form by replacing content with variables.
+    2. Try plugging in different content.
+    3. If every substitution gives a valid argument, it is formally valid.
+    4. If some substitution breaks it, the original was only conceptually valid.
+    5. The test is substitution: try different content in the form.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. If $A$, then $B$. 2. $A$. 3. Therefore, $B$.'
+  answer: 3
+  options:
+    - Only conceptually valid
+    - Invalid
+    - Formally valid; no substitution can produce an invalid argument with this form
+    - Cannot determine without knowing what $A$ and $B$ are
+  hint: This is already expressed as a form with variables. Can it ever fail?
+  walkthrough: |
+    1. If $A$ is true and $A \to B$ is true, then $B$ must be true.
+    2. This holds for any $A$ and $B$.
+    3. No substitution can break it: the form alone guarantees validity.
+    4. It is formally valid; no substitution can produce an invalid argument.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'What is the logical form of: 1. If the switch is on, the light is on. 2. The switch is on. 3. Therefore, the light is on.'
+  answer: 2
+  options:
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+  hint: Replace the specific claims with variables and identify the pattern.
+  walkthrough: |
+    1. "The switch is on" maps to $A$; "the light is on" maps to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: $A$. Conclusion: $B$.
+    3. This is the "If...then" modus ponens form.
+    4. The form is: If $A$, then $B$. $A$. Therefore, $B$ (modus ponens).
+  tags:
+    - diagnostic
+
+# ── extract-form: new questions 6-20 ──
+
+- type: mcq
+  question: 'What is the logical form of: 1. If the key fits, the door opens. 2. The key fits. 3. Therefore, the door opens.'
+  answer: 3
+  options:
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+  hint: Replace the content with variables and identify the conditional pattern.
+  walkthrough: |
+    1. "The key fits" maps to $A$; "the door opens" maps to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: $A$. Conclusion: $B$.
+    3. This is the modus ponens pattern.
+    4. The form is: If $A$, then $B$. $A$. Therefore, $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. All birds can fly. 2. Tweety is a bird. 3. Therefore, Tweety can fly.'
+  answer: 2
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - '$A$ and $B$. Therefore, $A$.'
+    - 'Either $A$ or $B$. Not $B$. Therefore, $A$.'
+  hint: 'Replace "birds" with $A$, "things that fly" with $B$, "Tweety" with $C$.'
+  walkthrough: |
+    1. "Birds" maps to $A$, "things that can fly" to $B$, "Tweety" to $C$.
+    2. The pattern: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. This is the universal categorical form.
+    4. The form is: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. Either the window is open or the AC is on. 2. The AC is not on. 3. Therefore, the window is open.'
+  answer: 4
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'Either $A$ or $B$. Not $B$. Therefore, $A$.'
+  hint: The argument eliminates one disjunct.
+  walkthrough: |
+    1. "The window is open" maps to $A$; "the AC is on" maps to $B$.
+    2. Premise 1: Either $A$ or $B$. Premise 2: Not $B$. Conclusion: $A$.
+    3. This eliminates one disjunct to conclude the other.
+    4. The form is: Either $A$ or $B$. Not $B$. Therefore, $A$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If you study, you pass. 2. You did not pass. 3. Therefore, you did not study.'
+  answer: 1
+  options:
+    - 'If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. Not $A$. Therefore, not $B$.'
+  hint: The second premise denies the consequent. What pattern is this?
+  walkthrough: |
+    1. "You study" maps to $A$; "you pass" maps to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: Not $B$. Conclusion: Not $A$.
+    3. This denies the consequent to deny the antecedent (modus tollens).
+    4. The form is: If $A$, then $B$. Not $B$. Therefore, not $A$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. All lawyers passed the bar exam. 2. Jordan is a lawyer. 3. Therefore, Jordan passed the bar exam.'
+  answer: 3
+  options:
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - '$A$ and $B$. Therefore, $B$.'
+  hint: 'Replace "lawyers" with $A$, "passed the bar" with $B$, "Jordan" with $C$.'
+  walkthrough: |
+    1. "Lawyers" maps to $A$, "passed the bar exam" to $B$, "Jordan" to $C$.
+    2. The pattern: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. This is the universal categorical form.
+    4. The form is: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If the battery dies, the screen goes dark. 2. The screen went dark. 3. Therefore, the battery died.'
+  answer: 2
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. Not $B$. Therefore, not $A$.'
+  hint: 'The second premise matches the consequent, not the antecedent.'
+  walkthrough: |
+    1. "The battery dies" maps to $A$; "the screen goes dark" to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: $B$. Conclusion: $A$.
+    3. This affirms the consequent.
+    4. The form is: If $A$, then $B$. $B$. Therefore, $A$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. $P$ and $Q$. 2. Therefore, $P$.'
+  answer: 4
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - '$A$ and $B$. Therefore, $A$.'
+  hint: The premise is a conjunction and the conclusion is one of the conjuncts.
+  walkthrough: |
+    1. Premise: $P$ and $Q$ (a conjunction).
+    2. Conclusion: $P$ (the left conjunct).
+    3. The form: $A$ and $B$. Therefore, $A$.
+    4. The form is: $A$ and $B$. Therefore, $A$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If the road is icy, the bus is late. 2. The road is not icy. 3. Therefore, the bus is not late.'
+  answer: 1
+  options:
+    - 'If $A$, then $B$. Not $A$. Therefore, not $B$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+  hint: The second premise denies the antecedent.
+  walkthrough: |
+    1. "The road is icy" maps to $A$; "the bus is late" to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: Not $A$. Conclusion: Not $B$.
+    3. This denies the antecedent to deny the consequent.
+    4. The form is: If $A$, then $B$. Not $A$. Therefore, not $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. All metals conduct electricity. 2. Copper is a metal. 3. Therefore, copper conducts electricity.'
+  answer: 2
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - '$A$. Therefore, $B$.'
+  hint: 'Replace "metals" with $A$, "conduct electricity" with $B$, "copper" with $C$.'
+  walkthrough: |
+    1. "Metals" maps to $A$, "things that conduct electricity" to $B$, "copper" to $C$.
+    2. Pattern: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. This is the universal categorical form.
+    4. The form is: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. Either the suspect is guilty or innocent. 2. The suspect is not guilty. 3. Therefore, the suspect is innocent.'
+  answer: 3
+  options:
+    - 'If $A$, then $B$. Not $A$. Therefore, not $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+  hint: '"Either...or" with one option eliminated.'
+  walkthrough: |
+    1. "The suspect is guilty" maps to $A$; "the suspect is innocent" to $B$.
+    2. Premise 1: Either $A$ or $B$. Premise 2: Not $A$. Conclusion: $B$.
+    3. This is disjunctive elimination.
+    4. The form is: Either $A$ or $B$. Not $A$. Therefore, $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If the sensor triggers, the alarm sounds. 2. The alarm sounds. 3. Therefore, the sensor triggered.'
+  answer: 4
+  options:
+    - 'If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'Either $A$ or $B$. $A$. Therefore, not $B$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+  hint: The second premise affirms the consequent.
+  walkthrough: |
+    1. "The sensor triggers" maps to $A$; "the alarm sounds" to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: $B$. Conclusion: $A$.
+    3. This affirms the consequent.
+    4. The form is: If $A$, then $B$. $B$. Therefore, $A$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If it is a holiday, the office is closed. 2. It is a holiday. 3. Therefore, the office is closed.'
+  answer: 1
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'If $A$, then $B$. $B$. Therefore, $A$.'
+    - 'Either $A$ or $B$. Not $A$. Therefore, $B$.'
+  hint: The second premise affirms the antecedent.
+  walkthrough: |
+    1. "It is a holiday" maps to $A$; "the office is closed" to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: $A$. Conclusion: $B$.
+    3. This is modus ponens.
+    4. The form is: If $A$, then $B$. $A$. Therefore, $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. All reptiles are cold-blooded. 2. This iguana is a reptile. 3. Therefore, this iguana is cold-blooded.'
+  answer: 4
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - '$A$ and $B$. Therefore, $A$.'
+    - 'Either $A$ or $B$. Not $B$. Therefore, $A$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+  hint: 'Replace "reptiles" with $A$, "cold-blooded" with $B$, "this iguana" with $C$.'
+  walkthrough: |
+    1. "Reptiles" maps to $A$, "cold-blooded" to $B$, "this iguana" to $C$.
+    2. Pattern: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. This is the universal categorical form.
+    4. The form is: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. If the bridge is closed, we take the ferry. 2. We did not take the ferry. 3. Therefore, the bridge is not closed.'
+  answer: 3
+  options:
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'Either $A$ or $B$. Not $B$. Therefore, $A$.'
+    - 'If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'If $A$, then $B$. Not $A$. Therefore, not $B$.'
+  hint: The second premise denies the consequent.
+  walkthrough: |
+    1. "The bridge is closed" maps to $A$; "we take the ferry" to $B$.
+    2. Premise 1: If $A$, then $B$. Premise 2: Not $B$. Conclusion: Not $A$.
+    3. This is modus tollens.
+    4. The form is: If $A$, then $B$. Not $B$. Therefore, not $A$.
+  tags:
+    - extract-form
+
+- type: mcq
+  question: 'What is the logical form of: 1. Either we hire more staff or we reduce hours. 2. We will not reduce hours. 3. Therefore, we hire more staff.'
+  answer: 2
+  options:
+    - 'If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'Either $A$ or $B$. Not $B$. Therefore, $A$.'
+    - 'All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'If $A$, then $B$. $A$. Therefore, $B$.'
+  hint: One disjunct is eliminated.
+  walkthrough: |
+    1. "We hire more staff" maps to $A$; "we reduce hours" to $B$.
+    2. Premise 1: Either $A$ or $B$. Premise 2: Not $B$. Conclusion: $A$.
+    3. This is disjunctive elimination.
+    4. The form is: Either $A$ or $B$. Not $B$. Therefore, $A$.
+  tags:
+    - extract-form
+
+# ── same-form: new questions 6-20 ──
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If it snows, school closes. It snowed. So school closed." Arg 2: "If the button is pressed, the light turns on. The button is pressed. So the light turns on."'
+  answer: 1
+  options:
+    - 'Yes; both have the form: If $A$, then $B$. $A$. Therefore, $B$.'
+    - 'No; one is about weather, the other about electronics'
+    - No; the conclusions are different
+    - 'Yes, but only because both are valid'
+  hint: Extract the abstract pattern from each argument.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. $A$. Therefore, $B$.
+    2. Arg 2: If $A$, then $B$. $A$. Therefore, $B$.
+    3. The patterns match exactly.
+    4. Yes; both have the form: If $A$, then $B$. $A$. Therefore, $B$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "All cats are mammals. Felix is a cat. So Felix is a mammal." Arg 2: "If it rains, the game is canceled. It rained. So the game is canceled."'
+  answer: 4
+  options:
+    - Yes; both have two premises and one conclusion
+    - Yes; both are valid
+    - No; one has three variables
+    - 'No; one uses "All...are" while the other uses "If...then"'
+  hint: 'Compare the structural patterns, not just the number of sentences.'
+  walkthrough: |
+    1. Arg 1: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    2. Arg 2: If $A$, then $B$. $A$. Therefore, $B$.
+    3. "All...are" and "If...then" are different structural patterns.
+    4. No; one uses "All...are" while the other uses "If...then."
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "Either the bus or the train arrives first. The bus does not arrive first. So the train arrives first." Arg 2: "Either the pizza or the pasta is sold out. The pizza is not sold out. So the pasta is sold out."'
+  answer: 3
+  options:
+    - 'No; one is about transport, the other about food'
+    - No; they have different conclusions
+    - 'Yes; both have the form: Either $A$ or $B$. Not $A$. Therefore, $B$.'
+    - 'Yes, but only because both conclusions happen to be true'
+  hint: Replace the content with variables in each argument.
+  walkthrough: |
+    1. Arg 1: Either $A$ or $B$. Not $A$. Therefore, $B$.
+    2. Arg 2: Either $A$ or $B$. Not $A$. Therefore, $B$.
+    3. The patterns are identical.
+    4. Yes; both have the form: Either $A$ or $B$. Not $A$. Therefore, $B$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If the alarm sounds, we evacuate. We did not evacuate. So the alarm did not sound." Arg 2: "If the cake rises, the oven was hot. The oven was not hot. So the cake did not rise."'
+  answer: 2
+  options:
+    - No; the conclusions differ
+    - 'Yes; both use modus tollens: If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'No; one is about safety, the other about baking'
+    - 'Yes, but only because both are about negation'
+  hint: Extract the pattern. Both deny the consequent.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. Not $B$. Therefore, not $A$.
+    2. Arg 2: If $A$, then $B$. Not $B$. Therefore, not $A$.
+    3. Both follow the modus tollens pattern.
+    4. Yes; both use modus tollens: If $A$, then $B$. Not $B$. Therefore, not $A$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If it rains, the ground is wet. The ground is wet. So it rained." Arg 2: "If you study, you pass. You studied. So you passed."'
+  answer: 4
+  options:
+    - 'Yes; both use "If...then"'
+    - Yes; both are valid
+    - No; the conclusions are different
+    - No; Arg 1 affirms the consequent while Arg 2 affirms the antecedent
+  hint: Check which part of the conditional each argument affirms in its second premise.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. $B$. Therefore, $A$. (Affirms the consequent.)
+    2. Arg 2: If $A$, then $B$. $A$. Therefore, $B$. (Affirms the antecedent.)
+    3. The second premises target different parts of the conditional.
+    4. No; Arg 1 affirms the consequent while Arg 2 affirms the antecedent.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "$P$ and $Q$. Therefore, $P$." Arg 2: "$R$ and $S$. Therefore, $R$."'
+  answer: 1
+  options:
+    - 'Yes; both have the form: $A$ and $B$. Therefore, $A$.'
+    - No; they use different letters
+    - No; one extracts the left conjunct and the other might extract the right
+    - Cannot determine without more context
+  hint: Variable names do not matter; the pattern does.
+  walkthrough: |
+    1. Arg 1: $A$ and $B$. Therefore, $A$.
+    2. Arg 2: $A$ and $B$. Therefore, $A$.
+    3. The patterns are identical; different letter names do not change the form.
+    4. Yes; both have the form: $A$ and $B$. Therefore, $A$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "All doctors are professionals. Dr. Lee is a doctor. So Dr. Lee is a professional." Arg 2: "All squares are rectangles. This shape is a square. So this shape is a rectangle."'
+  answer: 2
+  options:
+    - 'No; one is about people, the other about shapes'
+    - 'Yes; both have the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - No; the conclusions use different predicates
+    - 'Yes, but only because both happen to be true'
+  hint: Replace content with variables in each argument.
+  walkthrough: |
+    1. Arg 1: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    2. Arg 2: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. The patterns match exactly.
+    4. Yes; both have the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "Either the flight is on time or delayed. The flight is not delayed. So it is on time." Arg 2: "If the plant gets water, it grows. The plant got water. So it grows."'
+  answer: 3
+  options:
+    - Yes; both are valid
+    - Yes; both have two premises
+    - 'No; Arg 1 uses "Either...or" while Arg 2 uses "If...then"'
+    - No; only because they have different topics
+  hint: Compare the structural connective in each argument.
+  walkthrough: |
+    1. Arg 1: Either $A$ or $B$. Not $B$. Therefore, $A$.
+    2. Arg 2: If $A$, then $B$. $A$. Therefore, $B$.
+    3. "Either...or" and "If...then" are different patterns.
+    4. No; Arg 1 uses "Either...or" while Arg 2 uses "If...then."
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If the power is out, the fridge warms up. The fridge warmed up. So the power was out." Arg 2: "If it is Sunday, the shop is closed. The shop is closed. So it is Sunday."'
+  answer: 1
+  options:
+    - 'Yes; both have the form: If $A$, then $B$. $B$. Therefore, $A$.'
+    - No; the topics are different
+    - No; one is about power and the other about days
+    - 'Yes, but only because both conclusions could be true'
+  hint: Both affirm the consequent.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. $B$. Therefore, $A$.
+    2. Arg 2: If $A$, then $B$. $B$. Therefore, $A$.
+    3. Both affirm the consequent: identical pattern.
+    4. Yes; both have the form: If $A$, then $B$. $B$. Therefore, $A$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If the timer goes off, dinner is ready. The timer did not go off. So dinner is not ready." Arg 2: "If the light is green, you may go. The light is green. So you may go."'
+  answer: 4
+  options:
+    - Yes; both use conditionals
+    - Yes; both have two premises
+    - No; only because the topics differ
+    - No; Arg 1 denies the antecedent while Arg 2 affirms it
+  hint: Look at what each argument does with the second premise.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. Not $A$. Therefore, not $B$. (Denies the antecedent.)
+    2. Arg 2: If $A$, then $B$. $A$. Therefore, $B$. (Affirms the antecedent.)
+    3. Different second premises yield different forms.
+    4. No; Arg 1 denies the antecedent while Arg 2 affirms it.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "All insects have six legs. This ant is an insect. So this ant has six legs." Arg 2: "All prime numbers greater than 2 are odd. 7 is a prime number greater than 2. So 7 is odd."'
+  answer: 2
+  options:
+    - 'No; one is biology, the other is math'
+    - 'Yes; both have the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - No; numbers and insects are too different
+    - 'Yes, but only because both conclusions are true'
+  hint: Content does not matter; only the structural pattern matters.
+  walkthrough: |
+    1. Arg 1: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    2. Arg 2: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. Identical structural pattern.
+    4. Yes; both have the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If the circuit is complete, current flows. Current is not flowing. So the circuit is not complete." Arg 2: "If the drug works, symptoms improve. Symptoms did not improve. So the drug did not work."'
+  answer: 3
+  options:
+    - No; different subject matter
+    - 'No; one is about electricity, the other about medicine'
+    - 'Yes; both have the form: If $A$, then $B$. Not $B$. Therefore, not $A$.'
+    - 'Yes, but only because both are valid'
+  hint: Both deny the consequent.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. Not $B$. Therefore, not $A$.
+    2. Arg 2: If $A$, then $B$. Not $B$. Therefore, not $A$.
+    3. Both follow modus tollens.
+    4. Yes; both have the form: If $A$, then $B$. Not $B$. Therefore, not $A$.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "$A$ and $B$. Therefore, $B$." Arg 2: "$A$ and $B$. Therefore, $A$."'
+  answer: 4
+  options:
+    - Yes; both extract a conjunct
+    - Yes; conjunction is commutative
+    - Yes; both are valid
+    - No; Arg 1 extracts the right conjunct while Arg 2 extracts the left
+  hint: The form specifies which conjunct the conclusion matches.
+  walkthrough: |
+    1. Arg 1: $A$ and $B$. Therefore, $B$. (Extracts the right conjunct.)
+    2. Arg 2: $A$ and $B$. Therefore, $A$. (Extracts the left conjunct.)
+    3. Different conjuncts are concluded, so the forms differ.
+    4. No; Arg 1 extracts the right conjunct while Arg 2 extracts the left.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "If the test passes, we deploy. The test passed. So we deploy." Arg 2: "If the vaccine works, the disease declines. The disease declined. So the vaccine works."'
+  answer: 3
+  options:
+    - 'Yes; both use "If...then"'
+    - Yes; both are about cause and effect
+    - No; Arg 1 affirms the antecedent while Arg 2 affirms the consequent
+    - No; only because the topics differ
+  hint: Check which part each argument affirms.
+  walkthrough: |
+    1. Arg 1: If $A$, then $B$. $A$. Therefore, $B$. (Affirms the antecedent.)
+    2. Arg 2: If $A$, then $B$. $B$. Therefore, $A$. (Affirms the consequent.)
+    3. Different parts are affirmed, yielding different forms.
+    4. No; Arg 1 affirms the antecedent while Arg 2 affirms the consequent.
+  tags:
+    - same-form
+
+- type: mcq
+  question: 'Do these share the same form? Arg 1: "All vegetables are nutritious. Broccoli is a vegetable. So broccoli is nutritious." Arg 2: "All employees are insured. Maria is an employee. So Maria is insured."'
+  answer: 1
+  options:
+    - 'Yes; both have the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.'
+    - 'No; one is about food, the other about employment'
+    - No; the predicates differ
+    - 'Yes, but only because both are true'
+  hint: Replace content with variables.
+  walkthrough: |
+    1. Arg 1: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    2. Arg 2: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    3. The patterns are identical.
+    4. Yes; both have the form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+  tags:
+    - same-form
+
+# ── formal-vs-conceptual: new questions 6-20 ──
+
+- type: mcq
+  question: 'Is this formally valid? 1. All roses are flowers. 2. This plant is a rose. 3. Therefore, this plant is a flower.'
+  answer: 2
+  options:
+    - Conceptually valid only
+    - 'Formally valid; the form "All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$." always works'
+    - Invalid
+    - Cannot be determined
+  hint: 'Try substituting any terms for "roses," "flowers," and "this plant."'
+  walkthrough: |
+    1. The form: All $A$ are $B$. $C$ is an $A$. Therefore, $C$ is a $B$.
+    2. Any substitution preserves validity.
+    3. The form alone guarantees the conclusion follows.
+    4. It is formally valid; the form always works.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. The car is red. 2. Therefore, the car is colored.'
+  answer: 3
+  options:
+    - Formally valid
+    - Invalid
+    - 'Conceptually valid; it relies on "red" meaning a color'
+    - Formally valid because all red things are colored
+  hint: 'Test the form: "$A$ is $X$. Therefore, $A$ is $Y$." Does every substitution work?'
+  walkthrough: |
+    1. The form: $A$ is $X$. Therefore, $A$ is $Y$.
+    2. Substitution: "The car is fast. Therefore, the car is blue." Invalid.
+    3. The original works only because "red" is a type of color.
+    4. It is conceptually valid; it relies on "red" meaning a color.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. If $P$, then $Q$. 2. Not $Q$. 3. Therefore, not $P$.'
+  answer: 1
+  options:
+    - 'Formally valid; this is modus tollens, valid for any $P$ and $Q$'
+    - Conceptually valid only
+    - Invalid
+    - Valid only when $P$ and $Q$ are related
+  hint: This is already expressed with variables. Can any substitution break it?
+  walkthrough: |
+    1. If $P$ is true and $P \to Q$, then $Q$ is true.
+    2. Contrapositively: if $Q$ is false and $P \to Q$, then $P$ is false.
+    3. No substitution breaks this pattern.
+    4. It is formally valid; this is modus tollens, valid for any $P$ and $Q$.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. Whales are mammals. 2. Therefore, whales are animals.'
+  answer: 4
+  options:
+    - Formally valid
+    - Invalid
+    - Formally valid because all mammals are animals
+    - 'Conceptually valid; it depends on "mammals" being a subset of "animals"'
+  hint: 'The form: "$A$ is $X$. Therefore, $A$ is $Y$." Try different substitutions.'
+  walkthrough: |
+    1. The form: $A$ is $X$. Therefore, $A$ is $Y$.
+    2. Substitution: "Whales are heavy. Therefore, whales are blue." Invalid.
+    3. The original works because "mammal" entails "animal" by definition.
+    4. It is conceptually valid; it depends on "mammals" being a subset of "animals."
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. Either $A$ or $B$. 2. Not $A$. 3. Therefore, $B$.'
+  answer: 2
+  options:
+    - Conceptually valid only
+    - Formally valid; disjunctive syllogism is valid for any $A$ and $B$
+    - Invalid
+    - Valid only when $A$ and $B$ are exhaustive
+  hint: This is already in variable form. Can any substitution fail?
+  walkthrough: |
+    1. If at least one of $A$ or $B$ is true and $A$ is false, $B$ must be true.
+    2. This holds for any $A$ and $B$.
+    3. No substitution can break this pattern.
+    4. It is formally valid; disjunctive syllogism is valid for any $A$ and $B$.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. Today is Saturday. 2. Therefore, tomorrow is Sunday.'
+  answer: 3
+  options:
+    - Formally valid
+    - Invalid
+    - Conceptually valid; it relies on the meaning of days of the week
+    - Formally valid because days follow a fixed order
+  hint: 'The form: "$A$. Therefore, $B$." Try substituting different content.'
+  walkthrough: |
+    1. The form: $A$. Therefore, $B$.
+    2. Substitution: "Today is my birthday. Therefore, the sky is green." Invalid.
+    3. The original works because Saturday is followed by Sunday by definition.
+    4. It is conceptually valid; it relies on the meaning of days of the week.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. If the match is struck, it lights. 2. The match is struck. 3. Therefore, it lights.'
+  answer: 1
+  options:
+    - Formally valid; modus ponens works for any substitution
+    - Conceptually valid only
+    - Invalid
+    - Valid only for matches
+  hint: 'Extract the form: If $A$, then $B$. $A$. Therefore, $B$.'
+  walkthrough: |
+    1. The form: If $A$, then $B$. $A$. Therefore, $B$.
+    2. Any substitution preserves validity (modus ponens).
+    3. The form alone guarantees the conclusion.
+    4. It is formally valid; modus ponens works for any substitution.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. Triangles have three sides. 2. Therefore, triangles have fewer than five sides.'
+  answer: 4
+  options:
+    - Formally valid
+    - Invalid
+    - Formally valid because 3 < 5
+    - Conceptually valid; it relies on the fact that 3 < 5
+  hint: 'The form: "$A$ has property $X$. Therefore, $A$ has property $Y$." Test substitutions.'
+  walkthrough: |
+    1. The form: $A$ has property $X$. Therefore, $A$ has property $Y$.
+    2. Substitution: "Squares have four sides. Therefore, squares have seven sides." Invalid.
+    3. The original works because 3 is less than 5.
+    4. It is conceptually valid; it relies on the fact that 3 < 5.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. All $A$ are $B$. 2. $C$ is an $A$. 3. Therefore, $C$ is a $B$.'
+  answer: 3
+  options:
+    - Only conceptually valid
+    - Invalid
+    - Formally valid; no substitution can produce an invalid argument
+    - Cannot determine without specific content
+  hint: This is already in variable form. The form guarantees the conclusion.
+  walkthrough: |
+    1. If all $A$ are $B$ and $C$ is an $A$, then $C$ must be a $B$.
+    2. This holds regardless of what $A$, $B$, and $C$ stand for.
+    3. No substitution can break it.
+    4. It is formally valid; no substitution can produce an invalid argument.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. She is a mother. 2. Therefore, she is a parent.'
+  answer: 2
+  options:
+    - Formally valid
+    - 'Conceptually valid; it depends on "mother" meaning "female parent"'
+    - Invalid
+    - Formally valid because all mothers are parents
+  hint: 'Test the form: "$A$ is an $X$. Therefore, $A$ is a $Y$."'
+  walkthrough: |
+    1. The form: $A$ is an $X$. Therefore, $A$ is a $Y$.
+    2. Substitution: "She is a painter. Therefore, she is a scientist." Invalid.
+    3. The original works because "mother" entails "parent."
+    4. It is conceptually valid; it depends on "mother" meaning "female parent."
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. If the cake is chocolate, it contains cocoa. 2. The cake does not contain cocoa. 3. Therefore, the cake is not chocolate.'
+  answer: 1
+  options:
+    - Formally valid; modus tollens is valid for any content
+    - Conceptually valid only
+    - Invalid
+    - Valid only for chocolate cake
+  hint: 'The form is: If $A$, then $B$. Not $B$. Therefore, not $A$.'
+  walkthrough: |
+    1. The form: If $A$, then $B$. Not $B$. Therefore, not $A$.
+    2. This is modus tollens, valid for any substitution.
+    3. The form alone guarantees the conclusion.
+    4. It is formally valid; modus tollens is valid for any content.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. If it rains, the picnic is canceled. 2. The picnic is canceled. 3. Therefore, it rained.'
+  answer: 4
+  options:
+    - Formally valid
+    - Conceptually valid
+    - Formally valid because rain always cancels picnics
+    - Invalid; affirming the consequent is a formal fallacy
+  hint: 'The form affirms the consequent: If $A$, then $B$. $B$. Therefore, $A$.'
+  walkthrough: |
+    1. The form: If $A$, then $B$. $B$. Therefore, $A$.
+    2. Substitution: "If it snows, the roads are wet. The roads are wet. So it snowed." The roads could be wet for other reasons.
+    3. This form does not guarantee the conclusion; it is a formal fallacy.
+    4. It is invalid; affirming the consequent is a formal fallacy.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. If the light is off, the room is dark. 2. The light is not off. 3. Therefore, the room is not dark.'
+  answer: 3
+  options:
+    - Formally valid
+    - Conceptually valid
+    - Invalid; denying the antecedent is a formal fallacy
+    - Formally valid because lights determine darkness
+  hint: 'The form: If $A$, then $B$. Not $A$. Therefore, not $B$. Is this always valid?'
+  walkthrough: |
+    1. The form: If $A$, then $B$. Not $A$. Therefore, not $B$.
+    2. Substitution: "If it rains, the street is wet. It did not rain. So the street is not wet." The street could be wet from a sprinkler.
+    3. The form fails; denying the antecedent does not guarantee the conclusion.
+    4. It is invalid; denying the antecedent is a formal fallacy.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: What distinguishes a formally valid argument from a conceptually valid one?
+  answer: 2
+  options:
+    - Formally valid arguments have true premises
+    - Formally valid arguments are valid due to structure alone; conceptually valid ones rely on word meanings
+    - Conceptually valid arguments are always invalid
+    - Formally valid arguments are always sound
+  hint: Formal validity depends on form; conceptual validity depends on content.
+  walkthrough: |
+    1. Formal validity: the logical form guarantees the conclusion for every substitution.
+    2. Conceptual validity: the argument is valid because of the meanings of specific words.
+    3. The distinction is structure vs. meaning.
+    4. Formally valid arguments are valid due to structure alone; conceptually valid ones rely on word meanings.
+  tags:
+    - formal-vs-conceptual
+
+- type: mcq
+  question: 'Is this formally valid? 1. Either the package is here or it was returned. 2. The package is not here. 3. Therefore, it was returned.'
+  answer: 1
+  options:
+    - Formally valid; disjunctive syllogism works for any content
+    - Conceptually valid only
+    - Invalid
+    - Valid only for packages
+  hint: 'The form: Either $A$ or $B$. Not $A$. Therefore, $B$.'
+  walkthrough: |
+    1. The form: Either $A$ or $B$. Not $A$. Therefore, $B$.
+    2. This is disjunctive syllogism, valid for any substitution.
+    3. The form alone guarantees the conclusion.
+    4. It is formally valid; disjunctive syllogism works for any content.
+  tags:
+    - formal-vs-conceptual

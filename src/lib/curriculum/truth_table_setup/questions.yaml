@@ -1,0 +1,665 @@
+- type: mcq
+  question: 'How many rows does the truth table for $(P \to Q)$ have?'
+  answer: 2
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: Count distinct sentence letters and apply $2^n$.
+  walkthrough: |
+    1. Distinct letters: $P$ and $Q$. That is 2.
+    2. $2^2 = 4$ rows.
+    3. The truth table has 4 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $(A \land B) \to C$ have?'
+  answer: 3
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: 'Count distinct sentence letters: $A$, $B$, $C$.'
+  walkthrough: |
+    1. Distinct letters: $A$, $B$, $C$. That is 3.
+    2. $2^3 = 8$ rows.
+    3. The truth table has 8 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $\neg (A \lor A)$ have?'
+  answer: 1
+  options:
+    - '2'
+    - '4'
+    - '1'
+    - '8'
+  hint: '$A$ appears twice, but it is only one distinct letter.'
+  walkthrough: |
+    1. Distinct letters: $A$ only. That is 1.
+    2. $2^1 = 2$ rows.
+    3. The truth table has 2 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: A formula has 4 distinct sentence letters. How many rows?
+  answer: 4
+  options:
+    - '4'
+    - '8'
+    - '12'
+    - '16'
+  hint: $2^4 = ?$
+  walkthrough: |
+    1. $n = 4$ distinct letters.
+    2. $2^4 = 16$ rows.
+    3. The truth table has 16 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does $P \leftrightarrow \neg P$ have?'
+  answer: 2
+  options:
+    - '1'
+    - '2'
+    - '4'
+    - '8'
+  hint: 'Only one distinct sentence letter: $P$.'
+  walkthrough: |
+    1. Distinct letters: $P$ only. That is 1.
+    2. $2^1 = 2$ rows.
+    3. The truth table has 2 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $(P \land Q) \lor (R \to S)$ have?'
+  answer: 4
+  options:
+    - '4'
+    - '8'
+    - '12'
+    - '16'
+  hint: 'Count all distinct sentence letters: $P$, $Q$, $R$, $S$.'
+  walkthrough: |
+    1. Distinct letters: $P$, $Q$, $R$, $S$. That is 4.
+    2. $2^4 = 16$ rows.
+    3. The truth table has 16 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $\neg P \land \neg P$ have?'
+  answer: 1
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '1'
+  hint: How many distinct sentence letters appear?
+  walkthrough: |
+    1. The only sentence letter is $P$, even though it appears twice.
+    2. $n = 1$, so $2^1 = 2$ rows.
+    3. The truth table has 2 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $(A \leftrightarrow B) \to (C \land D)$ have?'
+  answer: 4
+  options:
+    - '4'
+    - '8'
+    - '12'
+    - '16'
+  hint: 'Count distinct letters: $A$, $B$, $C$, $D$.'
+  walkthrough: |
+    1. Distinct letters: $A$, $B$, $C$, $D$. That is 4.
+    2. $2^4 = 16$ rows.
+    3. The truth table has 16 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $P \to (Q \lor R)$ have?'
+  answer: 3
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: 'Count distinct sentence letters: $P$, $Q$, $R$.'
+  walkthrough: |
+    1. Distinct letters: $P$, $Q$, $R$. That is 3.
+    2. $2^3 = 8$ rows.
+    3. The truth table has 8 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $\neg \neg \neg A$ have?'
+  answer: 2
+  options:
+    - '1'
+    - '2'
+    - '4'
+    - '8'
+  hint: 'Negation symbols are connectives, not sentence letters.'
+  walkthrough: |
+    1. The only distinct sentence letter is $A$.
+    2. $n = 1$, so $2^1 = 2$ rows.
+    3. Triple negation does not add letters; the truth table has 2 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'A formula contains sentence letters $P$, $Q$, $R$, $S$, and $T$. How many rows does its truth table have?'
+  answer: 3
+  options:
+    - '10'
+    - '16'
+    - '32'
+    - '25'
+  hint: $2^5 = ?$
+  walkthrough: |
+    1. $n = 5$ distinct letters.
+    2. $2^5 = 32$ rows.
+    3. The truth table has 32 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $(P \lor Q) \land (P \lor Q)$ have?'
+  answer: 2
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: 'Count distinct sentence letters, ignoring repetitions.'
+  walkthrough: |
+    1. The formula repeats $(P \lor Q)$, but only $P$ and $Q$ are distinct letters.
+    2. $n = 2$, so $2^2 = 4$ rows.
+    3. The truth table has 4 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $A \to A$ have?'
+  answer: 1
+  options:
+    - '2'
+    - '4'
+    - '1'
+    - '8'
+  hint: Both sides of the conditional use the same letter.
+  walkthrough: |
+    1. The only distinct sentence letter is $A$.
+    2. $n = 1$, so $2^1 = 2$ rows.
+    3. The truth table has 2 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $(A \lor B) \leftrightarrow (C \to A)$ have?'
+  answer: 3
+  options:
+    - '4'
+    - '6'
+    - '8'
+    - '16'
+  hint: 'Count distinct sentence letters: $A$, $B$, $C$.'
+  walkthrough: |
+    1. Distinct letters: $A$, $B$, $C$. That is 3.
+    2. $2^3 = 8$ rows.
+    3. The truth table has 8 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $\neg (P \land Q) \to (R \lor S)$ have?'
+  answer: 4
+  options:
+    - '4'
+    - '8'
+    - '12'
+    - '16'
+  hint: 'Count distinct sentence letters: $P$, $Q$, $R$, $S$.'
+  walkthrough: |
+    1. Distinct letters: $P$, $Q$, $R$, $S$. That is 4.
+    2. $2^4 = 16$ rows.
+    3. The truth table has 16 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $(P \to Q) \land (Q \to R)$ have?'
+  answer: 3
+  options:
+    - '4'
+    - '6'
+    - '8'
+    - '16'
+  hint: 'Count distinct sentence letters: $P$, $Q$, $R$.'
+  walkthrough: |
+    1. Distinct letters: $P$, $Q$, $R$. That is 3.
+    2. $2^3 = 8$ rows.
+    3. The truth table has 8 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $P \land (Q \lor P)$ have?'
+  answer: 2
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: $P$ appears twice but is only one distinct letter.
+  walkthrough: |
+    1. Distinct letters: $P$ and $Q$. That is 2.
+    2. $2^2 = 4$ rows.
+    3. The truth table has 4 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: A formula with 6 distinct sentence letters has how many rows?
+  answer: 4
+  options:
+    - '12'
+    - '32'
+    - '36'
+    - '64'
+  hint: $2^6 = ?$
+  walkthrough: |
+    1. $n = 6$ distinct letters.
+    2. $2^6 = 64$ rows.
+    3. The truth table has 64 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $\neg (A \to B) \lor B$ have?'
+  answer: 2
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: 'Identify distinct sentence letters: $A$ and $B$.'
+  walkthrough: |
+    1. Distinct letters: $A$ and $B$. That is 2.
+    2. $2^2 = 4$ rows.
+    3. The truth table has 4 rows.
+  tags:
+    - count-rows
+
+- type: mcq
+  question: 'How many rows does the truth table for $(A \land B) \lor (\neg A \land \neg B)$ have?'
+  answer: 2
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: Negation does not introduce new letters. Count $A$ and $B$ only.
+  walkthrough: |
+    1. Distinct letters: $A$ and $B$. That is 2.
+    2. $2^2 = 4$ rows.
+    3. The truth table has 4 rows.
+  tags:
+    - count-rows
+
+- type: truth-table
+  question: Fill in the reference columns for a formula with letters $P$ and $Q$.
+  formulas:
+    - $P$
+    - $Q$
+  hiddenFormulas:
+    - $P$
+    - $Q$
+  hint: 'Use the halving method: $P$ gets blocks of 2; $Q$ alternates T, F.'
+  walkthrough: |
+    1. $P$ (left): 2 T's then 2 F's.
+    2. $Q$ (right): alternate T, F.
+    3. The values are: T, T, T, F, F, T, F, F.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'Using the halving method for 3 letters ($A$, $B$, $C$), what pattern does the leftmost column ($A$) follow?'
+  answer: 3
+  options:
+    - 'Alternating: T, F, T, F, T, F, T, F'
+    - 'Blocks of 2: TT, FF, TT, FF'
+    - 'Blocks of 4: TTTT, FFFF'
+    - All T then all F
+  hint: The leftmost column has the largest blocks.
+  walkthrough: |
+    1. For 3 letters, there are 8 rows.
+    2. The leftmost column ($A$) uses blocks of $2^{3-1} = 4$.
+    3. The pattern is blocks of 4: TTTT, FFFF.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'Using the halving method for 3 letters ($A$, $B$, $C$), what pattern does the rightmost column ($C$) follow?'
+  answer: 1
+  options:
+    - 'Alternating: T, F, T, F, T, F, T, F'
+    - 'Blocks of 2: TT, FF, TT, FF'
+    - 'Blocks of 4: TTTT, FFFF'
+    - All T for 8 rows
+  hint: The rightmost column always alternates.
+  walkthrough: |
+    1. The rightmost column always alternates T, F.
+    2. For 8 rows: T, F, T, F, T, F, T, F.
+    3. The rightmost column alternates T and F.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 2 letters ($P$, $Q$), what is the 3rd row?'
+  answer: 4
+  options:
+    - '$P$ = T, $Q$ = T'
+    - '$P$ = T, $Q$ = F'
+    - '$P$ = F, $Q$ = F'
+    - '$P$ = F, $Q$ = T'
+  hint: '$P$: blocks of 2 (TT, FF). $Q$: alternate (T, F, T, F).'
+  walkthrough: |
+    1. Row 1: T, T. Row 2: T, F. Row 3: F, T. Row 4: F, F.
+    2. The 3rd row is $P$ = F, $Q$ = T.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: Why does the halving method guarantee all possible combinations?
+  answer: 2
+  options:
+    - It randomly assigns truth values
+    - 'Each column halves its block size, creating every unique combination across $2^n$ rows'
+    - It only works for 2 letters
+    - It lists the most important combinations first
+  hint: Halving the block size at each column systematically produces every combination.
+  walkthrough: |
+    1. The rightmost column alternates (block size 1).
+    2. The next column uses block size 2, then 4, and so on.
+    3. This systematic doubling ensures every combination appears exactly once.
+    4. Each column halves its block size, producing all $2^n$ unique combinations.
+  tags:
+    - setup-reference-columns
+
+- type: truth-table
+  question: Fill in the reference columns for a formula with letters $A$ and $B$.
+  formulas:
+    - $A$
+    - $B$
+  hiddenFormulas:
+    - $A$
+    - $B$
+  hint: '$A$ gets blocks of 2; $B$ alternates T, F.'
+  walkthrough: |
+    1. $A$ (left): 2 T's then 2 F's.
+    2. $B$ (right): alternate T, F.
+    3. The values are: T, T, T, F, F, T, F, F.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 3 letters ($P$, $Q$, $R$), what is the 5th row?'
+  answer: 3
+  options:
+    - '$P$ = T, $Q$ = F, $R$ = T'
+    - '$P$ = F, $Q$ = F, $R$ = T'
+    - '$P$ = F, $Q$ = T, $R$ = T'
+    - '$P$ = F, $Q$ = T, $R$ = F'
+  hint: '$P$: blocks of 4. $Q$: blocks of 2. $R$: alternates. The 5th row starts the second half.'
+  walkthrough: |
+    1. $P$: TTTTFFFF. Row 5 is in the second block, so $P$ = F.
+    2. $Q$: TT, FF, TT, FF. Row 5 starts a new TT block, so $Q$ = T.
+    3. $R$: alternates T, F. Row 5 is odd, so $R$ = T.
+    4. The 5th row is $P$ = F, $Q$ = T, $R$ = T.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'Using the halving method for 4 letters ($A$, $B$, $C$, $D$), what block size does $B$ use?'
+  answer: 2
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '1'
+  hint: 'The rightmost letter alternates (block 1), the next uses blocks of 2, the next blocks of 4, and so on.'
+  walkthrough: |
+    1. $D$ (rightmost): block size 1 (alternates).
+    2. $C$: block size 2.
+    3. $B$: block size 4.
+    4. $A$ (leftmost): block size 8.
+    5. $B$ uses blocks of 4.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 2 letters ($A$, $B$), what is the last row?'
+  answer: 1
+  options:
+    - '$A$ = F, $B$ = F'
+    - '$A$ = T, $B$ = T'
+    - '$A$ = F, $B$ = T'
+    - '$A$ = T, $B$ = F'
+  hint: The last row has all letters set to F.
+  walkthrough: |
+    1. Row 1: T, T. Row 2: T, F. Row 3: F, T. Row 4: F, F.
+    2. The last row is $A$ = F, $B$ = F.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 3 letters ($A$, $B$, $C$), what pattern does $B$ (the middle column) follow?'
+  answer: 4
+  options:
+    - 'Alternating: T, F, T, F, T, F, T, F'
+    - 'Blocks of 4: TTTT, FFFF'
+    - All T for 8 rows
+    - 'Blocks of 2: TT, FF, TT, FF'
+  hint: The middle column uses blocks of 2.
+  walkthrough: |
+    1. For 3 letters, the rightmost ($C$) alternates (block 1).
+    2. The middle column ($B$) uses block size 2: TT, FF, TT, FF.
+    3. The leftmost ($A$) uses block size 4.
+    4. $B$ follows blocks of 2: TT, FF, TT, FF.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 2 letters ($P$, $Q$), what is the first row?'
+  answer: 3
+  options:
+    - '$P$ = T, $Q$ = F'
+    - '$P$ = F, $Q$ = T'
+    - '$P$ = T, $Q$ = T'
+    - '$P$ = F, $Q$ = F'
+  hint: The first row assigns T to every letter.
+  walkthrough: |
+    1. Using the halving method, the first row always starts with all T values.
+    2. Row 1: $P$ = T, $Q$ = T.
+    3. The first row is $P$ = T, $Q$ = T.
+  tags:
+    - setup-reference-columns
+
+- type: truth-table
+  question: 'Fill in the reference columns for a formula with letters $A$, $B$, and $C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+  hiddenFormulas:
+    - $A$
+    - $B$
+    - $C$
+  hint: '$A$: blocks of 4. $B$: blocks of 2. $C$: alternates.'
+  walkthrough: |
+    1. $A$ (leftmost): 4 T's then 4 F's.
+    2. $B$ (middle): TT, FF, TT, FF.
+    3. $C$ (rightmost): alternates T, F.
+    4. Reading across all 8 rows gives the answer.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 3 letters ($P$, $Q$, $R$), what is the 2nd row?'
+  answer: 2
+  options:
+    - '$P$ = T, $Q$ = T, $R$ = T'
+    - '$P$ = T, $Q$ = T, $R$ = F'
+    - '$P$ = T, $Q$ = F, $R$ = T'
+    - '$P$ = T, $Q$ = F, $R$ = F'
+  hint: Row 1 is all T. Row 2 flips only the rightmost letter.
+  walkthrough: |
+    1. $P$: blocks of 4, so row 2 is still T.
+    2. $Q$: blocks of 2, so row 2 is still T.
+    3. $R$: alternates, so row 2 is F.
+    4. The 2nd row is $P$ = T, $Q$ = T, $R$ = F.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 4 letters ($A$, $B$, $C$, $D$), what is the 9th row?'
+  answer: 1
+  options:
+    - '$A$ = F, $B$ = T, $C$ = T, $D$ = T'
+    - '$A$ = F, $B$ = T, $C$ = T, $D$ = F'
+    - '$A$ = T, $B$ = F, $C$ = F, $D$ = T'
+    - '$A$ = F, $B$ = F, $C$ = T, $D$ = T'
+  hint: '$A$: blocks of 8. The 9th row starts the second block of $A$.'
+  walkthrough: |
+    1. $A$: blocks of 8. Rows 1 to 8 are T; rows 9 to 16 are F. So $A$ = F.
+    2. $B$: blocks of 4. Row 9 starts a new block of 4 T's. So $B$ = T.
+    3. $C$: blocks of 2. Row 9 starts a new block of 2 T's. So $C$ = T.
+    4. $D$: alternates. Row 9 is odd, so $D$ = T.
+    5. The 9th row is $A$ = F, $B$ = T, $C$ = T, $D$ = T.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 3 letters ($A$, $B$, $C$), what is the 7th row?'
+  answer: 4
+  options:
+    - '$A$ = F, $B$ = T, $C$ = T'
+    - '$A$ = F, $B$ = T, $C$ = F'
+    - '$A$ = F, $B$ = F, $C$ = F'
+    - '$A$ = F, $B$ = F, $C$ = T'
+  hint: '$A$: blocks of 4 (rows 5 to 8 are F). $B$: blocks of 2. $C$: alternates.'
+  walkthrough: |
+    1. $A$: blocks of 4. Row 7 is in the second block, so $A$ = F.
+    2. $B$: blocks of 2. Rows 7 and 8 form a FF block, so $B$ = F.
+    3. $C$: alternates. Row 7 is odd, so $C$ = T.
+    4. The 7th row is $A$ = F, $B$ = F, $C$ = T.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'Using the halving method for 2 letters ($P$, $Q$), how many times does $P$ switch between T and F?'
+  answer: 2
+  options:
+    - '0'
+    - '1'
+    - '3'
+    - '2'
+  hint: $P$ uses blocks of 2 across 4 rows.
+  walkthrough: |
+    1. $P$: TT, FF. It switches once (from T to F).
+    2. There is 1 switch in the entire column.
+  tags:
+    - setup-reference-columns
+
+- type: truth-table
+  question: 'Fill in only the $Q$ reference column for a formula with letters $P$, $Q$, and $R$ (8 rows).'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+  hiddenFormulas:
+    - $Q$
+  hint: $Q$ is the middle column with blocks of 2.
+  walkthrough: |
+    1. $Q$ (middle of 3 letters): blocks of 2.
+    2. Pattern: TT, FF, TT, FF.
+    3. The values are: T, T, F, F, T, T, F, F.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 3 letters ($P$, $Q$, $R$), which row has $P$ = T, $Q$ = F, $R$ = F?'
+  answer: 3
+  options:
+    - Row 2
+    - Row 3
+    - Row 4
+    - Row 5
+  hint: 'List the rows: Row 1 is TTT, Row 2 is TTF, Row 3 is TFT, Row 4 is TFF.'
+  walkthrough: |
+    1. Row 1: T, T, T. Row 2: T, T, F. Row 3: T, F, T. Row 4: T, F, F.
+    2. The combination $P$ = T, $Q$ = F, $R$ = F matches row 4.
+    3. It is row 4.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 2 letters ($P$, $Q$), which row has $P$ = T and $Q$ = F?'
+  answer: 3
+  options:
+    - Row 1
+    - Row 3
+    - Row 2
+    - Row 4
+  hint: 'Row 1: TT. Row 2: TF. Row 3: FT. Row 4: FF.'
+  walkthrough: |
+    1. Using the halving method: Row 1 is T, T. Row 2 is T, F.
+    2. The combination $P$ = T, $Q$ = F appears in row 2.
+    3. It is row 2.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'In a truth table for 3 letters ($A$, $B$, $C$), what is the 4th row?'
+  answer: 1
+  options:
+    - '$A$ = T, $B$ = F, $C$ = F'
+    - '$A$ = T, $B$ = F, $C$ = T'
+    - '$A$ = F, $B$ = T, $C$ = T'
+    - '$A$ = F, $B$ = F, $C$ = F'
+  hint: '$A$: blocks of 4 (still T in row 4). $B$: blocks of 2 (rows 3 and 4 are FF). $C$: alternates (row 4 is even, so F).'
+  walkthrough: |
+    1. $A$: blocks of 4. Row 4 is in the first block, so $A$ = T.
+    2. $B$: blocks of 2. Rows 3 and 4 form an FF block, so $B$ = F.
+    3. $C$: alternates. Row 4 is even, so $C$ = F.
+    4. The 4th row is $A$ = T, $B$ = F, $C$ = F.
+  tags:
+    - setup-reference-columns
+
+- type: mcq
+  question: 'How many rows does the truth table for $(P \land Q) \lor R$ have?'
+  answer: 3
+  options:
+    - '2'
+    - '4'
+    - '8'
+    - '16'
+  hint: 'Count distinct sentence letters: $P$, $Q$, $R$.'
+  walkthrough: |
+    1. Distinct letters: $P$, $Q$, $R$. That is 3.
+    2. $2^3 = 8$ rows.
+    3. The truth table has 8 rows.
+  tags:
+    - diagnostic

@@ -1,0 +1,696 @@
+- type: mcq
+  question: 'What is the main operator of $(\neg A \land B)$?'
+  answer: 2
+  options:
+    - '$\neg$'
+    - '$\land$'
+    - $A$
+    - $B$
+  hint: 'The main operator governs the entire formula. What joins $\neg A$ and $B$?'
+  walkthrough: |
+    1. The outermost structure is $(\_ \land \_)$.
+    2. $\neg$ governs only $A$, not the whole formula.
+    3. $\land$ joins $\neg A$ and $B$, governing the entire formula.
+    4. The main operator is $\land$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $\neg (P \lor Q)$?'
+  answer: 1
+  options:
+    - '$\neg$'
+    - '$\lor$'
+    - $P$
+    - $Q$
+  hint: 'The formula starts with $\neg$, which applies to the entire rest of the formula.'
+  walkthrough: |
+    1. The $\neg$ applies to $(P \lor Q)$, which is the entire rest of the formula.
+    2. The $\lor$ is inside the brackets governed by $\neg$.
+    3. $\neg$ was applied last and governs everything.
+    4. The main operator is $\neg$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $((A \lor B) \land (C \lor D))$?'
+  answer: 3
+  options:
+    - '$\lor$ (the first one)'
+    - '$\lor$ (the second one)'
+    - '$\land$'
+    - There is no main operator
+  hint: Strip the outer brackets and find the connective that joins the two largest parts.
+  walkthrough: |
+    1. The structure is $(\_ \land \_)$.
+    2. Left operand: $(A \lor B)$. Right operand: $(C \lor D)$.
+    3. $\land$ joins these two sub-formulas, governing the whole formula.
+    4. The main operator is $\land$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $\neg \neg P$?'
+  answer: 4
+  options:
+    - $P$
+    - 'The inner $\neg$'
+    - There is no main operator
+    - 'The outer $\neg$'
+  hint: The outermost connective was applied last.
+  walkthrough: |
+    1. The inner $\neg$ applies to $P$.
+    2. The outer $\neg$ applies to $\neg P$, which is the entire rest of the formula.
+    3. The outer $\neg$ was applied last and governs the whole formula.
+    4. The main operator is the outer $\neg$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $(P \lor (\neg Q \land R))$?'
+  answer: 2
+  options:
+    - '$\neg$'
+    - '$\lor$'
+    - '$\land$'
+    - $R$
+  hint: Find the connective that splits the formula into its two largest parts.
+  walkthrough: |
+    1. The outermost structure is $(P \lor \_)$.
+    2. Left operand: $P$. Right operand: $(\neg Q \land R)$.
+    3. $\lor$ joins these parts, governing the entire formula.
+    4. The main operator is $\lor$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $(P \to (Q \land R))$?'
+  answer: 1
+  options:
+    - '$\to$'
+    - '$\land$'
+    - $P$
+    - $Q$
+  hint: What connective splits the formula into its two largest sub-formulas?
+  walkthrough: |
+    1. The outermost structure is $(P \to \_)$.
+    2. Left operand: $P$. Right operand: $(Q \land R)$.
+    3. $\to$ connects these two parts and governs the entire formula.
+    4. The main operator is $\to$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $((P \to Q) \lor (R \to S))$?'
+  answer: 3
+  options:
+    - '$\to$ (the first one)'
+    - '$\to$ (the second one)'
+    - '$\lor$'
+    - There is no main operator
+  hint: Strip the outer brackets. What connective joins the two conditionals?
+  walkthrough: |
+    1. The outermost structure is $(\_ \lor \_)$.
+    2. Left operand: $(P \to Q)$. Right operand: $(R \to S)$.
+    3. $\lor$ joins them and governs the entire formula.
+    4. The main operator is $\lor$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $\neg (P \land \neg Q)$?'
+  answer: 4
+  options:
+    - '$\land$'
+    - 'The inner $\neg$ (before $Q$)'
+    - $P$
+    - 'The outer $\neg$'
+  hint: 'The leading $\neg$ applies to the entire expression $(P \land \neg Q)$.'
+  walkthrough: |
+    1. The formula starts with $\neg$, applied to $(P \land \neg Q)$.
+    2. $(P \land \neg Q)$ is the entire rest of the formula.
+    3. The inner $\neg$ governs only $Q$; the $\land$ governs only the conjunction inside.
+    4. The main operator is the outer $\neg$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $(A \leftrightarrow (B \lor C))$?'
+  answer: 2
+  options:
+    - '$\lor$'
+    - '$\leftrightarrow$'
+    - $A$
+    - $C$
+  hint: 'What connective splits the formula into $A$ and $(B \lor C)$?'
+  walkthrough: |
+    1. The outermost structure is $(A \leftrightarrow \_)$.
+    2. Left operand: $A$. Right operand: $(B \lor C)$.
+    3. $\leftrightarrow$ connects these parts and governs the entire formula.
+    4. The main operator is $\leftrightarrow$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $((A \land B) \to \neg C)$?'
+  answer: 1
+  options:
+    - '$\to$'
+    - '$\land$'
+    - '$\neg$'
+    - $C$
+  hint: 'What connective joins $(A \land B)$ and $\neg C$?'
+  walkthrough: |
+    1. The outermost structure is $(\_ \to \_)$.
+    2. Left operand: $(A \land B)$. Right operand: $\neg C$.
+    3. $\to$ joins these two parts and was the last connective applied.
+    4. The main operator is $\to$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $\neg \neg \neg P$?'
+  answer: 3
+  options:
+    - 'The innermost $\neg$'
+    - 'The middle $\neg$'
+    - 'The outermost $\neg$'
+    - $P$
+  hint: The outermost connective is always the main operator.
+  walkthrough: |
+    1. The innermost $\neg$ applies to $P$, giving $\neg P$.
+    2. The middle $\neg$ applies to $\neg P$, giving $\neg \neg P$.
+    3. The outermost $\neg$ applies to $\neg \neg P$, governing the entire formula.
+    4. The main operator is the outermost $\neg$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $(P \land (Q \lor (R \to S)))$?'
+  answer: 4
+  options:
+    - '$\lor$'
+    - '$\to$'
+    - $S$
+    - '$\land$'
+  hint: What connective sits at the outermost level?
+  walkthrough: |
+    1. The outermost structure is $(P \land \_)$.
+    2. Left operand: $P$. Right operand: $(Q \lor (R \to S))$.
+    3. $\land$ connects these two parts at the top level.
+    4. The main operator is $\land$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $((P \lor Q) \leftrightarrow (R \land S))$?'
+  answer: 2
+  options:
+    - '$\lor$'
+    - '$\leftrightarrow$'
+    - '$\land$'
+    - $R$
+  hint: What connective joins the disjunction and the conjunction?
+  walkthrough: |
+    1. The outermost structure is $(\_ \leftrightarrow \_)$.
+    2. Left operand: $(P \lor Q)$. Right operand: $(R \land S)$.
+    3. $\leftrightarrow$ joins these two sub-formulas.
+    4. The main operator is $\leftrightarrow$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $\neg (P \to (Q \lor R))$?'
+  answer: 1
+  options:
+    - '$\neg$'
+    - '$\to$'
+    - '$\lor$'
+    - $R$
+  hint: 'The leading $\neg$ governs everything inside the brackets.'
+  walkthrough: |
+    1. The formula starts with $\neg$, applied to $(P \to (Q \lor R))$.
+    2. The $\to$ and $\lor$ are both inside the scope of $\neg$.
+    3. $\neg$ was applied last and governs the entire formula.
+    4. The main operator is $\neg$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $((A \to B) \land (B \to A))$?'
+  answer: 3
+  options:
+    - '$\to$ (the first one)'
+    - '$\to$ (the second one)'
+    - '$\land$'
+    - $A$
+  hint: What connective joins the two conditionals at the outermost level?
+  walkthrough: |
+    1. The outermost structure is $(\_ \land \_)$.
+    2. Left operand: $(A \to B)$. Right operand: $(B \to A)$.
+    3. $\land$ joins these two sub-formulas at the top level.
+    4. The main operator is $\land$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $(P \lor \neg (Q \land R))$?'
+  answer: 4
+  options:
+    - '$\land$'
+    - '$\neg$'
+    - $Q$
+    - '$\lor$'
+  hint: 'What connective splits the formula into $P$ and $\neg (Q \land R)$?'
+  walkthrough: |
+    1. The outermost structure is $(P \lor \_)$.
+    2. Left operand: $P$. Right operand: $\neg (Q \land R)$.
+    3. $\lor$ connects these parts and was applied last.
+    4. The main operator is $\lor$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $(\neg P \to \neg Q)$?'
+  answer: 2
+  options:
+    - 'The $\neg$ before $P$'
+    - '$\to$'
+    - 'The $\neg$ before $Q$'
+    - $P$
+  hint: The negations each govern only one letter. What connects the two parts?
+  walkthrough: |
+    1. The outermost structure is $(\_ \to \_)$.
+    2. Left operand: $\neg P$. Right operand: $\neg Q$.
+    3. Each $\neg$ governs only the letter after it.
+    4. The main operator is $\to$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $((P \land Q) \lor (\neg P \land \neg Q))$?'
+  answer: 1
+  options:
+    - '$\lor$'
+    - '$\land$ (the first one)'
+    - '$\land$ (the second one)'
+    - '$\neg$ (before $P$)'
+  hint: What connective joins the two conjunctions?
+  walkthrough: |
+    1. The outermost structure is $(\_ \lor \_)$.
+    2. Left operand: $(P \land Q)$. Right operand: $(\neg P \land \neg Q)$.
+    3. $\lor$ joins these two conjunctions at the top level.
+    4. The main operator is $\lor$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the main operator of $(P \to (Q \to R))$?'
+  answer: 3
+  options:
+    - $Q$
+    - 'The inner $\to$'
+    - 'The outer $\to$'
+    - $R$
+  hint: 'The formula has nested conditionals. Which $\to$ governs the entire formula?'
+  walkthrough: |
+    1. The outermost structure is $(P \to \_)$.
+    2. Left operand: $P$. Right operand: $(Q \to R)$.
+    3. The outer $\to$ connects $P$ to $(Q \to R)$ and governs the whole formula.
+    4. The main operator is the outer $\to$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the strict (fully bracketed) form of $P \land Q$?'
+  answer: 1
+  options:
+    - '$(P \land Q)$'
+    - '$P (\land Q)$'
+    - '$(P) \land (Q)$'
+    - '$[P \land Q]$'
+  hint: Convention 1 allows dropping outermost brackets. Restore them.
+  walkthrough: |
+    1. $P \land Q$ is a shorthand with outermost brackets dropped.
+    2. The strict form restores the outer brackets: $(P \land Q)$.
+    3. Square brackets are equivalent to round brackets and are optional.
+    4. The strict form is $(P \land Q)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'Which relaxed form is acceptable for $((A \lor B) \land \neg C)$?'
+  answer: 3
+  options:
+    - '$A \lor B \land \neg C$ (ambiguous without inner brackets)'
+    - '$A \lor (B \land \neg C)$ (changes the meaning)'
+    - '$(A \lor B) \land \neg C$'
+    - '$\neg C \land (A \lor B)$ (changes the order)'
+  hint: Convention 1 allows dropping only the outermost brackets.
+  walkthrough: |
+    1. The outermost brackets wrap the whole formula.
+    2. Drop only those: $(A \lor B) \land \neg C$.
+    3. The inner brackets around $(A \lor B)$ must stay to preserve structure.
+    4. The acceptable relaxed form is $(A \lor B) \land \neg C$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'Are $(P \lor Q)$ and $[P \lor Q]$ the same formula?'
+  answer: 2
+  options:
+    - No; square brackets have a different meaning
+    - Yes; square brackets are a visual aid and mean the same as round brackets
+    - No; square brackets are only for negation
+    - 'Yes, but only in informal contexts'
+  hint: Convention 2 says square brackets are interchangeable with round brackets.
+  walkthrough: |
+    1. Convention 2 states that $[P \lor Q]$ means the same as $(P \lor Q)$.
+    2. Square brackets are just a visual aid for readability.
+    3. They do not change the formula's meaning.
+    4. $(P \lor Q)$ and $[P \lor Q]$ are the same formula.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the relaxed form of $(\neg P \lor Q)$?'
+  answer: 4
+  options:
+    - '$\neg P \lor Q$ is ambiguous'
+    - '$(\neg P) \lor Q$'
+    - '$\neg (P \lor Q)$'
+    - '$\neg P \lor Q$'
+  hint: 'Drop the outermost brackets. $\neg$ clearly binds to $P$ only.'
+  walkthrough: |
+    1. The outermost brackets wrap $(\neg P \lor Q)$.
+    2. Dropping them: $\neg P \lor Q$.
+    3. $\neg$ binds tightly to $P$ (it always governs the first WFF after it), so no ambiguity.
+    4. The relaxed form is $\neg P \lor Q$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: When must inner brackets be kept?
+  answer: 1
+  options:
+    - When removing them would change which connective governs which parts
+    - Always; brackets can never be removed
+    - Never; all brackets are optional
+    - Only when the formula has more than two connectives
+  hint: Brackets determine scope. Removing them can change the main operator.
+  walkthrough: |
+    1. Brackets determine which connective governs which sub-formulas.
+    2. If removing inner brackets changes the structure, the meaning changes.
+    3. Inner brackets must be kept when they prevent ambiguity.
+    4. Inner brackets must be kept when removing them would change which connective governs which parts.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the strict form of $P \to Q$?'
+  answer: 3
+  options:
+    - '$P \to (Q)$'
+    - '$(P) \to (Q)$'
+    - '$(P \to Q)$'
+    - '$[P \to Q]$'
+  hint: Convention 1 dropped the outermost brackets. Restore them.
+  walkthrough: |
+    1. $P \to Q$ stands alone, so outermost brackets were dropped.
+    2. Restoring them: $(P \to Q)$.
+    3. Adding brackets around individual letters is not part of strict bracketing.
+    4. The strict form is $(P \to Q)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the relaxed form of $((P \land Q) \lor R)$?'
+  answer: 2
+  options:
+    - '$P \land Q \lor R$ (ambiguous without inner brackets)'
+    - '$(P \land Q) \lor R$'
+    - '$R \lor (P \land Q)$ (reordered)'
+    - '$(P \land (Q \lor R))$ (different grouping)'
+  hint: Drop only the outermost brackets. Keep inner brackets that prevent ambiguity.
+  walkthrough: |
+    1. The outermost brackets wrap the entire formula.
+    2. Dropping them: $(P \land Q) \lor R$.
+    3. The inner brackets around $(P \land Q)$ must stay; removing them would make $P \land Q \lor R$ ambiguous.
+    4. The relaxed form is $(P \land Q) \lor R$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the strict form of $\neg P \land Q$?'
+  answer: 4
+  options:
+    - '$\neg (P \land Q)$'
+    - '$(\neg P) \land (Q)$'
+    - '$\neg P \land Q$ (already strict)'
+    - '$(\neg P \land Q)$'
+  hint: '$\neg$ binds to $P$ only. The outermost brackets were dropped from a conjunction.'
+  walkthrough: |
+    1. $\neg P \land Q$ has outermost brackets dropped.
+    2. $\neg$ binds tightly to $P$, so the formula is a conjunction of $\neg P$ and $Q$.
+    3. Restoring the outer brackets: $(\neg P \land Q)$.
+    4. The strict form is $(\neg P \land Q)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: Which of these is a correct use of square brackets?
+  answer: 1
+  options:
+    - '$[P \lor Q] \land R$ means the same as $(P \lor Q) \land R$'
+    - Square brackets indicate optional parts of a formula
+    - Square brackets mean the enclosed formula is false
+    - Square brackets can only be used at the outermost level
+  hint: Convention 2 states square brackets are interchangeable with round brackets.
+  walkthrough: |
+    1. Convention 2: square brackets are a visual aid equivalent to round brackets.
+    2. $[P \lor Q]$ means exactly $(P \lor Q)$.
+    3. They can appear at any level, not just the outermost.
+    4. $[P \lor Q] \land R$ means the same as $(P \lor Q) \land R$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the relaxed form of $(\neg (P \lor Q))$?'
+  answer: 3
+  options:
+    - '$\neg P \lor Q$ (incorrect: changes structure)'
+    - '$(\neg P \lor Q)$ (incorrect: moves the negation)'
+    - '$\neg (P \lor Q)$'
+    - '$\neg [P \lor Q]$ is not valid'
+  hint: 'Drop the outermost brackets only. The inner brackets stay because $\neg$ applies to the entire disjunction.'
+  walkthrough: |
+    1. The outermost brackets wrap the whole formula: $(\neg (P \lor Q))$.
+    2. Dropping them: $\neg (P \lor Q)$.
+    3. The inner brackets must remain because $\neg$ applies to $(P \lor Q)$ as a unit.
+    4. The relaxed form is $\neg (P \lor Q)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the strict form of $P \leftrightarrow Q$?'
+  answer: 2
+  options:
+    - '$P \leftrightarrow (Q)$'
+    - '$(P \leftrightarrow Q)$'
+    - '$[P \leftrightarrow Q]$'
+    - '$(P) \leftrightarrow (Q)$'
+  hint: Restore the outermost brackets that were dropped.
+  walkthrough: |
+    1. $P \leftrightarrow Q$ stands alone, so outermost brackets were dropped.
+    2. Restoring them: $(P \leftrightarrow Q)$.
+    3. Square brackets are equivalent but not the strict form.
+    4. The strict form is $(P \leftrightarrow Q)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'Is $P \lor Q \land R$ ambiguous under strict bracketing conventions?'
+  answer: 4
+  options:
+    - 'No; $\lor$ always comes first'
+    - 'No; $\land$ always comes first'
+    - No; both readings give the same truth table
+    - 'Yes; it could mean $(P \lor (Q \land R))$ or $((P \lor Q) \land R)$, which differ'
+  hint: 'Without brackets, we cannot tell which connective is the main operator.'
+  walkthrough: |
+    1. $P \lor Q \land R$ has two binary connectives but no brackets to determine grouping.
+    2. It could be read as $(P \lor (Q \land R))$ with $\lor$ as main operator.
+    3. Or as $((P \lor Q) \land R)$ with $\land$ as main operator.
+    4. These two readings produce different truth tables, so the expression is ambiguous.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the relaxed form of $((A \to B) \to C)$?'
+  answer: 1
+  options:
+    - '$(A \to B) \to C$'
+    - '$A \to B \to C$ (ambiguous)'
+    - '$A \to (B \to C)$ (different grouping)'
+    - '$(A) \to (B) \to (C)$'
+  hint: Drop the outermost brackets. Keep the inner ones to preserve grouping.
+  walkthrough: |
+    1. The outermost brackets wrap the entire formula: $((A \to B) \to C)$.
+    2. Dropping them: $(A \to B) \to C$.
+    3. The inner brackets around $(A \to B)$ must stay; without them, the grouping is ambiguous.
+    4. The relaxed form is $(A \to B) \to C$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the strict form of $(P \lor Q) \to R$?'
+  answer: 3
+  options:
+    - '$(P \lor Q) \to R$ (already strict)'
+    - '$((P) \lor (Q)) \to (R)$'
+    - '$((P \lor Q) \to R)$'
+    - '$(P \lor (Q \to R))$'
+  hint: The displayed form has outermost brackets missing. The inner brackets are already present.
+  walkthrough: |
+    1. $(P \lor Q) \to R$ is missing its outermost brackets.
+    2. Restoring them: $((P \lor Q) \to R)$.
+    3. The inner brackets around $(P \lor Q)$ are already present and correct.
+    4. The strict form is $((P \lor Q) \to R)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'Can $\neg P \to Q$ be written as $[\neg P] \to Q$?'
+  answer: 2
+  options:
+    - 'No; square brackets change the meaning of $\neg P$'
+    - 'Yes; $[\neg P]$ means the same as $(\neg P)$, which does not change the formula'
+    - 'No; $\neg$ cannot appear inside square brackets'
+    - Yes; but it changes the main operator
+  hint: 'Convention 2: square brackets equal round brackets.'
+  walkthrough: |
+    1. Convention 2 states $[\neg P]$ means the same as $(\neg P)$.
+    2. $(\neg P) \to Q$ is the same formula as $\neg P \to Q$ (with optional clarifying brackets).
+    3. Adding brackets (round or square) around $\neg P$ does not change the structure.
+    4. $[\neg P] \to Q$ means the same as $(\neg P) \to Q$, which is valid.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the relaxed form of $(\neg \neg P)$?'
+  answer: 4
+  options:
+    - '$\neg (\neg P)$'
+    - '$\neg \neg (P)$'
+    - It cannot be simplified
+    - '$\neg \neg P$'
+  hint: Drop the outermost brackets. Negations do not need extra brackets.
+  walkthrough: |
+    1. The outermost brackets wrap $(\neg \neg P)$.
+    2. Dropping them: $\neg \neg P$.
+    3. The negations bind tightly: the inner $\neg$ to $P$, the outer $\neg$ to $\neg P$. No ambiguity.
+    4. The relaxed form is $\neg \neg P$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the relaxed form of $((P \land Q) \leftrightarrow (R \lor S))$?'
+  answer: 1
+  options:
+    - '$(P \land Q) \leftrightarrow (R \lor S)$'
+    - '$P \land Q \leftrightarrow R \lor S$ (ambiguous without inner brackets)'
+    - '$(P) \land (Q) \leftrightarrow (R) \lor (S)$'
+    - '$(P \land Q) \lor (R \leftrightarrow S)$ (different grouping)'
+  hint: Drop only the outermost brackets. Keep all inner brackets.
+  walkthrough: |
+    1. The outermost brackets wrap the entire formula.
+    2. Dropping them: $(P \land Q) \leftrightarrow (R \lor S)$.
+    3. The inner brackets must stay to show $\land$ groups $P,Q$ and $\lor$ groups $R,S$.
+    4. The relaxed form is $(P \land Q) \leftrightarrow (R \lor S)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the main operator of $(A \land \neg B)$?'
+  answer: 1
+  options:
+    - '$\land$'
+    - '$\neg$'
+    - $A$
+    - $B$
+  hint: The main operator governs the entire formula.
+  walkthrough: |
+    1. The structure is $(\_ \land \_)$.
+    2. $\neg$ governs only $B$.
+    3. $\land$ joins $A$ and $\neg B$, governing the whole formula.
+    4. The main operator is $\land$.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'What is the main operator of $(\neg A \lor (B \to C))$?'
+  answer: 3
+  options:
+    - '$\neg$'
+    - '$\to$'
+    - '$\lor$'
+    - $C$
+  hint: 'What connective splits the formula into $\neg A$ and $(B \to C)$?'
+  walkthrough: |
+    1. The outermost structure is $(\_ \lor \_)$.
+    2. Left operand: $\neg A$. Right operand: $(B \to C)$.
+    3. $\lor$ joins these parts and governs the entire formula.
+    4. The main operator is $\lor$.
+  tags:
+    - identify-main-op
+
+- type: mcq
+  question: 'What is the strict form of $\neg P \lor Q$?'
+  answer: 2
+  options:
+    - '$\neg (P \lor Q)$'
+    - '$(\neg P \lor Q)$'
+    - '$(\neg P) \lor (Q)$'
+    - '$\neg P \lor Q$ is already strict'
+  hint: '$\neg$ binds tightly to $P$. The outermost brackets of the disjunction were dropped.'
+  walkthrough: |
+    1. $\neg P \lor Q$ has outermost brackets dropped.
+    2. $\neg$ binds to $P$ only, so the formula is a disjunction of $\neg P$ and $Q$.
+    3. Restoring the outer brackets: $(\neg P \lor Q)$.
+    4. The strict form is $(\neg P \lor Q)$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the relaxed form of $((\neg A \land B) \to C)$?'
+  answer: 4
+  options:
+    - '$\neg A \land B \to C$ (ambiguous without inner brackets)'
+    - '$\neg (A \land B) \to C$ (changes the negation scope)'
+    - '$C \to (\neg A \land B)$ (reverses the conditional)'
+    - '$(\neg A \land B) \to C$'
+  hint: Drop only the outermost brackets. Keep inner brackets that show the conjunction.
+  walkthrough: |
+    1. The outermost brackets wrap the entire formula.
+    2. Dropping them: $(\neg A \land B) \to C$.
+    3. The inner brackets around $(\neg A \land B)$ must stay to preserve the grouping.
+    4. The relaxed form is $(\neg A \land B) \to C$.
+  tags:
+    - bracket-conventions
+
+- type: mcq
+  question: 'What is the strict form of $(A \lor B) \land (C \to D)$?'
+  answer: 1
+  options:
+    - '$((A \lor B) \land (C \to D))$'
+    - '$(A \lor B) \land (C \to D)$ is already strict'
+    - '$((A) \lor (B)) \land ((C) \to (D))$'
+    - '$(A \lor (B \land C) \to D)$'
+  hint: The formula is missing its outermost brackets. All inner brackets are already present.
+  walkthrough: |
+    1. $(A \lor B) \land (C \to D)$ is missing outermost brackets.
+    2. Restoring them: $((A \lor B) \land (C \to D))$.
+    3. The inner brackets are already correct.
+    4. The strict form is $((A \lor B) \land (C \to D))$.
+  tags:
+    - bracket-conventions

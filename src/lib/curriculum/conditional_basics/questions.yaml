@@ -1,0 +1,967 @@
+- type: mcq
+  question: 'In "If the alarm sounds, the building is evacuated," what is the antecedent?'
+  answer: 1
+  options:
+    - '"The alarm sounds"'
+    - '"The building is evacuated"'
+    - Both sentences
+    - Neither sentence
+  hint: 'The antecedent is the sentence after "if."'
+  walkthrough: |
+    1. "If" introduces the antecedent: "the alarm sounds."
+    2. "The building is evacuated" is the consequent.
+    3. The antecedent is the "if" clause.
+    4. The antecedent is "the alarm sounds."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "The ground gets wet if it rains," what is the antecedent?'
+  answer: 3
+  options:
+    - '"The ground gets wet"'
+    - Both clauses
+    - '"It rains"'
+    - There is no antecedent
+  hint: 'The word "if" always introduces the antecedent, regardless of position.'
+  walkthrough: |
+    1. "If" appears before "it rains."
+    2. The antecedent is "it rains," even though it comes second.
+    3. The consequent is "the ground gets wet."
+    4. The antecedent is "it rains."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "If $P$ then $Q$," which is the consequent?'
+  answer: 4
+  options:
+    - $P$
+    - Both $P$ and $Q$
+    - Neither
+    - $Q$
+  hint: 'The consequent is the sentence after "then."'
+  walkthrough: |
+    1. $P$ follows "if," making it the antecedent.
+    2. $Q$ follows "then," making it the consequent.
+    3. The consequent is always the "then" clause.
+    4. The consequent is $Q$.
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "Assuming the test passes, we ship the product," what is the antecedent?'
+  answer: 2
+  options:
+    - '"We ship the product"'
+    - '"The test passes"'
+    - Both clauses
+    - There is no conditional here
+  hint: '"Assuming" functions like "if."'
+  walkthrough: |
+    1. "Assuming" introduces the antecedent: "the test passes."
+    2. The consequent is "we ship the product."
+    3. "Assuming" and "if" mark the same clause.
+    4. The antecedent is "the test passes."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In $(R \to S)$, which is the antecedent?'
+  answer: 1
+  options:
+    - $R$
+    - $S$
+    - '$\to$'
+    - Both $R$ and $S$
+  hint: 'In $(A \to B)$, $A$ is the antecedent and $B$ is the consequent.'
+  walkthrough: |
+    1. In $(R \to S)$, the left side of $\to$ is the antecedent.
+    2. $R$ is on the left.
+    3. $S$ is the consequent.
+    4. The antecedent is $R$.
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "The game is postponed if it rains," what is the consequent?'
+  answer: 2
+  options:
+    - '"It rains"'
+    - '"The game is postponed"'
+    - Both clauses
+    - Neither clause
+  hint: 'The consequent is the clause that is not introduced by "if."'
+  walkthrough: |
+    1. "If" introduces the antecedent: "it rains."
+    2. "The game is postponed" is the remaining clause.
+    3. That remaining clause is the consequent.
+    4. The consequent is "the game is postponed."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "If the bridge is closed, traffic is rerouted," what is the consequent?'
+  answer: 3
+  options:
+    - '"The bridge is closed"'
+    - Both clauses
+    - '"Traffic is rerouted"'
+    - '"If the bridge is closed"'
+  hint: 'The consequent is the "then" clause.'
+  walkthrough: |
+    1. "If" introduces the antecedent: "the bridge is closed."
+    2. "Traffic is rerouted" follows as the consequent.
+    3. The consequent is "traffic is rerouted."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "We cancel the event if the venue is unavailable," what is the antecedent?'
+  answer: 4
+  options:
+    - '"We cancel the event"'
+    - Both clauses
+    - There is no antecedent
+    - '"The venue is unavailable"'
+  hint: '"If" introduces the antecedent, even at the end of the sentence.'
+  walkthrough: |
+    1. "If" appears before "the venue is unavailable."
+    2. The antecedent is always the "if" clause, regardless of position.
+    3. "We cancel the event" is the consequent.
+    4. The antecedent is "the venue is unavailable."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In $(M \to N)$, which is the consequent?'
+  answer: 1
+  options:
+    - $N$
+    - $M$
+    - '$\to$'
+    - Both $M$ and $N$
+  hint: The consequent is to the right of the arrow.
+  walkthrough: |
+    1. In $(M \to N)$, $M$ is the antecedent (left of $\to$).
+    2. $N$ is the consequent (right of $\to$).
+    3. The consequent is $N$.
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "Provided that the paperwork is complete, the application is processed," what is the antecedent?'
+  answer: 3
+  options:
+    - '"The application is processed"'
+    - Both clauses
+    - '"The paperwork is complete"'
+    - There is no conditional
+  hint: '"Provided that" works the same as "if."'
+  walkthrough: |
+    1. "Provided that" introduces the antecedent, just like "if."
+    2. The antecedent is "the paperwork is complete."
+    3. The consequent is "the application is processed."
+    4. The antecedent is "the paperwork is complete."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "If the temperature drops below zero, the pipes freeze," which part is the antecedent?'
+  answer: 2
+  options:
+    - '"The pipes freeze"'
+    - '"The temperature drops below zero"'
+    - '"Below zero"'
+    - '"If"'
+  hint: 'The antecedent is the full clause following "if."'
+  walkthrough: |
+    1. "If" introduces the antecedent: the full clause "the temperature drops below zero."
+    2. "The pipes freeze" is the consequent.
+    3. "Below zero" is part of the antecedent but not the whole thing.
+    4. The antecedent is "the temperature drops below zero."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "Students receive credit if they complete the assignment," what is the consequent?'
+  answer: 4
+  options:
+    - '"They complete the assignment"'
+    - Both clauses
+    - There is no consequent
+    - '"Students receive credit"'
+  hint: 'The consequent is the clause not introduced by "if."'
+  walkthrough: |
+    1. "If" introduces the antecedent: "they complete the assignment."
+    2. "Students receive credit" is the other clause.
+    3. That clause is the consequent.
+    4. The consequent is "students receive credit."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "Given that the evidence is strong, the jury convicts," what is the antecedent?'
+  answer: 1
+  options:
+    - '"The evidence is strong"'
+    - '"The jury convicts"'
+    - '"Given that"'
+    - Both clauses
+  hint: '"Given that" functions like "if."'
+  walkthrough: |
+    1. "Given that" introduces the antecedent, just like "if."
+    2. The antecedent is "the evidence is strong."
+    3. The consequent is "the jury convicts."
+    4. The antecedent is "the evidence is strong."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In $(A \to (B \land C))$, what is the antecedent?'
+  answer: 3
+  options:
+    - '$(B \land C)$'
+    - $B$
+    - $A$
+    - $C$
+  hint: 'The antecedent is the left side of the main $\to$.'
+  walkthrough: |
+    1. The main operator is $\to$.
+    2. The left side is $A$: this is the antecedent.
+    3. The right side $(B \land C)$ is the consequent.
+    4. The antecedent is $A$.
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "If the review is positive, the book sells well," what is the consequent?'
+  answer: 2
+  options:
+    - '"The review is positive"'
+    - '"The book sells well"'
+    - '"If the review is positive"'
+    - Both clauses
+  hint: 'The consequent is the "then" part.'
+  walkthrough: |
+    1. "If" introduces the antecedent: "the review is positive."
+    2. "The book sells well" is the consequent.
+    3. The consequent is "the book sells well."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "The flight is delayed if the weather is bad," what is the consequent?'
+  answer: 4
+  options:
+    - '"The weather is bad"'
+    - Both clauses
+    - There is no conditional
+    - '"The flight is delayed"'
+  hint: 'The consequent is the clause that does not follow "if."'
+  walkthrough: |
+    1. "If" introduces the antecedent: "the weather is bad."
+    2. "The flight is delayed" is the consequent.
+    3. Position in the sentence does not change which clause is which.
+    4. The consequent is "the flight is delayed."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "Suppose the lights fail; then the backup generator starts," what is the antecedent?'
+  answer: 1
+  options:
+    - '"The lights fail"'
+    - '"The backup generator starts"'
+    - '"Suppose"'
+    - Both clauses
+  hint: '"Suppose" introduces a hypothetical condition, functioning like "if."'
+  walkthrough: |
+    1. "Suppose" introduces the antecedent: "the lights fail."
+    2. "Then" introduces the consequent: "the backup generator starts."
+    3. The antecedent is "the lights fail."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In $(\neg P \to Q)$, what is the antecedent?'
+  answer: 3
+  options:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\to$'
+  hint: 'The antecedent is everything to the left of the main $\to$.'
+  walkthrough: |
+    1. The main operator is $\to$.
+    2. The left side is $\neg P$: the entire negated expression is the antecedent.
+    3. $Q$ is the consequent.
+    4. The antecedent is $\neg P$.
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "If the package is delivered, the customer is notified," which part is the consequent?'
+  answer: 2
+  options:
+    - '"The package is delivered"'
+    - '"The customer is notified"'
+    - '"If"'
+    - Neither clause
+  hint: The consequent follows the antecedent.
+  walkthrough: |
+    1. "If" introduces the antecedent: "the package is delivered."
+    2. "The customer is notified" is the consequent.
+    3. The consequent is "the customer is notified."
+  tags:
+    - label-conditional
+
+- type: mcq
+  question: 'In "The system reboots if an error is detected," which part is the antecedent?'
+  answer: 4
+  options:
+    - '"The system reboots"'
+    - Both clauses
+    - Neither clause
+    - '"An error is detected"'
+  hint: '"If" introduces the antecedent, regardless of sentence order.'
+  walkthrough: |
+    1. "If" appears before "an error is detected."
+    2. The antecedent is always the "if" clause.
+    3. "The system reboots" is the consequent.
+    4. The antecedent is "an error is detected."
+  tags:
+    - label-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the battery is charged, the phone turns on."'
+  answer: '$(B \to P)$'
+  variableMap:
+    B: The battery is charged
+    P: The phone turns on
+  hint: 'The clause after "if" is the antecedent.'
+  walkthrough: |
+    1. Antecedent (after "if"): "The battery is charged" = $B$.
+    2. Consequent: "The phone turns on" = $P$.
+    3. The translation is $(B \to P)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "The concert is canceled if it snows."'
+  answer: '$(S \to C)$'
+  variableMap:
+    S: It snows
+    C: The concert is canceled
+  hint: '"If" introduces the antecedent, even when it comes second.'
+  walkthrough: |
+    1. "If" appears before "it snows," so that is the antecedent: $S$.
+    2. "The concert is canceled" is the consequent: $C$.
+    3. The translation is $(S \to C)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the door is locked, no one can enter."'
+  answer: '$(L \to N)$'
+  variableMap:
+    L: The door is locked
+    N: No one can enter
+  hint: 'Identify what follows "if" as the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The door is locked" = $L$.
+    2. Consequent: "No one can enter" = $N$.
+    3. The translation is $(L \to N)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "Assuming the roads are clear, we arrive on time."'
+  answer: '$(R \to A)$'
+  variableMap:
+    R: The roads are clear
+    A: We arrive on time
+  hint: '"Assuming" works the same as "if."'
+  walkthrough: |
+    1. "Assuming" introduces the antecedent: "The roads are clear" = $R$.
+    2. Consequent: "We arrive on time" = $A$.
+    3. The translation is $(R \to A)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the witness testifies, the jury decides."'
+  answer: '$(W \to J)$'
+  variableMap:
+    W: The witness testifies
+    J: The jury decides
+  hint: 'Standard "if...then" form.'
+  walkthrough: |
+    1. Antecedent: "The witness testifies" = $W$.
+    2. Consequent: "The jury decides" = $J$.
+    3. The translation is $(W \to J)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "The plants grow if there is sunlight."'
+  answer: '$(S \to G)$'
+  variableMap:
+    S: There is sunlight
+    G: The plants grow
+  hint: '"If" introduces the antecedent, even when it appears in the middle.'
+  walkthrough: |
+    1. "If" appears before "there is sunlight," so that is the antecedent: $S$.
+    2. "The plants grow" is the consequent: $G$.
+    3. The translation is $(S \to G)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the password is correct, access is granted."'
+  answer: '$(P \to A)$'
+  variableMap:
+    P: The password is correct
+    A: Access is granted
+  hint: 'Standard "if...then" form.'
+  walkthrough: |
+    1. Antecedent: "The password is correct" = $P$.
+    2. Consequent: "Access is granted" = $A$.
+    3. The translation is $(P \to A)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "The system shuts down if the temperature exceeds the limit."'
+  answer: '$(T \to S)$'
+  variableMap:
+    T: The temperature exceeds the limit
+    S: The system shuts down
+  hint: '"If" introduces the antecedent, regardless of sentence position.'
+  walkthrough: |
+    1. "If" appears before "the temperature exceeds the limit," so that is the antecedent: $T$.
+    2. "The system shuts down" is the consequent: $S$.
+    3. The translation is $(T \to S)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the bridge is open, vehicles cross the river."'
+  answer: '$(B \to V)$'
+  variableMap:
+    B: The bridge is open
+    V: Vehicles cross the river
+  hint: 'The clause after "if" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The bridge is open" = $B$.
+    2. Consequent: "Vehicles cross the river" = $V$.
+    3. The translation is $(B \to V)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "Provided that the contract is signed, the project begins."'
+  answer: '$(C \to P)$'
+  variableMap:
+    C: The contract is signed
+    P: The project begins
+  hint: '"Provided that" functions like "if."'
+  walkthrough: |
+    1. "Provided that" introduces the antecedent: "The contract is signed" = $C$.
+    2. Consequent: "The project begins" = $P$.
+    3. The translation is $(C \to P)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "We refund the ticket if the show is canceled."'
+  answer: '$(C \to R)$'
+  variableMap:
+    C: The show is canceled
+    R: We refund the ticket
+  hint: '"If" introduces the antecedent, even at the end of the sentence.'
+  walkthrough: |
+    1. "If" appears before "the show is canceled," so that is the antecedent: $C$.
+    2. "We refund the ticket" is the consequent: $R$.
+    3. The translation is $(C \to R)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the server is online, the database is accessible."'
+  answer: '$(S \to D)$'
+  variableMap:
+    S: The server is online
+    D: The database is accessible
+  hint: 'Standard "if...then" form.'
+  walkthrough: |
+    1. Antecedent: "The server is online" = $S$.
+    2. Consequent: "The database is accessible" = $D$.
+    3. The translation is $(S \to D)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "The match is forfeited if a player is disqualified."'
+  answer: '$(D \to F)$'
+  variableMap:
+    D: A player is disqualified
+    F: The match is forfeited
+  hint: '"If" introduces the antecedent, even mid-sentence.'
+  walkthrough: |
+    1. "If" appears before "a player is disqualified," so that is the antecedent: $D$.
+    2. "The match is forfeited" is the consequent: $F$.
+    3. The translation is $(D \to F)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the recipe is followed, the cake rises."'
+  answer: '$(R \to C)$'
+  variableMap:
+    R: The recipe is followed
+    C: The cake rises
+  hint: 'The clause after "if" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The recipe is followed" = $R$.
+    2. Consequent: "The cake rises" = $C$.
+    3. The translation is $(R \to C)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "Given that the evidence is sufficient, the suspect is charged."'
+  answer: '$(E \to S)$'
+  variableMap:
+    E: The evidence is sufficient
+    S: The suspect is charged
+  hint: '"Given that" functions like "if."'
+  walkthrough: |
+    1. "Given that" introduces the antecedent: "The evidence is sufficient" = $E$.
+    2. Consequent: "The suspect is charged" = $S$.
+    3. The translation is $(E \to S)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the alarm triggers, the police are notified."'
+  answer: '$(A \to P)$'
+  variableMap:
+    A: The alarm triggers
+    P: The police are notified
+  hint: 'Standard "if...then" form.'
+  walkthrough: |
+    1. Antecedent: "The alarm triggers" = $A$.
+    2. Consequent: "The police are notified" = $P$.
+    3. The translation is $(A \to P)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "The pool closes if lightning is detected."'
+  answer: '$(L \to P)$'
+  variableMap:
+    L: Lightning is detected
+    P: The pool closes
+  hint: '"If" introduces the antecedent, even when it comes second.'
+  walkthrough: |
+    1. "If" appears before "lightning is detected," so that is the antecedent: $L$.
+    2. "The pool closes" is the consequent: $P$.
+    3. The translation is $(L \to P)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "If the experiment succeeds, the results are published."'
+  answer: '$(E \to R)$'
+  variableMap:
+    E: The experiment succeeds
+    R: The results are published
+  hint: 'The clause after "if" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The experiment succeeds" = $E$.
+    2. Consequent: "The results are published" = $R$.
+    3. The translation is $(E \to R)$.
+  tags:
+    - translate-conditional
+
+- type: formula-builder
+  question: 'Translate: "Assuming the budget is approved, hiring begins."'
+  answer: '$(B \to H)$'
+  variableMap:
+    B: The budget is approved
+    H: Hiring begins
+  hint: '"Assuming" functions like "if."'
+  walkthrough: |
+    1. "Assuming" introduces the antecedent: "The budget is approved" = $B$.
+    2. Consequent: "Hiring begins" = $H$.
+    3. The translation is $(B \to H)$.
+  tags:
+    - translate-conditional
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is false, what is $(P \to Q)$?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True (vacuous truth)
+  hint: A conditional is false only when the antecedent is true and the consequent is false.
+  walkthrough: |
+    1. $P$ (antecedent) is true.
+    2. $Q$ (consequent) is false.
+    3. True antecedent with false consequent: the conditional is false.
+    4. $(P \to Q)$ is false.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $A$ is false and $B$ is true, what is $(A \to B)$?'
+  answer: 1
+  options:
+    - True (vacuous truth)
+    - 'False'
+    - Cannot be determined
+    - True only if $B$ is relevant to $A$
+  hint: A conditional with a false antecedent is always true.
+  walkthrough: |
+    1. $A$ (antecedent) is false.
+    2. When the antecedent is false, the conditional is true regardless of the consequent.
+    3. This is vacuous truth.
+    4. $(A \to B)$ is true by vacuous truth.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $R$ is false and $S$ is false, what is $(R \to S)$?'
+  answer: 4
+  options:
+    - 'False'
+    - False; both are false so the conditional fails
+    - Cannot be determined
+    - 'True'
+  hint: A false antecedent makes the conditional true.
+  walkthrough: |
+    1. $R$ (antecedent) is false.
+    2. When the antecedent is false, the conditional is true.
+    3. The value of $S$ does not matter.
+    4. $(R \to S)$ is true.
+  tags:
+    - compute-conditional
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \to Q)$'
+  hiddenFormulas:
+    - '$(P \to Q)$'
+  hint: The conditional is false only when the antecedent is true and the consequent is false.
+  walkthrough: |
+    1. Row 1: T $\to$ T = T.
+    2. Row 2: T $\to$ F = F (the only false case).
+    3. Row 3: F $\to$ T = T (vacuous truth).
+    4. Row 4: F $\to$ F = T (vacuous truth).
+    5. The values are: T, F, T, T.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is true, what is $(P \to Q)$?'
+  answer: 3
+  options:
+    - 'False'
+    - Cannot be determined
+    - 'True'
+    - False; both being true makes it false
+  hint: 'True antecedent, true consequent: the promise is kept.'
+  walkthrough: |
+    1. $P$ (antecedent) is true.
+    2. $Q$ (consequent) is true.
+    3. True antecedent with true consequent: the conditional is true.
+    4. $(P \to Q)$ is true.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $M$ is true and $N$ is false, what is $(M \to N)$?'
+  answer: 1
+  options:
+    - 'False'
+    - 'True'
+    - True (vacuous truth)
+    - Cannot be determined
+  hint: 'Check: is the antecedent true and the consequent false?'
+  walkthrough: |
+    1. $M$ (antecedent) is true.
+    2. $N$ (consequent) is false.
+    3. True antecedent with false consequent: the only case where the conditional is false.
+    4. $(M \to N)$ is false.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $X$ is false and $Y$ is true, what is $(X \to Y)$?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - False; $X$ being false makes the conditional false
+  hint: A false antecedent always makes the conditional true.
+  walkthrough: |
+    1. $X$ (antecedent) is false.
+    2. When the antecedent is false, the conditional is true regardless.
+    3. This is vacuous truth.
+    4. $(X \to Y)$ is true.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $C$ is false and $D$ is false, what is $(C \to D)$?'
+  answer: 4
+  options:
+    - 'False'
+    - False; both false means the conditional fails
+    - Cannot be determined
+    - 'True'
+  hint: 'A false antecedent makes the conditional true, no matter what.'
+  walkthrough: |
+    1. $C$ (antecedent) is false.
+    2. A false antecedent makes the conditional true.
+    3. It does not matter that $D$ is also false.
+    4. $(C \to D)$ is true.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is true, is $(P \to Q)$ true or false?'
+  answer: 3
+  options:
+    - False; both being true is not enough
+    - Cannot be determined without more information
+    - True; the antecedent is true and the consequent is true
+    - 'False'
+  hint: The conditional is false only in one specific case.
+  walkthrough: |
+    1. The conditional is false only when the antecedent is true and the consequent is false.
+    2. Here both are true, so the promise is kept.
+    3. $(P \to Q)$ is true.
+  tags:
+    - compute-conditional
+
+- type: truth-table
+  question: 'Complete the truth table for $(Q \to P)$.'
+  formulas:
+    - $Q$
+    - $P$
+    - '$(Q \to P)$'
+  hiddenFormulas:
+    - '$(Q \to P)$'
+  hint: Treat $Q$ as the antecedent and $P$ as the consequent. Apply the same rule.
+  walkthrough: |
+    1. Row 1: T $\to$ T = T.
+    2. Row 2: T $\to$ F = F.
+    3. Row 3: F $\to$ T = T (vacuous truth).
+    4. Row 4: F $\to$ F = T (vacuous truth).
+    5. The values are: T, F, T, T.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'Which row of the truth table makes $(P \to Q)$ false?'
+  answer: 2
+  options:
+    - '$P$ = T, $Q$ = T'
+    - '$P$ = T, $Q$ = F'
+    - '$P$ = F, $Q$ = T'
+    - '$P$ = F, $Q$ = F'
+  hint: There is exactly one row where the conditional is false.
+  walkthrough: |
+    1. The conditional is false only when the antecedent is true and the consequent is false.
+    2. That is the row $P$ = T, $Q$ = F.
+    3. All other rows produce a true conditional.
+    4. The row $P$ = T, $Q$ = F makes $(P \to Q)$ false.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $A$ is true, what must $B$ be for $(A \to B)$ to be true?'
+  answer: 1
+  options:
+    - $B$ must be true
+    - $B$ must be false
+    - $B$ can be anything
+    - $B$ must equal $A$
+  hint: 'When the antecedent is true, what value of the consequent avoids falsehood?'
+  walkthrough: |
+    1. When $A$ is true, the conditional is false if $B$ is false.
+    2. To keep the conditional true, $B$ must be true.
+    3. $B$ must be true for $(A \to B)$ to hold.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $A$ is false, what must $B$ be for $(A \to B)$ to be true?'
+  answer: 4
+  options:
+    - $B$ must be true
+    - $B$ must be false
+    - It depends on the context
+    - $B$ can be anything; the conditional is true regardless
+  hint: A false antecedent makes the conditional true no matter what.
+  walkthrough: |
+    1. When the antecedent is false, the conditional is vacuously true.
+    2. The consequent can be true or false; the conditional is true either way.
+    3. $B$ can be anything.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: How many rows of the conditional truth table are true?
+  answer: 3
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  hint: The conditional is false in only one of the four rows.
+  walkthrough: |
+    1. Row 1 (T, T): true. Row 2 (T, F): false. Row 3 (F, T): true. Row 4 (F, F): true.
+    2. Three of the four rows are true.
+    3. Three rows of the truth table produce a true conditional.
+  tags:
+    - compute-conditional
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \to B)$.'
+  formulas:
+    - $A$
+    - $B$
+    - '$(A \to B)$'
+  hiddenFormulas:
+    - '$(A \to B)$'
+  hint: False only when antecedent is true and consequent is false.
+  walkthrough: |
+    1. Row 1: T $\to$ T = T.
+    2. Row 2: T $\to$ F = F.
+    3. Row 3: F $\to$ T = T.
+    4. Row 4: F $\to$ F = T.
+    5. The values are: T, F, T, T.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'Suppose $P$ is false. Is $(P \to P)$ true or false?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Neither true nor false
+  hint: 'When the antecedent is false, what happens?'
+  walkthrough: |
+    1. $P$ is false, so the antecedent is false.
+    2. A false antecedent makes the conditional true regardless.
+    3. $(P \to P)$ is true.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'Suppose $P$ is true. Is $(P \to P)$ true or false?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Neither
+  hint: 'If the antecedent is true, what must the consequent be?'
+  walkthrough: |
+    1. $P$ is true, so the antecedent is true.
+    2. The consequent is also $P$, which is true.
+    3. True antecedent with true consequent: the conditional is true.
+    4. $(P \to P)$ is true.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $A$ is false, what is $(A \to B)$ regardless of $B$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - It depends on $B$
+    - Cannot be determined
+  hint: A false antecedent always makes the conditional true (vacuous truth).
+  walkthrough: |
+    1. $A$ (antecedent) is false.
+    2. A conditional with a false antecedent is always true.
+    3. The truth value of $B$ is irrelevant.
+    4. $(A \to B)$ is true.
+  tags:
+    - diagnostic
+
+- type: formula-builder
+  question: 'Translate: "If the invoice is paid, the order ships."'
+  answer: '$(I \to S)$'
+  variableMap:
+    I: The invoice is paid
+    S: The order ships
+  hint: 'Standard "if...then" form.'
+  walkthrough: |
+    1. Antecedent: "The invoice is paid" = $I$.
+    2. Consequent: "The order ships" = $S$.
+    3. The translation is $(I \to S)$.
+  tags:
+    - translate-conditional
+
+- type: mcq
+  question: 'If $G$ is true and $H$ is true, what is $(G \to H)$?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - True only if $G$ causes $H$
+  hint: 'True antecedent with true consequent: is the promise kept?'
+  walkthrough: |
+    1. $G$ (antecedent) is true and $H$ (consequent) is true.
+    2. The conditional is false only when the antecedent is true and the consequent is false.
+    3. Here the consequent is true, so the conditional holds.
+    4. $(G \to H)$ is true.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $J$ is true and $K$ is false, what is $(J \to K)$?'
+  answer: 3
+  options:
+    - 'True'
+    - True (vacuous truth)
+    - 'False'
+    - Cannot be determined
+  hint: 'True antecedent, false consequent: the one case where the conditional fails.'
+  walkthrough: |
+    1. $J$ (antecedent) is true and $K$ (consequent) is false.
+    2. This is the only combination that makes the conditional false.
+    3. $(J \to K)$ is false.
+  tags:
+    - compute-conditional
+
+- type: mcq
+  question: 'If $W$ is false and $Z$ is true, what is $(W \to Z)$?'
+  answer: 4
+  options:
+    - 'False'
+    - False; $W$ must be true for the conditional to hold
+    - Cannot be determined
+    - 'True'
+  hint: 'False antecedent: vacuous truth.'
+  walkthrough: |
+    1. $W$ (antecedent) is false.
+    2. A false antecedent makes the conditional true regardless of the consequent.
+    3. $(W \to Z)$ is true.
+  tags:
+    - compute-conditional

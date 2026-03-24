@@ -1,0 +1,991 @@
+- type: formula-builder
+  question: 'Translate: "If the power goes out and the generator fails, then the data is lost."'
+  answer: '$(P \land G) \to D$'
+  variableMap:
+    P: The power goes out
+    G: The generator fails
+    D: The data is lost
+  hint: 'The main connective is "if...then." The antecedent contains "and."'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the power goes out and the generator fails" = $(P \land G)$.
+    3. Consequent: "the data is lost" = $D$.
+    4. The translation is $(P \land G) \to D$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "Either the train is late or the schedule changed, but tickets are not refunded."'
+  answer: '$(L \lor S) \land \neg R$'
+  variableMap:
+    L: The train is late
+    S: The schedule changed
+    R: Tickets are refunded
+  hint: '"But" is the main connective (conjunction). One conjunct is a disjunction; the other is a negation.'
+  walkthrough: |
+    1. Main connective: "but" ($\land$).
+    2. Left conjunct: "Either the train is late or the schedule changed" = $(L \lor S)$.
+    3. Right conjunct: "tickets are not refunded" = $\neg R$.
+    4. The translation is $(L \lor S) \land \neg R$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the sensor fails, then the alarm sounds or the backup activates."'
+  answer: '$S \to (A \lor B)$'
+  variableMap:
+    S: The sensor fails
+    A: The alarm sounds
+    B: The backup activates
+  hint: 'The main connective is "if...then." The consequent contains "or."'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the sensor fails" = $S$.
+    3. Consequent: "the alarm sounds or the backup activates" = $(A \lor B)$.
+    4. The translation is $S \to (A \lor B)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that both the heater and the fan are on."'
+  answer: '$\neg (H \land F)$'
+  variableMap:
+    H: The heater is on
+    F: The fan is on
+  hint: '"It is not the case that" negates the entire conjunction.'
+  walkthrough: |
+    1. The inner claim: "both the heater and the fan are on" = $(H \land F)$.
+    2. "It is not the case that" negates the whole thing.
+    3. The translation is $\neg (H \land F)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the roads are icy, then either we stay home or we drive slowly."'
+  answer: '$R \to (H \lor S)$'
+  variableMap:
+    R: The roads are icy
+    H: We stay home
+    S: We drive slowly
+  hint: 'Main connective: conditional. Consequent: disjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: $R$.
+    3. Consequent: $(H \lor S)$.
+    4. The translation is $R \to (H \lor S)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "The lights are on and the music is playing, or the party is over."'
+  answer: '$(L \land M) \lor P$'
+  variableMap:
+    L: The lights are on
+    M: The music is playing
+    P: The party is over
+  hint: 'The main connective is "or." The left disjunct contains "and."'
+  walkthrough: |
+    1. Main connective: "or" ($\lor$).
+    2. Left disjunct: "The lights are on and the music is playing" = $(L \land M)$.
+    3. Right disjunct: "the party is over" = $P$.
+    4. The translation is $(L \land M) \lor P$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the exam is hard, then the students complain and the professor adjusts the curve."'
+  answer: '$E \to (S \land P)$'
+  variableMap:
+    E: The exam is hard
+    S: The students complain
+    P: The professor adjusts the curve
+  hint: 'Main connective: conditional. The consequent is a conjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the exam is hard" = $E$.
+    3. Consequent: "the students complain and the professor adjusts the curve" = $(S \land P)$.
+    4. The translation is $E \to (S \land P)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "Either the server is down or the network is slow, and the users are frustrated."'
+  answer: '$(S \lor N) \land U$'
+  variableMap:
+    S: The server is down
+    N: The network is slow
+    U: The users are frustrated
+  hint: '"And" is the main connective. The left conjunct is a disjunction.'
+  walkthrough: |
+    1. Main connective: "and" ($\land$).
+    2. Left conjunct: "Either the server is down or the network is slow" = $(S \lor N)$.
+    3. Right conjunct: "the users are frustrated" = $U$.
+    4. The translation is $(S \lor N) \land U$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the store is open or the website works."'
+  answer: '$\neg (S \lor W)$'
+  variableMap:
+    S: The store is open
+    W: The website works
+  hint: '"It is not the case that" negates the entire disjunction.'
+  walkthrough: |
+    1. Inner claim: "the store is open or the website works" = $(S \lor W)$.
+    2. "It is not the case that" negates the whole disjunction.
+    3. The translation is $\neg (S \lor W)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the ticket is valid and the seat is available, then you board the plane."'
+  answer: '$(T \land S) \to B$'
+  variableMap:
+    T: The ticket is valid
+    S: The seat is available
+    B: You board the plane
+  hint: 'Main connective: conditional. Antecedent: conjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the ticket is valid and the seat is available" = $(T \land S)$.
+    3. Consequent: "you board the plane" = $B$.
+    4. The translation is $(T \land S) \to B$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "The project succeeds if and only if the team cooperates."'
+  answer: '$P \leftrightarrow T$'
+  variableMap:
+    P: The project succeeds
+    T: The team cooperates
+  hint: '"If and only if" is a biconditional.'
+  walkthrough: |
+    1. Main connective: "if and only if" ($\leftrightarrow$).
+    2. Left side: "the project succeeds" = $P$.
+    3. Right side: "the team cooperates" = $T$.
+    4. The translation is $P \leftrightarrow T$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "The battery is low, but the phone is not dead."'
+  answer: '$B \land \neg D$'
+  variableMap:
+    B: The battery is low
+    D: The phone is dead
+  hint: '"But" functions as "and." "Not" negates the second claim.'
+  walkthrough: |
+    1. Main connective: "but" ($\land$).
+    2. Left conjunct: "the battery is low" = $B$.
+    3. Right conjunct: "the phone is not dead" = $\neg D$.
+    4. The translation is $B \land \neg D$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the password is wrong, then the account is locked or a warning is displayed."'
+  answer: '$P \to (A \lor W)$'
+  variableMap:
+    P: The password is wrong
+    A: The account is locked
+    W: A warning is displayed
+  hint: 'Main connective: conditional. Consequent: disjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the password is wrong" = $P$.
+    3. Consequent: "the account is locked or a warning is displayed" = $(A \lor W)$.
+    4. The translation is $P \to (A \lor W)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "Either the flight departs on time or both the crew and the passengers wait."'
+  answer: '$F \lor (C \land P)$'
+  variableMap:
+    F: The flight departs on time
+    C: The crew waits
+    P: The passengers wait
+  hint: 'Main connective: disjunction. Right disjunct: conjunction.'
+  walkthrough: |
+    1. Main connective: "either...or" ($\lor$).
+    2. Left disjunct: "the flight departs on time" = $F$.
+    3. Right disjunct: "both the crew and the passengers wait" = $(C \land P)$.
+    4. The translation is $F \lor (C \land P)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the door is open, then the cat escapes, and if the cat escapes, trouble follows."'
+  answer: '$(D \to C) \land (C \to T)$'
+  variableMap:
+    D: The door is open
+    C: The cat escapes
+    T: Trouble follows
+  hint: 'The main connective is "and," joining two conditionals.'
+  walkthrough: |
+    1. Main connective: "and" ($\land$), joining two conditional claims.
+    2. Left conjunct: "if the door is open, then the cat escapes" = $(D \to C)$.
+    3. Right conjunct: "if the cat escapes, trouble follows" = $(C \to T)$.
+    4. The translation is $(D \to C) \land (C \to T)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "The meeting is at noon or it is canceled, but it is not rescheduled."'
+  answer: '$(M \lor C) \land \neg R$'
+  variableMap:
+    M: The meeting is at noon
+    C: The meeting is canceled
+    R: The meeting is rescheduled
+  hint: '"But" is the main connective. Left conjunct: disjunction. Right conjunct: negation.'
+  walkthrough: |
+    1. Main connective: "but" ($\land$).
+    2. Left conjunct: "the meeting is at noon or it is canceled" = $(M \lor C)$.
+    3. Right conjunct: "it is not rescheduled" = $\neg R$.
+    4. The translation is $(M \lor C) \land \neg R$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the bridge is closed, we take the ferry, and the trip is longer."'
+  answer: '$(B \to F) \land L$'
+  variableMap:
+    B: The bridge is closed
+    F: We take the ferry
+    L: The trip is longer
+  hint: 'The main "and" joins the conditional with the last clause.'
+  walkthrough: |
+    1. Main connective: "and" ($\land$), joining the conditional and the last clause.
+    2. Left conjunct: "if the bridge is closed, we take the ferry" = $(B \to F)$.
+    3. Right conjunct: "the trip is longer" = $L$.
+    4. The translation is $(B \to F) \land L$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the printer is working and paper is loaded."'
+  answer: '$\neg (P \land L)$'
+  variableMap:
+    P: The printer is working
+    L: Paper is loaded
+  hint: The negation applies to the entire conjunction.
+  walkthrough: |
+    1. Inner claim: "the printer is working and paper is loaded" = $(P \land L)$.
+    2. "It is not the case that" negates the whole conjunction.
+    3. The translation is $\neg (P \land L)$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "We leave early or we arrive late, and the boss is unhappy."'
+  answer: '$(L \lor A) \land B$'
+  variableMap:
+    L: We leave early
+    A: We arrive late
+    B: The boss is unhappy
+  hint: '"And" is the main connective. Left conjunct: disjunction.'
+  walkthrough: |
+    1. Main connective: "and" ($\land$).
+    2. Left conjunct: "we leave early or we arrive late" = $(L \lor A)$.
+    3. Right conjunct: "the boss is unhappy" = $B$.
+    4. The translation is $(L \lor A) \land B$.
+  tags:
+    - english-to-tfl
+
+- type: formula-builder
+  question: 'Translate: "If the key is lost, then the door stays locked and we call a locksmith."'
+  answer: '$K \to (D \land L)$'
+  variableMap:
+    K: The key is lost
+    D: The door stays locked
+    L: We call a locksmith
+  hint: 'Main connective: conditional. Consequent: conjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the key is lost" = $K$.
+    3. Consequent: "the door stays locked and we call a locksmith" = $(D \land L)$.
+    4. The translation is $K \to (D \land L)$.
+  tags:
+    - english-to-tfl
+
+- type: mcq
+  question: 'Using key: $R$ = It rains, $W$ = The ground is wet, $G$ = The game is played. Translate $(R \to (W \land \neg G))$ into English.'
+  answer: 3
+  options:
+    - '"If it rains, then the ground is wet or the game is played."'
+    - '"It rains and the ground is wet, but the game is not played."'
+    - '"If it rains, then the ground is wet and the game is not played."'
+    - '"The ground is wet if and only if it rains and the game is not played."'
+  hint: 'Main operator is $\to$. Consequent is a conjunction with a negation.'
+  walkthrough: |
+    1. Main operator: $\to$ ("if...then").
+    2. Antecedent: $R$ = "it rains."
+    3. Consequent: $(W \land \neg G)$ = "the ground is wet and the game is not played."
+    4. Full sentence: "If it rains, then the ground is wet and the game is not played."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $A$ = Alice is home, $B$ = Bob is home, $D$ = The door is locked. Translate $\neg (A \lor B) \to D$ into English.'
+  answer: 2
+  options:
+    - '"If Alice or Bob is home, the door is locked."'
+    - '"If neither Alice nor Bob is home, then the door is locked."'
+    - '"Alice is not home and Bob is not home and the door is locked."'
+    - '"The door is locked if and only if Alice and Bob are not home."'
+  hint: '$\neg (A \lor B)$ means "neither A nor B."'
+  walkthrough: |
+    1. Main operator: $\to$ ("if...then").
+    2. Antecedent: $\neg (A \lor B)$ = "neither Alice nor Bob is home."
+    3. Consequent: $D$ = "the door is locked."
+    4. Full sentence: "If neither Alice nor Bob is home, then the door is locked."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $P$ = The project is approved, $F$ = Funding is available, $T$ = The team is hired. Translate $(P \land F) \to T$ into English.'
+  answer: 1
+  options:
+    - '"If the project is approved and funding is available, then the team is hired."'
+    - '"The project is approved if the team is hired and funding is available."'
+    - '"The team is hired, and the project is approved or funding is available."'
+    - '"If the project is approved, then funding is available and the team is hired."'
+  hint: 'Main operator: $\to$. Antecedent: conjunction. Consequent: single atom.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $(P \land F)$ = "the project is approved and funding is available."
+    3. Consequent: $T$ = "the team is hired."
+    4. The correct translation is "If the project is approved and funding is available, then the team is hired."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $S$ = The store is open, $C$ = Cash is accepted, $D$ = Debit is accepted. Translate $S \to (C \lor D)$ into English.'
+  answer: 4
+  options:
+    - '"The store is open and cash or debit is accepted."'
+    - '"Cash is accepted if and only if the store is open."'
+    - '"If cash and debit are accepted, the store is open."'
+    - '"If the store is open, then cash is accepted or debit is accepted."'
+  hint: 'Main operator: conditional. Consequent: disjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $S$ = "the store is open."
+    3. Consequent: $(C \lor D)$ = "cash is accepted or debit is accepted."
+    4. The correct translation is "If the store is open, then cash is accepted or debit is accepted."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $E$ = The exam is today, $H$ = Homework is due, $L$ = The lab is open. Translate $\neg E \land (H \lor L)$ into English.'
+  answer: 3
+  options:
+    - '"The exam is not today or homework is due and the lab is open."'
+    - '"If the exam is not today, homework is due or the lab is open."'
+    - '"The exam is not today, and either homework is due or the lab is open."'
+    - '"Neither the exam is today nor homework is due."'
+  hint: 'Main operator: $\land$. Left: negation. Right: disjunction.'
+  walkthrough: |
+    1. Main operator: $\land$.
+    2. Left conjunct: $\neg E$ = "the exam is not today."
+    3. Right conjunct: $(H \lor L)$ = "homework is due or the lab is open."
+    4. The correct translation is "The exam is not today, and either homework is due or the lab is open."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $M$ = The meeting is scheduled, $R$ = The room is booked, $P$ = The projector is set up. Translate $M \to (R \land P)$ into English.'
+  answer: 1
+  options:
+    - '"If the meeting is scheduled, then the room is booked and the projector is set up."'
+    - '"The meeting is scheduled and the room is booked and the projector is set up."'
+    - '"If the room is booked and the projector is set up, then the meeting is scheduled."'
+    - '"The meeting is scheduled or the room is booked and the projector is set up."'
+  hint: 'Main operator: $\to$. Consequent: conjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $M$ = "the meeting is scheduled."
+    3. Consequent: $(R \land P)$ = "the room is booked and the projector is set up."
+    4. The correct translation is "If the meeting is scheduled, then the room is booked and the projector is set up."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $T$ = The train arrives, $B$ = The bus departs, $C$ = Commuters transfer. Translate $(T \land B) \to C$ into English.'
+  answer: 2
+  options:
+    - '"The train arrives and the bus departs and commuters transfer."'
+    - '"If the train arrives and the bus departs, then commuters transfer."'
+    - '"Commuters transfer if and only if the train arrives and the bus departs."'
+    - '"If commuters transfer, then the train arrives and the bus departs."'
+  hint: 'Main operator: conditional. Antecedent: conjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $(T \land B)$ = "the train arrives and the bus departs."
+    3. Consequent: $C$ = "commuters transfer."
+    4. The correct translation is "If the train arrives and the bus departs, then commuters transfer."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $W$ = The weather is good, $H$ = We go hiking, $S$ = We go swimming. Translate $W \to (H \lor S)$ into English.'
+  answer: 4
+  options:
+    - '"The weather is good and we go hiking or swimming."'
+    - '"If we go hiking or swimming, the weather is good."'
+    - '"The weather is good if and only if we go hiking or swimming."'
+    - '"If the weather is good, then we go hiking or we go swimming."'
+  hint: 'Main operator: conditional. Consequent: disjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $W$ = "the weather is good."
+    3. Consequent: $(H \lor S)$ = "we go hiking or we go swimming."
+    4. The correct translation is "If the weather is good, then we go hiking or we go swimming."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $F$ = The fire alarm sounds, $E$ = Everyone evacuates, $D$ = The doors unlock. Translate $F \to (E \land D)$ into English.'
+  answer: 3
+  options:
+    - '"The fire alarm sounds and everyone evacuates and the doors unlock."'
+    - '"If everyone evacuates, then the fire alarm sounds and the doors unlock."'
+    - '"If the fire alarm sounds, then everyone evacuates and the doors unlock."'
+    - '"The fire alarm sounds or everyone evacuates and the doors unlock."'
+  hint: 'Main operator: conditional. Consequent: conjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $F$ = "the fire alarm sounds."
+    3. Consequent: $(E \land D)$ = "everyone evacuates and the doors unlock."
+    4. The correct translation is "If the fire alarm sounds, then everyone evacuates and the doors unlock."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $P$ = The power is on, $L$ = The lights work, $H$ = The heater works. Translate $\neg P \to (\neg L \land \neg H)$ into English.'
+  answer: 2
+  options:
+    - '"The power is on, so the lights work and the heater works."'
+    - '"If the power is not on, then the lights do not work and the heater does not work."'
+    - '"The lights do not work and the heater does not work if and only if the power is not on."'
+    - '"If the lights do not work, then the power is not on."'
+  hint: 'Main operator: conditional. Antecedent and consequent both involve negation.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $\neg P$ = "the power is not on."
+    3. Consequent: $(\neg L \land \neg H)$ = "the lights do not work and the heater does not work."
+    4. The correct translation is "If the power is not on, then the lights do not work and the heater does not work."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $R$ = It rains, $U$ = We use an umbrella, $W$ = We get wet. Translate $(R \land \neg U) \to W$ into English.'
+  answer: 1
+  options:
+    - '"If it rains and we do not use an umbrella, then we get wet."'
+    - '"If we get wet, then it rains and we do not use an umbrella."'
+    - '"It rains or we do not use an umbrella, and we get wet."'
+    - '"We get wet if and only if it rains and we do not use an umbrella."'
+  hint: 'Main operator: conditional. Antecedent: conjunction with a negation.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $(R \land \neg U)$ = "it rains and we do not use an umbrella."
+    3. Consequent: $W$ = "we get wet."
+    4. The correct translation is "If it rains and we do not use an umbrella, then we get wet."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $A$ = The app crashes, $D$ = Data is saved, $B$ = A backup exists. Translate $A \to (\neg D \lor B)$ into English.'
+  answer: 4
+  options:
+    - '"The app crashes and data is not saved or a backup exists."'
+    - '"If data is not saved, then the app crashes or a backup exists."'
+    - '"The app crashes if and only if data is not saved or a backup exists."'
+    - '"If the app crashes, then data is not saved or a backup exists."'
+  hint: 'Main operator: conditional. Consequent: disjunction with a negation.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $A$ = "the app crashes."
+    3. Consequent: $(\neg D \lor B)$ = "data is not saved or a backup exists."
+    4. The correct translation is "If the app crashes, then data is not saved or a backup exists."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $G$ = The gate is open, $C$ = Cars enter, $P$ = Pedestrians enter. Translate $G \leftrightarrow (C \lor P)$ into English.'
+  answer: 3
+  options:
+    - '"If the gate is open, then cars enter or pedestrians enter."'
+    - '"The gate is open and cars enter or pedestrians enter."'
+    - '"The gate is open if and only if cars enter or pedestrians enter."'
+    - '"Cars enter and pedestrians enter if the gate is open."'
+  hint: 'Main operator: biconditional.'
+  walkthrough: |
+    1. Main operator: $\leftrightarrow$ ("if and only if").
+    2. Left side: $G$ = "the gate is open."
+    3. Right side: $(C \lor P)$ = "cars enter or pedestrians enter."
+    4. The correct translation is "The gate is open if and only if cars enter or pedestrians enter."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $K$ = The kitchen is clean, $D$ = The dishes are washed, $F$ = The floor is swept. Translate $(D \land F) \to K$ into English.'
+  answer: 2
+  options:
+    - '"The kitchen is clean, so the dishes are washed and the floor is swept."'
+    - '"If the dishes are washed and the floor is swept, then the kitchen is clean."'
+    - '"The dishes are washed and the floor is swept and the kitchen is clean."'
+    - '"If the kitchen is clean, then the dishes are washed and the floor is swept."'
+  hint: 'Main operator: conditional. Antecedent: conjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $(D \land F)$ = "the dishes are washed and the floor is swept."
+    3. Consequent: $K$ = "the kitchen is clean."
+    4. The correct translation is "If the dishes are washed and the floor is swept, then the kitchen is clean."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $S$ = The sun is out, $I$ = The ice melts, $R$ = The road is clear. Translate $S \to (I \land R)$ into English.'
+  answer: 1
+  options:
+    - '"If the sun is out, then the ice melts and the road is clear."'
+    - '"The sun is out and the ice melts and the road is clear."'
+    - '"If the ice melts, then the sun is out and the road is clear."'
+    - '"The sun is out or the ice melts and the road is clear."'
+  hint: 'Main operator: conditional. Consequent: conjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $S$ = "the sun is out."
+    3. Consequent: $(I \land R)$ = "the ice melts and the road is clear."
+    4. The correct translation is "If the sun is out, then the ice melts and the road is clear."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $V$ = The vote passes, $L$ = The law changes, $P$ = Penalties increase. Translate $\neg V \to (L \lor P)$ into English.'
+  answer: 4
+  options:
+    - '"The vote passes and the law changes or penalties increase."'
+    - '"If the law changes or penalties increase, then the vote does not pass."'
+    - '"The vote does not pass if and only if the law changes or penalties increase."'
+    - '"If the vote does not pass, then the law changes or penalties increase."'
+  hint: 'Main operator: conditional. Antecedent: negation.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $\neg V$ = "the vote does not pass."
+    3. Consequent: $(L \lor P)$ = "the law changes or penalties increase."
+    4. The correct translation is "If the vote does not pass, then the law changes or penalties increase."
+  tags:
+    - tfl-to-english
+
+- type: formula-builder
+  question: 'Translate: "If it is not the case that both Alice and Bob attend, then either the meeting is canceled or rescheduled."'
+  answer: '$\neg (A \land B) \to (C \lor R)$'
+  variableMap:
+    A: Alice attends
+    B: Bob attends
+    C: The meeting is canceled
+    R: The meeting is rescheduled
+
+  hint: 'Main connective: conditional. Antecedent: negation of conjunction. Consequent: disjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "not both Alice and Bob attend" = $\neg (A \land B)$.
+    3. Consequent: "the meeting is canceled or rescheduled" = $(C \lor R)$.
+    4. The translation is $\neg (A \land B) \to (C \lor R)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "The alarm triggers if and only if the door is open and the code was not entered."'
+  answer: '$A \leftrightarrow (D \land \neg C)$'
+  variableMap:
+    A: The alarm triggers
+    D: The door is open
+    C: The code was entered
+  hint: 'Main connective: biconditional. Right side: conjunction with negation.'
+  walkthrough: |
+    1. Main connective: "if and only if" ($\leftrightarrow$).
+    2. Left: $A$.
+    3. Right: "the door is open and the code was not entered" = $(D \land \neg C)$.
+    4. The translation is $A \leftrightarrow (D \land \neg C)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If the bridge is closed or the tunnel is blocked, then traffic is rerouted and delays occur."'
+  answer: '$(B \lor T) \to (R \land D)$'
+  variableMap:
+    B: The bridge is closed
+    T: The tunnel is blocked
+    R: Traffic is rerouted
+    D: Delays occur
+
+  hint: 'Main: conditional. Antecedent: disjunction. Consequent: conjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: $(B \lor T)$.
+    3. Consequent: $(R \land D)$.
+    4. The translation is $(B \lor T) \to (R \land D)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that if the battery dies then the phone shuts off."'
+  answer: '$\neg (B \to S)$'
+  variableMap:
+    B: The battery dies
+    S: The phone shuts off
+  hint: '"It is not the case that" negates the entire conditional.'
+  walkthrough: |
+    1. Inner formula: "if the battery dies then the phone shuts off" = $(B \to S)$.
+    2. "It is not the case that" negates the whole conditional.
+    3. The translation is $\neg (B \to S)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "Either the report is filed and the case is closed, or the investigation continues."'
+  answer: '$(R \land C) \lor I$'
+  variableMap:
+    R: The report is filed
+    C: The case is closed
+    I: The investigation continues
+  hint: 'Main connective: disjunction. Left disjunct: conjunction.'
+  walkthrough: |
+    1. Main connective: "either...or" ($\lor$).
+    2. Left disjunct: "the report is filed and the case is closed" = $(R \land C)$.
+    3. Right disjunct: "the investigation continues" = $I$.
+    4. The translation is $(R \land C) \lor I$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If the server crashes or the database corrupts, then it is not the case that the website stays online."'
+  answer: '$(S \lor D) \to \neg W$'
+  variableMap:
+    S: The server crashes
+    D: The database corrupts
+    W: The website stays online
+  hint: 'Main: conditional. Antecedent: disjunction. Consequent: negation.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the server crashes or the database corrupts" = $(S \lor D)$.
+    3. Consequent: "it is not the case that the website stays online" = $\neg W$.
+    4. The translation is $(S \lor D) \to \neg W$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "The sprinklers activate if and only if the smoke detector triggers and the override is not engaged."'
+  answer: '$S \leftrightarrow (D \land \neg O)$'
+  variableMap:
+    S: The sprinklers activate
+    D: The smoke detector triggers
+    O: The override is engaged
+  hint: 'Main: biconditional. Right side: conjunction with negation.'
+  walkthrough: |
+    1. Main connective: "if and only if" ($\leftrightarrow$).
+    2. Left: "the sprinklers activate" = $S$.
+    3. Right: "the smoke detector triggers and the override is not engaged" = $(D \land \neg O)$.
+    4. The translation is $S \leftrightarrow (D \land \neg O)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If the pilot is certified and the weather is clear, then either the flight departs or a delay is announced."'
+  answer: '$(P \land W) \to (F \lor D)$'
+  variableMap:
+    P: The pilot is certified
+    W: The weather is clear
+    F: The flight departs
+    D: A delay is announced
+
+  hint: 'Main: conditional. Antecedent: conjunction. Consequent: disjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the pilot is certified and the weather is clear" = $(P \land W)$.
+    3. Consequent: "either the flight departs or a delay is announced" = $(F \lor D)$.
+    4. The translation is $(P \land W) \to (F \lor D)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that either the package arrived or the tracking updated."'
+  answer: '$\neg (P \lor T)$'
+  variableMap:
+    P: The package arrived
+    T: The tracking updated
+  hint: The negation applies to the entire disjunction.
+  walkthrough: |
+    1. Inner claim: "either the package arrived or the tracking updated" = $(P \lor T)$.
+    2. "It is not the case that" negates the whole disjunction.
+    3. The translation is $\neg (P \lor T)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If the alarm is off, then if the door opens, an intruder enters."'
+  answer: '$A \to (D \to I)$'
+  variableMap:
+    A: The alarm is off
+    D: The door opens
+    I: An intruder enters
+  hint: The main conditional has another conditional as its consequent.
+  walkthrough: |
+    1. Main connective: the first "if...then" ($\to$).
+    2. Antecedent: "the alarm is off" = $A$.
+    3. Consequent: "if the door opens, an intruder enters" = $(D \to I)$.
+    4. The translation is $A \to (D \to I)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "Either the contract is signed or it is not the case that the work begins and payment is issued."'
+  answer: '$C \lor \neg (W \land P)$'
+  variableMap:
+    C: The contract is signed
+    W: The work begins
+    P: Payment is issued
+  hint: 'Main: disjunction. Right disjunct: negation of a conjunction.'
+  walkthrough: |
+    1. Main connective: "either...or" ($\lor$).
+    2. Left disjunct: "the contract is signed" = $C$.
+    3. Right disjunct: "it is not the case that the work begins and payment is issued" = $\neg (W \land P)$.
+    4. The translation is $C \lor \neg (W \land P)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "The lights dim if and only if the projector is on, and the curtains are closed."'
+  answer: '$L \leftrightarrow (P \land C)$'
+  variableMap:
+    L: The lights dim
+    P: The projector is on
+    C: The curtains are closed
+  hint: 'Main: biconditional. Right side: conjunction.'
+  walkthrough: |
+    1. Main connective: "if and only if" ($\leftrightarrow$).
+    2. Left: "the lights dim" = $L$.
+    3. Right: "the projector is on and the curtains are closed" = $(P \land C)$.
+    4. The translation is $L \leftrightarrow (P \land C)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If the password is correct, then the account unlocks, but if it is wrong, the account locks."'
+  answer: '$(P \to U) \land (\neg P \to L)$'
+  variableMap:
+    P: The password is correct
+    U: The account unlocks
+    L: The account locks
+  hint: '"But" is the main connective joining two conditionals. "Wrong" means "not correct."'
+  walkthrough: |
+    1. Main connective: "but" ($\land$), joining two conditional claims.
+    2. Left conjunct: "if the password is correct, then the account unlocks" = $(P \to U)$.
+    3. Right conjunct: "if it is wrong, the account locks" = $(\neg P \to L)$.
+    4. The translation is $(P \to U) \land (\neg P \to L)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If either the fuse blows or the circuit overloads, then the system shuts down and a technician is called."'
+  answer: '$(F \lor C) \to (S \land T)$'
+  variableMap:
+    F: The fuse blows
+    C: The circuit overloads
+    S: The system shuts down
+    T: A technician is called
+
+  hint: 'Main: conditional. Antecedent: disjunction. Consequent: conjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "either the fuse blows or the circuit overloads" = $(F \lor C)$.
+    3. Consequent: "the system shuts down and a technician is called" = $(S \land T)$.
+    4. The translation is $(F \lor C) \to (S \land T)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that if the door is locked then no one is home."'
+  answer: '$\neg (D \to N)$'
+  variableMap:
+    D: The door is locked
+    N: No one is home
+  hint: The negation applies to the entire conditional.
+  walkthrough: |
+    1. Inner formula: "if the door is locked then no one is home" = $(D \to N)$.
+    2. "It is not the case that" negates the whole conditional.
+    3. The translation is $\neg (D \to N)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If the test fails, then the release is delayed and the team is notified."'
+  answer: '$T \to (D \land N)$'
+  variableMap:
+    T: The test fails
+    D: The release is delayed
+    N: The team is notified
+  hint: 'Main connective: conditional. Consequent: conjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: $T$.
+    3. Consequent: $(D \land N)$.
+    4. The translation is $T \to (D \land N)$.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'Using key: $J$ = The jury deliberates, $V$ = The verdict is reached, $S$ = The sentence is given. Translate $(J \land V) \to S$ into English.'
+  answer: 3
+  options:
+    - '"The jury deliberates and the verdict is reached and the sentence is given."'
+    - '"If the sentence is given, the jury deliberates and the verdict is reached."'
+    - '"If the jury deliberates and the verdict is reached, then the sentence is given."'
+    - '"The jury deliberates or the verdict is reached, and the sentence is given."'
+  hint: 'Main operator: conditional. Antecedent: conjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $(J \land V)$ = "the jury deliberates and the verdict is reached."
+    3. Consequent: $S$ = "the sentence is given."
+    4. The correct translation is "If the jury deliberates and the verdict is reached, then the sentence is given."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $C$ = The class is full, $W$ = A waitlist opens, $R$ = Registration closes. Translate $C \to (W \lor R)$ into English.'
+  answer: 2
+  options:
+    - '"The class is full and a waitlist opens or registration closes."'
+    - '"If the class is full, then a waitlist opens or registration closes."'
+    - '"A waitlist opens if and only if the class is full."'
+    - '"If a waitlist opens or registration closes, then the class is full."'
+  hint: 'Main operator: conditional. Consequent: disjunction.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $C$ = "the class is full."
+    3. Consequent: $(W \lor R)$ = "a waitlist opens or registration closes."
+    4. The correct translation is "If the class is full, then a waitlist opens or registration closes."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $B$ = The bell rings, $S$ = Students leave, $T$ = The teacher dismisses. Translate $\neg B \land (S \lor T)$ into English.'
+  answer: 4
+  options:
+    - '"If the bell does not ring, then students leave or the teacher dismisses."'
+    - '"The bell does not ring or students leave and the teacher dismisses."'
+    - '"Neither the bell rings nor students leave."'
+    - '"The bell does not ring, and either students leave or the teacher dismisses."'
+  hint: 'Main operator: conjunction. Left conjunct: negation. Right conjunct: disjunction.'
+  walkthrough: |
+    1. Main operator: $\land$.
+    2. Left conjunct: $\neg B$ = "the bell does not ring."
+    3. Right conjunct: $(S \lor T)$ = "students leave or the teacher dismisses."
+    4. The correct translation is "The bell does not ring, and either students leave or the teacher dismisses."
+  tags:
+    - tfl-to-english
+
+- type: mcq
+  question: 'Using key: $N$ = The network is stable, $E$ = Emails send, $F$ = Files upload. Translate $\neg N \to (\neg E \land \neg F)$ into English.'
+  answer: 1
+  options:
+    - '"If the network is not stable, then emails do not send and files do not upload."'
+    - '"The network is not stable and emails do not send and files do not upload."'
+    - '"If emails do not send, then the network is not stable."'
+    - '"The network is stable if and only if emails send and files upload."'
+  hint: 'Main operator: conditional. Both antecedent and consequent involve negation.'
+  walkthrough: |
+    1. Main operator: $\to$.
+    2. Antecedent: $\neg N$ = "the network is not stable."
+    3. Consequent: $(\neg E \land \neg F)$ = "emails do not send and files do not upload."
+    4. The correct translation is "If the network is not stable, then emails do not send and files do not upload."
+  tags:
+    - tfl-to-english
+
+- type: formula-builder
+  question: 'Translate: "If the reservation is confirmed and the payment clears, then either the room is assigned or a receipt is emailed."'
+  answer: '$(R \land P) \to (A \lor E)$'
+  variableMap:
+    R: The reservation is confirmed
+    P: The payment clears
+    A: The room is assigned
+    E: A receipt is emailed
+
+  hint: 'Main: conditional. Antecedent: conjunction. Consequent: disjunction.'
+  walkthrough: |
+    1. Main connective: "if...then" ($\to$).
+    2. Antecedent: "the reservation is confirmed and the payment clears" = $(R \land P)$.
+    3. Consequent: "either the room is assigned or a receipt is emailed" = $(A \lor E)$.
+    4. The translation is $(R \land P) \to (A \lor E)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "Either the experiment works and the paper is published, or the grant is not renewed."'
+  answer: '$(E \land P) \lor \neg G$'
+  variableMap:
+    E: The experiment works
+    P: The paper is published
+    G: The grant is renewed
+  hint: 'Main: disjunction. Left disjunct: conjunction. Right disjunct: negation.'
+  walkthrough: |
+    1. Main connective: "either...or" ($\lor$).
+    2. Left disjunct: "the experiment works and the paper is published" = $(E \land P)$.
+    3. Right disjunct: "the grant is not renewed" = $\neg G$.
+    4. The translation is $(E \land P) \lor \neg G$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "The oven heats up if and only if the gas is on and the igniter works."'
+  answer: '$O \leftrightarrow (G \land I)$'
+  variableMap:
+    O: The oven heats up
+    G: The gas is on
+    I: The igniter works
+  hint: 'Main: biconditional. Right side: conjunction.'
+  walkthrough: |
+    1. Main connective: "if and only if" ($\leftrightarrow$).
+    2. Left: "the oven heats up" = $O$.
+    3. Right: "the gas is on and the igniter works" = $(G \land I)$.
+    4. The translation is $O \leftrightarrow (G \land I)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "If the shipment arrives, then if the inspection passes, the goods are released."'
+  answer: '$S \to (I \to G)$'
+  variableMap:
+    S: The shipment arrives
+    I: The inspection passes
+    G: The goods are released
+  hint: 'Main: conditional. Consequent: another conditional (nested).'
+  walkthrough: |
+    1. Main connective: the first "if...then" ($\to$).
+    2. Antecedent: "the shipment arrives" = $S$.
+    3. Consequent: "if the inspection passes, the goods are released" = $(I \to G)$.
+    4. The translation is $S \to (I \to G)$.
+  tags:
+    - nested-translation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the heater is on or the windows are closed, and the temperature drops."'
+  answer: '$\neg (H \lor W) \land T$'
+  variableMap:
+    H: The heater is on
+    W: The windows are closed
+    T: The temperature drops
+  hint: '"And" is the main connective. Left conjunct: negation of a disjunction.'
+  walkthrough: |
+    1. Main connective: "and" ($\land$).
+    2. Left conjunct: "it is not the case that the heater is on or the windows are closed" = $\neg (H \lor W)$.
+    3. Right conjunct: "the temperature drops" = $T$.
+    4. The translation is $\neg (H \lor W) \land T$.
+  tags:
+    - nested-translation

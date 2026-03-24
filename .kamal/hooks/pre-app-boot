@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Running database migrations for version $KAMAL_VERSION..."
+
+# During first-time setup Kamal can invoke this hook before role env files exist.
+# In that bootstrap-only case, skip here and run migrations after setup completes.
+if [[ ! -f ".kamal/apps/plcourse/env/roles/web.env" ]]; then
+  echo "Role env file not present yet; skipping pre-app-boot migration during initial setup."
+  exit 0
+fi
+
+kamal app exec "./node_modules/.bin/kysely migrate latest"

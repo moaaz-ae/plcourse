@@ -1,0 +1,1378 @@
+- type: mcq
+  question: 'Which word in "The building is old" is vague?'
+  answer: 2
+  options:
+    - '"building"'
+    - '"old"; there is no sharp boundary between old and not old'
+    - '"is"; it is unclear what "is" means'
+    - No word is vague; the sentence has a clear truth value
+  hint: A vague word lacks a sharp boundary. Which word here has borderline cases?
+  walkthrough: |
+    1. "Building" has a clear meaning. "Is" is a standard verb.
+    2. "Old" lacks a sharp boundary: a 200-year-old building is clearly old, a 1-year-old building is clearly not old, but what about 30 years?
+    3. That borderline case makes "old" vague.
+    4. The vague word is "old," which has no sharp boundary between old and not old.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: Which of the following sentences contains a vague predicate?
+  answer: 4
+  options:
+    - '"The number 7 is prime."'
+    - '"Water freezes at 0°C."'
+    - '"Canada is north of Mexico."'
+    - '"She is wealthy."'
+  hint: 'A vague predicate has clear cases, clear non-cases, and a borderline gray area.'
+  walkthrough: |
+    1. "Prime," "freezes at 0°C," and "north of" all have sharp boundaries.
+    2. "Wealthy" has no sharp boundary: someone with $10 billion is clearly wealthy, someone with $100 is clearly not, but $200,000 is a borderline case.
+    3. "Wealthy" is vague.
+    4. The sentence containing a vague predicate is "She is wealthy."
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Why is the sentence "The lake is deep" vague in borderline cases?'
+  answer: 1
+  options:
+    - There is no sharp cutoff between deep and not deep
+    - '"Lake" could refer to different bodies of water'
+    - '"Deep" has multiple unrelated meanings'
+    - The sentence is a question
+  hint: 'Vagueness is about blurry boundaries, not multiple meanings.'
+  walkthrough: |
+    1. A 200-meter lake is clearly deep. A 1-meter lake is clearly not deep.
+    2. What about 5 meters? 10 meters? There is no sharp line.
+    3. The word "deep" lacks a clear boundary, making it vague.
+    4. The sentence is vague because there is no sharp cutoff between deep and not deep.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Is "even" (as in "the number is even") a vague predicate?'
+  answer: 3
+  options:
+    - Yes; some numbers are borderline even
+    - 'Yes; "even" depends on context'
+    - 'No; every integer is either divisible by 2 or not, with no borderline cases'
+    - 'No; "even" is ambiguous, not vague'
+  hint: Can you find a number that is a borderline case of being even?
+  walkthrough: |
+    1. A number is even if it is divisible by 2 with no remainder.
+    2. Every integer either passes this test or does not.
+    3. There are no borderline cases; the boundary is perfectly sharp.
+    4. "Even" is not vague because every integer is either divisible by 2 or not, with no borderline cases.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Which borderline case illustrates the vagueness of "tall"?'
+  answer: 3
+  options:
+    - A person who is 2.0 meters
+    - A person who is 1.3 meters
+    - A person who is 1.75 meters
+    - A giraffe
+  hint: A borderline case is one where reasonable people could disagree.
+  walkthrough: |
+    1. A 2.0-meter person is clearly tall. A 1.3-meter person is clearly not tall.
+    2. A 1.75-meter person falls in the gray area: some would say tall, others would not.
+    3. This is a borderline case where truth value cannot be definitively assigned.
+    4. The borderline case illustrating vagueness is a person who is 1.75 meters.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Which word in "The movie was long" is vague?'
+  answer: 2
+  options:
+    - '"movie"'
+    - '"long"'
+    - '"was"'
+    - No word is vague
+  hint: Which word has no sharp boundary separating when it applies from when it does not?
+  walkthrough: |
+    1. "Movie" and "was" have clear, precise meanings.
+    2. "Long" lacks a sharp boundary: a 4-hour movie is clearly long, a 30-minute film is clearly not.
+    3. What about 90 minutes? 100 minutes? There is no definite cutoff.
+    4. The vague word is "long."
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: Which sentence does NOT contain a vague predicate?
+  answer: 1
+  options:
+    - '"The triangle has three sides."'
+    - '"The weather is nice."'
+    - '"The car is fast."'
+    - '"The book is short."'
+  hint: Look for a predicate with a mathematically precise definition.
+  walkthrough: |
+    1. "Has three sides" is precise: a shape either has exactly three sides or it does not.
+    2. "Nice," "fast," and "short" all have borderline cases with no sharp boundaries.
+    3. Only "has three sides" has a perfectly sharp definition.
+    4. The sentence without a vague predicate is "The triangle has three sides."
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Why is "bald" a vague predicate?'
+  answer: 4
+  options:
+    - It has multiple unrelated meanings
+    - It can only be applied to animals
+    - 'It is an opinion, not a fact'
+    - There is no precise number of hairs that marks the boundary between bald and not bald
+  hint: Consider someone losing hair one strand at a time. When exactly do they become bald?
+  walkthrough: |
+    1. A person with zero hairs is clearly bald. A person with 100,000 hairs is clearly not bald.
+    2. What about someone with 500 hairs? 1,000 hairs? There is no precise cutoff.
+    3. The lack of a sharp boundary makes "bald" vague.
+    4. "Bald" is vague because there is no precise number of hairs marking the boundary.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: Which of these predicates is vague?
+  answer: 3
+  options:
+    - '"is a mammal"'
+    - '"is divisible by 5"'
+    - '"is expensive"'
+    - '"is a citizen of France"'
+  hint: Which predicate has borderline cases where reasonable people would disagree?
+  walkthrough: |
+    1. "Is a mammal" has a biological definition. "Is divisible by 5" has a mathematical definition.
+    2. "Is a citizen of France" is determined by legal status.
+    3. "Is expensive" has no sharp boundary: $1 million is clearly expensive, $1 is clearly not, but $500 may be borderline.
+    4. The vague predicate is "is expensive."
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Consider the sentence "The path is narrow." What makes "narrow" vague?'
+  answer: 2
+  options:
+    - It can apply to different types of paths
+    - There is no precise width that separates narrow from not narrow
+    - It has two distinct meanings
+    - It is grammatically incorrect
+  hint: 'Vagueness concerns boundaries, not multiple meanings.'
+  walkthrough: |
+    1. A 30-centimeter path is clearly narrow. A 10-meter path is clearly not narrow.
+    2. What about 1 meter? 2 meters? There is no precise cutoff point.
+    3. This lack of a sharp boundary is what makes "narrow" vague.
+    4. "Narrow" is vague because there is no precise width separating narrow from not narrow.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Is "married" a vague predicate?'
+  answer: 1
+  options:
+    - 'No; a person is either legally married or not, with no borderline cases'
+    - Yes; some relationships are borderline marriages
+    - Yes; marriage means different things to different people
+    - No; it is ambiguous rather than vague
+  hint: Does legal marriage have a sharp boundary or a gray area?
+  walkthrough: |
+    1. Marriage is a legal status: either a marriage certificate exists or it does not.
+    2. There are no borderline cases; the boundary is perfectly sharp.
+    3. A person is either legally married or legally not married.
+    4. "Married" is not vague because a person is either legally married or not, with no borderline cases.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: Which sentence contains a vague predicate?
+  answer: 4
+  options:
+    - '"Paris is the capital of France."'
+    - '"The Earth orbits the Sun."'
+    - '"Hydrogen has one proton."'
+    - '"The test was difficult."'
+  hint: Look for a predicate that lacks a sharp definition.
+  walkthrough: |
+    1. "Capital of France" is a precise political fact. "Orbits the Sun" is a precise astronomical fact.
+    2. "Has one proton" is a precise chemical fact.
+    3. "Difficult" has no sharp boundary: some tests are clearly difficult, some clearly easy, but many fall in a gray area.
+    4. The sentence with a vague predicate is "The test was difficult."
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'What is the borderline case problem for the predicate "heavy"?'
+  answer: 3
+  options:
+    - '"Heavy" has multiple unrelated meanings'
+    - '"Heavy" can only apply to physical objects'
+    - 'At intermediate weights, there is no fact of the matter about whether something is heavy'
+    - '"Heavy" is always subjective'
+  hint: Think about what happens as you gradually increase weight.
+  walkthrough: |
+    1. A 500 kg object is clearly heavy. A 1 gram object is clearly not heavy.
+    2. What about 5 kg? 10 kg? Different people would draw the line differently.
+    3. At intermediate weights, there is no definite answer about whether the object is heavy.
+    4. The borderline case problem is that at intermediate weights, there is no fact of the matter about whether something is heavy.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: Which predicate has sharp boundaries?
+  answer: 2
+  options:
+    - '"is cold"'
+    - '"is a square"'
+    - '"is crowded"'
+    - '"is loud"'
+  hint: Which predicate has a precise geometric or mathematical definition?
+  walkthrough: |
+    1. "Cold," "crowded," and "loud" all have borderline cases with no precise cutoff.
+    2. "Is a square" has a precise definition: four equal sides and four right angles.
+    3. A shape either meets this definition exactly or it does not.
+    4. The predicate with sharp boundaries is "is a square."
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Why does the predicate "nearby" create vagueness?'
+  answer: 1
+  options:
+    - There is no precise distance that marks the boundary between nearby and not nearby
+    - '"Nearby" has two distinct meanings'
+    - '"Nearby" can only apply to certain objects'
+    - '"Nearby" is always false'
+  hint: Consider how close something must be to count as nearby.
+  walkthrough: |
+    1. Something 1 meter away is clearly nearby. Something 1,000 km away is clearly not nearby.
+    2. What about 5 km? 50 km? The answer depends on context and has no sharp cutoff.
+    3. This lack of a precise boundary makes "nearby" vague.
+    4. "Nearby" is vague because there is no precise distance marking the boundary.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Which word in "She arrived early" is vague?'
+  answer: 3
+  options:
+    - '"She"'
+    - '"arrived"'
+    - '"early"'
+    - No word is vague
+  hint: Which word lacks a sharp boundary?
+  walkthrough: |
+    1. "She" and "arrived" have clear, precise meanings.
+    2. "Early" lacks a sharp boundary: 30 minutes before is clearly early, exactly on time is clearly not early.
+    3. What about 2 minutes before? 5 minutes? There is no precise cutoff.
+    4. The vague word is "early."
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Is "prime number" a vague predicate?'
+  answer: 4
+  options:
+    - Yes; some numbers are borderline prime
+    - 'Yes; "prime" depends on the mathematical system'
+    - Yes; large primes are harder to identify
+    - 'No; a number is either divisible only by 1 and itself, or it is not'
+  hint: Does the definition of prime leave any gray area?
+  walkthrough: |
+    1. A prime number is a number greater than 1 divisible only by 1 and itself.
+    2. Every integer either meets this definition or does not.
+    3. There are no borderline cases; 7 is prime, 8 is not, and there is no ambiguity.
+    4. "Prime number" is not vague; a number is either divisible only by 1 and itself, or it is not.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'What makes "intelligent" a vague predicate?'
+  answer: 2
+  options:
+    - It has multiple dictionary definitions
+    - There is no sharp boundary between intelligent and not intelligent
+    - It applies only to humans
+    - It is a compliment rather than a description
+  hint: Consider borderline cases of intelligence.
+  walkthrough: |
+    1. Someone with exceptional cognitive abilities is clearly intelligent. Someone with severe cognitive impairment is clearly not.
+    2. Many people fall in the middle range where "intelligent" neither clearly applies nor clearly fails.
+    3. The lack of a sharp cutoff makes "intelligent" vague.
+    4. "Intelligent" is vague because there is no sharp boundary between intelligent and not intelligent.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Which of these is a clear case, not a borderline case, for the predicate "tall" applied to adult humans?'
+  answer: 1
+  options:
+    - A person who is 2.1 meters
+    - A person who is 1.7 meters
+    - A person who is 1.72 meters
+    - A person who is 1.68 meters
+  hint: A clear case is one where virtually everyone would agree.
+  walkthrough: |
+    1. At 2.1 meters, virtually everyone would agree the person is tall.
+    2. Heights around 1.68 to 1.72 meters fall in the borderline zone where people disagree.
+    3. A clear case is one with no reasonable disagreement.
+    4. The clear case for "tall" is a person who is 2.1 meters.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: 'Why is "small" vague when describing a house?'
+  answer: 4
+  options:
+    - '"Small" has multiple unrelated meanings'
+    - '"Small" can only apply to certain houses'
+    - '"Small" is grammatically incorrect for houses'
+    - There is no precise square footage that separates small houses from non-small houses
+  hint: Think about what size house would be borderline small.
+  walkthrough: |
+    1. A 30-square-meter house is clearly small. A 1,000-square-meter house is clearly not small.
+    2. What about 100 square meters? 150 square meters? Different people would draw the line differently.
+    3. The absence of a precise cutoff makes "small" vague.
+    4. "Small" is vague because there is no precise square footage separating small from non-small houses.
+  tags:
+    - identify-vagueness
+
+- type: mcq
+  question: '"I saw her duck." What type of ambiguity is this?'
+  answer: 1
+  options:
+    - 'Lexical ambiguity: "duck" can mean a bird or the action of crouching'
+    - 'Structural ambiguity: the sentence structure allows two readings'
+    - 'Vagueness: "duck" has no clear boundary'
+    - It is not ambiguous
+  hint: Is the ambiguity caused by a word with multiple meanings or by sentence structure?
+  walkthrough: |
+    1. "Duck" has two meanings: a bird and the verb meaning to crouch.
+    2. The sentence could mean "I saw her pet bird" or "I saw her crouch down."
+    3. The double meaning comes from one word, so this is lexical ambiguity.
+    4. This is lexical ambiguity because "duck" can mean a bird or the action of crouching.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"Old men and women were evacuated." What type of ambiguity is this?'
+  answer: 4
+  options:
+    - 'Lexical ambiguity: "old" has two meanings'
+    - 'Vagueness: "old" has no sharp boundary'
+    - It is not ambiguous
+    - 'Structural ambiguity: "old" could modify only "men" or both "men and women"'
+  hint: Does the sentence have two possible groupings?
+  walkthrough: |
+    1. Reading 1: old men and old women were evacuated ("old" modifies both).
+    2. Reading 2: old men and women of any age were evacuated ("old" modifies only "men").
+    3. The two readings arise from sentence structure, not from a word having multiple meanings.
+    4. This is structural ambiguity because "old" could modify only "men" or both "men and women."
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"She went to the bank." What type of ambiguity is this?'
+  answer: 2
+  options:
+    - Structural ambiguity
+    - 'Lexical ambiguity: "bank" can mean a financial institution or a river bank'
+    - Vagueness
+    - It is not ambiguous
+  hint: Is a single word responsible for the multiple meanings?
+  walkthrough: |
+    1. "Bank" has two distinct meanings: financial institution and river bank.
+    2. The sentence has two readings because of this word.
+    3. This is lexical ambiguity.
+    4. This is lexical ambiguity because "bank" can mean a financial institution or a river bank.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"The professor said on Monday he would give the exam." What type of ambiguity is this?'
+  answer: 3
+  options:
+    - 'Lexical ambiguity: "Monday" has two meanings'
+    - 'Vagueness: "Monday" is unclear'
+    - 'Structural ambiguity: "on Monday" could modify when he said it or when the exam is'
+    - It is not ambiguous
+  hint: 'Does "on Monday" attach to the saying or to the giving?'
+  walkthrough: |
+    1. Reading 1: the professor made the announcement on Monday.
+    2. Reading 2: the exam will be given on Monday.
+    3. The ambiguity arises from where "on Monday" attaches in the sentence structure.
+    4. This is structural ambiguity because "on Monday" could modify when he said it or when the exam is.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: What is the difference between vagueness and ambiguity?
+  answer: 1
+  options:
+    - Vagueness is a blurry boundary; ambiguity is multiple distinct meanings
+    - Vagueness involves multiple meanings; ambiguity involves blurry boundaries
+    - They are the same thing
+    - Vagueness applies only to adjectives; ambiguity applies only to nouns
+  hint: Vague words have gray areas; ambiguous sentences have two or more clear readings.
+  walkthrough: |
+    1. Vagueness means a word lacks a sharp boundary (e.g., "tall" has borderline cases).
+    2. Ambiguity means a sentence or word has two or more distinct meanings (e.g., "bank").
+    3. These are different phenomena.
+    4. Vagueness is a blurry boundary; ambiguity is multiple distinct meanings.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"He found the bat in the attic." What type of ambiguity is this?'
+  answer: 2
+  options:
+    - Structural ambiguity
+    - 'Lexical ambiguity: "bat" can mean a flying mammal or sports equipment'
+    - Vagueness
+    - It is not ambiguous
+  hint: Does a single word have multiple unrelated meanings?
+  walkthrough: |
+    1. "Bat" has two distinct meanings: a flying mammal and a piece of sports equipment.
+    2. The sentence has two readings based on which meaning of "bat" is intended.
+    3. The ambiguity comes from one word having multiple meanings.
+    4. This is lexical ambiguity because "bat" can mean a flying mammal or sports equipment.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"I read the book on the train." What type of ambiguity is this?'
+  answer: 4
+  options:
+    - 'Lexical ambiguity: "read" has two meanings'
+    - 'Vagueness: "book" has no sharp boundary'
+    - It is not ambiguous
+    - 'Structural ambiguity: "on the train" could modify where I read or what the book is about'
+  hint: Where does the prepositional phrase attach?
+  walkthrough: |
+    1. Reading 1: I read the book while I was on the train.
+    2. Reading 2: I read the book that is about trains (less natural, but possible).
+    3. The ambiguity arises from sentence structure, not from a word having multiple meanings.
+    4. This is structural ambiguity because "on the train" could modify where I read or what the book is about.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"The pen is in the box." Is this sentence ambiguous?'
+  answer: 3
+  options:
+    - Yes; structural ambiguity
+    - Yes; vagueness
+    - 'Yes; lexical ambiguity: "pen" can mean a writing instrument or an animal enclosure'
+    - No; it has only one meaning
+  hint: 'Does "pen" have more than one meaning?'
+  walkthrough: |
+    1. "Pen" can mean a writing instrument or an enclosure for animals.
+    2. The sentence has two readings based on which meaning is intended.
+    3. The ambiguity comes from the word "pen" having multiple meanings.
+    4. This is lexical ambiguity because "pen" can mean a writing instrument or an animal enclosure.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"Visiting professors can be tedious." What type of ambiguity is this?'
+  answer: 1
+  options:
+    - 'Structural ambiguity: "visiting" can be a gerund or an adjective'
+    - 'Lexical ambiguity: "tedious" has two meanings'
+    - 'Vagueness: "tedious" has no sharp boundary'
+    - It is not ambiguous
+  hint: 'Is "visiting" describing an action or a type of professor?'
+  walkthrough: |
+    1. Reading 1: the act of visiting professors can be tedious (gerund).
+    2. Reading 2: professors who are visiting can be tedious (adjective).
+    3. The ambiguity arises from how "visiting" functions grammatically.
+    4. This is structural ambiguity because "visiting" can be a gerund or an adjective.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"The judge sentenced the killer with the knife." What type of ambiguity is this?'
+  answer: 3
+  options:
+    - 'Lexical ambiguity: "knife" has two meanings'
+    - 'Vagueness: "knife" has no sharp boundary'
+    - 'Structural ambiguity: "with the knife" could modify the sentencing or describe the killer'
+    - It is not ambiguous
+  hint: 'Who has the knife: the judge or the killer?'
+  walkthrough: |
+    1. Reading 1: the judge used a knife to sentence (nonsensical, but grammatically possible).
+    2. Reading 2: the killer who had a knife was sentenced.
+    3. The ambiguity arises from where "with the knife" attaches.
+    4. This is structural ambiguity because "with the knife" could modify the sentencing or describe the killer.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"He saw the star." What type of ambiguity is this?'
+  answer: 2
+  options:
+    - Structural ambiguity
+    - 'Lexical ambiguity: "star" can mean a celestial body or a famous person'
+    - Vagueness
+    - It is not ambiguous
+  hint: 'Does "star" have multiple distinct meanings?'
+  walkthrough: |
+    1. "Star" can mean a celestial body or a celebrity.
+    2. The sentence has two readings depending on which meaning is intended.
+    3. The ambiguity comes from a single word having multiple meanings.
+    4. This is lexical ambiguity because "star" can mean a celestial body or a famous person.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"Every student read a book." What type of ambiguity is this?'
+  answer: 4
+  options:
+    - 'Lexical ambiguity: "read" has two meanings'
+    - 'Vagueness: "book" has no sharp boundary'
+    - It is not ambiguous
+    - 'Structural ambiguity: each student read a different book, or all read the same book'
+  hint: How many books are involved?
+  walkthrough: |
+    1. Reading 1: every student read some book (possibly different books).
+    2. Reading 2: there is one specific book that every student read.
+    3. The ambiguity arises from the scope of "a book" relative to "every student."
+    4. This is structural ambiguity: each student read a different book, or all read the same book.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"She cannot bear children." What type of ambiguity is this?'
+  answer: 1
+  options:
+    - 'Lexical ambiguity: "bear" can mean to give birth or to tolerate'
+    - Structural ambiguity
+    - Vagueness
+    - It is not ambiguous
+  hint: 'Does "bear" have multiple meanings?'
+  walkthrough: |
+    1. "Bear" can mean to give birth to or to tolerate/endure.
+    2. The sentence could mean she cannot have children or she cannot tolerate children.
+    3. The ambiguity comes from the word "bear" having multiple meanings.
+    4. This is lexical ambiguity because "bear" can mean to give birth or to tolerate.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"The police shot the rioters with guns." What type of ambiguity is this?'
+  answer: 3
+  options:
+    - 'Lexical ambiguity: "shot" has two meanings'
+    - 'Vagueness: "guns" has no sharp boundary'
+    - 'Structural ambiguity: "with guns" could describe the police or the rioters'
+    - It is not ambiguous
+  hint: Who has the guns?
+  walkthrough: |
+    1. Reading 1: the police used guns to shoot.
+    2. Reading 2: the police shot rioters who were carrying guns.
+    3. The ambiguity arises from where "with guns" attaches in the sentence.
+    4. This is structural ambiguity because "with guns" could describe the police or the rioters.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"I left my keys on the table." Is this ambiguous?'
+  answer: 2
+  options:
+    - Yes; lexical ambiguity
+    - No; the sentence has only one clear meaning
+    - Yes; structural ambiguity
+    - Yes; vagueness
+  hint: Can you find two distinct readings?
+  walkthrough: |
+    1. "Keys," "left," and "table" each have one relevant meaning in this context.
+    2. The sentence structure allows only one parsing.
+    3. There are no borderline cases for any term.
+    4. The sentence is not ambiguous; it has only one clear meaning.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"The door is not locked." Is this vague, ambiguous, or neither?'
+  answer: 4
+  options:
+    - 'Vague: "locked" has borderline cases'
+    - 'Ambiguous: "locked" has two meanings'
+    - 'Ambiguous: structural ambiguity'
+    - 'Neither: the sentence has one clear meaning with no borderline cases'
+  hint: Is a door either locked or not locked?
+  walkthrough: |
+    1. "Locked" has a sharp boundary: either the locking mechanism is engaged or it is not.
+    2. There are no borderline cases for a standard lock.
+    3. The word has one meaning in this context.
+    4. The sentence is neither vague nor ambiguous; it has one clear meaning with no borderline cases.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"Time flies like an arrow." What type of ambiguity is this?'
+  answer: 1
+  options:
+    - 'Structural ambiguity: multiple grammatical parsings are possible'
+    - 'Lexical ambiguity: "flies" has two meanings'
+    - Vagueness
+    - It is not ambiguous
+  hint: 'Can "time" be a verb? Can "flies" be a noun?'
+  walkthrough: |
+    1. Reading 1: time passes quickly, like an arrow flies.
+    2. Reading 2: there are insects called "time flies" that enjoy arrows.
+    3. Reading 3: measure the speed of flies in the same way you would measure an arrow.
+    4. Multiple grammatical parsings exist, making this structural ambiguity.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"I need a light coat." What type of ambiguity is this?'
+  answer: 2
+  options:
+    - Structural ambiguity
+    - 'Lexical ambiguity: "light" can mean not heavy or pale in color'
+    - Vagueness
+    - It is not ambiguous
+  hint: 'Does "light" have more than one meaning?'
+  walkthrough: |
+    1. "Light" can mean not heavy (a thin coat) or pale in color.
+    2. The sentence has two readings depending on which meaning is intended.
+    3. The ambiguity comes from the word "light" having multiple meanings.
+    4. This is lexical ambiguity because "light" can mean not heavy or pale in color.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: '"The lamb is too hot to eat." What type of ambiguity is this?'
+  answer: 4
+  options:
+    - 'Lexical ambiguity: "lamb" has two meanings'
+    - 'Vagueness: "hot" has no sharp boundary'
+    - It is not ambiguous
+    - 'Structural ambiguity: the lamb is too hot to be eaten, or the lamb is too hot to eat something'
+  hint: Who or what is doing the eating?
+  walkthrough: |
+    1. Reading 1: the lamb (the food) is too hot for us to eat it.
+    2. Reading 2: the lamb (the animal) is overheated and cannot eat its food.
+    3. The ambiguity arises from sentence structure, not word meaning.
+    4. This is structural ambiguity: the lamb is too hot to be eaten, or too hot to eat something.
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: Which sentence has lexical ambiguity?
+  answer: 3
+  options:
+    - '"Smoking grass can be dangerous."'
+    - '"I saw the man with the telescope."'
+    - '"The captain corrected the list."'
+    - '"All students did not pass."'
+  hint: Look for a sentence where a single word has two unrelated meanings.
+  walkthrough: |
+    1. "Smoking grass" and "man with the telescope" involve structural ambiguity.
+    2. "All students did not pass" is scope ambiguity (structural).
+    3. "List" can mean a written inventory or a tilt (nautical term), giving two distinct readings.
+    4. The sentence with lexical ambiguity is "The captain corrected the list."
+  tags:
+    - classify-ambiguity
+
+- type: mcq
+  question: 'Which is a correct disambiguation of "The chicken is ready to eat"?'
+  answer: 3
+  options:
+    - '"The chicken is somewhat ready to eat" and "The chicken is fully ready to eat"'
+    - '"The chicken is ready" and "The chicken is eating"'
+    - '"The chicken (the food) is ready to be eaten" and "The chicken (the animal) is ready to eat its food"'
+    - '"The chicken might be ready to eat" and "The chicken is definitely ready to eat"'
+  hint: 'Identify the two distinct readings, then rewrite each so it has only one meaning.'
+  walkthrough: |
+    1. Reading 1: the cooked chicken is ready to be served and eaten.
+    2. Reading 2: the live chicken is ready to eat its own food.
+    3. Each rewrite has exactly one meaning.
+    4. The correct disambiguation is: "The chicken (the food) is ready to be eaten" and "The chicken (the animal) is ready to eat its food."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair correctly disambiguates "I watched the man with the telescope"?'
+  answer: 2
+  options:
+    - '"I watched the man carefully" and "I watched the man briefly"'
+    - '"I used the telescope to watch the man" and "I watched the man who was holding a telescope"'
+    - '"The man watched me" and "I watched the man"'
+    - '"I watched the telescope" and "The man watched the telescope"'
+  hint: Who has the telescope? The watcher or the man?
+  walkthrough: |
+    1. Reading 1: I used a telescope to observe the man.
+    2. Reading 2: I observed a man who had a telescope.
+    3. Each rewrite eliminates the ambiguity by specifying who has the telescope.
+    4. The correct pair is: "I used the telescope to watch the man" and "I watched the man who was holding a telescope."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Disambiguate: "They are cooking apples."'
+  answer: 4
+  options:
+    - '"They might be cooking apples" and "They are definitely cooking apples"'
+    - '"They cook apples daily" and "They cook apples rarely"'
+    - '"They are making apples" and "They are baking apples"'
+    - '"They are in the process of cooking apples" and "Those apples are of the cooking variety"'
+  hint: 'Is "cooking" a verb (action) or an adjective (type of apple)?'
+  walkthrough: |
+    1. Reading 1: "They are cooking apples" means the people are preparing apples.
+    2. Reading 2: "Those are cooking apples" means the apples are a type used for cooking.
+    3. Each version has exactly one meaning.
+    4. The correct disambiguation is: "They are in the process of cooking apples" and "Those apples are of the cooking variety."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "The lock was picked by the detective"?'
+  answer: 1
+  options:
+    - '"The detective opened the lock by picking it" and "The detective selected that particular lock"'
+    - '"The detective found the lock" and "The detective lost the lock"'
+    - '"The lock was broken" and "The lock was working"'
+    - '"A detective picked the lock" and "The detective picked the lock"'
+  hint: '"Picked" can mean physically opened or chosen/selected.'
+  walkthrough: |
+    1. Reading 1: the detective used a tool to open the lock.
+    2. Reading 2: the detective chose that lock from among several options.
+    3. Each rewrite has one clear meaning.
+    4. The correct pair is: "The detective opened the lock by picking it" and "The detective selected that particular lock."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Free books for children"?'
+  answer: 3
+  options:
+    - '"Cheap books for children" and "Expensive books for children"'
+    - '"Books that are about freedom" and "Books given as gifts"'
+    - '"Books available at no cost for children" and "Release the books that are being held for children"'
+    - '"Good books for children" and "Bad books for children"'
+  hint: '"Free" can mean "at no cost" or "liberate."'
+  walkthrough: |
+    1. Reading 1: books given to children at no charge.
+    2. Reading 2: an imperative to liberate books that belong to children.
+    3. Each version resolves the lexical ambiguity of "free."
+    4. The correct pair is: "Books available at no cost for children" and "Release the books that are being held for children."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Flying planes can be dangerous"?'
+  answer: 2
+  options:
+    - '"Planes are dangerous" and "Flying is dangerous"'
+    - '"The act of piloting aircraft is dangerous" and "Aircraft that are currently in flight are dangerous"'
+    - '"Fast planes are dangerous" and "Slow planes are dangerous"'
+    - '"Flying is safe" and "Flying is risky"'
+  hint: 'Is "flying" a gerund (the act) or a participle (describing planes)?'
+  walkthrough: |
+    1. Reading 1: piloting aircraft is dangerous (gerund: the act of flying).
+    2. Reading 2: planes that are in the air pose a danger (participle: flying describes planes).
+    3. Each rewrite has exactly one clear meaning.
+    4. The correct pair is: "The act of piloting aircraft is dangerous" and "Aircraft that are currently in flight are dangerous."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "I saw her duck under the table"?'
+  answer: 3
+  options:
+    - '"I saw her quickly" and "I saw her slowly"'
+    - '"I saw the table" and "She saw the table"'
+    - '"I saw her crouch under the table" and "I saw her pet duck that was under the table"'
+    - '"She hid under the table" and "She sat on the table"'
+  hint: 'What does "duck" mean here?'
+  walkthrough: |
+    1. Reading 1: I saw her perform the action of ducking (crouching) under the table.
+    2. Reading 2: I saw her duck (the bird) that was located under the table.
+    3. Each rewrite specifies exactly one meaning.
+    4. The correct pair is: "I saw her crouch under the table" and "I saw her pet duck that was under the table."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "The teacher said the student was lazy"?'
+  answer: 1
+  options:
+    - '"The teacher accused the student of being lazy" and "The teacher, described as lazy by someone, mentioned the student"'
+    - '"The student is lazy" and "The student is hardworking"'
+    - '"The teacher spoke" and "The student spoke"'
+    - '"The teacher was angry" and "The teacher was calm"'
+  hint: Who is being called lazy?
+  walkthrough: |
+    1. Reading 1: the teacher said that the student has the quality of being lazy.
+    2. Reading 2: the teacher (who is lazy) said something about the student.
+    3. Each rewrite clarifies who is described as lazy.
+    4. The correct pair is: "The teacher accused the student of being lazy" and "The teacher, described as lazy by someone, mentioned the student."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "She hit the man with a book"?'
+  answer: 4
+  options:
+    - '"She hit the man hard" and "She hit the man softly"'
+    - '"The man was tall" and "The man was short"'
+    - '"She used her hand" and "She used her foot"'
+    - '"She used a book to hit the man" and "She hit the man who was carrying a book"'
+  hint: Who has the book?
+  walkthrough: |
+    1. Reading 1: she used the book as a weapon to hit the man.
+    2. Reading 2: she hit the man who happened to be holding a book.
+    3. Each rewrite clarifies who possesses the book.
+    4. The correct pair is: "She used a book to hit the man" and "She hit the man who was carrying a book."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "The professor spoke to the student with enthusiasm"?'
+  answer: 2
+  options:
+    - '"The professor spoke loudly" and "The professor spoke quietly"'
+    - '"The professor spoke enthusiastically to the student" and "The professor spoke to the enthusiastic student"'
+    - '"The student listened" and "The student did not listen"'
+    - '"The professor was happy" and "The professor was sad"'
+  hint: Who has the enthusiasm?
+  walkthrough: |
+    1. Reading 1: the professor delivered the speech with enthusiasm.
+    2. Reading 2: the student being addressed was enthusiastic.
+    3. Each rewrite specifies who has the quality of enthusiasm.
+    4. The correct pair is: "The professor spoke enthusiastically to the student" and "The professor spoke to the enthusiastic student."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Kids make nutritious snacks"?'
+  answer: 3
+  options:
+    - '"Kids eat snacks" and "Kids buy snacks"'
+    - '"Snacks are good" and "Snacks are bad"'
+    - '"Kids prepare healthy snacks" and "Kids are nutritious if eaten as snacks"'
+    - '"Kids like snacks" and "Kids dislike snacks"'
+  hint: Are kids the makers or the snacks?
+  walkthrough: |
+    1. Reading 1: children create or prepare nutritious snacks.
+    2. Reading 2: children themselves would be nutritious if consumed (humorous/dark reading).
+    3. Each rewrite clarifies the role of "kids" in the sentence.
+    4. The correct pair is: "Kids prepare healthy snacks" and "Kids are nutritious if eaten as snacks."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "The police were ordered to stop drinking at midnight"?'
+  answer: 1
+  options:
+    - '"The police were ordered to cease their own drinking at midnight" and "The police were ordered to prevent others from drinking after midnight"'
+    - '"The police worked at night" and "The police worked during the day"'
+    - '"Drinking is allowed" and "Drinking is prohibited"'
+    - '"The order was given" and "The order was not given"'
+  hint: Whose drinking is being stopped?
+  walkthrough: |
+    1. Reading 1: the police themselves must stop consuming alcohol at midnight.
+    2. Reading 2: the police must enforce a rule that stops others from drinking at midnight.
+    3. Each rewrite specifies whose drinking is affected.
+    4. The correct pair is: "The police were ordered to cease their own drinking at midnight" and "The police were ordered to prevent others from drinking after midnight."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Local high school dropouts cut in half"?'
+  answer: 4
+  options:
+    - '"Dropouts decreased" and "Dropouts increased"'
+    - '"Schools are good" and "Schools are bad"'
+    - '"The policy worked" and "The policy failed"'
+    - '"The number of dropouts was reduced by 50%" and "Dropouts were physically cut in half"'
+  hint: 'What does "cut in half" mean?'
+  walkthrough: |
+    1. Reading 1: the dropout rate was reduced by 50% (figurative).
+    2. Reading 2: dropouts were literally cut in half (gruesome, literal).
+    3. Each rewrite specifies one meaning of "cut in half."
+    4. The correct pair is: "The number of dropouts was reduced by 50%" and "Dropouts were physically cut in half."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Stolen painting found by tree"?'
+  answer: 2
+  options:
+    - '"The painting was valuable" and "The painting was worthless"'
+    - '"The painting was found near a tree" and "A tree discovered the stolen painting"'
+    - '"Someone stole a painting" and "No one stole a painting"'
+    - '"The painting was recovered" and "The painting was lost"'
+  hint: Who or what found the painting?
+  walkthrough: |
+    1. Reading 1: the painting was discovered in the vicinity of a tree.
+    2. Reading 2: a tree is credited with finding the painting (humorous reading).
+    3. Each rewrite clarifies who found the painting and where.
+    4. The correct pair is: "The painting was found near a tree" and "A tree discovered the stolen painting."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Miners refuse to work after death"?'
+  answer: 3
+  options:
+    - '"Miners are tired" and "Miners are energetic"'
+    - '"Mining is dangerous" and "Mining is safe"'
+    - '"Miners will not work following a death in the mine" and "Miners continue to refuse work even after they have died"'
+    - '"The strike ended" and "The strike continued"'
+  hint: Whose death is being referred to?
+  walkthrough: |
+    1. Reading 1: miners refuse to work after a death occurs (a coworker died).
+    2. Reading 2: miners refuse to work after their own deaths (impossible, humorous).
+    3. Each rewrite clarifies whose death is relevant.
+    4. The correct pair is: "Miners will not work following a death in the mine" and "Miners continue to refuse work even after they have died."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Eye drops off shelf"?'
+  answer: 1
+  options:
+    - '"Eye medication falls from the shelf" and "An eye falls off a shelf"'
+    - '"The shelf is high" and "The shelf is low"'
+    - '"The product is available" and "The product is unavailable"'
+    - '"Eyes are healthy" and "Eyes are unhealthy"'
+  hint: 'What is "eye drops" referring to?'
+  walkthrough: |
+    1. Reading 1: eye drops (medication) fell off the shelf.
+    2. Reading 2: an eye drops off (falls from) a shelf (bizarre, literal).
+    3. Each rewrite specifies the meaning of "eye drops."
+    4. The correct pair is: "Eye medication falls from the shelf" and "An eye falls off a shelf."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Red tape holds up new bridge"?'
+  answer: 4
+  options:
+    - '"The bridge is new" and "The bridge is old"'
+    - '"Construction is fast" and "Construction is slow"'
+    - '"Tape is useful" and "Tape is useless"'
+    - '"Bureaucratic delays are preventing bridge completion" and "Physical red tape is supporting the bridge structure"'
+  hint: 'What does "red tape" mean?'
+  walkthrough: |
+    1. Reading 1: bureaucracy (red tape) is delaying the bridge project.
+    2. Reading 2: actual red-colored tape is physically holding up the bridge.
+    3. Each rewrite specifies one meaning of "red tape" and "holds up."
+    4. The correct pair is: "Bureaucratic delays are preventing bridge completion" and "Physical red tape is supporting the bridge structure."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Squad helps dog bite victim"?'
+  answer: 2
+  options:
+    - '"The dog was helped" and "The dog was not helped"'
+    - '"The squad assisted the person bitten by a dog" and "The squad helped a dog bite a victim"'
+    - '"The victim recovered" and "The victim did not recover"'
+    - '"The squad arrived" and "The squad did not arrive"'
+  hint: 'Who is being helped: the victim or the dog?'
+  walkthrough: |
+    1. Reading 1: the squad helped a person who was bitten by a dog.
+    2. Reading 2: the squad assisted a dog in biting someone.
+    3. Each rewrite clarifies who received help.
+    4. The correct pair is: "The squad assisted the person bitten by a dog" and "The squad helped a dog bite a victim."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "Two sisters reunited after 18 years in checkout counter"?'
+  answer: 3
+  options:
+    - '"The sisters were happy" and "The sisters were sad"'
+    - '"The store was busy" and "The store was empty"'
+    - '"The sisters met at a checkout counter after 18 years apart" and "The sisters, who had been in a checkout counter for 18 years, reunited"'
+    - '"They hugged" and "They did not hug"'
+  hint: What happened for 18 years?
+  walkthrough: |
+    1. Reading 1: the sisters were separated for 18 years and met at a checkout counter.
+    2. Reading 2: the sisters spent 18 years in a checkout counter before reuniting.
+    3. Each rewrite clarifies what "18 years" modifies.
+    4. The correct pair is: "The sisters met at a checkout counter after 18 years apart" and "The sisters, who had been in a checkout counter for 18 years, reunited."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Which pair disambiguates "The peasants are revolting"?'
+  answer: 1
+  options:
+    - '"The peasants are rebelling" and "The peasants are disgusting"'
+    - '"The peasants are happy" and "The peasants are sad"'
+    - '"There are many peasants" and "There are few peasants"'
+    - '"The peasants work hard" and "The peasants are lazy"'
+  hint: 'Does "revolting" mean rebelling or disgusting?'
+  walkthrough: |
+    1. Reading 1: the peasants are engaged in a revolt (rebellion).
+    2. Reading 2: the peasants are disgusting or repulsive.
+    3. Each rewrite specifies one meaning of "revolting."
+    4. The correct pair is: "The peasants are rebelling" and "The peasants are disgusting."
+  tags:
+    - rewrite-ambiguous
+
+- type: mcq
+  question: 'Why can the sentence "Alex is young" not be used in formal logic when Alex is 35?'
+  answer: 2
+  options:
+    - It is a command
+    - 'At 35, "young" is borderline: no definite truth value can be assigned'
+    - It is ambiguous
+    - '"Young" is not a real English word'
+  hint: Formal logic requires a definite truth value. Vague predicates in borderline cases lack one.
+  walkthrough: |
+    1. "Young" is vague: clear at 5 (yes), clear at 90 (no), borderline at 35.
+    2. In the borderline case, no definite truth value can be assigned.
+    3. Logic requires every sentence to be true or false, so this sentence cannot be symbolized.
+    4. At 35, "young" is borderline and no definite truth value can be assigned.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'Can the ambiguous sentence "She went to the bank" be used in formal logic?'
+  answer: 1
+  options:
+    - 'Yes, after disambiguation: pick one meaning and rewrite the sentence'
+    - No; ambiguity can never be resolved
+    - Yes; assign both meanings the same truth value
+    - No; it has no truth value
+  hint: Ambiguity can be resolved by choosing one specific reading.
+  walkthrough: |
+    1. "She went to the bank" has two meanings.
+    2. Pick one: "She went to the financial institution." This has a definite truth value.
+    3. After disambiguation, the sentence can be used in formal logic.
+    4. Yes, after disambiguation: pick one meaning and rewrite the sentence.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: Which problem prevents a sentence from being used in formal logic?
+  answer: 4
+  options:
+    - The sentence is false
+    - The sentence is about an opinion
+    - The sentence uses complex vocabulary
+    - The sentence is vague in a borderline case and has no definite truth value
+  hint: 'Logic requires a definite truth value: true or false.'
+  walkthrough: |
+    1. False sentences have a truth value (false) and work fine in logic.
+    2. Opinions can have truth values and can be used.
+    3. Complex vocabulary does not prevent symbolization.
+    4. A vague sentence in a borderline case cannot be assigned true or false.
+    5. The problem is that the sentence is vague in a borderline case and has no definite truth value.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: '"This coffee is strong" when the coffee is at a borderline concentration. Can it be symbolized?'
+  answer: 3
+  options:
+    - Yes; just assign it True
+    - Yes; just assign it False
+    - 'No; "strong" is vague and the borderline case has no definite truth value'
+    - No; it is ambiguous
+  hint: 'Is there a sharp boundary for "strong"?'
+  walkthrough: |
+    1. "Strong" lacks a sharp boundary: some concentrations are clearly strong, some clearly not, and some are borderline.
+    2. At a borderline concentration, no definite truth value can be assigned.
+    3. The sentence cannot be symbolized in this case.
+    4. No, "strong" is vague and the borderline case has no definite truth value.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: Which sentence can be used in formal logic without modification?
+  answer: 2
+  options:
+    - '"The room is warm" (when the temperature is borderline)'
+    - '"The number 12 is divisible by 4"'
+    - '"He went to the bank" (no context provided)'
+    - '"She is fairly tall"'
+  hint: 'Look for the sentence with a definite, unambiguous truth value.'
+  walkthrough: |
+    1. "The room is warm" at a borderline temperature has no definite truth value (vague).
+    2. "12 is divisible by 4" is clearly true: 12 / 4 = 3. No vagueness or ambiguity.
+    3. "He went to the bank" is ambiguous without context.
+    4. "She is fairly tall" is vague.
+    5. The sentence that can be used in formal logic without modification is "The number 12 is divisible by 4."
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: Why is vagueness harder to resolve than ambiguity for logical symbolization?
+  answer: 3
+  options:
+    - Vague words are grammatically incorrect
+    - Ambiguous sentences have more meanings than vague ones
+    - Ambiguity can be resolved by choosing one reading; vagueness has no fact of the matter in borderline cases
+    - Vague sentences are longer than ambiguous ones
+  hint: What can you do to fix ambiguity that you cannot do for vagueness?
+  walkthrough: |
+    1. Ambiguous sentences have multiple distinct meanings; you can choose one and rewrite.
+    2. Vague sentences in borderline cases have no definite truth value to discover.
+    3. No amount of rewriting can create a sharp boundary where none exists.
+    4. Ambiguity can be resolved by choosing one reading; vagueness has no fact of the matter in borderline cases.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: '"The soup is somewhat hot." Does adding "somewhat" resolve the vagueness?'
+  answer: 4
+  options:
+    - 'Yes; "somewhat" makes the sentence precise'
+    - 'Yes; "somewhat" eliminates borderline cases'
+    - No; it makes the sentence ambiguous instead
+    - 'No; "somewhat hot" is still vague with no sharp boundary'
+  hint: Does adding a degree modifier create a precise cutoff?
+  walkthrough: |
+    1. "Hot" is vague because there is no sharp boundary.
+    2. Adding "somewhat" does not create a precise cutoff; it just shifts the borderline zone.
+    3. There are still cases where it is unclear whether "somewhat hot" applies.
+    4. No, "somewhat hot" is still vague with no sharp boundary.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'Why can "The car is fast" not be symbolized in a borderline case?'
+  answer: 1
+  options:
+    - There is no sharp speed that separates fast from not fast
+    - '"Fast" has two distinct meanings'
+    - Cars cannot have truth values
+    - The sentence is a command
+  hint: 'Think about the definition of "fast."'
+  walkthrough: |
+    1. "Fast" is vague: a car going 300 km/h is clearly fast, one going 20 km/h is clearly not.
+    2. What about 100 km/h? 120 km/h? There is no precise cutoff.
+    3. In borderline cases, no truth value can be assigned.
+    4. The sentence cannot be symbolized because there is no sharp speed that separates fast from not fast.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: Which of these allows symbolization in formal logic?
+  answer: 2
+  options:
+    - A vague sentence in a clear case
+    - Both a vague sentence in a clear case and a disambiguated ambiguous sentence
+    - Only sentences with mathematical terms
+    - Neither vague nor ambiguous sentences ever work
+  hint: When do vague and ambiguous sentences have definite truth values?
+  walkthrough: |
+    1. A vague sentence in a clear case has a definite truth value (e.g., "A 2-meter person is tall" is true).
+    2. A disambiguated ambiguous sentence has a definite truth value.
+    3. Both can be symbolized in formal logic.
+    4. Both a vague sentence in a clear case and a disambiguated ambiguous sentence allow symbolization.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: '"The mountain is high." When can this sentence be symbolized?'
+  answer: 3
+  options:
+    - 'Never; "high" is always vague'
+    - 'Always; "high" has a precise meaning'
+    - Only when the mountain is a clear case (very high or clearly not high)
+    - Only when comparing two mountains
+  hint: Vagueness matters in borderline cases but not in clear cases.
+  walkthrough: |
+    1. "High" is vague, but vagueness only prevents symbolization in borderline cases.
+    2. Mt. Everest is clearly high. A 10-meter hill is clearly not high.
+    3. In clear cases, a definite truth value can be assigned.
+    4. The sentence can be symbolized only when the mountain is a clear case.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'What happens if you try to assign a truth value to "Alex is middle-aged" when Alex is exactly 45?'
+  answer: 4
+  options:
+    - The assignment is clearly true
+    - The assignment is clearly false
+    - The sentence becomes ambiguous
+    - 'The assignment is arbitrary because "middle-aged" is vague in this borderline case'
+  hint: 'Is 45 clearly middle-aged, clearly not, or in the gray zone?'
+  walkthrough: |
+    1. "Middle-aged" is vague: 70 is clearly not middle-aged, 25 is clearly not, but 45 is borderline.
+    2. Some would say 45 is middle-aged; others would say it is still young.
+    3. There is no fact of the matter, so any truth value assignment is arbitrary.
+    4. The assignment is arbitrary because "middle-aged" is vague in this borderline case.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'Which modification would allow "The wall is thick" to be used in formal logic?'
+  answer: 1
+  options:
+    - 'Specify "thick" means over 30 cm, then check if the wall exceeds 30 cm'
+    - 'Add "very" to make it "very thick"'
+    - 'Change "wall" to "barrier"'
+    - 'Remove "the" to make it indefinite'
+  hint: 'How can you create a sharp boundary for "thick"?'
+  walkthrough: |
+    1. "Thick" is vague because there is no sharp boundary.
+    2. Stipulating a precise definition (e.g., over 30 cm) creates a sharp boundary.
+    3. Once defined precisely, you can determine if the wall meets the criterion.
+    4. Specifying "thick" means over 30 cm, then checking if the wall exceeds 30 cm, allows symbolization.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: Why does formal logic require sentences to have definite truth values?
+  answer: 2
+  options:
+    - Because logicians prefer precision
+    - Logical rules like modus ponens depend on premises being definitely true or false
+    - Because vague sentences are ungrammatical
+    - Because ambiguous sentences are too long
+  hint: Consider what happens when you apply an inference rule to a sentence with no truth value.
+  walkthrough: |
+    1. Logical inference rules operate on truth values.
+    2. Modus ponens says: if P is true and P implies Q, then Q is true.
+    3. If P has no definite truth value, the rule cannot be applied.
+    4. Logical rules like modus ponens depend on premises being definitely true or false.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: '"The book is long" when the book has 250 pages. Can this be symbolized?'
+  answer: 3
+  options:
+    - Yes; 250 pages is clearly long
+    - Yes; 250 pages is clearly not long
+    - 'It depends: 250 pages may be a borderline case for "long"'
+    - 'No; "long" can never be symbolized'
+  hint: Is 250 pages a clear case or a borderline case?
+  walkthrough: |
+    1. A 1,000-page book is clearly long. A 20-page pamphlet is clearly not long.
+    2. 250 pages might fall in the borderline zone for many readers.
+    3. Whether symbolization is possible depends on whether 250 pages is a clear case in the given context.
+    4. It depends: 250 pages may be a borderline case for "long."
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: What distinguishes a clear case from a borderline case for a vague predicate?
+  answer: 4
+  options:
+    - Clear cases involve numbers; borderline cases involve descriptions
+    - Clear cases are true; borderline cases are false
+    - Clear cases are ambiguous; borderline cases are vague
+    - 'In clear cases, virtually everyone agrees; in borderline cases, reasonable people disagree'
+  hint: Think about universal agreement versus disagreement.
+  walkthrough: |
+    1. A clear case is one where the predicate definitely applies or definitely does not apply.
+    2. A borderline case is one where there is no consensus.
+    3. Clear cases allow truth value assignment; borderline cases do not.
+    4. In clear cases, virtually everyone agrees; in borderline cases, reasonable people disagree.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'Can "The water is cold" be symbolized if the water is at 2°C?'
+  answer: 1
+  options:
+    - Yes; 2°C is a clear case of cold
+    - 'No; "cold" is always vague'
+    - No; temperature cannot be symbolized
+    - 'Yes, but only if we know the exact Celsius value'
+  hint: Is 2°C a borderline case or a clear case?
+  walkthrough: |
+    1. "Cold" is vague, but 2°C is clearly cold: virtually everyone would agree.
+    2. This is a clear case, not a borderline case.
+    3. In clear cases, a definite truth value can be assigned.
+    4. Yes, 2°C is a clear case of cold, so the sentence can be symbolized.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: What is the key difference between how logic handles ambiguity versus vagueness?
+  answer: 2
+  options:
+    - Ambiguity requires stipulation; vagueness requires disambiguation
+    - Ambiguity is resolved by disambiguation; vagueness in borderline cases has no resolution
+    - Both are resolved the same way
+    - Neither can ever be resolved
+  hint: What can you do about each problem?
+  walkthrough: |
+    1. Ambiguity means multiple meanings; choosing one meaning resolves it.
+    2. Vagueness in borderline cases means no fact of the matter exists.
+    3. You cannot "choose" a truth value for vagueness; there is none to discover.
+    4. Ambiguity is resolved by disambiguation; vagueness in borderline cases has no resolution.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'Why might a logician stipulate that "old" means "over 65 years"?'
+  answer: 3
+  options:
+    - 'Because "old" is ambiguous'
+    - Because stipulation makes sentences false
+    - 'To create a sharp boundary so sentences using "old" can have definite truth values'
+    - Because 65 is a borderline case
+  hint: What does stipulation accomplish for vague predicates?
+  walkthrough: |
+    1. "Old" is vague: there is no natural sharp boundary.
+    2. Stipulating a precise cutoff (65 years) creates an artificial sharp boundary.
+    3. With this boundary, "X is old" becomes clearly true or clearly false.
+    4. Stipulation creates a sharp boundary so sentences using "old" can have definite truth values.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: '"The test was difficult." Can this be symbolized?'
+  answer: 4
+  options:
+    - 'Yes; "difficult" has a precise meaning'
+    - Yes; tests are either difficult or not
+    - No; it is ambiguous
+    - It depends on whether the test is a clear case or borderline case of difficult
+  hint: 'Is "difficult" vague?'
+  walkthrough: |
+    1. "Difficult" is vague: some tests are clearly difficult, some clearly easy, many are borderline.
+    2. If the test is clearly difficult or clearly not, a truth value can be assigned.
+    3. If the test is borderline, no definite truth value exists.
+    4. It depends on whether the test is a clear case or borderline case of difficult.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'What makes "The painting is valuable" problematic for logic when the painting sold for $50,000?'
+  answer: 1
+  options:
+    - '$50,000 may be a borderline case for "valuable," making truth value indeterminate'
+    - '"Valuable" has two distinct meanings'
+    - Paintings cannot have truth values
+    - The sentence is a command
+  hint: 'Is $50,000 clearly valuable, clearly not, or borderline?'
+  walkthrough: |
+    1. "Valuable" is vague: $10 million is clearly valuable, $10 is clearly not.
+    2. $50,000 might be borderline: valuable for some art, not valuable for others.
+    3. If borderline, no definite truth value can be assigned.
+    4. $50,000 may be a borderline case for "valuable," making truth value indeterminate.
+  tags:
+    - why-no-symbolize
+
+- type: mcq
+  question: 'What makes "The soup is hot" problematic for logic when the soup is at 40°C?'
+  answer: 3
+  options:
+    - 'It is ambiguous: "hot" has two meanings'
+    - It is a command
+    - 'It is vague: at 40°C, "hot" is borderline and no definite truth value can be assigned'
+    - It is a paradox
+  hint: Is there a sharp boundary between hot and not hot?
+  walkthrough: |
+    1. "Hot" is vague: 95°C is clearly hot, 5°C is clearly not.
+    2. At 40°C, "hot" falls in the borderline zone.
+    3. No definite truth value can be assigned, violating logic's requirement.
+    4. At 40°C, "hot" is borderline and no definite truth value can be assigned.
+  tags:
+    - diagnostic

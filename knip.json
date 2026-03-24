@@ -1,0 +1,6 @@
+{
+	"$schema": "https://unpkg.com/knip@5/schema.json",
+	"entry": ["kysely.config.ts", "tests/*.test.ts"],
+	"project": ["src/**/*.{ts,svelte}", "tests/**/*.ts"],
+	"ignore": ["src/lib/components/ui/**", "**/*.stories.svelte"]
+}

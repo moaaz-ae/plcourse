@@ -1,0 +1,986 @@
+- type: formula-builder
+  question: 'Translate: "Either the server is down or the network is congested."'
+  answer: '$(S \lor N)$'
+  variableMap:
+    S: The server is down
+    N: The network is congested
+  hint: '"Either...or" signals disjunction.'
+  walkthrough: |
+    1. Left disjunct: "The server is down" = $S$.
+    2. Right disjunct: "The network is congested" = $N$.
+    3. "Either...or" becomes $\lor$.
+    4. The translation is $(S \lor N)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The meeting is on Monday or Tuesday."'
+  answer: '$(M \lor T)$'
+  variableMap:
+    M: The meeting is on Monday
+    T: The meeting is on Tuesday
+  hint: 'Paraphrase: "The meeting is on Monday or the meeting is on Tuesday."'
+  walkthrough: |
+    1. Left disjunct: "The meeting is on Monday" = $M$.
+    2. Right disjunct: "The meeting is on Tuesday" = $T$.
+    3. The translation is $(M \lor T)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The payment was made by credit card or cash."'
+  answer: '$(C \lor K)$'
+  variableMap:
+    C: The payment was made by credit card
+    K: The payment was made by cash
+  hint: '"Or" signals disjunction. Default to inclusive reading.'
+  walkthrough: |
+    1. Left disjunct: "The payment was made by credit card" = $C$.
+    2. Right disjunct: "The payment was made by cash" = $K$.
+    3. The translation is $(C \lor K)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "Either the battery died or the screen broke."'
+  answer: '$(B \lor S)$'
+  variableMap:
+    B: The battery died
+    S: The screen broke
+  hint: '"Either...or" becomes $\lor$.'
+  walkthrough: |
+    1. Left disjunct: "The battery died" = $B$.
+    2. Right disjunct: "The screen broke" = $S$.
+    3. The translation is $(B \lor S)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "We will fly or take the train."'
+  answer: '$(F \lor T)$'
+  variableMap:
+    F: We will fly
+    T: We will take the train
+  hint: '"Or" joins two options.'
+  walkthrough: |
+    1. Left disjunct: "We will fly" = $F$.
+    2. Right disjunct: "We will take the train" = $T$.
+    3. The translation is $(F \lor T)$.
+  tags:
+    - translate-disjunction
+
+- type: mcq
+  question: 'If $P$ is false and $Q$ is true, what is $(P \lor Q)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True only under exclusive or
+  hint: A disjunction is true when at least one disjunct is true.
+  walkthrough: |
+    1. $Q$ is true, so at least one disjunct is true.
+    2. Disjunction requires only one true input.
+    3. $(P \lor Q)$ is true.
+    4. $(P \lor Q)$ is true.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $A$ is false and $B$ is false, what is $(A \lor B)$?'
+  answer: 4
+  options:
+    - 'True'
+    - 'True, because disjunction is always true'
+    - Cannot be determined
+    - 'False'
+  hint: A disjunction is false only when both disjuncts are false.
+  walkthrough: |
+    1. Both $A$ and $B$ are false.
+    2. Neither disjunct is true.
+    3. $(A \lor B)$ is false.
+    4. The answer is false.
+  tags:
+    - compute-disjunction
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q)$'
+  hiddenFormulas:
+    - '$(P \lor Q)$'
+  hint: Disjunction is false only when both inputs are false.
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T.
+    2. Row 2: T $\lor$ F = T.
+    3. Row 3: F $\lor$ T = T.
+    4. Row 4: F $\lor$ F = F.
+    5. The values are: T, T, T, F.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $R$ is true and $S$ is true, what is $(R \lor S)$?'
+  answer: 2
+  options:
+    - False; both being true makes it false
+    - True; at least one disjunct is true
+    - False under inclusive or
+    - Cannot be determined
+  hint: 'Under inclusive or, both being true still makes the disjunction true.'
+  walkthrough: |
+    1. Both $R$ and $S$ are true.
+    2. Inclusive or requires at least one true disjunct.
+    3. The condition is met (both are true).
+    4. $(R \lor S)$ is true; at least one disjunct is true.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: How many rows of the disjunction truth table produce a false result?
+  answer: 3
+  options:
+    - '2'
+    - '3'
+    - '1'
+    - '0'
+  hint: Disjunction is false only when both inputs are false.
+  walkthrough: |
+    1. There are 4 rows total.
+    2. Only the row FF produces false.
+    3. Exactly 1 row produces false.
+    4. The answer is 1.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: '"Applicants must have a degree or five years of experience." Is this likely inclusive or exclusive?'
+  answer: 1
+  options:
+    - Inclusive; having both still qualifies you
+    - Exclusive; you can only have one
+    - Neither; it is not a disjunction
+    - 'Inclusive, but only in formal logic'
+  hint: Would someone with both a degree and five years of experience be disqualified?
+  walkthrough: |
+    1. A person with both a degree and five years of experience would still qualify.
+    2. Having both does not disqualify you.
+    3. This is an inclusive reading: at least one is required, both are fine.
+    4. This is inclusive or: having both still qualifies.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"You may have tea or coffee with breakfast." Is this likely inclusive or exclusive?'
+  answer: 3
+  options:
+    - Inclusive; you can have both
+    - Neither; this is not a disjunction
+    - 'Exclusive; you are expected to choose one, not both'
+    - Inclusive; restaurants always allow both
+  hint: 'In a typical restaurant context, does "or" mean one but not both?'
+  walkthrough: |
+    1. A restaurant offering "tea or coffee" typically means you pick one.
+    2. Taking both would generally not be allowed without extra charge.
+    3. This is an exclusive reading.
+    4. This is exclusive or: you are expected to choose one.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: 'In TFL, $\lor$ is always interpreted as:'
+  answer: 2
+  options:
+    - Exclusive or
+    - Inclusive or
+    - Context-dependent or
+    - Neither; it depends on the sentence letters
+  hint: 'TFL defaults to the inclusive reading for $\lor$.'
+  walkthrough: |
+    1. In TFL, $\lor$ is defined as inclusive or.
+    2. The disjunction is true when at least one disjunct is true, including when both are true.
+    3. Exclusive or requires a separate construction.
+    4. The answer is inclusive or.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: 'Under inclusive or, when $P$ = T and $Q$ = T, $(P \lor Q)$ is:'
+  answer: 4
+  options:
+    - 'False'
+    - 'False under inclusive, true under exclusive'
+    - Cannot be determined
+    - 'True'
+  hint: Inclusive or requires at least one true disjunct. Both being true satisfies this.
+  walkthrough: |
+    1. Inclusive or is true when at least one input is true.
+    2. Both $P$ and $Q$ are true.
+    3. The condition is satisfied.
+    4. The answer is true.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"The flight leaves from Gate A or Gate B." Both gates are announced. Under inclusive or, is the disjunction true?'
+  answer: 1
+  options:
+    - 'Yes; at least one disjunct is true, so inclusive or is true'
+    - No; both being true makes it false
+    - 'Yes, but only under exclusive or'
+    - Cannot be determined
+  hint: Inclusive or cares only that at least one is true.
+  walkthrough: |
+    1. Both disjuncts are true.
+    2. Inclusive or requires at least one true disjunct.
+    3. The condition is met.
+    4. Under inclusive or, the disjunction is true.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is false, what is $(P \lor Q)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True only under exclusive or
+  hint: Disjunction is true when at least one disjunct is true.
+  walkthrough: |
+    1. $P$ is true.
+    2. At least one disjunct is true.
+    3. $(P \lor Q)$ is true.
+    4. $(P \lor Q)$ is true.
+  tags:
+    - diagnostic
+
+# ── translate-disjunction: new questions 6-20 ──
+
+- type: formula-builder
+  question: 'Translate: "The package ships by air or by ground."'
+  answer: '$(A \lor G)$'
+  variableMap:
+    A: The package ships by air
+    G: The package ships by ground
+  hint: '"Or" signals disjunction.'
+  walkthrough: |
+    1. Left disjunct: "The package ships by air" = $A$.
+    2. Right disjunct: "The package ships by ground" = $G$.
+    3. "Or" becomes $\lor$.
+    4. The translation is $(A \lor G)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "Either the fuse blew or the wiring is faulty."'
+  answer: '$(F \lor W)$'
+  variableMap:
+    F: The fuse blew
+    W: The wiring is faulty
+  hint: '"Either...or" signals disjunction.'
+  walkthrough: |
+    1. Left disjunct: "The fuse blew" = $F$.
+    2. Right disjunct: "The wiring is faulty" = $W$.
+    3. The translation is $(F \lor W)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The concert is on Friday or Saturday."'
+  answer: '$(F \lor S)$'
+  variableMap:
+    F: The concert is on Friday
+    S: The concert is on Saturday
+  hint: 'Paraphrase: "The concert is on Friday or the concert is on Saturday."'
+  walkthrough: |
+    1. Left disjunct: "The concert is on Friday" = $F$.
+    2. Right disjunct: "The concert is on Saturday" = $S$.
+    3. The translation is $(F \lor S)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "Either the key is lost or the lock is broken."'
+  answer: '$(K \lor B)$'
+  variableMap:
+    K: The key is lost
+    B: The lock is broken
+  hint: '"Either...or" becomes $\lor$.'
+  walkthrough: |
+    1. Left disjunct: "The key is lost" = $K$.
+    2. Right disjunct: "The lock is broken" = $B$.
+    3. The translation is $(K \lor B)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "You can pay online or at the counter."'
+  answer: '$(O \lor C)$'
+  variableMap:
+    O: You pay online
+    C: You pay at the counter
+  hint: '"Or" joins two options.'
+  walkthrough: |
+    1. Left disjunct: "You pay online" = $O$.
+    2. Right disjunct: "You pay at the counter" = $C$.
+    3. The translation is $(O \lor C)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The alarm was triggered by smoke or heat."'
+  answer: '$(S \lor H)$'
+  variableMap:
+    S: The alarm was triggered by smoke
+    H: The alarm was triggered by heat
+  hint: '"Or" signals disjunction. Use inclusive reading.'
+  walkthrough: |
+    1. Left disjunct: "The alarm was triggered by smoke" = $S$.
+    2. Right disjunct: "The alarm was triggered by heat" = $H$.
+    3. The translation is $(S \lor H)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "Either the printer is jammed or it is out of ink."'
+  answer: '$(J \lor I)$'
+  variableMap:
+    J: The printer is jammed
+    I: The printer is out of ink
+  hint: '"Either...or" becomes $\lor$.'
+  walkthrough: |
+    1. Left disjunct: "The printer is jammed" = $J$.
+    2. Right disjunct: "The printer is out of ink" = $I$.
+    3. The translation is $(J \lor I)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The road is closed or under construction."'
+  answer: '$(C \lor U)$'
+  variableMap:
+    C: The road is closed
+    U: The road is under construction
+  hint: '"Or" signals disjunction between two states.'
+  walkthrough: |
+    1. Left disjunct: "The road is closed" = $C$.
+    2. Right disjunct: "The road is under construction" = $U$.
+    3. The translation is $(C \lor U)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "Either the suspect fled or was arrested."'
+  answer: '$(F \lor A)$'
+  variableMap:
+    F: The suspect fled
+    A: The suspect was arrested
+  hint: '"Either...or" signals disjunction.'
+  walkthrough: |
+    1. Left disjunct: "The suspect fled" = $F$.
+    2. Right disjunct: "The suspect was arrested" = $A$.
+    3. The translation is $(F \lor A)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The museum is free on Tuesdays or Thursdays."'
+  answer: '$(T \lor H)$'
+  variableMap:
+    T: The museum is free on Tuesdays
+    H: The museum is free on Thursdays
+  hint: 'Paraphrase with two full claims joined by "or."'
+  walkthrough: |
+    1. Left disjunct: "The museum is free on Tuesdays" = $T$.
+    2. Right disjunct: "The museum is free on Thursdays" = $H$.
+    3. The translation is $(T \lor H)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "Either the file is corrupted or the download failed."'
+  answer: '$(C \lor D)$'
+  variableMap:
+    C: The file is corrupted
+    D: The download failed
+  hint: '"Either...or" becomes $\lor$.'
+  walkthrough: |
+    1. Left disjunct: "The file is corrupted" = $C$.
+    2. Right disjunct: "The download failed" = $D$.
+    3. The translation is $(C \lor D)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "You can take the stairs or the elevator."'
+  answer: '$(S \lor E)$'
+  variableMap:
+    S: You take the stairs
+    E: You take the elevator
+  hint: '"Or" joins two alternatives.'
+  walkthrough: |
+    1. Left disjunct: "You take the stairs" = $S$.
+    2. Right disjunct: "You take the elevator" = $E$.
+    3. The translation is $(S \lor E)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The delay was caused by weather or mechanical issues."'
+  answer: '$(W \lor M)$'
+  variableMap:
+    W: The delay was caused by weather
+    M: The delay was caused by mechanical issues
+  hint: '"Or" signals disjunction.'
+  walkthrough: |
+    1. Left disjunct: "The delay was caused by weather" = $W$.
+    2. Right disjunct: "The delay was caused by mechanical issues" = $M$.
+    3. The translation is $(W \lor M)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "Either the witness lied or was mistaken."'
+  answer: '$(L \lor M)$'
+  variableMap:
+    L: The witness lied
+    M: The witness was mistaken
+  hint: '"Either...or" becomes $\lor$.'
+  walkthrough: |
+    1. Left disjunct: "The witness lied" = $L$.
+    2. Right disjunct: "The witness was mistaken" = $M$.
+    3. The translation is $(L \lor M)$.
+  tags:
+    - translate-disjunction
+
+- type: formula-builder
+  question: 'Translate: "The meeting is virtual or in person."'
+  answer: '$(V \lor P)$'
+  variableMap:
+    V: The meeting is virtual
+    P: The meeting is in person
+  hint: '"Or" signals disjunction.'
+  walkthrough: |
+    1. Left disjunct: "The meeting is virtual" = $V$.
+    2. Right disjunct: "The meeting is in person" = $P$.
+    3. The translation is $(V \lor P)$.
+  tags:
+    - translate-disjunction
+
+# ── compute-disjunction: new questions 6-20 ──
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is true, what is $(P \lor Q)$?'
+  answer: 2
+  options:
+    - False; both being true makes it false
+    - True; at least one disjunct is true
+    - Cannot be determined
+    - True only under exclusive or
+  hint: Inclusive or requires at least one true disjunct. Both being true satisfies this.
+  walkthrough: |
+    1. Both $P$ and $Q$ are true.
+    2. Disjunction requires at least one true input.
+    3. The condition is satisfied (both are true).
+    4. $(P \lor Q)$ is true; at least one disjunct is true.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $A$ is true and $B$ is false, what is $(A \lor B)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - False; $B$ is false
+  hint: Disjunction only needs one true disjunct.
+  walkthrough: |
+    1. $A$ is true.
+    2. At least one disjunct is true.
+    3. $(A \lor B)$ is true.
+    4. The answer is true.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'Which row of the truth table makes $(P \lor Q)$ false?'
+  answer: 3
+  options:
+    - 'P = T, Q = F'
+    - 'P = T, Q = T'
+    - 'P = F, Q = F'
+    - 'P = F, Q = T'
+  hint: Disjunction is false only when both inputs are false.
+  walkthrough: |
+    1. $(P \lor Q)$ is false only when both disjuncts are false.
+    2. The only row producing false is P = F, Q = F.
+    3. All other rows have at least one true input.
+    4. The correct row is P = F, Q = F.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $X$ is true, what is $(X \lor Y)$ regardless of $Y$?'
+  answer: 4
+  options:
+    - Always false
+    - True only when $Y$ is also true
+    - Cannot be determined
+    - Always true
+  hint: One true disjunct is enough.
+  walkthrough: |
+    1. $X$ is true.
+    2. Disjunction requires at least one true disjunct.
+    3. Regardless of $Y$, the condition is met.
+    4. The answer is always true.
+  tags:
+    - compute-disjunction
+
+- type: truth-table
+  question: 'Complete the truth table for $(Q \lor P)$.'
+  formulas:
+    - $Q$
+    - $P$
+    - '$(Q \lor P)$'
+  hiddenFormulas:
+    - '$(Q \lor P)$'
+  hint: 'Disjunction is commutative: order does not matter. False only when both are false.'
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T.
+    2. Row 2: T $\lor$ F = T.
+    3. Row 3: F $\lor$ T = T.
+    4. Row 4: F $\lor$ F = F.
+    5. The values are: T, T, T, F.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: How many rows of the disjunction truth table produce a true result?
+  answer: 2
+  options:
+    - '1'
+    - '3'
+    - '2'
+    - '4'
+  hint: Disjunction is false only when both are false. How many of the 4 rows avoid that?
+  walkthrough: |
+    1. There are 4 rows: TT, TF, FT, FF.
+    2. Only FF produces false.
+    3. The other 3 rows produce true.
+    4. The answer is 3.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $(A \lor B)$ is false, what can you conclude about $A$ and $B$?'
+  answer: 3
+  options:
+    - At least one is true
+    - $A$ is false but $B$ could be true
+    - Both $A$ and $B$ must be false
+    - Nothing can be concluded
+  hint: A false disjunction means neither disjunct is true.
+  walkthrough: |
+    1. $(A \lor B)$ is false.
+    2. Disjunction is false only when both disjuncts are false.
+    3. So both $A$ and $B$ must be false.
+    4. Both $A$ and $B$ must be false.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $(P \lor Q)$ is true and $P$ is false, what is $Q$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Either true or false
+  hint: 'If the disjunction is true but one disjunct is false, the other must be true.'
+  walkthrough: |
+    1. $(P \lor Q)$ is true and $P$ is false.
+    2. For the disjunction to be true, at least one disjunct must be true.
+    3. Since $P$ is false, $Q$ must be the true one.
+    4. $Q$ must be true.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'Is $(A \lor B)$ logically equivalent to $(B \lor A)$?'
+  answer: 4
+  options:
+    - No; the order of disjuncts matters
+    - Only when both are true
+    - Only when both are false
+    - Yes; they have the same truth value on every row
+  hint: Disjunction is commutative.
+  walkthrough: |
+    1. $(A \lor B)$: TT=T, TF=T, FT=T, FF=F.
+    2. $(B \lor A)$: TT=T, TF=T, FT=T, FF=F.
+    3. Every row matches.
+    4. Yes, they have the same truth value on every row.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'What is the minimum number of true inputs needed for $(P \lor Q)$ to be true?'
+  answer: 2
+  options:
+    - '2'
+    - '1'
+    - '0'
+    - It depends on which input
+  hint: Disjunction needs at least one true disjunct.
+  walkthrough: |
+    1. $(P \lor Q)$ is true when at least one input is true.
+    2. One true input is enough.
+    3. Zero true inputs gives false.
+    4. The answer is 1.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $P$ is false, is $(P \lor Q)$ guaranteed to be false?'
+  answer: 3
+  options:
+    - Yes; one false disjunct makes the whole disjunction false
+    - Yes; $P$ being false is enough
+    - 'No; $Q$ could still be true, making the disjunction true'
+    - Cannot be determined
+  hint: 'Unlike conjunction, one false disjunct does not doom the disjunction.'
+  walkthrough: |
+    1. $P$ is false, but $Q$ might be true.
+    2. If $Q$ is true, $(P \lor Q)$ is true.
+    3. One false disjunct does not make the disjunction false.
+    4. No; $Q$ could still be true, making the disjunction true.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $A$ is false and $B$ is false, is $(A \lor B)$ true?'
+  answer: 2
+  options:
+    - Yes
+    - 'No; both disjuncts are false, so the disjunction is false'
+    - Yes; disjunction is always true
+    - Cannot be determined
+  hint: Disjunction is false when both inputs are false.
+  walkthrough: |
+    1. $A$ is false and $B$ is false.
+    2. Disjunction requires at least one true input.
+    3. Neither input is true.
+    4. No; both disjuncts are false, so the disjunction is false.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'Suppose $(P \lor Q)$ is true. Must both $P$ and $Q$ be true?'
+  answer: 4
+  options:
+    - Yes; both must be true
+    - Yes; disjunction requires both
+    - No; both must be false
+    - 'No; at least one is true, but not necessarily both'
+  hint: 'Disjunction requires at least one, not both.'
+  walkthrough: |
+    1. $(P \lor Q)$ is true means at least one disjunct is true.
+    2. It could be just $P$, just $Q$, or both.
+    3. Both being true is not required.
+    4. No; at least one is true, but not necessarily both.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'Compare conjunction and disjunction: $(P \land Q)$ is true in how many rows vs. $(P \lor Q)$?'
+  answer: 3
+  options:
+    - Both are true in 2 rows
+    - 'Conjunction: 3 rows; disjunction: 1 row'
+    - 'Conjunction: 1 row; disjunction: 3 rows'
+    - Both are true in 4 rows
+  hint: Conjunction needs both true (1 row). Disjunction needs at least one true (3 rows).
+  walkthrough: |
+    1. $(P \land Q)$: true only when both are true = 1 row (TT).
+    2. $(P \lor Q)$: true when at least one is true = 3 rows (TT, TF, FT).
+    3. Conjunction is true in 1 row; disjunction in 3 rows.
+    4. Conjunction: 1 row; disjunction: 3 rows.
+  tags:
+    - compute-disjunction
+
+- type: mcq
+  question: 'If $M$ is true, what is $(M \lor M)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Neither true nor false
+  hint: At least one disjunct ($M$) is true.
+  walkthrough: |
+    1. $M$ is true.
+    2. $(M \lor M)$: at least one disjunct is true (both are $M$).
+    3. The disjunction is true.
+    4. The answer is true.
+  tags:
+    - compute-disjunction
+
+# ── exclusive-vs-inclusive: new questions 6-20 ──
+
+- type: mcq
+  question: '"Students may write an essay or take a test to fulfill the requirement." Is this likely inclusive or exclusive?'
+  answer: 3
+  options:
+    - Exclusive; you can only do one
+    - Neither; this is not a disjunction
+    - Inclusive; doing both still fulfills the requirement
+    - Exclusive; tests and essays are incompatible
+  hint: Would doing both disqualify a student?
+  walkthrough: |
+    1. A student who does both an essay and a test still fulfills the requirement.
+    2. Doing both does not disqualify anyone.
+    3. This is an inclusive reading.
+    4. Inclusive; doing both still fulfills the requirement.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"The prize goes to the winner: a trip to Paris or a cash award." Is this likely inclusive or exclusive?'
+  answer: 2
+  options:
+    - Inclusive; you get both
+    - 'Exclusive; you pick one prize, not both'
+    - Neither; this is not a disjunction
+    - Inclusive; prizes are always combined
+  hint: Prize contexts typically mean you choose one.
+  walkthrough: |
+    1. A prize offer typically means one or the other.
+    2. The winner picks one, not both.
+    3. This is an exclusive reading.
+    4. Exclusive; you pick one prize, not both.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"Employees must have a degree or relevant work experience." Under inclusive or, could someone with both qualify?'
+  answer: 1
+  options:
+    - Yes; inclusive or is true when both disjuncts are true
+    - No; having both would disqualify them
+    - No; inclusive or requires exactly one
+    - Cannot be determined
+  hint: 'Inclusive or means "at least one." Both being true counts.'
+  walkthrough: |
+    1. Inclusive or requires at least one true disjunct.
+    2. Having both a degree and experience means both disjuncts are true.
+    3. At least one is true, so the disjunction holds.
+    4. Yes; inclusive or is true when both disjuncts are true.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: 'Under exclusive or, when both $P$ and $Q$ are true, is $(P \lor Q)$ true?'
+  answer: 4
+  options:
+    - Yes; at least one is true
+    - Yes; exclusive or is the same as inclusive
+    - Cannot be determined
+    - No; exclusive or requires exactly one to be true
+  hint: Exclusive or is false when both disjuncts are true.
+  walkthrough: |
+    1. Exclusive or means "one or the other, but not both."
+    2. Both $P$ and $Q$ are true.
+    3. Since both are true, exclusive or returns false.
+    4. No; exclusive or requires exactly one to be true.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: The key difference between inclusive and exclusive or shows up in which row of the truth table?
+  answer: 2
+  options:
+    - When both are false
+    - When both are true
+    - When exactly one is true
+    - They differ in every row
+  hint: Inclusive and exclusive or agree on three rows and differ on one.
+  walkthrough: |
+    1. Both inclusive and exclusive or are false when both inputs are false.
+    2. Both are true when exactly one input is true.
+    3. They differ when both are true: inclusive says T, exclusive says F.
+    4. The difference shows up when both are true.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"You may park in lot A or lot B." Is this likely inclusive or exclusive?'
+  answer: 3
+  options:
+    - Inclusive; you can park in both simultaneously
+    - Neither; parking is not a disjunction
+    - 'Exclusive; a car parks in one lot, not two at once'
+    - Inclusive; TFL always uses inclusive or
+  hint: Can a single car park in two lots at the same time?
+  walkthrough: |
+    1. A single car cannot physically be in two lots at once.
+    2. You choose one lot to park in.
+    3. This is an exclusive reading.
+    4. Exclusive; a car parks in one lot, not two at once.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"To apply, you need a recommendation letter or a portfolio." Is this likely inclusive or exclusive?'
+  answer: 1
+  options:
+    - Inclusive; submitting both is acceptable
+    - Exclusive; you can only submit one
+    - Neither
+    - Inclusive only in formal logic
+  hint: Would submitting both disqualify your application?
+  walkthrough: |
+    1. Submitting both a recommendation letter and a portfolio would not disqualify an applicant.
+    2. Having both is fine; at least one is required.
+    3. This is an inclusive reading.
+    4. Inclusive; submitting both is acceptable.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"The shirt comes in red or blue." You order one shirt. Is this likely inclusive or exclusive?'
+  answer: 4
+  options:
+    - Inclusive; you can get both colors
+    - Neither
+    - Inclusive; TFL always uses inclusive or
+    - Exclusive; you choose one color for your shirt
+  hint: A single shirt typically comes in one color.
+  walkthrough: |
+    1. When ordering one shirt, you pick a single color.
+    2. The shirt is red or blue, not both at once.
+    3. This is an exclusive reading.
+    4. Exclusive; you choose one color for your shirt.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: 'In TFL, how would you express exclusive or using standard connectives?'
+  answer: 3
+  options:
+    - 'With $\lor$ alone'
+    - 'With $\land$ alone'
+    - With a combination of connectives (covered in a later lesson)
+    - It cannot be expressed in TFL
+  hint: 'TFL can express exclusive or, but not with $\lor$ alone.'
+  walkthrough: |
+    1. $\lor$ in TFL is always inclusive.
+    2. Exclusive or requires combining $\lor$ with other connectives.
+    3. This combination is covered in a later lesson.
+    4. It requires a combination of connectives (covered in a later lesson).
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"The train stops at Springfield or Shelbyville." Both stops are on the route. Under inclusive or, is the disjunction true?'
+  answer: 2
+  options:
+    - No; both being true makes it false
+    - Yes; at least one disjunct is true
+    - No; trains can only stop at one station
+    - Cannot be determined
+  hint: 'Under inclusive or, both being true satisfies "at least one."'
+  walkthrough: |
+    1. Both disjuncts are true.
+    2. Inclusive or requires at least one true disjunct.
+    3. The condition is met.
+    4. Yes; at least one disjunct is true.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"You are either alive or dead." Is this likely inclusive or exclusive?'
+  answer: 1
+  options:
+    - Exclusive; you cannot be both alive and dead
+    - Inclusive; both could be true
+    - Neither
+    - Inclusive; TFL always uses inclusive or
+  hint: Can someone be both alive and dead at the same time?
+  walkthrough: |
+    1. Being alive and dead at the same time is impossible.
+    2. Exactly one must be true.
+    3. This is an exclusive reading.
+    4. Exclusive; you cannot be both alive and dead.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"The course counts toward a math or science requirement." A student is in both programs. Under inclusive or?'
+  answer: 3
+  options:
+    - It counts for neither
+    - It counts for only one
+    - It counts for at least one; possibly both
+    - Cannot be determined
+  hint: 'Inclusive or means "at least one." Counting for both is compatible.'
+  walkthrough: |
+    1. Inclusive or means the course counts toward at least one requirement.
+    2. Both being satisfied is consistent with inclusive or.
+    3. The course counts for at least one; possibly both.
+    4. It counts for at least one; possibly both.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: 'Which reading of "or" does TFL $\lor$ always use?'
+  answer: 2
+  options:
+    - Exclusive
+    - Inclusive
+    - Whichever fits the English sentence
+    - 'Neither; $\lor$ is ambiguous'
+  hint: 'TFL uses a fixed definition for $\lor$.'
+  walkthrough: |
+    1. In TFL, $\lor$ is defined with a fixed truth table.
+    2. The truth table says the disjunction is true when at least one disjunct is true, including when both are true.
+    3. This is the inclusive reading.
+    4. The answer is inclusive.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"I will have cake or pie for dessert." Is this likely inclusive or exclusive?'
+  answer: 4
+  options:
+    - Inclusive; you can have both
+    - Neither
+    - Inclusive; TFL dictates inclusive
+    - Exclusive; typically you choose one dessert
+  hint: 'In a typical dining context, "or" suggests picking one.'
+  walkthrough: |
+    1. In a dessert context, you typically pick one option.
+    2. Having both is not the expected reading.
+    3. This is an exclusive reading in everyday English.
+    4. Exclusive; typically you choose one dessert.
+  tags:
+    - exclusive-vs-inclusive
+
+- type: mcq
+  question: '"Warning: contents may be hot or under pressure." Is this likely inclusive or exclusive?'
+  answer: 1
+  options:
+    - Inclusive; the contents could be both hot and under pressure
+    - Exclusive; it can be only one
+    - Neither
+    - Exclusive; safety warnings use exclusive or
+  hint: Could the contents be both hot and under pressure at the same time?
+  walkthrough: |
+    1. Contents can be both hot and under pressure simultaneously.
+    2. The warning covers any case where at least one condition holds.
+    3. This is an inclusive reading.
+    4. Inclusive; the contents could be both hot and under pressure.
+  tags:
+    - exclusive-vs-inclusive

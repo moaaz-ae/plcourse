@@ -1,0 +1,1034 @@
+- type: mcq
+  question: 'Which sentence letter assignment is appropriate for the sentence "The train is delayed"?'
+  answer: 3
+  options:
+    - '$\neg T$'
+    - '$T \land D$'
+    - '$D$: The train is delayed'
+    - '$D$: Delayed'
+  hint: 'A sentence letter represents a complete simple statement, not a single word.'
+  walkthrough: |
+    1. Sentence letters stand for complete declarative sentences.
+    2. $D$ should map to "The train is delayed," not just the word "delayed."
+    3. $\neg T$ and $T \land D$ use connectives, but we need a single atomic letter.
+    4. The correct assignment is "$D$: The train is delayed."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "If the alarm sounds, the building is evacuated"?'
+  answer: 2
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  hint: 'Count the distinct simple claims joined by "if...then."'
+  walkthrough: |
+    1. "The alarm sounds" is one simple claim.
+    2. "The building is evacuated" is another simple claim.
+    3. "If...then" is a connective, not a claim.
+    4. Two sentence letters are needed.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'Which letter assignment is incorrect for "Sarah studied and passed the exam"?'
+  answer: 4
+  options:
+    - '$S$: Sarah studied. $P$: Sarah passed the exam.'
+    - '$A$: Sarah studied. $B$: Sarah passed the exam.'
+    - '$S$: Sarah studied. $E$: Sarah passed the exam.'
+    - '$S$: Sarah studied and passed the exam.'
+  hint: Each distinct atomic claim needs its own letter.
+  walkthrough: |
+    1. "Sarah studied" and "Sarah passed the exam" are two distinct claims.
+    2. Each needs its own sentence letter.
+    3. Assigning one letter to the entire compound sentence loses the "and" structure.
+    4. The incorrect assignment is "$S$: Sarah studied and passed the exam."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'For the sentence "The museum is open on weekdays," which is the correct assignment?'
+  answer: 1
+  options:
+    - '$M$: The museum is open on weekdays.'
+    - '$M$: The museum. $W$: Weekdays.'
+    - '$M$: Open. $W$: Weekdays.'
+    - '$M \land W$'
+  hint: 'This is a single simple claim, not two claims joined by a connective.'
+  walkthrough: |
+    1. "The museum is open on weekdays" is one atomic claim.
+    2. It is not composed of two simpler claims joined by a logical connective.
+    3. It gets one sentence letter mapping to the complete statement.
+    4. The correct assignment is "$M$: The museum is open on weekdays."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: Two different arguments use the letter $P$. Does $P$ mean the same thing in both?
+  answer: 3
+  options:
+    - Yes; $P$ always means the same thing
+    - No; $P$ can never be reused
+    - Not necessarily; each argument has its own symbolization key
+    - 'Yes, as long as both arguments are valid'
+  hint: A symbolization key is local to the current argument.
+  walkthrough: |
+    1. A symbolization key maps letters to English sentences for a specific argument.
+    2. Different arguments can have different keys.
+    3. $P$ could mean "it rains" in one key and "the store is open" in another.
+    4. Each argument has its own symbolization key, so $P$ need not mean the same thing.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'Which assignment is appropriate for the sentence "The coffee is hot"?'
+  answer: 2
+  options:
+    - '$C$: Hot'
+    - '$C$: The coffee is hot.'
+    - '$C \land H$'
+    - '$C$: Coffee'
+  hint: 'A sentence letter maps to a full declarative sentence, not a word or fragment.'
+  walkthrough: |
+    1. "Hot" and "Coffee" are fragments, not complete sentences.
+    2. $C \land H$ uses a connective, so it is not a single sentence letter.
+    3. A proper assignment maps a single letter to the complete sentence.
+    4. The correct assignment is "$C$: The coffee is hot."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "The sun is shining"?'
+  answer: 1
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '0'
+  hint: Count the distinct simple claims in the sentence.
+  walkthrough: |
+    1. "The sun is shining" is a single simple claim.
+    2. There are no connectives joining multiple claims.
+    3. One sentence letter is needed.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'Which assignment is appropriate for "The cat is sleeping on the mat"?'
+  answer: 4
+  options:
+    - '$C$: Cat. $M$: Mat.'
+    - '$C$: The cat. $S$: Sleeping. $M$: The mat.'
+    - '$C \land M$'
+    - '$S$: The cat is sleeping on the mat.'
+  hint: 'This is one complete claim, not multiple claims joined by connectives.'
+  walkthrough: |
+    1. "The cat is sleeping on the mat" contains no logical connectives.
+    2. It is a single atomic claim and gets one sentence letter.
+    3. Splitting it into "cat" and "mat" breaks a single claim into fragments.
+    4. The correct assignment is "$S$: The cat is sleeping on the mat."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "Either the bus is late or the schedule was wrong, and the passengers are upset"?'
+  answer: 2
+  options:
+    - '2'
+    - '3'
+    - '4'
+    - '1'
+  hint: 'Identify the connectives first, then count the remaining simple claims.'
+  walkthrough: |
+    1. "Either...or" and "and" are connectives.
+    2. The simple claims are: "the bus is late," "the schedule was wrong," and "the passengers are upset."
+    3. Three sentence letters are needed, one for each distinct claim.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'Which is the correct assignment for "The experiment failed"?'
+  answer: 3
+  options:
+    - '$\neg E$'
+    - '$E$: Failed'
+    - '$E$: The experiment failed.'
+    - '$E$: Experiment'
+  hint: A sentence letter maps to a complete declarative sentence without connectives.
+  walkthrough: |
+    1. "Failed" and "Experiment" are fragments.
+    2. $\neg E$ uses the negation connective.
+    3. The sentence letter should map to the full statement.
+    4. The correct assignment is "$E$: The experiment failed."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "The project is funded and the team is assembled"?'
+  answer: 1
+  options:
+    - '2'
+    - '1'
+    - '3'
+    - '4'
+  hint: '"And" is a connective. Count the simple claims it joins.'
+  walkthrough: |
+    1. "And" is a connective joining two claims.
+    2. "The project is funded" is one claim.
+    3. "The team is assembled" is another claim.
+    4. Two sentence letters are needed.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'A student writes "$P$: It is raining or snowing." Is this a correct sentence letter assignment?'
+  answer: 2
+  options:
+    - Yes; it maps a letter to an English sentence
+    - 'No; "or" is a connective, so this is a compound sentence needing two letters'
+    - Yes; any English phrase can be assigned to a letter
+    - No; the letter $P$ cannot represent weather
+  hint: 'A sentence letter represents an atomic sentence, which has no logical connectives.'
+  walkthrough: |
+    1. "It is raining or snowing" contains the connective "or."
+    2. This is a compound sentence, not an atomic one.
+    3. Each atomic part needs its own letter: one for "it is raining" and one for "it is snowing."
+    4. The assignment is incorrect because it hides the "or" structure.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "The restaurant is open"?'
+  answer: 3
+  options:
+    - '0'
+    - '2'
+    - '1'
+    - '3'
+  hint: Is this a single simple claim or multiple claims?
+  walkthrough: |
+    1. "The restaurant is open" is a single simple claim.
+    2. There are no connectives.
+    3. One sentence letter is needed.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'Which assignment is correct for the sentence "The river is frozen"?'
+  answer: 4
+  options:
+    - '$R$: River'
+    - '$R$: Frozen'
+    - '$R \land F$'
+    - '$R$: The river is frozen.'
+  hint: 'A sentence letter maps to a complete, simple declarative sentence.'
+  walkthrough: |
+    1. "River" and "Frozen" are not complete sentences.
+    2. $R \land F$ uses a connective.
+    3. A sentence letter must map to the full declarative sentence.
+    4. The correct assignment is "$R$: The river is frozen."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "If the water boils, steam rises, and the lid rattles"?'
+  answer: 2
+  options:
+    - '2'
+    - '3'
+    - '1'
+    - '4'
+  hint: 'Identify "if...then" and "and" as connectives. Count the simple claims.'
+  walkthrough: |
+    1. "If...then" and "and" are connectives.
+    2. The simple claims are: "the water boils," "steam rises," and "the lid rattles."
+    3. Three sentence letters are needed.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'A student writes "$X$: It is hot. $X$: The pool is crowded." Is this correct?'
+  answer: 1
+  options:
+    - No; each letter can only represent one sentence in a given key
+    - Yes; $X$ can represent both
+    - Yes; letters can be reused within a key
+    - No; $X$ is not a valid sentence letter
+  hint: Each sentence letter in a symbolization key maps to exactly one English sentence.
+  walkthrough: |
+    1. A symbolization key assigns each letter to exactly one sentence.
+    2. Using $X$ for two different sentences creates ambiguity.
+    3. Each distinct claim needs its own unique letter.
+    4. The assignment is incorrect because $X$ is used for two different sentences.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "It is not the case that the door is open"?'
+  answer: 3
+  options:
+    - '2'
+    - '0'
+    - '1'
+    - '3'
+  hint: '"Not" is a connective. The atomic sentence is the base claim being negated.'
+  walkthrough: |
+    1. "It is not the case that" is the negation connective.
+    2. The base claim is "the door is open."
+    3. One sentence letter is needed for this single atomic claim.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "If the battery is charged and the screen is not cracked, the phone works"?'
+  answer: 2
+  options:
+    - '$B$: Battery. $S$: Screen. $P$: Phone.'
+    - '$B$: The battery is charged. $S$: The screen is cracked. $P$: The phone works.'
+    - '$B$: The battery is charged and the screen is not cracked. $P$: The phone works.'
+    - '$B$: If the battery is charged. $P$: The phone works.'
+  hint: 'Each letter maps to a complete simple declarative sentence. Connectives like "not" are not part of the atomic sentence.'
+  walkthrough: |
+    1. The atomic claims are: "the battery is charged," "the screen is cracked," and "the phone works."
+    2. "Not" is a connective that modifies "the screen is cracked."
+    3. Each atomic claim gets its own letter with a full sentence description.
+    4. The correct key assigns three letters to three complete sentences.
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Create a symbolization key for: "Either the flight is canceled or we arrive late."'
+  answer: 4
+  options:
+    - '$F$: Flight. $A$: Arrive.'
+    - '$F$: Either the flight is canceled or we arrive late.'
+    - '$F$: The flight. $L$: Late.'
+    - '$F$: The flight is canceled. $L$: We arrive late.'
+  hint: Each letter maps to a complete atomic sentence.
+  walkthrough: |
+    1. The two atomic claims are "the flight is canceled" and "we arrive late."
+    2. "Either...or" is a connective; it should not be part of any atomic sentence.
+    3. Each claim gets its own letter with a full sentence.
+    4. The correct key is "$F$: The flight is canceled. $L$: We arrive late."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'A passage says: "The road is wet. If the road is wet, traffic slows." How many entries should the symbolization key have?'
+  answer: 1
+  options:
+    - '2: one for "the road is wet" and one for "traffic slows"'
+    - '3: one for each sentence in the passage'
+    - '1: just "the road is wet"'
+    - '4: one for each word'
+  hint: 'Count distinct atomic claims. "The road is wet" appears twice but is the same claim.'
+  walkthrough: |
+    1. "The road is wet" appears in both sentences but is one atomic claim.
+    2. "Traffic slows" is the other atomic claim.
+    3. "If...then" is a connective, not a claim.
+    4. Two distinct atomic claims require two entries in the key.
+  tags:
+    - create-key
+
+- type: mcq
+  question: Which is a proper symbolization key entry?
+  answer: 3
+  options:
+    - '$P$: running'
+    - '$P$: is true'
+    - '$P$: The printer is working.'
+    - '$P \land Q$: The printer is working and the paper is loaded.'
+  hint: Each key entry maps a single letter to a complete declarative sentence.
+  walkthrough: |
+    1. "Running" is a fragment, not a sentence.
+    2. "Is true" is not a claim about the world.
+    3. "The printer is working" is a complete declarative sentence mapped to a single letter.
+    4. $P \land Q$ is a compound formula, not a single letter.
+    5. The proper entry is "$P$: The printer is working."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'A symbolization key has $R$: It rains and $W$: The ground is wet. What does $R$ represent?'
+  answer: 2
+  options:
+    - The letter R in the alphabet
+    - 'The sentence "It rains," sharing its truth value'
+    - 'The word "rains"'
+    - Whether it is currently raining right now
+  hint: Sentence letters are assigned the same truth value as the English sentence they represent.
+  walkthrough: |
+    1. The key says $R$ maps to "It rains."
+    2. $R$ takes the same truth value as the English sentence.
+    3. It represents the complete statement, not a word or letter.
+    4. $R$ represents the sentence "It rains," sharing its truth value.
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "The dog barked and the cat hid"?'
+  answer: 1
+  options:
+    - '$D$: The dog barked. $C$: The cat hid.'
+    - '$D$: The dog barked and the cat hid.'
+    - '$D$: Dog. $C$: Cat.'
+    - '$D$: Barked. $C$: Hid.'
+  hint: Each atomic claim gets its own letter with a complete sentence.
+  walkthrough: |
+    1. "And" is a connective joining two atomic claims.
+    2. "The dog barked" and "the cat hid" are distinct atomic claims.
+    3. Each needs its own letter mapped to a full sentence.
+    4. The correct key is "$D$: The dog barked. $C$: The cat hid."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "If the light is green, cars proceed"?'
+  answer: 3
+  options:
+    - '$L$: If the light is green. $C$: Cars proceed.'
+    - '$L$: Green. $C$: Proceed.'
+    - '$L$: The light is green. $C$: Cars proceed.'
+    - '$L$: If the light is green, cars proceed.'
+  hint: 'Connectives like "if" are not part of the atomic sentence.'
+  walkthrough: |
+    1. "If...then" is a connective, not part of any atomic sentence.
+    2. The atomic claims are "the light is green" and "cars proceed."
+    3. "If the light is green" includes the connective "if," which should be excluded.
+    4. The correct key is "$L$: The light is green. $C$: Cars proceed."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'A symbolization key for an argument has $P$: The park is open. In a different argument, can $P$ mean something else?'
+  answer: 4
+  options:
+    - No; $P$ always means the same thing everywhere
+    - 'No; once assigned, a letter is permanently fixed'
+    - Only if the arguments are about the same topic
+    - Yes; each argument has its own symbolization key
+  hint: Symbolization keys are local to a specific argument.
+  walkthrough: |
+    1. A symbolization key applies to one specific argument.
+    2. Different arguments can define their own keys independently.
+    3. $P$ could mean "the park is open" in one argument and "the pizza is ready" in another.
+    4. Each argument has its own symbolization key, so yes.
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "The server crashed but no data was lost"?'
+  answer: 2
+  options:
+    - '$S$: The server crashed but no data was lost.'
+    - '$S$: The server crashed. $D$: Data was lost.'
+    - '$S$: Server. $D$: Data.'
+    - '$S$: The server crashed. $N$: No data was lost.'
+  hint: '"But" is a connective (like "and"). "No" contains negation. The atomic sentence is the base claim before negation.'
+  walkthrough: |
+    1. "But" functions as the connective "and."
+    2. "No data was lost" contains negation; the base atomic claim is "data was lost."
+    3. The two atomic claims are "the server crashed" and "data was lost."
+    4. The correct key is "$S$: The server crashed. $D$: Data was lost."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'How many entries should the symbolization key have for: "The lights are on, the music is playing, and everyone is dancing"?'
+  answer: 3
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  hint: '"And" joins distinct claims. Count how many simple claims are connected.'
+  walkthrough: |
+    1. "And" is the connective joining the claims.
+    2. "The lights are on" is one claim.
+    3. "The music is playing" is another.
+    4. "Everyone is dancing" is a third.
+    5. Three entries are needed, one per atomic claim.
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "It is not the case that the window is open"?'
+  answer: 4
+  options:
+    - '$N$: It is not the case that the window is open.'
+    - '$\neg W$: The window is open.'
+    - '$W$: It is not the case that the window is open.'
+    - '$W$: The window is open.'
+  hint: '"Not" is a connective. The atomic sentence is the claim being negated.'
+  walkthrough: |
+    1. "It is not the case that" is the negation connective.
+    2. The atomic sentence being negated is "the window is open."
+    3. The key should map a letter to the base claim, not the negated version.
+    4. The correct entry is "$W$: The window is open."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "Either the cake is chocolate or it is vanilla, and it has frosting"?'
+  answer: 1
+  options:
+    - '$C$: The cake is chocolate. $V$: The cake is vanilla. $F$: The cake has frosting.'
+    - '$C$: Chocolate. $V$: Vanilla. $F$: Frosting.'
+    - '$C$: Either the cake is chocolate or it is vanilla. $F$: The cake has frosting.'
+    - '$C$: The cake is chocolate or vanilla. $F$: The cake has frosting.'
+  hint: 'Separate each atomic claim. Connectives like "either...or" and "and" are not part of atomic sentences.'
+  walkthrough: |
+    1. "Either...or" and "and" are connectives.
+    2. The atomic claims are: "the cake is chocolate," "the cake is vanilla," and "the cake has frosting."
+    3. Each gets a letter mapped to a complete sentence.
+    4. The correct key assigns three letters to three complete sentences.
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'A student writes this key: $A$: Alice runs. $B$: Bob runs. $C$: Alice runs. Is this key correct?'
+  answer: 2
+  options:
+    - Yes; you can use multiple letters for the same sentence
+    - 'No; "Alice runs" is one claim and should have only one letter'
+    - Yes; different letters always mean different things
+    - No; the letter $C$ is reserved
+  hint: Each distinct claim gets exactly one letter. Assigning two letters to the same claim creates confusion.
+  walkthrough: |
+    1. "Alice runs" appears twice with different letters ($A$ and $C$).
+    2. Each distinct claim should have exactly one letter in the key.
+    3. Having two letters for the same sentence introduces ambiguity.
+    4. The key is incorrect because "Alice runs" should have only one letter.
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "The door is locked and the alarm is set"?'
+  answer: 3
+  options:
+    - '$D$: Door. $A$: Alarm.'
+    - '$D$: The door is locked and the alarm is set.'
+    - '$D$: The door is locked. $A$: The alarm is set.'
+    - '$D \land A$'
+  hint: Each atomic claim gets its own letter. Connectives are not included.
+  walkthrough: |
+    1. "And" is a connective joining two claims.
+    2. "The door is locked" and "the alarm is set" are the atomic claims.
+    3. Each maps to a complete sentence with its own letter.
+    4. The correct key is "$D$: The door is locked. $A$: The alarm is set."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which key correctly handles: "The teacher is absent, so the class is canceled"?'
+  answer: 2
+  options:
+    - '$T$: The teacher is absent, so the class is canceled.'
+    - '$T$: The teacher is absent. $C$: The class is canceled.'
+    - '$T$: Teacher. $C$: Class.'
+    - '$S$: So. $T$: Teacher. $C$: Class.'
+  hint: '"So" indicates a logical connection between two separate claims.'
+  walkthrough: |
+    1. "So" functions as a connective indicating a logical relationship.
+    2. The two atomic claims are "the teacher is absent" and "the class is canceled."
+    3. Each gets its own letter with a complete sentence.
+    4. The correct key is "$T$: The teacher is absent. $C$: The class is canceled."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'What are the atomic sentences in "If the door is locked, we cannot enter"?'
+  answer: 1
+  options:
+    - '"The door is locked" and "we can enter"'
+    - '"If the door is locked" and "we cannot enter"'
+    - '"The door," "locked," "we," and "enter"'
+    - '"If" and "cannot"'
+  hint: 'Remove connectives ("if," "not") to find the base claims.'
+  walkthrough: |
+    1. "If" is a connective joining two claims.
+    2. "Cannot" contains the connective "not" modifying "we can enter."
+    3. The base claims are: "the door is locked" and "we can enter."
+    4. The atomic sentences are "the door is locked" and "we can enter."
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'How many atomic sentences are in "Either the battery is dead or the charger is broken, and the warranty has expired"?'
+  answer: 4
+  options:
+    - '1'
+    - '2'
+    - '4'
+    - '3'
+  hint: 'Connectives are "either...or" and "and." The rest are atomic claims.'
+  walkthrough: |
+    1. "The battery is dead" is atomic.
+    2. "The charger is broken" is atomic.
+    3. "The warranty has expired" is atomic.
+    4. "Either...or" and "and" are connectives, not atomic sentences.
+    5. There are three atomic sentences.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'In "The suspect did not flee," what is the atomic sentence?'
+  answer: 3
+  options:
+    - '"The suspect did not flee"'
+    - '"Not flee"'
+    - '"The suspect fled"'
+    - '"Did not"'
+  hint: '"Not" is a connective. The atomic sentence is the base claim before negation.'
+  walkthrough: |
+    1. "Not" negates the base claim.
+    2. The base claim is "the suspect fled."
+    3. This is the atomic sentence that "not" modifies.
+    4. The atomic sentence is "the suspect fled."
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: Which of the following is an atomic sentence?
+  answer: 2
+  options:
+    - '"$P$ and $Q$"'
+    - '"The sky is blue"'
+    - '"Not $P$"'
+    - '"If $A$ then $B$"'
+  hint: An atomic sentence cannot be broken into smaller logical parts.
+  walkthrough: |
+    1. "$P$ and $Q$" uses the connective "and." Not atomic.
+    2. "The sky is blue" is a single claim with no logical connectives. Atomic.
+    3. "Not $P$" uses negation. Not atomic.
+    4. "If $A$ then $B$" uses a conditional. Not atomic.
+    5. "The sky is blue" is the atomic sentence.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'In "The movie was long but entertaining," what are the atomic sentences?'
+  answer: 4
+  options:
+    - '"The movie" and "long but entertaining"'
+    - '"The movie was long but entertaining" (one atomic sentence)'
+    - '"Long" and "entertaining"'
+    - '"The movie was long" and "the movie was entertaining"'
+  hint: '"But" functions as "and," joining two claims.'
+  walkthrough: |
+    1. "But" is a conjunction connective.
+    2. It joins "the movie was long" and "the movie was entertaining."
+    3. Each is a complete simple claim: an atomic sentence.
+    4. The atomic sentences are "the movie was long" and "the movie was entertaining."
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'What are the atomic sentences in "If the package arrives and the contents are intact, we accept the delivery"?'
+  answer: 1
+  options:
+    - '"The package arrives," "the contents are intact," and "we accept the delivery"'
+    - '"If the package arrives" and "we accept the delivery"'
+    - '"The package arrives and the contents are intact" and "we accept the delivery"'
+    - '"The package," "the contents," and "the delivery"'
+  hint: 'Remove "if," "and," and "then" to find the base claims.'
+  walkthrough: |
+    1. "If...then" and "and" are connectives.
+    2. The base claims are: "the package arrives," "the contents are intact," and "we accept the delivery."
+    3. Each is a complete simple statement that cannot be broken down further.
+    4. There are three atomic sentences.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'How many atomic sentences are in "The car started"?'
+  answer: 3
+  options:
+    - '0'
+    - '2'
+    - '1'
+    - '3'
+  hint: Is this sentence composed of simpler claims joined by connectives?
+  walkthrough: |
+    1. "The car started" is a single simple claim.
+    2. There are no logical connectives ("and," "or," "if," "not").
+    3. It is one atomic sentence.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'What are the atomic sentences in "Neither the bus nor the train is running"?'
+  answer: 2
+  options:
+    - '"Neither the bus nor the train is running" (one atomic sentence)'
+    - '"The bus is running" and "the train is running"'
+    - '"Neither" and "nor"'
+    - '"The bus" and "the train"'
+  hint: '"Neither...nor" is a connective. Find the base claims it connects.'
+  walkthrough: |
+    1. "Neither...nor" is equivalent to "not (A or B)."
+    2. The base claims are "the bus is running" and "the train is running."
+    3. "Neither" and "nor" are connectives, not atomic sentences.
+    4. The atomic sentences are "the bus is running" and "the train is running."
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'In "The lights are off and the door is locked, or the alarm is on," how many atomic sentences are there?'
+  answer: 4
+  options:
+    - '1'
+    - '2'
+    - '4'
+    - '3'
+  hint: 'Identify "and" and "or" as connectives. Count the remaining simple claims.'
+  walkthrough: |
+    1. "And" and "or" are connectives.
+    2. "The lights are off" is atomic.
+    3. "The door is locked" is atomic.
+    4. "The alarm is on" is atomic.
+    5. There are three atomic sentences.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'What is the atomic sentence in "It is not the case that the window is broken"?'
+  answer: 1
+  options:
+    - '"The window is broken"'
+    - '"It is not the case that the window is broken"'
+    - '"Not broken"'
+    - '"The window"'
+  hint: '"It is not the case that" is negation. The atomic sentence is what gets negated.'
+  walkthrough: |
+    1. "It is not the case that" is the negation connective.
+    2. It negates the claim "the window is broken."
+    3. "The window is broken" is the atomic sentence.
+    4. The negated version is compound, not atomic.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: Which of the following is an atomic sentence?
+  answer: 3
+  options:
+    - '"$P$ or $Q$"'
+    - '"If $R$ then $S$"'
+    - '"The grass is green"'
+    - '"Not $A$"'
+  hint: An atomic sentence has no logical connectives.
+  walkthrough: |
+    1. "$P$ or $Q$" uses "or." Not atomic.
+    2. "If $R$ then $S$" uses a conditional. Not atomic.
+    3. "The grass is green" is a single claim with no connectives.
+    4. "Not $A$" uses negation. Not atomic.
+    5. "The grass is green" is the atomic sentence.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'In "The students passed because the teacher explained clearly," what are the atomic sentences?'
+  answer: 4
+  options:
+    - '"The students passed because the teacher explained clearly" (one sentence)'
+    - '"Passed" and "explained"'
+    - '"The students" and "the teacher"'
+    - '"The students passed" and "the teacher explained clearly"'
+  hint: '"Because" functions as a connective joining two claims.'
+  walkthrough: |
+    1. "Because" joins two separate claims.
+    2. "The students passed" is one atomic claim.
+    3. "The teacher explained clearly" is another atomic claim.
+    4. The atomic sentences are "the students passed" and "the teacher explained clearly."
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'How many atomic sentences are in "If it rains and the wind blows, then either the game is postponed or the fans leave"?'
+  answer: 2
+  options:
+    - '2'
+    - '4'
+    - '3'
+    - '5'
+  hint: 'Remove all connectives ("if," "and," "then," "either," "or") and count the remaining claims.'
+  walkthrough: |
+    1. Connectives: "if...then," "and," "either...or."
+    2. Atomic claims: "it rains," "the wind blows," "the game is postponed," "the fans leave."
+    3. Four atomic sentences remain after removing all connectives.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'In "The cake is delicious," is this an atomic sentence?'
+  answer: 1
+  options:
+    - Yes; it is a single claim with no connectives
+    - No; it contains an adjective
+    - No; it is too short to be a sentence
+    - Only if it is part of a larger argument
+  hint: An atomic sentence is any simple declarative statement with no logical connectives.
+  walkthrough: |
+    1. "The cake is delicious" is a complete declarative statement.
+    2. It contains no logical connectives ("and," "or," "if," "not").
+    3. Internal grammatical structure (adjectives, verbs) does not matter.
+    4. Yes, it is an atomic sentence.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'What are the atomic sentences in "Unless the team wins, the coach resigns"?'
+  answer: 3
+  options:
+    - '"Unless the team wins" and "the coach resigns"'
+    - '"Unless" and "the team wins"'
+    - '"The team wins" and "the coach resigns"'
+    - '"The team wins, the coach resigns" (one sentence)'
+  hint: '"Unless" is a connective. Identify the two claims it connects.'
+  walkthrough: |
+    1. "Unless" functions as a connective (similar to "if not").
+    2. The two base claims are "the team wins" and "the coach resigns."
+    3. Each is a simple statement that cannot be broken down further.
+    4. The atomic sentences are "the team wins" and "the coach resigns."
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'In "The bridge is old, yet it is safe," what are the atomic sentences?'
+  answer: 2
+  options:
+    - '"The bridge is old, yet it is safe" (one sentence)'
+    - '"The bridge is old" and "the bridge is safe"'
+    - '"Old" and "safe"'
+    - '"Yet" and "the bridge"'
+  hint: '"Yet" functions as a connective like "but" or "and."'
+  walkthrough: |
+    1. "Yet" is a connective similar to "but" and "and."
+    2. It joins "the bridge is old" and "the bridge is safe."
+    3. Each is a complete simple claim.
+    4. The atomic sentences are "the bridge is old" and "the bridge is safe."
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'How many atomic sentences are in "The phone rang"?'
+  answer: 4
+  options:
+    - '0'
+    - '2'
+    - '3'
+    - '1'
+  hint: Is there any connective in this sentence?
+  walkthrough: |
+    1. "The phone rang" contains no logical connectives.
+    2. It is a single simple claim.
+    3. There is one atomic sentence.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'What are the atomic sentences in "If the key works, the door opens, but if it does not, we call a locksmith"?'
+  answer: 1
+  options:
+    - '"The key works," "the door opens," and "we call a locksmith"'
+    - '"If the key works" and "we call a locksmith"'
+    - '"The key works" and "the door opens"'
+    - '"The key," "the door," and "a locksmith"'
+  hint: 'Remove all connectives ("if," "but," "not") and identify the base claims.'
+  walkthrough: |
+    1. Connectives present: "if," "but," "not."
+    2. "The key works" is an atomic claim.
+    3. "The door opens" is an atomic claim.
+    4. "We call a locksmith" is an atomic claim.
+    5. Three atomic sentences remain after removing connectives.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'Given the sentence "It is raining and the ground is wet," which symbolization key is correct?'
+  answer: 1
+  options:
+    - '$R$: It is raining. $W$: The ground is wet.'
+    - '$R$: It is raining and the ground is wet.'
+    - '$R$: Raining. $W$: Wet.'
+    - '$R$: It is raining. $W$: The ground is wet. $A$: And.'
+  hint: 'Each atomic claim gets one letter. Connectives like "and" are not assigned letters.'
+  walkthrough: |
+    1. The two atomic claims are "It is raining" and "The ground is wet."
+    2. "And" is a connective, not an atomic sentence.
+    3. Each claim maps to a complete sentence.
+    4. The correct key is "$R$: It is raining. $W$: The ground is wet."
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'Which assignment is correct for "The window is open"?'
+  answer: 2
+  options:
+    - '$W$: Open'
+    - '$W$: The window is open.'
+    - '$W$: Window'
+    - '$\neg W$'
+  hint: A sentence letter maps to a full declarative sentence.
+  walkthrough: |
+    1. "Open" and "Window" are fragments, not sentences.
+    2. $\neg W$ uses a connective.
+    3. The correct assignment maps a single letter to the complete sentence.
+    4. The correct assignment is "$W$: The window is open."
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'How many sentence letters are needed for: "The store is closed and the lights are off, but the sign is still on"?'
+  answer: 4
+  options:
+    - '1'
+    - '2'
+    - '4'
+    - '3'
+  hint: '"And" and "but" are connectives. Count the claims they join.'
+  walkthrough: |
+    1. "And" and "but" are connectives.
+    2. "The store is closed," "the lights are off," and "the sign is still on" are three claims.
+    3. Three sentence letters are needed.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'A student assigns $P$: It is sunny and warm. What is wrong with this?'
+  answer: 3
+  options:
+    - Nothing; this is correct
+    - $P$ is not a valid letter
+    - 'The sentence contains the connective "and," so it needs two letters'
+    - The letter should be $S$ for sunny
+  hint: Look for hidden connectives in the English sentence.
+  walkthrough: |
+    1. "It is sunny and warm" contains the connective "and."
+    2. This is a compound sentence: "it is sunny" plus "it is warm."
+    3. Each atomic claim needs its own letter.
+    4. The assignment is wrong because "and" makes it compound, requiring two letters.
+  tags:
+    - assign-letters
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "The roads are icy, so schools are closed"?'
+  answer: 1
+  options:
+    - '$R$: The roads are icy. $S$: Schools are closed.'
+    - '$R$: The roads are icy, so schools are closed.'
+    - '$R$: Roads. $S$: Schools.'
+    - '$R$: Icy. $S$: Closed.'
+  hint: '"So" is a connective. Each atomic claim gets its own letter.'
+  walkthrough: |
+    1. "So" functions as a connective.
+    2. The atomic claims are "the roads are icy" and "schools are closed."
+    3. Each gets its own letter mapped to a complete sentence.
+    4. The correct key is "$R$: The roads are icy. $S$: Schools are closed."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "The test is easy or the students are well-prepared"?'
+  answer: 3
+  options:
+    - '$T$: The test is easy or the students are well-prepared.'
+    - '$T$: Easy. $S$: Prepared.'
+    - '$T$: The test is easy. $S$: The students are well-prepared.'
+    - '$T$: Test. $S$: Students.'
+  hint: '"Or" is a connective. Each claim gets its own letter and full sentence.'
+  walkthrough: |
+    1. "Or" is a connective joining two claims.
+    2. "The test is easy" and "the students are well-prepared" are the atomic claims.
+    3. Each gets its own letter with a complete sentence.
+    4. The correct key is "$T$: The test is easy. $S$: The students are well-prepared."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "If the alarm rings, then we evacuate or call security"?'
+  answer: 2
+  options:
+    - '$A$: If the alarm rings. $E$: We evacuate. $S$: We call security.'
+    - '$A$: The alarm rings. $E$: We evacuate. $S$: We call security.'
+    - '$A$: The alarm rings. $E$: We evacuate or call security.'
+    - '$A$: Alarm. $E$: Evacuate. $S$: Security.'
+  hint: 'Connectives ("if," "then," "or") are excluded. Each atomic claim maps to a full sentence.'
+  walkthrough: |
+    1. "If...then" and "or" are connectives.
+    2. Three atomic claims: "the alarm rings," "we evacuate," "we call security."
+    3. "If the alarm rings" incorrectly includes the connective "if."
+    4. The correct key assigns three letters to three complete sentences without connectives.
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "The film was entertaining, although the ending was predictable"?'
+  answer: 4
+  options:
+    - '$F$: The film was entertaining, although the ending was predictable.'
+    - '$F$: Film. $E$: Ending.'
+    - '$F$: Entertaining. $E$: Predictable.'
+    - '$F$: The film was entertaining. $E$: The ending was predictable.'
+  hint: '"Although" functions as a connective like "but." Each claim gets its own letter.'
+  walkthrough: |
+    1. "Although" is a connective similar to "but."
+    2. The atomic claims are "the film was entertaining" and "the ending was predictable."
+    3. Each gets its own letter with a complete sentence.
+    4. The correct key is "$F$: The film was entertaining. $E$: The ending was predictable."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'Which symbolization key is correct for: "The password is wrong or the account is locked"?'
+  answer: 1
+  options:
+    - '$P$: The password is wrong. $A$: The account is locked.'
+    - '$P$: The password is wrong or the account is locked.'
+    - '$P$: Wrong. $A$: Locked.'
+    - '$P$: Password. $A$: Account.'
+  hint: '"Or" is a connective. Each claim gets its own letter.'
+  walkthrough: |
+    1. "Or" is a connective joining two claims.
+    2. "The password is wrong" and "the account is locked" are the atomic claims.
+    3. Each gets its own letter with a complete sentence.
+    4. The correct key is "$P$: The password is wrong. $A$: The account is locked."
+  tags:
+    - create-key
+
+- type: mcq
+  question: 'In "The fire spread quickly, yet no one was injured," what are the atomic sentences?'
+  answer: 3
+  options:
+    - '"The fire spread quickly, yet no one was injured" (one sentence)'
+    - '"Quickly" and "injured"'
+    - '"The fire spread quickly" and "someone was injured"'
+    - '"The fire" and "no one"'
+  hint: '"Yet" is a connective like "but." "No one was injured" contains negation; the base claim is "someone was injured."'
+  walkthrough: |
+    1. "Yet" is a connective like "but."
+    2. "No one was injured" contains negation; the base claim is "someone was injured."
+    3. The atomic sentences are "the fire spread quickly" and "someone was injured."
+    4. Negation ("no") modifies the second atomic sentence but is not part of it.
+  tags:
+    - identify-atomic
+
+- type: mcq
+  question: 'In "Provided that the funding continues, the research will succeed," what are the atomic sentences?'
+  answer: 4
+  options:
+    - '"Provided that" and "the research will succeed"'
+    - '"Provided that the funding continues" and "the research will succeed"'
+    - '"Funding" and "research"'
+    - '"The funding continues" and "the research will succeed"'
+  hint: '"Provided that" functions as a connective like "if." The atomic claim follows it.'
+  walkthrough: |
+    1. "Provided that" is a connective similar to "if."
+    2. The atomic claims are "the funding continues" and "the research will succeed."
+    3. "Provided that" is not part of the atomic sentence.
+    4. The atomic sentences are "the funding continues" and "the research will succeed."
+  tags:
+    - identify-atomic

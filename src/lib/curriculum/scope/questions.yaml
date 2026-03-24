@@ -1,0 +1,711 @@
+- type: mcq
+  question: 'In $(\neg A \land (B \lor C))$, what is the scope of $\neg$?'
+  answer: 2
+  options:
+    - '$(\neg A \land (B \lor C))$'
+    - '$\neg A$'
+    - '$(B \lor C)$'
+    - $A$
+  hint: The scope of a connective is the smallest sub-formula where that connective is the main operator.
+  walkthrough: |
+    1. $\neg$ applies to $A$.
+    2. The smallest sub-formula where $\neg$ is the main operator is $\neg A$.
+    3. $\neg$ does not govern $(B \lor C)$ or the whole formula.
+    4. The scope of $\neg$ is $\neg A$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(\neg A \land (B \lor C))$, what is the scope of $\lor$?'
+  answer: 3
+  options:
+    - '$(\neg A \land (B \lor C))$'
+    - '$\neg A$'
+    - '$(B \lor C)$'
+    - $C$
+  hint: '$\lor$ is the main operator of which sub-formula?'
+  walkthrough: |
+    1. $\lor$ joins $B$ and $C$.
+    2. The smallest sub-formula where $\lor$ is the main operator is $(B \lor C)$.
+    3. $\lor$ does not govern the whole formula; $\land$ does.
+    4. The scope of $\lor$ is $(B \lor C)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $\neg (P \land \neg Q)$, what is the scope of the outer $\neg$?'
+  answer: 4
+  options:
+    - '$\neg Q$'
+    - '$(P \land \neg Q)$'
+    - $P$
+    - '$\neg (P \land \neg Q)$ (the whole formula)'
+  hint: 'The outer $\neg$ applies to everything that follows it.'
+  walkthrough: |
+    1. The outer $\neg$ applies to $(P \land \neg Q)$.
+    2. This makes the whole formula $\neg (P \land \neg Q)$ the scope of the outer $\neg$.
+    3. The outer $\neg$ is the main operator of the entire formula.
+    4. The scope of the outer $\neg$ is the whole formula: $\neg (P \land \neg Q)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $\neg (P \land \neg Q)$, what is the scope of $\land$?'
+  answer: 1
+  options:
+    - '$(P \land \neg Q)$'
+    - '$\neg (P \land \neg Q)$'
+    - $P$
+    - '$\neg Q$'
+  hint: '$\land$ is the main operator of which sub-formula?'
+  walkthrough: |
+    1. $\land$ joins $P$ and $\neg Q$.
+    2. The smallest sub-formula where $\land$ is the main operator is $(P \land \neg Q)$.
+    3. It does not govern the whole formula (the outer $\neg$ does).
+    4. The scope of $\land$ is $(P \land \neg Q)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(P \lor (Q \land \neg R))$, what is the scope of $\land$?'
+  answer: 3
+  options:
+    - '$(P \lor (Q \land \neg R))$'
+    - '$\neg R$'
+    - '$(Q \land \neg R)$'
+    - $P$
+  hint: '$\land$ joins $Q$ and $\neg R$.'
+  walkthrough: |
+    1. $\land$ joins $Q$ and $\neg R$.
+    2. The sub-formula where $\land$ is the main operator is $(Q \land \neg R)$.
+    3. $\lor$ governs the whole formula, not $\land$.
+    4. The scope of $\land$ is $(Q \land \neg R)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'Does $\neg (A \land B)$ mean the same as $(\neg A \land B)$?'
+  answer: 2
+  options:
+    - Yes; negation always applies to $A$ regardless of brackets
+    - 'No; in the first, $\neg$ governs the whole conjunction; in the second, $\neg$ governs only $A$'
+    - Yes; brackets do not change meaning
+    - No; the first is not a WFF
+  hint: 'Compare what $\neg$ governs in each formula.'
+  walkthrough: |
+    1. $\neg (A \land B)$: $\neg$ applies to $(A \land B)$. "Not both A and B."
+    2. $(\neg A \land B)$: $\neg$ applies only to $A$. "Not-A, and B."
+    3. Test: $A$ = T, $B$ = T. First: $\neg$(T) = F. Second: (F $\land$ T) = F. Same here.
+    4. Test: $A$ = F, $B$ = T. First: $\neg$(F $\land$ T) = $\neg$F = T. Second: (T $\land$ T) = T. Same here.
+    5. Test: $A$ = T, $B$ = F. First: $\neg$(T $\land$ F) = $\neg$F = T. Second: (F $\land$ F) = F. Different.
+    6. The formulas differ: in the first, $\neg$ governs the whole conjunction; in the second, $\neg$ governs only $A$.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $(A \lor B) \land C$ mean the same as $A \lor (B \land C)$?'
+  answer: 4
+  options:
+    - 'Yes; $\lor$ and $\land$ can be grouped either way'
+    - Yes; the truth values are always the same
+    - 'No, but only because different letters are used'
+    - 'No; the main operators differ, producing different truth values in some cases'
+  hint: 'Try $A$ = T, $B$ = F, $C$ = F.'
+  walkthrough: |
+    1. $(A \lor B) \land C$: main operator is $\land$.
+    2. $A \lor (B \land C)$: main operator is $\lor$.
+    3. Test: $A$ = T, $B$ = F, $C$ = F.
+    4. First: (T $\lor$ F) $\land$ F = T $\land$ F = F.
+    5. Second: T $\lor$ (F $\land$ F) = T $\lor$ F = T.
+    6. Different results: the bracket change alters meaning.
+    7. The formulas differ: their main operators are different and they produce different truth values.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg \neg P$ mean the same as $\neg (\neg P)$?'
+  answer: 1
+  options:
+    - 'Yes; adding brackets around $\neg P$ does not change what the outer $\neg$ governs'
+    - No; the brackets change the scope
+    - 'Yes, but only when $P$ is true'
+    - 'No; $\neg (\neg P)$ is not a WFF'
+  hint: 'The outer $\neg$ already applies to $\neg P$. Do brackets change that?'
+  walkthrough: |
+    1. In $\neg \neg P$, the outer $\neg$ applies to $\neg P$.
+    2. In $\neg (\neg P)$, the outer $\neg$ applies to $(\neg P)$, which is just $\neg P$.
+    3. Both formulas have the same structure.
+    4. Yes: adding brackets around $\neg P$ does not change what the outer $\neg$ governs.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg A \lor B$ mean the same as $\neg (A \lor B)$?'
+  answer: 3
+  options:
+    - 'Yes; $\neg$ applies to the whole disjunction in both'
+    - Yes; brackets are just decorative
+    - 'No; in the first, $\neg$ governs only $A$; in the second, $\neg$ governs $(A \lor B)$'
+    - No; the first is not a WFF
+  hint: 'Compare the scope of $\neg$ in each formula.'
+  walkthrough: |
+    1. $\neg A \lor B$: $\neg$ applies to $A$ only; main operator is $\lor$.
+    2. $\neg (A \lor B)$: $\neg$ applies to the whole disjunction; main operator is $\neg$.
+    3. Test: $A$ = F, $B$ = F. First: T $\lor$ F = T. Second: $\neg$(F) = T. Same.
+    4. Test: $A$ = F, $B$ = T. First: T $\lor$ T = T. Second: $\neg$(T) = F. Different.
+    5. The formulas differ: in the first, $\neg$ governs only $A$; in the second, $\neg$ governs $(A \lor B)$.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $(P \land Q) \lor R$ mean the same as $P \land (Q \lor R)$?'
+  answer: 2
+  options:
+    - Yes; both have the same truth values
+    - No; they have different main operators and can differ in truth value
+    - Yes; conjunction and disjunction are associative
+    - 'No, but only when $R$ is false'
+  hint: 'Try $P$ = F, $Q$ = F, $R$ = T.'
+  walkthrough: |
+    1. $(P \land Q) \lor R$: main operator is $\lor$.
+    2. $P \land (Q \lor R)$: main operator is $\land$.
+    3. Test: $P$ = F, $Q$ = F, $R$ = T.
+    4. First: (F $\land$ F) $\lor$ T = F $\lor$ T = T.
+    5. Second: F $\land$ (F $\lor$ T) = F $\land$ T = F.
+    6. Different results.
+    7. The formulas differ: they have different main operators and can differ in truth value.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'In $(A \lor \neg B)$, what is the scope of $\neg$?'
+  answer: 2
+  options:
+    - '$(A \lor \neg B)$'
+    - '$\neg B$'
+    - $A$
+    - '$(A \lor B)$'
+  hint: '$\neg$ applies to the first WFF after it.'
+  walkthrough: |
+    1. $\neg$ applies directly to $B$.
+    2. The smallest sub-formula where $\neg$ is the main operator is $\neg B$.
+    3. $\lor$ governs the whole formula, not $\neg$.
+    4. The scope of $\neg$ is $\neg B$.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'In $(A \to (B \land C))$, what is the scope of $\to$?'
+  answer: 4
+  options:
+    - '$(B \land C)$'
+    - $A$
+    - $B$
+    - '$(A \to (B \land C))$ (the whole formula)'
+  hint: '$\to$ is the main operator of the whole formula.'
+  walkthrough: |
+    1. $\to$ connects $A$ and $(B \land C)$.
+    2. The smallest sub-formula where $\to$ is the main operator is the whole formula.
+    3. $\land$ governs only $(B \land C)$, not the whole formula.
+    4. The scope of $\to$ is the whole formula: $(A \to (B \land C))$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(A \to (B \land C))$, what is the scope of $\land$?'
+  answer: 2
+  options:
+    - '$(A \to (B \land C))$'
+    - '$(B \land C)$'
+    - $C$
+    - $A$
+  hint: '$\land$ joins $B$ and $C$ inside the brackets.'
+  walkthrough: |
+    1. $\land$ connects $B$ and $C$.
+    2. The smallest sub-formula where $\land$ is the main operator is $(B \land C)$.
+    3. $\to$ governs the whole formula, not $\land$.
+    4. The scope of $\land$ is $(B \land C)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $\neg (A \lor B)$, what is the scope of $\neg$?'
+  answer: 1
+  options:
+    - '$\neg (A \lor B)$ (the whole formula)'
+    - '$(A \lor B)$'
+    - $A$
+    - $B$
+  hint: 'The $\neg$ applies to everything in the brackets after it.'
+  walkthrough: |
+    1. $\neg$ applies to $(A \lor B)$.
+    2. The smallest sub-formula where $\neg$ is the main operator is $\neg (A \lor B)$.
+    3. This is the whole formula, so $\neg$ is the main operator.
+    4. The scope of $\neg$ is the whole formula: $\neg (A \lor B)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $\neg (A \lor B)$, what is the scope of $\lor$?'
+  answer: 3
+  options:
+    - '$\neg (A \lor B)$'
+    - $A$
+    - '$(A \lor B)$'
+    - '$\neg A$'
+  hint: '$\lor$ is the main operator of the sub-formula inside the brackets.'
+  walkthrough: |
+    1. $\lor$ connects $A$ and $B$.
+    2. The smallest sub-formula where $\lor$ is the main operator is $(A \lor B)$.
+    3. $\neg$ governs the whole formula, not $\lor$.
+    4. The scope of $\lor$ is $(A \lor B)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $((P \lor Q) \to (R \land S))$, what is the scope of $\to$?'
+  answer: 2
+  options:
+    - '$(R \land S)$'
+    - '$((P \lor Q) \to (R \land S))$ (the whole formula)'
+    - '$(P \lor Q)$'
+    - $R$
+  hint: '$\to$ is the main operator of the whole formula.'
+  walkthrough: |
+    1. $\to$ connects $(P \lor Q)$ and $(R \land S)$.
+    2. The whole formula has $\to$ as its main operator.
+    3. $\lor$ and $\land$ govern only their respective sub-formulas.
+    4. The scope of $\to$ is the whole formula.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(P \land (Q \lor \neg R))$, what is the scope of $\neg$?'
+  answer: 4
+  options:
+    - '$(Q \lor \neg R)$'
+    - '$(P \land (Q \lor \neg R))$'
+    - $Q$
+    - '$\neg R$'
+  hint: '$\neg$ applies to $R$ only.'
+  walkthrough: |
+    1. $\neg$ applies directly to $R$.
+    2. The smallest sub-formula where $\neg$ is the main operator is $\neg R$.
+    3. $\lor$ and $\land$ govern larger sub-formulas.
+    4. The scope of $\neg$ is $\neg R$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $((A \land B) \lor (C \land D))$, what is the scope of $\lor$?'
+  answer: 1
+  options:
+    - '$((A \land B) \lor (C \land D))$ (the whole formula)'
+    - '$(A \land B)$'
+    - '$(C \land D)$'
+    - $B$
+  hint: '$\lor$ connects the two conjunctions.'
+  walkthrough: |
+    1. $\lor$ connects $(A \land B)$ and $(C \land D)$.
+    2. The smallest sub-formula where $\lor$ is the main operator is the whole formula.
+    3. Each $\land$ governs only its own conjunction.
+    4. The scope of $\lor$ is the whole formula.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $\neg \neg P$, what is the scope of the inner $\neg$?'
+  answer: 3
+  options:
+    - '$\neg \neg P$ (the whole formula)'
+    - $P$ only (no connective)
+    - '$\neg P$'
+    - Cannot be determined
+  hint: 'The inner $\neg$ applies directly to $P$.'
+  walkthrough: |
+    1. The inner $\neg$ applies to $P$.
+    2. The smallest sub-formula where the inner $\neg$ is the main operator is $\neg P$.
+    3. The outer $\neg$ governs the whole formula.
+    4. The scope of the inner $\neg$ is $\neg P$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(P \to \neg Q)$, what is the scope of $\neg$?'
+  answer: 2
+  options:
+    - '$(P \to \neg Q)$'
+    - '$\neg Q$'
+    - $Q$
+    - $P$
+  hint: '$\neg$ applies to $Q$ only.'
+  walkthrough: |
+    1. $\neg$ applies directly to $Q$.
+    2. The smallest sub-formula where $\neg$ is the main operator is $\neg Q$.
+    3. $\to$ governs the whole formula.
+    4. The scope of $\neg$ is $\neg Q$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(\neg A \lor (\neg B \land C))$, what is the scope of the first $\neg$?'
+  answer: 4
+  options:
+    - '$(\neg A \lor (\neg B \land C))$'
+    - '$(\neg B \land C)$'
+    - $A$ only
+    - '$\neg A$'
+  hint: 'The first $\neg$ applies to $A$.'
+  walkthrough: |
+    1. The first $\neg$ applies directly to $A$.
+    2. The smallest sub-formula where this $\neg$ is the main operator is $\neg A$.
+    3. $\lor$ governs the whole formula.
+    4. The scope of the first $\neg$ is $\neg A$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(\neg A \lor (\neg B \land C))$, what is the scope of the second $\neg$?'
+  answer: 1
+  options:
+    - '$\neg B$'
+    - '$(\neg B \land C)$'
+    - $B$ only
+    - $C$
+  hint: 'The second $\neg$ applies to $B$.'
+  walkthrough: |
+    1. The second $\neg$ applies directly to $B$.
+    2. The smallest sub-formula where this $\neg$ is the main operator is $\neg B$.
+    3. $\land$ governs $(\neg B \land C)$.
+    4. The scope of the second $\neg$ is $\neg B$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(A \lor B) \to C$, what is the scope of $\lor$?'
+  answer: 3
+  options:
+    - '$(A \lor B) \to C$'
+    - $C$
+    - '$(A \lor B)$'
+    - $A$
+  hint: '$\lor$ is the main operator of the antecedent, not the whole conditional.'
+  walkthrough: |
+    1. $\lor$ connects $A$ and $B$ inside the brackets.
+    2. The smallest sub-formula where $\lor$ is the main operator is $(A \lor B)$.
+    3. $\to$ governs the whole formula.
+    4. The scope of $\lor$ is $(A \lor B)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $\neg (P \to Q)$, what is the scope of $\to$?'
+  answer: 2
+  options:
+    - '$\neg (P \to Q)$'
+    - '$(P \to Q)$'
+    - $P$
+    - $Q$
+  hint: '$\to$ is the main operator inside the brackets, not of the whole formula.'
+  walkthrough: |
+    1. $\to$ connects $P$ and $Q$.
+    2. The smallest sub-formula where $\to$ is the main operator is $(P \to Q)$.
+    3. $\neg$ governs the whole formula.
+    4. The scope of $\to$ is $(P \to Q)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(P \land Q) \land R$, what is the scope of the first (leftmost) $\land$?'
+  answer: 4
+  options:
+    - '$(P \land Q) \land R$ (the whole formula)'
+    - $P$
+    - $R$
+    - '$(P \land Q)$'
+  hint: 'The leftmost $\land$ connects $P$ and $Q$ inside the brackets.'
+  walkthrough: |
+    1. The leftmost $\land$ connects $P$ and $Q$.
+    2. The smallest sub-formula where it is the main operator is $(P \land Q)$.
+    3. The second $\land$ governs the whole formula.
+    4. The scope of the first $\land$ is $(P \land Q)$.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'In $(P \land Q) \land R$, what is the scope of the second (rightmost) $\land$?'
+  answer: 1
+  options:
+    - '$(P \land Q) \land R$ (the whole formula)'
+    - '$(P \land Q)$'
+    - $R$ only
+    - '$Q \land R$'
+  hint: 'The rightmost $\land$ connects $(P \land Q)$ and $R$.'
+  walkthrough: |
+    1. The rightmost $\land$ connects $(P \land Q)$ and $R$.
+    2. The smallest sub-formula where it is the main operator is the whole formula.
+    3. It is the main operator of $(P \land Q) \land R$.
+    4. The scope of the second $\land$ is the whole formula.
+  tags:
+    - find-scope
+
+- type: mcq
+  question: 'Does $\neg (A \to B)$ mean the same as $(\neg A \to B)$?'
+  answer: 3
+  options:
+    - Yes; negation always applies to $A$ first
+    - Yes; brackets are decorative
+    - 'No; in the first, $\neg$ governs the whole conditional; in the second, $\neg$ governs only $A$'
+    - No; the first is not a well-formed formula
+  hint: 'Compare what $\neg$ governs in each formula.'
+  walkthrough: |
+    1. $\neg (A \to B)$: $\neg$ applies to $(A \to B)$. Main operator is $\neg$.
+    2. $(\neg A \to B)$: $\neg$ applies only to $A$. Main operator is $\to$.
+    3. Test: $A$=F, $B$=F. First: $\neg$(F$\to$F) = $\neg$T = F. Second: (T$\to$F) = F. Same.
+    4. Test: $A$=T, $B$=T. First: $\neg$(T$\to$T) = $\neg$T = F. Second: (F$\to$T) = T. Different.
+    5. The formulas differ: in the first, $\neg$ governs the conditional; in the second, $\neg$ governs only $A$.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $(A \land B) \to C$ mean the same as $A \land (B \to C)$?'
+  answer: 2
+  options:
+    - 'Yes; $\land$ and $\to$ can be grouped either way'
+    - 'No; the main operators differ, producing different truth values in some cases'
+    - Yes; they are logically equivalent
+    - 'No, but only when $C$ is true'
+  hint: 'Try $A$=T, $B$=T, $C$=F.'
+  walkthrough: |
+    1. $(A \land B) \to C$: main operator is $\to$.
+    2. $A \land (B \to C)$: main operator is $\land$.
+    3. Test: $A$=T, $B$=T, $C$=F.
+    4. First: (T$\land$T)$\to$F = T$\to$F = F.
+    5. Second: T$\land$(T$\to$F) = T$\land$F = F. Same here.
+    6. Test: $A$=T, $B$=F, $C$=F. First: (T$\land$F)$\to$F = F$\to$F = T. Second: T$\land$(F$\to$F) = T$\land$T = T. Same.
+    7. Test: $A$=F, $B$=T, $C$=F. First: (F$\land$T)$\to$F = F$\to$F = T. Second: F$\land$(T$\to$F) = F$\land$F = F. Different.
+    8. The formulas differ: they have different main operators and can produce different truth values.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $(A \lor B) \lor C$ mean the same as $A \lor (B \lor C)$?'
+  answer: 1
+  options:
+    - Yes; disjunction is associative so grouping does not matter
+    - No; the main operators differ
+    - 'No; the brackets change which sub-formula $\lor$ governs'
+    - 'Yes, but only when $C$ is false'
+  hint: 'Check all rows: does the grouping of $\lor$ ever change the result?'
+  walkthrough: |
+    1. $(A \lor B) \lor C$: true when at least one of $A$, $B$, $C$ is true.
+    2. $A \lor (B \lor C)$: true when at least one of $A$, $B$, $C$ is true.
+    3. Both are true in the same cases: whenever at least one variable is true.
+    4. Disjunction is associative, so grouping does not matter. The formulas are equivalent.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg (P \lor Q)$ mean the same as $(\neg P \lor Q)$?'
+  answer: 4
+  options:
+    - 'Yes; $\neg$ always applies to $P$ first'
+    - Yes; the brackets are redundant
+    - No; the first is not a valid formula
+    - 'No; in the first, $\neg$ governs $(P \lor Q)$; in the second, $\neg$ governs only $P$'
+  hint: 'Compare what $\neg$ applies to in each formula.'
+  walkthrough: |
+    1. $\neg (P \lor Q)$: $\neg$ applies to $(P \lor Q)$. True only when both $P$ and $Q$ are false.
+    2. $(\neg P \lor Q)$: $\neg$ applies only to $P$. True when $P$ is false or $Q$ is true.
+    3. Test: $P$=F, $Q$=T. First: $\neg$(F$\lor$T) = $\neg$T = F. Second: T$\lor$T = T. Different.
+    4. The formulas differ: in the first, $\neg$ governs $(P \lor Q)$; in the second, $\neg$ governs only $P$.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $P \to (Q \to R)$ mean the same as $(P \to Q) \to R$?'
+  answer: 3
+  options:
+    - Yes; the conditional is associative
+    - Yes; they have the same truth values
+    - No; the conditional is not associative; they differ on some rows
+    - 'No, but only when $R$ is false'
+  hint: 'Try $P$=T, $Q$=T, $R$=F.'
+  walkthrough: |
+    1. $P \to (Q \to R)$: Test $P$=T, $Q$=T, $R$=F. T$\to$(T$\to$F) = T$\to$F = F.
+    2. $(P \to Q) \to R$: (T$\to$T)$\to$F = T$\to$F = F. Same here.
+    3. Test $P$=F, $Q$=F, $R$=F. First: F$\to$(F$\to$F) = F$\to$T = T. Second: (F$\to$F)$\to$F = T$\to$F = F. Different.
+    4. The conditional is not associative; the formulas differ on some rows.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $(P \land Q) \land R$ mean the same as $P \land (Q \land R)$?'
+  answer: 1
+  options:
+    - Yes; conjunction is associative so grouping does not matter
+    - No; the main operators differ
+    - No; brackets always change meaning
+    - 'Yes, but only when all are true'
+  hint: 'Check: is conjunction associative?'
+  walkthrough: |
+    1. $(P \land Q) \land R$ is true when all three are true, false otherwise.
+    2. $P \land (Q \land R)$ is true when all three are true, false otherwise.
+    3. Both formulas produce the same truth values on every row.
+    4. Conjunction is associative, so grouping does not matter. The formulas are equivalent.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg P \land Q$ mean the same as $\neg (P \land Q)$?'
+  answer: 2
+  options:
+    - 'Yes; $\neg$ applies to the conjunction in both'
+    - 'No; in the first, $\neg$ governs only $P$; in the second, $\neg$ governs $(P \land Q)$'
+    - Yes; they are equivalent
+    - No; the first is not well-formed
+  hint: 'In $\neg P \land Q$, the $\neg$ attaches to $P$ only. In $\neg (P \land Q)$, brackets extend the scope.'
+  walkthrough: |
+    1. $\neg P \land Q$: $\neg$ applies to $P$ only. Main operator is $\land$.
+    2. $\neg (P \land Q)$: $\neg$ applies to $(P \land Q)$. Main operator is $\neg$.
+    3. Test: $P$=T, $Q$=T. First: F$\land$T = F. Second: $\neg$(T) = F. Same.
+    4. Test: $P$=F, $Q$=F. First: T$\land$F = F. Second: $\neg$(F) = T. Different.
+    5. The formulas differ: in the first, $\neg$ governs only $P$; in the second, $\neg$ governs $(P \land Q)$.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $A \to (B \lor C)$ mean the same as $(A \to B) \lor C$?'
+  answer: 2
+  options:
+    - 'Yes; the grouping of $\lor$ with $\to$ does not matter'
+    - Yes; they are equivalent
+    - 'No, but only when $C$ is false'
+    - No; the main operators differ and they produce different truth values on some rows
+  hint: 'Rewrite each using $P \to Q \equiv \neg P \lor Q$, then compare.'
+  walkthrough: |
+    1. $A \to (B \lor C)$ is equivalent to $\neg A \lor (B \lor C) = \neg A \lor B \lor C$.
+    2. $(A \to B) \lor C$ is equivalent to $(\neg A \lor B) \lor C = \neg A \lor B \lor C$.
+    3. Both reduce to the same formula, so they agree on every row of the truth table.
+    4. Yes: they are logically equivalent, producing identical truth values for all assignments.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $P \land (Q \lor R)$ mean the same as $(P \land Q) \lor R$?'
+  answer: 3
+  options:
+    - 'Yes; $\land$ and $\lor$ can be freely regrouped'
+    - Yes; they are logically equivalent
+    - No; the main operators differ and they produce different truth values on some rows
+    - No; the first formula is not well-formed
+  hint: 'Try $P$=F, $Q$=F, $R$=T.'
+  walkthrough: |
+    1. $P \land (Q \lor R)$: main operator is $\land$.
+    2. $(P \land Q) \lor R$: main operator is $\lor$.
+    3. Test: $P$=F, $Q$=F, $R$=T. First: F$\land$(F$\lor$T) = F$\land$T = F. Second: (F$\land$F)$\lor$T = F$\lor$T = T. Different.
+    4. The formulas differ: they have different main operators and produce different truth values.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg (P \to Q)$ mean the same as $(\neg P \to Q)$?'
+  answer: 2
+  options:
+    - 'Yes; $\neg$ always applies to $P$ regardless'
+    - 'No; in the first, $\neg$ governs the whole conditional; in the second, $\neg$ governs only $P$'
+    - Yes; they produce the same truth values
+    - No; the second formula is not well-formed
+  hint: 'Compare what $\neg$ applies to in each formula.'
+  walkthrough: |
+    1. $\neg (P \to Q)$: $\neg$ governs $(P \to Q)$. True only when $P$=T, $Q$=F.
+    2. $(\neg P \to Q)$: $\neg$ governs only $P$. Equivalent to $P \lor Q$.
+    3. Test: $P$=F, $Q$=T. First: $\neg$(F$\to$T) = $\neg$T = F. Second: T$\to$T = T. Different.
+    4. The formulas differ: in the first, $\neg$ governs the conditional; in the second, $\neg$ governs only $P$.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg \neg A$ mean the same as $\neg (\neg A)$?'
+  answer: 1
+  options:
+    - 'Yes; adding brackets around $\neg A$ does not change what the outer $\neg$ governs'
+    - 'No; the brackets change the scope of $\neg$'
+    - 'Yes, but only when $A$ is true'
+    - 'No; $\neg (\neg A)$ is not well-formed'
+  hint: 'The outer $\neg$ already applies to $\neg A$. Do brackets change that?'
+  walkthrough: |
+    1. $\neg \neg A$: outer $\neg$ applies to $\neg A$.
+    2. $\neg (\neg A)$: outer $\neg$ applies to $(\neg A)$, which is the same as $\neg A$.
+    3. The brackets are redundant; both formulas have identical structure.
+    4. Yes: adding brackets around $\neg A$ does not change what the outer $\neg$ governs.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $(A \to B) \land C$ mean the same as $A \to (B \land C)$?'
+  answer: 4
+  options:
+    - Yes; they are logically equivalent
+    - 'Yes; $\to$ and $\land$ associate freely'
+    - 'No, but only when $A$ is true'
+    - No; the main operators differ and they can produce different truth values
+  hint: 'Try $A$=F, $B$=T, $C$=F.'
+  walkthrough: |
+    1. $(A \to B) \land C$: main operator is $\land$.
+    2. $A \to (B \land C)$: main operator is $\to$.
+    3. Test: $A$=F, $B$=T, $C$=F. First: (F$\to$T)$\land$F = T$\land$F = F. Second: F$\to$(T$\land$F) = F$\to$F = T. Different.
+    4. The formulas differ: the main operators differ and they can produce different truth values.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg (A \land B)$ mean the same as $(\neg A \land \neg B)$?'
+  answer: 3
+  options:
+    - Yes; negating a conjunction negates each part
+    - Yes; De Morgan confirms they are equivalent
+    - 'No; $\neg (A \land B)$ is equivalent to $(\neg A \lor \neg B)$, not $(\neg A \land \neg B)$'
+    - No; the first is not a well-formed formula
+  hint: 'Test $A$=T, $B$=F. First: $\neg$(F)=T. Second: F$\land$T=F.'
+  walkthrough: |
+    1. Test: $A$=T, $B$=F. $\neg (A \land B)$= $\neg$(T$\land$F) = $\neg$F = T.
+    2. $(\neg A \land \neg B)$ = (F$\land$T) = F. Different.
+    3. By De Morgan, $\neg (A \land B)$ = $(\neg A \lor \neg B)$, not $(\neg A \land \neg B)$.
+    4. The formulas are not equivalent: $\neg (A \land B)$ equals $(\neg A \lor \neg B)$, not $(\neg A \land \neg B)$.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $(P \lor Q) \to R$ mean the same as $P \lor (Q \to R)$?'
+  answer: 2
+  options:
+    - Yes; they are logically equivalent
+    - No; the main operators differ and they can produce different truth values
+    - Yes; the grouping does not affect the result
+    - No; the second formula is not well-formed
+  hint: 'Try $P$=T, $Q$=T, $R$=F.'
+  walkthrough: |
+    1. $(P \lor Q) \to R$: main operator is $\to$.
+    2. $P \lor (Q \to R)$: main operator is $\lor$.
+    3. Test: $P$=T, $Q$=T, $R$=F. First: (T$\lor$T)$\to$F = T$\to$F = F. Second: T$\lor$(T$\to$F) = T$\lor$F = T. Different.
+    4. The formulas differ: the main operators differ and they can produce different truth values.
+  tags:
+    - brackets-change-meaning
+
+- type: mcq
+  question: 'Does $\neg P \to Q$ mean the same as $\neg (P \to Q)$?'
+  answer: 3
+  options:
+    - 'Yes; $\neg$ applies to the conditional in both'
+    - Yes; brackets do not matter for negation
+    - 'No; in the first, $\neg$ governs only $P$ and the main operator is $\to$; in the second, $\neg$ governs $(P \to Q)$'
+    - No; the first formula is not well-formed
+  hint: 'Compare what $\neg$ applies to in each formula.'
+  walkthrough: |
+    1. $\neg P \to Q$: $\neg$ applies to $P$ only. Main operator is $\to$.
+    2. $\neg (P \to Q)$: $\neg$ applies to the whole conditional. Main operator is $\neg$.
+    3. Test: $P$=T, $Q$=T. First: F$\to$T = T. Second: $\neg$(T$\to$T) = $\neg$T = F. Different.
+    4. The formulas differ: in the first, $\neg$ governs only $P$; in the second, $\neg$ governs the conditional.
+  tags:
+    - brackets-change-meaning

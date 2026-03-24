@@ -1,0 +1,746 @@
+- type: truth-table
+  question: 'Complete the truth table for $\neg P$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+  hiddenFormulas:
+    - '$\neg P$'
+  hint: Negation flips each truth value.
+  walkthrough: |
+    1. Row 1: $P$ = T, so $\neg P$ = F.
+    2. Row 2: $P$ = F, so $\neg P$ = T.
+    3. The values are: F, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+  hiddenFormulas:
+    - '$(P \land Q)$'
+  hint: Conjunction is true only when both inputs are true.
+  walkthrough: |
+    1. Row 1: T $\land$ T = T.
+    2. Row 2: T $\land$ F = F.
+    3. Row 3: F $\land$ T = F.
+    4. Row 4: F $\land$ F = F.
+    5. The values are: T, F, F, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q)$'
+  hiddenFormulas:
+    - '$(P \lor Q)$'
+  hint: Disjunction is false only when both inputs are false.
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T.
+    2. Row 2: T $\lor$ F = T.
+    3. Row 3: F $\lor$ T = T.
+    4. Row 4: F $\lor$ F = F.
+    5. The values are: T, T, T, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \to Q)$'
+  hiddenFormulas:
+    - '$(P \to Q)$'
+  hint: The conditional is false only when the antecedent is true and the consequent is false.
+  walkthrough: |
+    1. Row 1: T $\to$ T = T.
+    2. Row 2: T $\to$ F = F.
+    3. Row 3: F $\to$ T = T (vacuous truth).
+    4. Row 4: F $\to$ F = T (vacuous truth).
+    5. The values are: T, F, T, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \leftrightarrow Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \leftrightarrow Q)$'
+  hiddenFormulas:
+    - '$(P \leftrightarrow Q)$'
+  hint: The biconditional is true when both sides have the same truth value.
+  walkthrough: |
+    1. Row 1: T $\leftrightarrow$ T = T.
+    2. Row 2: T $\leftrightarrow$ F = F.
+    3. Row 3: F $\leftrightarrow$ T = F.
+    4. Row 4: F $\leftrightarrow$ F = T.
+    5. The values are: T, F, F, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg \neg P$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$\neg \neg P$'
+  hiddenFormulas:
+    - '$\neg \neg P$'
+  hint: 'Negate $P$ first, then negate the result.'
+  walkthrough: |
+    1. Row 1: $\neg$T = F; $\neg$F = T.
+    2. Row 2: $\neg$F = T; $\neg$T = F.
+    3. The values are: T, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(Q \land P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(Q \land P)$'
+  hiddenFormulas:
+    - '$(Q \land P)$'
+  hint: 'Conjunction is commutative: $Q \land P$ has the same result as $P \land Q$.'
+  walkthrough: |
+    1. Row 1: T $\land$ T = T.
+    2. Row 2: F $\land$ T = F.
+    3. Row 3: T $\land$ F = F.
+    4. Row 4: F $\land$ F = F.
+    5. The values are: T, F, F, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(Q \to P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(Q \to P)$'
+  hiddenFormulas:
+    - '$(Q \to P)$'
+  hint: The conditional is false only when the antecedent ($Q$) is true and the consequent ($P$) is false.
+  walkthrough: |
+    1. Row 1: $Q$ = T, $P$ = T; T $\to$ T = T.
+    2. Row 2: $Q$ = F, $P$ = T; F $\to$ T = T.
+    3. Row 3: $Q$ = T, $P$ = F; T $\to$ F = F.
+    4. Row 4: $Q$ = F, $P$ = F; F $\to$ F = T.
+    5. The values are: T, T, F, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor P)$.'
+  formulas:
+    - $P$
+    - '$(P \lor P)$'
+  hiddenFormulas:
+    - '$(P \lor P)$'
+  hint: A disjunction of $P$ with itself yields the same value as $P$.
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T.
+    2. Row 2: F $\lor$ F = F.
+    3. The values are: T, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land P)$.'
+  formulas:
+    - $P$
+    - '$(P \land P)$'
+  hiddenFormulas:
+    - '$(P \land P)$'
+  hint: A conjunction of $P$ with itself yields the same value as $P$.
+  walkthrough: |
+    1. Row 1: T $\land$ T = T.
+    2. Row 2: F $\land$ F = F.
+    3. The values are: T, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to P)$.'
+  formulas:
+    - $P$
+    - '$(P \to P)$'
+  hiddenFormulas:
+    - '$(P \to P)$'
+  hint: A conditional with the same sentence on both sides is always true.
+  walkthrough: |
+    1. Row 1: T $\to$ T = T.
+    2. Row 2: F $\to$ F = T.
+    3. The values are: T, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg Q$'
+  hiddenFormulas:
+    - '$\neg Q$'
+  hint: 'Negation flips each value of $Q$, regardless of $P$.'
+  walkthrough: |
+    1. Row 1: $Q$ = T, so $\neg Q$ = F.
+    2. Row 2: $Q$ = F, so $\neg Q$ = T.
+    3. Row 3: $Q$ = T, so $\neg Q$ = F.
+    4. Row 4: $Q$ = F, so $\neg Q$ = T.
+    5. The values are: F, T, F, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(Q \lor P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(Q \lor P)$'
+  hiddenFormulas:
+    - '$(Q \lor P)$'
+  hint: 'Disjunction is commutative: $Q \lor P$ equals $P \lor Q$.'
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T.
+    2. Row 2: F $\lor$ T = T.
+    3. Row 3: T $\lor$ F = T.
+    4. Row 4: F $\lor$ F = F.
+    5. The values are: T, T, T, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \leftrightarrow P)$.'
+  formulas:
+    - $P$
+    - '$(P \leftrightarrow P)$'
+  hiddenFormulas:
+    - '$(P \leftrightarrow P)$'
+  hint: The biconditional is true when both sides match. Both sides are the same letter.
+  walkthrough: |
+    1. Row 1: T $\leftrightarrow$ T = T.
+    2. Row 2: F $\leftrightarrow$ F = T.
+    3. The values are: T, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(Q \leftrightarrow P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(Q \leftrightarrow P)$'
+  hiddenFormulas:
+    - '$(Q \leftrightarrow P)$'
+  hint: 'The biconditional is commutative: $Q \leftrightarrow P$ equals $P \leftrightarrow Q$.'
+  walkthrough: |
+    1. Row 1: T $\leftrightarrow$ T = T.
+    2. Row 2: F $\leftrightarrow$ T = F.
+    3. Row 3: T $\leftrightarrow$ F = F.
+    4. Row 4: F $\leftrightarrow$ F = T.
+    5. The values are: T, F, F, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \lor Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q)$'
+    - '$\neg (P \lor Q)$'
+  hiddenFormulas:
+    - '$\neg (P \lor Q)$'
+  hint: 'Compute $(P \lor Q)$ first, then negate the result.'
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T; $\neg$T = F.
+    2. Row 2: T $\lor$ F = T; $\neg$T = F.
+    3. Row 3: F $\lor$ T = T; $\neg$T = F.
+    4. Row 4: F $\lor$ F = F; $\neg$F = T.
+    5. The values are: F, F, F, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land \neg P)$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$(P \land \neg P)$'
+  hiddenFormulas:
+    - '$(P \land \neg P)$'
+  hint: '$P$ and $\neg P$ always have opposite values, so their conjunction is always false.'
+  walkthrough: |
+    1. Row 1: T $\land$ F = F.
+    2. Row 2: F $\land$ T = F.
+    3. The values are: F, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor \neg P)$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$(P \lor \neg P)$'
+  hiddenFormulas:
+    - '$(P \lor \neg P)$'
+  hint: '$P$ and $\neg P$ always have opposite values, so their disjunction is always true.'
+  walkthrough: |
+    1. Row 1: T $\lor$ F = T.
+    2. Row 2: F $\lor$ T = T.
+    3. The values are: T, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(\neg P \to Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$(\neg P \to Q)$'
+  hiddenFormulas:
+    - '$(\neg P \to Q)$'
+  hint: 'Compute $\neg P$ first, then evaluate the conditional $\neg P \to Q$.'
+  walkthrough: |
+    1. Row 1: $\neg$T = F; F $\to$ T = T.
+    2. Row 2: $\neg$T = F; F $\to$ F = T.
+    3. Row 3: $\neg$F = T; T $\to$ T = T.
+    4. Row 4: $\neg$F = T; T $\to$ F = F.
+    5. The values are: T, T, T, F.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to \neg Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg Q$'
+    - '$(P \to \neg Q)$'
+  hiddenFormulas:
+    - '$(P \to \neg Q)$'
+  hint: 'Compute $\neg Q$ first, then evaluate $P \to \neg Q$.'
+  walkthrough: |
+    1. Row 1: $\neg$T = F; T $\to$ F = F.
+    2. Row 2: $\neg$F = T; T $\to$ T = T.
+    3. Row 3: $\neg$T = F; F $\to$ F = T.
+    4. Row 4: $\neg$F = T; F $\to$ T = T.
+    5. The values are: F, T, T, T.
+  tags:
+    - simple-truth-table-eval
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \lor Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg P \lor Q$'
+  hiddenFormulas:
+    - '$\neg P \lor Q$'
+  hint: 'First compute $\neg P$, then evaluate $\neg P \lor Q$.'
+  walkthrough: |
+    1. Row 1: $\neg$T = F; F $\lor$ T = T.
+    2. Row 2: $\neg$T = F; F $\lor$ F = F.
+    3. Row 3: $\neg$F = T; T $\lor$ T = T.
+    4. Row 4: $\neg$F = T; T $\lor$ F = T.
+    5. The values are: T, F, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land Q) \to P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+    - '$(P \land Q) \to P$'
+  hiddenFormulas:
+    - '$(P \land Q) \to P$'
+  hint: 'Compute $(P \land Q)$ first, then evaluate the conditional with $P$.'
+  walkthrough: |
+    1. Row 1: T $\land$ T = T; T $\to$ T = T.
+    2. Row 2: T $\land$ F = F; F $\to$ T = T.
+    3. Row 3: F $\land$ T = F; F $\to$ F = T.
+    4. Row 4: F $\land$ F = F; F $\to$ F = T.
+    5. The values are: T, T, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \land Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+    - '$\neg (P \land Q)$'
+  hiddenFormulas:
+    - '$\neg (P \land Q)$'
+  hint: 'Compute $(P \land Q)$ first, then negate.'
+  walkthrough: |
+    1. Row 1: T $\land$ T = T; $\neg$T = F.
+    2. Row 2: T $\land$ F = F; $\neg$F = T.
+    3. Row 3: F $\land$ T = F; $\neg$F = T.
+    4. Row 4: F $\land$ F = F; $\neg$F = T.
+    5. The values are: F, T, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $P \to (P \lor Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q)$'
+    - '$P \to (P \lor Q)$'
+  hiddenFormulas:
+    - '$P \to (P \lor Q)$'
+  hint: 'Compute $(P \lor Q)$ first, then evaluate $P \to$ result.'
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T; T $\to$ T = T.
+    2. Row 2: T $\lor$ F = T; T $\to$ T = T.
+    3. Row 3: F $\lor$ T = T; F $\to$ T = T.
+    4. Row 4: F $\lor$ F = F; F $\to$ F = T.
+    5. The values are: T, T, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q) \land (Q \to P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \to Q)$'
+    - '$(Q \to P)$'
+    - '$(P \to Q) \land (Q \to P)$'
+  hiddenFormulas:
+    - '$(P \to Q) \land (Q \to P)$'
+  hint: 'Compute both conditionals, then conjoin them.'
+  walkthrough: |
+    1. Row 1: T$\to$T=T, T$\to$T=T, T$\land$T=T.
+    2. Row 2: T$\to$F=F, F$\to$T=T, F$\land$T=F.
+    3. Row 3: F$\to$T=T, T$\to$F=F, T$\land$F=F.
+    4. Row 4: F$\to$F=T, F$\to$F=T, T$\land$T=T.
+    5. The values are: T, F, F, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $P \land (Q \lor P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(Q \lor P)$'
+    - '$P \land (Q \lor P)$'
+  hiddenFormulas:
+    - '$P \land (Q \lor P)$'
+  hint: 'Compute $(Q \lor P)$ first, then conjoin with $P$.'
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T; T $\land$ T = T.
+    2. Row 2: F $\lor$ T = T; T $\land$ T = T.
+    3. Row 3: T $\lor$ F = T; F $\land$ T = F.
+    4. Row 4: F $\lor$ F = F; F $\land$ F = F.
+    5. The values are: T, T, F, F.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q) \to Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q)$'
+    - '$(P \lor Q) \to Q$'
+  hiddenFormulas:
+    - '$(P \lor Q) \to Q$'
+  hint: 'Compute $(P \lor Q)$ first, then evaluate the conditional with $Q$ as consequent.'
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T; T $\to$ T = T.
+    2. Row 2: T $\lor$ F = T; T $\to$ F = F.
+    3. Row 3: F $\lor$ T = T; T $\to$ T = T.
+    4. Row 4: F $\lor$ F = F; F $\to$ F = T.
+    5. The values are: T, F, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \to \neg Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg Q$'
+    - '$\neg P \to \neg Q$'
+  hiddenFormulas:
+    - '$\neg P \to \neg Q$'
+  hint: 'Compute $\neg P$ and $\neg Q$ first, then evaluate the conditional.'
+  walkthrough: |
+    1. Row 1: $\neg$T=F, $\neg$T=F; F$\to$F=T.
+    2. Row 2: $\neg$T=F, $\neg$F=T; F$\to$T=T.
+    3. Row 3: $\neg$F=T, $\neg$T=F; T$\to$F=F.
+    4. Row 4: $\neg$F=T, $\neg$F=T; T$\to$T=T.
+    5. The values are: T, T, F, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \to Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \to Q)$'
+    - '$\neg (P \to Q)$'
+  hiddenFormulas:
+    - '$\neg (P \to Q)$'
+  hint: 'Compute $(P \to Q)$ first, then negate the result.'
+  walkthrough: |
+    1. Row 1: T $\to$ T = T; $\neg$T = F.
+    2. Row 2: T $\to$ F = F; $\neg$F = T.
+    3. Row 3: F $\to$ T = T; $\neg$T = F.
+    4. Row 4: F $\to$ F = T; $\neg$T = F.
+    5. The values are: F, T, F, F.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q) \land \neg P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q)$'
+    - '$\neg P$'
+    - '$(P \lor Q) \land \neg P$'
+  hiddenFormulas:
+    - '$(P \lor Q) \land \neg P$'
+  hint: 'Compute $(P \lor Q)$ and $\neg P$ first, then conjoin them.'
+  walkthrough: |
+    1. Row 1: T$\lor$T=T, $\neg$T=F; T$\land$F=F.
+    2. Row 2: T$\lor$F=T, $\neg$T=F; T$\land$F=F.
+    3. Row 3: F$\lor$T=T, $\neg$F=T; T$\land$T=T.
+    4. Row 4: F$\lor$F=F, $\neg$F=T; F$\land$T=F.
+    5. The values are: F, F, T, F.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $P \leftrightarrow \neg Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg Q$'
+    - '$P \leftrightarrow \neg Q$'
+  hiddenFormulas:
+    - '$P \leftrightarrow \neg Q$'
+  hint: 'Compute $\neg Q$ first, then evaluate $P \leftrightarrow \neg Q$.'
+  walkthrough: |
+    1. Row 1: $\neg$T=F; T$\leftrightarrow$F=F.
+    2. Row 2: $\neg$F=T; T$\leftrightarrow$T=T.
+    3. Row 3: $\neg$T=F; F$\leftrightarrow$F=T.
+    4. Row 4: $\neg$F=T; F$\leftrightarrow$T=F.
+    5. The values are: F, T, T, F.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \lor \neg Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg Q$'
+    - '$\neg P \lor \neg Q$'
+  hiddenFormulas:
+    - '$\neg P \lor \neg Q$'
+  hint: 'Compute $\neg P$ and $\neg Q$ first, then evaluate the disjunction.'
+  walkthrough: |
+    1. Row 1: $\neg$T=F, $\neg$T=F; F$\lor$F=F.
+    2. Row 2: $\neg$T=F, $\neg$F=T; F$\lor$T=T.
+    3. Row 3: $\neg$F=T, $\neg$T=F; T$\lor$F=T.
+    4. Row 4: $\neg$F=T, $\neg$F=T; T$\lor$T=T.
+    5. The values are: F, T, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land Q) \to Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+    - '$(P \land Q) \to Q$'
+  hiddenFormulas:
+    - '$(P \land Q) \to Q$'
+  hint: 'Compute $(P \land Q)$ first, then evaluate the conditional with $Q$ as consequent.'
+  walkthrough: |
+    1. Row 1: T$\land$T=T; T$\to$T=T.
+    2. Row 2: T$\land$F=F; F$\to$F=T.
+    3. Row 3: F$\land$T=F; F$\to$T=T.
+    4. Row 4: F$\land$F=F; F$\to$F=T.
+    5. The values are: T, T, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \land \neg Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg Q$'
+    - '$\neg P \land \neg Q$'
+  hiddenFormulas:
+    - '$\neg P \land \neg Q$'
+  hint: 'Compute $\neg P$ and $\neg Q$ first, then conjoin them.'
+  walkthrough: |
+    1. Row 1: $\neg$T=F, $\neg$T=F; F$\land$F=F.
+    2. Row 2: $\neg$T=F, $\neg$F=T; F$\land$T=F.
+    3. Row 3: $\neg$F=T, $\neg$T=F; T$\land$F=F.
+    4. Row 4: $\neg$F=T, $\neg$F=T; T$\land$T=T.
+    5. The values are: F, F, F, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q) \lor P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \to Q)$'
+    - '$(P \to Q) \lor P$'
+  hiddenFormulas:
+    - '$(P \to Q) \lor P$'
+  hint: 'Compute $(P \to Q)$ first, then evaluate the disjunction with $P$.'
+  walkthrough: |
+    1. Row 1: T$\to$T=T; T$\lor$T=T.
+    2. Row 2: T$\to$F=F; F$\lor$T=T.
+    3. Row 3: F$\to$T=T; T$\lor$F=T.
+    4. Row 4: F$\to$F=T; T$\lor$F=T.
+    5. The values are: T, T, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $Q \to (P \land Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+    - '$Q \to (P \land Q)$'
+  hiddenFormulas:
+    - '$Q \to (P \land Q)$'
+  hint: 'Compute $(P \land Q)$ first, then evaluate $Q \to (P \land Q)$.'
+  walkthrough: |
+    1. Row 1: T$\land$T=T; T$\to$T=T.
+    2. Row 2: T$\land$F=F; F$\to$F=T.
+    3. Row 3: F$\land$T=F; T$\to$F=F.
+    4. Row 4: F$\land$F=F; F$\to$F=T.
+    5. The values are: T, T, F, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q) \leftrightarrow (Q \lor P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q)$'
+    - '$(Q \lor P)$'
+    - '$(P \lor Q) \leftrightarrow (Q \lor P)$'
+  hiddenFormulas:
+    - '$(P \lor Q) \leftrightarrow (Q \lor P)$'
+  hint: 'Disjunction is commutative, so both sides always match.'
+  walkthrough: |
+    1. Row 1: T$\lor$T=T, T$\lor$T=T; T$\leftrightarrow$T=T.
+    2. Row 2: T$\lor$F=T, F$\lor$T=T; T$\leftrightarrow$T=T.
+    3. Row 3: F$\lor$T=T, T$\lor$F=T; T$\leftrightarrow$T=T.
+    4. Row 4: F$\lor$F=F, F$\lor$F=F; F$\leftrightarrow$F=T.
+    5. The values are: T, T, T, T.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \leftrightarrow Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \leftrightarrow Q)$'
+    - '$\neg (P \leftrightarrow Q)$'
+  hiddenFormulas:
+    - '$\neg (P \leftrightarrow Q)$'
+  hint: 'Compute $(P \leftrightarrow Q)$ first, then negate.'
+  walkthrough: |
+    1. Row 1: T$\leftrightarrow$T=T; $\neg$T=F.
+    2. Row 2: T$\leftrightarrow$F=F; $\neg$F=T.
+    3. Row 3: F$\leftrightarrow$T=F; $\neg$F=T.
+    4. Row 4: F$\leftrightarrow$F=T; $\neg$T=F.
+    5. The values are: F, T, T, F.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land Q) \lor P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+    - '$(P \land Q) \lor P$'
+  hiddenFormulas:
+    - '$(P \land Q) \lor P$'
+  hint: 'Compute $(P \land Q)$ first, then evaluate the disjunction with $P$.'
+  walkthrough: |
+    1. Row 1: T$\land$T=T; T$\lor$T=T.
+    2. Row 2: T$\land$F=F; F$\lor$T=T.
+    3. Row 3: F$\land$T=F; F$\lor$F=F.
+    4. Row 4: F$\land$F=F; F$\lor$F=F.
+    5. The values are: T, T, F, F.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg Q \to P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg Q$'
+    - '$\neg Q \to P$'
+  hiddenFormulas:
+    - '$\neg Q \to P$'
+  hint: 'Compute $\neg Q$ first, then evaluate the conditional $\neg Q \to P$.'
+  walkthrough: |
+    1. Row 1: $\neg$T=F; F$\to$T=T.
+    2. Row 2: $\neg$F=T; T$\to$T=T.
+    3. Row 3: $\neg$T=F; F$\to$F=T.
+    4. Row 4: $\neg$F=T; T$\to$F=F.
+    5. The values are: T, T, T, F.
+  tags:
+    - multi-connective-simple
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \land Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg P \land Q$'
+  hiddenFormulas:
+    - '$\neg P \land Q$'
+  hint: 'Compute $\neg P$ first, then evaluate $\neg P \land Q$.'
+  walkthrough: |
+    1. Row 1: $\neg$T = F; F $\land$ T = F.
+    2. Row 2: $\neg$T = F; F $\land$ F = F.
+    3. Row 3: $\neg$F = T; T $\land$ T = T.
+    4. Row 4: $\neg$F = T; T $\land$ F = F.
+    5. The values are: F, F, T, F.
+  tags:
+    - diagnostic

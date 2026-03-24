@@ -1,0 +1,1378 @@
+- type: mcq
+  question: 'Is the following a sentence in logic? "The Nile is the longest river in Africa."'
+  answer: 1
+  options:
+    - Yes; it makes a claim that is either true or false
+    - No; it is a geographical opinion
+    - 'No; it is a description, not a sentence'
+    - 'Yes, but only if we can verify the claim'
+  hint: Does it declare something that could be true or false?
+  walkthrough: |
+    1. The expression claims the Nile is the longest river in Africa.
+    2. This is a declarative statement: it asserts a fact about the world.
+    3. It can be checked and is either true or false.
+    4. It is a sentence in logic because it makes a claim that can be true or false.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Hand me the wrench."'
+  answer: 3
+  options:
+    - Yes; it describes an action that could happen
+    - Yes; the speaker either hands you the wrench or not
+    - 'No; it is a command, which cannot be true or false'
+    - No; it is a question in disguise
+  hint: Commands tell someone to do something. Can you assign true or false to a command?
+  walkthrough: |
+    1. "Hand me the wrench" tells someone to do something.
+    2. A command is not a claim about the world; it is an instruction.
+    3. You can obey or ignore it, but neither makes the command true or false.
+    4. It is a command, which cannot be true or false.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "How many planets are in the solar system?"'
+  answer: 2
+  options:
+    - 'Yes; the answer is a number, so it has a truth value'
+    - 'No; it is a question, which cannot be true or false'
+    - No; it is too vague to count as a sentence
+    - Yes; it is either true or false that someone asked it
+  hint: Questions request information. Does a request have a truth value?
+  walkthrough: |
+    1. The expression asks for information about the solar system.
+    2. A question requests an answer; it does not assert anything.
+    3. Because it makes no claim, it cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Jupiter has at least 80 moons."'
+  answer: 4
+  options:
+    - No; nobody can count that many moons
+    - No; the exact number is uncertain
+    - 'Yes, but only if astronomers have confirmed it'
+    - Yes; it makes a factual claim that is either true or false
+  hint: A sentence does not need to be verified; it only needs to be capable of being true or false.
+  walkthrough: |
+    1. The expression claims Jupiter has at least 80 moons.
+    2. This is a declarative statement about a fact.
+    3. Whether or not we know the exact count, the claim is either true or false.
+    4. It is a sentence in logic because it makes a factual claim.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Hooray!"'
+  answer: 2
+  options:
+    - Yes; it expresses that something good happened
+    - 'No; it is an exclamation, which cannot be true or false'
+    - No; it is too short to be a sentence
+    - Yes; it is true that the speaker is excited
+  hint: Exclamations express feelings. Does expressing a feeling make a claim?
+  walkthrough: |
+    1. "Hooray!" expresses enthusiasm or celebration.
+    2. It does not declare anything about the world.
+    3. Because it makes no claim, it cannot be assigned a truth value.
+    4. It is an exclamation, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Lightning struck the old oak tree."'
+  answer: 1
+  options:
+    - Yes; it declares something that is either true or false
+    - No; it describes a past event we cannot verify
+    - 'No; it is a story, not a sentence'
+    - 'Yes, but only if there were witnesses'
+  hint: Does it make a claim about the world that could be true or false?
+  walkthrough: |
+    1. The expression asserts that lightning struck a specific tree.
+    2. This is a declarative statement about an event.
+    3. It is either true or false that lightning struck that tree.
+    4. It is a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Could you pass the salt?"'
+  answer: 3
+  options:
+    - Yes; you either could or could not pass the salt
+    - Yes; it has a yes/no answer
+    - 'No; it is a request, which cannot be true or false'
+    - No; it is a command disguised as a question
+  hint: 'Despite its phrasing, is this making a claim or asking for something?'
+  walkthrough: |
+    1. "Could you pass the salt?" functions as a polite request.
+    2. It asks someone to perform an action; it does not assert a fact.
+    3. Because it does not make a claim, it cannot be true or false.
+    4. It is a request, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "There are more stars in the universe than grains of sand on Earth."'
+  answer: 2
+  options:
+    - No; we cannot count either quantity exactly
+    - Yes; it makes a factual claim that is either true or false
+    - No; it is a metaphor
+    - 'Yes, but only if scientists agree'
+  hint: A sentence does not require proof; it just needs to be capable of being true or false.
+  walkthrough: |
+    1. The expression compares two quantities and makes a definite claim.
+    2. This claim is either true or false, regardless of whether we can verify it.
+    3. Verification is not required for something to count as a sentence.
+    4. It is a sentence in logic because it makes a claim that can be true or false.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Bravo!"'
+  answer: 4
+  options:
+    - 'Yes; the speaker is praising something, which is either deserved or not'
+    - No; it is too short
+    - 'Yes; it expresses approval, which can be true or false'
+    - No; it is an exclamation that makes no claim
+  hint: 'Does "Bravo!" assert anything about the world?'
+  walkthrough: |
+    1. "Bravo!" is an exclamation used to express approval or admiration.
+    2. It does not claim anything that could be true or false.
+    3. No truth value can be assigned to a mere expression of feeling.
+    4. It is an exclamation, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Electrons have a negative charge."'
+  answer: 1
+  options:
+    - Yes; it makes a factual claim that is either true or false
+    - 'No; it is a scientific definition, not a sentence'
+    - No; only observable facts can be sentences
+    - 'Yes, but only within the domain of physics'
+  hint: Does it declare something that could be true or false?
+  walkthrough: |
+    1. The expression claims that electrons have a negative charge.
+    2. This is a declarative statement about a property of electrons.
+    3. It is either true or false.
+    4. It is a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Put your phone on silent."'
+  answer: 3
+  options:
+    - Yes; either you put it on silent or you do not
+    - Yes; it predicts a future action
+    - 'No; it is a command, which cannot be true or false'
+    - 'No; it is a suggestion, not a command'
+  hint: Is this expression telling someone to do something?
+  walkthrough: |
+    1. "Put your phone on silent" directs someone to perform an action.
+    2. This is a command; it does not assert a fact.
+    3. Commands are obeyed or disobeyed, not true or false.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "The speed of light is approximately 300,000 km/s."'
+  answer: 2
+  options:
+    - 'No; "approximately" makes it too vague'
+    - Yes; it makes a claim that is either true or false
+    - 'No; it is a measurement, not a sentence'
+    - 'Yes, but only in a scientific context'
+  hint: Does the expression declare something about the world?
+  walkthrough: |
+    1. The expression asserts a specific approximate value for the speed of light.
+    2. "Approximately 300,000 km/s" is still a definite claim.
+    3. That claim is either true or false.
+    4. It is a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "What a beautiful day!"'
+  answer: 4
+  options:
+    - Yes; it claims the day is beautiful
+    - No; it is a question about the weather
+    - Yes; beauty is subjective but can still be true or false
+    - 'No; it is an exclamation, not a claim'
+  hint: Does this expression assert a fact or express a feeling?
+  walkthrough: |
+    1. "What a beautiful day!" expresses admiration or delight.
+    2. It does not assert a proposition that could be evaluated as true or false.
+    3. It is an exclamation, not a declarative statement.
+    4. It is an exclamation, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Some dinosaurs had feathers."'
+  answer: 1
+  options:
+    - Yes; it makes a claim about dinosaurs that is either true or false
+    - No; we cannot observe dinosaurs directly
+    - 'No; it is speculation, not a factual claim'
+    - 'Yes, but only if fossil evidence supports it'
+  hint: Does verification matter for something to be a sentence in logic?
+  walkthrough: |
+    1. The expression claims that some dinosaurs had feathers.
+    2. This is a declarative statement about the natural world.
+    3. It is either true or false, regardless of whether we can prove it.
+    4. It is a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Do not feed the animals."'
+  answer: 3
+  options:
+    - Yes; either the animals are fed or they are not
+    - 'No; it is a warning, which is neither true nor false'
+    - 'No; it is a command, which cannot be true or false'
+    - Yes; it states a rule that can be true or false
+  hint: Is this instructing someone to do (or not do) something?
+  walkthrough: |
+    1. "Do not feed the animals" tells someone to refrain from an action.
+    2. This is a command (a prohibition).
+    3. A command cannot be true or false; it can only be obeyed or disobeyed.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "You will finish the project by Friday."'
+  answer: 2
+  options:
+    - No; it is a command to finish by Friday
+    - Yes; it is a prediction that is either true or false
+    - No; the future is uncertain so it has no truth value
+    - 'Yes, but only after Friday arrives'
+  hint: Is this expressing a prediction or giving an order?
+  walkthrough: |
+    1. "You will finish the project by Friday" makes a prediction about a future event.
+    2. Predictions are declarative: they claim something will happen.
+    3. That claim is either true or false (even before we find out).
+    4. It is a sentence in logic because it is a prediction, not a command.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Who wrote Hamlet?"'
+  answer: 4
+  options:
+    - 'Yes; Shakespeare wrote Hamlet, so it has a truth value'
+    - No; literary questions have no truth value
+    - Yes; it is either true or false that someone wrote Hamlet
+    - 'No; it is a question, which cannot be true or false'
+  hint: Is the expression requesting information or asserting a fact?
+  walkthrough: |
+    1. "Who wrote Hamlet?" asks for a piece of information.
+    2. It does not assert that any particular person wrote Hamlet.
+    3. Questions make no claim, so they cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "I hurt my toe."'
+  answer: 1
+  options:
+    - 'Yes; it claims a factual event occurred, which is either true or false'
+    - No; it is an exclamation of pain
+    - No; it is too subjective to be a sentence
+    - 'Yes, but only if the speaker is telling the truth'
+  hint: 'Does this expression make a factual claim, even if it sounds like a complaint?'
+  walkthrough: |
+    1. "I hurt my toe" claims that a specific event occurred.
+    2. Despite sounding like a complaint, it asserts a fact about the world.
+    3. That assertion is either true or false.
+    4. It is a sentence in logic because it makes a factual claim.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "Go away!"'
+  answer: 3
+  options:
+    - Yes; the person either goes away or does not
+    - No; it is an exclamation of frustration
+    - 'No; it is a command, which cannot be true or false'
+    - 'Yes; it can be obeyed, which makes it true'
+  hint: Does this expression tell someone to do something?
+  walkthrough: |
+    1. "Go away!" directs someone to leave.
+    2. This is a command, not a declarative statement.
+    3. Obeying or disobeying a command does not make it true or false.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Is the following a sentence in logic? "The Great Wall of China is visible from space."'
+  answer: 2
+  options:
+    - 'No; this is a myth, so it cannot be a sentence'
+    - Yes; it makes a claim that is either true or false
+    - 'No; it depends on what "visible" means'
+    - 'Yes, but only if NASA confirms it'
+  hint: Does the truth or falsity of a claim affect whether it counts as a sentence?
+  walkthrough: |
+    1. The expression claims the Great Wall is visible from space.
+    2. This is a declarative statement that asserts a fact.
+    3. Even if the claim is false, it is still either true or false.
+    4. It is a sentence in logic, regardless of whether the claim is in fact true.
+  tags:
+    - is-sentence
+
+- type: mcq
+  question: 'Context: It is 2024. The Earth orbits the Sun. Statement: "The Earth orbits the Sun." What is the truth value?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Neither; it depends on your perspective
+    - Cannot be determined
+  hint: Check whether the statement matches the facts in the given context.
+  walkthrough: |
+    1. The statement claims the Earth orbits the Sun.
+    2. According to the given context, this is the case.
+    3. The statement matches the facts.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: A standard deck of cards has 52 cards. Statement: "A standard deck of cards has 60 cards." What is the truth value?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - Neither true nor false
+  hint: Compare the number in the statement to the number in the context.
+  walkthrough: |
+    1. The statement claims a standard deck has 60 cards.
+    2. The context states a standard deck has 52 cards.
+    3. 60 does not equal 52, so the statement contradicts the context.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Water boils at 100 degrees Celsius at sea level. Statement: "Water boils at 100 degrees Celsius at sea level." What is the truth value?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - It depends on the altitude
+    - Cannot be determined without a thermometer
+  hint: 'The context specifies "at sea level." Does the statement match?'
+  walkthrough: |
+    1. The statement claims water boils at 100 degrees C at sea level.
+    2. The context confirms this exact fact.
+    3. The statement matches the context perfectly.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Tokyo is the capital of Japan. Statement: "Osaka is the capital of Japan." What is the truth value?'
+  answer: 4
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'True, because Osaka is in Japan'
+    - 'False'
+  hint: The statement names a specific city. Does it match the one given in the context?
+  walkthrough: |
+    1. The statement claims Osaka is the capital of Japan.
+    2. The context states Tokyo is the capital of Japan.
+    3. Osaka and Tokyo are different cities, so the statement contradicts the context.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Penguins cannot fly. Statement: "Penguins cannot fly." What is the truth value?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - 'Neither; "cannot" is too strong'
+    - Cannot be determined
+  hint: Does the statement match the fact given in the context?
+  walkthrough: |
+    1. The statement claims penguins cannot fly.
+    2. The context confirms this fact.
+    3. The statement matches the context.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: The Sahara is the largest hot desert on Earth. Statement: "The Sahara is the largest hot desert on Earth." What is the truth value?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - 'Neither; "largest" is subjective'
+  hint: Compare the statement directly to the facts given in the context.
+  walkthrough: |
+    1. The statement claims the Sahara is the largest hot desert on Earth.
+    2. The context states exactly this.
+    3. The statement matches the context.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Mars has two moons. Statement: "Mars has three moons." What is the truth value?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - Neither true nor false
+  hint: Compare the number in the statement to the number in the context.
+  walkthrough: |
+    1. The statement claims Mars has three moons.
+    2. The context states Mars has two moons.
+    3. Three does not equal two, so the statement contradicts the context.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: The speed of sound in air is about 343 m/s. Statement: "Sound travels faster than 300 m/s in air." What is the truth value?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - 'Cannot be determined; "about" is vague'
+    - Neither true nor false
+  hint: Is 343 m/s faster than 300 m/s?
+  walkthrough: |
+    1. The statement claims sound travels faster than 300 m/s in air.
+    2. The context says the speed of sound in air is about 343 m/s.
+    3. 343 is greater than 300, so the claim is correct.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Brazil is the largest country in South America. Statement: "Argentina is the largest country in South America." What is the truth value?'
+  answer: 4
+  options:
+    - 'True'
+    - 'True, because Argentina is large'
+    - Cannot be determined
+    - 'False'
+  hint: Which country does the context name as the largest?
+  walkthrough: |
+    1. The statement claims Argentina is the largest country in South America.
+    2. The context states Brazil holds that title.
+    3. Argentina and Brazil are different countries, so the statement contradicts the context.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: There are 7 continents on Earth. Statement: "There are 7 continents on Earth." What is the truth value?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - It depends on how you count them
+    - Cannot be determined
+  hint: Does the statement match the context?
+  walkthrough: |
+    1. The statement claims there are 7 continents on Earth.
+    2. The context confirms exactly 7.
+    3. The statement matches the context.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: An octopus has three hearts. Statement: "An octopus has one heart." What is the truth value?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - 'True, because it has at least one heart'
+  hint: 'The statement says "one heart," not "at least one heart." Compare to the context.'
+  walkthrough: |
+    1. The statement claims an octopus has one heart.
+    2. The context says an octopus has three hearts.
+    3. One does not equal three, so the claim is wrong.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: The boiling point of ethanol is 78.37 degrees Celsius. Statement: "Ethanol boils at a lower temperature than water." What is the truth value?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - "Cannot be determined without knowing water's boiling point"
+    - Neither; different substances cannot be compared
+  hint: Water boils at 100 degrees C. Is 78.37 less than 100?
+  walkthrough: |
+    1. The statement claims ethanol boils at a lower temperature than water.
+    2. Ethanol boils at 78.37 degrees C; water boils at 100 degrees C.
+    3. 78.37 is less than 100, so ethanol does boil at a lower temperature.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: The human body has 206 bones. Statement: "The human body has 206 bones." What is the truth value?'
+  answer: 4
+  options:
+    - 'False'
+    - Cannot be determined
+    - Neither; it varies by person
+    - 'True'
+  hint: Does the statement match the context exactly?
+  walkthrough: |
+    1. The statement claims the human body has 206 bones.
+    2. The context states exactly this.
+    3. The statement matches the context.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Mercury is the closest planet to the Sun. Statement: "Venus is the closest planet to the Sun." What is the truth value?'
+  answer: 3
+  options:
+    - 'True'
+    - 'True, because Venus is close to the Sun'
+    - 'False'
+    - Cannot be determined
+  hint: Which planet does the context name as closest?
+  walkthrough: |
+    1. The statement claims Venus is the closest planet to the Sun.
+    2. The context says Mercury is the closest.
+    3. Venus and Mercury are different planets, so the statement contradicts the context.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Gold has the chemical symbol Au. Statement: "The chemical symbol for gold is Au." What is the truth value?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Neither true nor false
+  hint: Compare the symbol in the statement with the symbol in the context.
+  walkthrough: |
+    1. The statement claims the chemical symbol for gold is Au.
+    2. The context confirms gold has the symbol Au.
+    3. The statement matches the context.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: The Amazon River is in South America. Statement: "The Amazon River is in Africa." What is the truth value?'
+  answer: 4
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'True, because the Amazon is a large river'
+    - 'False'
+  hint: Which continent does the context place the Amazon in?
+  walkthrough: |
+    1. The statement claims the Amazon River is in Africa.
+    2. The context states the Amazon River is in South America.
+    3. Africa and South America are different continents.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: A triangle has three sides. Statement: "A triangle has four sides." What is the truth value?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - Neither; it depends on the triangle
+  hint: Compare the number of sides claimed to the number given in the context.
+  walkthrough: |
+    1. The statement claims a triangle has four sides.
+    2. The context states a triangle has three sides.
+    3. Four does not equal three.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Why does "Please close the window" fail to be a sentence in logic?'
+  answer: 3
+  options:
+    - It is too informal
+    - It contains a vague word
+    - 'It is a command, which cannot be true or false'
+    - It is a question in disguise
+  hint: 'What type of expression is "Please close the window"?'
+  walkthrough: |
+    1. "Please close the window" tells someone to perform an action.
+    2. This makes it a command (or request).
+    3. Commands cannot be assigned a truth value; you can obey or ignore them.
+    4. It is a command, not a declarative statement.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Where did you park the car?" fail to be a sentence in logic?'
+  answer: 2
+  options:
+    - It is about a specific event
+    - 'It is a question, which requests information rather than making a claim'
+    - It is a command to reveal a location
+    - It is ambiguous
+  hint: 'Does this expression assert something, or does it ask for something?'
+  walkthrough: |
+    1. "Where did you park the car?" asks for a location.
+    2. It requests information rather than asserting a fact.
+    3. Since it makes no claim, it cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Wow, what a sunset!" fail to be a sentence in logic?'
+  answer: 1
+  options:
+    - 'It is an exclamation that expresses a reaction, not a claim'
+    - It is about something subjective
+    - Sunsets are not factual events
+    - It is a command to look at the sunset
+  hint: Exclamations express feelings or reactions. Do they make a claim?
+  walkthrough: |
+    1. "Wow, what a sunset!" expresses admiration.
+    2. It does not claim anything about the world.
+    3. Because it makes no assertion, no truth value can be assigned.
+    4. It is an exclamation that expresses a reaction, not a claim.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Stop running in the hallway" fail to be a sentence in logic?'
+  answer: 4
+  options:
+    - It describes an ongoing event
+    - It is a question about behavior
+    - It contains an ambiguous word
+    - 'It is a command, which cannot be true or false'
+  hint: Is this expression telling someone to do something?
+  walkthrough: |
+    1. "Stop running in the hallway" directs someone to cease an action.
+    2. This is a command.
+    3. A command cannot be true or false; it can only be obeyed or disobeyed.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "What is the speed of light?" fail to be a sentence in logic?'
+  answer: 3
+  options:
+    - 'The speed of light is a physical constant, not a sentence'
+    - It is a command to measure the speed of light
+    - 'It is a question, which requests information rather than stating a fact'
+    - 'It is vague because "speed" depends on the medium'
+  hint: Questions ask for information. Do they make claims?
+  walkthrough: |
+    1. "What is the speed of light?" asks for a value.
+    2. It does not assert that the speed of light is any particular number.
+    3. Since it makes no claim, it cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Yikes!" fail to be a sentence in logic?'
+  answer: 2
+  options:
+    - It is a question about fear
+    - 'It is an exclamation that expresses a reaction, not a claim'
+    - It is a command to be scared
+    - It is too short to have a truth value
+  hint: 'What type of expression is "Yikes!"?'
+  walkthrough: |
+    1. "Yikes!" is an exclamation expressing surprise or alarm.
+    2. It does not assert anything about the world.
+    3. Since it makes no claim, it cannot be true or false.
+    4. It is an exclamation, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Have you finished your homework?" fail to be a sentence in logic?'
+  answer: 1
+  options:
+    - 'It is a question that requests information, not a claim'
+    - It is a command to finish homework
+    - Homework is subjective
+    - It is an exclamation of frustration
+  hint: Is this expression asking something or stating something?
+  walkthrough: |
+    1. "Have you finished your homework?" asks for a yes/no answer.
+    2. It does not assert that homework is or is not finished.
+    3. Because it makes no claim, it cannot be true or false.
+    4. It is a question that requests information, not a claim.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Sit down and be quiet" fail to be a sentence in logic?'
+  answer: 4
+  options:
+    - 'It contains two verbs, making it ambiguous'
+    - It is a question about behavior
+    - It is an exclamation
+    - 'It is a command, which cannot be true or false'
+  hint: Is this expression directing someone to do something?
+  walkthrough: |
+    1. "Sit down and be quiet" instructs someone to perform two actions.
+    2. This is a compound command.
+    3. Commands are not true or false; they are obeyed or disobeyed.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Oh no!" fail to be a sentence in logic?'
+  answer: 3
+  options:
+    - It is a question about something bad
+    - It is a command to stop something
+    - 'It is an exclamation that expresses dismay, not a claim'
+    - It is too vague to evaluate
+  hint: 'Does "Oh no!" declare anything about the world?'
+  walkthrough: |
+    1. "Oh no!" expresses dismay or distress.
+    2. It does not make any claim about the world.
+    3. Without a claim, no truth value can be assigned.
+    4. It is an exclamation, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Which way to the station?" fail to be a sentence in logic?'
+  answer: 2
+  options:
+    - It is a command to give directions
+    - 'It is a question that requests information, not a claim'
+    - It is an exclamation of confusion
+    - It is too informal to count as a sentence
+  hint: Is this expression asking for information or asserting something?
+  walkthrough: |
+    1. "Which way to the station?" asks for directions.
+    2. It requests information; it does not assert a fact.
+    3. Because it makes no claim, it has no truth value.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Clean up this mess immediately" fail to be a sentence in logic?'
+  answer: 1
+  options:
+    - 'It is a command, which cannot be true or false'
+    - It is a question about cleanliness
+    - It is an exclamation of anger
+    - '"Immediately" makes it too vague'
+  hint: Is this telling someone to do something?
+  walkthrough: |
+    1. "Clean up this mess immediately" directs someone to perform an action.
+    2. This is a command.
+    3. Commands cannot be assigned a truth value.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Ahem!" fail to be a sentence in logic?'
+  answer: 3
+  options:
+    - It is a question about attention
+    - It is a command to pay attention
+    - It is an exclamation that makes no factual claim
+    - It has no grammatical subject
+  hint: 'Does "Ahem!" assert anything about the world?'
+  walkthrough: |
+    1. "Ahem!" is an interjection used to get attention or express disapproval.
+    2. It does not declare anything true or false about the world.
+    3. No claim is made, so no truth value can be assigned.
+    4. It is an exclamation, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "When does the train arrive?" fail to be a sentence in logic?'
+  answer: 4
+  options:
+    - Trains are too unpredictable for truth values
+    - It is a command to check the schedule
+    - It is an exclamation of impatience
+    - 'It is a question that requests information, not a claim'
+  hint: Is this expression asking or asserting?
+  walkthrough: |
+    1. "When does the train arrive?" asks for a time.
+    2. It does not claim that the train arrives at any specific time.
+    3. Since it makes no assertion, it cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Look out!" fail to be a sentence in logic?'
+  answer: 2
+  options:
+    - It is a question about danger
+    - It is a command (or warning) that does not make a factual claim
+    - It is an exclamation that has a truth value
+    - It is too vague
+  hint: 'Is "Look out!" telling someone to do something or claiming something?'
+  walkthrough: |
+    1. "Look out!" warns or commands someone to be alert.
+    2. It does not assert a fact about the world.
+    3. Commands and warnings cannot be true or false.
+    4. It is a command or warning, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "How far is the Moon from the Earth?" fail to be a sentence in logic?'
+  answer: 1
+  options:
+    - 'It is a question that requests information, not a claim'
+    - It is a command to measure the distance
+    - 'The distance varies, so it has no truth value'
+    - It is an exclamation of wonder
+  hint: Does this expression ask for information or state a fact?
+  walkthrough: |
+    1. "How far is the Moon from the Earth?" asks for a distance.
+    2. It does not assert any particular distance.
+    3. Because it makes no claim, it cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Do not touch the exhibit" fail to be a sentence in logic?'
+  answer: 3
+  options:
+    - It is a question about museum rules
+    - It is an exclamation of concern
+    - 'It is a command (prohibition), which cannot be true or false'
+    - '"Exhibit" is too vague'
+  hint: Is this instructing someone to refrain from doing something?
+  walkthrough: |
+    1. "Do not touch the exhibit" forbids an action.
+    2. This is a command in the form of a prohibition.
+    3. Commands are obeyed or disobeyed, not true or false.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Shh!" fail to be a sentence in logic?'
+  answer: 4
+  options:
+    - It is a question about noise
+    - It is too short to be meaningful
+    - It is a factual claim about silence
+    - 'It is a command to be quiet, which cannot be true or false'
+  hint: 'Is "Shh!" requesting silence or declaring something?'
+  walkthrough: |
+    1. "Shh!" tells someone to be quiet.
+    2. This is a command, not a statement about the world.
+    3. Commands cannot be assigned truth values.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "What color is the sky?" fail to be a sentence in logic?'
+  answer: 2
+  options:
+    - 'Colors are subjective, so no truth value exists'
+    - 'It is a question that asks for information, not a claim'
+    - It is a command to observe the sky
+    - It is an exclamation of curiosity
+  hint: Is this expression asking or asserting?
+  walkthrough: |
+    1. "What color is the sky?" asks for information about the sky.
+    2. It does not claim the sky is any particular color.
+    3. Because it makes no claim, it cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why is "This statement is not true" excluded from logic?'
+  answer: 2
+  options:
+    - 'It is a question, not a statement'
+    - 'It is a paradox: assuming it is true leads to it being false, and vice versa'
+    - It is vague
+    - It is a command
+  hint: 'Try assuming it is true, then try assuming it is false. What happens?'
+  walkthrough: |
+    1. Assume it is true. Then what it says holds: it is not true. Contradiction.
+    2. Assume it is false. Then "this statement is not true" is wrong, so the statement is true. Contradiction.
+    3. No consistent truth value can be assigned.
+    4. It is a paradox that violates bivalence.
+  tags:
+    - paradox
+
+- type: mcq
+  question: Which of the following is a paradox that violates bivalence?
+  answer: 4
+  options:
+    - '"The Earth is flat."'
+    - '"Is the door open?"'
+    - '"Clean your room."'
+    - '"The next thing I say will be false. The previous thing I said was true."'
+  hint: A paradox is an expression that flips between true and false with no resolution.
+  walkthrough: |
+    1. "The Earth is flat" is simply false; it has a definite truth value. Not a paradox.
+    2. "Is the door open?" is a question, not a paradox.
+    3. "Clean your room" is a command, not a paradox.
+    4. The pair of statements creates a loop: each forces the other to contradict itself, preventing any consistent truth assignment.
+    5. The pair of mutually contradicting statements is a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"I am lying right now." Why is this problematic for logic?'
+  answer: 1
+  options:
+    - 'If it is true, then the speaker is lying, making it false; if it is false, the speaker is not lying, making it true'
+    - 'It is vague because "lying" has no clear boundary'
+    - It is a command to stop lying
+    - "It is a question about the speaker's honesty"
+  hint: Try both truth values and see if either is consistent.
+  walkthrough: |
+    1. Assume it is true. Then the speaker is lying, so the statement is false. Contradiction.
+    2. Assume it is false. Then the speaker is not lying, so the statement is true. Contradiction.
+    3. Neither truth value is consistent. This is a classic liar paradox.
+    4. Assuming true leads to false, and assuming false leads to true: it is a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: Which property does a paradox violate?
+  answer: 3
+  options:
+    - Ambiguity
+    - Validity
+    - 'Bivalence: the rule that every sentence is either true or false, not both'
+    - Vagueness
+  hint: Bivalence requires exactly one truth value per sentence.
+  walkthrough: |
+    1. Bivalence states every sentence must be exactly true or exactly false.
+    2. A paradox cannot settle on a single truth value.
+    3. This directly violates bivalence.
+    4. A paradox violates bivalence.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"This sentence has exactly five words." Is this a paradox?'
+  answer: 2
+  options:
+    - 'Yes; it refers to itself, so it must be a paradox'
+    - No; you can count the words and assign a definite truth value
+    - Yes; self-reference always creates paradoxes
+    - No; it is a command
+  hint: Count the words. Does the truth value flip when you assume it?
+  walkthrough: |
+    1. Count the words: "This," "sentence," "has," "exactly," "five," "words." That is six words.
+    2. The claim says five. Six does not equal five, so the sentence is false.
+    3. Assuming it is false does not create a contradiction; it stays false.
+    4. A definite truth value (false) can be assigned, so it is not a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"This sentence is true." Is this a paradox?'
+  answer: 3
+  options:
+    - Yes; self-reference always creates paradoxes
+    - Yes; it leads to an infinite loop
+    - 'No; assuming it is true is consistent, and assuming it is false is also consistent'
+    - No; it is a command
+  hint: Try both truth values. Does either assumption lead to a contradiction?
+  walkthrough: |
+    1. Assume it is true. Then "this sentence is true" holds, so it is true. No contradiction.
+    2. Assume it is false. Then "this sentence is true" is wrong, so it is false. No contradiction.
+    3. Both assignments are internally consistent (though we cannot determine which one holds).
+    4. Since no contradiction arises, it is not a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: 'Why is "The sentence below is false. The sentence above is true." paradoxical?'
+  answer: 4
+  options:
+    - Both sentences are questions
+    - Both sentences are commands
+    - They are vague
+    - 'Each sentence forces the other into a contradictory truth value, so no consistent assignment exists'
+  hint: Assume the first is true and trace what happens to the second.
+  walkthrough: |
+    1. Assume the first is true. Then the second is false, meaning "the sentence above is true" is wrong, so the first is false. Contradiction.
+    2. Assume the first is false. Then the second is true, meaning "the sentence above is true" holds, so the first is true. Contradiction.
+    3. No consistent truth assignment works for both sentences.
+    4. Each sentence forces the other into a contradiction, making this a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"All rules have exceptions, including this one." Is this a paradox?'
+  answer: 1
+  options:
+    - 'Yes; if this rule has an exception, then some rule has no exceptions, contradicting the claim'
+    - No; it is simply false
+    - No; it is a command
+    - Yes; it is a question that cannot be answered
+  hint: 'If the rule itself has an exception, what does that imply about the claim that all rules have exceptions?'
+  walkthrough: |
+    1. The statement claims every rule has an exception, including itself.
+    2. If it has an exception, then there is a rule with no exceptions. That contradicts "all rules have exceptions."
+    3. If it has no exception, then the claim is wrong about itself. Contradiction again.
+    4. The self-referential exception creates a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"The barber shaves everyone who does not shave themselves, and only them." Who shaves the barber?'
+  answer: 2
+  options:
+    - The barber shaves himself; there is no problem
+    - 'This is a paradox: if the barber shaves himself, he should not; if he does not, he should'
+    - Someone else shaves the barber
+    - The barber does not need to shave
+  hint: 'Try both options: the barber shaves himself, or the barber does not. What happens?'
+  walkthrough: |
+    1. Suppose the barber shaves himself. Then he is someone who shaves himself, so by the rule he should not shave himself. Contradiction.
+    2. Suppose the barber does not shave himself. Then he is someone who does not shave himself, so by the rule he should shave himself. Contradiction.
+    3. Neither option is consistent.
+    4. This is a paradox: self-reference in the rule prevents a consistent answer.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"This sentence contains exactly four words." Is this a paradox?'
+  answer: 3
+  options:
+    - Yes; self-reference makes it paradoxical
+    - Yes; it is true and false at the same time
+    - 'No; counting shows it has five words, so it is simply false'
+    - No; it is a command
+  hint: Count the words. Does the truth value flip?
+  walkthrough: |
+    1. Count the words: "This," "sentence," "contains," "exactly," "four," wait: that is already five.
+    2. The full count is six words. The claim says four. So the sentence is false.
+    3. Assuming it is false does not generate a contradiction; it stays false.
+    4. It is not a paradox; it is simply false.
+  tags:
+    - paradox
+
+- type: mcq
+  question: What distinguishes a paradox from a merely false statement?
+  answer: 4
+  options:
+    - Paradoxes are always about self-reference
+    - False statements are shorter
+    - Paradoxes are questions; false statements are commands
+    - A false statement has a stable truth value (false); a paradox cannot settle on any truth value
+  hint: A false statement stays false. What happens when you try to assign a truth value to a paradox?
+  walkthrough: |
+    1. A false statement is consistently false: assuming it is false does not lead to contradiction.
+    2. A paradox flips: assuming true leads to false, and assuming false leads to true.
+    3. The key difference is stability of the truth value assignment.
+    4. A false statement has a stable truth value; a paradox cannot settle on any truth value.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"I know nothing." Is this a paradox in logic?'
+  answer: 2
+  options:
+    - 'Yes; if you know nothing, you cannot know that you know nothing'
+    - No; it is a factual claim that is simply false (you know at least that you know nothing)
+    - Yes; self-reference always creates paradoxes
+    - No; it is a command to learn more
+  hint: 'Does assuming it is true lead to it being false, and vice versa, in an unresolvable loop?'
+  walkthrough: |
+    1. "I know nothing" makes a claim about the speaker's knowledge.
+    2. If true, the speaker knows nothing. One could argue they know at least this fact, making it false.
+    3. If false, the speaker knows something, which is consistent.
+    4. The truth value can settle on false. It is not an unresolvable flip; it is a factual claim that is simply false.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"Ignore this sentence." Is this a paradox?'
+  answer: 1
+  options:
+    - 'Yes; to comply you must read it, but reading it means you did not ignore it'
+    - 'No; it is a command, and commands are not paradoxes'
+    - No; it is a question
+    - Yes; all self-referential sentences are paradoxes
+  hint: 'Is this a command, a question, or a claim? Does it lead to a logical contradiction about truth values?'
+  walkthrough: |
+    1. "Ignore this sentence" is a command, not a declarative statement.
+    2. Commands cannot be true or false, so bivalence does not apply.
+    3. The apparent "paradox" is pragmatic (you must read it to obey it), not logical.
+    4. Strictly, it is a command and so falls outside the scope of logical sentences entirely. However, the self-referential instruction creates a pragmatic paradox: obeying requires disobeying. This is a paradox of compliance.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"No sentence is true." Is this a paradox?'
+  answer: 3
+  options:
+    - No; it is simply a false claim
+    - No; it is a question about truth
+    - 'Yes; if the sentence is true, then no sentence is true, including itself, so it is false'
+    - Yes; all universal claims are paradoxical
+  hint: Assume it is true. Does its own truth contradict the claim?
+  walkthrough: |
+    1. Assume it is true. Then no sentence is true, but this sentence itself is true. Contradiction.
+    2. Assume it is false. Then some sentence is true, which is consistent.
+    3. One might say it is simply false, but the self-referential structure means assuming truth leads directly to contradiction.
+    4. If it is true then it must be false: this self-undermining structure makes it a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"This sentence has more than three words." Is this a paradox?'
+  answer: 4
+  options:
+    - Yes; it refers to itself
+    - Yes; self-reference always yields a paradox
+    - No; it is a command
+    - 'No; counting gives seven words, so the sentence is simply true'
+  hint: Count the words. Does the truth value flip when you assume it?
+  walkthrough: |
+    1. Count the words: "This," "sentence," "has," "more," "than," "three," "words." Seven words.
+    2. Seven is more than three, so the claim is true.
+    3. Assuming it is true does not lead to a contradiction; it stays true.
+    4. It is not a paradox; it is simply true. Self-reference alone does not create a paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"Every statement I make is false, including this one." Is this a paradox?'
+  answer: 1
+  options:
+    - 'Yes; if this statement is false, then not every statement the speaker makes is false, but the statement claims otherwise'
+    - No; it is simply a false generalization
+    - No; it is a command
+    - Yes; but only if the speaker has made other statements
+  hint: 'Focus on the self-referential part: the statement includes itself.'
+  walkthrough: |
+    1. Assume the statement is true. Then every statement the speaker makes is false, including this one. So it is false. Contradiction.
+    2. Assume it is false. Then not every statement is false. This is consistent for other statements, but the statement itself claimed to be included. The self-reference leads back to contradiction when we try to pin down this statement's value.
+    3. No stable truth value can be assigned.
+    4. The self-inclusive universal claim creates an unresolvable paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"This claim is neither true nor false." Is this a paradox?'
+  answer: 2
+  options:
+    - No; it is simply false because every claim must be true or false
+    - 'Yes; if true, it is neither true nor false (contradicting that it is true); if false, it has a truth value (contradicting its content)'
+    - No; it is a command
+    - Yes; but only in non-classical logics
+  hint: 'Assume it is true, then assume it is false. Does either work?'
+  walkthrough: |
+    1. Assume it is true. Then it is neither true nor false. But we assumed it is true. Contradiction.
+    2. Assume it is false. Then the claim "neither true nor false" is wrong, so it does have a truth value. That is consistent with being false. However, if it is false, it does have a truth value, so the claim is wrong, which just means it is false. No contradiction here.
+    3. Under one assumption we get contradiction, under the other we do not. Some treat this as paradoxical because the true-assumption fails.
+    4. The true-assumption generates a contradiction, making this a paradox that challenges bivalence.
+  tags:
+    - paradox
+
+- type: mcq
+  question: Which of the following is a sentence in logic?
+  answer: 3
+  options:
+    - '"Did the train arrive?"'
+    - '"Turn off the lights!"'
+    - '"Snow is white."'
+    - '"Ouch!"'
+  hint: A sentence in logic is a declarative statement that can be true or false.
+  walkthrough: |
+    1. "Did the train arrive?" is a question; it cannot be true or false.
+    2. "Turn off the lights!" is a command; it cannot be true or false.
+    3. "Snow is white" is a declarative statement that is either true or false.
+    4. "Ouch!" is an exclamation; it cannot be true or false.
+    5. The correct answer is "Snow is white."
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'Context: Light takes about 8 minutes to travel from the Sun to the Earth. Statement: "Light takes about 8 minutes to travel from the Sun to the Earth." What is the truth value?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Neither true nor false
+  hint: Compare the statement directly to the context.
+  walkthrough: |
+    1. The statement claims light takes about 8 minutes to travel from the Sun to the Earth.
+    2. The context confirms this exact fact.
+    3. The statement matches the context.
+    4. The truth value is True.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Mount Everest is the tallest mountain on Earth. Statement: "K2 is the tallest mountain on Earth." What is the truth value?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - 'True, because K2 is very tall'
+  hint: Which mountain does the context name as tallest?
+  walkthrough: |
+    1. The statement claims K2 is the tallest mountain on Earth.
+    2. The context says Mount Everest holds that title.
+    3. K2 and Everest are different mountains, so the statement contradicts the context.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Context: Oxygen has the atomic number 8. Statement: "Oxygen has the atomic number 6." What is the truth value?'
+  answer: 4
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'True, because oxygen is an element'
+    - 'False'
+  hint: Compare the atomic number claimed to the one given in the context.
+  walkthrough: |
+    1. The statement claims oxygen has atomic number 6.
+    2. The context states oxygen has atomic number 8.
+    3. 6 does not equal 8, so the statement contradicts the context.
+    4. The truth value is False.
+  tags:
+    - assign-truth
+
+- type: mcq
+  question: 'Why does "Grab your coat and come outside" fail to be a sentence in logic?'
+  answer: 3
+  options:
+    - It is a question about the weather
+    - It is an exclamation
+    - 'It is a command, which cannot be true or false'
+    - 'It contains two actions, making it ambiguous'
+  hint: Is this telling someone to do something?
+  walkthrough: |
+    1. "Grab your coat and come outside" directs someone to perform actions.
+    2. This is a command.
+    3. Commands cannot be assigned truth values.
+    4. It is a command, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: 'Why does "Is this seat taken?" fail to be a sentence in logic?'
+  answer: 1
+  options:
+    - 'It is a question that requests information, not a claim'
+    - It is a command to give up the seat
+    - It is an exclamation of surprise
+    - It is too short to have a truth value
+  hint: Is this expression asserting something or asking something?
+  walkthrough: |
+    1. "Is this seat taken?" asks for information about the seat.
+    2. It does not claim the seat is or is not taken.
+    3. Because it makes no assertion, it cannot be true or false.
+    4. It is a question, not a sentence in logic.
+  tags:
+    - why-fails
+
+- type: mcq
+  question: '"The set of all sets that do not contain themselves." Why is this problematic?'
+  answer: 3
+  options:
+    - It is a command
+    - It is a question
+    - 'If the set contains itself it should not, and if it does not contain itself it should: a paradox'
+    - It is simply false
+  hint: 'Ask whether this set contains itself, then trace the consequences.'
+  walkthrough: |
+    1. Suppose the set contains itself. Then by its definition (sets that do not contain themselves), it should not. Contradiction.
+    2. Suppose it does not contain itself. Then it meets its own membership criterion, so it should contain itself. Contradiction.
+    3. Neither assumption is consistent.
+    4. If the set contains itself it should not, and vice versa: this is Russell's paradox.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"The only universal truth is that there are no universal truths." Is this a paradox?'
+  answer: 4
+  options:
+    - No; it is a question
+    - No; it is a command
+    - No; it is simply false
+    - Yes; the statement claims to be a universal truth while denying that any exist
+  hint: 'If the claim itself is a universal truth, what does it say about itself?'
+  walkthrough: |
+    1. The statement claims to be the only universal truth.
+    2. But its content says there are no universal truths.
+    3. If true, it is a universal truth that contradicts itself. If false, there may be universal truths, which is consistent with it being false.
+    4. The self-undermining structure makes it a paradox: it claims to be a universal truth while denying any exist.
+  tags:
+    - paradox
+
+- type: mcq
+  question: '"This sentence is written in English." Is this a paradox?'
+  answer: 2
+  options:
+    - Yes; self-reference always creates paradoxes
+    - 'No; the sentence is indeed written in English, so it is simply true'
+    - Yes; it leads to a contradiction
+    - No; it is a command
+  hint: Does assuming it is true lead to it being false?
+  walkthrough: |
+    1. The sentence refers to itself, claiming it is written in English.
+    2. It is in fact written in English, so the claim is true.
+    3. Assuming it is true does not generate a contradiction; it stays true.
+    4. It is not a paradox; it is simply true. Self-reference alone does not create a paradox.
+  tags:
+    - paradox

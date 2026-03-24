@@ -1,0 +1,1358 @@
+- type: mcq
+  question: 'In "The road is flooded, so traffic is being diverted," what type of indicator is "so"?'
+  answer: 1
+  options:
+    - Conclusion indicator
+    - Premise indicator
+    - Not an indicator word in this context
+    - Both a premise and conclusion indicator
+  hint: '"So" signals the sentence that follows as the claim being argued for.'
+  walkthrough: |
+    1. "So" introduces "traffic is being diverted."
+    2. This sentence is the claim being supported.
+    3. An indicator that marks a conclusion is a conclusion indicator.
+    4. "So" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "Because the battery is low, the laptop will shut down soon," what type of indicator is "because"?'
+  answer: 3
+  options:
+    - Conclusion indicator
+    - Not an indicator word in this context
+    - Premise indicator
+    - A temporal indicator
+  hint: '"Because" introduces the reason or evidence.'
+  walkthrough: |
+    1. "Because" introduces "the battery is low."
+    2. This sentence provides the reason for believing the laptop will shut down.
+    3. An indicator that marks a reason is a premise indicator.
+    4. "Because" is a premise indicator here.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "Given that the experiment failed, the hypothesis must be wrong," what type of indicator is "given that"?'
+  answer: 2
+  options:
+    - Conclusion indicator
+    - Premise indicator
+    - Not a logical indicator
+    - A causal connector
+  hint: '"Given that" presents a fact as evidence for something.'
+  walkthrough: |
+    1. "Given that" introduces "the experiment failed."
+    2. This sentence is offered as evidence.
+    3. An indicator that marks evidence is a premise indicator.
+    4. "Given that" is a premise indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "It follows that the building is unsafe. The foundation has cracks," what type of indicator is "it follows that"?'
+  answer: 4
+  options:
+    - Premise indicator
+    - Not a logical indicator
+    - A causal explanation
+    - Conclusion indicator
+  hint: '"It follows that" signals the claim that the evidence leads to.'
+  walkthrough: |
+    1. "It follows that" introduces "the building is unsafe."
+    2. This is the claim being argued for.
+    3. "The foundation has cracks" is the evidence supporting it.
+    4. "It follows that" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The project was delayed. After all, the lead engineer resigned," what type of indicator is "after all"?'
+  answer: 1
+  options:
+    - Premise indicator
+    - Conclusion indicator
+    - 'A temporal indicator meaning "at the end"'
+    - Not an indicator word
+  hint: '"After all" provides justification for an earlier claim.'
+  walkthrough: |
+    1. "After all" introduces "the lead engineer resigned."
+    2. This explains why we should believe the project was delayed.
+    3. The sentence it introduces is a reason, making "after all" a premise indicator.
+    4. "After all" is a premise indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The air quality is poor. Hence, residents should stay indoors," what type of indicator is "hence"?'
+  answer: 3
+  options:
+    - Premise indicator
+    - Not a logical indicator
+    - Conclusion indicator
+    - A temporal indicator
+  hint: '"Hence" signals the claim that follows from the evidence.'
+  walkthrough: |
+    1. "Hence" introduces "residents should stay indoors."
+    2. This is the claim supported by the evidence that air quality is poor.
+    3. An indicator that marks a conclusion is a conclusion indicator.
+    4. "Hence" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "Since the data is incomplete, the report cannot be finalized," what type of indicator is "since"?'
+  answer: 2
+  options:
+    - Conclusion indicator
+    - Premise indicator
+    - A temporal indicator
+    - Not a logical indicator
+  hint: 'Check whether "since" introduces a reason or marks a point in time.'
+  walkthrough: |
+    1. "Since" introduces "the data is incomplete."
+    2. This is a reason to believe the report cannot be finalized.
+    3. "Since" here introduces evidence, making it a premise indicator.
+    4. "Since" is a premise indicator in this context.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "Thus, the experiment must be repeated. The sample was contaminated," what type of indicator is "thus"?'
+  answer: 4
+  options:
+    - Premise indicator
+    - Not a logical indicator
+    - A causal connector
+    - Conclusion indicator
+  hint: '"Thus" signals the claim being argued for.'
+  walkthrough: |
+    1. "Thus" introduces "the experiment must be repeated."
+    2. This is the claim that follows from the evidence.
+    3. "The sample was contaminated" is the reason supporting it.
+    4. "Thus" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The bridge should be repaired, for the inspection found structural damage," what type of indicator is "for"?'
+  answer: 1
+  options:
+    - Premise indicator
+    - Conclusion indicator
+    - Not a logical indicator
+    - 'A preposition, not an indicator'
+  hint: '"For" in this context introduces a reason supporting a claim.'
+  walkthrough: |
+    1. "For" introduces "the inspection found structural damage."
+    2. This is a reason to believe the bridge should be repaired.
+    3. An indicator that marks a reason is a premise indicator.
+    4. "For" is a premise indicator here.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "Consequently, the factory was shut down. Toxic chemicals had leaked into the river," what type of indicator is "consequently"?'
+  answer: 3
+  options:
+    - Premise indicator
+    - Not a logical indicator
+    - Conclusion indicator
+    - A temporal indicator
+  hint: '"Consequently" signals the claim that follows from the evidence.'
+  walkthrough: |
+    1. "Consequently" introduces "the factory was shut down."
+    2. This is the claim supported by the toxic leak.
+    3. An indicator that marks a conclusion is a conclusion indicator.
+    4. "Consequently" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "As the roads are covered in ice, drivers should proceed with caution," what type of indicator is "as"?'
+  answer: 2
+  options:
+    - Conclusion indicator
+    - Premise indicator
+    - A temporal indicator
+    - Not a logical indicator
+  hint: '"As" here introduces a reason, not a time reference.'
+  walkthrough: |
+    1. "As" introduces "the roads are covered in ice."
+    2. This is a reason to believe drivers should proceed with caution.
+    3. An indicator that marks a reason is a premise indicator.
+    4. "As" is a premise indicator here.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The restaurant must be closing soon. Accordingly, we should order now," what type of indicator is "accordingly"?'
+  answer: 4
+  options:
+    - Premise indicator
+    - Not a logical indicator
+    - A temporal indicator
+    - Conclusion indicator
+  hint: '"Accordingly" signals the claim being supported.'
+  walkthrough: |
+    1. "Accordingly" introduces "we should order now."
+    2. This is the claim supported by the observation about the restaurant closing.
+    3. An indicator that marks a conclusion is a conclusion indicator.
+    4. "Accordingly" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The pipes froze overnight. Therefore, the water is not running," what type of indicator is "therefore"?'
+  answer: 1
+  options:
+    - Conclusion indicator
+    - Premise indicator
+    - Not a logical indicator
+    - A causal connector
+  hint: '"Therefore" is one of the most common conclusion indicators.'
+  walkthrough: |
+    1. "Therefore" introduces "the water is not running."
+    2. This is the claim that follows from the pipes freezing.
+    3. An indicator that marks a conclusion is a conclusion indicator.
+    4. "Therefore" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The defendant has an alibi. For this reason, the charges should be dropped," what type of indicator is "for this reason"?'
+  answer: 3
+  options:
+    - Premise indicator
+    - Not a logical indicator
+    - Conclusion indicator
+    - A causal connector
+  hint: '"For this reason" points forward to the claim that is being argued for.'
+  walkthrough: |
+    1. "For this reason" introduces "the charges should be dropped."
+    2. This is the claim supported by the defendant having an alibi.
+    3. An indicator that signals a conclusion is a conclusion indicator.
+    4. "For this reason" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "We need more funding. The equipment is outdated, the staff is overworked, and the building needs repairs," which phrase, if any, is an indicator?'
+  answer: 2
+  options:
+    - '"The equipment is outdated" is the indicator'
+    - There are no indicator words in this passage
+    - '"We need" is a conclusion indicator'
+    - '"And" is a premise indicator'
+  hint: 'Indicator words are specific terms like "because," "therefore," or "since." Check whether any appear.'
+  walkthrough: |
+    1. Scanning the passage: no standard indicator words appear.
+    2. "And" is a conjunction, not a logical indicator.
+    3. "We need" expresses a claim but is not an indicator word.
+    4. There are no indicator words in this passage.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "Inasmuch as the contract was breached, the agreement is void," what type of indicator is "inasmuch as"?'
+  answer: 4
+  options:
+    - Conclusion indicator
+    - Not a logical indicator
+    - A temporal indicator
+    - Premise indicator
+  hint: '"Inasmuch as" introduces a reason, similar to "given that."'
+  walkthrough: |
+    1. "Inasmuch as" introduces "the contract was breached."
+    2. This is a reason to believe the agreement is void.
+    3. An indicator that marks a reason is a premise indicator.
+    4. "Inasmuch as" is a premise indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The lake is frozen. We can therefore go ice skating," what type of indicator is "therefore"?'
+  answer: 1
+  options:
+    - Conclusion indicator
+    - Premise indicator
+    - Not a logical indicator
+    - A temporal indicator
+  hint: '"Therefore" signals the conclusion, even when it appears mid-sentence.'
+  walkthrough: |
+    1. "Therefore" introduces the claim "we can go ice skating."
+    2. This is the conclusion supported by the lake being frozen.
+    3. An indicator that marks a conclusion is a conclusion indicator.
+    4. "Therefore" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "It must be a holiday, seeing that every shop on the street is closed," what type of indicator is "seeing that"?'
+  answer: 3
+  options:
+    - Conclusion indicator
+    - Not a logical indicator
+    - Premise indicator
+    - 'A visual reference, not an indicator'
+  hint: '"Seeing that" functions like "given that," introducing a reason.'
+  walkthrough: |
+    1. "Seeing that" introduces "every shop on the street is closed."
+    2. This is a reason to believe it must be a holiday.
+    3. An indicator that introduces evidence is a premise indicator.
+    4. "Seeing that" is a premise indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "The evidence shows fraud. It follows that the CEO should resign," what type of indicator is "it follows that"?'
+  answer: 2
+  options:
+    - Premise indicator
+    - Conclusion indicator
+    - Not a logical indicator
+    - A causal connector
+  hint: '"It follows that" signals the claim derived from the evidence.'
+  walkthrough: |
+    1. "It follows that" introduces "the CEO should resign."
+    2. This is the claim supported by the evidence of fraud.
+    3. An indicator that marks a conclusion is a conclusion indicator.
+    4. "It follows that" is a conclusion indicator.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'In "We should cancel the event, for the venue is flooded and the forecast shows more rain," what type of indicator is "for"?'
+  answer: 4
+  options:
+    - Conclusion indicator
+    - 'A preposition, not an indicator'
+    - Not a logical indicator
+    - Premise indicator
+  hint: '"For" here introduces reasons supporting a claim.'
+  walkthrough: |
+    1. "For" introduces "the venue is flooded" and "the forecast shows more rain."
+    2. These are reasons to believe we should cancel the event.
+    3. An indicator that introduces reasons is a premise indicator.
+    4. "For" is a premise indicator here.
+  tags:
+    - identify-indicators
+
+- type: mcq
+  question: 'What is the conclusion? "The patient has a high fever and a cough. The flu test was positive. Therefore, the patient has the flu."'
+  answer: 3
+  options:
+    - '"The patient has a high fever and a cough"'
+    - '"The flu test was positive"'
+    - '"The patient has the flu"'
+    - There is no conclusion
+  hint: Look for a conclusion indicator word.
+  walkthrough: |
+    1. "Therefore" is a conclusion indicator.
+    2. It introduces "the patient has the flu."
+    3. The other sentences are premises.
+    4. The conclusion is "the patient has the flu."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The company will downsize, since revenue dropped and costs are rising."'
+  answer: 1
+  options:
+    - '"The company will downsize"'
+    - '"Revenue dropped"'
+    - '"Costs are rising"'
+    - '"Revenue dropped and costs are rising"'
+  hint: '"Since" is a premise indicator. The conclusion is the sentence not introduced by it.'
+  walkthrough: |
+    1. "Since" marks the premises: "revenue dropped" and "costs are rising."
+    2. The sentence without an indicator is "the company will downsize."
+    3. The conclusion is "the company will downsize."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Enrollment is up. Faculty hiring has increased. The university must be growing."'
+  answer: 4
+  options:
+    - '"Enrollment is up"'
+    - '"Faculty hiring has increased"'
+    - There is no conclusion; this is a description
+    - '"The university must be growing"'
+  hint: 'No indicator words are present. Ask: which sentence is being supported by the others?'
+  walkthrough: |
+    1. No indicator words appear.
+    2. "Enrollment is up" and "faculty hiring has increased" are evidence.
+    3. They support the claim that "the university must be growing."
+    4. The conclusion is "the university must be growing."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Because the soil is dry, the crops are dying."'
+  answer: 2
+  options:
+    - '"The soil is dry"'
+    - '"The crops are dying"'
+    - Both sentences
+    - Neither sentence
+  hint: '"Because" is a premise indicator.'
+  walkthrough: |
+    1. "Because" introduces the premise: "the soil is dry."
+    2. The remaining sentence, "the crops are dying," is the claim being supported.
+    3. The conclusion is "the crops are dying."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The lights are on and the door is unlocked. Accordingly, someone must be home."'
+  answer: 3
+  options:
+    - '"The lights are on"'
+    - '"The door is unlocked"'
+    - '"Someone must be home"'
+    - '"The lights are on and the door is unlocked"'
+  hint: '"Accordingly" is a conclusion indicator.'
+  walkthrough: |
+    1. "Accordingly" signals the conclusion: "someone must be home."
+    2. The evidence is that the lights are on and the door is unlocked.
+    3. The conclusion is "someone must be home."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Given that the road is blocked, we must take a detour."'
+  answer: 4
+  options:
+    - '"The road is blocked"'
+    - Both sentences are conclusions
+    - There is no conclusion
+    - '"We must take a detour"'
+  hint: '"Given that" is a premise indicator. The other sentence is the conclusion.'
+  walkthrough: |
+    1. "Given that" marks "the road is blocked" as a premise.
+    2. The remaining sentence is the claim being supported.
+    3. The conclusion is "we must take a detour."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The server keeps crashing. The code has a memory leak. Hence, we need to fix the code."'
+  answer: 1
+  options:
+    - '"We need to fix the code"'
+    - '"The server keeps crashing"'
+    - '"The code has a memory leak"'
+    - All three are conclusions
+  hint: '"Hence" is a conclusion indicator.'
+  walkthrough: |
+    1. "Hence" signals the conclusion: "we need to fix the code."
+    2. The other two sentences are premises.
+    3. The conclusion is "we need to fix the code."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "She must be the author of the report, for her writing style matches and she had access to the data."'
+  answer: 2
+  options:
+    - '"Her writing style matches"'
+    - '"She must be the author of the report"'
+    - '"She had access to the data"'
+    - There is no conclusion
+  hint: '"For" is a premise indicator here.'
+  walkthrough: |
+    1. "For" introduces the premises: "her writing style matches" and "she had access to the data."
+    2. The claim being supported is "she must be the author of the report."
+    3. The conclusion is "she must be the author of the report."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The economy is improving. Unemployment has dropped. Consumer confidence is at an all-time high."'
+  answer: 3
+  options:
+    - '"Unemployment has dropped"'
+    - '"Consumer confidence is at an all-time high"'
+    - '"The economy is improving"'
+    - There is no conclusion
+  hint: No indicators are present. Which sentence is being supported by the others?
+  walkthrough: |
+    1. No indicator words appear in the passage.
+    2. "Unemployment has dropped" and "consumer confidence is at an all-time high" are evidence.
+    3. They support the claim "the economy is improving."
+    4. The conclusion is "the economy is improving."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "It follows that the bridge is structurally unsound. Engineers found cracks in the support beams."'
+  answer: 4
+  options:
+    - '"Engineers found cracks in the support beams"'
+    - Both sentences
+    - There is no conclusion
+    - '"The bridge is structurally unsound"'
+  hint: '"It follows that" is a conclusion indicator.'
+  walkthrough: |
+    1. "It follows that" signals the conclusion: "the bridge is structurally unsound."
+    2. "Engineers found cracks in the support beams" is the premise.
+    3. The conclusion is "the bridge is structurally unsound."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "As the flight was canceled and no alternatives were available, we had to drive."'
+  answer: 1
+  options:
+    - '"We had to drive"'
+    - '"The flight was canceled"'
+    - '"No alternatives were available"'
+    - 'Both "the flight was canceled" and "no alternatives were available"'
+  hint: '"As" is a premise indicator here. The conclusion is the sentence not introduced by it.'
+  walkthrough: |
+    1. "As" marks the premises: "the flight was canceled" and "no alternatives were available."
+    2. The remaining sentence, "we had to drive," is the claim being supported.
+    3. The conclusion is "we had to drive."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The project deadline was missed. After all, the team was understaffed and the requirements changed twice."'
+  answer: 2
+  options:
+    - '"The team was understaffed"'
+    - '"The project deadline was missed"'
+    - '"The requirements changed twice"'
+    - There is no conclusion
+  hint: '"After all" is a premise indicator.'
+  walkthrough: |
+    1. "After all" introduces the premises: "the team was understaffed" and "the requirements changed twice."
+    2. The claim supported by these reasons is "the project deadline was missed."
+    3. The conclusion is "the project deadline was missed."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The museum should extend its hours. Visitors have been turned away, and surveys show demand for evening access."'
+  answer: 3
+  options:
+    - '"Visitors have been turned away"'
+    - '"Surveys show demand for evening access"'
+    - '"The museum should extend its hours"'
+    - All three are conclusions
+  hint: Which sentence is the recommendation supported by the others?
+  walkthrough: |
+    1. "Visitors have been turned away" and "surveys show demand for evening access" are evidence.
+    2. They support the recommendation "the museum should extend its hours."
+    3. The conclusion is "the museum should extend its hours."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Consequently, the match was postponed. The field was waterlogged and lightning was reported nearby."'
+  answer: 4
+  options:
+    - '"The field was waterlogged"'
+    - '"Lightning was reported nearby"'
+    - There is no conclusion
+    - '"The match was postponed"'
+  hint: '"Consequently" is a conclusion indicator.'
+  walkthrough: |
+    1. "Consequently" signals the conclusion: "the match was postponed."
+    2. The premises are "the field was waterlogged" and "lightning was reported nearby."
+    3. The conclusion is "the match was postponed."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Taxes should be lowered, since small businesses are struggling and consumer spending is down."'
+  answer: 1
+  options:
+    - '"Taxes should be lowered"'
+    - '"Small businesses are struggling"'
+    - '"Consumer spending is down"'
+    - All three are conclusions
+  hint: '"Since" is a premise indicator.'
+  walkthrough: |
+    1. "Since" marks the premises: "small businesses are struggling" and "consumer spending is down."
+    2. The claim not introduced by an indicator is "taxes should be lowered."
+    3. The conclusion is "taxes should be lowered."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "We should invest in solar panels. They reduce energy costs. They also lower carbon emissions. Thus, the benefits are clear."'
+  answer: 2
+  options:
+    - '"They reduce energy costs"'
+    - '"We should invest in solar panels"'
+    - '"The benefits are clear"'
+    - '"They also lower carbon emissions"'
+  hint: 'Be careful: "thus" introduces a summary, but ask which claim the argument ultimately supports.'
+  walkthrough: |
+    1. "They reduce energy costs" and "they also lower carbon emissions" are reasons.
+    2. "Thus, the benefits are clear" restates that the reasons are strong.
+    3. The main claim being argued for is "we should invest in solar panels."
+    4. The conclusion is "we should invest in solar panels."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'In "I have been working here since 2015," is "since" a premise indicator?'
+  answer: 2
+  options:
+    - 'Yes; "since" always introduces a premise'
+    - 'No; "since" here marks a point in time, not a logical reason'
+    - Yes; 2015 is the premise for working here
+    - 'No; "since" is a conclusion indicator in this context'
+  hint: 'Check whether "since" introduces a reason to believe something.'
+  walkthrough: |
+    1. "Since 2015" specifies when the work began.
+    2. It does not provide a reason to believe a claim.
+    3. This is a temporal use, not a logical use.
+    4. "Since" here marks a point in time, not a premise.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "She was so tired she could barely stand," is "so" a conclusion indicator?'
+  answer: 4
+  options:
+    - 'Yes; "so" always signals a conclusion'
+    - Yes; the conclusion is that she could barely stand
+    - 'No; "so" here is a premise indicator'
+    - 'No; "so" here is an intensifier meaning "very," not a logical indicator'
+  hint: 'Does "so" connect a reason to a conclusion, or does it modify an adjective?'
+  walkthrough: |
+    1. "So tired" uses "so" to mean "very."
+    2. It modifies the adjective "tired," not introducing a conclusion.
+    3. This is a grammatical intensifier, not a logical indicator.
+    4. "So" here means "very," not "therefore."
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The bridge collapsed because the support cables corroded over decades," is "because" functioning as a premise indicator?'
+  answer: 1
+  options:
+    - 'No; "because" here explains the cause of a known event, not a reason to believe a claim'
+    - Yes; the corrosion is a premise supporting the conclusion that the bridge collapsed
+    - 'No; "because" is never a premise indicator'
+    - 'Yes; every use of "because" is a premise indicator'
+  hint: 'Is someone trying to convince you the bridge collapsed, or explaining why it collapsed?'
+  walkthrough: |
+    1. The collapse is already known; no one is arguing that it happened.
+    2. "Because" here explains the physical cause of the collapse.
+    3. A causal explanation is not the same as offering a logical reason to believe a claim.
+    4. "Because" here gives a causal explanation, not a logical premise.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: Which of the following is a conclusion indicator?
+  answer: 3
+  options:
+    - '"because"'
+    - '"given that"'
+    - '"hence"'
+    - '"for"'
+  hint: Conclusion indicators signal the claim being argued for.
+  walkthrough: |
+    1. "Because," "given that," and "for" all introduce reasons (premise indicators).
+    2. "Hence" signals the claim that follows from the reasons.
+    3. The correct answer is "hence."
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "Since the witness lied under oath, her testimony is inadmissible," is "since" a premise indicator?'
+  answer: 2
+  options:
+    - 'No; "since" here marks a point in time'
+    - 'Yes; "since" introduces a reason to believe the testimony is inadmissible'
+    - 'No; "since" is a conclusion indicator here'
+    - 'No; this is a causal explanation, not an argument'
+  hint: 'Does "the witness lied" serve as a reason to believe the testimony is inadmissible?'
+  walkthrough: |
+    1. "Since" introduces "the witness lied under oath."
+    2. This is offered as a reason to believe the testimony is inadmissible.
+    3. It connects evidence to a claim, making it a premise indicator.
+    4. "Since" is a premise indicator here.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "He has been my neighbor since childhood," is "since" functioning as a logical indicator?'
+  answer: 4
+  options:
+    - Yes; it is a premise indicator
+    - Yes; it is a conclusion indicator
+    - Yes; childhood is a reason to believe he is a neighbor
+    - 'No; "since" here marks a duration of time'
+  hint: 'Does "childhood" serve as a reason to believe a claim?'
+  walkthrough: |
+    1. "Since childhood" specifies how long they have been neighbors.
+    2. It does not provide a reason to believe any claim.
+    3. This is a temporal use of "since."
+    4. "Since" here marks a duration of time, not a logical relationship.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The house is so beautiful that everyone admires it," is "so" a conclusion indicator?'
+  answer: 1
+  options:
+    - 'No; "so" here is an intensifier meaning "very," not a logical indicator'
+    - 'Yes; "so" introduces the conclusion that everyone admires it'
+    - 'No; "so" is a premise indicator here'
+    - 'Yes; "so" always functions as a conclusion indicator'
+  hint: 'Check whether "so" connects a reason to a conclusion or modifies an adjective.'
+  walkthrough: |
+    1. "So beautiful" uses "so" as an intensifier meaning "very."
+    2. "That everyone admires it" describes a consequence of the beauty, not a logical conclusion.
+    3. This is a grammatical construction, not a logical argument.
+    4. "So" here means "very," not "therefore."
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The levee broke because the water pressure exceeded its capacity," is "because" a premise indicator?'
+  answer: 3
+  options:
+    - Yes; the water pressure is a premise for believing the levee broke
+    - 'Yes; "because" always functions as a premise indicator'
+    - 'No; this is a causal explanation of a known event, not an argument'
+    - 'No; "because" is a conclusion indicator here'
+  hint: 'Is someone arguing that the levee broke, or explaining what caused the break?'
+  walkthrough: |
+    1. The levee breaking is already established as a fact.
+    2. "Because" explains what caused it, not why you should believe it happened.
+    3. This is a causal explanation, not a logical argument.
+    4. "Because" here gives a causal explanation, not a logical premise.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: Which of the following is a premise indicator?
+  answer: 2
+  options:
+    - '"therefore"'
+    - '"given that"'
+    - '"consequently"'
+    - '"hence"'
+  hint: Premise indicators introduce reasons or evidence.
+  walkthrough: |
+    1. "Therefore," "consequently," and "hence" all signal conclusions.
+    2. "Given that" introduces a reason or piece of evidence.
+    3. The correct answer is "given that."
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "She ran so fast that she broke the record," is "so" a conclusion indicator?'
+  answer: 4
+  options:
+    - 'Yes; "so" signals the conclusion about breaking the record'
+    - 'Yes; "so" is always a conclusion indicator'
+    - 'No; "so" is a premise indicator here'
+    - 'No; "so" here is an intensifier modifying "fast"'
+  hint: 'Does "so" introduce a conclusion or modify an adverb?'
+  walkthrough: |
+    1. "So fast" uses "so" as an intensifier modifying "fast."
+    2. "That she broke the record" describes a result, not a logical conclusion.
+    3. This is a grammatical construction, not a logical indicator.
+    4. "So" here is an intensifier, not a conclusion indicator.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The vase broke because the cat knocked it off the table," is "because" a premise indicator?'
+  answer: 1
+  options:
+    - 'No; this explains the cause of a known event, not a logical reason for a claim'
+    - Yes; the cat knocking it off is evidence for the conclusion that it broke
+    - 'No; "because" is never a premise indicator'
+    - 'Yes; "because" always signals a premise'
+  hint: 'Is anyone arguing that the vase broke, or explaining how it broke?'
+  walkthrough: |
+    1. The vase breaking is already known; no one is trying to prove it happened.
+    2. "Because" explains the physical cause: the cat knocked it off.
+    3. This is a causal explanation, not an argument.
+    4. "Because" here gives a causal explanation, not a logical premise.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "Since the evidence is overwhelming, the jury will likely convict," is "since" a premise indicator?'
+  answer: 3
+  options:
+    - 'No; "since" is temporal here'
+    - 'No; "since" is a conclusion indicator here'
+    - 'Yes; "since" introduces a reason to believe the jury will convict'
+    - No; this is a causal explanation
+  hint: 'Does "the evidence is overwhelming" serve as a reason to believe a claim?'
+  walkthrough: |
+    1. "Since" introduces "the evidence is overwhelming."
+    2. This is a reason to believe "the jury will likely convict."
+    3. Evidence supports a claim, so "since" functions as a premise indicator.
+    4. "Since" is a premise indicator here.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: Which of the following words can NEVER function as a logical indicator?
+  answer: 2
+  options:
+    - '"since"'
+    - '"the"'
+    - '"so"'
+    - '"for"'
+  hint: '"Since," "so," and "for" can all serve as indicators in certain contexts.'
+  walkthrough: |
+    1. "Since" can be a premise indicator. "So" can be a conclusion indicator. "For" can be a premise indicator.
+    2. "The" is a definite article; it has no logical indicator function.
+    3. The correct answer is "the."
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "He must be guilty, for he confessed to the crime," is "for" a premise indicator?'
+  answer: 4
+  options:
+    - 'No; "for" here is a preposition'
+    - 'No; "for" is a conclusion indicator here'
+    - No; this is a causal explanation
+    - 'Yes; "for" introduces the reason to believe he is guilty'
+  hint: 'Does "he confessed" serve as a reason to believe the claim?'
+  walkthrough: |
+    1. "For" introduces "he confessed to the crime."
+    2. This is a reason to believe "he must be guilty."
+    3. A confession is evidence for guilt, so "for" is acting as a premise indicator.
+    4. "For" is a premise indicator here.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "We have not spoken since the argument," is "since" a premise indicator?'
+  answer: 1
+  options:
+    - 'No; "since" here marks a point in time'
+    - Yes; the argument is a reason for not speaking
+    - 'No; "since" is a conclusion indicator here'
+    - 'Yes; "since" always functions as a premise indicator'
+  hint: 'Does "the argument" serve as evidence for a claim, or mark when something started?'
+  walkthrough: |
+    1. "Since the argument" specifies the time from which they stopped speaking.
+    2. It does not provide a reason to believe a claim.
+    3. This is a temporal use of "since."
+    4. "Since" here marks a point in time, not a logical reason.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The lake froze because temperatures stayed below zero for a week," is "because" a premise indicator?'
+  answer: 3
+  options:
+    - Yes; the temperatures are evidence that the lake froze
+    - 'Yes; "because" always signals a premise'
+    - 'No; this explains the cause of a known event, not a reason to believe a claim'
+    - 'No; "because" is a conclusion indicator here'
+  hint: 'Is someone arguing that the lake froze, or explaining why it froze?'
+  walkthrough: |
+    1. The lake freezing is already known.
+    2. "Because" explains the physical cause: sustained sub-zero temperatures.
+    3. This is a causal explanation, not a logical argument.
+    4. "Because" here gives a causal explanation, not a logical premise.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The policy failed, as the data clearly shows," is "as" a premise indicator?'
+  answer: 2
+  options:
+    - 'No; "as" is temporal here'
+    - 'Yes; "as" introduces evidence supporting the claim that the policy failed'
+    - 'No; "as" is a conclusion indicator'
+    - No; this is a causal explanation
+  hint: 'Does "the data clearly shows" provide a reason to believe the policy failed?'
+  walkthrough: |
+    1. "As" introduces "the data clearly shows."
+    2. This is offered as evidence that "the policy failed."
+    3. Evidence supports a claim, making "as" a premise indicator here.
+    4. "As" is a premise indicator in this context.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The town has changed so much since I was a child," is "so" a conclusion indicator and is "since" a premise indicator?'
+  answer: 4
+  options:
+    - Both are logical indicators
+    - '"So" is a conclusion indicator, but "since" is temporal'
+    - '"Since" is a premise indicator, but "so" is not an indicator'
+    - 'Neither is a logical indicator; "so" is an intensifier and "since" is temporal'
+  hint: 'Check each word: does "so" introduce a conclusion? Does "since" introduce evidence?'
+  walkthrough: |
+    1. "So much" uses "so" as an intensifier meaning "very," not a conclusion signal.
+    2. "Since I was a child" specifies a time period, not a reason.
+    3. Neither word functions as a logical indicator in this sentence.
+    4. Both "so" and "since" have non-logical uses here.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'Rewrite "The concert was canceled because it started raining" using a conclusion indicator.'
+  answer: 3
+  options:
+    - '"Because it started raining, the concert was canceled."'
+    - '"The concert was canceled since it started raining."'
+    - '"It started raining. Therefore, the concert was canceled."'
+    - '"It started raining because the concert was canceled."'
+  hint: 'A conclusion indicator like "therefore" should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "it started raining" and the conclusion is "the concert was canceled."
+    2. Replace the premise indicator "because" with a conclusion indicator.
+    3. "Therefore" introduces the conclusion: "Therefore, the concert was canceled."
+    4. The correct rewrite is: "It started raining. Therefore, the concert was canceled."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "Since the roads are slippery, you should leave early" using the indicator "so."'
+  answer: 1
+  options:
+    - '"The roads are slippery, so you should leave early."'
+    - '"You should leave early, so the roads are slippery."'
+    - '"So the roads are slippery, you should leave early."'
+    - '"Since you should leave early, the roads are slippery."'
+  hint: '"So" is a conclusion indicator. It should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "the roads are slippery"; the conclusion is "you should leave early."
+    2. "So" introduces the conclusion.
+    3. The rewrite keeps the same premise and conclusion, just swapping indicators.
+    4. The correct rewrite is: "The roads are slippery, so you should leave early."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "It is going to snow. Hence, the game is postponed" using a premise indicator.'
+  answer: 4
+  options:
+    - '"Hence it is going to snow, the game is postponed."'
+    - '"The game is postponed hence it is going to snow."'
+    - '"It is going to snow. Hence, the game is postponed."'
+    - '"The game is postponed, because it is going to snow."'
+  hint: 'A premise indicator like "because" should introduce the premise.'
+  walkthrough: |
+    1. The premise is "it is going to snow"; the conclusion is "the game is postponed."
+    2. Replace the conclusion indicator "hence" with a premise indicator.
+    3. "Because" introduces the premise: "because it is going to snow."
+    4. The correct rewrite is: "The game is postponed, because it is going to snow."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Which rewrite preserves the logical structure of "The test is positive, so the patient is infected"?'
+  answer: 2
+  options:
+    - '"The patient is infected, so the test is positive."'
+    - '"The patient is infected, since the test is positive."'
+    - '"Since the patient is infected, the test is positive."'
+    - '"The test is positive because the patient is infected."'
+  hint: The premise must stay the same (test is positive) and the conclusion must stay the same (patient is infected).
+  walkthrough: |
+    1. The original: premise = "the test is positive," conclusion = "the patient is infected."
+    2. "The patient is infected, since the test is positive" uses "since" as a premise indicator on "the test is positive" and places the conclusion first.
+    3. This preserves the same premise and conclusion.
+    4. The correct rewrite is: "The patient is infected, since the test is positive."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "Given that the power is out, the alarm will not work" using "consequently."'
+  answer: 3
+  options:
+    - '"Consequently the power is out, the alarm will not work."'
+    - '"The alarm will not work, given that consequently the power is out."'
+    - '"The power is out. Consequently, the alarm will not work."'
+    - '"Consequently, the power is out given that the alarm will not work."'
+  hint: '"Consequently" is a conclusion indicator that should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "the power is out"; the conclusion is "the alarm will not work."
+    2. "Consequently" introduces the conclusion.
+    3. The rewrite states the premise, then uses "consequently" for the conclusion.
+    4. The correct rewrite is: "The power is out. Consequently, the alarm will not work."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "The flight is delayed, so we will miss our connection" using "because."'
+  answer: 2
+  options:
+    - '"Because we will miss our connection, the flight is delayed."'
+    - '"We will miss our connection, because the flight is delayed."'
+    - '"The flight is delayed because we will miss our connection."'
+    - '"Because the flight is delayed, the flight is delayed."'
+  hint: '"Because" is a premise indicator. It should introduce the premise, not the conclusion.'
+  walkthrough: |
+    1. The premise is "the flight is delayed"; the conclusion is "we will miss our connection."
+    2. "Because" should introduce the premise.
+    3. Place the conclusion first, then "because" with the premise.
+    4. The correct rewrite is: "We will miss our connection, because the flight is delayed."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "Because the lake is frozen, we can go skating" using "hence."'
+  answer: 4
+  options:
+    - '"Hence the lake is frozen, we can go skating."'
+    - '"We can go skating hence the lake is frozen."'
+    - '"Because the lake is frozen, hence we can go skating."'
+    - '"The lake is frozen. Hence, we can go skating."'
+  hint: '"Hence" is a conclusion indicator. It should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "the lake is frozen"; the conclusion is "we can go skating."
+    2. Replace the premise indicator "because" with a conclusion indicator.
+    3. "Hence" introduces the conclusion: "Hence, we can go skating."
+    4. The correct rewrite is: "The lake is frozen. Hence, we can go skating."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "The store is out of milk. Therefore, we need to go to another store" using "since."'
+  answer: 1
+  options:
+    - '"Since the store is out of milk, we need to go to another store."'
+    - '"Since we need to go to another store, the store is out of milk."'
+    - '"The store is out of milk since we need to go to another store."'
+    - '"We need to go to another store. Since, the store is out of milk."'
+  hint: '"Since" is a premise indicator. It should introduce the premise.'
+  walkthrough: |
+    1. The premise is "the store is out of milk"; the conclusion is "we need to go to another store."
+    2. "Since" introduces the premise.
+    3. Place "since" before the premise, then state the conclusion.
+    4. The correct rewrite is: "Since the store is out of milk, we need to go to another store."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Which rewrite preserves the logical structure of "Because taxes increased, consumer spending dropped"?'
+  answer: 3
+  options:
+    - '"Consumer spending dropped, so taxes increased."'
+    - '"Taxes increased because consumer spending dropped."'
+    - '"Taxes increased, so consumer spending dropped."'
+    - '"Since consumer spending dropped, taxes increased."'
+  hint: 'The premise is "taxes increased" and the conclusion is "consumer spending dropped."'
+  walkthrough: |
+    1. Original: premise = "taxes increased"; conclusion = "consumer spending dropped."
+    2. "Taxes increased, so consumer spending dropped" uses "so" to introduce the conclusion, keeping the same structure.
+    3. The other options reverse which sentence is the premise and which is the conclusion.
+    4. The correct rewrite is: "Taxes increased, so consumer spending dropped."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "The building should be condemned. After all, it failed every safety inspection" using "thus."'
+  answer: 2
+  options:
+    - '"Thus the building failed every safety inspection, it should be condemned."'
+    - '"The building failed every safety inspection. Thus, it should be condemned."'
+    - '"The building should be condemned. Thus, it failed every safety inspection."'
+    - '"Thus, it failed every safety inspection after all."'
+  hint: '"Thus" is a conclusion indicator. It should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "it failed every safety inspection"; the conclusion is "the building should be condemned."
+    2. Replace the premise indicator "after all" with a conclusion indicator "thus."
+    3. State the premise first, then "thus" with the conclusion.
+    4. The correct rewrite is: "The building failed every safety inspection. Thus, it should be condemned."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "Since the witness is unreliable, the testimony should be disregarded" using "accordingly."'
+  answer: 4
+  options:
+    - '"Accordingly the witness is unreliable, the testimony should be disregarded."'
+    - '"The testimony should be disregarded. Accordingly, the witness is unreliable."'
+    - '"Since the witness is unreliable, accordingly the testimony should be disregarded."'
+    - '"The witness is unreliable. Accordingly, the testimony should be disregarded."'
+  hint: '"Accordingly" is a conclusion indicator that should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "the witness is unreliable"; the conclusion is "the testimony should be disregarded."
+    2. Replace "since" with "accordingly" on the conclusion side.
+    3. State the premise first, then use "accordingly" to introduce the conclusion.
+    4. The correct rewrite is: "The witness is unreliable. Accordingly, the testimony should be disregarded."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "It follows that the dam will overflow. The reservoir is at maximum capacity" using "given that."'
+  answer: 1
+  options:
+    - '"Given that the reservoir is at maximum capacity, the dam will overflow."'
+    - '"Given that the dam will overflow, the reservoir is at maximum capacity."'
+    - '"The reservoir is at maximum capacity. Given that, the dam will overflow."'
+    - '"It follows that the reservoir is at maximum capacity, given that the dam will overflow."'
+  hint: '"Given that" is a premise indicator. It should introduce the premise.'
+  walkthrough: |
+    1. The premise is "the reservoir is at maximum capacity"; the conclusion is "the dam will overflow."
+    2. "Given that" introduces the premise.
+    3. Place "given that" before the premise, then state the conclusion.
+    4. The correct rewrite is: "Given that the reservoir is at maximum capacity, the dam will overflow."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Which rewrite preserves the logical structure of "The server is overloaded. Consequently, the website is slow"?'
+  answer: 3
+  options:
+    - '"The website is slow. Consequently, the server is overloaded."'
+    - '"Since the website is slow, the server is overloaded."'
+    - '"The website is slow, because the server is overloaded."'
+    - '"The server is overloaded because the website is slow."'
+  hint: 'The premise is "the server is overloaded" and the conclusion is "the website is slow."'
+  walkthrough: |
+    1. Original: premise = "the server is overloaded"; conclusion = "the website is slow."
+    2. "The website is slow, because the server is overloaded" uses "because" as a premise indicator on "the server is overloaded," preserving the structure.
+    3. The other options reverse the roles of premise and conclusion.
+    4. The correct rewrite is: "The website is slow, because the server is overloaded."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "The bridge is unsafe, for the supports are cracked" using "therefore."'
+  answer: 2
+  options:
+    - '"Therefore the supports are cracked, the bridge is unsafe."'
+    - '"The supports are cracked. Therefore, the bridge is unsafe."'
+    - '"The bridge is unsafe. Therefore, the supports are cracked."'
+    - '"Therefore, the supports are cracked for the bridge is unsafe."'
+  hint: '"Therefore" is a conclusion indicator. It should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "the supports are cracked"; the conclusion is "the bridge is unsafe."
+    2. Replace "for" with "therefore" on the conclusion side.
+    3. State the premise first, then "therefore" with the conclusion.
+    4. The correct rewrite is: "The supports are cracked. Therefore, the bridge is unsafe."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "Hence the suspect is guilty. DNA evidence was found at the scene" using "as."'
+  answer: 4
+  options:
+    - '"As the suspect is guilty, DNA evidence was found at the scene."'
+    - '"The suspect is guilty as DNA evidence was found at the scene."'
+    - '"DNA evidence was found at the scene as the suspect is guilty."'
+    - '"As DNA evidence was found at the scene, the suspect is guilty."'
+  hint: '"As" is a premise indicator. It should introduce the premise.'
+  walkthrough: |
+    1. The premise is "DNA evidence was found at the scene"; the conclusion is "the suspect is guilty."
+    2. "As" introduces the premise.
+    3. Place "as" before the premise, then state the conclusion.
+    4. The correct rewrite is: "As DNA evidence was found at the scene, the suspect is guilty."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Which rewrite preserves the logical structure of "Given that the exam is tomorrow, you should study tonight"?'
+  answer: 1
+  options:
+    - '"The exam is tomorrow, so you should study tonight."'
+    - '"You should study tonight, so the exam is tomorrow."'
+    - '"Since you should study tonight, the exam is tomorrow."'
+    - '"The exam is tomorrow because you should study tonight."'
+  hint: 'The premise is "the exam is tomorrow" and the conclusion is "you should study tonight."'
+  walkthrough: |
+    1. Original: premise = "the exam is tomorrow"; conclusion = "you should study tonight."
+    2. "The exam is tomorrow, so you should study tonight" uses "so" to introduce the conclusion, preserving the structure.
+    3. The other options reverse which sentence is the premise and which is the conclusion.
+    4. The correct rewrite is: "The exam is tomorrow, so you should study tonight."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "You should see a doctor, because you have had a fever for three days" using "it follows that."'
+  answer: 3
+  options:
+    - '"It follows that you have had a fever for three days. You should see a doctor."'
+    - '"You should see a doctor. It follows that you have had a fever for three days."'
+    - '"You have had a fever for three days. It follows that you should see a doctor."'
+    - '"It follows that you should see a doctor it follows that you have had a fever."'
+  hint: '"It follows that" is a conclusion indicator. It should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "you have had a fever for three days"; the conclusion is "you should see a doctor."
+    2. "It follows that" introduces the conclusion.
+    3. State the premise first, then "it follows that" with the conclusion.
+    4. The correct rewrite is: "You have had a fever for three days. It follows that you should see a doctor."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'What is the conclusion? "The evidence was planted. The chain of custody was broken. Therefore, the case must be thrown out."'
+  answer: 3
+  options:
+    - '"The evidence was planted"'
+    - '"The chain of custody was broken"'
+    - '"The case must be thrown out"'
+    - There is no conclusion
+  hint: '"Therefore" is a conclusion indicator.'
+  walkthrough: |
+    1. "Therefore" signals the conclusion: "the case must be thrown out."
+    2. The other two sentences are premises.
+    3. The conclusion is "the case must be thrown out."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Since the roof is leaking and the walls have mold, the building is uninhabitable."'
+  answer: 2
+  options:
+    - '"The roof is leaking"'
+    - '"The building is uninhabitable"'
+    - '"The walls have mold"'
+    - 'Both "the roof is leaking" and "the walls have mold"'
+  hint: '"Since" is a premise indicator.'
+  walkthrough: |
+    1. "Since" marks the premises: "the roof is leaking" and "the walls have mold."
+    2. The remaining sentence is the claim being supported.
+    3. The conclusion is "the building is uninhabitable."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The battery is fully charged. The screen works. The phone must have a software problem."'
+  answer: 4
+  options:
+    - '"The battery is fully charged"'
+    - '"The screen works"'
+    - There is no conclusion
+    - '"The phone must have a software problem"'
+  hint: No indicators are present. Which sentence is being supported by the others?
+  walkthrough: |
+    1. No indicator words appear in the passage.
+    2. "The battery is fully charged" and "the screen works" rule out hardware problems.
+    3. They support the claim "the phone must have a software problem."
+    4. The conclusion is "the phone must have a software problem."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The suspect should be released, for no evidence links him to the crime."'
+  answer: 1
+  options:
+    - '"The suspect should be released"'
+    - '"No evidence links him to the crime"'
+    - Both sentences
+    - There is no conclusion
+  hint: '"For" is a premise indicator here.'
+  walkthrough: |
+    1. "For" introduces the premise: "no evidence links him to the crime."
+    2. The claim being supported is "the suspect should be released."
+    3. The conclusion is "the suspect should be released."
+  tags:
+    - locate-conclusion
+
+- type: mcq
+  question: 'In "The glass shattered because it was hit by a baseball," is "because" a premise indicator?'
+  answer: 2
+  options:
+    - Yes; the baseball hitting it is evidence that the glass shattered
+    - 'No; this explains the cause of a known event, not a reason to believe a claim'
+    - 'Yes; "because" always functions as a premise indicator'
+    - 'No; "because" is a conclusion indicator here'
+  hint: 'Is someone arguing that the glass shattered, or explaining what caused the shattering?'
+  walkthrough: |
+    1. The glass shattering is already known.
+    2. "Because" explains the physical cause: a baseball hit it.
+    3. This is a causal explanation, not a logical argument.
+    4. "Because" here gives a causal explanation, not a logical premise.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'In "The plane was delayed because of mechanical issues," is "because" a premise indicator?'
+  answer: 4
+  options:
+    - Yes; mechanical issues are evidence that the plane was delayed
+    - 'Yes; "because" is always a premise indicator'
+    - 'No; "because" is a conclusion indicator here'
+    - 'No; this explains the cause of a known event, not a reason to believe a claim'
+  hint: 'Is someone arguing that the plane was delayed, or explaining why it was delayed?'
+  walkthrough: |
+    1. The delay is already known; no one is trying to prove it happened.
+    2. "Because" explains the cause: mechanical issues.
+    3. This is a causal explanation, not a logical argument.
+    4. "Because" here gives a causal explanation, not a logical premise.
+  tags:
+    - categorize-phrases
+
+- type: mcq
+  question: 'Rewrite "Consequently, the park is closed. The storm knocked down several trees" using "because."'
+  answer: 3
+  options:
+    - '"Because the park is closed, the storm knocked down several trees."'
+    - '"The storm knocked down several trees because the park is closed."'
+    - '"The park is closed, because the storm knocked down several trees."'
+    - '"Because consequently the storm knocked down trees, the park is closed."'
+  hint: '"Because" is a premise indicator. It should introduce the premise.'
+  walkthrough: |
+    1. The premise is "the storm knocked down several trees"; the conclusion is "the park is closed."
+    2. "Because" introduces the premise.
+    3. Place the conclusion first, then "because" with the premise.
+    4. The correct rewrite is: "The park is closed, because the storm knocked down several trees."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Rewrite "The roads are dangerous, since black ice has formed overnight" using "so."'
+  answer: 1
+  options:
+    - '"Black ice has formed overnight, so the roads are dangerous."'
+    - '"The roads are dangerous, so black ice has formed overnight."'
+    - '"So black ice has formed overnight, the roads are dangerous."'
+    - '"Since the roads are dangerous, so black ice has formed."'
+  hint: '"So" is a conclusion indicator. It should introduce the conclusion.'
+  walkthrough: |
+    1. The premise is "black ice has formed overnight"; the conclusion is "the roads are dangerous."
+    2. "So" introduces the conclusion.
+    3. State the premise first, then "so" with the conclusion.
+    4. The correct rewrite is: "Black ice has formed overnight, so the roads are dangerous."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'Which rewrite preserves the logical structure of "After all, the rent is too high. We should move to a smaller apartment"?'
+  answer: 2
+  options:
+    - '"We should move to a smaller apartment. After all, the rent is too high."'
+    - '"The rent is too high, so we should move to a smaller apartment."'
+    - '"Since we should move to a smaller apartment, the rent is too high."'
+    - '"We should move to a smaller apartment because we should move."'
+  hint: 'The premise is "the rent is too high" and the conclusion is "we should move to a smaller apartment."'
+  walkthrough: |
+    1. Original: premise = "the rent is too high"; conclusion = "we should move to a smaller apartment."
+    2. "The rent is too high, so we should move to a smaller apartment" uses "so" to introduce the conclusion while keeping the same premise.
+    3. The other rewrites either repeat the original indicator or reverse the roles.
+    4. The correct rewrite is: "The rent is too high, so we should move to a smaller apartment."
+  tags:
+    - rewrite-indicators
+
+- type: mcq
+  question: 'In "The roads are icy. Therefore, drive carefully," which word is an indicator and what type is it?'
+  answer: 2
+  options:
+    - '"Therefore" is a premise indicator'
+    - '"Therefore" is a conclusion indicator'
+    - There are no indicator words
+    - '"Icy" is a premise indicator'
+  hint: '"Therefore" signals the claim the premises support.'
+  walkthrough: |
+    1. "Therefore" appears before "drive carefully."
+    2. It signals that "drive carefully" is the conclusion.
+    3. An indicator that marks the conclusion is a conclusion indicator.
+    4. "Therefore" is a conclusion indicator.
+  tags:
+    - diagnostic

@@ -1,0 +1,769 @@
+- type: truth-table
+  question: 'Complete the intermediate column $(N \lor P)$ in the truth table for $M \land (N \lor P)$.'
+  formulas:
+    - $M$
+    - $N$
+    - $P$
+    - '$(N \lor P)$'
+  hiddenFormulas:
+    - '$(N \lor P)$'
+  hint: 'Disjunction: true when at least one of $N$, $P$ is true.'
+  walkthrough: |
+    1. Row 1: T $\lor$ T = T. Row 2: T $\lor$ F = T.
+    2. Row 3: F $\lor$ T = T. Row 4: F $\lor$ F = F.
+    3. Row 5: T $\lor$ T = T. Row 6: T $\lor$ F = T.
+    4. Row 7: F $\lor$ T = T. Row 8: F $\lor$ F = F.
+    5. The values are: T, T, T, F, T, T, T, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(P \land Q)$ for the formula $\neg (P \land Q) \to R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \land Q)$'
+  hiddenFormulas:
+    - '$(P \land Q)$'
+  hint: 'Conjunction: true only when both $P$ and $Q$ are true.'
+  walkthrough: |
+    1. Rows 1-2: $P$=T, $Q$=T → T$\land$T = T.
+    2. Rows 3-4: $P$=T, $Q$=F → T$\land$F = F.
+    3. Rows 5-6: $P$=F, $Q$=T → F$\land$T = F.
+    4. Rows 7-8: $P$=F, $Q$=F → F$\land$F = F.
+    5. The values are: T, T, F, F, F, F, F, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(A \to B)$ for the formula $(A \to B) \lor \neg C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \to B)$'
+  hiddenFormulas:
+    - '$(A \to B)$'
+  hint: 'Conditional: false only when antecedent is T and consequent is F.'
+  walkthrough: |
+    1. Rows 1-2: T$\to$T = T. Rows 3-4: T$\to$F = F.
+    2. Rows 5-8: F$\to$anything = T (vacuous truth).
+    3. The values are: T, T, F, F, T, T, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: mcq
+  question: 'When evaluating a complex truth table, which sub-formula should you compute first?'
+  answer: 3
+  options:
+    - The main operator column
+    - The column with the most connectives
+    - The innermost sub-formulas
+    - The reference columns (they are already given)
+  hint: 'Work from the inside out: smallest parts first.'
+  walkthrough: |
+    1. Inner sub-formulas depend only on the reference columns.
+    2. Outer sub-formulas depend on inner results.
+    3. You must compute innermost parts first, then build outward.
+    4. The innermost sub-formulas should be computed first.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $\neg C$ for the formula $(A \to B) \lor \neg C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$\neg C$'
+  hiddenFormulas:
+    - '$\neg C$'
+  hint: Negate each value in the $C$ column.
+  walkthrough: |
+    1. $C$ alternates: T, F, T, F, T, F, T, F.
+    2. $\neg C$ flips each: F, T, F, T, F, T, F, T.
+    3. The values are: F, T, F, T, F, T, F, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \to B) \lor \neg C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \to B)$'
+    - '$\neg C$'
+    - '$(A \to B) \lor \neg C$'
+  hiddenFormulas:
+    - '$(A \to B) \lor \neg C$'
+  hint: 'Use the $(A \to B)$ and $\neg C$ columns to compute the disjunction.'
+  walkthrough: |
+    1. Row 1: T $\lor$ F = T. Row 2: T $\lor$ T = T.
+    2. Row 3: F $\lor$ F = F. Row 4: F $\lor$ T = T.
+    3. Row 5: T $\lor$ F = T. Row 6: T $\lor$ T = T.
+    4. Row 7: T $\lor$ F = T. Row 8: T $\lor$ T = T.
+    5. The values are: T, T, F, T, T, T, T, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land Q) \to R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \land Q)$'
+    - '$(P \land Q) \to R$'
+  hiddenFormulas:
+    - '$(P \land Q) \to R$'
+  hint: 'Evaluate $(P \land Q)$ first, then apply the conditional with $R$.'
+  walkthrough: |
+    1. Row 1: T$\land$T=T; T$\to$T=T. Row 2: T$\to$F=F.
+    2. Rows 3-8: $P \land Q$=F; F$\to$anything=T.
+    3. The values are: T, F, T, T, T, T, T, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \land Q) \to R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \land Q)$'
+    - '$\neg (P \land Q)$'
+    - '$\neg (P \land Q) \to R$'
+  hiddenFormulas:
+    - '$\neg (P \land Q) \to R$'
+  hint: 'Compute $\neg (P \land Q)$ first, then use it as the antecedent with $R$.'
+  walkthrough: |
+    1. Rows 1-2: $\neg(P \land Q)$=F; F$\to$R=T for any R.
+    2. Row 3: T$\to$T=T. Row 4: T$\to$F=F.
+    3. Row 5: T$\to$T=T. Row 6: T$\to$F=F.
+    4. Row 7: T$\to$T=T. Row 8: T$\to$F=F.
+    5. The values are: T, T, T, F, T, F, T, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $M \land (N \lor P)$.'
+  formulas:
+    - $M$
+    - $N$
+    - $P$
+    - '$(N \lor P)$'
+    - '$M \land (N \lor P)$'
+  hiddenFormulas:
+    - '$M \land (N \lor P)$'
+  hint: 'Use the $(N \lor P)$ column and the $M$ column to compute the conjunction.'
+  walkthrough: |
+    1. Row 1: T$\land$T=T. Row 2: T$\land$T=T. Row 3: T$\land$T=T.
+    2. Row 4: T$\land$F=F. Rows 5-8: F$\land$anything=F.
+    3. The values are: T, T, T, F, F, F, F, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \lor B) \to C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \lor B)$'
+    - '$(A \lor B) \to C$'
+  hiddenFormulas:
+    - '$(A \lor B) \to C$'
+  hint: 'Compute $(A \lor B)$ first, then evaluate the conditional with $C$.'
+  walkthrough: |
+    1. Rows 1-6: $(A \lor B)$=T; T$\to$C depends on C.
+    2. Rows 7-8: $(A \lor B)$=F; F$\to$C=T always.
+    3. The values are: T, F, T, F, T, F, T, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the intermediate column $(A \land B)$ for the formula $(A \land B) \to C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \land B)$'
+  hiddenFormulas:
+    - '$(A \land B)$'
+  hint: 'Conjunction: true only when both $A$ and $B$ are true.'
+  walkthrough: |
+    1. Rows 1-2: $A$=T, $B$=T, so T$\land$T = T.
+    2. Rows 3-4: $A$=T, $B$=F, so T$\land$F = F.
+    3. Rows 5-8: $A$=F, so F$\land$anything = F.
+    4. The values are: T, T, F, F, F, F, F, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $\neg P$ for the formula $\neg P \lor (Q \land R)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$\neg P$'
+  hiddenFormulas:
+    - '$\neg P$'
+  hint: Negate each value in the $P$ column.
+  walkthrough: |
+    1. Rows 1-4: $P$=T, so $\neg P$=F.
+    2. Rows 5-8: $P$=F, so $\neg P$=T.
+    3. The values are: F, F, F, F, T, T, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(Q \land R)$ for the formula $P \to (Q \land R)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(Q \land R)$'
+  hiddenFormulas:
+    - '$(Q \land R)$'
+  hint: 'Conjunction: true only when both $Q$ and $R$ are true.'
+  walkthrough: |
+    1. Rows 1, 5: $Q$=T, $R$=T, so T$\land$T = T.
+    2. Rows 2, 6: $Q$=T, $R$=F, so T$\land$F = F.
+    3. Rows 3, 7: $Q$=F, $R$=T, so F$\land$T = F.
+    4. Rows 4, 8: $Q$=F, $R$=F, so F$\land$F = F.
+    5. The values are: T, F, F, F, T, F, F, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $\neg M$ for the formula $(\neg M \lor N) \land P$.'
+  formulas:
+    - $M$
+    - $N$
+    - $P$
+    - '$\neg M$'
+  hiddenFormulas:
+    - '$\neg M$'
+  hint: Negate each value in the $M$ column.
+  walkthrough: |
+    1. Rows 1-4: $M$=T, so $\neg M$=F.
+    2. Rows 5-8: $M$=F, so $\neg M$=T.
+    3. The values are: F, F, F, F, T, T, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(M \lor N)$ for the formula $(M \lor N) \land P$.'
+  formulas:
+    - $M$
+    - $N$
+    - $P$
+    - '$(M \lor N)$'
+  hiddenFormulas:
+    - '$(M \lor N)$'
+  hint: 'Disjunction: true when at least one of $M$, $N$ is true.'
+  walkthrough: |
+    1. Rows 1-4: $M$=T, so T$\lor$anything = T.
+    2. Rows 5-6: $M$=F, $N$=T, so F$\lor$T = T.
+    3. Rows 7-8: $M$=F, $N$=F, so F$\lor$F = F.
+    4. The values are: T, T, T, T, T, T, F, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(X \to Y)$ for the formula $(X \to Y) \land Z$.'
+  formulas:
+    - $X$
+    - $Y$
+    - $Z$
+    - '$(X \to Y)$'
+  hiddenFormulas:
+    - '$(X \to Y)$'
+  hint: 'Conditional: false only when antecedent is T and consequent is F.'
+  walkthrough: |
+    1. Rows 1-2: T$\to$T = T.
+    2. Rows 3-4: T$\to$F = F.
+    3. Rows 5-8: F$\to$anything = T (vacuous truth).
+    4. The values are: T, T, F, F, T, T, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $\neg R$ for the formula $(P \lor Q) \land \neg R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$\neg R$'
+  hiddenFormulas:
+    - '$\neg R$'
+  hint: Negate each value in the $R$ column.
+  walkthrough: |
+    1. $R$ alternates: T, F, T, F, T, F, T, F.
+    2. $\neg R$ flips each: F, T, F, T, F, T, F, T.
+    3. The values are: F, T, F, T, F, T, F, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(B \lor C)$ for the formula $A \land (B \lor C)$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(B \lor C)$'
+  hiddenFormulas:
+    - '$(B \lor C)$'
+  hint: 'Disjunction: true when at least one of $B$, $C$ is true.'
+  walkthrough: |
+    1. Rows 1, 5: T$\lor$T = T.
+    2. Rows 2, 6: T$\lor$F = T.
+    3. Rows 3, 7: F$\lor$T = T.
+    4. Rows 4, 8: F$\lor$F = F.
+    5. The values are: T, T, T, F, T, T, T, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $\neg A$ for the formula $\neg A \to (B \land C)$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$\neg A$'
+  hiddenFormulas:
+    - '$\neg A$'
+  hint: Negate each value in the $A$ column.
+  walkthrough: |
+    1. Rows 1-4: $A$=T, so $\neg A$=F.
+    2. Rows 5-8: $A$=F, so $\neg A$=T.
+    3. The values are: F, F, F, F, T, T, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(P \to Q)$ for the formula $(P \to Q) \lor R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \to Q)$'
+  hiddenFormulas:
+    - '$(P \to Q)$'
+  hint: 'Conditional: false only when antecedent is T and consequent is F.'
+  walkthrough: |
+    1. Rows 1-2: T$\to$T = T.
+    2. Rows 3-4: T$\to$F = F.
+    3. Rows 5-8: F$\to$anything = T.
+    4. The values are: T, T, F, F, T, T, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(A \land B)$ for the formula $\neg (A \land B) \lor C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \land B)$'
+  hiddenFormulas:
+    - '$(A \land B)$'
+  hint: 'Conjunction: true only when both $A$ and $B$ are true.'
+  walkthrough: |
+    1. Rows 1-2: $A$=T, $B$=T, so T$\land$T = T.
+    2. Rows 3-4: $A$=T, $B$=F, so T$\land$F = F.
+    3. Rows 5-8: $A$=F, so F$\land$anything = F.
+    4. The values are: T, T, F, F, F, F, F, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $\neg B$ for the formula $A \land (\neg B \lor C)$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$\neg B$'
+  hiddenFormulas:
+    - '$\neg B$'
+  hint: Negate each value in the $B$ column.
+  walkthrough: |
+    1. Rows 1-2, 5-6: $B$=T, so $\neg B$=F.
+    2. Rows 3-4, 7-8: $B$=F, so $\neg B$=T.
+    3. The values are: F, F, T, T, F, F, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(M \to N)$ for the formula $(M \to N) \to P$.'
+  formulas:
+    - $M$
+    - $N$
+    - $P$
+    - '$(M \to N)$'
+  hiddenFormulas:
+    - '$(M \to N)$'
+  hint: 'Conditional: false only when antecedent is T and consequent is F.'
+  walkthrough: |
+    1. Rows 1-2: T$\to$T = T.
+    2. Rows 3-4: T$\to$F = F.
+    3. Rows 5-8: F$\to$anything = T.
+    4. The values are: T, T, F, F, T, T, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $(X \lor Y)$ for the formula $\neg (X \lor Y) \land Z$.'
+  formulas:
+    - $X$
+    - $Y$
+    - $Z$
+    - '$(X \lor Y)$'
+  hiddenFormulas:
+    - '$(X \lor Y)$'
+  hint: 'Disjunction: true when at least one of $X$, $Y$ is true.'
+  walkthrough: |
+    1. Rows 1-4: $X$=T, so T$\lor$anything = T.
+    2. Rows 5-6: $X$=F, $Y$=T, so F$\lor$T = T.
+    3. Rows 7-8: $X$=F, $Y$=F, so F$\lor$F = F.
+    4. The values are: T, T, T, T, T, T, F, F.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the intermediate column $\neg (P \lor Q)$ for the formula $\neg (P \lor Q) \to R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \lor Q)$'
+    - '$\neg (P \lor Q)$'
+  hiddenFormulas:
+    - '$\neg (P \lor Q)$'
+  hint: 'First compute $(P \lor Q)$, then negate the result.'
+  walkthrough: |
+    1. Rows 1-6: $(P \lor Q)$=T, so $\neg(P \lor Q)$=F.
+    2. Rows 7-8: $(P \lor Q)$=F, so $\neg(P \lor Q)$=T.
+    3. The values are: F, F, F, F, F, F, T, T.
+  tags:
+    - intermediate-subformulas
+
+- type: truth-table
+  question: 'Complete the truth table for $A \land (B \to C)$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(B \to C)$'
+    - '$A \land (B \to C)$'
+  hiddenFormulas:
+    - '$A \land (B \to C)$'
+  hint: 'Compute $(B \to C)$ first, then conjoin with $A$.'
+  walkthrough: |
+    1. Rows 1-4: $A$=T, so result depends on $(B \to C)$.
+    2. Row 1: T$\land$T=T. Row 2: T$\land$F=F.
+    3. Rows 3-4: T$\land$T=T (since F$\to$anything=T).
+    4. Rows 5-8: $A$=F, so F$\land$anything=F.
+    5. The values are: T, F, T, T, F, F, F, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q) \land R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \lor Q)$'
+    - '$(P \lor Q) \land R$'
+  hiddenFormulas:
+    - '$(P \lor Q) \land R$'
+  hint: 'Compute $(P \lor Q)$ first, then conjoin with $R$.'
+  walkthrough: |
+    1. Rows 1-6: $(P \lor Q)$=T, so result depends on $R$.
+    2. Odd rows (1,3,5): T$\land$T=T. Even rows (2,4,6): T$\land$F=F.
+    3. Rows 7-8: $(P \lor Q)$=F, so F$\land$anything=F.
+    4. The values are: T, F, T, F, T, F, F, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \to (Q \land R)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$\neg P$'
+    - '$(Q \land R)$'
+    - '$\neg P \to (Q \land R)$'
+  hiddenFormulas:
+    - '$\neg P \to (Q \land R)$'
+  hint: 'When the antecedent $\neg P$ is F, the conditional is T.'
+  walkthrough: |
+    1. Rows 1-4: $\neg P$=F, so F$\to$anything=T.
+    2. Row 5: T$\to$T=T. Rows 6-8: T$\to$F=F.
+    3. The values are: T, T, T, T, T, F, F, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \land B) \lor C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \land B)$'
+    - '$(A \land B) \lor C$'
+  hiddenFormulas:
+    - '$(A \land B) \lor C$'
+  hint: 'Compute $(A \land B)$ first, then disjoin with $C$.'
+  walkthrough: |
+    1. Rows 1-2: $(A \land B)$=T, so T$\lor$anything=T.
+    2. Rows 3-8: $(A \land B)$=F, so result depends on $C$.
+    3. Odd rows (3,5,7): F$\lor$T=T. Even rows (4,6,8): F$\lor$F=F.
+    4. The values are: T, T, T, F, T, F, T, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (A \lor B) \to C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \lor B)$'
+    - '$\neg (A \lor B)$'
+    - '$\neg (A \lor B) \to C$'
+  hiddenFormulas:
+    - '$\neg (A \lor B) \to C$'
+  hint: 'When the antecedent $\neg (A \lor B)$ is F, the conditional is T.'
+  walkthrough: |
+    1. Rows 1-6: $\neg(A \lor B)$=F, so F$\to$anything=T.
+    2. Row 7: T$\to$T=T. Row 8: T$\to$F=F.
+    3. The values are: T, T, T, T, T, T, T, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $P \to (Q \to R)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(Q \to R)$'
+    - '$P \to (Q \to R)$'
+  hiddenFormulas:
+    - '$P \to (Q \to R)$'
+  hint: 'Evaluate the inner conditional $(Q \to R)$ first.'
+  walkthrough: |
+    1. Rows 1-4: $P$=T, so result depends on $(Q \to R)$.
+    2. Row 1: T$\to$T=T. Row 2: T$\to$F=F.
+    3. Rows 3-4: T$\to$T=T (since F$\to$anything=T).
+    4. Rows 5-8: $P$=F, so F$\to$anything=T.
+    5. The values are: T, F, T, T, T, T, T, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q) \to R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \to Q)$'
+    - '$(P \to Q) \to R$'
+  hiddenFormulas:
+    - '$(P \to Q) \to R$'
+  hint: 'Evaluate $(P \to Q)$ first, then use it as the antecedent.'
+  walkthrough: |
+    1. Rows 1-2: $(P \to Q)$=T, so result depends on $R$.
+    2. Row 1: T$\to$T=T. Row 2: T$\to$F=F.
+    3. Rows 3-4: $(P \to Q)$=F, so F$\to$anything=T.
+    4. Rows 5-8: $(P \to Q)$=T, so result depends on $R$.
+    5. The values are: T, F, T, T, T, F, T, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg A \land (B \lor C)$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$\neg A$'
+    - '$(B \lor C)$'
+    - '$\neg A \land (B \lor C)$'
+  hiddenFormulas:
+    - '$\neg A \land (B \lor C)$'
+  hint: 'When $\neg A$ is F, the conjunction is F regardless of the other term.'
+  walkthrough: |
+    1. Rows 1-4: $\neg A$=F, so F$\land$anything=F.
+    2. Rows 5-7: $\neg A$=T and $(B \lor C)$=T, so T$\land$T=T.
+    3. Row 8: T$\land$F=F.
+    4. The values are: F, F, F, F, T, T, T, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(M \lor N) \to P$.'
+  formulas:
+    - $M$
+    - $N$
+    - $P$
+    - '$(M \lor N)$'
+    - '$(M \lor N) \to P$'
+  hiddenFormulas:
+    - '$(M \lor N) \to P$'
+  hint: 'Compute $(M \lor N)$ first, then evaluate the conditional with $P$.'
+  walkthrough: |
+    1. Rows 1-6: $(M \lor N)$=T, so result depends on $P$.
+    2. Odd rows (1,3,5): T$\to$T=T. Even rows (2,4,6): T$\to$F=F.
+    3. Rows 7-8: $(M \lor N)$=F, so F$\to$anything=T.
+    4. The values are: T, F, T, F, T, F, T, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(X \land Y) \lor \neg Z$.'
+  formulas:
+    - $X$
+    - $Y$
+    - $Z$
+    - '$(X \land Y)$'
+    - '$\neg Z$'
+    - '$(X \land Y) \lor \neg Z$'
+  hiddenFormulas:
+    - '$(X \land Y) \lor \neg Z$'
+  hint: 'Compute both $(X \land Y)$ and $\neg Z$, then disjoin them.'
+  walkthrough: |
+    1. Rows 1-2: $(X \land Y)$=T, so T$\lor$anything=T.
+    2. Rows 3-8: $(X \land Y)$=F, so result depends on $\neg Z$.
+    3. Even rows: $\neg Z$=T, so F$\lor$T=T.
+    4. Odd rows (3,5,7): $\neg Z$=F, so F$\lor$F=F.
+    5. The values are: T, T, F, T, F, T, F, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \to Q) \lor R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \to Q)$'
+    - '$\neg (P \to Q)$'
+    - '$\neg (P \to Q) \lor R$'
+  hiddenFormulas:
+    - '$\neg (P \to Q) \lor R$'
+  hint: 'Compute $\neg (P \to Q)$ first, then disjoin with $R$.'
+  walkthrough: |
+    1. Rows 3-4: $\neg(P \to Q)$=T, so T$\lor$anything=T.
+    2. Other rows: $\neg(P \to Q)$=F, so result depends on $R$.
+    3. Rows 1, 5, 7: F$\lor$T=T. Rows 2, 6, 8: F$\lor$F=F.
+    4. The values are: T, F, T, T, T, F, T, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \to B) \land C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \to B)$'
+    - '$(A \to B) \land C$'
+  hiddenFormulas:
+    - '$(A \to B) \land C$'
+  hint: 'Compute $(A \to B)$ first, then conjoin with $C$.'
+  walkthrough: |
+    1. Rows 1-2: $(A \to B)$=T. Row 1: T$\land$T=T. Row 2: T$\land$F=F.
+    2. Rows 3-4: $(A \to B)$=F, so F$\land$anything=F.
+    3. Rows 5-8: $(A \to B)$=T, so result depends on $C$.
+    4. Odd rows (5,7): T$\land$T=T. Even rows (6,8): T$\land$F=F.
+    5. The values are: T, F, F, F, T, F, T, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $P \land (Q \lor \neg R)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$\neg R$'
+    - '$(Q \lor \neg R)$'
+    - '$P \land (Q \lor \neg R)$'
+  hiddenFormulas:
+    - '$P \land (Q \lor \neg R)$'
+  hint: 'Compute $(Q \lor \neg R)$ first, then conjoin with $P$.'
+  walkthrough: |
+    1. Rows 1-4: $P$=T, so result depends on $(Q \lor \neg R)$.
+    2. Rows 1-2, 4: $(Q \lor \neg R)$=T, so T$\land$T=T.
+    3. Row 3: $(Q \lor \neg R)$=F, so T$\land$F=F.
+    4. Rows 5-8: $P$=F, so F$\land$anything=F.
+    5. The values are: T, T, F, T, F, F, F, F.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \lor (Q \to R)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$\neg P$'
+    - '$(Q \to R)$'
+    - '$\neg P \lor (Q \to R)$'
+  hiddenFormulas:
+    - '$\neg P \lor (Q \to R)$'
+  hint: 'Compute both $\neg P$ and $(Q \to R)$, then disjoin them.'
+  walkthrough: |
+    1. Rows 5-8: $\neg P$=T, so T$\lor$anything=T.
+    2. Rows 1-4: $\neg P$=F, so result depends on $(Q \to R)$.
+    3. Rows 1, 3-4: $(Q \to R)$=T, so F$\lor$T=T.
+    4. Row 2: $(Q \to R)$=F, so F$\lor$F=F.
+    5. The values are: T, F, T, T, T, T, T, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \land B) \to \neg C$.'
+  formulas:
+    - $A$
+    - $B$
+    - $C$
+    - '$(A \land B)$'
+    - '$\neg C$'
+    - '$(A \land B) \to \neg C$'
+  hiddenFormulas:
+    - '$(A \land B) \to \neg C$'
+  hint: 'When the antecedent $(A \land B)$ is F, the conditional is T.'
+  walkthrough: |
+    1. Rows 1-2: $(A \land B)$=T, so result depends on $\neg C$.
+    2. Row 1: T$\to$F=F. Row 2: T$\to$T=T.
+    3. Rows 3-8: $(A \land B)$=F, so F$\to$anything=T.
+    4. The values are: F, T, T, T, T, T, T, T.
+  tags:
+    - three-variable-table
+
+- type: truth-table
+  question: 'Complete the main operator column for $(P \to Q) \land R$.'
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$(P \to Q)$'
+    - '$(P \to Q) \land R$'
+  hiddenFormulas:
+    - '$(P \to Q) \land R$'
+  hint: 'Use the $(P \to Q)$ column and the $R$ column to compute the conjunction.'
+  walkthrough: |
+    1. Row 1: T$\land$T=T. Row 2: T$\land$F=F.
+    2. Row 3: F$\land$T=F. Row 4: F$\land$F=F.
+    3. Row 5: T$\land$T=T. Row 6: T$\land$F=F.
+    4. Row 7: T$\land$T=T. Row 8: T$\land$F=F.
+    5. The values are: T, F, F, F, T, F, T, F.
+  tags:
+    - diagnostic

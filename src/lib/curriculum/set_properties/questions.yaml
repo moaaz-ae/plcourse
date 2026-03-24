@@ -1,0 +1,712 @@
+- type: truth-table
+  question: >-
+    Are $\neg (P \land Q)$ and $(\neg P \lor \neg Q)$ logically equivalent? Complete the column for $(\neg P \lor \neg
+    Q)$.
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg Q$'
+    - '$(\neg P \lor \neg Q)$'
+  hiddenFormulas:
+    - '$(\neg P \lor \neg Q)$'
+  hint: 'Compute $\neg P$ and $\neg Q$, then disjoin. Compare with the $\neg (P \land Q)$ column (F, T, T, T).'
+  walkthrough: |
+    1. Row 1: F $\lor$ F = F. Row 2: F $\lor$ T = T.
+    2. Row 3: T $\lor$ F = T. Row 4: T $\lor$ T = T.
+    3. The column is F, T, T, T.
+    4. This matches $\neg (P \land Q)$: F, T, T, T. They are equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $(P \to Q)$ and $(\neg P \lor Q)$ logically equivalent?'
+  answer: 1
+  options:
+    - 'Yes; both have the column T, F, T, T'
+    - No; they differ on row 3
+    - Yes; but only when $P$ is true
+    - 'No; one is a conditional, the other a disjunction'
+  hint: Compute both columns and compare row by row.
+  walkthrough: |
+    1. $P \to Q$: T, F, T, T.
+    2. $\neg P \lor Q$: F$\lor$T=T, F$\lor$F=F, T$\lor$T=T, T$\lor$F=T. Column: T, F, T, T.
+    3. Both columns match on every row.
+    4. The formulas are logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $(P \to Q)$ and $(Q \to P)$ logically equivalent?'
+  answer: 3
+  options:
+    - Yes; conditionals are symmetric
+    - Yes; both are true when $P$ and $Q$ are both true
+    - 'No; they differ on row 2 ($P$=T, $Q$=F) and row 3 ($P$=F, $Q$=T)'
+    - No; only the first is a WFF
+  hint: Compute both columns. Check rows where $P$ and $Q$ differ.
+  walkthrough: |
+    1. $P \to Q$: T, F, T, T.
+    2. $Q \to P$: T, T, F, T.
+    3. Row 2: F vs. T. Row 3: T vs. F.
+    4. They differ, so they are not logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Two formulas are logically equivalent when:'
+  answer: 2
+  options:
+    - They have the same main operator
+    - Their main operator columns match on every row
+    - They are both tautologies
+    - They have the same sentence letters
+  hint: Equivalence means identical truth values on every possible valuation.
+  walkthrough: |
+    1. Logical equivalence requires the same truth value on every row.
+    2. This is checked by comparing the final columns row by row.
+    3. One mismatch is enough to break equivalence.
+    4. Logically equivalent formulas have main operator columns that match on every row.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $P$ and $\neg \neg P$ logically equivalent?'
+  answer: 4
+  options:
+    - No; one has a negation
+    - No; they have different structures
+    - Yes; but only when $P$ is true
+    - Yes; double negation returns the original truth value on every row
+  hint: '$\neg \neg P$ flips $P$ twice, returning to the original.'
+  walkthrough: |
+    1. $P$: T, F.
+    2. $\neg \neg P$: T, F.
+    3. They match on every row.
+    4. Double negation returns the original truth value, so they are logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: truth-table
+  question: >-
+    Are $\neg (P \lor Q)$ and $(\neg P \land \neg Q)$ logically equivalent? Complete the column for $(\neg P \land \neg
+    Q)$.
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg Q$'
+    - '$(\neg P \land \neg Q)$'
+  hiddenFormulas:
+    - '$(\neg P \land \neg Q)$'
+  hint: 'Compute $\neg P$ and $\neg Q$, then conjoin them. Compare with $\neg (P \lor Q)$: F, F, F, T.'
+  walkthrough: |
+    1. Row 1: F $\land$ F = F. Row 2: F $\land$ T = F.
+    2. Row 3: T $\land$ F = F. Row 4: T $\land$ T = T.
+    3. The column is F, F, F, T.
+    4. This matches $\neg (P \lor Q)$: F, F, F, T. They are equivalent (De Morgan's law).
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $(P \land Q)$ and $(Q \land P)$ logically equivalent?'
+  answer: 1
+  options:
+    - 'Yes; conjunction is commutative, so both columns match on every row'
+    - No; the order of the operands matters
+    - Yes; but only when both are true
+    - No; they have different main operators
+  hint: Build both truth tables and compare. Does swapping the order change any row?
+  walkthrough: |
+    1. $P \land Q$: T, F, F, F.
+    2. $Q \land P$: T, F, F, F.
+    3. Both columns match on every row.
+    4. Conjunction is commutative, so the formulas are logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $(P \to Q)$ and $(\neg Q \to \neg P)$ logically equivalent?'
+  answer: 2
+  options:
+    - No; negation changes the meaning
+    - Yes; the contrapositive is always equivalent to the original conditional
+    - Yes; but only when $Q$ is true
+    - No; they differ when $P$ is false
+  hint: 'The contrapositive of $P \to Q$ is $\neg Q \to \neg P$. Compare their truth tables.'
+  walkthrough: |
+    1. $P \to Q$: T, F, T, T.
+    2. $\neg Q \to \neg P$: Row 1 (P=T,Q=T): F$\to$F=T. Row 2 (P=T,Q=F): T$\to$F=F. Row 3 (P=F,Q=T): F$\to$T=T. Row 4 (P=F,Q=F): T$\to$T=T.
+    3. Column: T, F, T, T. They match on every row.
+    4. The contrapositive is logically equivalent to the original conditional.
+  tags:
+    - test-equivalence
+
+- type: truth-table
+  question: 'Are $P \lor Q$ and $Q \lor P$ logically equivalent? Complete the column for $Q \lor P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$Q \lor P$'
+  hiddenFormulas:
+    - '$Q \lor P$'
+  hint: 'Disjunction is commutative. Compare with $P \lor Q$: T, T, T, F.'
+  walkthrough: |
+    1. Row 1: T$\lor$T=T. Row 2: F$\lor$T=T.
+    2. Row 3: T$\lor$F=T. Row 4: F$\lor$F=F.
+    3. Column: T, T, T, F. This matches $P \lor Q$: T, T, T, F.
+    4. They are logically equivalent. Disjunction is commutative.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $P \to Q$ and $\neg P \to \neg Q$ logically equivalent?'
+  answer: 3
+  options:
+    - Yes; negating both sides preserves equivalence
+    - Yes; both are false when $P$ is true and $Q$ is false
+    - No; they differ on rows 2 and 3
+    - No; the second formula is not a WFF
+  hint: '$\neg P \to \neg Q$ is the inverse of $P \to Q$, not the contrapositive.'
+  walkthrough: |
+    1. $P \to Q$: T, F, T, T.
+    2. $\neg P \to \neg Q$: Row 1 (P=T,Q=T): F$\to$F=T. Row 2 (P=T,Q=F): F$\to$T=T. Row 3 (P=F,Q=T): T$\to$F=F. Row 4 (P=F,Q=F): T$\to$T=T.
+    3. Column: T, T, F, T. Compare: T,F,T,T vs T,T,F,T. Row 2: F vs T. Row 3: T vs F.
+    4. They differ on rows 2 and 3, so they are not logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $P \leftrightarrow Q$ and $(P \to Q) \land (Q \to P)$ logically equivalent?'
+  answer: 4
+  options:
+    - No; biconditionals cannot be broken apart
+    - No; they differ when both are false
+    - Yes; but only when $P$ and $Q$ have the same truth value
+    - Yes; the biconditional is defined as the conjunction of both conditionals
+  hint: 'Compare the truth tables: $P \leftrightarrow Q$ gives T,F,F,T. Does $(P \to Q) \land (Q \to P)$ give the same?'
+  walkthrough: |
+    1. $P \leftrightarrow Q$: T, F, F, T.
+    2. $(P \to Q) \land (Q \to P)$: Row 1: T$\land$T=T. Row 2: F$\land$T=F. Row 3: T$\land$F=F. Row 4: T$\land$T=T.
+    3. Column: T, F, F, T. Both match on every row.
+    4. The biconditional is equivalent to the conjunction of both conditionals.
+  tags:
+    - test-equivalence
+
+- type: truth-table
+  question: 'Are $P \to (Q \lor P)$ and $\neg P \lor Q \lor P$ logically equivalent? Complete the column for $P \to (Q \lor P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$Q \lor P$'
+    - '$P \to (Q \lor P)$'
+  hiddenFormulas:
+    - '$P \to (Q \lor P)$'
+  hint: 'When $P$ is true, $Q \lor P$ is always true. When $P$ is false, the conditional is vacuously true.'
+  walkthrough: |
+    1. Row 1: P=T, Q$\lor$P = T$\lor$T = T. T$\to$T = T.
+    2. Row 2: P=T, Q$\lor$P = F$\lor$T = T. T$\to$T = T.
+    3. Row 3: P=F, Q$\lor$P = T$\lor$F = T. F$\to$T = T.
+    4. Row 4: P=F, Q$\lor$P = F$\lor$F = F. F$\to$F = T.
+    5. All T. This is a tautology, so it is equivalent to any other tautology.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $\neg (P \to Q)$ and $(P \land \neg Q)$ logically equivalent?'
+  answer: 1
+  options:
+    - Yes; both are true only when $P$ is true and $Q$ is false
+    - No; negating a conditional gives a disjunction
+    - Yes; but only when $P$ is true
+    - No; they differ on the last row
+  hint: The negation of a conditional is true exactly when the conditional is false.
+  walkthrough: |
+    1. $\neg (P \to Q)$: $P \to Q$ is T,F,T,T so $\neg$ gives F,T,F,F.
+    2. $P \land \neg Q$: Row 1: T$\land$F=F. Row 2: T$\land$T=T. Row 3: F$\land$F=F. Row 4: F$\land$T=F.
+    3. Column: F, T, F, F. Both match on every row.
+    4. The formulas are logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $(P \lor P)$ and $P$ logically equivalent?'
+  answer: 2
+  options:
+    - 'No; $(P \lor P)$ has a connective but $P$ does not'
+    - 'Yes; $P \lor P$ has the same truth value as $P$ on every row'
+    - Yes; but only when $P$ is true
+    - No; they have different numbers of columns
+  hint: 'Disjunction with itself: when is $P \lor P$ true?'
+  walkthrough: |
+    1. $P$: T, F.
+    2. $P \lor P$: T$\lor$T=T, F$\lor$F=F. Column: T, F.
+    3. Both columns match on every row.
+    4. $P \lor P$ is logically equivalent to $P$ (idempotence of disjunction).
+  tags:
+    - test-equivalence
+
+- type: truth-table
+  question: >-
+    Are $P \land (Q \lor R)$ and $(P \land Q) \lor (P \land R)$ logically equivalent? Complete the column for $(P \land
+    Q) \lor (P \land R)$.
+  formulas:
+    - $P$
+    - $Q$
+    - $R$
+    - '$P \land Q$'
+    - '$P \land R$'
+    - '$(P \land Q) \lor (P \land R)$'
+  hiddenFormulas:
+    - '$(P \land Q) \lor (P \land R)$'
+  hint: 'Compute $P \land Q$ and $P \land R$ first, then disjoin them. Compare with $P \land (Q \lor R)$: T,T,T,F,F,F,F,F.'
+  walkthrough: |
+    1. Rows 1-4 have P=T. Row 1: T$\lor$T=T. Row 2: T$\lor$F=T. Row 3: F$\lor$T=T. Row 4: F$\lor$F=F.
+    2. Rows 5-8 have P=F, so both $P \land Q$ and $P \land R$ are F. F$\lor$F=F for all.
+    3. Column: T,T,T,F,F,F,F,F. Matches $P \land (Q \lor R)$.
+    4. The formulas are logically equivalent (distribution of $\land$ over $\lor$).
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'If two formulas have the columns T,F,T,T and T,F,T,F, are they logically equivalent?'
+  answer: 3
+  options:
+    - Yes; they agree on three out of four rows
+    - Yes; they have the same first row
+    - 'No; they differ on row 4, so they are not equivalent'
+    - Cannot be determined without seeing the formulas
+  hint: 'Equivalence requires matching on every row, not just most rows.'
+  walkthrough: |
+    1. Row 4: first formula is T, second formula is F.
+    2. They differ on at least one row.
+    3. One mismatch is enough to break equivalence.
+    4. They differ on row 4, so they are not logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: Are two tautologies always logically equivalent to each other?
+  answer: 4
+  options:
+    - No; they may have different sentence letters
+    - No; different structures mean different truth values
+    - Yes; but only if they share the same sentence letters
+    - 'Yes; both are true on every row, so their columns always match'
+  hint: 'If both columns are all T, do they match on every row?'
+  walkthrough: |
+    1. A tautology is T on every row of its truth table.
+    2. If both formulas are tautologies (over the same sentence letters), both columns are all T.
+    3. All T matches all T on every row.
+    4. Two tautologies are always logically equivalent because their columns always match.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Is the set $\{P, \neg P\}$ jointly satisfiable?'
+  answer: 3
+  options:
+    - Yes; set $P$ = T
+    - Yes; set $P$ = F
+    - No; no valuation makes both true at the same time
+    - Cannot be determined
+  hint: 'Check every row. Is there one where both $P$ and $\neg P$ are true?'
+  walkthrough: |
+    1. Row 1: $P$=T, $\neg P$=F. Not both true.
+    2. Row 2: $P$=F, $\neg P$=T. Not both true.
+    3. No row makes both true.
+    4. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{A \lor B, \neg A\}$ jointly satisfiable?'
+  answer: 1
+  options:
+    - 'Yes; set $A$=F, $B$=T: both formulas are true'
+    - 'No; $\neg A$ contradicts $A \lor B$'
+    - 'Yes; set $A$=T, $B$=T'
+    - No; there is no satisfying valuation
+  hint: Find one row where both are true.
+  walkthrough: |
+    1. Try $A$=F, $B$=T.
+    2. $A \lor B$ = F$\lor$T = T. $\neg A$ = T.
+    3. Both true on this row.
+    4. The set is jointly satisfiable (with $A$=F, $B$=T).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \to Q, P, \neg Q\}$ jointly satisfiable?'
+  answer: 4
+  options:
+    - 'Yes; set $P$=T, $Q$=T'
+    - 'Yes; set $P$=F, $Q$=F'
+    - 'Yes; set $P$=T, $Q$=F'
+    - No; no valuation makes all three true simultaneously
+  hint: 'If $P$ is true and $\neg Q$ is true, what is $P \to Q$?'
+  walkthrough: |
+    1. $P$=T and $\neg Q$=T requires $Q$=F.
+    2. Then $P \to Q$ = T$\to$F = F. Not all three true.
+    3. If $P$=F, then $P$ is false. Not all three true.
+    4. No valuation works. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: What does it mean for a set to be jointly satisfiable?
+  answer: 2
+  options:
+    - Every valuation makes all sentences true
+    - At least one valuation makes all sentences true simultaneously
+    - Each sentence is individually satisfiable
+    - The sentences are logically equivalent
+  hint: One row with all T is enough.
+  walkthrough: |
+    1. "Jointly satisfiable" means there exists at least one valuation where all sentences are true.
+    2. You only need one such row.
+    3. Individual satisfiability is not enough; they must all be true at the same time.
+    4. Joint satisfiability requires at least one valuation making all sentences true simultaneously.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \lor Q, \neg P, \neg Q\}$ jointly satisfiable?'
+  answer: 3
+  options:
+    - 'Yes; set $P$=F, $Q$=T'
+    - 'Yes; set $P$=T, $Q$=F'
+    - 'No; if both $\neg P$ and $\neg Q$ are true, then $P \lor Q$ is false'
+    - 'Yes; set $P$=F, $Q$=F'
+  hint: 'If $\neg P$ and $\neg Q$ are both true, both $P$ and $Q$ are false.'
+  walkthrough: |
+    1. $\neg P$=T requires $P$=F. $\neg Q$=T requires $Q$=F.
+    2. Then $P \lor Q$ = F$\lor$F = F.
+    3. Not all three true on any row.
+    4. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P, Q\}$ jointly satisfiable?'
+  answer: 1
+  options:
+    - 'Yes; set $P$=T, $Q$=T and both are true'
+    - No; $P$ and $Q$ might have different truth values
+    - Yes; but only if $P$ and $Q$ refer to the same thing
+    - Cannot be determined
+  hint: Is there any valuation that makes both $P$ and $Q$ true?
+  walkthrough: |
+    1. Try $P$=T, $Q$=T.
+    2. $P$ is true and $Q$ is true. Both are true simultaneously.
+    3. One satisfying valuation is enough.
+    4. The set is jointly satisfiable (with $P$=T, $Q$=T).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \to Q, Q \to R, P, \neg R\}$ jointly satisfiable?'
+  answer: 4
+  options:
+    - 'Yes; set $P$=T, $Q$=T, $R$=T'
+    - 'Yes; set $P$=T, $Q$=F, $R$=F'
+    - 'Yes; set $P$=F, $Q$=F, $R$=F'
+    - 'No; $P$ and $P \to Q$ force $Q$=T, and $Q \to R$ forces $R$=T, contradicting $\neg R$'
+  hint: Start from $P$=T (required) and trace through the conditionals.
+  walkthrough: |
+    1. $P$ must be T. Then $P \to Q$ requires $Q$=T (otherwise T$\to$F=F).
+    2. $Q$=T and $Q \to R$ requires $R$=T (otherwise T$\to$F=F).
+    3. But $\neg R$ requires $R$=F. $R$ cannot be both T and F.
+    4. No valuation works. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \lor Q, P \to R, Q \to R\}$ jointly satisfiable?'
+  answer: 2
+  options:
+    - No; the conditionals contradict the disjunction
+    - 'Yes; set $P$=T, $Q$=T, $R$=T and all three are true'
+    - Yes; but only if $R$ is false
+    - No; there is no satisfying valuation
+  hint: Try making $R$ true. Does that help satisfy the conditionals?
+  walkthrough: |
+    1. Try $P$=T, $Q$=T, $R$=T.
+    2. $P \lor Q$ = T. $P \to R$ = T$\to$T = T. $Q \to R$ = T$\to$T = T.
+    3. All three formulas are true.
+    4. The set is jointly satisfiable (with $P$=T, $Q$=T, $R$=T).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{\neg P, \neg Q, P \lor Q\}$ jointly satisfiable?'
+  answer: 3
+  options:
+    - 'Yes; set $P$=F, $Q$=T'
+    - 'Yes; set $P$=T, $Q$=F'
+    - 'No; $\neg P$ and $\neg Q$ force both $P$ and $Q$ to be false, making $P \lor Q$ false'
+    - 'Yes; set $P$=F, $Q$=F'
+  hint: 'If $\neg P$ and $\neg Q$ are both true, what are $P$ and $Q$?'
+  walkthrough: |
+    1. $\neg P$=T forces $P$=F. $\neg Q$=T forces $Q$=F.
+    2. $P \lor Q$ = F$\lor$F = F. The disjunction is not satisfied.
+    3. No other valuation can make $\neg P$, $\neg Q$, and $P \lor Q$ all true.
+    4. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \leftrightarrow Q, P, Q\}$ jointly satisfiable?'
+  answer: 1
+  options:
+    - 'Yes; set $P$=T, $Q$=T: the biconditional and both letters are true'
+    - No; a biconditional cannot be satisfied with both letters true
+    - Yes; but only if $P$ and $Q$ have different truth values
+    - No; three formulas cannot all be true simultaneously
+  hint: 'When $P$ and $Q$ are both true, what is $P \leftrightarrow Q$?'
+  walkthrough: |
+    1. Try $P$=T, $Q$=T.
+    2. $P \leftrightarrow Q$ = T$\leftrightarrow$T = T. $P$=T. $Q$=T.
+    3. All three are true.
+    4. The set is jointly satisfiable (with $P$=T, $Q$=T).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \land Q, \neg P \land \neg Q\}$ jointly satisfiable?'
+  answer: 4
+  options:
+    - 'Yes; set $P$=T, $Q$=T'
+    - 'Yes; set $P$=F, $Q$=F'
+    - Yes; on different rows they can both be true
+    - 'No; the first requires $P$=T and the second requires $P$=F, which is impossible in one valuation'
+  hint: 'What does $P \land Q$ require? What does $\neg P \land \neg Q$ require?'
+  walkthrough: |
+    1. $P \land Q$ requires $P$=T and $Q$=T.
+    2. $\neg P \land \neg Q$ requires $P$=F and $Q$=F.
+    3. $P$ cannot be both T and F in the same valuation.
+    4. No valuation satisfies both. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P, P \to Q\}$ jointly satisfiable?'
+  answer: 2
+  options:
+    - 'No; $P \to Q$ contradicts $P$'
+    - 'Yes; set $P$=T, $Q$=T: both $P$ and $P \to Q$ are true'
+    - 'Yes; set $P$=F, $Q$=F'
+    - No; the conditional forces $P$ to be false
+  hint: 'If $P$ is true, what value of $Q$ makes $P \to Q$ true?'
+  walkthrough: |
+    1. $P$ must be T. Then $P \to Q$ = T$\to$Q.
+    2. For T$\to$Q to be T, we need $Q$=T.
+    3. Try $P$=T, $Q$=T: $P$=T and $P \to Q$=T. Both satisfied.
+    4. The set is jointly satisfiable (with $P$=T, $Q$=T).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \lor Q, \neg P \lor R, \neg Q, \neg R\}$ jointly satisfiable?'
+  answer: 3
+  options:
+    - 'Yes; set $P$=T, $Q$=F, $R$=F'
+    - 'Yes; set $P$=F, $Q$=T, $R$=T'
+    - No; the four formulas together leave no consistent valuation
+    - 'Yes; set $P$=F, $Q$=F, $R$=F'
+  hint: '$\neg Q$ forces $Q$=F; then $P \lor Q$ forces $P$=T; then $\neg P \lor R$ becomes $R$; and $\neg R$ forces $R$=F.'
+  walkthrough: |
+    1. $\neg Q$ forces $Q$=F. Then $P \lor Q$ = $P \lor$F, which requires $P$=T.
+    2. $P$=T in $\neg P \lor R$ gives F$\lor R$, which requires $R$=T.
+    3. But $\neg R$ requires $R$=F. Contradiction.
+    4. No valuation satisfies all four. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \to Q, \neg Q, \neg P\}$ jointly satisfiable?'
+  answer: 1
+  options:
+    - 'Yes; set $P$=F, $Q$=F: all three formulas are true'
+    - 'No; $P \to Q$ requires $P$ and $Q$ to be true'
+    - Yes; but only if $Q$ is true
+    - 'No; $\neg P$ and $\neg Q$ make the conditional undefined'
+  hint: 'When $P$ is false, what is $P \to Q$?'
+  walkthrough: |
+    1. Try $P$=F, $Q$=F.
+    2. $P \to Q$ = F$\to$F = T. $\neg Q$ = T. $\neg P$ = T.
+    3. All three are true.
+    4. The set is jointly satisfiable (with $P$=F, $Q$=F).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P, \neg (P \land Q), Q\}$ jointly satisfiable?'
+  answer: 4
+  options:
+    - 'Yes; set $P$=T, $Q$=T'
+    - 'Yes; set $P$=F, $Q$=T'
+    - 'Yes; set $P$=T, $Q$=F'
+    - 'No; $P$=T and $Q$=T make $P \land Q$=T, so $\neg (P \land Q)$=F'
+  hint: '$P$ and $Q$ must both be true. What does that do to $\neg (P \land Q)$?'
+  walkthrough: |
+    1. $P$ must be T and $Q$ must be T.
+    2. $P \land Q$ = T$\land$T = T. So $\neg (P \land Q)$ = F.
+    3. The third formula is false whenever the first two are true.
+    4. No valuation makes all three true. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \to Q, Q \to P\}$ jointly satisfiable?'
+  answer: 2
+  options:
+    - No; the two conditionals contradict each other
+    - 'Yes; set $P$=T, $Q$=T: both conditionals are true'
+    - Yes; but only when exactly one is true
+    - No; they force $P$ and $Q$ to have different values
+  hint: 'Try $P$=T, $Q$=T. Do both conditionals hold?'
+  walkthrough: |
+    1. Try $P$=T, $Q$=T.
+    2. $P \to Q$ = T$\to$T = T. $Q \to P$ = T$\to$T = T.
+    3. Both are true.
+    4. The set is jointly satisfiable (with $P$=T, $Q$=T).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \land \neg P, Q\}$ jointly satisfiable?'
+  answer: 3
+  options:
+    - 'Yes; set $P$=T, $Q$=T'
+    - 'Yes; set $P$=F, $Q$=T'
+    - 'No; $P \land \neg P$ is a contradiction, so it is false on every row'
+    - Yes; $Q$ can be true independently
+  hint: 'If one formula in the set is always false, can the entire set be jointly satisfied?'
+  walkthrough: |
+    1. $P \land \neg P$ is false on every valuation (it is a contradiction).
+    2. Joint satisfiability requires all formulas to be true on some row.
+    3. Since one formula is always false, no row can make all formulas true.
+    4. The set is jointly unsatisfiable because $P \land \neg P$ is a contradiction.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P \lor \neg Q, Q \lor \neg P\}$ jointly satisfiable?'
+  answer: 1
+  options:
+    - 'Yes; set $P$=T, $Q$=T: both formulas are true'
+    - No; the formulas contradict each other
+    - Yes; but only when $P$ is false
+    - No; there is no satisfying valuation
+  hint: 'Try $P$=T, $Q$=T and check both formulas.'
+  walkthrough: |
+    1. Try $P$=T, $Q$=T.
+    2. $P \lor \neg Q$ = T$\lor$F = T. $Q \lor \neg P$ = T$\lor$F = T.
+    3. Both are true.
+    4. The set is jointly satisfiable (with $P$=T, $Q$=T).
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Two formulas have main operator columns T, F, T, T and T, F, T, T. Are they logically equivalent?'
+  answer: 1
+  options:
+    - Yes; the columns match on every row
+    - No; they could have different structures
+    - 'Yes, but only if they share the same sentence letters'
+    - Cannot be determined
+  hint: Equivalence is defined by matching truth values on every row.
+  walkthrough: |
+    1. Both columns read T, F, T, T.
+    2. They match on every row.
+    3. The formulas are logically equivalent.
+    4. Matching columns on every row means the formulas are logically equivalent.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'Are $\neg P$ and $P$ logically equivalent?'
+  answer: 3
+  options:
+    - Yes; they are both about $P$
+    - Yes; negation does not change equivalence
+    - 'No; they differ on every row ($\neg P$ is T when $P$ is F, and vice versa)'
+    - Cannot be determined
+  hint: 'Compare the columns: $P$ gives T,F and $\neg P$ gives F,T.'
+  walkthrough: |
+    1. $P$: T, F.
+    2. $\neg P$: F, T.
+    3. Row 1: T vs F. Row 2: F vs T. They differ on every row.
+    4. They differ on every row, so they are not logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: truth-table
+  question: 'Are $P \to Q$ and $\neg P \lor Q$ logically equivalent? Complete the column for $\neg P \lor Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg P \lor Q$'
+  hiddenFormulas:
+    - '$\neg P \lor Q$'
+  hint: 'Compute $\neg P$ first, then disjoin with $Q$. Compare with $P \to Q$: T, F, T, T.'
+  walkthrough: |
+    1. Row 1: F$\lor$T = T. Row 2: F$\lor$F = F.
+    2. Row 3: T$\lor$T = T. Row 4: T$\lor$F = T.
+    3. Column: T, F, T, T. This matches $P \to Q$: T, F, T, T.
+    4. They are logically equivalent.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Are $(P \land Q)$ and $\neg (\neg P \lor \neg Q)$ logically equivalent?'
+  answer: 1
+  options:
+    - 'Yes; by De Morgan''s law, $\neg (\neg P \lor \neg Q)$ is equivalent to $P \land Q$'
+    - No; negating a disjunction gives a different result
+    - Yes; but only when $P$ is true
+    - No; they differ on row 4
+  hint: 'Apply De Morgan''s law to $\neg (\neg P \lor \neg Q)$.'
+  walkthrough: |
+    1. $P \land Q$: T, F, F, F.
+    2. $\neg P \lor \neg Q$: F,T,T,T. So $\neg (\neg P \lor \neg Q)$: T,F,F,F.
+    3. Both columns match on every row.
+    4. By De Morgan's law, $\neg (\neg P \lor \neg Q)$ is equivalent to $P \land Q$.
+  tags:
+    - test-equivalence
+
+- type: mcq
+  question: 'Is the set $\{P \to Q, P \to \neg Q, P\}$ jointly satisfiable?'
+  answer: 4
+  options:
+    - 'Yes; set $P$=T, $Q$=T'
+    - 'Yes; set $P$=T, $Q$=F'
+    - 'Yes; set $P$=F, $Q$=F'
+    - 'No; $P$=T forces $Q$=T (from first) and $Q$=F (from second), a contradiction'
+  hint: '$P$ must be T. Then $P \to Q$ requires $Q$=T, but $P \to \neg Q$ requires $Q$=F.'
+  walkthrough: |
+    1. $P$ must be T (third formula).
+    2. $P \to Q$ with $P$=T requires $Q$=T.
+    3. $P \to \neg Q$ with $P$=T requires $\neg Q$=T, i.e. $Q$=F.
+    4. $Q$ cannot be both T and F. No valuation works. The set is jointly unsatisfiable.
+  tags:
+    - test-satisfiability
+
+- type: mcq
+  question: 'Is the set $\{P, Q, P \to Q\}$ jointly satisfiable?'
+  answer: 2
+  options:
+    - No; three formulas cannot all be true at once
+    - 'Yes; set $P$=T, $Q$=T: all three are true'
+    - 'No; $P \to Q$ contradicts $P$ and $Q$'
+    - Yes; but only when $Q$ is false
+  hint: 'Try $P$=T, $Q$=T and check all three formulas.'
+  walkthrough: |
+    1. Try $P$=T, $Q$=T.
+    2. $P$=T. $Q$=T. $P \to Q$ = T$\to$T = T.
+    3. All three are true.
+    4. The set is jointly satisfiable (with $P$=T, $Q$=T).
+  tags:
+    - test-satisfiability

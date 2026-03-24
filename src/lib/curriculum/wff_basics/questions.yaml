@@ -1,0 +1,991 @@
+- type: mcq
+  question: 'Is $(P \land Q)$ a well-formed formula?'
+  answer: 1
+  options:
+    - 'Yes; $P$ and $Q$ are WFFs, and rule 3 allows $(P \land Q)$'
+    - No; it is missing a negation
+    - 'Yes, but only if $P$ and $Q$ are true'
+    - No; brackets are not allowed
+  hint: 'Apply the formation rules: $P$ is a WFF, $Q$ is a WFF, and rule 3 combines them with $\land$.'
+  walkthrough: |
+    1. $P$ is a WFF (rule 1). $Q$ is a WFF (rule 1).
+    2. Rule 3: if $\mathcal{A}$ and $\mathcal{B}$ are WFFs, then $(\mathcal{A} \land \mathcal{B})$ is a WFF.
+    3. $(P \land Q)$ satisfies rule 3.
+    4. $(P \land Q)$ is a WFF.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $\neg (A \lor B)$ a well-formed formula?'
+  answer: 3
+  options:
+    - No; negation cannot apply to a bracketed expression
+    - 'No; $\neg$ must come after the formula'
+    - 'Yes; $(A \lor B)$ is a WFF, and negation of a WFF is a WFF'
+    - 'Yes, but only if $A$ and $B$ are false'
+  hint: 'Build from the inside: first check $(A \lor B)$, then apply negation.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1). $B$ is a WFF (rule 1).
+    2. $(A \lor B)$ is a WFF (rule 4).
+    3. $\neg (A \lor B)$ is a WFF (rule 2: negation of a WFF).
+    4. $\neg (A \lor B)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: Is $R$ a well-formed formula?
+  answer: 2
+  options:
+    - No; a single letter is not a formula
+    - Yes; every sentence letter is a WFF by rule 1
+    - 'Yes, but only in certain contexts'
+    - No; it needs brackets
+  hint: Rule 1 says every sentence letter is a WFF.
+  walkthrough: |
+    1. Rule 1 states every sentence letter is a WFF.
+    2. $R$ is a sentence letter.
+    3. $R$ is a WFF by rule 1.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $\neg \neg P$ a well-formed formula?'
+  answer: 4
+  options:
+    - No; double negation is not allowed
+    - 'No; $\neg$ can only appear once'
+    - 'Yes, but it equals $P$'
+    - 'Yes; $P$ is a WFF, $\neg P$ is a WFF, and $\neg \neg P$ is a WFF'
+  hint: 'Apply rule 2 twice: negate $P$, then negate the result.'
+  walkthrough: |
+    1. $P$ is a WFF (rule 1).
+    2. $\neg P$ is a WFF (rule 2).
+    3. $\neg \neg P$ is a WFF (rule 2 again).
+    4. $\neg \neg P$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $((\neg A) \land (B \lor C))$ a well-formed formula?'
+  answer: 1
+  options:
+    - Yes; each sub-part is a WFF built by the rules
+    - No; there are too many brackets
+    - 'No; $\neg A$ needs brackets around it'
+    - 'Yes, but only informally'
+  hint: 'Build step by step: $A$ → $\neg A$, $B$ and $C$ → $(B \lor C)$, then combine with $\land$.'
+  walkthrough: |
+    1. $A$, $B$, $C$ are WFFs (rule 1).
+    2. $\neg A$ is a WFF (rule 2).
+    3. $(B \lor C)$ is a WFF (rule 4).
+    4. $(\neg A \land (B \lor C))$ is a WFF (rule 3).
+    5. Each sub-part is a WFF built by the rules.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $\neg P$ a well-formed formula?'
+  answer: 2
+  options:
+    - No; negation requires brackets
+    - 'Yes; $P$ is a WFF, and rule 2 produces $\neg P$'
+    - 'No; $\neg$ is not a sentence letter'
+    - 'Yes, but only when $P$ is false'
+  hint: 'Rule 2: if $\mathcal{A}$ is a WFF, then $\neg \mathcal{A}$ is a WFF.'
+  walkthrough: |
+    1. $P$ is a WFF (rule 1).
+    2. Rule 2 says: if $\mathcal{A}$ is a WFF, then $\neg \mathcal{A}$ is a WFF.
+    3. Since $P$ is a WFF, $\neg P$ is a WFF.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(A \lor (B \land C))$ a well-formed formula?'
+  answer: 1
+  options:
+    - 'Yes; $(B \land C)$ is a WFF, then $(A \lor (B \land C))$ is a WFF'
+    - No; you cannot nest connectives
+    - No; too many brackets
+    - 'Yes, but only in informal usage'
+  hint: 'Build from the inside out: first $(B \land C)$, then combine with $A$ using $\lor$.'
+  walkthrough: |
+    1. $B$ and $C$ are WFFs (rule 1).
+    2. $(B \land C)$ is a WFF (rule 3).
+    3. $A$ is a WFF (rule 1).
+    4. $(A \lor (B \land C))$ is a WFF (rule 4).
+    5. $(A \lor (B \land C))$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $\neg (P \land \neg Q)$ a well-formed formula?'
+  answer: 3
+  options:
+    - No; you cannot negate a conjunction
+    - 'No; $\neg Q$ inside a conjunction is not allowed'
+    - 'Yes; $\neg Q$ is a WFF, $(P \land \neg Q)$ is a WFF, and $\neg (P \land \neg Q)$ is a WFF'
+    - 'Yes, but it is ambiguous'
+  hint: 'Build step by step: $\neg Q$, then $(P \land \neg Q)$, then negate.'
+  walkthrough: |
+    1. $Q$ is a WFF (rule 1). $\neg Q$ is a WFF (rule 2).
+    2. $P$ is a WFF (rule 1).
+    3. $(P \land \neg Q)$ is a WFF (rule 3).
+    4. $\neg (P \land \neg Q)$ is a WFF (rule 2).
+    5. $\neg (P \land \neg Q)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(P \lor Q)$ a well-formed formula?'
+  answer: 4
+  options:
+    - 'No; $\lor$ is not a valid connective'
+    - 'No; it needs $\neg$ somewhere'
+    - 'Yes, but only if $P$ and $Q$ are different letters'
+    - 'Yes; $P$ and $Q$ are WFFs, and rule 4 allows $(P \lor Q)$'
+  hint: 'Rule 4 combines two WFFs with $\lor$.'
+  walkthrough: |
+    1. $P$ is a WFF (rule 1). $Q$ is a WFF (rule 1).
+    2. Rule 4: if $\mathcal{A}$ and $\mathcal{B}$ are WFFs, then $(\mathcal{A} \lor \mathcal{B})$ is a WFF.
+    3. $(P \lor Q)$ satisfies rule 4.
+    4. $(P \lor Q)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $\neg \neg \neg A$ a well-formed formula?'
+  answer: 2
+  options:
+    - No; three negations are not allowed
+    - 'Yes; apply rule 2 three times: $A$ → $\neg A$ → $\neg \neg A$ → $\neg \neg \neg A$'
+    - No; only double negation is permitted
+    - 'Yes, but it has no truth value'
+  hint: Rule 2 can be applied as many times as needed.
+  walkthrough: |
+    1. $A$ is a WFF (rule 1).
+    2. $\neg A$ is a WFF (rule 2).
+    3. $\neg \neg A$ is a WFF (rule 2).
+    4. $\neg \neg \neg A$ is a WFF (rule 2).
+    5. Triple negation is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $((A \land B) \lor (C \land D))$ a well-formed formula?'
+  answer: 3
+  options:
+    - No; too many connectives
+    - No; four sentence letters make it invalid
+    - 'Yes; $(A \land B)$ and $(C \land D)$ are WFFs, combined by $\lor$'
+    - 'Yes, but only informally'
+  hint: 'Build the two conjunctions first, then combine them with $\lor$.'
+  walkthrough: |
+    1. $A$, $B$, $C$, $D$ are WFFs (rule 1).
+    2. $(A \land B)$ is a WFF (rule 3). $(C \land D)$ is a WFF (rule 3).
+    3. $((A \land B) \lor (C \land D))$ is a WFF (rule 4).
+    4. $((A \land B) \lor (C \land D))$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(P \land P)$ a well-formed formula?'
+  answer: 1
+  options:
+    - 'Yes; the same letter can appear on both sides of $\land$'
+    - No; $P$ cannot be conjoined with itself
+    - No; each side must use a different letter
+    - 'Yes, but it is meaningless'
+  hint: Rule 3 requires two WFFs; it does not require them to be different.
+  walkthrough: |
+    1. $P$ is a WFF (rule 1).
+    2. Rule 3 says: if $\mathcal{A}$ and $\mathcal{B}$ are WFFs, then $(\mathcal{A} \land \mathcal{B})$ is a WFF.
+    3. Both sides are $P$, which is a WFF. The rule does not require distinct formulas.
+    4. $(P \land P)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(\neg A \lor \neg B)$ a well-formed formula?'
+  answer: 4
+  options:
+    - No; you cannot negate both sides
+    - 'No; $\neg A$ and $\neg B$ need brackets'
+    - 'Yes, but only with extra brackets'
+    - 'Yes; $\neg A$ and $\neg B$ are WFFs, combined by $\lor$'
+  hint: 'Negate each letter first, then combine with $\lor$.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1). $\neg A$ is a WFF (rule 2).
+    2. $B$ is a WFF (rule 1). $\neg B$ is a WFF (rule 2).
+    3. $(\neg A \lor \neg B)$ is a WFF (rule 4).
+    4. $(\neg A \lor \neg B)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(A \land (B \lor \neg C))$ a well-formed formula?'
+  answer: 2
+  options:
+    - 'No; mixing $\land$ and $\lor$ is not allowed'
+    - 'Yes; build $\neg C$, then $(B \lor \neg C)$, then $(A \land (B \lor \neg C))$'
+    - No; the negation is misplaced
+    - 'Yes, but it requires more brackets'
+  hint: Build from the inside out.
+  walkthrough: |
+    1. $C$ is a WFF (rule 1). $\neg C$ is a WFF (rule 2).
+    2. $B$ is a WFF (rule 1). $(B \lor \neg C)$ is a WFF (rule 4).
+    3. $A$ is a WFF (rule 1). $(A \land (B \lor \neg C))$ is a WFF (rule 3).
+    4. $(A \land (B \lor \neg C))$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $\neg (A \land B)$ a well-formed formula?'
+  answer: 3
+  options:
+    - No; negation cannot apply to a conjunction
+    - 'No; $\neg$ must appear inside the brackets'
+    - 'Yes; $(A \land B)$ is a WFF, and $\neg$ applied to a WFF is a WFF'
+    - 'Yes, but only as an abbreviation'
+  hint: 'First form $(A \land B)$, then apply negation.'
+  walkthrough: |
+    1. $A$ and $B$ are WFFs (rule 1).
+    2. $(A \land B)$ is a WFF (rule 3).
+    3. $\neg (A \land B)$ is a WFF (rule 2).
+    4. $\neg (A \land B)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(A \lor B \lor C)$ a well-formed formula (strict reading)?'
+  answer: 1
+  options:
+    - 'No; $\lor$ joins exactly two WFFs, so three need explicit grouping'
+    - Yes; three letters can be joined freely
+    - 'No; $\lor$ cannot appear twice'
+    - Yes; the rules allow any number of disjuncts
+  hint: 'Rule 4 produces $(\mathcal{A} \lor \mathcal{B})$ from two WFFs, not three.'
+  walkthrough: |
+    1. Rule 4 says: if $\mathcal{A}$ and $\mathcal{B}$ are WFFs, then $(\mathcal{A} \lor \mathcal{B})$ is a WFF.
+    2. This joins exactly two WFFs at a time.
+    3. $(A \lor B \lor C)$ has three disjuncts with no grouping.
+    4. Strict application of the rules requires explicit grouping, so this is not a WFF.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Why is $P \land \lor Q$ not a WFF?'
+  answer: 3
+  options:
+    - It has too many connectives
+    - $P$ cannot be combined with $Q$
+    - 'Adjacent connectives $\land \lor$ have no operand between them'
+    - It is missing a negation
+  hint: '$\land$ needs a WFF on its right. Is $\lor Q$ a WFF?'
+  walkthrough: |
+    1. $\land$ requires a WFF on each side.
+    2. On the right of $\land$, we have $\lor Q$. But $\lor$ needs a WFF on its left, and nothing is there.
+    3. $\lor Q$ is not a WFF, so the whole string fails.
+    4. The violation is adjacent connectives with no operand between them.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $(P \land Q$ not a WFF?'
+  answer: 2
+  options:
+    - $P$ and $Q$ cannot be conjoined
+    - The opening bracket has no matching closing bracket
+    - It is missing a negation
+    - Brackets are optional
+  hint: Every opening bracket must have a matching closing bracket.
+  walkthrough: |
+    1. The string starts with "(" but never closes it.
+    2. Rule 3 requires the form $(\mathcal{A} \land \mathcal{B})$, including the closing bracket.
+    3. Missing the closing bracket means the rule cannot apply.
+    4. The opening bracket has no matching closing bracket.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $\land P$ not a WFF?'
+  answer: 4
+  options:
+    - $P$ is not a sentence letter
+    - '$\land$ can only appear inside brackets'
+    - It is missing $Q$
+    - '$\land$ requires a WFF on each side, but nothing is on the left'
+  hint: '$\land$ is a binary connective; it needs two inputs.'
+  walkthrough: |
+    1. $\land$ requires a WFF on its left and a WFF on its right.
+    2. Nothing appears to the left of $\land$.
+    3. The rule for conjunction cannot be applied.
+    4. $\land$ requires a WFF on each side, but nothing is on the left.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: Why is $A B$ not a WFF?
+  answer: 1
+  options:
+    - Two sentence letters placed side by side need a connective between them
+    - $A$ and $B$ are the same letter
+    - It is missing brackets
+    - Sentence letters cannot appear in a formula
+  hint: No formation rule produces two WFFs placed next to each other without a connective.
+  walkthrough: |
+    1. $A$ is a WFF and $B$ is a WFF.
+    2. No rule says "if $\mathcal{A}$ and $\mathcal{B}$ are WFFs, then $\mathcal{A}\mathcal{B}$ is a WFF."
+    3. A connective ($\land$, $\lor$, $\neg$) is needed to combine them.
+    4. Two sentence letters side by side need a connective between them.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $\neg$ by itself not a WFF?'
+  answer: 3
+  options:
+    - It is a WFF; connectives are always WFFs
+    - It needs brackets
+    - '$\neg$ is a connective, not a sentence letter, and no rule produces it alone'
+    - It is only a WFF if followed by a true sentence
+  hint: 'Rule 1 lists sentence letters as WFFs. Is $\neg$ a sentence letter?'
+  walkthrough: |
+    1. $\neg$ is not a sentence letter, so rule 1 does not apply.
+    2. Rule 2 requires $\neg$ to be followed by a WFF. Alone, nothing follows it.
+    3. No formation rule produces $\neg$ by itself.
+    4. $\neg$ is a connective, not a sentence letter, and no rule produces it alone.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $\neg \land A$ not a WFF?'
+  answer: 2
+  options:
+    - $A$ is not valid here
+    - '$\neg$ must be followed by a WFF, but $\land A$ is not a WFF'
+    - '$\neg$ and $\land$ cancel each other'
+    - It needs closing brackets
+  hint: 'Rule 2 says $\neg$ must be followed by a WFF. Is $\land A$ a WFF?'
+  walkthrough: |
+    1. $\neg$ must be followed by a WFF (rule 2).
+    2. $\land A$ is not a WFF: $\land$ needs a WFF on its left, but nothing is there.
+    3. Since $\land A$ is not a WFF, $\neg \land A$ fails rule 2.
+    4. $\neg$ must be followed by a WFF, but $\land A$ is not a WFF.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $P \lor$ not a WFF?'
+  answer: 4
+  options:
+    - $P$ cannot be disjoined
+    - '$\lor$ is not a valid connective'
+    - 'It needs $\neg$'
+    - '$\lor$ requires a WFF on its right, but nothing is there'
+  hint: '$\lor$ is binary: it needs something on both sides.'
+  walkthrough: |
+    1. $\lor$ requires a WFF on its left and right.
+    2. $P$ is on the left, which is fine.
+    3. Nothing appears to the right of $\lor$.
+    4. $\lor$ requires a WFF on its right, but nothing is there.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $)P \land Q($ not a WFF?'
+  answer: 1
+  options:
+    - 'The brackets are reversed; rule 3 requires $(\mathcal{A} \land \mathcal{B})$, not $)\mathcal{A} \land \mathcal{B}($'
+    - Brackets are optional
+    - $P$ and $Q$ cannot be conjoined
+    - It needs a negation
+  hint: Check the direction of the brackets against the formation rule.
+  walkthrough: |
+    1. Rule 3 requires the form $(\mathcal{A} \land \mathcal{B})$: opening bracket first, closing bracket last.
+    2. $)P \land Q($ has the brackets reversed.
+    3. No formation rule matches this string.
+    4. The brackets are reversed, violating the required form.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $P \neg Q$ not a WFF?'
+  answer: 3
+  options:
+    - '$\neg$ cannot appear in the middle'
+    - $P$ and $Q$ are incompatible
+    - '$\neg$ is unary and cannot join two WFFs; $P$ and $\neg Q$ sit side by side with no binary connective'
+    - It needs brackets
+  hint: '$\neg$ applies to one sentence. What joins $P$ and $\neg Q$?'
+  walkthrough: |
+    1. $\neg Q$ is a WFF (rule 2 applied to $Q$).
+    2. $P$ is a WFF (rule 1).
+    3. But $P$ and $\neg Q$ are just two WFFs placed next to each other.
+    4. No rule combines two WFFs without a binary connective ($\land$ or $\lor$).
+    5. $\neg$ is unary and cannot join two WFFs.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $(P \land)$ not a WFF?'
+  answer: 2
+  options:
+    - Brackets are not needed
+    - '$\land$ requires a WFF on its right, but only a closing bracket follows'
+    - $P$ is not a WFF
+    - 'It needs $\neg$'
+  hint: 'Rule 3: $(\mathcal{A} \land \mathcal{B})$ requires a WFF after $\land$.'
+  walkthrough: |
+    1. $\land$ requires a WFF on each side.
+    2. On the right of $\land$, only ")" appears, which is not a WFF.
+    3. The rule for conjunction cannot be satisfied.
+    4. $\land$ requires a WFF on its right, but only a closing bracket follows.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $\lor P \land Q$ not a WFF?'
+  answer: 4
+  options:
+    - $P$ and $Q$ cannot both appear
+    - It needs brackets
+    - '$\lor$ and $\land$ cancel each other'
+    - '$\lor$ needs a WFF on its left, but nothing is there'
+  hint: '$\lor$ is binary: what appears to its left?'
+  walkthrough: |
+    1. $\lor$ requires a WFF on its left and right.
+    2. Nothing appears to the left of $\lor$.
+    3. Even if $P \land Q$ were a WFF on the right, the left side is missing.
+    4. $\lor$ needs a WFF on its left, but nothing is there.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: Why is $((P))$ not a WFF?
+  answer: 1
+  options:
+    - No formation rule wraps a WFF in bare brackets without a connective
+    - $P$ cannot be double-bracketed
+    - It has too many brackets
+    - Only negation uses brackets
+  hint: Rules 3 and 4 add brackets as part of a conjunction or disjunction. Can brackets appear alone around $P$?
+  walkthrough: |
+    1. $P$ is a WFF (rule 1).
+    2. Rules 3 and 4 add brackets only when combining two WFFs with $\land$ or $\lor$.
+    3. No rule says "if $\mathcal{A}$ is a WFF, then $(\mathcal{A})$ is a WFF."
+    4. No formation rule wraps a WFF in bare brackets without a connective.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $P Q \land$ not a WFF?'
+  answer: 3
+  options:
+    - $P$ and $Q$ cannot appear together
+    - '$\land$ must come first'
+    - '$\land$ requires a WFF on each side, but here it follows two letters with nothing on its right'
+    - It needs negation
+  hint: 'Where are the operands of $\land$?'
+  walkthrough: |
+    1. $\land$ requires a WFF on its left and right.
+    2. $P Q$ sits to the left, but $P Q$ is not a WFF (no connective between them).
+    3. Nothing appears to the right of $\land$.
+    4. The placement violates the formation rules.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $(P \lor Q) \land R)$ not a WFF?'
+  answer: 2
+  options:
+    - '$P$, $Q$, and $R$ cannot all appear'
+    - There is an unmatched closing bracket
+    - '$\land$ cannot follow $\lor$'
+    - It is actually a WFF
+  hint: Count the opening and closing brackets.
+  walkthrough: |
+    1. There is one opening bracket "(" and two closing brackets ")".
+    2. The brackets are unmatched: the second ")" has no corresponding "(."
+    3. No formation rule produces a string with unmatched brackets.
+    4. There is an unmatched closing bracket.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $\land \lor$ not a WFF?'
+  answer: 4
+  options:
+    - Too many connectives
+    - It needs sentence letters
+    - Connectives can combine
+    - 'Neither $\land$ nor $\lor$ is a sentence letter, and no rule produces connectives without operands'
+  hint: 'Rule 1 lists sentence letters. Are $\land$ and $\lor$ sentence letters?'
+  walkthrough: |
+    1. $\land$ and $\lor$ are connectives, not sentence letters.
+    2. Rule 1 does not apply. Rules 3 and 4 require WFFs on both sides of the connective.
+    3. Neither connective has any operands here.
+    4. No rule produces connectives without operands.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $(P \land Q)(R \lor S)$ not a WFF?'
+  answer: 1
+  options:
+    - Two WFFs placed side by side need a connective between them
+    - Four letters are too many
+    - The brackets are wrong
+    - It is actually a WFF
+  hint: 'What joins $(P \land Q)$ and $(R \lor S)$?'
+  walkthrough: |
+    1. $(P \land Q)$ is a WFF. $(R \lor S)$ is a WFF.
+    2. No rule produces two WFFs placed next to each other without a connective.
+    3. A binary connective ($\land$ or $\lor$) is needed between them.
+    4. Two WFFs placed side by side need a connective between them.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $P \land Q \lor R$ not a WFF (strict reading)?'
+  answer: 3
+  options:
+    - Three letters cannot appear
+    - '$\land$ and $\lor$ cancel each other'
+    - Binary connectives require brackets to show grouping; this string is ambiguous
+    - It is actually a WFF
+  hint: 'Rules 3 and 4 produce formulas with brackets. Without brackets, which connective applies first?'
+  walkthrough: |
+    1. Rules 3 and 4 produce $(\mathcal{A} \land \mathcal{B})$ and $(\mathcal{A} \lor \mathcal{B})$, always with brackets.
+    2. $P \land Q \lor R$ has no brackets to indicate grouping.
+    3. Is it $(P \land Q) \lor R$ or $P \land (Q \lor R)$? The string is ambiguous.
+    4. Strict WFF rules require brackets to show grouping.
+  tags:
+    - not-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "not $A$ or $B$" (where "not" applies only to $A$).'
+  answer: '$(\neg A \lor B)$'
+  variableMap:
+    A: A
+    B: B
+  hint: 'Negate $A$ first, then form a disjunction with $B$.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1). $\neg A$ is a WFF (rule 2).
+    2. $B$ is a WFF (rule 1).
+    3. $(\neg A \lor B)$ is a WFF (rule 4).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "both $P$ and not $Q$."'
+  answer: '$(P \land \neg Q)$'
+  variableMap:
+    P: P
+    Q: Q
+  hint: 'Negate $Q$ first, then conjoin with $P$.'
+  walkthrough: |
+    1. $Q$ is a WFF (rule 1). $\neg Q$ is a WFF (rule 2).
+    2. $P$ is a WFF (rule 1).
+    3. $(P \land \neg Q)$ is a WFF (rule 3).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "it is not the case that $A$ or $B$."'
+  answer: '$\neg (A \lor B)$'
+  variableMap:
+    A: A
+    B: B
+  hint: 'Form the disjunction first, then negate the whole thing.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1). $B$ is a WFF (rule 1).
+    2. $(A \lor B)$ is a WFF (rule 4).
+    3. $\neg (A \lor B)$ is a WFF (rule 2).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "$A$ and $B$, or $C$."'
+  answer: '$((A \land B) \lor C)$'
+  variableMap:
+    A: A
+    B: B
+    C: C
+  hint: 'Form the conjunction first, then form a disjunction with $C$.'
+  walkthrough: |
+    1. $(A \land B)$ is a WFF (rule 3).
+    2. $C$ is a WFF (rule 1).
+    3. $((A \land B) \lor C)$ is a WFF (rule 4).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "not both $P$ and $Q$."'
+  answer: '$\neg (P \land Q)$'
+  variableMap:
+    P: P
+    Q: Q
+  hint: 'Form the conjunction first, then negate it.'
+  walkthrough: |
+    1. $(P \land Q)$ is a WFF (rule 3).
+    2. $\neg (P \land Q)$ is a WFF (rule 2).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "$A$ or not $A$."'
+  answer: '$(A \lor \neg A)$'
+  variableMap:
+    A: A
+  hint: 'Negate $A$, then form a disjunction between $A$ and $\neg A$.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1). $\neg A$ is a WFF (rule 2).
+    2. $(A \lor \neg A)$ is a WFF (rule 4).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "not $A$ and not $B$."'
+  answer: '$(\neg A \land \neg B)$'
+  variableMap:
+    A: A
+    B: B
+  hint: 'Negate each letter, then conjoin.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1). $\neg A$ is a WFF (rule 2).
+    2. $B$ is a WFF (rule 1). $\neg B$ is a WFF (rule 2).
+    3. $(\neg A \land \neg B)$ is a WFF (rule 3).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "either $P$ or $Q$, and $R$."'
+  answer: '$((P \lor Q) \land R)$'
+  variableMap:
+    P: P
+    Q: Q
+    R: R
+  hint: 'Form the disjunction first, then conjoin with $R$.'
+  walkthrough: |
+    1. $(P \lor Q)$ is a WFF (rule 4).
+    2. $R$ is a WFF (rule 1).
+    3. $((P \lor Q) \land R)$ is a WFF (rule 3).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "not ($P$ or $Q$) and $R$."'
+  answer: '$(\neg (P \lor Q) \land R)$'
+  variableMap:
+    P: P
+    Q: Q
+    R: R
+  hint: 'Form the disjunction, negate it, then conjoin with $R$.'
+  walkthrough: |
+    1. $(P \lor Q)$ is a WFF (rule 4).
+    2. $\neg (P \lor Q)$ is a WFF (rule 2).
+    3. $R$ is a WFF (rule 1).
+    4. $(\neg (P \lor Q) \land R)$ is a WFF (rule 3).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "it is not the case that both $A$ and $B$, or $C$."'
+  answer: '$(\neg (A \land B) \lor C)$'
+  variableMap:
+    A: A
+    B: B
+    C: C
+  hint: 'Negate the conjunction first, then disjoin with $C$.'
+  walkthrough: |
+    1. $(A \land B)$ is a WFF (rule 3).
+    2. $\neg (A \land B)$ is a WFF (rule 2).
+    3. $C$ is a WFF (rule 1).
+    4. $(\neg (A \land B) \lor C)$ is a WFF (rule 4).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "$A$ and ($B$ or not $C$)."'
+  answer: '$(A \land (B \lor \neg C))$'
+  variableMap:
+    A: A
+    B: B
+    C: C
+  hint: 'Negate $C$, form disjunction with $B$, then conjoin with $A$.'
+  walkthrough: |
+    1. $C$ is a WFF (rule 1). $\neg C$ is a WFF (rule 2).
+    2. $(B \lor \neg C)$ is a WFF (rule 4).
+    3. $(A \land (B \lor \neg C))$ is a WFF (rule 3).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "not ($A$ and $B$) or not ($C$ and $D$)."'
+  answer: '$(\neg (A \land B) \lor \neg (C \land D))$'
+  variableMap:
+    A: A
+    B: B
+    C: C
+    D: D
+  hint: 'Negate each conjunction, then disjoin the results.'
+  walkthrough: |
+    1. $(A \land B)$ is a WFF (rule 3). $\neg (A \land B)$ is a WFF (rule 2).
+    2. $(C \land D)$ is a WFF (rule 3). $\neg (C \land D)$ is a WFF (rule 2).
+    3. $(\neg (A \land B) \lor \neg (C \land D))$ is a WFF (rule 4).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "not not $P$."'
+  answer: '$\neg \neg P$'
+  variableMap:
+    P: P
+  hint: Apply rule 2 twice.
+  walkthrough: |
+    1. $P$ is a WFF (rule 1).
+    2. $\neg P$ is a WFF (rule 2).
+    3. $\neg \neg P$ is a WFF (rule 2).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "$P$ and $Q$, or $R$ and $S$."'
+  answer: '$((P \land Q) \lor (R \land S))$'
+  variableMap:
+    P: P
+    Q: Q
+    R: R
+    S: S
+  hint: 'Form each conjunction first, then disjoin the results.'
+  walkthrough: |
+    1. $(P \land Q)$ is a WFF (rule 3).
+    2. $(R \land S)$ is a WFF (rule 3).
+    3. $((P \land Q) \lor (R \land S))$ is a WFF (rule 4).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "not ($P$ or not $Q$)."'
+  answer: '$\neg (P \lor \neg Q)$'
+  variableMap:
+    P: P
+    Q: Q
+  hint: 'Negate $Q$, disjoin with $P$, then negate the whole thing.'
+  walkthrough: |
+    1. $Q$ is a WFF (rule 1). $\neg Q$ is a WFF (rule 2).
+    2. $(P \lor \neg Q)$ is a WFF (rule 4).
+    3. $\neg (P \lor \neg Q)$ is a WFF (rule 2).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "it is not the case that $A$ and not $B$."'
+  answer: '$\neg (A \land \neg B)$'
+  variableMap:
+    A: A
+    B: B
+  hint: 'Negate $B$, conjoin with $A$, then negate the conjunction.'
+  walkthrough: |
+    1. $B$ is a WFF (rule 1). $\neg B$ is a WFF (rule 2).
+    2. $(A \land \neg B)$ is a WFF (rule 3).
+    3. $\neg (A \land \neg B)$ is a WFF (rule 2).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "either not $A$ or not $B$."'
+  answer: '$(\neg A \lor \neg B)$'
+  variableMap:
+    A: A
+    B: B
+  hint: 'Negate each letter, then disjoin.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1). $\neg A$ is a WFF (rule 2).
+    2. $B$ is a WFF (rule 1). $\neg B$ is a WFF (rule 2).
+    3. $(\neg A \lor \neg B)$ is a WFF (rule 4).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "$A$ or ($B$ and $C$), then negate the whole thing."'
+  answer: '$\neg (A \lor (B \land C))$'
+  variableMap:
+    A: A
+    B: B
+    C: C
+  hint: 'Form the conjunction, disjoin with $A$, then negate.'
+  walkthrough: |
+    1. $(B \land C)$ is a WFF (rule 3).
+    2. $(A \lor (B \land C))$ is a WFF (rule 4).
+    3. $\neg (A \lor (B \land C))$ is a WFF (rule 2).
+  tags:
+    - build-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "both $A$ or $B$, and $C$ or $D$."'
+  answer: '$((A \lor B) \land (C \lor D))$'
+  variableMap:
+    A: A
+    B: B
+    C: C
+    D: D
+  hint: 'Form each disjunction, then conjoin.'
+  walkthrough: |
+    1. $(A \lor B)$ is a WFF (rule 4).
+    2. $(C \lor D)$ is a WFF (rule 4).
+    3. $((A \lor B) \land (C \lor D))$ is a WFF (rule 3).
+  tags:
+    - build-wff
+
+- type: mcq
+  question: 'Is $\neg (P \lor \neg Q)$ a well-formed formula?'
+  answer: 1
+  options:
+    - 'Yes; $\neg Q$ is a WFF, $(P \lor \neg Q)$ is a WFF, and $\neg (P \lor \neg Q)$ is a WFF'
+    - No; negation and disjunction cannot be combined
+    - 'No; $\neg Q$ inside $\lor$ is not allowed'
+    - 'Yes, but only informally'
+  hint: 'Build from the inside: $\neg Q$, then $(P \lor \neg Q)$, then negate.'
+  walkthrough: |
+    1. $Q$ is a WFF (rule 1). $\neg Q$ is a WFF (rule 2).
+    2. $P$ is a WFF (rule 1). $(P \lor \neg Q)$ is a WFF (rule 4).
+    3. $\neg (P \lor \neg Q)$ is a WFF (rule 2).
+    4. $\neg (P \lor \neg Q)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(\neg A \land \neg B)$ a well-formed formula?'
+  answer: 3
+  options:
+    - No; both sides cannot be negated
+    - No; it needs different letters
+    - 'Yes; $\neg A$ and $\neg B$ are WFFs, and rule 3 combines them'
+    - 'Yes, but the brackets are wrong'
+  hint: 'Negate each letter separately, then apply rule 3.'
+  walkthrough: |
+    1. $A$ is a WFF. $\neg A$ is a WFF (rule 2).
+    2. $B$ is a WFF. $\neg B$ is a WFF (rule 2).
+    3. $(\neg A \land \neg B)$ is a WFF (rule 3).
+    4. $(\neg A \land \neg B)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $(A \lor A)$ a well-formed formula?'
+  answer: 2
+  options:
+    - No; both sides must use different letters
+    - Yes; rule 4 does not require distinct WFFs
+    - No; this is redundant
+    - 'Yes, but it is meaningless'
+  hint: 'Rule 4 combines any two WFFs with $\lor$, even if they are the same.'
+  walkthrough: |
+    1. $A$ is a WFF (rule 1).
+    2. Rule 4 says: if $\mathcal{A}$ and $\mathcal{B}$ are WFFs, then $(\mathcal{A} \lor \mathcal{B})$ is a WFF.
+    3. Both sides are $A$, which is a valid WFF.
+    4. $(A \lor A)$ is a well-formed formula.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Is $\neg \neg \neg \neg P$ a well-formed formula?'
+  answer: 4
+  options:
+    - No; four negations is too many
+    - No; rule 2 can only be applied twice
+    - 'Yes, but it is not standard'
+    - Yes; rule 2 can be applied any number of times
+  hint: Each application of rule 2 produces a WFF. There is no limit.
+  walkthrough: |
+    1. $P$ is a WFF (rule 1).
+    2. $\neg P$ is a WFF (rule 2).
+    3. $\neg \neg P$ is a WFF (rule 2). $\neg \neg \neg P$ is a WFF (rule 2).
+    4. $\neg \neg \neg \neg P$ is a WFF (rule 2). Rule 2 can be applied any number of times.
+  tags:
+    - is-wff
+
+- type: mcq
+  question: 'Why is $(P \land Q))$ not a WFF?'
+  answer: 3
+  options:
+    - $P$ and $Q$ cannot be conjoined
+    - The brackets are in the wrong order
+    - There is an extra unmatched closing bracket
+    - It needs a negation
+  hint: Count the opening and closing brackets.
+  walkthrough: |
+    1. One opening bracket "(" and two closing brackets ")".
+    2. The second ")" has no matching opening bracket.
+    3. No formation rule produces a string with unmatched brackets.
+    4. There is an extra unmatched closing bracket.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $P \lor \neg$ not a WFF?'
+  answer: 1
+  options:
+    - '$\neg$ must be followed by a WFF, but nothing follows it'
+    - '$\lor$ and $\neg$ cancel each other'
+    - $P$ cannot be disjoined with a connective
+    - It needs brackets
+  hint: 'Rule 2 says $\neg$ must be followed by a WFF.'
+  walkthrough: |
+    1. $\lor$ requires a WFF on each side. $P$ is on the left.
+    2. On the right, $\neg$ appears alone. Rule 2 requires $\neg$ to be followed by a WFF.
+    3. Nothing follows $\neg$, so $\neg$ by itself is not a WFF.
+    4. $\neg$ must be followed by a WFF, but nothing follows it.
+  tags:
+    - not-wff
+
+- type: mcq
+  question: 'Why is $(\land P Q)$ not a WFF?'
+  answer: 4
+  options:
+    - Brackets cannot start a WFF
+    - $P$ and $Q$ are in the wrong order
+    - '$\land$ needs to be at the end'
+    - 'Rule 3 requires the form $(\mathcal{A} \land \mathcal{B})$, not $(\land \mathcal{A} \mathcal{B})$'
+  hint: '$\land$ must appear between two WFFs, not before them.'
+  walkthrough: |
+    1. Rule 3 requires the form $(\mathcal{A} \land \mathcal{B})$: a WFF, then $\land$, then a WFF.
+    2. $(\land P Q)$ places $\land$ before both operands.
+    3. No formation rule matches this arrangement.
+    4. Rule 3 requires $(\mathcal{A} \land \mathcal{B})$, not $(\land \mathcal{A} \mathcal{B})$.
+  tags:
+    - not-wff
+
+- type: formula-builder
+  question: 'Build a WFF that says "$A$ and $B$ and $C$" (group left to right).'
+  answer: '$((A \land B) \land C)$'
+  variableMap:
+    A: A
+    B: B
+    C: C
+  hint: 'Conjoin $A$ and $B$ first, then conjoin the result with $C$.'
+  walkthrough: |
+    1. $(A \land B)$ is a WFF (rule 3).
+    2. $C$ is a WFF (rule 1).
+    3. $((A \land B) \land C)$ is a WFF (rule 3).
+  tags:
+    - build-wff
+
+- type: mcq
+  question: Which of the following is a well-formed formula?
+  answer: 3
+  options:
+    - '$P \land \lor Q$'
+    - '$\land P Q$'
+    - '$\neg (P \lor Q)$'
+    - '$(P \land$'
+  hint: Check each string against the formation rules.
+  walkthrough: |
+    1. $P \land \lor Q$: adjacent connectives with no operand. Not a WFF.
+    2. $\land P Q$: $\land$ needs a WFF on its left, but nothing is there. Not a WFF.
+    3. $\neg (P \lor Q)$: $(P \lor Q)$ is a WFF by rule 4, and $\neg$ of a WFF is a WFF by rule 2. This is a WFF.
+    4. $(P \land$: unmatched bracket. Not a WFF.
+    5. The well-formed formula is $\neg (P \lor Q)$.
+  tags:
+    - diagnostic

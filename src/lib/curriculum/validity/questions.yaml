@@ -1,0 +1,1416 @@
+- type: mcq
+  question: 'Is this argument valid? 1. All cats are animals. 2. Whiskers is a cat. 3. Therefore, Whiskers is an animal.'
+  answer: 1
+  options:
+    - 'Valid; if both premises are true, the conclusion must be true'
+    - Invalid; Whiskers might not exist
+    - 'Valid, but only if Whiskers is real'
+    - Invalid; the conclusion is too obvious
+  hint: 'Ask: is there any possible situation where both premises are true but the conclusion is false?'
+  walkthrough: |
+    1. If all cats are animals and Whiskers is a cat, then Whiskers must be an animal.
+    2. There is no possible scenario where both premises hold but the conclusion fails.
+    3. The argument is valid: if both premises are true, the conclusion must be true.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. If it snows, the schools close. 2. The schools are closed. 3. Therefore, it snowed.'
+  answer: 4
+  options:
+    - Valid; the premises guarantee the conclusion
+    - Valid; closed schools always mean snow
+    - 'Invalid, but only because the premises are false'
+    - Invalid; the schools could be closed for another reason
+  hint: Can you imagine a scenario where the premises are true but the conclusion is false?
+  walkthrough: |
+    1. The schools could be closed for a holiday, not snow.
+    2. In that scenario, premise 1 is true (snow would close schools), premise 2 is true (schools are closed), but it did not snow.
+    3. Both premises true, conclusion false: a counterexample exists.
+    4. The argument is invalid: the schools could be closed for another reason.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. Either the suspect is guilty or innocent. 2. The suspect is not guilty. 3. Therefore, the suspect is innocent.'
+  answer: 2
+  options:
+    - 'Invalid; "guilty or innocent" is vague'
+    - 'Valid; if the suspect is one or the other and is not guilty, the suspect must be innocent'
+    - Invalid; the suspect might be neither
+    - 'Valid, but only in a legal context'
+  hint: 'If one of two options must hold and one is eliminated, what remains?'
+  walkthrough: |
+    1. Premise 1 says it is one or the other.
+    2. Premise 2 eliminates "guilty."
+    3. The only remaining option is "innocent."
+    4. The argument is valid: eliminating one disjunct forces the other.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. All birds have wings. 2. Bats have wings. 3. Therefore, bats are birds.'
+  answer: 3
+  options:
+    - Valid; having wings makes something a bird
+    - 'Invalid, but only because bats are mammals'
+    - Invalid; having wings does not guarantee being a bird
+    - Valid; the conclusion follows from the premises
+  hint: 'Does "All birds have wings" mean that everything with wings is a bird?'
+  walkthrough: |
+    1. Premise 1 says all birds have wings, but it does not say only birds have wings.
+    2. Other creatures (bats, insects) can have wings without being birds.
+    3. Both premises can be true while the conclusion is false.
+    4. The argument is invalid: having wings does not guarantee being a bird.
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$\neg P$'
+  conclusion: '$\neg Q$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: Try a scenario where $P$ is false but $Q$ is true.
+  walkthrough: |
+    1. Set $P$ = false and $Q$ = true.
+    2. Premise 1: $P \to Q$ = F $\to$ T = true.
+    3. Premise 2: $\neg P$ = $\neg$F = true.
+    4. Conclusion: $\neg Q$ = $\neg$T = false.
+    5. Both premises true, conclusion false. This counterexample proves the argument is **invalid**.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: What is a counterexample to an argument?
+  answer: 2
+  options:
+    - A scenario where the conclusion is false
+    - A scenario where all premises are true and the conclusion is false
+    - A scenario where a premise is false
+    - Any scenario that disproves the conclusion
+  hint: A counterexample must make the premises true while the conclusion fails.
+  walkthrough: |
+    1. A counterexample specifically targets the link between premises and conclusion.
+    2. It requires all premises to be true at the same time the conclusion is false.
+    3. Simply having a false conclusion is not enough; the premises must hold.
+    4. A counterexample is a scenario where all premises are true and the conclusion is false.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: 'Let $P$ = "it rains" and $Q$ = "the park closes". The argument: if it rains the park closes; the park is closed; therefore it rained. Is this argument valid?'
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$Q$'
+  conclusion: '$P$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: 'Try $P$ = false, $Q$ = true. The park could be closed for maintenance, not rain.'
+  walkthrough: |
+    1. Set $P$ = false and $Q$ = true.
+    2. Premise 1: $P \to Q$ = F $\to$ T = true.
+    3. Premise 2: $Q$ = true.
+    4. Conclusion: $P$ = false.
+    5. Both premises true, conclusion false. This counterexample proves the argument is **invalid**.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - Either $A$ or $B$.
+    - '$\neg A$'
+  conclusion: $B$
+  isValid: true
+  hint: 'If one of two options holds and you eliminate one, what is left?'
+  walkthrough: |
+    1. Premise 1 says at least one of $A$ or $B$ is true.
+    2. Premise 2 says $A$ is false.
+    3. If $A$ is false, then $B$ must be true (from premise 1).
+    4. There is no way for both premises to be true and $B$ to be false.
+    5. No counterexample exists, so the argument is **valid**.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'Which scenario is a counterexample to: "If the train is on time, I arrive by 9. The train is on time. Therefore, I arrive by 8"?'
+  answer: 3
+  options:
+    - The train is late and I arrive by 8
+    - The train is on time and I arrive by 8
+    - 'The train is on time, I arrive at 8:45, but not by 8'
+    - The train is late and I do not arrive by 9
+  hint: A counterexample needs all premises true and the conclusion false.
+  walkthrough: |
+    1. Premise 1: if on time, arrive by 9. Premise 2: the train is on time.
+    2. The conclusion claims arrival by 8.
+    3. Consider: the train is on time (premise 2 true), I arrive at 8:45 which is by 9 (premise 1 true), but not by 8 (conclusion false).
+    4. Arriving at 8:45 satisfies both premises but violates the conclusion: this is a counterexample.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: How many counterexamples do you need to prove an argument is invalid?
+  answer: 1
+  options:
+    - One
+    - Two
+    - One for each premise
+    - You must check every possible scenario
+  hint: Invalidity requires at least one scenario where premises are true and conclusion is false.
+  walkthrough: |
+    1. An argument is invalid if there exists at least one counterexample.
+    2. A single scenario where all premises are true and the conclusion is false is sufficient.
+    3. You do not need multiple counterexamples.
+    4. A single counterexample is sufficient to prove invalidity.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'Is this argument valid? 1. All fish live on land. 2. A goldfish is a fish. 3. Therefore, a goldfish lives on land.'
+  answer: 2
+  options:
+    - Invalid; the conclusion is false
+    - 'Valid; if both premises were true, the conclusion would have to be true'
+    - Invalid; premise 1 is false
+    - Valid only if premise 1 is true
+  hint: 'Validity is about the connection between premises and conclusion, not whether the premises are actually true.'
+  walkthrough: |
+    1. Validity asks: if the premises were true, would the conclusion follow?
+    2. If all fish lived on land and a goldfish is a fish, the goldfish would live on land.
+    3. The conclusion follows from the premises, so the argument is valid.
+    4. The argument is valid: the conclusion follows from the premises regardless of whether the premises are actually true.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: A valid argument has a false conclusion. What can you conclude?
+  answer: 4
+  options:
+    - The argument is actually invalid
+    - Nothing; validity has nothing to do with conclusions
+    - All premises must be false
+    - At least one premise must be false
+  hint: 'In a valid argument, true premises guarantee a true conclusion. What if the conclusion is false?'
+  walkthrough: |
+    1. A valid argument guarantees: if all premises are true, the conclusion is true.
+    2. The conclusion is false.
+    3. By contraposition: if the conclusion is false, not all premises can be true.
+    4. At least one premise must be false.
+    5. That is the correct answer: at least one premise must be false.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: Can a valid argument have all false premises and a false conclusion?
+  answer: 1
+  options:
+    - Yes; validity only requires that true premises guarantee a true conclusion
+    - No; at least one premise must be true
+    - No; the conclusion must be true if the argument is valid
+    - 'Yes, but only if the argument has exactly one premise'
+  hint: 'Validity says: IF premises are true, THEN conclusion is true. What if the premises are false?'
+  walkthrough: |
+    1. Validity makes a conditional claim: if all premises are true, the conclusion must be true.
+    2. When the premises are false, the conditional is not violated.
+    3. A valid argument can have all false premises and a false conclusion.
+    4. Yes: validity only requires that true premises guarantee a true conclusion.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: An argument has true premises and a true conclusion. Is it necessarily valid?
+  answer: 3
+  options:
+    - Yes; true premises and a true conclusion always mean validity
+    - 'Yes, as long as the conclusion is relevant to the premises'
+    - No; the premises might not guarantee the conclusion
+    - No; validity requires false premises
+  hint: 'Validity is about whether the conclusion must follow, not just whether it happens to be true.'
+  walkthrough: |
+    1. Consider: "The Sun is a star. Therefore, water is wet."
+    2. Both the premise and conclusion are true, but the conclusion has nothing to do with the premise.
+    3. We can imagine a scenario where the Sun is a star but water is not wet.
+    4. The argument is invalid despite having true premises and a true conclusion.
+    5. No: the premises might not guarantee the conclusion.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: Which statement about validity is correct?
+  answer: 2
+  options:
+    - A valid argument must have true premises
+    - 'Validity is about the connection between premises and conclusion, not the truth of individual sentences'
+    - An invalid argument always has a false conclusion
+    - A valid argument cannot have a false conclusion
+  hint: Validity concerns whether the conclusion follows from the premises.
+  walkthrough: |
+    1. Valid arguments can have false premises (option A is wrong).
+    2. Invalid arguments can have true conclusions (option C is wrong).
+    3. Valid arguments with false premises can have false conclusions (option D is wrong).
+    4. Validity is purely about the logical connection between premises and conclusion.
+    5. Validity is about the connection between premises and conclusion, not the truth of individual sentences.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: '"Tokyo is in Japan" is the conclusion of an invalid argument. Does this mean Tokyo is not in Japan?'
+  answer: 3
+  options:
+    - 'Yes; if the argument is invalid, the conclusion must be false'
+    - Yes; invalidity proves the conclusion wrong
+    - 'No; invalidity means the premises fail to guarantee the conclusion, not that the conclusion is false'
+    - No; but it means the conclusion is probably false
+  hint: Invalidity says the premises do not support the conclusion. What does that tell you about the conclusion itself?
+  walkthrough: |
+    1. Invalidity means the premises do not guarantee the conclusion.
+    2. The conclusion might still be true for other reasons.
+    3. "Tokyo is in Japan" is true regardless of whether any particular argument for it is valid.
+    4. Invalidity means the premises fail to guarantee the conclusion, not that the conclusion is false.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: An argument is invalid. Which of the following must be true?
+  answer: 4
+  options:
+    - The conclusion is false
+    - At least one premise is false
+    - The conclusion contradicts the premises
+    - There exists a scenario where all premises are true and the conclusion is false
+  hint: What is the definition of invalidity?
+  walkthrough: |
+    1. An invalid argument has at least one counterexample.
+    2. A counterexample is a scenario where all premises are true and the conclusion is false.
+    3. This does not require the actual conclusion to be false or the actual premises to be false.
+    4. There exists a scenario where all premises are true and the conclusion is false.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'Is this argument valid? 1. Some birds can swim. 2. Therefore, 2 + 2 = 4.'
+  answer: 2
+  options:
+    - Valid; the conclusion is true
+    - Invalid; the conclusion does not follow from the premise
+    - Valid; both sentences are true
+    - Invalid; the premise is false
+  hint: Can you imagine a scenario where the premise is true but the conclusion is false?
+  walkthrough: |
+    1. Imagine a scenario where some birds can swim but 2 + 2 does not equal 4.
+    2. (Such a scenario is logically conceivable for the purpose of testing validity.)
+    3. The premise has nothing to do with the conclusion; the conclusion does not follow.
+    4. The argument is invalid: the conclusion does not follow from the premise.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: An argument has a true conclusion. What can you say about its validity?
+  answer: 1
+  options:
+    - Nothing; a true conclusion can come from either a valid or invalid argument
+    - It must be valid
+    - It must be invalid
+    - It is valid only if the premises are also true
+  hint: True conclusions can appear in both valid and invalid arguments.
+  walkthrough: |
+    1. A valid argument with true premises produces a true conclusion.
+    2. An invalid argument can also have a true conclusion by coincidence.
+    3. A true conclusion alone tells you nothing about validity.
+    4. A true conclusion can come from either a valid or invalid argument.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'What does calling an argument "invalid" tell you?'
+  answer: 3
+  options:
+    - The conclusion is wrong
+    - The premises are all false
+    - The premises do not guarantee the conclusion
+    - The argument has no premises
+  hint: Focus on what invalidity says about the relationship between premises and conclusion.
+  walkthrough: |
+    1. "Invalid" means there is a possible scenario where all premises are true and the conclusion is false.
+    2. It says the premises fail to guarantee the conclusion.
+    3. It does not comment on whether the conclusion or premises are actually true or false.
+    4. Calling an argument invalid means the premises do not guarantee the conclusion.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'Is this argument valid? 1. All dogs are mammals. 2. Buddy is a dog. 3. Therefore, Buddy is a mammal.'
+  answer: 1
+  options:
+    - 'Valid; if both premises are true, the conclusion must be true'
+    - Invalid; Buddy might not be a real dog
+    - 'Valid, but only if Buddy exists'
+    - Invalid; the conclusion is too simple
+  hint: Is there any scenario where both premises are true and the conclusion is false?
+  walkthrough: |
+    1. If all dogs are mammals and Buddy is a dog, Buddy must be a mammal.
+    2. There is no way for both premises to be true and the conclusion false.
+    3. The argument is valid.
+    4. The argument is valid: if both premises are true, the conclusion must be true.
+  tags:
+    - diagnostic
+
+# ===== NEW valid-or-invalid questions (15) =====
+
+- type: mcq
+  question: 'Is this argument valid? 1. If it is raining, the ground is wet. 2. It is raining. 3. Therefore, the ground is wet.'
+  answer: 1
+  options:
+    - Valid; true premises guarantee a true conclusion here
+    - Invalid; the ground could be wet for other reasons
+    - 'Valid, but only when it actually rains'
+    - Invalid; the conclusion just restates a premise
+  hint: 'If the conditional is true and the antecedent is true, must the consequent be true?'
+  walkthrough: |
+    1. Premise 1 says rain guarantees wet ground. Premise 2 says it is raining.
+    2. If both hold, the ground must be wet. No scenario makes both premises true and the conclusion false.
+    3. The argument is valid: true premises guarantee the conclusion.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. All reptiles are cold-blooded. 2. Iguanas are reptiles. 3. Therefore, iguanas are cold-blooded.'
+  answer: 3
+  options:
+    - Invalid; not all reptiles are truly cold-blooded
+    - 'Valid, but only for iguanas specifically'
+    - 'Valid; if both premises hold, the conclusion must follow'
+    - Invalid; the conclusion is too narrow
+  hint: 'If every reptile is cold-blooded and iguanas are reptiles, can the conclusion fail?'
+  walkthrough: |
+    1. If all reptiles are cold-blooded and iguanas are reptiles, iguanas must be cold-blooded.
+    2. There is no scenario where both premises are true but the conclusion is false.
+    3. The argument is valid: if both premises hold, the conclusion must follow.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. If the cake contains eggs, it is not vegan. 2. The cake is vegan. 3. Therefore, the cake does not contain eggs.'
+  answer: 2
+  options:
+    - Invalid; the cake might have other non-vegan ingredients
+    - Valid; denying the consequent of a conditional forces denial of the antecedent
+    - Invalid; vegan cakes can still contain eggs
+    - 'Valid, but only if "vegan" means "no eggs"'
+  hint: 'If P implies Q and Q is false, what follows about P?'
+  walkthrough: |
+    1. Premise 1: eggs imply not vegan. Premise 2: the cake is vegan (i.e., not "not vegan").
+    2. If the cake had eggs, it would not be vegan, contradicting premise 2.
+    3. So the cake cannot contain eggs. The conclusion must be true whenever both premises are true.
+    4. Valid: denying the consequent of a conditional forces denial of the antecedent.
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \lor Q$'
+    - '$P \to R$'
+    - '$Q \to R$'
+  conclusion: $R$
+  isValid: true
+  hint: 'Whether $P$ or $Q$ is true, both lead to $R$.'
+  walkthrough: |
+    1. Premise 1 says at least one of $P$ or $Q$ holds.
+    2. Premise 2 says $P$ leads to $R$. Premise 3 says $Q$ leads to $R$.
+    3. Either way, $R$ must be true. No counterexample is possible.
+    4. The argument is valid.
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \to Q$'
+    - '$Q \to R$'
+  conclusion: '$P \to R$'
+  isValid: true
+  hint: 'If $P$ leads to $Q$ and $Q$ leads to $R$, does $P$ lead to $R$?'
+  walkthrough: |
+    1. Suppose $P$ is true. By premise 1, $Q$ is true. By premise 2, $R$ is true.
+    2. So whenever $P$ is true, $R$ is true: $P \to R$ holds.
+    3. If $P$ is false, $P \to R$ is automatically true.
+    4. No counterexample exists. The argument is valid.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. All lawyers passed the bar exam. 2. Priya passed the bar exam. 3. Therefore, Priya is a lawyer.'
+  answer: 4
+  options:
+    - Valid; passing the bar exam makes you a lawyer
+    - Valid; both premises support the conclusion
+    - 'Invalid, but only because the premises might be false'
+    - Invalid; non-lawyers can also pass the bar exam
+  hint: '"All lawyers passed the bar" does not mean only lawyers passed the bar.'
+  walkthrough: |
+    1. Premise 1 says all lawyers passed, but it does not say only lawyers passed.
+    2. Priya could have passed the bar exam without being a lawyer.
+    3. Both premises can be true while the conclusion is false.
+    4. The argument is invalid: non-lawyers can also pass the bar exam.
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - $Q$
+  conclusion: $P$
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: Can $Q$ be true for reasons other than $P$?
+  walkthrough: |
+    1. Set $P$ = false and $Q$ = true.
+    2. Premise 1: $P \to Q$ = F $\to$ T = true.
+    3. Premise 2: $Q$ = true.
+    4. Conclusion: $P$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid** (affirming the consequent).
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. Either the power is out or the bulb is broken. 2. The bulb is not broken. 3. Therefore, the power is out.'
+  answer: 1
+  options:
+    - Valid; eliminating one disjunct forces the other
+    - Invalid; both could be true at the same time
+    - Invalid; the power might be fine
+    - 'Valid, but only if exactly one option holds'
+  hint: 'If one of two options must hold and you rule one out, what remains?'
+  walkthrough: |
+    1. Premise 1 says at least one holds. Premise 2 eliminates the bulb being broken.
+    2. The only remaining possibility is that the power is out.
+    3. No scenario makes both premises true and the conclusion false.
+    4. Valid: eliminating one disjunct forces the other.
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \land Q$'
+  conclusion: $P$
+  isValid: true
+  hint: 'If both $P$ and $Q$ are true, is $P$ true?'
+  walkthrough: |
+    1. The premise says both $P$ and $Q$ are true.
+    2. If $P \land Q$ is true, then $P$ must be true.
+    3. No counterexample is possible. The argument is valid.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. If Maria studies, she passes. 2. Maria does not pass. 3. Therefore, Maria did not study.'
+  answer: 3
+  options:
+    - Invalid; she might have studied but still failed
+    - 'Valid, but only if studying always guarantees passing'
+    - 'Valid; if studying guarantees passing and she did not pass, she did not study'
+    - Invalid; the conclusion is too strong
+  hint: 'If the conditional is true and the consequent is false, what can you say about the antecedent?'
+  walkthrough: |
+    1. Premise 1: studying leads to passing. Premise 2: Maria did not pass.
+    2. If Maria had studied, she would have passed (by premise 1). But she did not pass.
+    3. So Maria did not study. The conclusion follows necessarily.
+    4. Valid: if studying guarantees passing and she did not pass, she did not study.
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - $P$
+  conclusion: '$P \lor Q$'
+  isValid: true
+  hint: 'If $P$ is true, is "at least one of $P$ or $Q$" true?'
+  walkthrough: |
+    1. The premise says $P$ is true.
+    2. A disjunction is true whenever at least one disjunct is true.
+    3. Since $P$ is true, $P \lor Q$ must be true regardless of $Q$.
+    4. No counterexample is possible. The argument is valid.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. Some students passed the exam. 2. Therefore, all students passed the exam.'
+  answer: 4
+  options:
+    - 'Valid; if some passed, all must have passed'
+    - Valid; the conclusion follows from the premise
+    - 'Invalid, but only if the exam was difficult'
+    - 'Invalid; "some" does not guarantee "all"'
+  hint: Can some students pass while others fail?
+  walkthrough: |
+    1. "Some students passed" is compatible with other students failing.
+    2. Scenario: half the class passed and half failed. The premise is true, but the conclusion is false.
+    3. A counterexample exists.
+    4. The argument is invalid: "some" does not guarantee "all."
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$R \to Q$'
+  conclusion: '$P \to R$'
+  isValid: false
+  counterexample:
+    P: true
+    Q: true
+    R: false
+  hint: Can $P$ and $R$ both lead to $Q$ without $P$ leading to $R$?
+  walkthrough: |
+    1. Set $P$ = true, $Q$ = true, $R$ = false.
+    2. Premise 1: $P \to Q$ = T $\to$ T = true.
+    3. Premise 2: $R \to Q$ = F $\to$ T = true.
+    4. Conclusion: $P \to R$ = T $\to$ F = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - valid-or-invalid
+
+- type: mcq
+  question: 'Is this argument valid? 1. If the bridge is closed, take the highway. 2. If you take the highway, you arrive late. 3. Therefore, if the bridge is closed, you arrive late.'
+  answer: 2
+  options:
+    - Invalid; the bridge closure does not cause lateness directly
+    - Valid; chaining the two conditionals yields the conclusion
+    - Invalid; you might find an alternate route
+    - 'Valid, but only if there is no other route'
+  hint: 'If A leads to B and B leads to C, does A lead to C?'
+  walkthrough: |
+    1. Premise 1: bridge closed leads to highway. Premise 2: highway leads to arriving late.
+    2. Chaining these: bridge closed leads to highway leads to arriving late.
+    3. No scenario makes both premises true and the conclusion false.
+    4. Valid: chaining the two conditionals yields the conclusion.
+  tags:
+    - valid-or-invalid
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$\neg (P \land Q)$'
+    - $P$
+  conclusion: '$\neg Q$'
+  isValid: true
+  hint: 'If $P$ and $Q$ cannot both be true, and $P$ is true, what about $Q$?'
+  walkthrough: |
+    1. Premise 1 says $P$ and $Q$ are not both true.
+    2. Premise 2 says $P$ is true.
+    3. If $P$ is true and they cannot both be true, $Q$ must be false.
+    4. No counterexample exists. The argument is valid.
+  tags:
+    - valid-or-invalid
+
+# ===== NEW counterexample questions (15) =====
+
+- type: assertion-judgment
+  question: 'Let $P$ = "you study hard" and $Q$ = "you pass the course". The argument: if you study hard you pass; you passed; therefore you studied hard. Is this argument valid?'
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$Q$'
+  conclusion: '$P$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: 'Try $P$ = false, $Q$ = true. Could someone pass without studying hard?'
+  walkthrough: |
+    1. Set $P$ = false and $Q$ = true.
+    2. Premise 1: $P \to Q$ = F $\to$ T = true.
+    3. Premise 2: $Q$ = true.
+    4. Conclusion: $P$ = false.
+    5. Both premises true, conclusion false. This counterexample proves the argument is **invalid**.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'Which scenario is a counterexample to: "All athletes are healthy. Jordan is healthy. Therefore, Jordan is an athlete"?'
+  answer: 2
+  options:
+    - Jordan is an athlete and is healthy
+    - Jordan is not an athlete but eats well and is healthy
+    - Jordan is an athlete but is not healthy
+    - Jordan is not healthy and not an athlete
+  hint: You need all premises true and the conclusion false.
+  walkthrough: |
+    1. Premise 1: all athletes are healthy. Premise 2: Jordan is healthy. Conclusion: Jordan is an athlete.
+    2. If Jordan is not an athlete but eats well and is healthy, then all athletes are still healthy (premise 1 holds), Jordan is healthy (premise 2 holds), but Jordan is not an athlete (conclusion false).
+    3. Both premises are true and the conclusion is false.
+    4. Jordan being healthy but not an athlete is a valid counterexample.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$R \to Q$'
+  conclusion: '$P \to R$'
+  isValid: false
+  counterexample:
+    P: true
+    Q: true
+    R: false
+  hint: 'Both $P$ and $R$ lead to $Q$, but does $P$ lead to $R$?'
+  walkthrough: |
+    1. Set $P$ = true, $Q$ = true, $R$ = false.
+    2. Premise 1: T $\to$ T = true. Premise 2: F $\to$ T = true.
+    3. Conclusion: $P \to R$ = T $\to$ F = false.
+    4. Both premises true, conclusion false. This counterexample proves the argument is **invalid**.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'Which scenario is a counterexample to: "If it is a weekend, the store closes early. The store closed early. Therefore, it is a weekend"?'
+  answer: 4
+  options:
+    - It is Saturday and the store closes early
+    - It is Monday and the store is open late
+    - It is Sunday and the store is open
+    - It is a holiday on Wednesday and the store closes early
+  hint: You need both premises true and the conclusion false.
+  walkthrough: |
+    1. Premise 1: weekends mean early closing. Premise 2: the store closed early.
+    2. If it is a holiday on Wednesday, weekends still cause early closing (premise 1 true), the store closed early (premise 2 true), but it is Wednesday (conclusion false).
+    3. Both premises hold but the conclusion fails.
+    4. A holiday on Wednesday with early closing is a counterexample.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \lor Q$'
+    - $P$
+  conclusion: '$\neg Q$'
+  isValid: false
+  counterexample:
+    P: true
+    Q: true
+  hint: Can both $P$ and $Q$ be true at the same time?
+  walkthrough: |
+    1. Set $P$ = true and $Q$ = true.
+    2. Premise 1: $P \lor Q$ = T $\lor$ T = true.
+    3. Premise 2: $P$ = true.
+    4. Conclusion: $\neg Q$ = $\neg$T = false.
+    5. Both premises true, conclusion false. The "or" does not exclude both being true. The argument is **invalid**.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: Can a valid argument have a counterexample?
+  answer: 3
+  options:
+    - Yes; every argument has at least one counterexample
+    - 'Yes, but only if the premises are false'
+    - No; a valid argument has no counterexample by definition
+    - 'No, unless the conclusion is a tautology'
+  hint: What does it mean for an argument to be valid?
+  walkthrough: |
+    1. A valid argument means: there is no scenario where all premises are true and the conclusion is false.
+    2. A counterexample is exactly such a scenario.
+    3. If the argument is valid, no counterexample exists.
+    4. No: a valid argument has no counterexample by definition.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \to Q$'
+    - '$\neg Q$'
+  conclusion: '$\neg P$'
+  isValid: true
+  hint: 'If $P$ would make $Q$ true, but $Q$ is false, can $P$ be true?'
+  walkthrough: |
+    1. Suppose $P$ is true. By premise 1, $Q$ would be true. But premise 2 says $Q$ is false: contradiction.
+    2. So $P$ cannot be true. $\neg P$ must hold.
+    3. There is no way for both premises to be true and $\neg P$ false.
+    4. No counterexample exists. The argument is **valid** (modus tollens).
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'In a counterexample, what must be true about the premises?'
+  answer: 2
+  options:
+    - At least one premise must be false
+    - All premises must be true
+    - The premises must contradict each other
+    - At least one premise must be irrelevant
+  hint: A counterexample tests whether the premises can be true while the conclusion fails.
+  walkthrough: |
+    1. A counterexample is a scenario where all premises are true and the conclusion is false.
+    2. If any premise were false, the scenario would not test the logical connection.
+    3. All premises must be true in a counterexample.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$R \to S$'
+  conclusion: '$P \to S$'
+  isValid: false
+  counterexample:
+    P: true
+    Q: true
+    R: false
+    S: false
+  hint: '$P$ leads to $Q$ and $R$ leads to $S$, but does $P$ lead to $S$?'
+  walkthrough: |
+    1. Set $P$ = true, $Q$ = true, $R$ = false, $S$ = false.
+    2. Premise 1: T $\to$ T = true. Premise 2: F $\to$ F = true.
+    3. Conclusion: $P \to S$ = T $\to$ F = false.
+    4. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'Which scenario is a counterexample to: "If it is sunny, we go to the beach. If we go to the beach, we get sunburned. Therefore, if we get sunburned, it is sunny"?'
+  answer: 1
+  options:
+    - We get sunburned while hiking on a cloudy day with UV exposure; it is not sunny
+    - 'It is sunny, we go to the beach, and we get sunburned'
+    - It is cloudy and we stay home
+    - It is sunny but we do not get sunburned
+  hint: The conclusion claims sunburn implies sunny. Find a case where sunburn occurs without sun.
+  walkthrough: |
+    1. We need both premises true and the conclusion false.
+    2. Consider: we get sunburned while hiking on a cloudy day. Sunny would lead to beach (premise 1 holds), beach would lead to sunburn (premise 2 holds), but we got sunburned without it being sunny.
+    3. Conclusion ("if sunburned then sunny") is false: we are sunburned and it is not sunny.
+    4. Getting sunburned on a cloudy day is a counterexample.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \to Q$'
+    - '$P \to R$'
+  conclusion: '$P \to (Q \land R)$'
+  isValid: true
+  hint: 'If $P$ guarantees $Q$ and $P$ guarantees $R$, does $P$ guarantee both?'
+  walkthrough: |
+    1. Suppose $P$ is true. By premise 1, $Q$ is true. By premise 2, $R$ is true.
+    2. So $Q \land R$ is true. Therefore $P \to (Q \land R)$ holds.
+    3. If $P$ is false, $P \to (Q \land R)$ is automatically true.
+    4. No counterexample exists. The argument is **valid**.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'Which scenario is a counterexample to: "All students who study pass. Alex passed. Therefore, Alex studied"?'
+  answer: 3
+  options:
+    - Alex studied and passed
+    - Alex did not study and did not pass
+    - Alex passed by guessing correctly without studying
+    - Alex studied but did not pass
+  hint: A counterexample needs both premises true and the conclusion false.
+  walkthrough: |
+    1. Premise 1: all who study pass. Premise 2: Alex passed. Conclusion: Alex studied.
+    2. Consider: Alex passed by guessing correctly without studying. Everyone who studies passes (premise 1 true), Alex passed (premise 2 true), but Alex did not study.
+    3. Both premises true, conclusion false.
+    4. Alex passing by guessing without studying is a counterexample.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \lor Q$'
+    - '$R \lor Q$'
+  conclusion: '$P \lor R$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+    R: false
+  hint: Can $Q$ make both premises true without either $P$ or $R$ being true?
+  walkthrough: |
+    1. Set $P$ = false, $Q$ = true, $R$ = false.
+    2. Premise 1: F $\lor$ T = true. Premise 2: F $\lor$ T = true.
+    3. Conclusion: $P \lor R$ = F $\lor$ F = false.
+    4. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - counterexample
+
+- type: mcq
+  question: 'To prove an argument is valid, how many scenarios must you check?'
+  answer: 4
+  options:
+    - Just one scenario where the conclusion is true
+    - One scenario for each premise
+    - 'Exactly two: one where the conclusion is true and one where it is false'
+    - 'Every possible scenario: none can have all premises true and the conclusion false'
+  hint: Validity requires that no counterexample exists at all.
+  walkthrough: |
+    1. To prove invalidity, one counterexample suffices.
+    2. To prove validity, you must rule out every possible scenario as a counterexample.
+    3. There must be no scenario with all premises true and the conclusion false.
+    4. You must check every possible scenario.
+  tags:
+    - counterexample
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$\neg P \to Q$'
+    - '$\neg Q$'
+  conclusion: $P$
+  isValid: true
+  hint: 'If $\neg P$ leads to $Q$ and $Q$ is false, what about $\neg P$?'
+  walkthrough: |
+    1. Premise 2 says $Q$ is false. Premise 1 says $\neg P$ would make $Q$ true.
+    2. If $\neg P$ were true, $Q$ would be true. But $Q$ is false, so $\neg P$ cannot be true.
+    3. Therefore $P$ must be true.
+    4. No counterexample exists. The argument is **valid**.
+  tags:
+    - counterexample
+
+# ===== NEW validity-vs-truth questions (15) =====
+
+- type: mcq
+  question: 'Is this argument valid? 1. All fish can fly. 2. A salmon is a fish. 3. Therefore, a salmon can fly.'
+  answer: 2
+  options:
+    - Invalid; fish cannot actually fly
+    - 'Valid; if both premises were true, the conclusion would have to be true'
+    - Invalid; the conclusion is obviously false
+    - Valid only if we accept that fish can fly
+  hint: 'Validity asks what follows IF the premises are true, not whether the premises ARE true.'
+  walkthrough: |
+    1. Validity asks: if the premises were true, must the conclusion follow?
+    2. If all fish could fly and a salmon is a fish, the salmon would fly.
+    3. The premises are false in reality, but the logical connection holds.
+    4. Valid: if both premises were true, the conclusion would have to be true.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: A valid argument has premises that are all true. What can you say about the conclusion?
+  answer: 4
+  options:
+    - The conclusion might be true or false
+    - The conclusion is probably true but not guaranteed
+    - Nothing; validity does not concern truth
+    - The conclusion must be true
+  hint: 'Validity guarantees: if all premises are true, the conclusion is true.'
+  walkthrough: |
+    1. A valid argument guarantees: true premises produce a true conclusion.
+    2. If all premises are actually true, the conclusion cannot be false.
+    3. The conclusion must be true.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: 'Consider: 1. All planets are made of cheese. 2. Earth is a planet. 3. Therefore, Earth is made of cheese. The conclusion is false. What follows?'
+  answer: 1
+  options:
+    - The argument is valid but at least one premise is false
+    - The argument is invalid because the conclusion is false
+    - The argument is valid and all premises are true
+    - The argument is invalid because a premise is false
+  hint: Check the logical connection separately from the truth of the premises.
+  walkthrough: |
+    1. If all planets were made of cheese and Earth is a planet, Earth would be made of cheese. The logic is sound.
+    2. The argument is valid. The conclusion is false in reality.
+    3. Since the argument is valid and the conclusion is false, at least one premise must be false (premise 1).
+    4. The argument is valid but at least one premise is false.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: Is it possible for a valid argument to have all true premises and a false conclusion?
+  answer: 3
+  options:
+    - Yes; validity does not constrain the conclusion
+    - 'Yes, but only in rare cases'
+    - No; that is exactly what validity rules out
+    - 'No, unless the conclusion is a contradiction'
+  hint: 'Validity means: true premises guarantee a true conclusion.'
+  walkthrough: |
+    1. By definition, a valid argument cannot have all true premises and a false conclusion.
+    2. That combination is precisely what validity excludes.
+    3. No: that is exactly what validity rules out.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: 'Consider: 1. Water is H2O. 2. The sky is blue. 3. Therefore, Paris is in France. All three sentences are true. Is the argument valid?'
+  answer: 4
+  options:
+    - Yes; all sentences are true
+    - Yes; the conclusion follows from the premises
+    - No; Paris is unrelated to chemistry
+    - No; true premises and a true conclusion do not guarantee validity
+  hint: 'Can you imagine a situation where water is H2O and the sky is blue, but Paris is not in France?'
+  walkthrough: |
+    1. Imagine a scenario where water is H2O and the sky is blue, but France renamed its capital.
+    2. Both premises are true, but the conclusion is false: a counterexample.
+    3. The premises do not force the conclusion.
+    4. No: true premises and a true conclusion do not guarantee validity.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: A valid argument has a false premise and a true conclusion. Is this possible?
+  answer: 1
+  options:
+    - Yes; validity only restricts the case where all premises are true
+    - No; valid arguments must have all true premises
+    - No; a false premise makes the argument invalid
+    - 'Yes, but only if every premise is false'
+  hint: 'Validity says: IF all premises are true, THEN the conclusion is true. What if a premise is false?'
+  walkthrough: |
+    1. Validity constrains only the scenario where all premises are true.
+    2. When a premise is false, the validity condition is not violated.
+    3. A valid argument can have a false premise and still have a true conclusion.
+    4. Yes: validity only restricts the case where all premises are true.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: Which combination is impossible for a valid argument?
+  answer: 2
+  options:
+    - True premises and a true conclusion
+    - All true premises and a false conclusion
+    - A false premise and a true conclusion
+    - All false premises and a false conclusion
+  hint: Validity forbids exactly one combination of premise and conclusion truth values.
+  walkthrough: |
+    1. Validity means: if all premises are true, the conclusion must be true.
+    2. The forbidden combination is: all premises true and the conclusion false.
+    3. All other combinations are possible for valid arguments.
+    4. All true premises and a false conclusion is impossible for a valid argument.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: 'Consider: 1. All mammals lay eggs. 2. Dogs are mammals. 3. Therefore, dogs lay eggs. Is this argument valid?'
+  answer: 3
+  options:
+    - Invalid; dogs do not lay eggs
+    - Invalid; the first premise is false
+    - 'Valid; if both premises were true, the conclusion would follow'
+    - Valid only in a world where mammals lay eggs
+  hint: 'Focus on the logical structure, not the factual accuracy of the premises.'
+  walkthrough: |
+    1. If all mammals laid eggs and dogs are mammals, then dogs would lay eggs.
+    2. The conclusion follows from the premises. The structure is sound.
+    3. Premise 1 is false in reality, but that does not affect validity.
+    4. Valid: if both premises were true, the conclusion would follow.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: Does a false premise make an argument invalid?
+  answer: 4
+  options:
+    - Yes; false premises always produce invalid arguments
+    - Yes; validity requires true premises
+    - Sometimes; it depends on the conclusion
+    - 'No; validity depends on the logical connection, not the actual truth of premises'
+  hint: Validity is about what would happen IF the premises were true.
+  walkthrough: |
+    1. Validity asks: is there a scenario where all premises are true and the conclusion is false?
+    2. A premise being actually false does not create such a scenario.
+    3. The argument "All cats are dogs. All dogs are fish. Therefore, all cats are fish." has false premises but is valid.
+    4. No: validity depends on the logical connection, not the actual truth of premises.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: An argument is valid and its conclusion is true. What can you say about the premises?
+  answer: 2
+  options:
+    - All premises must be true
+    - The premises could be true or false; you cannot determine their truth from this information alone
+    - At least one premise must be true
+    - The premises are irrelevant since the conclusion is true
+  hint: 'A valid argument with a true conclusion: does the validity condition force the premises to be true?'
+  walkthrough: |
+    1. Validity says: true premises guarantee a true conclusion. It does not work in reverse.
+    2. The conclusion being true does not mean the premises are true.
+    3. Example: "All cats are dogs. All dogs are animals. Therefore, all cats are animals." Valid, conclusion true, but premise 1 is false.
+    4. The premises could be true or false; you cannot determine their truth from this information alone.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: Why can a valid argument have a false conclusion?
+  answer: 3
+  options:
+    - Because validity has nothing to do with truth at all
+    - Because the conclusion is independent of the premises
+    - 'Because at least one premise is false, so the guarantee does not apply'
+    - Because validity only applies to mathematical arguments
+  hint: Validity guarantees truth preservation FROM true premises. What if the premises are not all true?
+  walkthrough: |
+    1. Validity guarantees: if all premises are true, the conclusion is true.
+    2. If a premise is false, the guarantee does not kick in.
+    3. The conclusion can then be false without violating validity.
+    4. A valid argument can have a false conclusion because at least one premise is false, so the guarantee does not apply.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: 'Consider: 1. If the Earth is flat, then gravity does not exist. 2. The Earth is flat. 3. Therefore, gravity does not exist. Is this valid?'
+  answer: 1
+  options:
+    - Valid; the conclusion follows logically from the premises even though the premises are false
+    - Invalid; both the premise and conclusion are false
+    - Invalid; the Earth is not flat
+    - Valid only if we ignore science
+  hint: 'Check the logical structure: if P then Q, and P, therefore Q.'
+  walkthrough: |
+    1. The structure is: if P then Q, P, therefore Q. This is modus ponens.
+    2. Modus ponens is always valid regardless of what P and Q say.
+    3. Premise 2 is false in reality, but the logical connection is airtight.
+    4. Valid: the conclusion follows logically from the premises even though the premises are false.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: 'A valid argument with all true premises is called "sound." Can an unsound argument be valid?'
+  answer: 1
+  options:
+    - 'Yes; an argument can be valid but have a false premise, making it unsound'
+    - No; validity and soundness are the same thing
+    - No; unsound arguments are always invalid
+    - 'Yes, but only if the conclusion is also false'
+  hint: 'Soundness = validity + all true premises. What if the premises are not all true?'
+  walkthrough: |
+    1. Soundness requires both validity and all true premises.
+    2. An argument can be valid (correct logical structure) but have a false premise.
+    3. Such an argument is valid but unsound.
+    4. Yes: an argument can be valid but have a false premise, making it unsound.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: Which best describes the relationship between validity and truth?
+  answer: 4
+  options:
+    - Valid arguments always have true conclusions
+    - True conclusions always come from valid arguments
+    - Validity and truth are completely unrelated
+    - 'Validity guarantees truth preservation: true premises in a valid argument produce a true conclusion'
+  hint: Validity links premise truth to conclusion truth in one specific direction.
+  walkthrough: |
+    1. Valid arguments can have false conclusions (if a premise is false). Option 1 is wrong.
+    2. True conclusions can come from invalid arguments. Option 2 is wrong.
+    3. Validity and truth are related: validity preserves truth from premises to conclusion. Option 3 is wrong.
+    4. Validity guarantees truth preservation: true premises in a valid argument produce a true conclusion.
+  tags:
+    - validity-vs-truth
+
+- type: mcq
+  question: All the premises of a valid argument are false. What can you say about the conclusion?
+  answer: 2
+  options:
+    - The conclusion must be false
+    - The conclusion could be true or false
+    - The conclusion must be true
+    - The argument is automatically invalid
+  hint: Validity only constrains what happens when all premises are true.
+  walkthrough: |
+    1. Validity says: if all premises are true, the conclusion is true. When premises are false, no constraint applies.
+    2. The conclusion could be true or false.
+    3. Example with false conclusion: "All fish fly. Sharks are fish. Therefore, sharks fly." (all false, valid)
+    4. Example with true conclusion: "All fish fly. Cats are fish. Therefore, cats are animals." (premises false, conclusion true, valid)
+  tags:
+    - validity-vs-truth
+
+# ===== NEW invalid-vs-false questions (15) =====
+
+- type: mcq
+  question: 'An invalid argument concludes that "the Earth revolves around the Sun." Is this conclusion false?'
+  answer: 3
+  options:
+    - Yes; invalid arguments have false conclusions
+    - Probably; invalidity suggests the conclusion is wrong
+    - Not necessarily; the conclusion can be true even if the argument is invalid
+    - Yes; the premises failed to support it
+  hint: 'Invalidity is about the premises-conclusion connection, not the conclusion alone.'
+  walkthrough: |
+    1. "The Earth revolves around the Sun" is true regardless of the argument.
+    2. Invalidity means the premises do not guarantee the conclusion; it says nothing about the conclusion itself.
+    3. Not necessarily: the conclusion can be true even if the argument is invalid.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: Which of the following is possible for an invalid argument?
+  answer: 4
+  options:
+    - True premises and a guaranteed true conclusion
+    - No counterexample exists
+    - The conclusion must be false
+    - 'True premises, true conclusion, but the conclusion is not guaranteed by the premises'
+  hint: Invalidity means the premises do not force the conclusion; the conclusion could still happen to be true.
+  walkthrough: |
+    1. An invalid argument has at least one counterexample, so "no counterexample exists" is wrong.
+    2. Invalid arguments do not guarantee the conclusion, so "true premises and a guaranteed true conclusion" is wrong.
+    3. The conclusion can be true by coincidence, so "the conclusion must be false" is wrong.
+    4. True premises, true conclusion, but the conclusion is not guaranteed by the premises.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'Is this argument invalid? 1. The sky is blue. 2. Therefore, dogs are mammals.'
+  answer: 1
+  options:
+    - Yes; the conclusion does not follow from the premise even though both are true
+    - No; both statements are true so the argument is valid
+    - Yes; the conclusion is false
+    - No; the argument has only one premise
+  hint: Can you imagine a scenario where the sky is blue but dogs are not mammals?
+  walkthrough: |
+    1. Imagine a scenario where the sky is blue but dogs evolved as reptiles. The premise is true and the conclusion is false.
+    2. The premise has no logical connection to the conclusion.
+    3. A counterexample exists, so the argument is invalid.
+    4. Yes: the conclusion does not follow from the premise even though both are true.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'If someone presents an invalid argument for a claim, should you reject the claim?'
+  answer: 2
+  options:
+    - Yes; the argument being invalid means the claim is wrong
+    - 'Not necessarily; the claim might be supported by a different, valid argument'
+    - Yes; you should always reject claims from invalid arguments
+    - Not necessarily; invalid arguments are still partially convincing
+  hint: 'Invalidity tells you about one particular argument, not about the claim itself.'
+  walkthrough: |
+    1. An invalid argument fails to establish its conclusion, but the conclusion might still be true.
+    2. Another argument might validly support the same conclusion.
+    3. Rejecting a claim solely because one argument for it is invalid is a mistake.
+    4. Not necessarily: the claim might be supported by a different, valid argument.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'An argument concludes "2 + 2 = 4" but is invalid. What does this tell you about "2 + 2 = 4"?'
+  answer: 3
+  options:
+    - It must be false since the argument is invalid
+    - It is probably false
+    - Nothing about its truth; the argument simply fails to establish it
+    - It must be true since the conclusion is mathematical
+  hint: 'Invalidity speaks to the argument, not to the conclusion independently.'
+  walkthrough: |
+    1. "2 + 2 = 4" is true, but the invalid argument does not establish this.
+    2. Invalidity means the premises fail to guarantee the conclusion.
+    3. The truth of the conclusion is independent of this particular argument.
+    4. Nothing about its truth: the argument simply fails to establish it.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'Which best distinguishes "the argument is invalid" from "the conclusion is false"?'
+  answer: 2
+  options:
+    - They mean the same thing
+    - '"Invalid" means the premises do not guarantee the conclusion; "the conclusion is false" is a claim about the world'
+    - '"Invalid" is weaker than "the conclusion is false"'
+    - '"Invalid" means the conclusion is probably false'
+  hint: One is about logical structure; the other is about factual truth.
+  walkthrough: |
+    1. "Invalid" describes the logical relationship between premises and conclusion.
+    2. "The conclusion is false" is a factual claim about the world.
+    3. An invalid argument can have a true conclusion, and a valid argument can have a false conclusion (with false premises).
+    4. "Invalid" means the premises do not guarantee the conclusion; "the conclusion is false" is a claim about the world.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'Consider: 1. All cats are animals. 2. Therefore, it will rain tomorrow. The argument is invalid. Does this mean it will not rain tomorrow?'
+  answer: 4
+  options:
+    - Yes; the argument fails so the conclusion fails
+    - Yes; the premise does not support rain
+    - No; it will definitely rain since the premise is true
+    - No; whether it rains has nothing to do with the validity of this argument
+  hint: 'The weather is determined by meteorology, not by the status of this argument.'
+  walkthrough: |
+    1. The argument is invalid because "all cats are animals" has no bearing on rain.
+    2. Invalidity means the premise fails to guarantee the conclusion.
+    3. Whether it rains tomorrow is a separate factual question.
+    4. No: whether it rains has nothing to do with the validity of this argument.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: An argument is invalid and its conclusion is true. How is this possible?
+  answer: 1
+  options:
+    - The conclusion is true for reasons unrelated to the premises
+    - This is impossible; invalid arguments cannot have true conclusions
+    - The conclusion must actually be false
+    - The argument must actually be valid
+  hint: A true conclusion can exist independently of the argument made for it.
+  walkthrough: |
+    1. Invalidity means the premises do not force the conclusion, but the conclusion can still be true.
+    2. Example: "Snow is cold. Therefore, the Earth orbits the Sun." Invalid, but the conclusion is true.
+    3. The conclusion is true for reasons unrelated to the premises.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: Which scenario is impossible?
+  answer: 3
+  options:
+    - An invalid argument with a true conclusion
+    - An invalid argument with true premises
+    - An invalid argument with no counterexample
+    - An invalid argument with both true premises and a true conclusion
+  hint: What is the definition of invalidity in terms of counterexamples?
+  walkthrough: |
+    1. An invalid argument has at least one counterexample by definition.
+    2. Options 1, 2, and 4 are all possible for invalid arguments.
+    3. An invalid argument with no counterexample is impossible: that would make it valid.
+    4. An invalid argument with no counterexample is the impossible scenario.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'A friend says: "Your argument is invalid, so your conclusion is wrong." Is this reasoning correct?'
+  answer: 4
+  options:
+    - Yes; invalidity disproves the conclusion
+    - 'Yes; if the argument fails, so does the conclusion'
+    - No; but the conclusion is probably wrong
+    - 'No; invalidity means the premises do not guarantee the conclusion, not that the conclusion is false'
+  hint: 'Invalidity attacks the argument, not the conclusion directly.'
+  walkthrough: |
+    1. Invalidity means the premises fail to logically support the conclusion.
+    2. The conclusion could still be true; it just has not been established by this argument.
+    3. The friend conflates a flawed argument with a false conclusion.
+    4. No: invalidity means the premises do not guarantee the conclusion, not that the conclusion is false.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: Can an invalid argument have all true premises?
+  answer: 1
+  options:
+    - 'Yes; example: "Grass is green. Therefore, the Moon is round." Both are true but the conclusion does not follow.'
+    - No; true premises always make an argument valid
+    - 'No; if all premises are true, the conclusion must follow'
+    - 'Yes, but only if the conclusion is also true'
+  hint: True premises do not automatically create a logical connection to the conclusion.
+  walkthrough: |
+    1. "Grass is green. Therefore, the Moon is round." Both are true but unconnected.
+    2. The premise does not force the conclusion. A counterexample exists (imagine the Moon were cube-shaped).
+    3. True premises do not guarantee validity.
+    4. Yes: an invalid argument can have all true premises.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: What is the safest conclusion when told an argument is invalid?
+  answer: 2
+  options:
+    - The conclusion is false
+    - 'The argument fails to establish its conclusion, but the conclusion might still be true'
+    - The premises are false
+    - The conclusion is unrelated to reality
+  hint: 'Invalidity is a property of the argument, not a verdict on the conclusion.'
+  walkthrough: |
+    1. Invalidity means the premises do not logically guarantee the conclusion.
+    2. The conclusion could be true or false; we simply cannot determine that from this argument.
+    3. The premises might also be true or false.
+    4. The argument fails to establish its conclusion, but the conclusion might still be true.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'An argument for "climate change is real" is found to be invalid. A skeptic says this proves climate change is not real. Is the skeptic correct?'
+  answer: 3
+  options:
+    - Yes; the invalid argument disproves the claim
+    - 'Yes; if no valid argument exists, the claim is false'
+    - No; invalidity of one argument does not disprove the conclusion
+    - No; but it means climate change is unlikely
+  hint: One bad argument does not settle the truth of a claim.
+  walkthrough: |
+    1. Invalidity means this particular argument fails to establish its conclusion.
+    2. Other valid arguments or evidence might support the same conclusion.
+    3. Dismissing a claim because one argument for it is flawed is a logical error.
+    4. No: invalidity of one argument does not disprove the conclusion.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: An invalid argument has a false conclusion. Does the invalidity cause the conclusion to be false?
+  answer: 4
+  options:
+    - Yes; invalidity is what makes conclusions false
+    - Yes; the premises failed to support the conclusion
+    - No; but invalidity contributes to the conclusion being false
+    - 'No; the conclusion is false on its own merits, not because the argument is invalid'
+  hint: 'Invalidity is about the logical connection, not about the truth value of the conclusion.'
+  walkthrough: |
+    1. The conclusion is false because of what it claims about the world.
+    2. Invalidity means the premises do not guarantee the conclusion; it does not cause falsehood.
+    3. A valid argument can also have a false conclusion (with false premises).
+    4. No: the conclusion is false on its own merits, not because the argument is invalid.
+  tags:
+    - invalid-vs-false
+
+- type: mcq
+  question: 'True or false: "If an argument is invalid, then its conclusion is false" is itself a valid claim.'
+  answer: 2
+  options:
+    - True; invalidity implies a false conclusion
+    - False; invalid arguments can have true conclusions
+    - True; that is the definition of invalidity
+    - False; but only for trivial arguments
+  hint: Think of an invalid argument with a true conclusion.
+  walkthrough: |
+    1. Consider: "Snow is white. Therefore, 2 + 2 = 4." Invalid, but the conclusion is true.
+    2. The claim "invalid implies false conclusion" is refuted by this example.
+    3. Invalid arguments can have true conclusions.
+    4. False: invalid arguments can have true conclusions.
+  tags:
+    - invalid-vs-false

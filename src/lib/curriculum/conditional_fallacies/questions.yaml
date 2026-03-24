@@ -1,0 +1,1072 @@
+- type: mcq
+  question: 'Which fallacy does this commit? 1. If it is snowing, the roads are slippery. 2. The roads are slippery. 3. Therefore, it is snowing.'
+  answer: 2
+  options:
+    - Denying the Antecedent
+    - Affirming the Consequent
+    - No fallacy; the argument is valid
+    - Denying the Consequent
+  hint: The second premise asserts the consequent. The conclusion asserts the antecedent.
+  walkthrough: |
+    1. Premise 1: $S \to R$. Premise 2 asserts $R$ (the consequent).
+    2. The conclusion asserts $S$ (the antecedent).
+    3. This matches: $P \to Q$, $Q$, therefore $P$.
+    4. The roads could be slippery from ice, not snow.
+    5. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy does this commit? 1. If the printer is on, it can print. 2. The printer can print. 3. Therefore, the printer is on.'
+  answer: 4
+  options:
+    - Denying the Antecedent
+    - No fallacy
+    - Modus Ponens
+    - Affirming the Consequent
+  hint: Premise 2 affirms the consequent of the conditional.
+  walkthrough: |
+    1. Premise 1: $O \to P$. Premise 2: $P$ (the consequent).
+    2. Conclusion: $O$ (the antecedent).
+    3. The printer could print from battery backup without being plugged in.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - $Q$
+  conclusion: $P$
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: 'Try $P$ = false, $Q$ = true.'
+  walkthrough: |
+    1. Set $P$ = false, $Q$ = true.
+    2. Premise 1: $P \to Q$ = F $\to$ T = true.
+    3. Premise 2: $Q$ = true.
+    4. Conclusion: $P$ = false.
+    5. Both premises true, conclusion false. This counterexample proves the argument is **invalid**.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: Why is Affirming the Consequent invalid?
+  answer: 3
+  options:
+    - The antecedent is always false
+    - The conditional only works in one direction and the consequent is always false
+    - The consequent can be true for reasons other than the antecedent
+    - The premises contradict each other
+  hint: '$P \to Q$ tells you what happens when $P$ is true. It does not say $P$ is the only way $Q$ can be true.'
+  walkthrough: |
+    1. $P \to Q$ says: if $P$, then $Q$.
+    2. It does not say $P$ is the only way to make $Q$ true.
+    3. $Q$ could be true for an entirely different reason.
+    4. The consequent can be true for reasons other than the antecedent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the sensor detects smoke, the alarm sounds. 2. The alarm sounds. 3. Therefore, the sensor detected smoke.'
+  answer: 1
+  options:
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - Valid (Modus Ponens)
+    - No fallacy
+  hint: The alarm could sound for a test or malfunction.
+  walkthrough: |
+    1. Premise 1: $D \to A$. Premise 2: $A$ (the consequent).
+    2. Conclusion: $D$ (the antecedent).
+    3. The alarm could sound for reasons other than smoke detection.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the software is updated, the bugs are fixed. 2. The bugs are fixed. 3. Therefore, the software is updated.'
+  answer: 3
+  options:
+    - Denying the Antecedent
+    - No fallacy
+    - Affirming the Consequent
+    - Modus Ponens
+  hint: 'The bugs could be fixed by a different method, not just a software update.'
+  walkthrough: |
+    1. Premise 1: $U \to F$. Premise 2: $F$ (the consequent).
+    2. Conclusion: $U$ (the antecedent).
+    3. The bugs could be fixed by a patch or workaround, not the update.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the cake has sugar, it tastes sweet. 2. The cake tastes sweet. 3. Therefore, the cake has sugar.'
+  answer: 2
+  options:
+    - Denying the Antecedent
+    - Affirming the Consequent
+    - Valid argument
+    - No fallacy
+  hint: The cake could taste sweet from artificial sweetener.
+  walkthrough: |
+    1. Premise 1: $S \to T$. Premise 2: $T$ (the consequent).
+    2. Conclusion: $S$ (the antecedent).
+    3. The cake could taste sweet from honey or artificial sweetener.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$A \to B$'
+    - $B$
+  conclusion: $A$
+  isValid: false
+  counterexample:
+    A: false
+    B: true
+  hint: 'Try $A$ = false, $B$ = true.'
+  walkthrough: |
+    1. Set $A$ = false, $B$ = true.
+    2. Premise 1: $A \to B$ = F $\to$ T = true.
+    3. Premise 2: $B$ = true.
+    4. Conclusion: $A$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the road is icy, the car skids. 2. The car skids. 3. Therefore, the road is icy.'
+  answer: 4
+  options:
+    - Denying the Antecedent
+    - Modus Tollens
+    - No fallacy
+    - Affirming the Consequent
+  hint: The car could skid for reasons other than ice.
+  walkthrough: |
+    1. Premise 1: $I \to S$. Premise 2: $S$ (the consequent).
+    2. Conclusion: $I$ (the antecedent).
+    3. The car could skid because of oil on the road or worn tires.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the plant gets water, it grows. 2. The plant grows. 3. Therefore, the plant gets water.'
+  answer: 1
+  options:
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - No fallacy
+    - Modus Ponens
+  hint: The plant could grow from absorbing morning dew rather than being watered.
+  walkthrough: |
+    1. Premise 1: $W \to G$. Premise 2: $G$ (the consequent).
+    2. Conclusion: $W$ (the antecedent).
+    3. The plant could grow because of nutrients in the soil, not just watering.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the student studies hard, the student passes. 2. The student passes. 3. Therefore, the student studied hard.'
+  answer: 3
+  options:
+    - Denying the Antecedent
+    - No fallacy
+    - Affirming the Consequent
+    - Modus Ponens
+  hint: The student could pass through luck or prior knowledge.
+  walkthrough: |
+    1. Premise 1: $S \to P$. Premise 2: $P$ (the consequent).
+    2. Conclusion: $S$ (the antecedent).
+    3. The student could pass by guessing correctly or having prior knowledge.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the door is unlocked, you can enter. 2. You can enter. 3. Therefore, the door is unlocked.'
+  answer: 2
+  options:
+    - No fallacy
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - Modus Tollens
+  hint: You might enter through a window or another door.
+  walkthrough: |
+    1. Premise 1: $U \to E$. Premise 2: $E$ (the consequent).
+    2. Conclusion: $U$ (the antecedent).
+    3. You could enter through a window or a different entrance.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$R \to S$'
+    - $S$
+  conclusion: $R$
+  isValid: false
+  counterexample:
+    R: false
+    S: true
+  hint: 'Try $R$ = false, $S$ = true.'
+  walkthrough: |
+    1. Set $R$ = false, $S$ = true.
+    2. Premise 1: $R \to S$ = F $\to$ T = true.
+    3. Premise 2: $S$ = true.
+    4. Conclusion: $R$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the engine runs, the car moves. 2. The car moves. 3. Therefore, the engine runs.'
+  answer: 4
+  options:
+    - Denying the Antecedent
+    - No fallacy
+    - Modus Ponens
+    - Affirming the Consequent
+  hint: The car could be moving downhill or being towed.
+  walkthrough: |
+    1. Premise 1: $E \to M$. Premise 2: $M$ (the consequent).
+    2. Conclusion: $E$ (the antecedent).
+    3. The car could be rolling downhill or being towed.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the generator is on, the lights work. 2. The lights work. 3. Therefore, the generator is on.'
+  answer: 1
+  options:
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - Valid argument
+    - No fallacy
+  hint: The lights could work because the main power supply is on.
+  walkthrough: |
+    1. Premise 1: $G \to L$. Premise 2: $L$ (the consequent).
+    2. Conclusion: $G$ (the antecedent).
+    3. The lights could work from the main power grid, not the generator.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the mail carrier came, the package is here. 2. The package is here. 3. Therefore, the mail carrier came.'
+  answer: 3
+  options:
+    - No fallacy
+    - Denying the Antecedent
+    - Affirming the Consequent
+    - Modus Ponens
+  hint: The package could have been delivered by a different courier.
+  walkthrough: |
+    1. Premise 1: $M \to P$. Premise 2: $P$ (the consequent).
+    2. Conclusion: $M$ (the antecedent).
+    3. The package could have been dropped off by a neighbor or a different service.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the virus is present, the patient has a fever. 2. The patient has a fever. 3. Therefore, the virus is present.'
+  answer: 2
+  options:
+    - No fallacy
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - Valid argument
+  hint: A fever can be caused by many different conditions.
+  walkthrough: |
+    1. Premise 1: $V \to F$. Premise 2: $F$ (the consequent).
+    2. Conclusion: $V$ (the antecedent).
+    3. The fever could be from a bacterial infection, not a virus.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$M \to N$'
+    - $N$
+  conclusion: $M$
+  isValid: false
+  counterexample:
+    M: false
+    N: true
+  hint: 'Try $M$ = false, $N$ = true.'
+  walkthrough: |
+    1. Set $M$ = false, $N$ = true.
+    2. Premise 1: $M \to N$ = F $\to$ T = true.
+    3. Premise 2: $N$ = true.
+    4. Conclusion: $M$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the power is on, the screen lights up. 2. The screen lights up. 3. Therefore, the power is on.'
+  answer: 4
+  options:
+    - Denying the Antecedent
+    - No fallacy
+    - Modus Ponens
+    - Affirming the Consequent
+  hint: The screen could light up from residual battery charge.
+  walkthrough: |
+    1. Premise 1: $P \to S$. Premise 2: $S$ (the consequent).
+    2. Conclusion: $P$ (the antecedent).
+    3. The screen could light up from battery power, not the main power supply.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the faucet is open, water flows. 2. Water flows. 3. Therefore, the faucet is open.'
+  answer: 1
+  options:
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - Valid argument
+    - No fallacy
+  hint: Water could flow from a burst pipe.
+  walkthrough: |
+    1. Premise 1: $F \to W$. Premise 2: $W$ (the consequent).
+    2. Conclusion: $F$ (the antecedent).
+    3. Water could flow from a leak or a different faucet.
+    4. This is Affirming the Consequent.
+  tags:
+    - affirm-consequent
+
+- type: mcq
+  question: 'Which fallacy does this commit? 1. If it rains, the picnic is canceled. 2. It is not raining. 3. Therefore, the picnic is not canceled.'
+  answer: 3
+  options:
+    - Affirming the Consequent
+    - No fallacy
+    - Denying the Antecedent
+    - Modus Tollens
+  hint: Premise 2 denies the antecedent. The conclusion denies the consequent.
+  walkthrough: |
+    1. Premise 1: $R \to C$. Premise 2: $\neg R$ (denies the antecedent).
+    2. Conclusion: $\neg C$ (denies the consequent).
+    3. The picnic could be canceled for reasons other than rain.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If you study, you will pass. 2. You did not study. 3. Therefore, you will not pass.'
+  answer: 2
+  options:
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - Valid argument
+    - No fallacy; common sense says this is right
+  hint: Premise 2 denies the antecedent of the conditional.
+  walkthrough: |
+    1. Premise 1: $S \to P$. Premise 2: $\neg S$ (denies the antecedent).
+    2. Conclusion: $\neg P$ (denies the consequent).
+    3. You could pass without studying (e.g., prior knowledge).
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$\neg P$'
+  conclusion: '$\neg Q$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: 'Try $P$ = false, $Q$ = true.'
+  walkthrough: |
+    1. Set $P$ = false, $Q$ = true.
+    2. Premise 1: $P \to Q$ = F $\to$ T = true.
+    3. Premise 2: $\neg P$ = true.
+    4. Conclusion: $\neg Q$ = false.
+    5. Both premises true, conclusion false. This counterexample proves the argument is **invalid**.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: Why is Denying the Antecedent invalid?
+  answer: 1
+  options:
+    - A false antecedent does not force the consequent to be false; the consequent could be true for other reasons
+    - The premises are always false
+    - Denying the antecedent means the conditional is false
+    - The conclusion always contradicts the premises
+  hint: 'The truth table shows that when $P$ is false, $Q$ can be either true or false.'
+  walkthrough: |
+    1. When $P$ is false, the conditional $P \to Q$ is true regardless of $Q$.
+    2. $Q$ could be true (row 3) or false (row 4).
+    3. A false antecedent places no constraint on the consequent.
+    4. A false antecedent does not force the consequent to be false.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the key fits, the door opens. 2. The key does not fit. 3. Therefore, the door does not open.'
+  answer: 4
+  options:
+    - Affirming the Consequent
+    - No fallacy; the argument is valid
+    - Modus Tollens
+    - Denying the Antecedent
+  hint: The door could be opened by a different key or method.
+  walkthrough: |
+    1. Premise 1: $K \to D$. Premise 2: $\neg K$ (denies the antecedent).
+    2. Conclusion: $\neg D$ (denies the consequent).
+    3. The door could open with a different key.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the battery is charged, the flashlight works. 2. The battery is not charged. 3. Therefore, the flashlight does not work.'
+  answer: 3
+  options:
+    - Affirming the Consequent
+    - No fallacy
+    - Denying the Antecedent
+    - Modus Tollens
+  hint: The flashlight could work on a different power source.
+  walkthrough: |
+    1. Premise 1: $C \to W$. Premise 2: $\neg C$ (denies the antecedent).
+    2. Conclusion: $\neg W$ (denies the consequent).
+    3. The flashlight could work if plugged into an outlet.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the teacher is present, class begins. 2. The teacher is not present. 3. Therefore, class does not begin.'
+  answer: 1
+  options:
+    - Denying the Antecedent
+    - Affirming the Consequent
+    - Valid argument
+    - No fallacy
+  hint: A substitute teacher could start class.
+  walkthrough: |
+    1. Premise 1: $T \to C$. Premise 2: $\neg T$ (denies the antecedent).
+    2. Conclusion: $\neg C$ (denies the consequent).
+    3. A substitute or teaching assistant could start the class.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$A \to B$'
+    - '$\neg A$'
+  conclusion: '$\neg B$'
+  isValid: false
+  counterexample:
+    A: false
+    B: true
+  hint: 'Try $A$ = false, $B$ = true.'
+  walkthrough: |
+    1. Set $A$ = false, $B$ = true.
+    2. Premise 1: $A \to B$ = F $\to$ T = true.
+    3. Premise 2: $\neg A$ = true.
+    4. Conclusion: $\neg B$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the bridge is open, traffic flows. 2. The bridge is not open. 3. Therefore, traffic does not flow.'
+  answer: 2
+  options:
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - No fallacy
+    - Modus Tollens
+  hint: Traffic could flow via an alternate route.
+  walkthrough: |
+    1. Premise 1: $B \to T$. Premise 2: $\neg B$ (denies the antecedent).
+    2. Conclusion: $\neg T$ (denies the consequent).
+    3. Traffic could flow through a detour or alternate bridge.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the sprinklers are on, the lawn is wet. 2. The sprinklers are not on. 3. Therefore, the lawn is not wet.'
+  answer: 4
+  options:
+    - Affirming the Consequent
+    - No fallacy
+    - Modus Tollens
+    - Denying the Antecedent
+  hint: The lawn could be wet from rain.
+  walkthrough: |
+    1. Premise 1: $S \to W$. Premise 2: $\neg S$ (denies the antecedent).
+    2. Conclusion: $\neg W$ (denies the consequent).
+    3. The lawn could be wet from rain or morning dew.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the oven is on, the kitchen is warm. 2. The oven is not on. 3. Therefore, the kitchen is not warm.'
+  answer: 3
+  options:
+    - Affirming the Consequent
+    - No fallacy
+    - Denying the Antecedent
+    - Modus Ponens
+  hint: The kitchen could be warm from central heating.
+  walkthrough: |
+    1. Premise 1: $O \to W$. Premise 2: $\neg O$ (denies the antecedent).
+    2. Conclusion: $\neg W$ (denies the consequent).
+    3. The kitchen could be warm from the heater or sunlight.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$R \to S$'
+    - '$\neg R$'
+  conclusion: '$\neg S$'
+  isValid: false
+  counterexample:
+    R: false
+    S: true
+  hint: 'Try $R$ = false, $S$ = true.'
+  walkthrough: |
+    1. Set $R$ = false, $S$ = true.
+    2. Premise 1: $R \to S$ = F $\to$ T = true.
+    3. Premise 2: $\neg R$ = true.
+    4. Conclusion: $\neg S$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the Wi-Fi is connected, the page loads. 2. The Wi-Fi is not connected. 3. Therefore, the page does not load.'
+  answer: 1
+  options:
+    - Denying the Antecedent
+    - Affirming the Consequent
+    - Valid argument
+    - No fallacy
+  hint: The page could load via mobile data.
+  walkthrough: |
+    1. Premise 1: $W \to L$. Premise 2: $\neg W$ (denies the antecedent).
+    2. Conclusion: $\neg L$ (denies the consequent).
+    3. The page could load using mobile data instead of Wi-Fi.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the boss approves, the project starts. 2. The boss does not approve. 3. Therefore, the project does not start.'
+  answer: 2
+  options:
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - No fallacy
+    - Modus Tollens
+  hint: The project could start with approval from a different authority.
+  walkthrough: |
+    1. Premise 1: $B \to P$. Premise 2: $\neg B$ (denies the antecedent).
+    2. Conclusion: $\neg P$ (denies the consequent).
+    3. The project could start with approval from a higher authority or board.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the window is open, fresh air enters. 2. The window is not open. 3. Therefore, fresh air does not enter.'
+  answer: 4
+  options:
+    - Affirming the Consequent
+    - No fallacy
+    - Modus Tollens
+    - Denying the Antecedent
+  hint: Fresh air could enter through a ventilation system.
+  walkthrough: |
+    1. Premise 1: $W \to F$. Premise 2: $\neg W$ (denies the antecedent).
+    2. Conclusion: $\neg F$ (denies the consequent).
+    3. Fresh air could enter through an air vent or another open door.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$G \to H$'
+    - '$\neg G$'
+  conclusion: '$\neg H$'
+  isValid: false
+  counterexample:
+    G: false
+    H: true
+  hint: 'Try $G$ = false, $H$ = true.'
+  walkthrough: |
+    1. Set $G$ = false, $H$ = true.
+    2. Premise 1: $G \to H$ = F $\to$ T = true.
+    3. Premise 2: $\neg G$ = true.
+    4. Conclusion: $\neg H$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the rain stops, the ground dries. 2. The rain did not stop. 3. Therefore, the ground did not dry.'
+  answer: 3
+  options:
+    - No fallacy
+    - Affirming the Consequent
+    - Denying the Antecedent
+    - Modus Tollens
+  hint: The ground could dry from sun and wind despite continuing rain.
+  walkthrough: |
+    1. Premise 1: $R \to D$. Premise 2: $\neg R$ (denies the antecedent).
+    2. Conclusion: $\neg D$ (denies the consequent).
+    3. Parts of the ground could dry from heat even while it still rains lightly.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'A conditional with a false antecedent is called:'
+  answer: 3
+  options:
+    - A contradiction
+    - An invalid conditional
+    - Vacuously true
+    - Indeterminate
+  hint: 'When the antecedent is false, the conditional is true by default.'
+  walkthrough: |
+    1. When the antecedent is false, the conditional makes no promise.
+    2. An unbroken promise counts as true.
+    3. This is called vacuous truth.
+    4. A conditional with a false antecedent is vacuously true.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: Which rows of the conditional truth table show vacuous truth?
+  answer: 2
+  options:
+    - Rows 1 and 2 (where $P$ is true)
+    - Rows 3 and 4 (where $P$ is false)
+    - Only row 4 (where both are false)
+    - Only row 2 (the false row)
+  hint: Vacuous truth occurs when the antecedent is false.
+  walkthrough: |
+    1. Row 3: $P$ = F, $Q$ = T. Conditional is true.
+    2. Row 4: $P$ = F, $Q$ = F. Conditional is true.
+    3. In both rows, the antecedent is false, making the conditional vacuously true.
+    4. Rows 3 and 4 show vacuous truth.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: '"If pigs fly, then the moon is made of cheese." Is this conditional true or false?'
+  answer: 4
+  options:
+    - False; pigs do not fly
+    - False; the moon is not made of cheese
+    - Cannot be determined
+    - 'True; the antecedent is false, so the conditional is vacuously true'
+  hint: 'Check the antecedent first. If it is false, the conditional is automatically true.'
+  walkthrough: |
+    1. The antecedent ("pigs fly") is false.
+    2. A conditional with a false antecedent is true regardless of the consequent.
+    3. The conditional is vacuously true.
+    4. The conditional is true because the antecedent is false.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: Why is a conditional true when the antecedent is false?
+  answer: 1
+  options:
+    - The conditional only promises what happens when the antecedent is true; a false antecedent means the promise is not tested
+    - Because false inputs always produce true outputs
+    - Because the consequent must be true when the antecedent is false
+    - It is a convention with no logical basis
+  hint: 'Think of a conditional as a promise: "If X, then Y." If X never happens, is the promise broken?'
+  walkthrough: |
+    1. A conditional says: if the antecedent holds, the consequent follows.
+    2. If the antecedent is false, the condition was never triggered.
+    3. An untriggered promise is not broken.
+    4. The promise is not tested when the antecedent is false, so it remains true.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: Both fallacies of the conditional stem from misunderstanding which concept?
+  answer: 2
+  options:
+    - Conjunction
+    - 'Vacuous truth: what a conditional says when the antecedent is false'
+    - Disjunction
+    - Negation
+  hint: Both fallacies involve cases where the antecedent is false or the consequent is affirmed.
+  walkthrough: |
+    1. Affirming the Consequent ignores that $Q$ being true does not pin down $P$.
+    2. Denying the Antecedent ignores that a false $P$ does not constrain $Q$.
+    3. Both stem from misunderstanding vacuous truth and the conditional's asymmetry.
+    4. Both fallacies stem from misunderstanding vacuous truth.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: '"If 2 + 2 = 5, then the Earth is flat." Is this conditional true?'
+  answer: 3
+  options:
+    - 'False; 2 + 2 does not equal 5'
+    - False; the Earth is not flat
+    - 'True; the antecedent is false, so it is vacuously true'
+    - Cannot be determined
+  hint: A false antecedent makes the conditional true regardless of the consequent.
+  walkthrough: |
+    1. The antecedent "2 + 2 = 5" is false.
+    2. A false antecedent makes the conditional vacuously true.
+    3. The truth value of the consequent is irrelevant.
+    4. The conditional is true because the antecedent is false.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: 'If the antecedent of a conditional is false, can the consequent be true?'
+  answer: 4
+  options:
+    - No; a false antecedent forces the consequent to be false
+    - No; both must have the same truth value
+    - Only if the conditional is invalid
+    - Yes; rows 3 and 4 of the truth table show this
+  hint: Check what happens in rows 3 and 4 of the conditional truth table.
+  walkthrough: |
+    1. Row 3: antecedent false, consequent true; conditional is true.
+    2. Row 4: antecedent false, consequent false; conditional is true.
+    3. Both cases are possible when the antecedent is false.
+    4. Yes, the consequent can be true when the antecedent is false.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: Which claim correctly describes vacuous truth?
+  answer: 1
+  options:
+    - 'A conditional is true whenever its antecedent is false, regardless of the consequent'
+    - A conditional is false whenever its antecedent is false
+    - A conditional is true only when both parts are true
+    - Vacuous truth means the conditional has no truth value
+  hint: Check the truth table for rows where the antecedent is false.
+  walkthrough: |
+    1. When the antecedent is false, the conditional is true in both row 3 and row 4.
+    2. The consequent can be true or false; the conditional is true either way.
+    3. A conditional is true whenever its antecedent is false, regardless of the consequent.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: '"If the volcano erupts, fish swim." The volcano does not erupt. Is the conditional true or false?'
+  answer: 2
+  options:
+    - False; the statements are unrelated
+    - 'True; the antecedent is false, so vacuous truth applies'
+    - Cannot be determined
+    - False; volcanoes have nothing to do with fish
+  hint: Relevance does not matter in material conditionals. Only truth values matter.
+  walkthrough: |
+    1. The antecedent "the volcano erupts" is false.
+    2. In the material conditional, a false antecedent makes the conditional true.
+    3. The apparent irrelevance of the two claims does not affect the truth value.
+    4. The conditional is true by vacuous truth.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: What does vacuous truth tell us about Denying the Antecedent?
+  answer: 3
+  options:
+    - Denying the Antecedent is valid because the antecedent is false
+    - Vacuous truth is irrelevant to Denying the Antecedent
+    - 'When the antecedent is false, the consequent can still be true, so we cannot conclude it is false'
+    - Denying the Antecedent is invalid because the conditional becomes false
+  hint: 'If $P$ is false and the conditional is true, what does that tell us about $Q$?'
+  walkthrough: |
+    1. Vacuous truth means: when $P$ is false, $P \to Q$ is true regardless of $Q$.
+    2. $Q$ could be true (row 3) or false (row 4).
+    3. We cannot conclude $Q$ is false just because $P$ is false.
+    4. This is exactly why Denying the Antecedent is invalid.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: What does vacuous truth tell us about Affirming the Consequent?
+  answer: 4
+  options:
+    - It proves Affirming the Consequent is valid
+    - It is unrelated to Affirming the Consequent
+    - It means the conditional is always false when the consequent is true
+    - 'Row 3 shows $Q$ can be true while $P$ is false, so affirming $Q$ does not prove $P$'
+  hint: 'Check row 3: what are the truth values of $P$ and $Q$?'
+  walkthrough: |
+    1. Row 3: $P$ false, $Q$ true, conditional true.
+    2. This shows $Q$ being true is compatible with $P$ being false.
+    3. Affirming $Q$ does not guarantee $P$, because row 3 is a counterexample.
+    4. Row 3 shows $Q$ can be true while $P$ is false.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: '"If dogs are reptiles, then water is dry." Is this conditional true or false?'
+  answer: 1
+  options:
+    - 'True; the antecedent is false, so it is vacuously true'
+    - False; dogs are not reptiles
+    - False; water is not dry
+    - Neither true nor false
+  hint: A false antecedent makes the conditional true automatically.
+  walkthrough: |
+    1. "Dogs are reptiles" is false.
+    2. A false antecedent makes the conditional vacuously true.
+    3. The absurdity of the consequent does not matter.
+    4. The conditional is true because the antecedent is false.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: 'A student says: "The conditional is false because both parts are false." Is this correct?'
+  answer: 2
+  options:
+    - Yes; both being false makes the conditional false
+    - No; a false antecedent makes the conditional true (row 4 of the truth table)
+    - Yes; the conditional requires at least one true part
+    - It depends on the specific sentences
+  hint: 'Check row 4 of the truth table: $P$ = F, $Q$ = F.'
+  walkthrough: |
+    1. Row 4: $P$ false, $Q$ false, conditional true.
+    2. A false antecedent makes the conditional true, even if the consequent is also false.
+    3. The student is wrong.
+    4. A false antecedent makes the conditional true regardless.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: 'In the truth table for $P \to Q$, which rows have $P$ false and the conditional true?'
+  answer: 3
+  options:
+    - Only row 3
+    - Only row 4
+    - Both rows 3 and 4
+    - No rows
+  hint: Check every row where $P$ is false.
+  walkthrough: |
+    1. Row 3: $P$ = F, $Q$ = T, conditional = T.
+    2. Row 4: $P$ = F, $Q$ = F, conditional = T.
+    3. In both rows where $P$ is false, the conditional is true.
+    4. Both rows 3 and 4 have $P$ false and the conditional true.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: A conditional with a false antecedent can never be false. True or false?
+  answer: 4
+  options:
+    - False; it depends on the consequent
+    - False; both parts must be true
+    - It depends on context
+    - True; a false antecedent always makes the conditional true
+  hint: Check the truth table rows where the antecedent is false.
+  walkthrough: |
+    1. When $P$ is false, the conditional is true in row 3 (Q = T) and row 4 (Q = F).
+    2. There is no row where $P$ is false and the conditional is false.
+    3. A false antecedent always produces a true conditional.
+    4. True: a false antecedent always makes the conditional true.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: 'Which fallacy? 1. If it is a holiday, the office is closed. 2. The office is closed. 3. Therefore, it is a holiday.'
+  answer: 3
+  options:
+    - Denying the Antecedent
+    - No fallacy; the argument is valid
+    - Affirming the Consequent
+    - Modus Ponens
+  hint: The second premise affirms the consequent of the conditional.
+  walkthrough: |
+    1. Premise 1: $H \to C$. Premise 2: $C$ (the consequent).
+    2. Conclusion: $H$ (the antecedent).
+    3. The office could be closed for maintenance, not a holiday.
+    4. This is Affirming the Consequent.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'Which fallacy? 1. If the train is on time, we catch our connection. 2. The train is not on time. 3. Therefore, we do not catch our connection.'
+  answer: 1
+  options:
+    - Denying the Antecedent
+    - Affirming the Consequent
+    - No fallacy
+    - Modus Tollens
+  hint: Premise 2 denies the antecedent. We could catch a later connection.
+  walkthrough: |
+    1. Premise 1: $T \to C$. Premise 2: $\neg T$ (denies the antecedent).
+    2. Conclusion: $\neg C$ (denies the consequent).
+    3. We could catch the connection by running or taking a taxi.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: 'Which fallacy? 1. If the coupon is valid, the discount applies. 2. The coupon is not valid. 3. Therefore, the discount does not apply.'
+  answer: 3
+  options:
+    - Affirming the Consequent
+    - No fallacy
+    - Denying the Antecedent
+    - Modus Ponens
+  hint: The discount could apply through a different promotion.
+  walkthrough: |
+    1. Premise 1: $C \to D$. Premise 2: $\neg C$ (denies the antecedent).
+    2. Conclusion: $\neg D$ (denies the consequent).
+    3. The discount could apply from a sale or loyalty program.
+    4. This is Denying the Antecedent.
+  tags:
+    - deny-antecedent
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$W \to X$'
+    - '$\neg W$'
+  conclusion: '$\neg X$'
+  isValid: false
+  counterexample:
+    W: false
+    X: true
+  hint: 'Try $W$ = false, $X$ = true.'
+  walkthrough: |
+    1. Set $W$ = false, $X$ = true.
+    2. Premise 1: $W \to X$ = F $\to$ T = true.
+    3. Premise 2: $\neg W$ = true.
+    4. Conclusion: $\neg X$ = false.
+    5. Both premises true, conclusion false. The argument is **invalid**.
+  tags:
+    - deny-antecedent
+
+- type: mcq
+  question: '"If the moon is made of cheese, then I am a billionaire." The moon is not made of cheese. Is the conditional true or false?'
+  answer: 2
+  options:
+    - False; the moon is not made of cheese
+    - 'True; the antecedent is false, so it is vacuously true'
+    - False; you are not a billionaire
+    - Cannot be determined
+  hint: A false antecedent makes the conditional true regardless of the consequent.
+  walkthrough: |
+    1. "The moon is made of cheese" is false.
+    2. A false antecedent makes the conditional vacuously true.
+    3. The absurdity of the consequent does not matter.
+    4. The conditional is true because the antecedent is false.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: Can a conditional be true even when the consequent is false?
+  answer: 4
+  options:
+    - No; a false consequent always makes the conditional false
+    - No; both parts must be true
+    - Only in special cases
+    - Yes; when the antecedent is also false (row 4 of the truth table)
+  hint: 'Check row 4: $P$ = F, $Q$ = F.'
+  walkthrough: |
+    1. Row 4: $P$ = F, $Q$ = F, conditional = T.
+    2. When the antecedent is false, the conditional is true even if the consequent is false.
+    3. The conditional is false only when T $\to$ F.
+    4. Yes, when the antecedent is false, the conditional is true even with a false consequent.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: 'The only way to make a conditional false is:'
+  answer: 1
+  options:
+    - True antecedent and false consequent
+    - False antecedent and true consequent
+    - Both parts false
+    - Both parts true
+  hint: There is exactly one row in the truth table where the conditional is false.
+  walkthrough: |
+    1. Row 2 of the truth table: $P$ = T, $Q$ = F, conditional = F.
+    2. This is the only combination that produces a false conditional.
+    3. All other rows produce a true conditional.
+    4. The only way to make a conditional false is a true antecedent with a false consequent.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: '"If 1 = 0, then everything is true." Is this conditional true?'
+  answer: 3
+  options:
+    - False; 1 does not equal 0
+    - 'False; "everything is true" is absurd'
+    - 'True; the antecedent "1 = 0" is false, so it is vacuously true'
+    - Cannot be determined
+  hint: Evaluate the antecedent first.
+  walkthrough: |
+    1. "1 = 0" is false.
+    2. A false antecedent makes the conditional vacuously true.
+    3. The consequent's content is irrelevant.
+    4. The conditional is true because the antecedent is false.
+  tags:
+    - vacuous-truth-explain
+
+- type: mcq
+  question: 'A student claims: "A conditional is meaningless when the antecedent is false." Is this correct?'
+  answer: 2
+  options:
+    - Yes; the conditional has no truth value when the antecedent is false
+    - No; the conditional is defined and true when the antecedent is false (vacuous truth)
+    - Yes; we cannot evaluate it without a true antecedent
+    - It depends on the consequent
+  hint: The truth table assigns a definite truth value for every row.
+  walkthrough: |
+    1. The truth table gives a value for every combination of truth values.
+    2. When the antecedent is false (rows 3 and 4), the conditional is true.
+    3. It is not meaningless; it has a definite truth value.
+    4. The conditional is defined and true when the antecedent is false.
+  tags:
+    - vacuous-truth-explain

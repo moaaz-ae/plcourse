@@ -1,0 +1,640 @@
+- type: formula-builder
+  question: 'Translate: "You take the stairs or the elevator, but not both."'
+  answer: '$(S \lor E) \land \neg (S \land E)$'
+  variableMap:
+    S: You take the stairs
+    E: You take the elevator
+  hint: 'Combine "at least one" ($\lor$) with "not both" ($\neg (A \land B)$).'
+  walkthrough: |
+    1. "Stairs or elevator": $(S \lor E)$.
+    2. "Not both": $\neg (S \land E)$.
+    3. "But" is conjunction joining the two parts.
+    4. The translation is $(S \lor E) \land \neg (S \land E)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "Either the red wire or the blue wire is cut, but not both."'
+  answer: '$(R \lor B) \land \neg (R \land B)$'
+  variableMap:
+    R: The red wire is cut
+    B: The blue wire is cut
+  hint: '"Either...or...but not both" is the classic exclusive or pattern.'
+  walkthrough: |
+    1. Inclusive disjunction: $(R \lor B)$.
+    2. Not both: $\neg (R \land B)$.
+    3. Combine: $(R \lor B) \land \neg (R \land B)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The switch is up or down, but not both."'
+  answer: '$(U \lor D) \land \neg (U \land D)$'
+  variableMap:
+    U: The switch is up
+    D: The switch is down
+  hint: Exclusive or = inclusive or AND not both.
+  walkthrough: |
+    1. At least one: $(U \lor D)$.
+    2. Not both: $\neg (U \land D)$.
+    3. Combine: $(U \lor D) \land \neg (U \land D)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "You win or lose, but not both."'
+  answer: '$(W \lor L) \land \neg (W \land L)$'
+  variableMap:
+    W: You win
+    L: You lose
+  hint: Standard exclusive or formula.
+  walkthrough: |
+    1. At least one: $(W \lor L)$.
+    2. Not both: $\neg (W \land L)$.
+    3. Combine: $(W \lor L) \land \neg (W \land L)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The answer is yes or no, but not both."'
+  answer: '$(Y \lor N) \land \neg (Y \land N)$'
+  variableMap:
+    Y: The answer is yes
+    N: The answer is no
+  hint: '"Or...but not both" = exclusive or.'
+  walkthrough: |
+    1. At least one: $(Y \lor N)$.
+    2. Not both: $\neg (Y \land N)$.
+    3. Combine: $(Y \lor N) \land \neg (Y \land N)$.
+  tags:
+    - symbolize-xor
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q) \land \neg (P \land Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \lor Q) \land \neg (P \land Q)$'
+  hiddenFormulas:
+    - '$(P \lor Q) \land \neg (P \land Q)$'
+  hint: True when exactly one input is true; false when both match.
+  walkthrough: |
+    1. Row 1 (T,T): $\lor$ = T, $\land$ = T, $\neg$T = F, T $\land$ F = F.
+    2. Row 2 (T,F): $\lor$ = T, $\land$ = F, $\neg$F = T, T $\land$ T = T.
+    3. Row 3 (F,T): $\lor$ = T, $\land$ = F, $\neg$F = T, T $\land$ T = T.
+    4. Row 4 (F,F): $\lor$ = F, $\land$ = F, $\neg$F = T, F $\land$ T = F.
+    5. The values are: F, T, T, F.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'What is $(A \lor B) \land \neg (A \land B)$ when $A$ = T and $B$ = T?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True; at least one is true
+  hint: Exclusive or is false when both are true.
+  walkthrough: |
+    1. $A \lor B$ = T. $A \land B$ = T. $\neg$(T) = F.
+    2. T $\land$ F = F.
+    3. Both being true makes exclusive or false.
+    4. Both being true makes exclusive or false.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'What is $(A \lor B) \land \neg (A \land B)$ when $A$ = F and $B$ = T?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - False; $A$ is false
+  hint: 'Exactly one input is true: the exclusive or pattern.'
+  walkthrough: |
+    1. $A \lor B$ = T. $A \land B$ = F. $\neg$(F) = T.
+    2. T $\land$ T = T.
+    3. Exactly one is true, so exclusive or is true.
+    4. Exactly one is true, so exclusive or is true. The answer is true.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'What is $(A \lor B) \land \neg (A \land B)$ when $A$ = F and $B$ = F?'
+  answer: 4
+  options:
+    - 'True'
+    - 'True; neither is true so "not both" holds'
+    - Cannot be determined
+    - 'False'
+  hint: Exclusive or requires exactly one to be true. Neither is true here.
+  walkthrough: |
+    1. $A \lor B$ = F. $A \land B$ = F. $\neg$(F) = T.
+    2. F $\land$ T = F.
+    3. Neither is true, so exclusive or is false.
+    4. Neither is true, so exclusive or is false. The answer is false.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: On how many rows is exclusive or true?
+  answer: 3
+  options:
+    - '1'
+    - '3'
+    - '2'
+    - '4'
+  hint: Exclusive or is true only when exactly one input is true.
+  walkthrough: |
+    1. Row TF: true. Row FT: true.
+    2. Row TT: false. Row FF: false.
+    3. Exactly 2 rows produce true.
+    4. Exactly 2 rows produce true.
+  tags:
+    - xor-truth-table
+
+- type: formula-builder
+  question: 'Translate: "The coin lands heads or tails, but not both."'
+  answer: '$(H \lor T) \land \neg (H \land T)$'
+  variableMap:
+    H: The coin lands heads
+    T: The coin lands tails
+  hint: 'Exclusive or = at least one ($\lor$) and not both ($\neg (\land)$).'
+  walkthrough: |
+    1. At least one: $(H \lor T)$.
+    2. Not both: $\neg (H \land T)$.
+    3. Combine: $(H \lor T) \land \neg (H \land T)$.
+  tags:
+    - diagnostic
+
+- type: formula-builder
+  question: 'Translate: "The light is on or off, but not both."'
+  answer: '$(O \lor F) \land \neg (O \land F)$'
+  variableMap:
+    O: The light is on
+    F: The light is off
+  hint: 'Exclusive or: at least one ($\lor$) and not both ($\neg (\land)$).'
+  walkthrough: |
+    1. At least one: $(O \lor F)$.
+    2. Not both: $\neg (O \land F)$.
+    3. Combine: $(O \lor F) \land \neg (O \land F)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "She takes the bus or the train, but not both."'
+  answer: '$(B \lor T) \land \neg (B \land T)$'
+  variableMap:
+    B: She takes the bus
+    T: She takes the train
+  hint: '"Or ... but not both" is exclusive or.'
+  walkthrough: |
+    1. At least one: $(B \lor T)$.
+    2. Not both: $\neg (B \land T)$.
+    3. Combine: $(B \lor T) \land \neg (B \land T)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The door is open or closed, but not both."'
+  answer: '$(O \lor C) \land \neg (O \land C)$'
+  variableMap:
+    O: The door is open
+    C: The door is closed
+  hint: 'Standard exclusive or pattern: disjunction plus negation of conjunction.'
+  walkthrough: |
+    1. At least one: $(O \lor C)$.
+    2. Not both: $\neg (O \land C)$.
+    3. Combine: $(O \lor C) \land \neg (O \land C)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "He orders tea or coffee, but not both."'
+  answer: '$(T \lor C) \land \neg (T \land C)$'
+  variableMap:
+    T: He orders tea
+    C: He orders coffee
+  hint: Combine inclusive or with not-both.
+  walkthrough: |
+    1. At least one: $(T \lor C)$.
+    2. Not both: $\neg (T \land C)$.
+    3. Combine: $(T \lor C) \land \neg (T \land C)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The shirt is red or blue, but not both."'
+  answer: '$(R \lor B) \land \neg (R \land B)$'
+  variableMap:
+    R: The shirt is red
+    B: The shirt is blue
+  hint: Exclusive or = inclusive disjunction and not both.
+  walkthrough: |
+    1. At least one: $(R \lor B)$.
+    2. Not both: $\neg (R \land B)$.
+    3. Combine: $(R \lor B) \land \neg (R \land B)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "Either the alarm is set or it is disabled, but not both."'
+  answer: '$(A \lor D) \land \neg (A \land D)$'
+  variableMap:
+    A: The alarm is set
+    D: The alarm is disabled
+  hint: '"Either...or...but not both" signals exclusive or.'
+  walkthrough: |
+    1. At least one: $(A \lor D)$.
+    2. Not both: $\neg (A \land D)$.
+    3. Combine: $(A \lor D) \land \neg (A \land D)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The road goes left or right, but not both."'
+  answer: '$(L \lor R) \land \neg (L \land R)$'
+  variableMap:
+    L: The road goes left
+    R: The road goes right
+  hint: 'Exclusive or combines "at least one" with "not both."'
+  walkthrough: |
+    1. At least one: $(L \lor R)$.
+    2. Not both: $\neg (L \land R)$.
+    3. Combine: $(L \lor R) \land \neg (L \land R)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "You eat in or take out, but not both."'
+  answer: '$(I \lor O) \land \neg (I \land O)$'
+  variableMap:
+    I: You eat in
+    O: You take out
+  hint: 'The "but not both" clause adds the exclusive restriction.'
+  walkthrough: |
+    1. At least one: $(I \lor O)$.
+    2. Not both: $\neg (I \land O)$.
+    3. Combine: $(I \lor O) \land \neg (I \land O)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The file is saved or deleted, but not both."'
+  answer: '$(S \lor D) \land \neg (S \land D)$'
+  variableMap:
+    S: The file is saved
+    D: The file is deleted
+  hint: 'Exclusive or pattern: $(P \lor Q) \land \neg (P \land Q)$.'
+  walkthrough: |
+    1. At least one: $(S \lor D)$.
+    2. Not both: $\neg (S \land D)$.
+    3. Combine: $(S \lor D) \land \neg (S \land D)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "She picks vanilla or chocolate, but not both."'
+  answer: '$(V \lor C) \land \neg (V \land C)$'
+  variableMap:
+    V: She picks vanilla
+    C: She picks chocolate
+  hint: '"Or...but not both" is the exclusive or pattern.'
+  walkthrough: |
+    1. At least one: $(V \lor C)$.
+    2. Not both: $\neg (V \land C)$.
+    3. Combine: $(V \lor C) \land \neg (V \land C)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The gate is open or shut, but not both."'
+  answer: '$(O \lor S) \land \neg (O \land S)$'
+  variableMap:
+    O: The gate is open
+    S: The gate is shut
+  hint: 'Exclusive or: disjunction plus negated conjunction.'
+  walkthrough: |
+    1. At least one: $(O \lor S)$.
+    2. Not both: $\neg (O \land S)$.
+    3. Combine: $(O \lor S) \land \neg (O \land S)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The payment is cash or card, but not both."'
+  answer: '$(C \lor D) \land \neg (C \land D)$'
+  variableMap:
+    C: The payment is cash
+    D: The payment is card
+  hint: Standard exclusive or formula.
+  walkthrough: |
+    1. At least one: $(C \lor D)$.
+    2. Not both: $\neg (C \land D)$.
+    3. Combine: $(C \lor D) \land \neg (C \land D)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "You sit or stand, but not both."'
+  answer: '$(S \lor T) \land \neg (S \land T)$'
+  variableMap:
+    S: You sit
+    T: You stand
+  hint: '"Or...but not both" translates to exclusive or.'
+  walkthrough: |
+    1. At least one: $(S \lor T)$.
+    2. Not both: $\neg (S \land T)$.
+    3. Combine: $(S \lor T) \land \neg (S \land T)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The exam is pass or fail, but not both."'
+  answer: '$(P \lor F) \land \neg (P \land F)$'
+  variableMap:
+    P: The exam is pass
+    F: The exam is fail
+  hint: Combine disjunction with negated conjunction for exclusive or.
+  walkthrough: |
+    1. At least one: $(P \lor F)$.
+    2. Not both: $\neg (P \land F)$.
+    3. Combine: $(P \lor F) \land \neg (P \land F)$.
+  tags:
+    - symbolize-xor
+
+- type: formula-builder
+  question: 'Translate: "The signal is green or red, but not both."'
+  answer: '$(G \lor R) \land \neg (G \land R)$'
+  variableMap:
+    G: The signal is green
+    R: The signal is red
+  hint: Exclusive or = at least one true AND not both true.
+  walkthrough: |
+    1. At least one: $(G \lor R)$.
+    2. Not both: $\neg (G \land R)$.
+    3. Combine: $(G \lor R) \land \neg (G \land R)$.
+  tags:
+    - symbolize-xor
+
+- type: truth-table
+  question: 'Complete the truth table for $(A \lor B) \land \neg (A \land B)$.'
+  formulas:
+    - $A$
+    - $B$
+    - '$(A \lor B) \land \neg (A \land B)$'
+  hiddenFormulas:
+    - '$(A \lor B) \land \neg (A \land B)$'
+  hint: XOR is true when exactly one input is true.
+  walkthrough: |
+    1. Row 1 (T,T): $\lor$=T, $\land$=T, $\neg$T=F, T$\land$F=F.
+    2. Row 2 (T,F): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    3. Row 3 (F,T): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    4. Row 4 (F,F): $\lor$=F, $\land$=F, $\neg$F=T, F$\land$T=F.
+    5. The values are: F, T, T, F.
+  tags:
+    - xor-truth-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(C \lor D) \land \neg (C \land D)$.'
+  formulas:
+    - $C$
+    - $D$
+    - '$(C \lor D) \land \neg (C \land D)$'
+  hiddenFormulas:
+    - '$(C \lor D) \land \neg (C \land D)$'
+  hint: 'Exclusive or: true when exactly one variable is true.'
+  walkthrough: |
+    1. Row 1 (T,T): $\lor$=T, $\land$=T, $\neg$T=F, T$\land$F=F.
+    2. Row 2 (T,F): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    3. Row 3 (F,T): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    4. Row 4 (F,F): $\lor$=F, $\land$=F, $\neg$F=T, F$\land$T=F.
+    5. The values are: F, T, T, F.
+  tags:
+    - xor-truth-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(X \lor Y) \land \neg (X \land Y)$.'
+  formulas:
+    - $X$
+    - $Y$
+    - '$(X \lor Y) \land \neg (X \land Y)$'
+  hiddenFormulas:
+    - '$(X \lor Y) \land \neg (X \land Y)$'
+  hint: 'XOR pattern: F when both match, T when exactly one is true.'
+  walkthrough: |
+    1. Row 1 (T,T): $\lor$=T, $\land$=T, $\neg$T=F, T$\land$F=F.
+    2. Row 2 (T,F): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    3. Row 3 (F,T): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    4. Row 4 (F,F): $\lor$=F, $\land$=F, $\neg$F=T, F$\land$T=F.
+    5. The values are: F, T, T, F.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'What is $(A \lor B) \land \neg (A \land B)$ when $A$ = T and $B$ = F?'
+  answer: 3
+  options:
+    - 'False'
+    - Cannot be determined
+    - 'True'
+    - False; $B$ is false so the whole formula is false
+  hint: Exactly one input is true. What does exclusive or say?
+  walkthrough: |
+    1. $A \lor B$ = T $\lor$ F = T.
+    2. $A \land B$ = T $\land$ F = F.
+    3. $\neg$(F) = T. T $\land$ T = T.
+    4. Exactly one is true, so exclusive or is true. The answer is true.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'If both inputs to exclusive or are false, what is the result?'
+  answer: 2
+  options:
+    - True; neither is true so there is no conflict
+    - False; exclusive or requires exactly one to be true
+    - 'True; "not both" is satisfied'
+    - Cannot be determined
+  hint: Exclusive or needs at least one true input AND not both.
+  walkthrough: |
+    1. $A \lor B$ = F $\lor$ F = F.
+    2. The "at least one" condition fails.
+    3. F $\land$ anything = F.
+    4. Exclusive or is false: it requires exactly one to be true.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'Which truth values make $(P \lor Q) \land \neg (P \land Q)$ true?'
+  answer: 4
+  options:
+    - 'Only $P$=T, $Q$=T'
+    - 'Only $P$=F, $Q$=F'
+    - '$P$=T, $Q$=T and $P$=F, $Q$=F'
+    - '$P$=T, $Q$=F and $P$=F, $Q$=T'
+  hint: Exclusive or is true when exactly one input is true.
+  walkthrough: |
+    1. (T,F): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    2. (F,T): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    3. (T,T) and (F,F) both give false.
+    4. The formula is true when $P$=T, $Q$=F and when $P$=F, $Q$=T.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: How does exclusive or differ from inclusive or when both inputs are true?
+  answer: 1
+  options:
+    - Inclusive or is true; exclusive or is false
+    - Both are true
+    - Both are false
+    - Inclusive or is false; exclusive or is true
+  hint: Inclusive or allows both; exclusive or forbids both.
+  walkthrough: |
+    1. Inclusive or ($P \lor Q$): T $\lor$ T = T.
+    2. Exclusive or: $(T \lor T) \land \neg (T \land T)$ = T $\land$ F = F.
+    3. They differ when both inputs are true.
+    4. Inclusive or is true; exclusive or is false.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'What is $(M \lor N) \land \neg (M \land N)$ when $M$=F, $N$=T?'
+  answer: 3
+  options:
+    - 'False'
+    - Cannot be determined
+    - 'True'
+    - False; $M$ is false
+  hint: 'One is true and one is false: the classic exclusive or scenario.'
+  walkthrough: |
+    1. $M \lor N$ = F $\lor$ T = T.
+    2. $M \land N$ = F $\land$ T = F.
+    3. $\neg$(F) = T. T $\land$ T = T.
+    4. Exactly one is true, so exclusive or is true. The answer is true.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: On which rows do inclusive or and exclusive or give different results?
+  answer: 2
+  options:
+    - When both are false
+    - When both are true
+    - When exactly one is true
+    - They never differ
+  hint: 'Exclusive or adds the "not both" restriction.'
+  walkthrough: |
+    1. When both are false: inclusive=F, exclusive=F. Same.
+    2. When exactly one is true: inclusive=T, exclusive=T. Same.
+    3. When both are true: inclusive=T, exclusive=F. Different.
+    4. They differ only when both inputs are true.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: 'What is $(A \lor B) \land \neg (A \land B)$ when $A$=F, $B$=F?'
+  answer: 4
+  options:
+    - 'True'
+    - 'True; "not both" holds'
+    - Cannot be determined
+    - 'False; neither is true so "at least one" fails'
+  hint: 'The disjunction $A \lor B$ must be true for the whole formula to be true.'
+  walkthrough: |
+    1. $A \lor B$ = F $\lor$ F = F.
+    2. Regardless of the other part, F $\land$ anything = F.
+    3. The "at least one" condition fails.
+    4. The answer is false: neither is true, so "at least one" fails.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: Is exclusive or true when $P$=T and $Q$=T?
+  answer: 1
+  options:
+    - 'No; both being true violates the "not both" condition'
+    - Yes; at least one is true
+    - Yes; both conditions are met
+    - Cannot be determined without more information
+  hint: 'Exclusive or requires exactly one to be true, not both.'
+  walkthrough: |
+    1. $(P \lor Q)$ = T. The "at least one" part holds.
+    2. $(P \land Q)$ = T. $\neg$(T) = F. The "not both" part fails.
+    3. T $\land$ F = F.
+    4. No: both being true violates the "not both" condition.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: The exclusive or of $P$ and $Q$ is equivalent to which statement about their truth values?
+  answer: 2
+  options:
+    - $P$ and $Q$ have the same truth value
+    - $P$ and $Q$ have different truth values
+    - $P$ and $Q$ are both false
+    - $P$ and $Q$ are both true
+  hint: 'XOR is true on (T,F) and (F,T): the rows where the inputs differ.'
+  walkthrough: |
+    1. XOR is true when (T,F) or (F,T): exactly when the values differ.
+    2. XOR is false when (T,T) or (F,F): exactly when the values match.
+    3. So XOR captures "different truth values."
+    4. Exclusive or is true when $P$ and $Q$ have different truth values.
+  tags:
+    - xor-truth-table
+
+- type: mcq
+  question: Inclusive or is true on 3 out of 4 rows. On how many rows is exclusive or true?
+  answer: 3
+  options:
+    - '1'
+    - '3'
+    - '2'
+    - '4'
+  hint: 'Exclusive or removes the (T,T) case from inclusive or.'
+  walkthrough: |
+    1. Inclusive or is false only on (F,F), so true on 3 rows.
+    2. Exclusive or removes the (T,T) case, keeping (T,F) and (F,T).
+    3. Exclusive or is true on exactly 2 rows.
+    4. The answer is 2.
+  tags:
+    - xor-truth-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(R \lor S) \land \neg (R \land S)$.'
+  formulas:
+    - $R$
+    - $S$
+    - '$(R \lor S) \land \neg (R \land S)$'
+  hiddenFormulas:
+    - '$(R \lor S) \land \neg (R \land S)$'
+  hint: 'True when exactly one of $R$, $S$ is true.'
+  walkthrough: |
+    1. Row 1 (T,T): $\lor$=T, $\land$=T, $\neg$T=F, T$\land$F=F.
+    2. Row 2 (T,F): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    3. Row 3 (F,T): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    4. Row 4 (F,F): $\lor$=F, $\land$=F, $\neg$F=T, F$\land$T=F.
+    5. The values are: F, T, T, F.
+  tags:
+    - xor-truth-table
+
+- type: truth-table
+  question: 'Complete the truth table for $(M \lor N) \land \neg (M \land N)$.'
+  formulas:
+    - $M$
+    - $N$
+    - '$(M \lor N) \land \neg (M \land N)$'
+  hiddenFormulas:
+    - '$(M \lor N) \land \neg (M \land N)$'
+  hint: 'XOR: false when inputs match, true when inputs differ.'
+  walkthrough: |
+    1. Row 1 (T,T): $\lor$=T, $\land$=T, $\neg$T=F, T$\land$F=F.
+    2. Row 2 (T,F): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    3. Row 3 (F,T): $\lor$=T, $\land$=F, $\neg$F=T, T$\land$T=T.
+    4. Row 4 (F,F): $\lor$=F, $\land$=F, $\neg$F=T, F$\land$T=F.
+    5. The values are: F, T, T, F.
+  tags:
+    - xor-truth-table

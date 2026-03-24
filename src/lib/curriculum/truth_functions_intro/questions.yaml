@@ -1,0 +1,1021 @@
+- type: mcq
+  question: 'Is "and" truth-functional?'
+  answer: 1
+  options:
+    - 'Yes; the truth value of "A and B" depends only on the truth values of A and B'
+    - 'No; "and" sometimes means "and then" (temporal order)'
+    - 'Yes, but only when A and B are about the same topic'
+    - No; context is needed to determine the truth value
+  hint: 'If you know whether A is true and whether B is true, can you always determine "A and B"?'
+  walkthrough: |
+    1. "A and B" is true when both A and B are true; false otherwise.
+    2. This depends only on the truth values of A and B.
+    3. No additional information is needed.
+    4. "And" is truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "because" truth-functional?'
+  answer: 3
+  options:
+    - 'Yes; if A and B are both true, "A because B" is true'
+    - 'Yes; it works the same as "and"'
+    - 'No; two sentences can both be true yet "A because B" can be true or false depending on the causal connection'
+    - 'No; "because" is not a connective'
+  hint: 'Find two cases where both inputs are true but the "because" sentence differs in truth value.'
+  walkthrough: |
+    1. "The streets are wet because it rained." Both parts true; the sentence is true.
+    2. "The streets are wet because Paris is in France." Both parts true; the sentence is false.
+    3. Same truth values, different outputs. The connective depends on more than truth values.
+    4. "Because" is not truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: What makes a connective truth-functional?
+  answer: 4
+  options:
+    - It must connect exactly two sentences
+    - It must produce a true output
+    - It must have an English equivalent
+    - Its output depends only on the truth values of its inputs
+  hint: The defining feature is that input truth values alone determine the output.
+  walkthrough: |
+    1. A truth-functional connective needs only the truth values of its parts.
+    2. No context, meaning, or causal relationship is required.
+    3. If the truth values of inputs fully determine the output, the connective is truth-functional.
+    4. The correct answer is "its output depends only on the truth values of its inputs."
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "or" truth-functional?'
+  answer: 2
+  options:
+    - 'No; "or" can be exclusive or inclusive'
+    - 'Yes; the truth value of "A or B" depends only on the truth values of A and B'
+    - No; it depends on whether A and B are compatible
+    - 'Yes, but only if both A and B are true'
+  hint: 'If you know the truth value of A and of B, can you always compute "A or B"?'
+  walkthrough: |
+    1. In TFL, "A or B" (inclusive) is true when at least one of A, B is true.
+    2. This depends only on truth values.
+    3. No additional context is needed.
+    4. "Or" is truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "it is necessary that" truth-functional?'
+  answer: 1
+  options:
+    - No; two true sentences can differ in necessity
+    - 'Yes; if the input is true, the output is true'
+    - No; it is not a connective
+    - Yes; necessity depends only on truth value
+  hint: 'Compare "It is necessary that 2+2=4" with "It is necessary that Paris is in France."'
+  walkthrough: |
+    1. "2+2=4" is true and necessarily true (mathematical fact).
+    2. "Paris is in France" is true but not necessarily true (could have been otherwise).
+    3. Both inputs are true, but one "necessarily" sentence is true and the other is false.
+    4. Same input truth values, different outputs: "it is necessary that" is not truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "not" truth-functional?'
+  answer: 2
+  options:
+    - No; it depends on what the sentence means
+    - 'Yes; every true sentence negated gives false, and every false sentence negated gives true'
+    - No; negation only works in formal logic
+    - 'Yes, but only for atomic sentences'
+  hint: Does negation always produce the same output for a given truth-value input?
+  walkthrough: |
+    1. If A is true, "not A" is always false.
+    2. If A is false, "not A" is always true.
+    3. The output depends only on the input truth value.
+    4. "Not" is truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "if...then..." (the material conditional) truth-functional?'
+  answer: 1
+  options:
+    - 'Yes; the truth value of "if A then B" depends only on the truth values of A and B'
+    - No; it depends on whether A causes B
+    - 'Yes, but only for mathematical statements'
+    - No; the conditional requires context
+  hint: 'In TFL, the material conditional has a fixed truth table determined solely by the truth values of A and B.'
+  walkthrough: |
+    1. The material conditional "if A then B" is false only when A is true and B is false.
+    2. In all other cases it is true.
+    3. This output depends solely on the truth values of A and B.
+    4. The material conditional is truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "before" (as in "A before B") truth-functional?'
+  answer: 4
+  options:
+    - 'Yes; it works like "and"'
+    - Yes; knowing A and B are both true tells you the order
+    - No; it is not a connective at all
+    - 'No; two true sentences can differ in temporal order, so truth values alone do not determine the output'
+  hint: 'Can two pairs of true sentences give different results for "A before B"?'
+  walkthrough: |
+    1. "She ate breakfast before she left for work." Both parts true; sentence is true if the order is correct.
+    2. "She left for work before she ate breakfast." Both parts true; but the temporal relationship is reversed.
+    3. The truth value depends on the temporal relation, not just whether A and B are true.
+    4. "Before" is not truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: Which of the following is truth-functional?
+  answer: 3
+  options:
+    - '"after"'
+    - '"because"'
+    - '"and"'
+    - '"wishes that"'
+  hint: Which connective has its output fully determined by the truth values of its parts?
+  walkthrough: |
+    1. "After" depends on temporal order, not just truth values.
+    2. "Because" depends on causal relations, not just truth values.
+    3. "And" outputs true when both parts are true, false otherwise: determined by truth values alone.
+    4. "Wishes that" depends on a person's desires, not just truth values.
+    5. The truth-functional connective is "and."
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Two sentences are both false. A truth-functional connective must give:'
+  answer: 4
+  options:
+    - 'True'
+    - 'False'
+    - Either true or false depending on the meaning
+    - The same output for every pair of false inputs
+  hint: 'A truth-functional connective produces the same output for the same truth-value combination, regardless of content.'
+  walkthrough: |
+    1. A truth-functional connective depends only on truth values.
+    2. If both inputs are false, the output is fixed for that connective.
+    3. The specific sentences do not matter; the output is always the same for any two false inputs.
+    4. A truth-functional connective must give the same output for every pair of false inputs.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "wants" (as in "She wants A") truth-functional?'
+  answer: 3
+  options:
+    - 'Yes; if A is true, she wants it'
+    - Yes; desires track truth values
+    - No; a person can want a true thing and not want another true thing
+    - 'No; "wants" is not a connective'
+  hint: 'Can two true sentences produce different results when plugged into "She wants..."?'
+  walkthrough: |
+    1. "She wants to eat lunch" may be true (she is hungry).
+    2. "She wants to do chores" may be false (she dislikes chores).
+    3. Both "eating lunch happens" and "doing chores happens" could be true, yet wanting them differs.
+    4. Same truth value input, different output: "wants" is not truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'A connective always outputs T when at least one input is T, and F when both inputs are F. Is it truth-functional?'
+  answer: 2
+  options:
+    - No; we need to know the meaning of the inputs
+    - Yes; the rule determines the output from truth values alone
+    - No; it has no English name
+    - 'Yes, but only if the inputs are atomic sentences'
+  hint: Does the rule give a definite output for every truth-value combination?
+  walkthrough: |
+    1. The rule specifies an output for each possible combination of input truth values.
+    2. TT gives T, TF gives T, FT gives T, FF gives F.
+    3. No additional information is needed.
+    4. The connective is truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "it is a coincidence that A and B" truth-functional?'
+  answer: 1
+  options:
+    - No; whether something is a coincidence depends on more than truth values
+    - 'Yes; if both A and B are true, it is a coincidence'
+    - No; it is not a connective
+    - Yes; coincidences are determined by truth values
+  hint: Can two pairs of true sentences differ in whether they are coincidental?
+  walkthrough: |
+    1. "It is a coincidence that I wore red and you wore red." Both true; might be a coincidence.
+    2. "It is a coincidence that 2+2=4 and 3+1=4." Both true; not a coincidence (mathematical necessity).
+    3. Same truth values, different outputs.
+    4. "It is a coincidence that" is not truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: How many truth-value combinations exist for a binary (two-input) connective?
+  answer: 3
+  options:
+    - '2'
+    - '3'
+    - '4'
+    - '8'
+  hint: 'Each input can be T or F, so the total is 2 times 2.'
+  walkthrough: |
+    1. Input 1 can be T or F: 2 options.
+    2. Input 2 can be T or F: 2 options.
+    3. Total combinations: 2 x 2 = 4 (TT, TF, FT, FF).
+    4. There are 4 truth-value combinations.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "explains why" (as in "A explains why B") truth-functional?'
+  answer: 4
+  options:
+    - 'Yes; if A and B are true, A explains B'
+    - Yes; explanation is based on truth values
+    - No; it is not a connective
+    - No; two true sentences can fail to have an explanatory link
+  hint: Does knowing both A and B are true guarantee A explains B?
+  walkthrough: |
+    1. "Rain explains why the streets are wet." Both true; the explanation holds.
+    2. "Paris is in France explains why the streets are wet." Both true; no real explanation.
+    3. Same truth values, different outputs.
+    4. "Explains why" is not truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Given the truth table for $\star$: (TT→T, TF→F, FT→F, FF→F). What is $P \star Q$ when $P$ is F and $Q$ is F?'
+  answer: 2
+  options:
+    - T
+    - F
+    - Cannot be determined
+    - T or F depending on context
+  hint: Find the row where $P$ = F and $Q$ = F and read the output.
+  walkthrough: |
+    1. Locate the row: $P$ = F, $Q$ = F. This is the last row.
+    2. The output column shows F.
+    3. $P \star Q$ is false.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\diamond$ has this table: (TT→T, TF→T, FT→T, FF→F). Under what condition is $P \diamond Q$ false?'
+  answer: 3
+  options:
+    - When $P$ is true and $Q$ is false
+    - When $P$ is false and $Q$ is true
+    - Only when both $P$ and $Q$ are false
+    - When $P$ is true and $Q$ is true
+  hint: Scan the output column for F.
+  walkthrough: |
+    1. The output is F only in the last row: $P$ = F, $Q$ = F.
+    2. In all other rows, the output is T.
+    3. $P \diamond Q$ is false only when both inputs are false.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\#$ has this table: (TT→F, TF→T, FT→T, FF→F). When is $P \# Q$ true?'
+  answer: 4
+  options:
+    - When both $P$ and $Q$ are true
+    - When both $P$ and $Q$ are false
+    - When $P$ and $Q$ have the same truth value
+    - When $P$ and $Q$ have different truth values
+  hint: Compare the rows where the output is T.
+  walkthrough: |
+    1. Output is T in rows TF and FT.
+    2. In both cases, $P$ and $Q$ have different truth values.
+    3. Output is F in rows TT and FF, where the values match.
+    4. $P \# Q$ is true when $P$ and $Q$ have different truth values.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\star$ has this table: (TT→T, TF→F, FT→T, FF→T). What is $P \star Q$ when $P$ = T and $Q$ = F?'
+  answer: 1
+  options:
+    - F
+    - T
+    - Depends on what $P$ and $Q$ stand for
+    - Cannot be determined
+  hint: Look up the row where $P$ = T and $Q$ = F.
+  walkthrough: |
+    1. The row $P$ = T, $Q$ = F is the second row.
+    2. The output shows F.
+    3. $P \star Q$ is false when $P$ = T and $Q$ = F.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: A connective produces F only when its first input is T and its second input is F. How many rows show T?
+  answer: 3
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  hint: 'There are 4 rows total. If only one row gives F, the rest give T.'
+  walkthrough: |
+    1. There are 4 rows for a two-input connective (TT, TF, FT, FF).
+    2. Only the TF row gives F.
+    3. The other 3 rows (TT, FT, FF) give T.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\oplus$ has this table: (TT→F, TF→F, FT→F, FF→T). When is $P \oplus Q$ true?'
+  answer: 2
+  options:
+    - When at least one input is true
+    - Only when both $P$ and $Q$ are false
+    - When both inputs are true
+    - When $P$ and $Q$ have different truth values
+  hint: Scan for the row(s) where the output is T.
+  walkthrough: |
+    1. The output is T only in the last row: $P$ = F, $Q$ = F.
+    2. All other rows produce F.
+    3. $P \oplus Q$ is true only when both inputs are false.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\triangle$ has this table: (TT→T, TF→T, FT→F, FF→F). What determines the output?'
+  answer: 3
+  options:
+    - The value of $Q$ alone
+    - Whether $P$ and $Q$ match
+    - The value of $P$ alone
+    - Neither $P$ nor $Q$
+  hint: Compare the output with each input column.
+  walkthrough: |
+    1. When $P$ = T, the output is T (rows 1 and 2).
+    2. When $P$ = F, the output is F (rows 3 and 4).
+    3. The output matches $P$ regardless of $Q$.
+    4. The output is determined by the value of $P$ alone.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\square$ has this table: (TT→T, TF→F, FT→F, FF→T). Under what condition is $P \square Q$ true?'
+  answer: 4
+  options:
+    - When $P$ is true
+    - When $Q$ is true
+    - When $P$ and $Q$ have different truth values
+    - When $P$ and $Q$ have the same truth value
+  hint: Compare the rows with output T.
+  walkthrough: |
+    1. Output is T in rows TT and FF.
+    2. In row TT, both are true. In row FF, both are false.
+    3. Output is F in rows TF and FT, where the values differ.
+    4. $P \square Q$ is true when $P$ and $Q$ have the same truth value.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\star$ has this table: (TT→T, TF→F, FT→F, FF→F). What is $P \star Q$ when $P$ = T and $Q$ = T?'
+  answer: 1
+  options:
+    - T
+    - F
+    - Cannot be determined
+    - Either T or F
+  hint: Find the first row of the table.
+  walkthrough: |
+    1. The row $P$ = T, $Q$ = T is the first row.
+    2. The output shows T.
+    3. $P \star Q$ is true when both inputs are true.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\diamond$ has this table: (TT→F, TF→T, FT→T, FF→T). How many rows produce T?'
+  answer: 3
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  hint: Count the rows where the output column shows T.
+  walkthrough: |
+    1. Row 1 (TT): F. Row 2 (TF): T. Row 3 (FT): T. Row 4 (FF): T.
+    2. Three rows produce T (rows 2, 3, and 4).
+    3. The answer is 3.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\#$ has this table: (TT→T, TF→T, FT→T, FF→T). What kind of connective is this?'
+  answer: 2
+  options:
+    - A connective that is always false
+    - A connective that is always true regardless of input
+    - 'A connective that matches "and"'
+    - An impossible connective
+  hint: Every row produces T. The output never changes.
+  walkthrough: |
+    1. Every row (TT, TF, FT, FF) produces T.
+    2. The output is true no matter what the inputs are.
+    3. This connective always produces true, regardless of inputs.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\star$ has this table: (TT→F, TF→F, FT→F, FF→F). What kind of connective is this?'
+  answer: 4
+  options:
+    - 'A connective that matches "or"'
+    - A connective that is always true
+    - 'A connective that matches "and"'
+    - A connective that is always false regardless of input
+  hint: Every row produces F.
+  walkthrough: |
+    1. Every row (TT, TF, FT, FF) produces F.
+    2. The output is false no matter what the inputs are.
+    3. This connective always produces false, regardless of inputs.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\triangle$ has this table: (TT→T, TF→F, FT→T, FF→F). What determines the output?'
+  answer: 1
+  options:
+    - The value of $Q$ alone
+    - The value of $P$ alone
+    - Whether $P$ and $Q$ match
+    - Neither input
+  hint: Compare the output column to each input column.
+  walkthrough: |
+    1. When $Q$ = T (rows 1 and 3), the output is T.
+    2. When $Q$ = F (rows 2 and 4), the output is F.
+    3. The output matches $Q$ regardless of $P$.
+    4. The output is determined by the value of $Q$ alone.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\diamond$ has this table: (TT→T, TF→T, FT→F, FF→T). In which row is the output F?'
+  answer: 3
+  options:
+    - 'Row 1: $P$=T, $Q$=T'
+    - 'Row 2: $P$=T, $Q$=F'
+    - 'Row 3: $P$=F, $Q$=T'
+    - 'Row 4: $P$=F, $Q$=F'
+  hint: Scan the output column for F.
+  walkthrough: |
+    1. Row 1: T. Row 2: T. Row 3: F. Row 4: T.
+    2. The output is F only in row 3, where $P$=F and $Q$=T.
+    3. The output is F when $P$ is false and $Q$ is true.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\star$ has this table: (TT→T, TF→F, FT→F, FF→F). How many rows produce F?'
+  answer: 3
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  hint: Count the F entries in the output column.
+  walkthrough: |
+    1. Row 1: T. Rows 2, 3, 4: all F.
+    2. Three rows produce F.
+    3. The answer is 3.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective has this table: (TT→F, TF→F, FT→T, FF→T). What determines the output?'
+  answer: 2
+  options:
+    - The value of $Q$
+    - 'The negation of $P$: output is T exactly when $P$ is F'
+    - Whether the values match
+    - Cannot be determined
+  hint: Compare the output to the value of $P$.
+  walkthrough: |
+    1. When $P$ = T, output is F (rows 1 and 2).
+    2. When $P$ = F, output is T (rows 3 and 4).
+    3. The output is the opposite of $P$, regardless of $Q$.
+    4. The output is the negation of $P$.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'Why is "it is possible that" not truth-functional?'
+  answer: 2
+  options:
+    - It has no truth table
+    - 'Two false sentences can differ: one might be possibly true, the other cannot be'
+    - It only works with true sentences
+    - It is not a connective
+  hint: 'Find two false sentences where "it is possible that..." gives different results.'
+  walkthrough: |
+    1. "Humans can breathe underwater" is false, but arguably possible with future technology.
+    2. "$2 + 2 = 5$" is false and impossible (mathematical fact).
+    3. Both inputs are false, but "it is possible that..." gives different outputs.
+    4. Two false inputs produce different results, so "it is possible that" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: Which of the following is NOT truth-functional?
+  answer: 4
+  options:
+    - '"not"'
+    - '"and"'
+    - '"or"'
+    - '"believes that"'
+  hint: 'Can "A believes that B" be determined solely from the truth values of A and B?'
+  walkthrough: |
+    1. "Not," "and," and "or" all have outputs determined purely by input truth values.
+    2. "Believes that" depends on the person's mental state, not just truth values.
+    3. Two true sentences could produce different results: "She believes that 2+2=4" (true) vs. "She believes that the Riemann hypothesis is true" (unknown).
+    4. The non-truth-functional connective is "believes that."
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: Which test proves a connective is not truth-functional?
+  answer: 1
+  options:
+    - Finding two inputs with the same truth values that produce different outputs
+    - Finding an input that makes the output false
+    - Showing the connective has no English translation
+    - Showing the connective connects more than two sentences
+  hint: A truth-functional connective always gives the same output for the same truth value inputs.
+  walkthrough: |
+    1. If a connective is truth-functional, same truth values in always give the same truth value out.
+    2. Finding a case where same inputs produce different outputs breaks this.
+    3. That is the key test for non-truth-functionality.
+    4. The test is finding two inputs with the same truth values that produce different outputs.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Is "not" truth-functional?'
+  answer: 3
+  options:
+    - No; it depends on what the sentence is about
+    - No; it only works with false sentences
+    - 'Yes; every true sentence negated gives false, and every false sentence negated gives true'
+    - 'Yes, but only in formal logic'
+  hint: 'Does "not" always produce the same output for a given truth value input?'
+  walkthrough: |
+    1. If A is true, "not A" is always false.
+    2. If A is false, "not A" is always true.
+    3. No pair of sentences with the same truth value produces different results under "not."
+    4. "Not" is truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: '"A knows that B" where both A and B are true. Is this always true?'
+  answer: 2
+  options:
+    - 'Yes; if both inputs are true, the output is true'
+    - 'No; a person can fail to know a true fact, so the output depends on more than truth values'
+    - Yes; knowledge is truth-functional
+    - 'No; "knows that" is not a connective'
+  hint: Can someone fail to know something that is true?
+  walkthrough: |
+    1. "Maria knows that the Earth is round." Both Maria existing and the Earth being round are true; she likely knows this. True.
+    2. "Maria knows that there are exactly 118 elements." Both true, but she might not know this. Possibly false.
+    3. Same truth values, different outputs.
+    4. A person can fail to know a true fact, so "knows that" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "fears that" not truth-functional?'
+  answer: 3
+  options:
+    - It is truth-functional
+    - It is not a connective
+    - A person can fear one true thing but not fear another true thing
+    - Fear is always false
+  hint: 'Can two true sentences produce different results for "She fears that..."?'
+  walkthrough: |
+    1. "She fears that spiders are in the house." The presence of spiders is true; she fears it.
+    2. "She fears that the sun will rise tomorrow." The sun rising is true; she does not fear it.
+    3. Both inputs are true, but the outputs differ.
+    4. A person can fear one true thing but not another, so "fears that" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "causes" not truth-functional?'
+  answer: 4
+  options:
+    - It is truth-functional
+    - '"Causes" is not a connective'
+    - Causation only works with false sentences
+    - Two true events may or may not stand in a causal relation
+  hint: Can two pairs of true sentences differ in whether one causes the other?
+  walkthrough: |
+    1. "Heating water causes it to boil." Both true; the causal link holds.
+    2. "Heating water causes the stock market to rise." Both could be true; but no causal link.
+    3. Same truth values, different outputs.
+    4. Two true events may or may not stand in a causal relation, so "causes" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: Which of these is NOT truth-functional?
+  answer: 2
+  options:
+    - '"or"'
+    - '"hopes that"'
+    - '"and"'
+    - '"not"'
+  hint: Which connective depends on a mental state rather than truth values?
+  walkthrough: |
+    1. "Or," "and," and "not" all depend solely on truth values.
+    2. "Hopes that" depends on a person's mental state.
+    3. Someone can hope for one true thing but not hope for another true thing.
+    4. "Hopes that" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "it is surprising that" not truth-functional?'
+  answer: 1
+  options:
+    - Two true sentences can differ in how surprising they are
+    - Surprise is always false
+    - It is not a connective
+    - It is truth-functional
+  hint: Can two true sentences differ in surprise value?
+  walkthrough: |
+    1. "It is surprising that it rained in the desert." True and surprising.
+    2. "It is surprising that the sun rose this morning." True but not surprising.
+    3. Both inputs are true; outputs differ.
+    4. Two true sentences can differ in how surprising they are, so this is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'A connective is truth-functional if and only if:'
+  answer: 3
+  options:
+    - It has an English name
+    - It connects at least two sentences
+    - No two inputs with the same truth values ever produce different outputs
+    - It always produces true
+  hint: The definition of truth-functionality is about inputs and outputs.
+  walkthrough: |
+    1. A truth-functional connective has its output fully determined by input truth values.
+    2. Equivalently, no two inputs sharing the same truth values can produce different outputs.
+    3. No two inputs with the same truth values ever produce different outputs.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "proves that" not truth-functional?'
+  answer: 2
+  options:
+    - It is truth-functional
+    - Two true statements may or may not stand in a proof relation
+    - '"Proves" is not a connective'
+    - Only false statements can prove things
+  hint: 'Can "A proves B" depend on more than whether A and B are true?'
+  walkthrough: |
+    1. "The axioms of arithmetic prove that 2+2=4." Both true; the proof relation holds.
+    2. "The axioms of arithmetic prove that grass is green." Both true; but no proof relation.
+    3. Same truth values, different outputs.
+    4. Two true statements may or may not stand in a proof relation, so "proves that" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "while" (as in "A while B") not truth-functional?'
+  answer: 4
+  options:
+    - It is truth-functional
+    - '"While" is not a connective'
+    - It only works with false sentences
+    - '"While" involves temporal overlap, which truth values alone cannot determine'
+  hint: 'Does "A while B" depend on more than whether A and B are true?'
+  walkthrough: |
+    1. "She read while it rained." Both true at the same time; the sentence is true.
+    2. "She read while he slept." Both may be true, but at different times; the sentence could be false.
+    3. Whether two events overlap in time goes beyond truth values.
+    4. "While" involves temporal overlap, which truth values alone cannot determine.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "remembers that" not truth-functional?'
+  answer: 1
+  options:
+    - A person can remember one true fact but not remember another true fact
+    - Memory is always truth-functional
+    - '"Remembers" is not a connective'
+    - Only false facts can be remembered
+  hint: 'Can two true sentences produce different results for "She remembers that..."?'
+  walkthrough: |
+    1. "She remembers that she ate breakfast." True; she remembers.
+    2. "She remembers that she blinked 500 times yesterday." True; but she does not remember this.
+    3. Both inputs true, different outputs.
+    4. A person can remember one true fact but not another, so "remembers that" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: Which of the following is truth-functional?
+  answer: 3
+  options:
+    - '"suspects that"'
+    - '"regrets that"'
+    - '"if...then..." (material conditional)'
+    - '"intends to"'
+  hint: Which connective has a fixed truth table based purely on input truth values?
+  walkthrough: |
+    1. "Suspects that," "regrets that," and "intends to" all depend on mental states.
+    2. The material conditional "if A then B" has a fixed rule: false only when A is true and B is false.
+    3. The output depends solely on truth values.
+    4. The material conditional is truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "it is well known that" not truth-functional?'
+  answer: 2
+  options:
+    - It is truth-functional
+    - A true sentence can be well known or obscure; truth value alone does not decide
+    - '"Well known" is not a connective'
+    - Only false sentences are well known
+  hint: Can two true sentences differ in how well known they are?
+  walkthrough: |
+    1. "It is well known that the Earth orbits the Sun." True and well known.
+    2. "It is well known that the 10,000th digit of pi is 7." True (if it is) but not well known.
+    3. Both true inputs, different outputs.
+    4. A true sentence can be well known or obscure, so this is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Is "if and only if" (biconditional) truth-functional?'
+  answer: 1
+  options:
+    - Yes; its output depends only on whether the two inputs have the same truth value
+    - No; it depends on the meaning of the sentences
+    - No; it only works with true sentences
+    - 'Yes, but only for mathematical statements'
+  hint: '"A if and only if B" is true when A and B have the same truth value, false otherwise.'
+  walkthrough: |
+    1. "A if and only if B" is true when both are true or both are false.
+    2. It is false when one is true and the other is false.
+    3. The output depends solely on the truth values of A and B.
+    4. The biconditional is truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "unless" truth-functional?'
+  answer: 4
+  options:
+    - 'No; "unless" is not a connective'
+    - No; it depends on context
+    - 'Yes, but only in certain cases'
+    - 'Yes; "A unless B" is equivalent to "A or B," which depends only on truth values'
+  hint: '"Unless" in TFL is treated as inclusive disjunction.'
+  walkthrough: |
+    1. "A unless B" in TFL is equivalent to "A or B."
+    2. "A or B" depends only on the truth values of A and B.
+    3. No additional context is needed.
+    4. "Unless" is truth-functional because it reduces to "or."
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Two sentences are both true. A truth-functional connective applied to them must give:'
+  answer: 3
+  options:
+    - 'True'
+    - 'False'
+    - 'The same result every time, regardless of which two true sentences are used'
+    - A result that depends on the topic of the sentences
+  hint: Truth-functionality means the output depends only on the truth values.
+  walkthrough: |
+    1. A truth-functional connective depends only on truth values.
+    2. If both inputs are true, the output is fixed for that connective.
+    3. The output must be the same every time, regardless of which two true sentences are used.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'Is "since" (causal, as in "A since B caused it") truth-functional?'
+  answer: 2
+  options:
+    - 'Yes; it works like "and"'
+    - 'No; "since" implies a causal or explanatory connection beyond truth values'
+    - 'Yes; if both parts are true, the whole is true'
+    - No; it is not a connective
+  hint: 'Can two pairs of true sentences differ in whether a "since" relation holds?'
+  walkthrough: |
+    1. "The roads are wet since it rained." Both true; the explanatory link holds.
+    2. "The roads are wet since the Earth is round." Both true; no explanatory link.
+    3. Same truth values, different outputs.
+    4. "Since" implies a causal connection beyond truth values, so it is not truth-functional.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: How many possible truth-functional binary connectives exist?
+  answer: 4
+  options:
+    - '4'
+    - '8'
+    - '12'
+    - '16'
+  hint: A binary connective has 4 input rows. Each row can output T or F independently.
+  walkthrough: |
+    1. A binary connective has 4 possible input combinations (TT, TF, FT, FF).
+    2. Each row can independently output T or F: 2 choices per row.
+    3. Total possible connectives: $2^4$ = 16.
+    4. There are 16 possible truth-functional binary connectives.
+  tags:
+    - is-truth-functional
+
+- type: mcq
+  question: 'A connective $\triangle$ has this table: (TT→T, TF→F, FT→F, FF→T). What is $P \triangle Q$ when $P$=F, $Q$=F?'
+  answer: 2
+  options:
+    - F
+    - T
+    - Cannot be determined
+    - Depends on context
+  hint: Find the last row of the table.
+  walkthrough: |
+    1. The row $P$=F, $Q$=F is the last row.
+    2. The output shows T.
+    3. $P \triangle Q$ is true when both inputs are false.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\diamond$ has this table: (TT→F, TF→T, FT→F, FF→F). How many rows produce T?'
+  answer: 1
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '0'
+  hint: Count the T entries in the output column.
+  walkthrough: |
+    1. Row 1: F. Row 2: T. Row 3: F. Row 4: F.
+    2. Only one row produces T (row 2: $P$=T, $Q$=F).
+    3. The answer is 1.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\star$ has this table: (TT→F, TF→F, FT→T, FF→F). When is the output T?'
+  answer: 3
+  options:
+    - When both inputs are true
+    - When both inputs are false
+    - Only when $P$=F and $Q$=T
+    - When $P$=T and $Q$=F
+  hint: Scan for the row with output T.
+  walkthrough: |
+    1. Row 1 (TT): F. Row 2 (TF): F. Row 3 (FT): T. Row 4 (FF): F.
+    2. The output is T only in row 3.
+    3. The output is T only when $P$=F and $Q$=T.
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'A connective $\#$ has this table: (TT→T, TF→T, FT→T, FF→F). Is this the same pattern as inclusive "or"?'
+  answer: 1
+  options:
+    - 'Yes; "or" is true when at least one input is true, false only when both are false'
+    - 'No; "or" requires both to be true'
+    - 'No; "or" is true only when exactly one input is true'
+    - Yes; but only in formal logic
+  hint: 'Compare the table to the definition of inclusive "or."'
+  walkthrough: |
+    1. Inclusive "or" is true when at least one input is true.
+    2. The table shows T for TT, TF, FT and F for FF.
+    3. This matches inclusive "or" exactly.
+    4. The pattern matches inclusive "or."
+  tags:
+    - read-truth-table
+
+- type: mcq
+  question: 'Why is "agrees with" not truth-functional?'
+  answer: 3
+  options:
+    - It is truth-functional
+    - '"Agrees with" is not a connective'
+    - Two people can both state true things yet disagree about other true things
+    - Agreement requires false sentences
+  hint: Can two true claims differ in whether someone agrees with them?
+  walkthrough: |
+    1. "She agrees with the claim that 2+2=4." True; she agrees.
+    2. "She agrees with the claim that taxes should be raised." May be true, but she might disagree.
+    3. Both claims could be true, but agreement differs.
+    4. "Agrees with" depends on more than truth values.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "ought to imply" not truth-functional?'
+  answer: 2
+  options:
+    - It is truth-functional
+    - 'Whether A ought to imply B depends on moral or normative considerations, not just truth values'
+    - '"Ought" is not a connective'
+    - 'Only false sentences involve "ought"'
+  hint: Can two pairs of true sentences differ in whether one ought to imply the other?
+  walkthrough: |
+    1. "Helping others is good ought to imply that you help others." Both true; the normative link holds.
+    2. "The sky is blue ought to imply that you eat breakfast." Both true; no normative link.
+    3. Same truth values, different outputs.
+    4. "Ought to imply" depends on normative considerations, not truth values.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: Which of the following expressions is NOT truth-functional?
+  answer: 4
+  options:
+    - '"A and B"'
+    - '"not A"'
+    - '"A or B"'
+    - '"A is the reason for B"'
+  hint: Which expression depends on an explanatory relationship?
+  walkthrough: |
+    1. "And," "not," and "or" all depend solely on truth values.
+    2. "A is the reason for B" depends on whether a genuine explanatory connection exists.
+    3. Two true sentences may or may not stand in an explanatory relation.
+    4. "A is the reason for B" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "is proud that" not truth-functional?'
+  answer: 1
+  options:
+    - A person can be proud of one true achievement but not proud of another true fact
+    - Pride is always truth-functional
+    - '"Proud" is not a connective'
+    - Only false sentences involve pride
+  hint: 'Can two true sentences produce different results for "She is proud that..."?'
+  walkthrough: |
+    1. "She is proud that she graduated." True; she is proud.
+    2. "She is proud that it rained yesterday." True event; but she has no pride about it.
+    3. Both inputs true, different outputs.
+    4. A person can be proud of one true thing but not another, so "is proud that" is not truth-functional.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'Why is "allegedly" (as in "Allegedly, A") not truth-functional?'
+  answer: 4
+  options:
+    - It is truth-functional
+    - '"Allegedly" is not a connective'
+    - Only false sentences can be alleged
+    - A true sentence can be alleged or not alleged; truth value alone does not decide
+  hint: Can two true sentences differ in whether they are alleged?
+  walkthrough: |
+    1. "Allegedly, the CEO committed fraud." May be true; it has been alleged.
+    2. "Allegedly, the sun rose this morning." True; but nobody would allege this.
+    3. Both inputs true, different outputs.
+    4. A true sentence can be alleged or not; truth value alone does not decide.
+  tags:
+    - not-truth-functional
+
+- type: mcq
+  question: 'A connective is truth-functional when:'
+  answer: 3
+  options:
+    - It connects exactly two sentences
+    - It always produces a true result
+    - Its output depends only on the truth values of its inputs
+    - It has a name in English
+  hint: The key property is that truth values in fully determine the truth value out.
+  walkthrough: |
+    1. A truth-functional connective requires only the truth values of the parts to compute its output.
+    2. No context, meaning, or causal relationship is needed.
+    3. Input truth values alone determine the output.
+    4. The correct answer is "its output depends only on the truth values of its inputs."
+  tags:
+    - diagnostic

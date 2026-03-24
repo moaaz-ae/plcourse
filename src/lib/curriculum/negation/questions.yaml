@@ -1,0 +1,934 @@
+- type: formula-builder
+  question: 'Translate: "The museum is not open."'
+  answer: '$\neg M$'
+  variableMap:
+    M: The museum is open
+  hint: '"Not" negates the base claim.'
+  walkthrough: |
+    1. The base claim is "The museum is open" = $M$.
+    2. "Not" negates it.
+    3. The translation is $\neg M$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the package has arrived."'
+  answer: '$\neg P$'
+  variableMap:
+    P: The package has arrived
+  hint: '"It is not the case that" is a standard negation phrase.'
+  walkthrough: |
+    1. The base claim is "The package has arrived" = $P$.
+    2. "It is not the case that" negates $P$.
+    3. The translation is $\neg P$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The engine is not running."'
+  answer: '$\neg E$'
+  variableMap:
+    E: The engine is running
+  hint: Identify the base claim and apply negation.
+  walkthrough: |
+    1. The base claim is "The engine is running" = $E$.
+    2. "Not" negates it.
+    3. The translation is $\neg E$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The road is not clear."'
+  answer: '$\neg R$'
+  variableMap:
+    R: The road is clear
+  hint: The base claim is the positive version of the sentence.
+  walkthrough: |
+    1. The base claim is "The road is clear" = $R$.
+    2. "Not" negates it.
+    3. The translation is $\neg R$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The exam has not started."'
+  answer: '$\neg S$'
+  variableMap:
+    S: The exam has started
+  hint: '"Not" negates the base claim about the exam.'
+  walkthrough: |
+    1. The base claim is "The exam has started" = $S$.
+    2. "Not" negates it.
+    3. The translation is $\neg S$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The printer is not working."'
+  answer: '$\neg W$'
+  variableMap:
+    W: The printer is working
+  hint: Find the base claim and negate it.
+  walkthrough: |
+    1. The base claim is "The printer is working" = $W$.
+    2. "Not" negates it.
+    3. The translation is $\neg W$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the concert is sold out."'
+  answer: '$\neg C$'
+  variableMap:
+    C: The concert is sold out
+  hint: '"It is not the case that" is a standard negation phrase in logic.'
+  walkthrough: |
+    1. The base claim is "The concert is sold out" = $C$.
+    2. "It is not the case that" negates $C$.
+    3. The translation is $\neg C$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The file has not been saved."'
+  answer: '$\neg F$'
+  variableMap:
+    F: The file has been saved
+  hint: 'Strip the "not" to find the base claim.'
+  walkthrough: |
+    1. The base claim is "The file has been saved" = $F$.
+    2. "Not" negates it.
+    3. The translation is $\neg F$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The bridge is not safe."'
+  answer: '$\neg B$'
+  variableMap:
+    B: The bridge is safe
+  hint: 'Identify the positive claim, then negate.'
+  walkthrough: |
+    1. The base claim is "The bridge is safe" = $B$.
+    2. "Not" negates it.
+    3. The translation is $\neg B$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the vote has passed."'
+  answer: '$\neg V$'
+  variableMap:
+    V: The vote has passed
+  hint: '"It is not the case that" signals negation.'
+  walkthrough: |
+    1. The base claim is "The vote has passed" = $V$.
+    2. "It is not the case that" negates $V$.
+    3. The translation is $\neg V$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The server is not responding."'
+  answer: '$\neg S$'
+  variableMap:
+    S: The server is responding
+  hint: The base claim is the positive statement.
+  walkthrough: |
+    1. The base claim is "The server is responding" = $S$.
+    2. "Not" negates it.
+    3. The translation is $\neg S$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The battery is not charged."'
+  answer: '$\neg B$'
+  variableMap:
+    B: The battery is charged
+  hint: 'Remove "not" to find the base claim.'
+  walkthrough: |
+    1. The base claim is "The battery is charged" = $B$.
+    2. "Not" negates it.
+    3. The translation is $\neg B$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the meeting is canceled."'
+  answer: '$\neg M$'
+  variableMap:
+    M: The meeting is canceled
+  hint: '"It is not the case that" is a negation phrase.'
+  walkthrough: |
+    1. The base claim is "The meeting is canceled" = $M$.
+    2. "It is not the case that" negates $M$.
+    3. The translation is $\neg M$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The window is not locked."'
+  answer: '$\neg L$'
+  variableMap:
+    L: The window is locked
+  hint: 'Find the base claim without "not."'
+  walkthrough: |
+    1. The base claim is "The window is locked" = $L$.
+    2. "Not" negates it.
+    3. The translation is $\neg L$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The report has not been submitted."'
+  answer: '$\neg R$'
+  variableMap:
+    R: The report has been submitted
+  hint: 'The positive claim is "The report has been submitted."'
+  walkthrough: |
+    1. The base claim is "The report has been submitted" = $R$.
+    2. "Not" negates it.
+    3. The translation is $\neg R$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the satellite is in orbit."'
+  answer: '$\neg O$'
+  variableMap:
+    O: The satellite is in orbit
+  hint: '"It is not the case that" negates what follows.'
+  walkthrough: |
+    1. The base claim is "The satellite is in orbit" = $O$.
+    2. "It is not the case that" negates $O$.
+    3. The translation is $\neg O$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The contract is not valid."'
+  answer: '$\neg C$'
+  variableMap:
+    C: The contract is valid
+  hint: Negate the positive base claim.
+  walkthrough: |
+    1. The base claim is "The contract is valid" = $C$.
+    2. "Not" negates it.
+    3. The translation is $\neg C$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The alarm did not go off."'
+  answer: '$\neg A$'
+  variableMap:
+    A: The alarm went off
+  hint: '"Did not" negates the event.'
+  walkthrough: |
+    1. The base claim is "The alarm went off" = $A$.
+    2. "Did not" negates it.
+    3. The translation is $\neg A$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "It is not the case that the experiment succeeded."'
+  answer: '$\neg E$'
+  variableMap:
+    E: The experiment succeeded
+  hint: '"It is not the case that" signals negation of the whole claim.'
+  walkthrough: |
+    1. The base claim is "The experiment succeeded" = $E$.
+    2. "It is not the case that" negates $E$.
+    3. The translation is $\neg E$.
+  tags:
+    - translate-negation
+
+- type: formula-builder
+  question: 'Translate: "The pool is not heated."'
+  answer: '$\neg H$'
+  variableMap:
+    H: The pool is heated
+  hint: 'Remove "not" to reveal the base claim.'
+  walkthrough: |
+    1. The base claim is "The pool is heated" = $H$.
+    2. "Not" negates it.
+    3. The translation is $\neg H$.
+  tags:
+    - translate-negation
+
+- type: mcq
+  question: 'If $P$ is true, what is the truth value of $\neg P$?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Both true and false
+  hint: Negation flips the truth value.
+  walkthrough: |
+    1. $P$ is true.
+    2. Negation flips true to false.
+    3. $\neg P$ is false.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $Q$ is false, what is the truth value of $\neg Q$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Neither
+    - Cannot be determined
+  hint: Negation flips false to true.
+  walkthrough: |
+    1. $Q$ is false.
+    2. Negation flips false to true.
+    3. $\neg Q$ is true.
+  tags:
+    - compute-negation
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg A$.'
+  formulas:
+    - $A$
+    - '$\neg A$'
+  hiddenFormulas:
+    - '$\neg A$'
+  hint: Negation flips each truth value.
+  walkthrough: |
+    1. Row 1: $A$ = T, so $\neg A$ = F.
+    2. Row 2: $A$ = F, so $\neg A$ = T.
+    3. The values are: F, T.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: Negation is the only connective that operates on how many inputs?
+  answer: 3
+  options:
+    - Two
+    - Three
+    - One
+    - Zero
+  hint: '$\neg$ takes a single sentence and flips its truth value.'
+  walkthrough: |
+    1. Negation applies to one sentence: $\neg P$.
+    2. All other connectives seen so far ($\land$, $\lor$) take two inputs.
+    3. Negation is a unary connective, operating on one input.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $R$ is false, what is $\neg R$?'
+  answer: 4
+  options:
+    - 'False'
+    - Cannot be determined
+    - Neither true nor false
+    - 'True'
+  hint: Negation flips false to true.
+  walkthrough: |
+    1. $R$ is false.
+    2. Negation flips false to true.
+    3. $\neg R$ is true.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $M$ is true, what is the truth value of $\neg M$?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - Neither true nor false
+  hint: Negation turns true into false.
+  walkthrough: |
+    1. $M$ is true.
+    2. Negation flips true to false.
+    3. $\neg M$ is false.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $D$ is false, what is $\neg D$?'
+  answer: 2
+  options:
+    - Cannot be determined
+    - 'True'
+    - 'False'
+    - Both true and false
+  hint: Negation reverses the truth value.
+  walkthrough: |
+    1. $D$ is false.
+    2. Negation flips false to true.
+    3. $\neg D$ is true.
+  tags:
+    - compute-negation
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg B$.'
+  formulas:
+    - $B$
+    - '$\neg B$'
+  hiddenFormulas:
+    - '$\neg B$'
+  hint: Negation flips T to F and F to T.
+  walkthrough: |
+    1. Row 1: $B$ = T, so $\neg B$ = F.
+    2. Row 2: $B$ = F, so $\neg B$ = T.
+    3. The values are: F, T.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'Which row of the negation truth table has $\neg P$ = T?'
+  answer: 4
+  options:
+    - The row where $P$ = T
+    - Both rows
+    - Neither row
+    - The row where $P$ = F
+  hint: Negation outputs true when its input is false.
+  walkthrough: |
+    1. The negation truth table: when $P$ = T, $\neg P$ = F; when $P$ = F, $\neg P$ = T.
+    2. $\neg P$ = T only when $P$ = F.
+    3. The row where $P$ = F has $\neg P$ = T.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'How many rows does the truth table for $\neg P$ have?'
+  answer: 1
+  options:
+    - Two
+    - Four
+    - One
+    - Three
+  hint: '$\neg P$ has one sentence letter, and each letter has two possible values.'
+  walkthrough: |
+    1. $\neg P$ contains one sentence letter: $P$.
+    2. $P$ can be T or F, giving two possible combinations.
+    3. The truth table for $\neg P$ has two rows.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: What does the negation connective do to a truth value?
+  answer: 2
+  options:
+    - It keeps the truth value the same
+    - It flips the truth value to the opposite
+    - It makes the truth value unknown
+    - It removes the truth value
+  hint: 'True becomes false, and false becomes true.'
+  walkthrough: |
+    1. Negation of T gives F.
+    2. Negation of F gives T.
+    3. Negation flips the truth value to the opposite.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $G$ is true, which of the following is false?'
+  answer: 3
+  options:
+    - $G$
+    - '$G$ and $\neg G$ are both true'
+    - '$\neg G$'
+    - Cannot determine without more information
+  hint: Negation of a true sentence is false.
+  walkthrough: |
+    1. $G$ is true.
+    2. $\neg G$ flips true to false.
+    3. $\neg G$ is false.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'In the truth table for $\neg P$, when $P$ is F, $\neg P$ is:'
+  answer: 1
+  options:
+    - T
+    - F
+    - Unknown
+    - Both T and F
+  hint: Negation of false is true.
+  walkthrough: |
+    1. $P$ is F.
+    2. Negation flips F to T.
+    3. $\neg P$ is T.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $W$ is true and $\neg W$ is $X$, what is $X$?'
+  answer: 4
+  options:
+    - 'True'
+    - Cannot be determined
+    - Neither true nor false
+    - 'False'
+  hint: Negation of a true sentence is always false.
+  walkthrough: |
+    1. $W$ is true.
+    2. $\neg W$ = $X$, and negation flips true to false.
+    3. $X$ is false.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: Which connective is unary (takes only one input)?
+  answer: 3
+  options:
+    - '$\land$'
+    - '$\lor$'
+    - '$\neg$'
+    - All of the above
+  hint: Binary connectives join two sentences. Which connective applies to just one?
+  walkthrough: |
+    1. $\land$ joins two sentences: $A \land B$. It is binary.
+    2. $\lor$ joins two sentences: $A \lor B$. It is binary.
+    3. $\neg$ applies to one sentence: $\neg A$. It is unary.
+    4. The unary connective is $\neg$.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $K$ is false, what are the truth values of $K$ and $\neg K$ in order?'
+  answer: 2
+  options:
+    - 'T, F'
+    - 'F, T'
+    - 'F, F'
+    - 'T, T'
+  hint: '$K$ keeps its value; $\neg K$ flips it.'
+  walkthrough: |
+    1. $K$ is false: $K$ = F.
+    2. $\neg K$ flips F to T: $\neg K$ = T.
+    3. In order: F, T.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'Can $P$ and $\neg P$ both be true at the same time?'
+  answer: 4
+  options:
+    - Yes; they are independent
+    - Yes; if $P$ is a tautology
+    - It depends on the sentence
+    - No; negation guarantees opposite truth values
+  hint: 'If $P$ is true, then $\neg P$ is false, and vice versa.'
+  walkthrough: |
+    1. If $P$ is true, $\neg P$ is false.
+    2. If $P$ is false, $\neg P$ is true.
+    3. They always have opposite truth values.
+    4. $P$ and $\neg P$ can never both be true.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $J$ is true, what is the truth value of $\neg J$?'
+  answer: 1
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Both true and false
+  hint: Negation converts true to false.
+  walkthrough: |
+    1. $J$ is true.
+    2. Negation flips true to false.
+    3. $\neg J$ is false.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $P$ is true, what is the truth value of $\neg \neg P$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Neither
+  hint: Negation applied twice returns the original value.
+  walkthrough: |
+    1. $P$ is true.
+    2. $\neg P$ flips to false.
+    3. $\neg \neg P$ flips back to true.
+    4. $\neg \neg P$ is true.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $H$ is false, what is the truth value of $\neg \neg H$?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - Neither true nor false
+  hint: Two negations cancel each other out.
+  walkthrough: |
+    1. $H$ is false.
+    2. $\neg H$ flips to true.
+    3. $\neg \neg H$ flips back to false.
+    4. $\neg \neg H$ is false.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: '$\neg \neg P$ always has the same truth value as which formula?'
+  answer: 2
+  options:
+    - '$\neg P$'
+    - $P$
+    - Neither; it depends on context
+    - '$P \land \neg P$'
+  hint: Negating twice returns to the original.
+  walkthrough: |
+    1. If $P$ is T: $\neg P$ = F, $\neg \neg P$ = T. Matches $P$.
+    2. If $P$ is F: $\neg P$ = T, $\neg \neg P$ = F. Matches $P$.
+    3. $\neg \neg P$ always equals $P$.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: '"The widget is not irreplaceable." How many negations does this contain?'
+  answer: 4
+  options:
+    - Zero
+    - One
+    - Three
+    - 'Two: "not" and the prefix "ir-"'
+  hint: 'The prefix "ir-" acts as one negation, and "not" acts as another.'
+  walkthrough: |
+    1. "Irreplaceable" = not replaceable (one negation via prefix "ir-").
+    2. "Not irreplaceable" = not (not replaceable) (a second negation).
+    3. Two negations cancel: the widget is replaceable.
+    4. The sentence contains two negations.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'What is the truth value of $\neg \neg \neg P$ when $P$ is true?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True and false
+  hint: 'Apply each negation one at a time: flip, flip, flip.'
+  walkthrough: |
+    1. $P$ = T.
+    2. $\neg P$ = F.
+    3. $\neg \neg P$ = T.
+    4. $\neg \neg \neg P$ = F.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $A$ is true, what is $\neg \neg A$?'
+  answer: 4
+  options:
+    - 'False'
+    - Cannot be determined
+    - Neither true nor false
+    - 'True'
+  hint: Double negation returns to the original value.
+  walkthrough: |
+    1. $A$ is true.
+    2. $\neg A$ flips to false.
+    3. $\neg \neg A$ flips back to true.
+    4. $\neg \neg A$ is true.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $B$ is false, what is $\neg \neg B$?'
+  answer: 1
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Both true and false
+  hint: Negating twice returns to the starting value.
+  walkthrough: |
+    1. $B$ is false.
+    2. $\neg B$ flips to true.
+    3. $\neg \neg B$ flips back to false.
+    4. $\neg \neg B$ is false.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'What is the truth value of $\neg \neg \neg Q$ when $Q$ is false?'
+  answer: 3
+  options:
+    - 'False'
+    - Cannot be determined
+    - 'True'
+    - Neither true nor false
+  hint: Apply three negations one at a time.
+  walkthrough: |
+    1. $Q$ = F.
+    2. $\neg Q$ = T.
+    3. $\neg \neg Q$ = F.
+    4. $\neg \neg \neg Q$ = T.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: '"The door is not unlocked." How many negations are present?'
+  answer: 2
+  options:
+    - One
+    - 'Two: "not" and the prefix "un-"'
+    - Three
+    - Zero
+  hint: 'The prefix "un-" negates "locked," and "not" adds a second negation.'
+  walkthrough: |
+    1. "Unlocked" = not locked (one negation from "un-").
+    2. "Not unlocked" = not (not locked) (a second negation from "not").
+    3. Two negations cancel: the door is locked.
+    4. The sentence contains two negations.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'An even number of negations applied to $P$ gives the same truth value as:'
+  answer: 3
+  options:
+    - '$\neg P$'
+    - Cannot be determined
+    - $P$
+    - '$P \land \neg P$'
+  hint: Each pair of negations cancels out.
+  walkthrough: |
+    1. Two negations cancel: $\neg \neg P$ = $P$.
+    2. Four negations cancel: $\neg \neg \neg \neg P$ = $P$.
+    3. Any even number of negations returns to $P$.
+    4. An even number of negations gives the same truth value as $P$.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'An odd number of negations applied to $P$ gives the same truth value as:'
+  answer: 1
+  options:
+    - '$\neg P$'
+    - $P$
+    - Cannot be determined
+    - '$P \land \neg P$'
+  hint: 'An odd number of negations leaves one "flip" remaining.'
+  walkthrough: |
+    1. One negation: $\neg P$.
+    2. Three negations: $\neg \neg \neg P$ = $\neg P$.
+    3. Any odd number of negations is equivalent to a single negation.
+    4. An odd number of negations gives the same truth value as $\neg P$.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $\neg \neg S$ is true, what is the truth value of $S$?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Neither true nor false
+  hint: Double negation preserves the original truth value.
+  walkthrough: |
+    1. $\neg \neg S$ is true.
+    2. Double negation: $\neg \neg S$ always has the same truth value as $S$.
+    3. Since $\neg \neg S$ is true, $S$ must also be true.
+    4. $S$ is true.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $\neg \neg R$ is false, what is $R$?'
+  answer: 4
+  options:
+    - 'True'
+    - Cannot be determined
+    - Neither true nor false
+    - 'False'
+  hint: '$\neg \neg R$ always matches $R$.'
+  walkthrough: |
+    1. $\neg \neg R$ is false.
+    2. Double negation: $\neg \neg R$ has the same truth value as $R$.
+    3. Since $\neg \neg R$ is false, $R$ must also be false.
+    4. $R$ is false.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: '"It is not the case that the project is incomplete." If "The project is complete" is $C$, what does this sentence assert?'
+  answer: 3
+  options:
+    - '$\neg C$: the project is not complete'
+    - '$\neg \neg \neg C$: triple negation'
+    - '$\neg \neg C$, which equals $C$: the project is complete'
+    - Cannot be determined
+  hint: '"Incomplete" is one negation; "it is not the case that" is a second.'
+  walkthrough: |
+    1. "The project is complete" = $C$.
+    2. "Incomplete" = not complete = $\neg C$.
+    3. "It is not the case that the project is incomplete" = $\neg \neg C$.
+    4. $\neg \neg C$ has the same truth value as $C$: the project is complete.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'What is $\neg \neg \neg \neg P$ when $P$ is true?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Neither
+  hint: Four negations is an even number; even negations cancel out.
+  walkthrough: |
+    1. $P$ = T.
+    2. $\neg P$ = F. $\neg \neg P$ = T.
+    3. $\neg \neg \neg P$ = F. $\neg \neg \neg \neg P$ = T.
+    4. Four negations return to the original value. $\neg \neg \neg \neg P$ is true.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'Which formula is equivalent to $\neg \neg \neg \neg \neg P$?'
+  answer: 1
+  options:
+    - '$\neg P$'
+    - $P$
+    - '$\neg \neg P$'
+    - '$P \land \neg P$'
+  hint: Five is an odd number. What does an odd number of negations reduce to?
+  walkthrough: |
+    1. Five negations is an odd number.
+    2. An odd number of negations is equivalent to a single negation.
+    3. $\neg \neg \neg \neg \neg P$ = $\neg P$.
+    4. The equivalent formula is $\neg P$.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: '"The policy is not unfair." If $F$ means "The policy is fair," how many negations are present?'
+  answer: 4
+  options:
+    - One
+    - Zero
+    - Three
+    - 'Two: "un-" and "not"'
+  hint: '"Unfair" negates "fair," and "not" adds another negation.'
+  walkthrough: |
+    1. "Unfair" = not fair = $\neg F$ (one negation from "un-").
+    2. "Not unfair" = not (not fair) = $\neg \neg F$ (second negation from "not").
+    3. Two negations cancel: the policy is fair.
+    4. The sentence contains two negations.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $T$ is true, is $\neg \neg T$ true or false?'
+  answer: 3
+  options:
+    - 'False'
+    - Cannot be determined
+    - 'True'
+    - Neither
+  hint: Double negation returns to the original value.
+  walkthrough: |
+    1. $T$ is true.
+    2. $\neg T$ = false.
+    3. $\neg \neg T$ = true.
+    4. $\neg \neg T$ is true.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $N$ is true, what does $\neg N$ evaluate to?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - Neither true nor false
+  hint: Negation converts true to false.
+  walkthrough: |
+    1. $N$ is true.
+    2. Negation flips true to false.
+    3. $\neg N$ is false.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $Z$ is false, what does $\neg Z$ evaluate to?'
+  answer: 4
+  options:
+    - 'False'
+    - Cannot be determined
+    - Neither true nor false
+    - 'True'
+  hint: Negation converts false to true.
+  walkthrough: |
+    1. $Z$ is false.
+    2. Negation flips false to true.
+    3. $\neg Z$ is true.
+  tags:
+    - compute-negation
+
+- type: mcq
+  question: 'If $C$ is false, what is $\neg \neg C$?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Neither
+  hint: Two negations return to the original value.
+  walkthrough: |
+    1. $C$ is false.
+    2. $\neg C$ flips to true.
+    3. $\neg \neg C$ flips back to false.
+    4. $\neg \neg C$ is false, matching $C$.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'What is $\neg \neg \neg \neg Q$ when $Q$ is false?'
+  answer: 1
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Neither
+  hint: Four negations is an even number; even negations cancel out.
+  walkthrough: |
+    1. $Q$ = F.
+    2. $\neg Q$ = T. $\neg \neg Q$ = F.
+    3. $\neg \neg \neg Q$ = T. $\neg \neg \neg \neg Q$ = F.
+    4. Four negations return to the original value. $\neg \neg \neg \neg Q$ is false.
+  tags:
+    - double-negation
+
+- type: mcq
+  question: 'If $A$ is true, what is $\neg A$?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - True or false depending on $A$
+  hint: Negation flips the truth value.
+  walkthrough: |
+    1. $A$ is true.
+    2. Negation flips true to false.
+    3. $\neg A$ is false.
+  tags:
+    - diagnostic

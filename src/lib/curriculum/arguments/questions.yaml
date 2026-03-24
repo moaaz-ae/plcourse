@@ -1,0 +1,1317 @@
+- type: mcq
+  question: 'Does the following contain an argument? "The library closes at 9 PM. It has three floors. The building was renovated last year."'
+  answer: 2
+  options:
+    - 'Yes; the sentences describe a building, which is an argument about it'
+    - No; these are independent facts with no sentence offered as support for another
+    - Yes; the first sentence is the conclusion
+    - No; there are too many sentences for an argument
+  hint: An argument requires some sentences to be offered as reasons for another.
+  walkthrough: |
+    1. Each sentence states a fact about the library independently.
+    2. No sentence is presented as a reason to believe another.
+    3. This is a description, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The roads are icy. Temperatures dropped below freezing last night. So, you should drive slowly."'
+  answer: 1
+  options:
+    - Yes; the first two sentences are offered as reasons for the last
+    - No; it is a weather report
+    - 'No; it is advice, not an argument'
+    - 'Yes, but only the last sentence is an argument'
+  hint: Check whether any sentences serve as support for a claim.
+  walkthrough: |
+    1. "The roads are icy" and "Temperatures dropped below freezing" are presented as reasons.
+    2. "You should drive slowly" is the claim these reasons support.
+    3. Some sentences support another, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "First, preheat the oven to 180°C. Then, mix the flour and sugar. Finally, bake for 25 minutes."'
+  answer: 4
+  options:
+    - Yes; each step supports the final step
+    - 'Yes; the conclusion is "bake for 25 minutes"'
+    - No; it contains only two sentences
+    - 'No; these are instructions, not reasons offered for a claim'
+  hint: Instructions tell you what to do. Do they argue for a conclusion?
+  walkthrough: |
+    1. The passage lists steps in a recipe.
+    2. No sentence is offered as a reason to believe another sentence.
+    3. Instructions describe a procedure; they do not argue for a conclusion.
+    4. These are instructions, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "Since the suspect has no alibi, she must be guilty."'
+  answer: 3
+  options:
+    - No; it is a report of what happened
+    - No; it is an explanation of a cause
+    - Yes; the lack of alibi is offered as a reason for the conclusion that she is guilty
+    - 'Yes, but it has no conclusion'
+  hint: Look for a sentence offered as support and a sentence being supported.
+  walkthrough: |
+    1. "The suspect has no alibi" is presented as a reason.
+    2. "She must be guilty" is the claim supported by that reason.
+    3. One sentence supports another, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The volcano erupted at 3 AM. Lava flowed down the eastern slope. Nearby villages were evacuated."'
+  answer: 2
+  options:
+    - Yes; the eruption is the reason the villages were evacuated
+    - No; the passage reports a sequence of events without offering reasons for a claim
+    - 'Yes; "Nearby villages were evacuated" is the conclusion'
+    - 'No; it has no indicator words, so it cannot be an argument'
+  hint: 'Are the sentences offered as evidence for a claim, or do they simply report what happened?'
+  walkthrough: |
+    1. Each sentence describes an event in chronological order.
+    2. No sentence is presented as a reason to believe another.
+    3. This is a narrative report, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The city council raised taxes last month. Many residents are unhappy."'
+  answer: 4
+  options:
+    - Yes; the tax increase is a reason to believe residents are unhappy
+    - Yes; resident unhappiness is a reason to believe taxes were raised
+    - No; there are no indicator words so it cannot be an argument
+    - No; these are two reported facts with neither offered as support for the other
+  hint: 'Is one sentence presented as a reason to believe the other, or are both just stated as facts?'
+  walkthrough: |
+    1. The passage states two facts: taxes were raised, and residents are unhappy.
+    2. Neither sentence is explicitly offered as a reason to believe the other.
+    3. Without any indication that one supports the other, this is a description of two events.
+    4. These are independent facts, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "All cats are mammals. Whiskers is a cat. Therefore, Whiskers is a mammal."'
+  answer: 1
+  options:
+    - Yes; the first two sentences support the claim that Whiskers is a mammal
+    - No; it is a list of facts about cats
+    - No; it is a definition of mammals
+    - 'Yes, but there is no conclusion'
+  hint: 'Look for "therefore" and check what role it plays.'
+  walkthrough: |
+    1. "All cats are mammals" and "Whiskers is a cat" are offered as reasons.
+    2. "Therefore" signals the conclusion: "Whiskers is a mammal."
+    3. Premises support a conclusion, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "Jupiter is the largest planet. It has at least 95 moons. Its Great Red Spot is a massive storm."'
+  answer: 3
+  options:
+    - Yes; the moons and storm support the claim that Jupiter is the largest
+    - Yes; the conclusion is that Jupiter has a Great Red Spot
+    - No; these are independent facts about Jupiter with no sentence supporting another
+    - 'No; it only has three sentences, which is too few for an argument'
+  hint: 'Does any sentence serve as evidence for another, or do they each stand alone?'
+  walkthrough: |
+    1. Each sentence describes a different feature of Jupiter.
+    2. No sentence is presented as a reason to believe any other sentence.
+    3. This is a description, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The test results are in. You passed. Congratulations!"'
+  answer: 2
+  options:
+    - Yes; the test results support the conclusion that you passed
+    - 'No; this is a notification delivering news, not reasons offered for a claim'
+    - 'Yes; "Congratulations" is the conclusion'
+    - No; it has fewer than four sentences
+  hint: 'Is anyone trying to convince you of something, or just informing you?'
+  walkthrough: |
+    1. The passage delivers information about test results.
+    2. No sentence is offered as a reason to believe another.
+    3. "Congratulations" is an exclamation, not a claim being argued for.
+    4. This is a notification, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The defendant lied on the stand. Multiple witnesses contradicted his story. He must be guilty."'
+  answer: 4
+  options:
+    - No; it is a narrative about a trial
+    - No; it is a description of courtroom events
+    - 'Yes, but the conclusion is missing'
+    - Yes; the first two sentences support the claim that he must be guilty
+  hint: Is any sentence being supported by the others?
+  walkthrough: |
+    1. "The defendant lied on the stand" and "Multiple witnesses contradicted his story" are presented as reasons.
+    2. "He must be guilty" is the claim those reasons support.
+    3. Some sentences are offered as support for another, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "Turn left at the intersection. Continue for two blocks. The post office will be on your right."'
+  answer: 1
+  options:
+    - 'No; these are directions, not reasons offered for a claim'
+    - Yes; the conclusion is that the post office is on your right
+    - Yes; each sentence supports the next
+    - No; it has no indicator words
+  hint: Directions tell you how to get somewhere. Are they arguing for a conclusion?
+  walkthrough: |
+    1. The passage gives step-by-step directions to a location.
+    2. No sentence is offered as a reason to believe another sentence.
+    3. These are directions, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The store must be having a sale. There are signs in every window and the parking lot is packed."'
+  answer: 3
+  options:
+    - No; it is a report about the store
+    - No; the sentences are unrelated
+    - Yes; the signs and packed parking lot are offered as reasons for believing there is a sale
+    - 'Yes, but the conclusion is "the parking lot is packed"'
+  hint: Which sentence is being supported by the other sentences?
+  walkthrough: |
+    1. "There are signs in every window" and "the parking lot is packed" are presented as evidence.
+    2. They support the claim "the store must be having a sale."
+    3. Reasons are offered for a claim, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "Water boils at 100°C at sea level. This is a well-established scientific fact."'
+  answer: 2
+  options:
+    - Yes; the second sentence is the conclusion supported by the first
+    - 'No; the second sentence restates the status of the first, not a reason to believe it'
+    - Yes; the conclusion is that water boils at 100°C
+    - No; science cannot produce arguments
+  hint: 'Does the second sentence argue for the first, or just describe it?'
+  walkthrough: |
+    1. The first sentence states a fact. The second sentence comments on its status.
+    2. The second sentence does not offer a reason to believe the first; it simply labels it.
+    3. No sentence supports another, so this is not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The economy is slowing down. Unemployment is rising. Consumer spending has dropped. So we should expect a recession."'
+  answer: 4
+  options:
+    - No; it is an economic report
+    - No; the sentences are all independent facts
+    - 'Yes, but there is no conclusion'
+    - Yes; the first three sentences are reasons to believe a recession is coming
+  hint: '"So" introduces a claim. Are the preceding sentences offered as support?'
+  walkthrough: |
+    1. "So" signals a conclusion: "we should expect a recession."
+    2. The preceding three sentences provide reasons for this claim.
+    3. Premises support a conclusion, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "She enjoys painting. Her favorite color is blue. She once visited the Louvre."'
+  answer: 1
+  options:
+    - No; these are unrelated facts about a person with no sentence offered as support for another
+    - Yes; visiting the Louvre is the conclusion
+    - Yes; enjoying painting supports her favorite color being blue
+    - No; it has only three sentences
+  hint: Are any of these facts presented as reasons to believe one of the others?
+  walkthrough: |
+    1. Each sentence describes a different fact about the person.
+    2. No sentence is offered as a reason to believe another.
+    3. This is a collection of independent facts, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "No student finished the assignment. The deadline has passed. The professor will have to extend it."'
+  answer: 3
+  options:
+    - No; it is a description of a classroom situation
+    - No; the sentences merely report events
+    - Yes; the first two sentences support the claim that the professor will have to extend the deadline
+    - 'Yes, but the conclusion is "no student finished the assignment"'
+  hint: Is any sentence being supported by the others?
+  walkthrough: |
+    1. "No student finished the assignment" and "the deadline has passed" are offered as reasons.
+    2. They support the claim "the professor will have to extend it."
+    3. Premises support a conclusion, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The meeting starts at noon. Please bring your notes and a laptop."'
+  answer: 2
+  options:
+    - Yes; bringing notes is the conclusion
+    - 'No; this is an announcement and a request, not reasons offered for a claim'
+    - Yes; the meeting time supports the request
+    - No; only because it has just two sentences
+  hint: 'Is anyone providing reasons to believe a claim, or just giving information and a request?'
+  walkthrough: |
+    1. The first sentence announces a time. The second makes a request.
+    2. Neither sentence is offered as a reason to believe the other.
+    3. This is an announcement with a request, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The roof is leaking and the foundation has cracks. This house is not safe to live in."'
+  answer: 4
+  options:
+    - No; it is a home inspection report
+    - No; the sentences are unrelated
+    - 'Yes, but the conclusion is "the roof is leaking"'
+    - Yes; the leaking roof and cracked foundation are reasons to believe the house is unsafe
+  hint: Which sentence is being supported by the others?
+  walkthrough: |
+    1. "The roof is leaking" and "the foundation has cracks" are presented as evidence.
+    2. They support the claim "this house is not safe to live in."
+    3. Reasons support a claim, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "Paris is in France. Berlin is in Germany. Tokyo is in Japan."'
+  answer: 1
+  options:
+    - No; these are independent geographical facts with no sentence supporting another
+    - Yes; the conclusion is that Tokyo is in Japan
+    - Yes; the first two sentences support the third
+    - No; arguments must have exactly two sentences
+  hint: Is any sentence offered as a reason to believe one of the others?
+  walkthrough: |
+    1. Each sentence states where a city is located.
+    2. No sentence is presented as a reason to believe another.
+    3. These are independent facts, not an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'Does the following contain an argument? "The experiment failed three times. The equipment is faulty. Consequently, we need to replace the sensors."'
+  answer: 3
+  options:
+    - No; it describes laboratory problems
+    - 'No; "consequently" is not an indicator word'
+    - Yes; the failed experiments and faulty equipment support the claim that sensors need replacing
+    - 'Yes, but there is no conclusion'
+  hint: '"Consequently" signals a conclusion. Are reasons given for it?'
+  walkthrough: |
+    1. "Consequently" signals the conclusion: "we need to replace the sensors."
+    2. "The experiment failed three times" and "the equipment is faulty" are offered as reasons.
+    3. Premises support a conclusion, so this is an argument.
+  tags:
+    - is-argument
+
+- type: mcq
+  question: 'In the argument "All metals conduct electricity. Copper is a metal. Therefore, copper conducts electricity," which sentence is the conclusion?'
+  answer: 3
+  options:
+    - '"All metals conduct electricity"'
+    - '"Copper is a metal"'
+    - '"Copper conducts electricity"'
+    - There is no conclusion
+  hint: '"Therefore" signals the conclusion.'
+  walkthrough: |
+    1. "Therefore" is a conclusion indicator.
+    2. The sentence after "therefore" is "copper conducts electricity."
+    3. The other two sentences are premises that support it.
+    4. The conclusion is "copper conducts electricity."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In the argument "The park is closed because the storm damaged the trails," which sentence is a premise?'
+  answer: 4
+  options:
+    - '"The park is closed" is the premise'
+    - Both sentences are premises
+    - Neither sentence is a premise
+    - '"The storm damaged the trails" is the premise'
+  hint: '"Because" is a premise indicator. It marks the sentence that follows it as a premise.'
+  walkthrough: |
+    1. "Because" introduces a reason: "the storm damaged the trails."
+    2. This reason supports the claim "the park is closed."
+    3. So "the storm damaged the trails" is the premise and "the park is closed" is the conclusion.
+    4. The premise is "the storm damaged the trails."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'How many premises does this argument have? "The restaurant must be popular. The parking lot is full, there is a long wait, and the reviews are excellent."'
+  answer: 2
+  options:
+    - '1'
+    - '3'
+    - '2'
+    - '4'
+  hint: Count each distinct reason offered in support of the conclusion.
+  walkthrough: |
+    1. The conclusion is "The restaurant must be popular."
+    2. Three separate reasons are given: the parking lot is full, there is a long wait, and the reviews are excellent.
+    3. Each reason is a distinct premise, so there are 3 premises.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "Given that the bridge is under construction, traffic will be rerouted," which sentence is the conclusion?'
+  answer: 1
+  options:
+    - '"Traffic will be rerouted"'
+    - '"The bridge is under construction"'
+    - Both are conclusions
+    - Neither is a conclusion
+  hint: '"Given that" is a premise indicator. The sentence it introduces is a premise.'
+  walkthrough: |
+    1. "Given that" marks "the bridge is under construction" as a premise.
+    2. The remaining sentence, "traffic will be rerouted," is the claim being supported.
+    3. The conclusion is "traffic will be rerouted."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "The defendant was at the scene. His fingerprints were on the weapon. So he is the culprit," which sentences are premises?'
+  answer: 3
+  options:
+    - 'Only "The defendant was at the scene"'
+    - 'Only "His fingerprints were on the weapon"'
+    - 'Both "The defendant was at the scene" and "His fingerprints were on the weapon"'
+    - All three sentences are premises
+  hint: '"So" marks the conclusion. Everything else is a premise.'
+  walkthrough: |
+    1. "So" signals the conclusion: "he is the culprit."
+    2. The two sentences before it are offered as support.
+    3. Both "The defendant was at the scene" and "His fingerprints were on the weapon" are premises.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "The roads are wet. It must have rained last night," which sentence is the premise?'
+  answer: 2
+  options:
+    - '"It must have rained last night"'
+    - '"The roads are wet"'
+    - Both are premises
+    - Neither is a premise
+  hint: 'Which sentence provides evidence, and which sentence is the claim being supported?'
+  walkthrough: |
+    1. "The roads are wet" is presented as observable evidence.
+    2. "It must have rained last night" is the claim that evidence supports.
+    3. The premise is "the roads are wet."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "You should study more, because you failed the last exam and the final is next week," how many premises are there?'
+  answer: 3
+  options:
+    - '1'
+    - '3'
+    - '2'
+    - '0'
+  hint: '"Because" introduces the premises. Count each distinct reason.'
+  walkthrough: |
+    1. "Because" marks the premises: "you failed the last exam" and "the final is next week."
+    2. The conclusion is "you should study more."
+    3. There are 2 distinct premises.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "Taxes are too high. The government wastes money. Hence, we need reform," which sentence is the conclusion?'
+  answer: 4
+  options:
+    - '"Taxes are too high"'
+    - '"The government wastes money"'
+    - All three sentences are conclusions
+    - '"We need reform"'
+  hint: '"Hence" is a conclusion indicator.'
+  walkthrough: |
+    1. "Hence" signals the conclusion: "we need reform."
+    2. "Taxes are too high" and "the government wastes money" are the premises.
+    3. The conclusion is "we need reform."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "The flight is overbooked, so some passengers will be bumped," which sentence is the premise?'
+  answer: 1
+  options:
+    - '"The flight is overbooked"'
+    - '"Some passengers will be bumped"'
+    - Both are premises
+    - Neither is a premise
+  hint: '"So" marks the conclusion. The other sentence is the premise.'
+  walkthrough: |
+    1. "So" signals the conclusion: "some passengers will be bumped."
+    2. The sentence providing the reason is "the flight is overbooked."
+    3. The premise is "the flight is overbooked."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "Since the power is out and the backup generator failed, the hospital is running on emergency reserves," which sentences are premises?'
+  answer: 2
+  options:
+    - 'Only "the power is out"'
+    - 'Both "the power is out" and "the backup generator failed"'
+    - 'Only "the backup generator failed"'
+    - '"The hospital is running on emergency reserves" is a premise'
+  hint: '"Since" introduces the premises. Count all reasons that follow it.'
+  walkthrough: |
+    1. "Since" introduces two reasons: "the power is out" and "the backup generator failed."
+    2. Both are offered as support for "the hospital is running on emergency reserves."
+    3. Both are premises.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "The experiment succeeded. The data matches our predictions. Thus, the hypothesis is confirmed," which sentence is the conclusion?'
+  answer: 3
+  options:
+    - '"The experiment succeeded"'
+    - '"The data matches our predictions"'
+    - '"The hypothesis is confirmed"'
+    - All three are conclusions
+  hint: '"Thus" is a conclusion indicator.'
+  walkthrough: |
+    1. "Thus" signals the conclusion: "the hypothesis is confirmed."
+    2. The other two sentences are premises offering support.
+    3. The conclusion is "the hypothesis is confirmed."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "Everyone who was invited came. Maria was invited. So Maria came," which sentence is the conclusion?'
+  answer: 4
+  options:
+    - '"Everyone who was invited came"'
+    - '"Maria was invited"'
+    - Both the first and second sentences
+    - '"Maria came"'
+  hint: '"So" is a conclusion indicator.'
+  walkthrough: |
+    1. "So" signals the conclusion: "Maria came."
+    2. "Everyone who was invited came" and "Maria was invited" are the premises.
+    3. The conclusion is "Maria came."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "The soup needs more salt. It tastes bland," which sentence is the conclusion?'
+  answer: 1
+  options:
+    - '"The soup needs more salt"'
+    - '"It tastes bland"'
+    - Both are conclusions
+    - Neither; this is not an argument
+  hint: 'Which sentence is the claim, and which sentence provides evidence for it?'
+  walkthrough: |
+    1. "It tastes bland" is presented as evidence.
+    2. "The soup needs more salt" is the claim that evidence supports.
+    3. The conclusion is "the soup needs more salt."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'How many premises does this argument have? "The bridge should be closed. It is over 80 years old. The last inspection found cracks. Traffic has been diverted already. Steel fatigue was detected in two beams."'
+  answer: 3
+  options:
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+  hint: 'Identify the conclusion first, then count every remaining sentence.'
+  walkthrough: |
+    1. The conclusion is "the bridge should be closed."
+    2. The premises are: "it is over 80 years old," "the last inspection found cracks," "traffic has been diverted already," and "steel fatigue was detected in two beams."
+    3. That gives 4 premises.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "For the server is overloaded, the website is running slowly," what role does "the server is overloaded" play?'
+  answer: 2
+  options:
+    - Conclusion
+    - Premise
+    - Neither; this is not an argument
+    - Both premise and conclusion
+  hint: '"For" is a premise indicator.'
+  walkthrough: |
+    1. "For" introduces "the server is overloaded" as a reason.
+    2. This supports the claim "the website is running slowly."
+    3. The sentence introduced by "for" is a premise.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "After all, the evidence was tampered with. The verdict should be overturned," which sentence is the premise?'
+  answer: 4
+  options:
+    - '"The verdict should be overturned"'
+    - Both are premises
+    - Neither is a premise
+    - '"The evidence was tampered with"'
+  hint: '"After all" is a premise indicator.'
+  walkthrough: |
+    1. "After all" introduces "the evidence was tampered with" as a reason.
+    2. This supports the claim "the verdict should be overturned."
+    3. The premise is "the evidence was tampered with."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "The team practiced every day and studied their opponents. Accordingly, they won the championship," how many premises are there?'
+  answer: 3
+  options:
+    - '1'
+    - '3'
+    - '2'
+    - '0'
+  hint: '"Accordingly" is a conclusion indicator. Count the reasons that come before it.'
+  walkthrough: |
+    1. "Accordingly" signals the conclusion: "they won the championship."
+    2. Two reasons precede it: "the team practiced every day" and "studied their opponents."
+    3. There are 2 premises.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "The museum must be free today, since the sign says no admission fee and the ticket booth is closed," which sentence is the conclusion?'
+  answer: 1
+  options:
+    - '"The museum must be free today"'
+    - '"The sign says no admission fee"'
+    - '"The ticket booth is closed"'
+    - All three are premises
+  hint: '"Since" introduces premises, not the conclusion.'
+  walkthrough: |
+    1. "Since" marks the premises: "the sign says no admission fee" and "the ticket booth is closed."
+    2. The claim being supported is "the museum must be free today."
+    3. The conclusion is "the museum must be free today."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'What is the conclusion? "The printer must be out of ink. The pages are coming out blank and the ink light is flashing."'
+  answer: 1
+  options:
+    - '"The printer must be out of ink"'
+    - '"The pages are coming out blank"'
+    - '"The ink light is flashing"'
+    - There is no conclusion
+  hint: Which sentence is the claim being supported by the other sentences?
+  walkthrough: |
+    1. "The pages are coming out blank" and "the ink light is flashing" are evidence.
+    2. They support the claim that "the printer must be out of ink."
+    3. The conclusion is "the printer must be out of ink."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "All employees must attend. The meeting is mandatory. Therefore, you need to be there."'
+  answer: 4
+  options:
+    - '"All employees must attend"'
+    - '"The meeting is mandatory"'
+    - Both the first and second sentences
+    - '"You need to be there"'
+  hint: '"Therefore" signals the conclusion.'
+  walkthrough: |
+    1. "Therefore" introduces the conclusion: "you need to be there."
+    2. The other sentences are premises providing support.
+    3. The conclusion is "you need to be there."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Gas prices have increased. Commute times are longer. Consequently, more people are working from home."'
+  answer: 3
+  options:
+    - '"Gas prices have increased"'
+    - '"Commute times are longer"'
+    - '"More people are working from home"'
+    - '"Gas prices have increased" and "Commute times are longer" together'
+  hint: '"Consequently" is a conclusion indicator.'
+  walkthrough: |
+    1. "Consequently" signals the conclusion: "more people are working from home."
+    2. The preceding sentences are premises.
+    3. The conclusion is "more people are working from home."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The battery is dead, since the phone will not turn on and the charging cable is broken."'
+  answer: 2
+  options:
+    - '"The phone will not turn on"'
+    - '"The battery is dead"'
+    - '"The charging cable is broken"'
+    - There is no conclusion
+  hint: '"Since" is a premise indicator. It marks what follows as a premise.'
+  walkthrough: |
+    1. "Since" introduces the premises: "the phone will not turn on" and "the charging cable is broken."
+    2. The sentence not introduced by an indicator is "the battery is dead."
+    3. The conclusion is "the battery is dead."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "It follows that the school is closed. The pipes froze overnight and the heating system failed."'
+  answer: 1
+  options:
+    - '"The school is closed"'
+    - '"The pipes froze overnight"'
+    - '"The heating system failed"'
+    - All three sentences are conclusions
+  hint: '"It follows that" is a conclusion indicator.'
+  walkthrough: |
+    1. "It follows that" signals the conclusion: "the school is closed."
+    2. The other sentences explain why, serving as premises.
+    3. The conclusion is "the school is closed."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The suspect was seen leaving the building. His car was parked nearby. He had a motive. He must be the one who did it."'
+  answer: 4
+  options:
+    - '"The suspect was seen leaving the building"'
+    - '"His car was parked nearby"'
+    - '"He had a motive"'
+    - '"He must be the one who did it"'
+  hint: Which sentence is the claim that all the others support?
+  walkthrough: |
+    1. Three pieces of evidence are given: he was seen leaving, his car was nearby, and he had a motive.
+    2. All three support the claim "he must be the one who did it."
+    3. The conclusion is "he must be the one who did it."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Because the sample size was too small, the study is unreliable."'
+  answer: 1
+  options:
+    - '"The study is unreliable"'
+    - '"The sample size was too small"'
+    - Both sentences are conclusions
+    - There is no conclusion
+  hint: '"Because" is a premise indicator. The sentence it introduces is not the conclusion.'
+  walkthrough: |
+    1. "Because" marks "the sample size was too small" as the premise.
+    2. The remaining sentence, "the study is unreliable," is the claim being supported.
+    3. The conclusion is "the study is unreliable."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The plants are wilting. The soil is dry. It has not rained in weeks. The garden needs watering."'
+  answer: 3
+  options:
+    - '"The plants are wilting"'
+    - '"It has not rained in weeks"'
+    - '"The garden needs watering"'
+    - '"The soil is dry"'
+  hint: Which sentence is the claim the others provide evidence for?
+  walkthrough: |
+    1. "The plants are wilting," "the soil is dry," and "it has not rained in weeks" all describe conditions.
+    2. These conditions support the claim "the garden needs watering."
+    3. The conclusion is "the garden needs watering."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The river has risen two meters. Accordingly, the town should prepare for flooding."'
+  answer: 2
+  options:
+    - '"The river has risen two meters"'
+    - '"The town should prepare for flooding"'
+    - Both sentences
+    - There is no conclusion
+  hint: '"Accordingly" is a conclusion indicator.'
+  walkthrough: |
+    1. "Accordingly" signals the conclusion: "the town should prepare for flooding."
+    2. "The river has risen two meters" is the premise.
+    3. The conclusion is "the town should prepare for flooding."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "She must be the manager. After all, she has an office and everyone reports to her."'
+  answer: 4
+  options:
+    - '"She has an office"'
+    - '"Everyone reports to her"'
+    - There is no conclusion
+    - '"She must be the manager"'
+  hint: '"After all" is a premise indicator. The conclusion is the sentence that is not introduced by an indicator.'
+  walkthrough: |
+    1. "After all" introduces premises: "she has an office" and "everyone reports to her."
+    2. These support the claim "she must be the manager."
+    3. The conclusion is "she must be the manager."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "No one answered the door. The lights were off. The car was gone. They must be on vacation."'
+  answer: 1
+  options:
+    - '"They must be on vacation"'
+    - '"No one answered the door"'
+    - '"The lights were off"'
+    - '"The car was gone"'
+  hint: Three observations support one claim. Which is the claim?
+  walkthrough: |
+    1. "No one answered the door," "the lights were off," and "the car was gone" are all observations.
+    2. They support the claim "they must be on vacation."
+    3. The conclusion is "they must be on vacation."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Hence the project is behind schedule. The contractor quit and the materials were delayed."'
+  answer: 3
+  options:
+    - '"The contractor quit"'
+    - '"The materials were delayed"'
+    - '"The project is behind schedule"'
+    - All three are conclusions
+  hint: '"Hence" is a conclusion indicator.'
+  walkthrough: |
+    1. "Hence" signals the conclusion: "the project is behind schedule."
+    2. "The contractor quit" and "the materials were delayed" are premises.
+    3. The conclusion is "the project is behind schedule."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "You should take the job. The salary is good, the benefits are generous, and the commute is short."'
+  answer: 2
+  options:
+    - '"The salary is good"'
+    - '"You should take the job"'
+    - '"The commute is short"'
+    - '"The benefits are generous"'
+  hint: Which sentence is being supported by all the others?
+  walkthrough: |
+    1. Three reasons are given: good salary, generous benefits, and short commute.
+    2. All three support the claim "you should take the job."
+    3. The conclusion is "you should take the job."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Given that the witness recanted, the case should be dismissed."'
+  answer: 4
+  options:
+    - '"The witness recanted"'
+    - Both sentences
+    - There is no conclusion
+    - '"The case should be dismissed"'
+  hint: '"Given that" is a premise indicator. The sentence it introduces is the premise.'
+  walkthrough: |
+    1. "Given that" marks "the witness recanted" as the premise.
+    2. "The case should be dismissed" is the claim being supported.
+    3. The conclusion is "the case should be dismissed."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The traffic is terrible. The highway is under construction. We should take a different route."'
+  answer: 3
+  options:
+    - '"The traffic is terrible"'
+    - '"The highway is under construction"'
+    - '"We should take a different route"'
+    - There is no conclusion
+  hint: Which sentence is the recommendation supported by the others?
+  walkthrough: |
+    1. "The traffic is terrible" and "the highway is under construction" are observations.
+    2. They support the recommendation "we should take a different route."
+    3. The conclusion is "we should take a different route."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The temperature dropped sharply. Frost is forming on the windows. Thus, the heating should be turned on."'
+  answer: 1
+  options:
+    - '"The heating should be turned on"'
+    - '"The temperature dropped sharply"'
+    - '"Frost is forming on the windows"'
+    - There is no conclusion
+  hint: '"Thus" is a conclusion indicator.'
+  walkthrough: |
+    1. "Thus" signals the conclusion: "the heating should be turned on."
+    2. The preceding sentences provide the reasons.
+    3. The conclusion is "the heating should be turned on."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The trail is steep. The weather forecast predicts storms. As a result, the hike should be canceled."'
+  answer: 2
+  options:
+    - '"The trail is steep"'
+    - '"The hike should be canceled"'
+    - '"The weather forecast predicts storms"'
+    - All three are conclusions
+  hint: '"As a result" is a conclusion indicator.'
+  walkthrough: |
+    1. "As a result" signals the conclusion: "the hike should be canceled."
+    2. "The trail is steep" and "the weather forecast predicts storms" are premises.
+    3. The conclusion is "the hike should be canceled."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "Since the contract expired and no renewal was signed, the partnership is over."'
+  answer: 4
+  options:
+    - '"The contract expired"'
+    - '"No renewal was signed"'
+    - Both the first and second sentences
+    - '"The partnership is over"'
+  hint: '"Since" is a premise indicator. What remains is the conclusion.'
+  walkthrough: |
+    1. "Since" marks two premises: "the contract expired" and "no renewal was signed."
+    2. The remaining sentence, "the partnership is over," is the claim being supported.
+    3. The conclusion is "the partnership is over."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The alarm is going off. Smoke is coming from the kitchen. We need to evacuate immediately."'
+  answer: 3
+  options:
+    - '"The alarm is going off"'
+    - '"Smoke is coming from the kitchen"'
+    - '"We need to evacuate immediately"'
+    - There is no conclusion
+  hint: Two observations support one recommendation. Which is the recommendation?
+  walkthrough: |
+    1. "The alarm is going off" and "smoke is coming from the kitchen" are observations.
+    2. They support the claim "we need to evacuate immediately."
+    3. The conclusion is "we need to evacuate immediately."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'What is the conclusion? "The evidence is clear. Multiple studies confirm the link between exercise and heart health. Regular exercise reduces the risk of heart disease."'
+  answer: 4
+  options:
+    - '"The evidence is clear"'
+    - '"Multiple studies confirm the link between exercise and heart health"'
+    - There is no conclusion
+    - '"Regular exercise reduces the risk of heart disease"'
+  hint: Which sentence is the specific claim the other sentences support?
+  walkthrough: |
+    1. "The evidence is clear" and "multiple studies confirm the link" set up the support.
+    2. They point toward the claim "regular exercise reduces the risk of heart disease."
+    3. The conclusion is "regular exercise reduces the risk of heart disease."
+  tags:
+    - extract-conclusion
+
+- type: mcq
+  question: 'Which is the correct standard form for "You should bring a jacket, because it is cold outside and the forecast says rain"?'
+  answer: 2
+  options:
+    - '1. You should bring a jacket. 2. It is cold outside. $\therefore$ The forecast says rain.'
+    - '1. It is cold outside. 2. The forecast says rain. $\therefore$ You should bring a jacket.'
+    - '1. The forecast says rain. $\therefore$ It is cold outside.'
+    - '$\therefore$ It is cold outside. 1. You should bring a jacket. 2. The forecast says rain.'
+  hint: 'The conclusion goes last with the $\therefore$ symbol. "Because" marks the premises.'
+  walkthrough: |
+    1. "Because" introduces the premises: "it is cold outside" and "the forecast says rain."
+    2. The conclusion is "You should bring a jacket."
+    3. Standard form lists premises first, then the conclusion with $\therefore$.
+    4. The correct form is: 1. It is cold outside. 2. The forecast says rain. $\therefore$ You should bring a jacket.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "The server crashed. Consequently, the website is down"?'
+  answer: 3
+  options:
+    - '1. The website is down. $\therefore$ The server crashed.'
+    - '$\therefore$ The server crashed. 1. The website is down.'
+    - '1. The server crashed. $\therefore$ The website is down.'
+    - 1. The server crashed. 2. The website is down.
+  hint: '"Consequently" is a conclusion indicator.'
+  walkthrough: |
+    1. "Consequently" signals the conclusion: "the website is down."
+    2. "The server crashed" is the premise.
+    3. Standard form: premise first, conclusion last with $\therefore$.
+    4. The correct form is: 1. The server crashed. $\therefore$ The website is down.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'How many premises appear in the standard form of "The alarm went off, so there must be a fire, given that the system is working and there is no drill scheduled"?'
+  answer: 4
+  options:
+    - '1'
+    - '2'
+    - '4'
+    - '3'
+  hint: '"So" marks the conclusion. "Given that" marks premises.'
+  walkthrough: |
+    1. "So" signals the conclusion: "there must be a fire."
+    2. The premises are: "the alarm went off," "the system is working," and "there is no drill scheduled."
+    3. The standard form has 3 premises.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'In standard form, what comes last?'
+  answer: 1
+  options:
+    - 'The conclusion, preceded by $\therefore$'
+    - The strongest premise
+    - The first sentence of the original passage
+    - A summary of all premises
+  hint: 'Standard form is a fixed layout: premises numbered first, conclusion last.'
+  walkthrough: |
+    1. Standard form lists each premise on its own numbered line.
+    2. The conclusion appears on the final line, preceded by the $\therefore$ symbol.
+    3. This is a fixed convention; it does not depend on the original order.
+    4. The conclusion comes last, preceded by $\therefore$.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "Since the suspect fled the scene and a witness identified him, he must be guilty"?'
+  answer: 2
+  options:
+    - '1. He must be guilty. 2. The suspect fled the scene. $\therefore$ A witness identified him.'
+    - '1. The suspect fled the scene. 2. A witness identified him. $\therefore$ He must be guilty.'
+    - '1. The suspect fled the scene. $\therefore$ A witness identified him.'
+    - '$\therefore$ The suspect fled the scene. 1. He must be guilty.'
+  hint: '"Since" is a premise indicator. The claim being supported is the conclusion.'
+  walkthrough: |
+    1. "Since" marks the premises: "the suspect fled the scene" and "a witness identified him."
+    2. The conclusion is "he must be guilty."
+    3. Standard form: premises first, conclusion last with $\therefore$.
+    4. The correct form lists both premises, then the conclusion with $\therefore$.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "The battery is dead, so the car will not start"?'
+  answer: 4
+  options:
+    - '1. The car will not start. $\therefore$ The battery is dead.'
+    - '$\therefore$ The battery is dead. 1. The car will not start.'
+    - 1. The battery is dead. 2. The car will not start.
+    - '1. The battery is dead. $\therefore$ The car will not start.'
+  hint: '"So" is a conclusion indicator. The conclusion goes last with $\therefore$.'
+  walkthrough: |
+    1. "So" signals the conclusion: "the car will not start."
+    2. "The battery is dead" is the premise.
+    3. Standard form: premise first, then conclusion with $\therefore$.
+    4. The correct form is: 1. The battery is dead. $\therefore$ The car will not start.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "The river is flooding because the dam broke and it rained for three days"?'
+  answer: 1
+  options:
+    - '1. The dam broke. 2. It rained for three days. $\therefore$ The river is flooding.'
+    - '1. The river is flooding. $\therefore$ The dam broke.'
+    - '$\therefore$ The river is flooding. 1. The dam broke. 2. It rained for three days.'
+    - 1. The dam broke. 2. It rained for three days. 3. The river is flooding.
+  hint: '"Because" introduces premises. The conclusion needs $\therefore$.'
+  walkthrough: |
+    1. "Because" marks the premises: "the dam broke" and "it rained for three days."
+    2. The conclusion is "the river is flooding."
+    3. Standard form: premises numbered first, conclusion last with $\therefore$.
+    4. The correct form is: 1. The dam broke. 2. It rained for three days. $\therefore$ The river is flooding.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "It follows that the train is late. The signal is red and the platform is empty"?'
+  answer: 3
+  options:
+    - '$\therefore$ The train is late. 1. The signal is red. 2. The platform is empty.'
+    - '1. The train is late. $\therefore$ The signal is red.'
+    - '1. The signal is red. 2. The platform is empty. $\therefore$ The train is late.'
+    - 1. The signal is red. 2. The platform is empty. 3. The train is late.
+  hint: '"It follows that" signals the conclusion. In standard form, the conclusion goes last regardless of its original position.'
+  walkthrough: |
+    1. "It follows that" signals the conclusion: "the train is late."
+    2. The premises are "the signal is red" and "the platform is empty."
+    3. Standard form puts premises first, conclusion last with $\therefore$.
+    4. The correct form is: 1. The signal is red. 2. The platform is empty. $\therefore$ The train is late.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'How many premises appear in the standard form of "The store is closing early because of the storm"?'
+  answer: 2
+  options:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+  hint: '"Because" introduces the premise. Count each distinct reason.'
+  walkthrough: |
+    1. "Because" marks the premise: "of the storm" (the storm is occurring).
+    2. The conclusion is "the store is closing early."
+    3. There is 1 premise.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "Given that taxes are rising and wages are stagnant, people are struggling financially"?'
+  answer: 4
+  options:
+    - '1. People are struggling financially. $\therefore$ Taxes are rising.'
+    - '$\therefore$ Taxes are rising. 1. Wages are stagnant. 2. People are struggling financially.'
+    - '1. Taxes are rising. $\therefore$ Wages are stagnant.'
+    - '1. Taxes are rising. 2. Wages are stagnant. $\therefore$ People are struggling financially.'
+  hint: '"Given that" introduces premises.'
+  walkthrough: |
+    1. "Given that" marks the premises: "taxes are rising" and "wages are stagnant."
+    2. The conclusion is "people are struggling financially."
+    3. Standard form lists premises first, then the conclusion with $\therefore$.
+    4. The correct form is: 1. Taxes are rising. 2. Wages are stagnant. $\therefore$ People are struggling financially.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "The team will win. They have home advantage and their star player is healthy"?'
+  answer: 2
+  options:
+    - '1. The team will win. $\therefore$ They have home advantage.'
+    - '1. They have home advantage. 2. Their star player is healthy. $\therefore$ The team will win.'
+    - '$\therefore$ The team will win. 1. They have home advantage. 2. Their star player is healthy.'
+    - 1. They have home advantage. 2. Their star player is healthy. 3. The team will win.
+  hint: 'Identify the claim being supported and put it last with $\therefore$.'
+  walkthrough: |
+    1. "The team will win" is the claim being supported.
+    2. "They have home advantage" and "their star player is healthy" are the reasons.
+    3. Standard form: premises first, conclusion last with $\therefore$.
+    4. The correct form lists premises first, then "The team will win" with $\therefore$.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "Hence the defendant is not guilty. The evidence was circumstantial and no witness placed him at the scene"?'
+  answer: 3
+  options:
+    - '1. The defendant is not guilty. $\therefore$ The evidence was circumstantial.'
+    - 1. The evidence was circumstantial. 2. No witness placed him at the scene. 3. The defendant is not guilty.
+    - '1. The evidence was circumstantial. 2. No witness placed him at the scene. $\therefore$ The defendant is not guilty.'
+    - '$\therefore$ The defendant is not guilty. 1. The evidence was circumstantial.'
+  hint: '"Hence" is a conclusion indicator. Rearrange into standard form.'
+  walkthrough: |
+    1. "Hence" signals the conclusion: "the defendant is not guilty."
+    2. The premises are "the evidence was circumstantial" and "no witness placed him at the scene."
+    3. Standard form: premises first, conclusion last with $\therefore$.
+    4. The correct form is: 1. The evidence was circumstantial. 2. No witness placed him at the scene. $\therefore$ The defendant is not guilty.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'How many premises appear in the standard form of "The road is dangerous because it is narrow, has no guardrails, and is poorly lit"?'
+  answer: 1
+  options:
+    - '3'
+    - '1'
+    - '2'
+    - '4'
+  hint: '"Because" introduces the premises. Count each distinct reason.'
+  walkthrough: |
+    1. "Because" introduces three reasons: "it is narrow," "has no guardrails," and "is poorly lit."
+    2. The conclusion is "the road is dangerous."
+    3. There are 3 premises in the standard form.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "The election results are invalid. Ballots were miscounted, for one thing, and several polling stations closed early"?'
+  answer: 4
+  options:
+    - '1. The election results are invalid. $\therefore$ Ballots were miscounted.'
+    - '$\therefore$ Ballots were miscounted. 1. Several polling stations closed early.'
+    - 1. Ballots were miscounted. 2. Several polling stations closed early. 3. The election results are invalid.
+    - '1. Ballots were miscounted. 2. Several polling stations closed early. $\therefore$ The election results are invalid.'
+  hint: 'The claim being supported is "the election results are invalid." The rest are premises.'
+  walkthrough: |
+    1. The conclusion is "the election results are invalid."
+    2. The premises are "ballots were miscounted" and "several polling stations closed early."
+    3. Standard form: premises first, conclusion last with $\therefore$.
+    4. The correct form lists both premises, then the conclusion with $\therefore$.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "Because the lab results came back negative, the patient does not have the infection"?'
+  answer: 2
+  options:
+    - '1. The patient does not have the infection. $\therefore$ The lab results came back negative.'
+    - '1. The lab results came back negative. $\therefore$ The patient does not have the infection.'
+    - '$\therefore$ The lab results came back negative. 1. The patient does not have the infection.'
+    - 1. The lab results came back negative. 2. The patient does not have the infection.
+  hint: '"Because" introduces the premise. The conclusion needs $\therefore$.'
+  walkthrough: |
+    1. "Because" marks the premise: "the lab results came back negative."
+    2. The conclusion is "the patient does not have the infection."
+    3. Standard form: premise first, conclusion last with $\therefore$.
+    4. The correct form is: 1. The lab results came back negative. $\therefore$ The patient does not have the infection.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "All fish can swim. Tuna are fish. So tuna can swim"?'
+  answer: 1
+  options:
+    - '1. All fish can swim. 2. Tuna are fish. $\therefore$ Tuna can swim.'
+    - '1. Tuna can swim. $\therefore$ All fish can swim.'
+    - '$\therefore$ All fish can swim. 1. Tuna are fish. 2. Tuna can swim.'
+    - '1. Tuna are fish. $\therefore$ All fish can swim.'
+  hint: '"So" marks the conclusion. The other sentences are premises.'
+  walkthrough: |
+    1. "So" signals the conclusion: "tuna can swim."
+    2. The premises are "all fish can swim" and "tuna are fish."
+    3. Standard form: premises first, conclusion last with $\therefore$.
+    4. The correct form is: 1. All fish can swim. 2. Tuna are fish. $\therefore$ Tuna can swim.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'How many premises appear in the standard form of "The company should invest in renewable energy, since fossil fuels are running out, public opinion favors green energy, and government subsidies are available"?'
+  answer: 1
+  options:
+    - '3'
+    - '1'
+    - '2'
+    - '4'
+  hint: '"Since" introduces the premises. Count each distinct reason.'
+  walkthrough: |
+    1. "Since" marks three premises: "fossil fuels are running out," "public opinion favors green energy," and "government subsidies are available."
+    2. The conclusion is "the company should invest in renewable energy."
+    3. There are 3 premises in the standard form.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "The concert will be moved indoors. After all, the forecast calls for thunderstorms"?'
+  answer: 3
+  options:
+    - '1. The concert will be moved indoors. $\therefore$ The forecast calls for thunderstorms.'
+    - '$\therefore$ The forecast calls for thunderstorms. 1. The concert will be moved indoors.'
+    - '1. The forecast calls for thunderstorms. $\therefore$ The concert will be moved indoors.'
+    - 1. The forecast calls for thunderstorms. 2. The concert will be moved indoors.
+  hint: '"After all" is a premise indicator. The conclusion appeared first in the original passage.'
+  walkthrough: |
+    1. "After all" marks the premise: "the forecast calls for thunderstorms."
+    2. The conclusion is "the concert will be moved indoors."
+    3. Standard form puts the premise first and the conclusion last with $\therefore$.
+    4. The correct form is: 1. The forecast calls for thunderstorms. $\therefore$ The concert will be moved indoors.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'In "The witness was not credible. Her story changed three times. Accordingly, the jury disregarded her testimony," which sentence is the conclusion?'
+  answer: 3
+  options:
+    - '"The witness was not credible"'
+    - '"Her story changed three times"'
+    - '"The jury disregarded her testimony"'
+    - All three are premises
+  hint: '"Accordingly" is a conclusion indicator.'
+  walkthrough: |
+    1. "Accordingly" signals the conclusion: "the jury disregarded her testimony."
+    2. The other two sentences are premises offering support.
+    3. The conclusion is "the jury disregarded her testimony."
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'In "No one passed the test, for the questions were ambiguous and the time limit was too short," how many premises are there?'
+  answer: 4
+  options:
+    - '0'
+    - '1'
+    - '3'
+    - '2'
+  hint: '"For" is a premise indicator. Count the reasons it introduces.'
+  walkthrough: |
+    1. "For" introduces two reasons: "the questions were ambiguous" and "the time limit was too short."
+    2. The conclusion is "no one passed the test."
+    3. There are 2 premises.
+  tags:
+    - label-parts
+
+- type: mcq
+  question: 'Which is the correct standard form for "The patient should be hospitalized, since the fever is dangerously high and the infection is spreading"?'
+  answer: 2
+  options:
+    - '1. The patient should be hospitalized. $\therefore$ The fever is dangerously high.'
+    - '1. The fever is dangerously high. 2. The infection is spreading. $\therefore$ The patient should be hospitalized.'
+    - '$\therefore$ The fever is dangerously high. 1. The infection is spreading.'
+    - 1. The fever is dangerously high. 2. The infection is spreading. 3. The patient should be hospitalized.
+  hint: '"Since" introduces the premises. The conclusion goes last with $\therefore$.'
+  walkthrough: |
+    1. "Since" marks the premises: "the fever is dangerously high" and "the infection is spreading."
+    2. The conclusion is "the patient should be hospitalized."
+    3. Standard form: premises first, conclusion last with $\therefore$.
+    4. The correct form lists both premises, then the conclusion with $\therefore$.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'Which is the correct standard form for "Accordingly, the factory must close. Pollution levels exceed legal limits and residents have filed complaints"?'
+  answer: 1
+  options:
+    - '1. Pollution levels exceed legal limits. 2. Residents have filed complaints. $\therefore$ The factory must close.'
+    - '$\therefore$ Pollution levels exceed legal limits. 1. Residents have filed complaints.'
+    - '1. The factory must close. $\therefore$ Pollution levels exceed legal limits.'
+    - 1. Pollution levels exceed legal limits. 2. Residents have filed complaints. 3. The factory must close.
+  hint: '"Accordingly" signals the conclusion. Rearrange into standard form with premises first.'
+  walkthrough: |
+    1. "Accordingly" signals the conclusion: "the factory must close."
+    2. The premises are "pollution levels exceed legal limits" and "residents have filed complaints."
+    3. Standard form: premises first, conclusion last with $\therefore$.
+    4. The correct form is: 1. Pollution levels exceed legal limits. 2. Residents have filed complaints. $\therefore$ The factory must close.
+  tags:
+    - standard-form
+
+- type: mcq
+  question: 'What is the conclusion of the following argument? "All mammals are warm-blooded. Whales are mammals. Therefore, whales are warm-blooded."'
+  answer: 3
+  options:
+    - '"All mammals are warm-blooded"'
+    - '"Whales are mammals"'
+    - '"Whales are warm-blooded"'
+    - There is no conclusion
+  hint: '"Therefore" signals the conclusion.'
+  walkthrough: |
+    1. "Therefore" is a conclusion indicator.
+    2. The sentence it introduces is "whales are warm-blooded."
+    3. The other two sentences are premises offered as support.
+    4. The conclusion is "whales are warm-blooded."
+  tags:
+    - diagnostic

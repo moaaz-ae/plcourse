@@ -1,0 +1,1057 @@
+- type: truth-table
+  question: 'Test validity: $P \to Q$, $P$ $\therefore$ $Q$. Complete the $(P \to Q)$ column.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \to Q)$'
+  hiddenFormulas:
+    - '$(P \to Q)$'
+  hint: 'Check for a bad row: all premises true, conclusion false.'
+  walkthrough: >
+    1. Row 1: T$\to$T=T. Row 2: T$\to$F=F.
+
+    2. Row 3: F$\to$T=T. Row 4: F$\to$F=T.
+
+    3. Check bad rows: Row 1 both premises T, conclusion T (not bad). Row 2 premise 1 F (not bad). Rows 3-4 premise 2 F
+    (not bad).
+
+    4. No bad row. The argument is valid.
+  tags:
+    - test-validity-truth-table
+
+- type: mcq
+  question: 'What is a "bad row" in a joint truth table?'
+  answer: 2
+  options:
+    - A row where all formulas are false
+    - A row where all premises are true and the conclusion is false
+    - A row where the conclusion is true
+    - Any row where a premise is false
+  hint: 'A bad row shows the argument fails: premises hold but the conclusion does not.'
+  walkthrough: |
+    1. A bad row has all premises true simultaneously with a false conclusion.
+    2. One bad row proves the argument is invalid.
+    3. No bad rows means the argument is valid.
+    4. A bad row is a row where all premises are true and the conclusion is false.
+  tags:
+    - test-validity-truth-table
+
+- type: mcq
+  question: 'Argument: $P \to Q$, $Q$ $\therefore$ $P$. Row 3 has $P$=F, $Q$=T. Is this a bad row?'
+  answer: 1
+  options:
+    - 'Yes; $P \to Q$=T, $Q$=T (both premises true), but $P$=F (conclusion false)'
+    - No; $P$ being false means the premise fails
+    - No; $Q$ being true means the conclusion is true
+    - Yes; but only if there are no other bad rows
+  hint: Check each premise and the conclusion on this row.
+  walkthrough: |
+    1. Premise 1: $P \to Q$ = F$\to$T = T. Premise 2: $Q$ = T. Both true.
+    2. Conclusion: $P$ = F.
+    3. All premises true, conclusion false: this is a bad row.
+    4. Both premises are true and the conclusion is false, so this is a bad row.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \to Q$'
+    - '$\neg Q$'
+  conclusion: '$\neg P$'
+  isValid: true
+  hint: Check all 4 rows. Can you find a bad row?
+  walkthrough: |
+    1. Row 1 (T,T): $\neg Q$=F. Premise 2 false. Not bad.
+    2. Row 2 (T,F): $P \to Q$=F. Premise 1 false. Not bad.
+    3. Row 3 (F,T): $\neg Q$=F. Premise 2 false. Not bad.
+    4. Row 4 (F,F): $P \to Q$=T, $\neg Q$=T. Conclusion $\neg P$=T. Not bad.
+    5. No bad row exists. The argument is **valid**.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \lor Q$'
+    - $P$
+  conclusion: '$\neg Q$'
+  isValid: false
+  counterexample:
+    P: true
+    Q: true
+  hint: 'Try $P$=T, $Q$=T.'
+  walkthrough: |
+    1. Set $P$=T, $Q$=T.
+    2. Premise 1: $P \lor Q$ = T. Premise 2: $P$ = T. Both true.
+    3. Conclusion: $\neg Q$ = F.
+    4. All premises true, conclusion false.
+    5. This counterexample proves the argument is **invalid**.
+  tags:
+    - test-validity-truth-table
+
+- type: truth-table
+  question: 'Test validity: $P \lor Q$, $\neg P$ $\therefore$ $Q$. Complete the $P \lor Q$ column.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \lor Q$'
+  hiddenFormulas:
+    - '$P \lor Q$'
+  hint: '$P \lor Q$ is true when at least one of $P$, $Q$ is true.'
+  walkthrough: |
+    1. Row 1: T$\lor$T=T. Row 2: T$\lor$F=T.
+    2. Row 3: F$\lor$T=T. Row 4: F$\lor$F=F.
+    3. Both premises true requires $\neg P$=T (so $P$=F) and $P \lor Q$=T. That forces $Q$=T. Conclusion $Q$=T. Not bad.
+    4. No bad row. The argument is valid.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \land Q$'
+  conclusion: $P$
+  isValid: true
+  hint: 'If both $P$ and $Q$ are true, is $P$ true?'
+  walkthrough: |
+    1. The premise $P \land Q$ is true only when both $P$=T and $Q$=T.
+    2. In that row, the conclusion $P$=T.
+    3. The only row where the premise is true also has the conclusion true.
+    4. No bad row exists. The argument is **valid**.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - $Q$
+  conclusion: $P$
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: 'Try $P$=F, $Q$=T.'
+  walkthrough: |
+    1. Set $P$=F, $Q$=T.
+    2. Premise 1: $P \to Q$ = F$\to$T = T. Premise 2: $Q$ = T. Both true.
+    3. Conclusion: $P$ = F.
+    4. All premises true, conclusion false: bad row found.
+    5. The argument is **invalid** (affirming the consequent).
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \to Q$'
+    - '$Q \to R$'
+    - $P$
+  conclusion: $R$
+  isValid: true
+  hint: This is a chain of conditionals (hypothetical syllogism plus modus ponens). Check all 8 rows.
+  walkthrough: |
+    1. All premises true requires $P$=T, $P \to Q$=T (so $Q$=T), and $Q \to R$=T (so $R$=T).
+    2. When all premises are true, $R$ is forced to be T.
+    3. No row makes all premises true while $R$ is false.
+    4. No bad row exists. The argument is **valid**.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+    - '$\neg P$'
+  conclusion: '$\neg Q$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: 'Try $P$=F, $Q$=T.'
+  walkthrough: |
+    1. Set $P$=F, $Q$=T.
+    2. Premise 1: $P \to Q$ = F$\to$T = T. Premise 2: $\neg P$ = T. Both true.
+    3. Conclusion: $\neg Q$ = F.
+    4. All premises true, conclusion false: bad row found.
+    5. The argument is **invalid** (denying the antecedent).
+  tags:
+    - test-validity-truth-table
+
+- type: mcq
+  question: An argument has 3 sentence letters. How many rows does the truth table have?
+  answer: 3
+  options:
+    - '3'
+    - '6'
+    - '8'
+    - '16'
+  hint: 'Each sentence letter can be T or F: $2^n$ rows for $n$ letters.'
+  walkthrough: |
+    1. With 3 sentence letters, each can be T or F.
+    2. Total rows = $2^3$ = 8.
+    3. The truth table has 8 rows.
+  tags:
+    - test-validity-truth-table
+
+- type: truth-table
+  question: 'Test validity: $P \land Q$ $\therefore$ $Q \land P$. Complete the $Q \land P$ column.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$Q \land P$'
+  hiddenFormulas:
+    - '$Q \land P$'
+  hint: '$Q \land P$ is true only when both $Q$ and $P$ are true.'
+  walkthrough: |
+    1. Row 1: $Q$=T, $P$=T, so $Q \land P$=T.
+    2. Row 2: $Q$=F, so $Q \land P$=F.
+    3. Row 3: $P$=F, so $Q \land P$=F.
+    4. Row 4: both F, so $Q \land P$=F.
+    5. Premise $P \land Q$ is true only in row 1, where $Q \land P$=T. No bad row. Valid.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \lor Q$'
+  conclusion: '$P \land Q$'
+  isValid: false
+  counterexample:
+    P: true
+    Q: false
+  hint: 'Try a row where only one of $P$, $Q$ is true.'
+  walkthrough: |
+    1. Set $P$=T, $Q$=F.
+    2. Premise: $P \lor Q$ = T.
+    3. Conclusion: $P \land Q$ = F.
+    4. Premise true, conclusion false: bad row found.
+    5. The argument is **invalid**.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - $P$
+    - $Q$
+  conclusion: '$P \land Q$'
+  isValid: true
+  hint: When are both premises true? What is the conclusion in that case?
+  walkthrough: |
+    1. Both premises true means $P$=T and $Q$=T.
+    2. In that row, $P \land Q$ = T.
+    3. The only row with all premises true also has the conclusion true.
+    4. No bad row exists. The argument is **valid**.
+  tags:
+    - test-validity-truth-table
+
+- type: mcq
+  question: 'If a truth table has no bad row, the argument is:'
+  answer: 4
+  options:
+    - Invalid
+    - Unsound
+    - Incomplete
+    - Valid
+  hint: No bad row means no counterexample exists.
+  walkthrough: |
+    1. A bad row has all premises true and the conclusion false.
+    2. No bad row means the conclusion is true whenever all premises are true.
+    3. This is the definition of tautological validity.
+    4. The argument is valid.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$\neg P \to Q$'
+    - '$\neg Q$'
+  conclusion: $P$
+  isValid: true
+  hint: 'This is Modus Tollens applied to $\neg P \to Q$.'
+  walkthrough: |
+    1. Both premises true requires $\neg P \to Q$=T and $\neg Q$=T (so $Q$=F).
+    2. $\neg P \to Q$=T with $Q$=F means $\neg P$ must be F (otherwise F$\to$F would still be T; check: if $\neg P$=T then $Q$ must be T, contradiction).
+    3. Wait: $\neg P$=T and $Q$=F gives $\neg P \to Q$=T$\to$F=F. So premise 1 is false. Not a bad row.
+    4. $\neg P$=F means $P$=T. Conclusion $P$=T. Not bad.
+    5. No bad row. The argument is **valid**.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \lor Q$'
+    - '$Q \lor R$'
+  conclusion: '$P \lor R$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+    R: false
+  hint: 'Try $P$=F, $Q$=T, $R$=F.'
+  walkthrough: |
+    1. Set $P$=F, $Q$=T, $R$=F.
+    2. Premise 1: $P \lor Q$ = F$\lor$T = T. Premise 2: $Q \lor R$ = T$\lor$F = T. Both true.
+    3. Conclusion: $P \lor R$ = F$\lor$F = F.
+    4. All premises true, conclusion false: bad row found.
+    5. The argument is **invalid**.
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \land Q$'
+  conclusion: $Q$
+  isValid: true
+  hint: 'When $P \land Q$ is true, what must $Q$ be?'
+  walkthrough: |
+    1. $P \land Q$ is true only when both $P$=T and $Q$=T.
+    2. In that case, conclusion $Q$=T.
+    3. No row makes the premise true and the conclusion false.
+    4. The argument is **valid**.
+  tags:
+    - test-validity-truth-table
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If it rains, the ground is wet. It rains. So the ground is wet." ($R$=it rains, $W$=ground is wet). Is it valid?'
+  answer: 1
+  options:
+    - Valid; no bad row exists in the truth table
+    - Invalid; the ground could be wet for other reasons
+    - Valid; but only because the conclusion is true
+    - Invalid; rain does not guarantee wet ground
+  hint: 'Premises: $R \to W$, $R$. Conclusion: $W$. Check the truth table.'
+  walkthrough: |
+    1. Premises: $R \to W$ and $R$. Conclusion: $W$.
+    2. Row 1 (T,T): both premises T, conclusion T. Not bad.
+    3. Row 2 (T,F): $R \to W$=F. Premise 1 false. Not bad.
+    4. Rows 3-4: $R$=F. Premise 2 false. Not bad.
+    5. No bad row. The argument is valid.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the alarm sounds, we evacuate. We evacuated. So the alarm sounded." ($A$=alarm, $E$=evacuate). Is it valid?'
+  answer: 4
+  options:
+    - Valid; the alarm must have caused the evacuation
+    - Valid; no bad row exists
+    - Invalid; but the conclusion is probably true
+    - 'Invalid; we could have evacuated for another reason (bad row at $A$=F, $E$=T)'
+  hint: 'Premises: $A \to E$, $E$. Conclusion: $A$. Check row $A$=F, $E$=T.'
+  walkthrough: |
+    1. Row ($A$=F, $E$=T): $A \to E$=T, $E$=T, but $A$=F.
+    2. Both premises true, conclusion false.
+    3. Bad row found.
+    4. The argument is invalid: we could have evacuated for another reason.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "Either the bus or the train is running. The bus is not running. So the train is running." Is it valid?'
+  answer: 3
+  options:
+    - Invalid; the train might not be running
+    - Invalid; the conclusion does not follow
+    - Valid; no bad row exists
+    - Valid; but only if the bus is actually not running
+  hint: 'Premises: $B \lor T$, $\neg B$. Conclusion: $T$. Check all rows.'
+  walkthrough: |
+    1. Premises: $B \lor T$ and $\neg B$. Conclusion: $T$.
+    2. Both premises true requires $B$=F and $B \lor T$=T, so $T$ must be T.
+    3. When both premises are true, $T$ is always true.
+    4. No bad row. The argument is valid.
+  tags:
+    - english-argument-evaluation
+
+- type: formula-builder
+  question: 'Symbolize: "If the key works and the door is unlocked, then we enter." ($K$=key works, $D$=door unlocked, $E$=we enter)'
+  answer: '$(K \land D) \to E$'
+  variableMap:
+    K: The key works
+    D: The door is unlocked
+    E: We enter
+  hint: 'Main connective: conditional. Antecedent: conjunction.'
+  walkthrough: |
+    1. Antecedent: "the key works and the door is unlocked" = $(K \land D)$.
+    2. Consequent: "we enter" = $E$.
+    3. The translation is $(K \land D) \to E$.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If it snows, the roads are icy. The roads are not icy. So it did not snow." Is it valid?'
+  answer: 2
+  options:
+    - Invalid; it could have snowed without icy roads
+    - 'Valid; this is Modus Tollens, no bad row exists'
+    - Invalid; the conclusion is the negation of the antecedent
+    - Valid; but only because snow always causes ice
+  hint: 'Premises: $S \to I$, $\neg I$. Conclusion: $\neg S$. This is Modus Tollens.'
+  walkthrough: |
+    1. Check all rows for bad rows.
+    2. Both premises true requires $S \to I$=T and $\neg I$=T (so $I$=F).
+    3. $S \to I$=T and $I$=F forces $S$=F. Then $\neg S$=T.
+    4. Conclusion is always true when both premises are true. The argument is valid (Modus Tollens).
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the battery is dead, the car will not start. The car did not start. So the battery is dead." ($B$=battery dead, $S$=car starts). Is it valid?'
+  answer: 3
+  options:
+    - Valid; Modus Tollens
+    - Valid; the conclusion is clearly true
+    - 'Invalid; the car might not start for another reason (bad row at $B$=F, $S$=F)'
+    - Invalid; the premises contradict each other
+  hint: 'Premises: $B \to \neg S$, $\neg S$. Conclusion: $B$. Try $B$=F, $S$=F.'
+  walkthrough: |
+    1. Premises: $B \to \neg S$ and $\neg S$. Conclusion: $B$.
+    2. Set $B$=F, $S$=F: $B \to \neg S$ = F$\to$T = T. $\neg S$ = T. Both true.
+    3. Conclusion $B$ = F. Bad row found.
+    4. The argument is invalid: the car might not start for another reason.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the switch is on, the light is on. The switch is on. So the light is on." ($S$=switch on, $L$=light on). Is it valid?'
+  answer: 1
+  options:
+    - 'Valid; this is Modus Ponens, no bad row exists'
+    - Invalid; the light might be broken
+    - Valid; but only because switches control lights
+    - Invalid; the conclusion restates a premise
+  hint: 'Premises: $S \to L$, $S$. Conclusion: $L$. This is Modus Ponens.'
+  walkthrough: |
+    1. Premises: $S \to L$ and $S$. Conclusion: $L$.
+    2. Both premises true requires $S$=T and $S \to L$=T, so $L$=T.
+    3. Conclusion is true whenever both premises are true.
+    4. No bad row. The argument is valid (Modus Ponens).
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "Either the package is at the door or at the office. It is not at the door. So it is at the office." ($D$=at door, $O$=at office). Is it valid?'
+  answer: 4
+  options:
+    - Invalid; the package could be lost
+    - Invalid; disjunction does not support this inference
+    - Valid; but only if the disjunction is exclusive
+    - 'Valid; this is disjunctive syllogism, no bad row exists'
+  hint: 'Premises: $D \lor O$, $\neg D$. Conclusion: $O$.'
+  walkthrough: |
+    1. Premises: $D \lor O$ and $\neg D$. Conclusion: $O$.
+    2. Both premises true: $D$=F (from $\neg D$=T) and $D \lor O$=T, so $O$=T.
+    3. Conclusion $O$=T whenever both premises are true.
+    4. No bad row. The argument is valid (disjunctive syllogism).
+  tags:
+    - english-argument-evaluation
+
+- type: formula-builder
+  question: 'Symbolize: "If the test passes or the review is approved, then the code ships." ($T$=test passes, $R$=review approved, $S$=code ships)'
+  answer: '$(T \lor R) \to S$'
+  variableMap:
+    T: The test passes
+    R: The review is approved
+    S: The code ships
+  hint: 'Main connective: conditional. Antecedent: disjunction.'
+  walkthrough: |
+    1. Antecedent: "the test passes or the review is approved" = $(T \lor R)$.
+    2. Consequent: "the code ships" = $S$.
+    3. The translation is $(T \lor R) \to S$.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If it is sunny, we go hiking. If we go hiking, we pack lunch. It is sunny. So we pack lunch." ($S$=sunny, $H$=hiking, $L$=pack lunch). Is it valid?'
+  answer: 2
+  options:
+    - Invalid; the chain of conditionals might break
+    - Valid; hypothetical syllogism plus Modus Ponens gives a valid chain
+    - Invalid; packing lunch does not follow from sunshine
+    - Valid; but only because the premises are true
+  hint: 'Premises: $S \to H$, $H \to L$, $S$. Conclusion: $L$.'
+  walkthrough: |
+    1. All premises true: $S$=T, $S \to H$=T forces $H$=T, $H \to L$=T forces $L$=T.
+    2. Conclusion $L$=T whenever all premises are true.
+    3. No bad row exists.
+    4. The argument is valid: hypothetical syllogism plus Modus Ponens.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the file is saved, no data is lost. Data was lost. So the file was not saved." ($F$=file saved, $L$=data lost). Is it valid?'
+  answer: 1
+  options:
+    - 'Valid; Modus Tollens: $F \to \neg L$, $L$ (i.e., $\neg \neg L$) entails $\neg F$'
+    - Invalid; data loss does not prove anything about the file
+    - Valid; but only in practice
+    - Invalid; the premises are contradictory
+  hint: 'Premises: $F \to \neg L$, $L$. Conclusion: $\neg F$.'
+  walkthrough: |
+    1. Premises: $F \to \neg L$ and $L$. Conclusion: $\neg F$.
+    2. Both premises true: $L$=T, so $\neg L$=F. $F \to \neg L$=T requires $F$=F. Then $\neg F$=T.
+    3. Conclusion is true whenever both premises are true.
+    4. The argument is valid (Modus Tollens).
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the museum is open, we visit. If the museum is closed, we go to the park. The museum is open. So we go to the park." ($O$=museum open, $V$=visit, $P$=park). Is it valid?'
+  answer: 3
+  options:
+    - Valid; the premises cover all cases
+    - Valid; no bad row exists
+    - Invalid; the premises say nothing forcing $P$ when $O$ is true
+    - Invalid; but only because the museum might be closed
+  hint: 'Premises: $O \to V$, $\neg O \to P$, $O$. Conclusion: $P$. Try $O$=T, $V$=T, $P$=F.'
+  walkthrough: |
+    1. Premises: $O \to V$, $\neg O \to P$, $O$. Conclusion: $P$.
+    2. Set $O$=T, $V$=T, $P$=F.
+    3. $O \to V$=T, $\neg O \to P$=F$\to$F=T, $O$=T. All premises true.
+    4. Conclusion $P$=F. Bad row found.
+    5. The argument is invalid: the premises say nothing forcing $P$ when $O$ is true.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the bridge is closed, we take the ferry. The bridge is closed. So we take the ferry." ($B$=bridge closed, $F$=take ferry). Is it valid?'
+  answer: 4
+  options:
+    - Invalid; the ferry might not be running
+    - Invalid; the conclusion restates a premise
+    - Valid; but only because ferries exist
+    - 'Valid; Modus Ponens: no bad row exists'
+  hint: 'Premises: $B \to F$, $B$. Conclusion: $F$.'
+  walkthrough: |
+    1. Premises: $B \to F$ and $B$. Conclusion: $F$.
+    2. Both premises true: $B$=T and $B \to F$=T, so $F$=T.
+    3. Conclusion is always true when both premises are true.
+    4. No bad row. The argument is valid (Modus Ponens).
+  tags:
+    - english-argument-evaluation
+
+- type: formula-builder
+  question: 'Symbolize: "If the sensor detects motion and the alarm is armed, then the alarm triggers." ($M$=motion detected, $A$=alarm armed, $T$=alarm triggers)'
+  answer: '$(M \land A) \to T$'
+  variableMap:
+    M: The sensor detects motion
+    A: The alarm is armed
+    T: The alarm triggers
+  hint: 'Main connective: conditional. Antecedent: conjunction of two conditions.'
+  walkthrough: |
+    1. Antecedent: "the sensor detects motion and the alarm is armed" = $(M \land A)$.
+    2. Consequent: "the alarm triggers" = $T$.
+    3. The translation is $(M \land A) \to T$.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the password is correct, access is granted. Access is not granted. So the password is not correct." ($P$=password correct, $A$=access granted). Is it valid?'
+  answer: 2
+  options:
+    - Invalid; the password might still be correct
+    - 'Valid; Modus Tollens: no bad row exists'
+    - Invalid; the premises do not entail the conclusion
+    - Valid; but only if the system works properly
+  hint: 'Premises: $P \to A$, $\neg A$. Conclusion: $\neg P$.'
+  walkthrough: |
+    1. Premises: $P \to A$ and $\neg A$. Conclusion: $\neg P$.
+    2. Both premises true: $\neg A$=T (so $A$=F). $P \to A$=T with $A$=F forces $P$=F. Then $\neg P$=T.
+    3. Conclusion is true whenever both premises are true.
+    4. No bad row. The argument is valid (Modus Tollens).
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "Either the train or the bus leaves at noon. Neither the train nor the bus leaves at noon. So the flight leaves at noon." ($T$=train, $B$=bus, $F$=flight). Is it valid?'
+  answer: 3
+  options:
+    - 'Invalid; the premises contradict each other, so the conclusion does not follow'
+    - Invalid; the flight is not mentioned in the premises
+    - 'Valid; the premises are contradictory (never both true), so no bad row exists'
+    - Valid; the flight must leave at noon
+  hint: 'Premises: $T \lor B$ and $\neg T \land \neg B$. Can both be true at once?'
+  walkthrough: |
+    1. Premise 1: $T \lor B$. Premise 2: $\neg T \land \neg B$ (equivalent to $\neg(T \lor B)$).
+    2. These premises contradict each other: they can never both be true.
+    3. A bad row requires all premises to be true. That never happens.
+    4. No bad row exists. The argument is valid (vacuously, from contradictory premises).
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'An argument has the conclusion $Q \lor \neg Q$. Is it automatically valid?'
+  answer: 1
+  options:
+    - 'Yes; $Q \lor \neg Q$ is a tautology, so no row can make it false'
+    - No; it depends on the premises
+    - Yes; but only if the premises are also tautologies
+    - No; a tautology cannot be a conclusion
+  hint: A tautology is true on every row. Can there ever be a bad row?
+  walkthrough: |
+    1. $Q \lor \neg Q$ is true on every row.
+    2. A bad row requires the conclusion to be false.
+    3. Since the conclusion is never false, no bad row can exist.
+    4. The argument is automatically valid because the conclusion is a tautology.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: Why is any argument with a tautological conclusion automatically valid?
+  answer: 3
+  options:
+    - Because tautologies are always the best conclusions
+    - Because the premises must be true
+    - 'Because a bad row requires a false conclusion, and a tautology is never false'
+    - Because tautologies have no sentence letters
+  hint: Validity fails when premises are true and conclusion is false. Can the conclusion be false?
+  walkthrough: |
+    1. A tautology is true on every row.
+    2. A bad row requires the conclusion to be false on some row.
+    3. Since the conclusion is never false, no bad row exists.
+    4. A bad row requires a false conclusion, and a tautology is never false.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'An argument has $P \land \neg P$ as its only premise. Is it valid regardless of the conclusion?'
+  answer: 2
+  options:
+    - No; a contradictory premise makes the argument invalid
+    - 'Yes; $P \land \neg P$ is always false, so both premises are never all true, and no bad row exists'
+    - No; the conclusion must be related to the premise
+    - Yes; but only if the conclusion is also a contradiction
+  hint: 'A bad row requires all premises to be true. Can $P \land \neg P$ be true?'
+  walkthrough: |
+    1. $P \land \neg P$ is a contradiction: false on every row.
+    2. A bad row requires all premises true. The premise is never true.
+    3. No bad row can exist, so the argument is valid for any conclusion.
+    4. $P \land \neg P$ is always false, so the premise is never true, and no bad row exists.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $P \land \neg P$ $\therefore$ $Q$. Is this valid?'
+  answer: 4
+  options:
+    - Invalid; $Q$ does not follow from a contradiction
+    - Invalid; the premise is false
+    - Valid; but unsound
+    - 'Valid; the contradictory premise is never true, so no bad row exists'
+  hint: Can the premise ever be true?
+  walkthrough: |
+    1. The premise $P \land \neg P$ is false on every row.
+    2. No row makes the premise true.
+    3. No bad row can exist (bad rows require true premises).
+    4. The argument is valid: the contradictory premise is never true, so no bad row exists.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: Which argument is automatically valid due to its conclusion?
+  answer: 3
+  options:
+    - '$P$ $\therefore$ $Q$'
+    - '$P \to Q$ $\therefore$ $P$'
+    - '$P$ $\therefore$ $Q \lor \neg Q$'
+    - '$P \land Q$ $\therefore$ $R$'
+  hint: Look for a conclusion that is a tautology.
+  walkthrough: |
+    1. $Q \lor \neg Q$ is a tautology (true on every row).
+    2. A tautological conclusion means no bad row can exist.
+    3. The argument $P$ $\therefore$ $Q \lor \neg Q$ is automatically valid.
+    4. The correct answer is "$P$ $\therefore$ $Q \lor \neg Q$."
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $R$ $\therefore$ $P \lor \neg P$. Is this valid?'
+  answer: 1
+  options:
+    - 'Yes; the conclusion $P \lor \neg P$ is a tautology, so no bad row is possible'
+    - No; $R$ and $P$ are unrelated
+    - No; the conclusion must follow logically from the premise
+    - Yes; but only if $R$ is true
+  hint: Is the conclusion ever false?
+  walkthrough: |
+    1. The conclusion $P \lor \neg P$ is a tautology: true on every row.
+    2. A bad row requires the conclusion to be false, which never happens.
+    3. No bad row can exist regardless of the premise.
+    4. The argument is valid because the conclusion is a tautology.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $P \land \neg P$ $\therefore$ $R \land \neg R$. Is this valid?'
+  answer: 2
+  options:
+    - Invalid; both sides are contradictions
+    - 'Valid; the premise is contradictory, so no bad row exists'
+    - Invalid; contradictions cannot entail contradictions
+    - Valid; the conclusion is a tautology
+  hint: 'Can the premise $P \land \neg P$ ever be true?'
+  walkthrough: |
+    1. The premise $P \land \neg P$ is false on every row.
+    2. A bad row requires the premise to be true, which never happens.
+    3. No bad row can exist.
+    4. The argument is valid because the premise is contradictory, so no bad row exists.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'If the conclusion of an argument is a contradiction, is the argument automatically invalid?'
+  answer: 4
+  options:
+    - Yes; contradictions are always false
+    - Yes; a false conclusion guarantees invalidity
+    - No; but only if the premises are also contradictions
+    - 'No; if the premises are also contradictory, no bad row exists and the argument is valid'
+  hint: A bad row requires all premises TRUE and conclusion FALSE. What if the premises can never all be true?
+  walkthrough: |
+    1. A contradictory conclusion is false on every row.
+    2. If the premises can all be true on some row, that row is a bad row, making the argument invalid.
+    3. But if the premises can never all be true (e.g., they are contradictory), no bad row exists.
+    4. If the premises are contradictory, no bad row exists and the argument is valid.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $A$, $\neg A$ $\therefore$ $B$. Is this valid?'
+  answer: 3
+  options:
+    - 'Invalid; $A$ and $\neg A$ cannot both be premises'
+    - Invalid; $B$ does not follow from contradictory premises
+    - 'Valid; $A$ and $\neg A$ can never both be true, so no bad row exists'
+    - Valid; but only if $B$ is true
+  hint: 'Can both $A$ and $\neg A$ be true simultaneously?'
+  walkthrough: |
+    1. $A$ and $\neg A$ can never both be true at the same time.
+    2. A bad row requires all premises true, which never happens.
+    3. No bad row exists, so the argument is valid.
+    4. The argument is valid because $A$ and $\neg A$ can never both be true.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: Which of the following arguments is automatically valid due to its premises?
+  answer: 2
+  options:
+    - '$P$, $Q$ $\therefore$ $R$'
+    - '$P \land \neg P$, $Q$ $\therefore$ $R$'
+    - '$P$ $\therefore$ $Q$'
+    - '$P \lor Q$ $\therefore$ $P$'
+  hint: Look for premises that can never all be true simultaneously.
+  walkthrough: |
+    1. $P \land \neg P$ is a contradiction, always false.
+    2. Since one premise is always false, the premises can never all be true.
+    3. No bad row can exist.
+    4. The argument "$P \land \neg P$, $Q$ $\therefore$ $R$" is automatically valid due to the contradictory premise.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $\neg P \lor P$ $\therefore$ $Q \lor \neg Q$. Is this valid?'
+  answer: 1
+  options:
+    - 'Yes; the conclusion is a tautology, so no bad row is possible'
+    - No; the premise and conclusion use different letters
+    - Yes; but only because the premise is also a tautology
+    - No; tautologies cannot be conclusions
+  hint: Is the conclusion ever false?
+  walkthrough: |
+    1. The conclusion $Q \lor \neg Q$ is a tautology: true on every row.
+    2. A bad row requires the conclusion to be false, which never happens.
+    3. The argument is valid because the conclusion is a tautology.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $P$, $\neg P$ $\therefore$ $Q \land \neg Q$. Is this valid?'
+  answer: 4
+  options:
+    - Invalid; the conclusion is a contradiction
+    - Invalid; the premises conflict
+    - Valid; the conclusion follows from the premises
+    - 'Valid; the premises are contradictory (never both true), so no bad row exists'
+  hint: Can both premises be true at the same time?
+  walkthrough: |
+    1. $P$ and $\neg P$ can never both be true.
+    2. A bad row requires all premises true, which never happens.
+    3. No bad row exists.
+    4. The argument is valid because the premises are contradictory and no bad row exists.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $P \to Q$, $Q \to P$, $P$, $\neg P$ $\therefore$ $R$. Is this valid?'
+  answer: 3
+  options:
+    - Invalid; the argument has too many premises
+    - Invalid; $R$ is unrelated to the other letters
+    - 'Valid; premises $P$ and $\neg P$ can never both be true, so no bad row exists'
+    - Valid; but only because $R$ might be a tautology
+  hint: 'Among the premises, $P$ and $\neg P$ can never both be true.'
+  walkthrough: |
+    1. The premises include both $P$ and $\neg P$.
+    2. $P$ and $\neg P$ can never both be true on any row.
+    3. Since not all premises can be true simultaneously, no bad row exists.
+    4. The argument is valid because $P$ and $\neg P$ can never both be true.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: Can an argument be valid even if the conclusion is a contingent sentence (neither tautology nor contradiction)?
+  answer: 2
+  options:
+    - No; validity requires a tautological conclusion
+    - 'Yes; validity only requires no bad row, which can happen even with a contingent conclusion'
+    - No; contingent conclusions are always invalid
+    - Yes; but only if the premises are contradictions
+  hint: 'Consider Modus Ponens: $P \to Q$, $P$ $\therefore$ $Q$. Is $Q$ a tautology?'
+  walkthrough: |
+    1. $Q$ is a contingent sentence (true on some rows, false on others).
+    2. Modus Ponens ($P \to Q$, $P$ $\therefore$ $Q$) is valid: no bad row exists.
+    3. Validity requires only that no bad row exists, not that the conclusion be a tautology.
+    4. An argument can be valid with a contingent conclusion.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $\therefore$ $P \lor \neg P$ (no premises). Is this valid?'
+  answer: 1
+  options:
+    - 'Yes; a tautological conclusion is true on every row, so no bad row can exist'
+    - No; an argument needs at least one premise
+    - 'No; $P \lor \neg P$ is not always true'
+    - Yes; but only vacuously
+  hint: 'With no premises, every row trivially has "all premises true." Is the conclusion ever false?'
+  walkthrough: |
+    1. With no premises, every row counts as having all premises true (vacuously).
+    2. A bad row would need the conclusion to be false.
+    3. $P \lor \neg P$ is true on every row, so it is never false.
+    4. No bad row exists. The argument is valid.
+  tags:
+    - tautology-validity
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Valid
+  premises:
+    - '$P \lor Q$'
+    - '$\neg P$'
+    - '$\neg Q$'
+  conclusion: '$P \land Q$'
+  isValid: true
+  hint: Can all three premises be true at the same time?
+  walkthrough: |
+    1. Premises: $P \lor Q$, $\neg P$, $\neg Q$.
+    2. $\neg P$=T means $P$=F. $\neg Q$=T means $Q$=F.
+    3. But $P \lor Q$ = F$\lor$F = F. Premise 1 is false.
+    4. The premises can never all be true (they are contradictory).
+    5. No bad row exists. The argument is **valid** (vacuously).
+  tags:
+    - test-validity-truth-table
+
+- type: assertion-judgment
+  question: Is this argument valid?
+  answer: Invalid
+  premises:
+    - '$P \to Q$'
+  conclusion: '$Q \to P$'
+  isValid: false
+  counterexample:
+    P: false
+    Q: true
+  hint: 'Try $P$=F, $Q$=T.'
+  walkthrough: |
+    1. Set $P$=F, $Q$=T.
+    2. Premise: $P \to Q$ = F$\to$T = T.
+    3. Conclusion: $Q \to P$ = T$\to$F = F.
+    4. Premise true, conclusion false: bad row found.
+    5. The argument is **invalid**.
+  tags:
+    - test-validity-truth-table
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the gate is open, the dog escapes. The dog did not escape. So the gate is not open." ($G$=gate open, $D$=dog escapes). Is it valid?'
+  answer: 3
+  options:
+    - Invalid; the dog might have been caught
+    - Invalid; the conclusion is unrelated
+    - 'Valid; Modus Tollens: no bad row exists'
+    - Valid; but only because gates control dogs
+  hint: 'Premises: $G \to D$, $\neg D$. Conclusion: $\neg G$.'
+  walkthrough: |
+    1. Both premises true: $\neg D$=T (so $D$=F). $G \to D$=T with $D$=F forces $G$=F. Then $\neg G$=T.
+    2. Conclusion is always true when both premises are true.
+    3. No bad row. The argument is valid (Modus Tollens).
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the power is on, the screen is lit. The power is on. So the screen is lit." ($P$=power on, $S$=screen lit). Is it valid?'
+  answer: 2
+  options:
+    - Invalid; the screen might be broken
+    - 'Valid; Modus Ponens: no bad row exists'
+    - Invalid; the conclusion restates something obvious
+    - Valid; but only in normal conditions
+  hint: 'Premises: $P \to S$, $P$. Conclusion: $S$.'
+  walkthrough: |
+    1. Both premises true: $P$=T and $P \to S$=T forces $S$=T.
+    2. Conclusion $S$=T whenever both premises are true.
+    3. No bad row. The argument is valid (Modus Ponens).
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Symbolize and evaluate: "If the pipe leaks, the floor is wet. The floor is wet. So the pipe leaks." ($P$=pipe leaks, $W$=floor wet). Is it valid?'
+  answer: 4
+  options:
+    - Valid; the pipe must be the cause
+    - Valid; no bad row exists
+    - Invalid; pipes do not always leak
+    - 'Invalid; the floor could be wet for another reason (bad row at $P$=F, $W$=T)'
+  hint: 'Premises: $P \to W$, $W$. Conclusion: $P$. Try $P$=F, $W$=T.'
+  walkthrough: |
+    1. Set $P$=F, $W$=T.
+    2. $P \to W$ = F$\to$T = T. $W$ = T. Both premises true.
+    3. Conclusion $P$ = F. Bad row found.
+    4. The argument is invalid: the floor could be wet for another reason.
+  tags:
+    - english-argument-evaluation
+
+- type: formula-builder
+  question: 'Symbolize: "If either the fuse blows or the wire breaks, then the circuit fails." ($F$=fuse blows, $W$=wire breaks, $C$=circuit fails)'
+  answer: '$(F \lor W) \to C$'
+  variableMap:
+    F: The fuse blows
+    W: The wire breaks
+    C: The circuit fails
+  hint: 'Main connective: conditional. Antecedent: disjunction.'
+  walkthrough: |
+    1. Antecedent: "the fuse blows or the wire breaks" = $(F \lor W)$.
+    2. Consequent: "the circuit fails" = $C$.
+    3. The translation is $(F \lor W) \to C$.
+  tags:
+    - english-argument-evaluation
+
+- type: mcq
+  question: 'Argument: $\therefore$ $P \to P$ (no premises). Is this valid?'
+  answer: 1
+  options:
+    - 'Yes; $P \to P$ is a tautology, true on every row, so no bad row exists'
+    - No; an argument needs premises
+    - 'No; $P \to P$ is not always true'
+    - Yes; but only vacuously
+  hint: 'Is $P \to P$ true on every row?'
+  walkthrough: |
+    1. $P \to P$: when $P$=T, T$\to$T=T. When $P$=F, F$\to$F=T.
+    2. $P \to P$ is true on every row; it is a tautology.
+    3. With no premises, every row has "all premises true" (vacuously).
+    4. The conclusion is never false, so no bad row exists. The argument is valid.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $Q$ $\therefore$ $(P \to P)$. Is this valid?'
+  answer: 2
+  options:
+    - 'No; $Q$ and $P \to P$ are unrelated'
+    - 'Yes; the conclusion $P \to P$ is a tautology, so no bad row is possible'
+    - No; the argument is circular
+    - Yes; but only if $Q$ is true
+  hint: Is the conclusion ever false?
+  walkthrough: |
+    1. $P \to P$ is a tautology, true on every row.
+    2. A bad row requires the conclusion to be false, which never happens.
+    3. Regardless of the premise, no bad row can exist.
+    4. The argument is valid because the conclusion is a tautology.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $(P \land \neg P) \lor (Q \land \neg Q)$ $\therefore$ $R$. Is this valid?'
+  answer: 3
+  options:
+    - Invalid; $R$ has nothing to do with $P$ or $Q$
+    - Invalid; the premise is too complex
+    - 'Valid; the premise is a contradiction (always false), so no bad row exists'
+    - Valid; but only if $R$ is true
+  hint: Can the premise ever be true?
+  walkthrough: |
+    1. $P \land \neg P$ is always false. $Q \land \neg Q$ is always false.
+    2. $(P \land \neg P) \lor (Q \land \neg Q)$ = F $\lor$ F = F on every row.
+    3. The premise is never true, so no bad row can exist.
+    4. The argument is valid because the contradictory premise is never true.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $P$, $Q$ $\therefore$ $(P \land Q) \lor \neg(P \land Q)$. Is this valid?'
+  answer: 4
+  options:
+    - No; the conclusion is redundant
+    - No; the premises do not support the conclusion
+    - Yes; but only because the premises entail the conclusion
+    - 'Yes; the conclusion is a tautology ($A \lor \neg A$ form), so no bad row exists'
+  hint: Is the conclusion true on every row regardless of input?
+  walkthrough: |
+    1. Let $A$ = $P \land Q$. The conclusion is $A \lor \neg A$.
+    2. $A \lor \neg A$ is a tautology, true on every row.
+    3. The conclusion is never false, so no bad row can exist.
+    4. The argument is valid because the conclusion is a tautology.
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'Argument: $P \land \neg P$, $Q \land \neg Q$ $\therefore$ $R \lor S$. Is this valid?'
+  answer: 1
+  options:
+    - 'Yes; both premises are contradictions, so the premises are never all true, and no bad row exists'
+    - 'No; $R \lor S$ might be false'
+    - No; contradictions cannot be premises
+    - Yes; the conclusion is a tautology
+  hint: Can both premises be true simultaneously?
+  walkthrough: |
+    1. $P \land \neg P$ is always false. $Q \land \neg Q$ is always false.
+    2. Both premises are never true on any row.
+    3. A bad row requires all premises true, which never happens.
+    4. No bad row exists. The argument is valid (from contradictory premises).
+  tags:
+    - tautology-validity
+
+- type: mcq
+  question: 'To show an argument is tautologically valid using a truth table, you must show:'
+  answer: 2
+  options:
+    - That the conclusion is true on every row
+    - That there is no row where all premises are true and the conclusion is false
+    - That all premises are tautologies
+    - That the conclusion follows from one premise
+  hint: Validity means no bad row.
+  walkthrough: |
+    1. A bad row has all premises true and the conclusion false.
+    2. No bad row means the argument is valid.
+    3. You check every row for this condition.
+    4. Validity requires showing there is no row where all premises are true and the conclusion is false.
+  tags:
+    - diagnostic

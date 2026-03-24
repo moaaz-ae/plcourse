@@ -1,0 +1,940 @@
+- type: formula-builder
+  question: 'Translate: "The sun is shining and the birds are singing."'
+  answer: '$(S \land B)$'
+  variableMap:
+    S: The sun is shining
+    B: The birds are singing
+  hint: '"And" signals conjunction.'
+  walkthrough: |
+    1. Left conjunct: "The sun is shining" = $S$.
+    2. Right conjunct: "The birds are singing" = $B$.
+    3. "And" becomes $\land$.
+    4. The translation is $(S \land B)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The door is open and the alarm is off."'
+  answer: '$(D \land A)$'
+  variableMap:
+    D: The door is open
+    A: The alarm is off
+  hint: 'Identify the two claims joined by "and."'
+  walkthrough: |
+    1. Left conjunct: "The door is open" = $D$.
+    2. Right conjunct: "The alarm is off" = $A$.
+    3. The translation is $(D \land A)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "Tom arrived early and prepared the slides."'
+  answer: '$(E \land P)$'
+  variableMap:
+    E: Tom arrived early
+    P: Tom prepared the slides
+  hint: 'Even though both claims share a subject, each is a separate atomic sentence.'
+  walkthrough: |
+    1. Left conjunct: "Tom arrived early" = $E$.
+    2. Right conjunct: "Tom prepared the slides" = $P$.
+    3. "And" joins them: $(E \land P)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The river is wide and the current is strong."'
+  answer: '$(W \land C)$'
+  variableMap:
+    W: The river is wide
+    C: The current is strong
+  hint: '"And" joins two claims about the river.'
+  walkthrough: |
+    1. Left conjunct: "The river is wide" = $W$.
+    2. Right conjunct: "The current is strong" = $C$.
+    3. The translation is $(W \land C)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The exam is difficult and the time limit is strict."'
+  answer: '$(E \land T)$'
+  variableMap:
+    E: The exam is difficult
+    T: The time limit is strict
+  hint: 'Two independent claims joined by "and."'
+  walkthrough: |
+    1. Left conjunct: "The exam is difficult" = $E$.
+    2. Right conjunct: "The time limit is strict" = $T$.
+    3. The translation is $(E \land T)$.
+  tags:
+    - translate-conjunction
+
+- type: mcq
+  question: 'If $P$ is true and $Q$ is true, what is $(P \land Q)$?'
+  answer: 1
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - Neither
+  hint: Conjunction is true when both conjuncts are true.
+  walkthrough: |
+    1. Both $P$ and $Q$ are true.
+    2. A conjunction requires both parts to be true.
+    3. $(P \land Q)$ is true.
+    4. The answer is true.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $A$ is true and $B$ is false, what is $(A \land B)$?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - 'True, since $A$ is true'
+  hint: 'If either conjunct is false, the whole conjunction is false.'
+  walkthrough: |
+    1. $A$ is true, $B$ is false.
+    2. Conjunction requires both to be true.
+    3. Since $B$ is false, $(A \land B)$ is false.
+    4. The answer is false.
+  tags:
+    - compute-conjunction
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+  hiddenFormulas:
+    - '$(P \land Q)$'
+  hint: Conjunction is true only when both inputs are true.
+  walkthrough: |
+    1. Row 1: T $\land$ T = T.
+    2. Row 2: T $\land$ F = F.
+    3. Row 3: F $\land$ T = F.
+    4. Row 4: F $\land$ F = F.
+    5. The values are: T, F, F, F.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $R$ is false and $S$ is false, what is $(R \land S)$?'
+  answer: 4
+  options:
+    - 'True'
+    - 'True, since both are equal'
+    - Cannot be determined
+    - 'False'
+  hint: Both conjuncts must be true for the conjunction to be true.
+  walkthrough: |
+    1. Both $R$ and $S$ are false.
+    2. Neither is true, so the conjunction fails.
+    3. $(R \land S)$ is false.
+    4. The answer is false.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: How many rows of the conjunction truth table produce a true result?
+  answer: 2
+  options:
+    - '2'
+    - '1'
+    - '3'
+    - '4'
+  hint: A conjunction is true only when both inputs are true.
+  walkthrough: |
+    1. There are 4 rows for two inputs.
+    2. Only one row has both inputs true (T, T).
+    3. Exactly 1 row produces true.
+    4. The answer is 1.
+  tags:
+    - compute-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The hotel is expensive, but it is clean."'
+  answer: '$(E \land C)$'
+  variableMap:
+    E: The hotel is expensive
+    C: The hotel is clean
+  hint: '"But" functions logically the same as "and."'
+  walkthrough: |
+    1. "But" signals conjunction despite its contrastive tone.
+    2. Left conjunct: $E$. Right conjunct: $C$.
+    3. The translation is $(E \land C)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "Although the test was hard, everyone passed."'
+  answer: '$(H \land P)$'
+  variableMap:
+    H: The test was hard
+    P: Everyone passed
+  hint: '"Although" has the same truth conditions as "and."'
+  walkthrough: |
+    1. "Although" signals conjunction.
+    2. Left conjunct: $H$. Right conjunct: $P$.
+    3. The translation is $(H \land P)$.
+  tags:
+    - but-yet-although
+
+- type: mcq
+  question: 'Why do "and," "but," "yet," and "although" all translate to $\land$?'
+  answer: 3
+  options:
+    - They are all synonyms in English
+    - They all signal contrast
+    - 'They share the same truth conditions: true only when both parts are true'
+    - They are interchangeable in every context
+  hint: 'Logic tracks truth values, not tone or emphasis.'
+  walkthrough: |
+    1. "But," "yet," and "although" suggest contrast, but their truth conditions are identical to "and."
+    2. All are true when both parts are true and false otherwise.
+    3. Logic only cares about truth conditions.
+    4. They all share the same truth conditions: true only when both parts are true.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The car is old, yet it runs well."'
+  answer: '$(O \land R)$'
+  variableMap:
+    O: The car is old
+    R: The car runs well
+  hint: '"Yet" has the same truth conditions as "and."'
+  walkthrough: |
+    1. "Yet" signals conjunction.
+    2. Left conjunct: $O$. Right conjunct: $R$.
+    3. The translation is $(O \land R)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The restaurant is noisy, but the food is excellent."'
+  answer: '$(N \land E)$'
+  variableMap:
+    N: The restaurant is noisy
+    E: The food is excellent
+  hint: '"But" is logically "and."'
+  walkthrough: |
+    1. "But" signals conjunction with contrast.
+    2. Left conjunct: $N$. Right conjunct: $E$.
+    3. The translation is $(N \land E)$.
+  tags:
+    - but-yet-although
+
+- type: mcq
+  question: 'If $A$ is true and $B$ is false, what is $(A \land B)$?'
+  answer: 2
+  options:
+    - 'True'
+    - 'False'
+    - Cannot be determined
+    - 'True, because $A$ is true'
+  hint: Both conjuncts must be true for the conjunction to be true.
+  walkthrough: |
+    1. $A$ is true, $B$ is false.
+    2. Conjunction requires both to be true.
+    3. Since $B$ is false, $(A \land B)$ is false.
+    4. The answer is false.
+  tags:
+    - diagnostic
+
+# ── translate-conjunction: new questions 6-20 ──
+
+- type: formula-builder
+  question: 'Translate: "The sky is clear and the wind is calm."'
+  answer: '$(S \land W)$'
+  variableMap:
+    S: The sky is clear
+    W: The wind is calm
+  hint: '"And" signals conjunction.'
+  walkthrough: |
+    1. Left conjunct: "The sky is clear" = $S$.
+    2. Right conjunct: "The wind is calm" = $W$.
+    3. "And" becomes $\land$.
+    4. The translation is $(S \land W)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The battery is charged and the screen is on."'
+  answer: '$(B \land S)$'
+  variableMap:
+    B: The battery is charged
+    S: The screen is on
+  hint: 'Two claims joined by "and."'
+  walkthrough: |
+    1. Left conjunct: "The battery is charged" = $B$.
+    2. Right conjunct: "The screen is on" = $S$.
+    3. The translation is $(B \land S)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "Maria plays piano and sings in the choir."'
+  answer: '$(P \land C)$'
+  variableMap:
+    P: Maria plays piano
+    C: Maria sings in the choir
+  hint: Each claim about Maria gets its own sentence letter.
+  walkthrough: |
+    1. Left conjunct: "Maria plays piano" = $P$.
+    2. Right conjunct: "Maria sings in the choir" = $C$.
+    3. The translation is $(P \land C)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The store is open and the parking lot is full."'
+  answer: '$(O \land F)$'
+  variableMap:
+    O: The store is open
+    F: The parking lot is full
+  hint: '"And" joins two independent claims.'
+  walkthrough: |
+    1. Left conjunct: "The store is open" = $O$.
+    2. Right conjunct: "The parking lot is full" = $F$.
+    3. The translation is $(O \land F)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The project is on schedule and under budget."'
+  answer: '$(S \land B)$'
+  variableMap:
+    S: The project is on schedule
+    B: The project is under budget
+  hint: Two claims share a subject but are separate atomic sentences.
+  walkthrough: |
+    1. Left conjunct: "The project is on schedule" = $S$.
+    2. Right conjunct: "The project is under budget" = $B$.
+    3. The translation is $(S \land B)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The road is wet and the visibility is poor."'
+  answer: '$(W \land V)$'
+  variableMap:
+    W: The road is wet
+    V: The visibility is poor
+  hint: '"And" connects two claims.'
+  walkthrough: |
+    1. Left conjunct: "The road is wet" = $W$.
+    2. Right conjunct: "The visibility is poor" = $V$.
+    3. The translation is $(W \land V)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The cat is hungry and the dog is sleeping."'
+  answer: '$(H \land S)$'
+  variableMap:
+    H: The cat is hungry
+    S: The dog is sleeping
+  hint: '"And" joins two claims about different subjects.'
+  walkthrough: |
+    1. Left conjunct: "The cat is hungry" = $H$.
+    2. Right conjunct: "The dog is sleeping" = $S$.
+    3. The translation is $(H \land S)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "Tickets are sold out and the venue is packed."'
+  answer: '$(T \land V)$'
+  variableMap:
+    T: Tickets are sold out
+    V: The venue is packed
+  hint: '"And" signals conjunction.'
+  walkthrough: |
+    1. Left conjunct: "Tickets are sold out" = $T$.
+    2. Right conjunct: "The venue is packed" = $V$.
+    3. The translation is $(T \land V)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The engine is running and the fuel gauge reads full."'
+  answer: '$(R \land F)$'
+  variableMap:
+    R: The engine is running
+    F: The fuel gauge reads full
+  hint: 'Identify the two claims joined by "and."'
+  walkthrough: |
+    1. Left conjunct: "The engine is running" = $R$.
+    2. Right conjunct: "The fuel gauge reads full" = $F$.
+    3. The translation is $(R \land F)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The lecture was long and the room was cold."'
+  answer: '$(L \land C)$'
+  variableMap:
+    L: The lecture was long
+    C: The room was cold
+  hint: '"And" connects two facts.'
+  walkthrough: |
+    1. Left conjunct: "The lecture was long" = $L$.
+    2. Right conjunct: "The room was cold" = $C$.
+    3. The translation is $(L \land C)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The bridge is closed and traffic is diverted."'
+  answer: '$(B \land T)$'
+  variableMap:
+    B: The bridge is closed
+    T: Traffic is diverted
+  hint: '"And" signals conjunction.'
+  walkthrough: |
+    1. Left conjunct: "The bridge is closed" = $B$.
+    2. Right conjunct: "Traffic is diverted" = $T$.
+    3. The translation is $(B \land T)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The software is updated and the system is rebooted."'
+  answer: '$(U \land R)$'
+  variableMap:
+    U: The software is updated
+    R: The system is rebooted
+  hint: 'Two actions joined by "and."'
+  walkthrough: |
+    1. Left conjunct: "The software is updated" = $U$.
+    2. Right conjunct: "The system is rebooted" = $R$.
+    3. The translation is $(U \land R)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The windows are open and the music is playing."'
+  answer: '$(W \land M)$'
+  variableMap:
+    W: The windows are open
+    M: The music is playing
+  hint: '"And" connects two independent claims.'
+  walkthrough: |
+    1. Left conjunct: "The windows are open" = $W$.
+    2. Right conjunct: "The music is playing" = $M$.
+    3. The translation is $(W \land M)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "Sam finished the report and submitted it on time."'
+  answer: '$(F \land S)$'
+  variableMap:
+    F: Sam finished the report
+    S: Sam submitted it on time
+  hint: Each action by Sam is a separate atomic sentence.
+  walkthrough: |
+    1. Left conjunct: "Sam finished the report" = $F$.
+    2. Right conjunct: "Sam submitted it on time" = $S$.
+    3. The translation is $(F \land S)$.
+  tags:
+    - translate-conjunction
+
+- type: formula-builder
+  question: 'Translate: "The pool is heated and the lights are on."'
+  answer: '$(H \land L)$'
+  variableMap:
+    H: The pool is heated
+    L: The lights are on
+  hint: '"And" signals conjunction between two states.'
+  walkthrough: |
+    1. Left conjunct: "The pool is heated" = $H$.
+    2. Right conjunct: "The lights are on" = $L$.
+    3. The translation is $(H \land L)$.
+  tags:
+    - translate-conjunction
+
+# ── compute-conjunction: new questions 6-20 ──
+
+- type: mcq
+  question: 'If $P$ is false and $Q$ is true, what is $(P \land Q)$?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - 'True, since $Q$ is true'
+  hint: Both conjuncts must be true. Is $P$ true?
+  walkthrough: |
+    1. $P$ is false.
+    2. Conjunction requires both conjuncts to be true.
+    3. Since $P$ is false, $(P \land Q)$ is false regardless of $Q$.
+    4. The answer is false.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $M$ is true and $N$ is true, what is $(M \land N)$?'
+  answer: 2
+  options:
+    - 'False'
+    - 'True'
+    - Cannot be determined
+    - Depends on which is the left conjunct
+  hint: Conjunction is true when both inputs are true.
+  walkthrough: |
+    1. $M$ is true and $N$ is true.
+    2. Both conjuncts are true.
+    3. $(M \land N)$ is true.
+    4. The answer is true.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'Which row of the truth table makes $(A \land B)$ true?'
+  answer: 4
+  options:
+    - 'A = T, B = F'
+    - 'A = F, B = T'
+    - 'A = F, B = F'
+    - 'A = T, B = T'
+  hint: Conjunction is true only when both conjuncts are true.
+  walkthrough: |
+    1. $(A \land B)$ requires both $A$ and $B$ to be true.
+    2. Only the row where $A$ = T and $B$ = T produces true.
+    3. All other rows have at least one false conjunct.
+    4. The correct row is A = T, B = T.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $X$ is false, what is $(X \land Y)$ regardless of $Y$?'
+  answer: 1
+  options:
+    - Always false
+    - Always true
+    - True when $Y$ is true
+    - Cannot be determined without knowing $Y$
+  hint: 'If one conjunct is false, the conjunction fails.'
+  walkthrough: |
+    1. $X$ is false.
+    2. Conjunction requires both conjuncts to be true.
+    3. No matter what $Y$ is, having $X$ false makes the conjunction false.
+    4. The answer is always false.
+  tags:
+    - compute-conjunction
+
+- type: truth-table
+  question: 'Complete the truth table for $(Q \land P)$.'
+  formulas:
+    - $Q$
+    - $P$
+    - '$(Q \land P)$'
+  hiddenFormulas:
+    - '$(Q \land P)$'
+  hint: 'Conjunction is commutative: order does not matter. True only when both are true.'
+  walkthrough: |
+    1. Row 1: T $\land$ T = T.
+    2. Row 2: T $\land$ F = F.
+    3. Row 3: F $\land$ T = F.
+    4. Row 4: F $\land$ F = F.
+    5. The values are: T, F, F, F.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: How many rows of the conjunction truth table produce a false result?
+  answer: 3
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  hint: The table has 4 rows. Only one produces true.
+  walkthrough: |
+    1. There are 4 rows for two variables.
+    2. Only TT produces true.
+    3. The remaining 3 rows (TF, FT, FF) produce false.
+    4. The answer is 3.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $A$ is true and $B$ is true, is $(B \land A)$ the same as $(A \land B)$?'
+  answer: 2
+  options:
+    - No; order matters in conjunction
+    - 'Yes; conjunction is commutative, so both are true'
+    - Only when both are true
+    - Cannot be determined
+  hint: '$\land$ is commutative: $(A \land B)$ and $(B \land A)$ always have the same truth value.'
+  walkthrough: |
+    1. Conjunction is commutative: the order of conjuncts does not affect the truth value.
+    2. Both $A$ and $B$ are true.
+    3. $(A \land B)$ = T and $(B \land A)$ = T.
+    4. Yes, conjunction is commutative, so both are true.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'Suppose $P$ is false and $Q$ is false. Is $(P \land Q)$ true or false?'
+  answer: 4
+  options:
+    - True; both have the same value
+    - 'True'
+    - Cannot be determined
+    - 'False; conjunction requires both to be true, not just matching'
+  hint: Matching values is not enough. Conjunction needs both to be true.
+  walkthrough: |
+    1. $P$ is false and $Q$ is false.
+    2. Conjunction requires both to be true, not just equal.
+    3. Since neither is true, $(P \land Q)$ is false.
+    4. False; conjunction requires both to be true, not just matching.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $(A \land B)$ is true, what can you conclude about $A$ and $B$ individually?'
+  answer: 1
+  options:
+    - Both $A$ and $B$ must be true
+    - At least one of $A$ or $B$ is true
+    - '$A$ is true, but $B$ could be false'
+    - Nothing can be concluded
+  hint: A true conjunction guarantees that each conjunct is true.
+  walkthrough: |
+    1. $(A \land B)$ is true.
+    2. Conjunction is true only when both parts are true.
+    3. So $A$ must be true and $B$ must be true.
+    4. Both $A$ and $B$ must be true.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $(A \land B)$ is false and $A$ is true, what is $B$?'
+  answer: 3
+  options:
+    - 'True'
+    - Cannot be determined
+    - 'False'
+    - Either true or false
+  hint: 'If the conjunction is false but $A$ is true, the problem must be with $B$.'
+  walkthrough: |
+    1. $(A \land B)$ is false.
+    2. $A$ is true, so the false value must come from $B$.
+    3. $B$ must be false.
+    4. The answer is false.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'Which truth value assignment makes $(P \land Q)$ false?'
+  answer: 2
+  options:
+    - '$P$ = T, $Q$ = T'
+    - '$P$ = T, $Q$ = F'
+    - No assignment makes it false
+    - All assignments make it false
+  hint: Any assignment where at least one conjunct is false makes the conjunction false.
+  walkthrough: |
+    1. $(P \land Q)$ is false whenever at least one input is false.
+    2. $P$ = T and $Q$ = F: $Q$ is false, so the conjunction is false.
+    3. $P$ = T and $Q$ = T would make it true.
+    4. The answer is $P$ = T, $Q$ = F.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'Is $(A \land B)$ logically equivalent to $(B \land A)$?'
+  answer: 1
+  options:
+    - Yes; they have the same truth value on every row
+    - No; the order of conjuncts matters
+    - Only when both are true
+    - Only when both are false
+  hint: Compare the truth tables column by column.
+  walkthrough: |
+    1. $(A \land B)$: TT=T, TF=F, FT=F, FF=F.
+    2. $(B \land A)$: TT=T, TF=F, FT=F, FF=F.
+    3. Every row matches.
+    4. Yes, they have the same truth value on every row.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'What is the minimum number of true inputs needed for $(P \land Q)$ to be true?'
+  answer: 4
+  options:
+    - '0'
+    - '1'
+    - It depends on which input
+    - '2'
+  hint: Conjunction requires every conjunct to be true.
+  walkthrough: |
+    1. $(P \land Q)$ has two inputs.
+    2. Conjunction is true only when both inputs are true.
+    3. Both $P$ and $Q$ must be true.
+    4. The answer is 2.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $P$ is true, is $(P \land Q)$ guaranteed to be true?'
+  answer: 2
+  options:
+    - Yes; one true conjunct is enough
+    - No; $Q$ must also be true
+    - Yes; the left conjunct determines the result
+    - Cannot be determined
+  hint: 'Conjunction needs both parts to be true, not just one.'
+  walkthrough: |
+    1. $P$ is true, but we do not know $Q$.
+    2. If $Q$ is false, $(P \land Q)$ is false.
+    3. One true conjunct is not enough.
+    4. No; $Q$ must also be true.
+  tags:
+    - compute-conjunction
+
+- type: mcq
+  question: 'If $A$ is false, is $(A \land B)$ guaranteed to be false?'
+  answer: 1
+  options:
+    - Yes; one false conjunct makes the whole conjunction false
+    - No; $B$ could make it true
+    - Only if $B$ is also false
+    - Cannot be determined
+  hint: A single false conjunct is enough to make the conjunction false.
+  walkthrough: |
+    1. $A$ is false.
+    2. Conjunction requires both to be true.
+    3. With $A$ false, no value of $B$ can make $(A \land B)$ true.
+    4. Yes, one false conjunct makes the whole conjunction false.
+  tags:
+    - compute-conjunction
+
+# ── but-yet-although: new questions 6-20 ──
+
+- type: formula-builder
+  question: 'Translate: "The trail is steep, but the view is worth it."'
+  answer: '$(S \land V)$'
+  variableMap:
+    S: The trail is steep
+    V: The view is worth it
+  hint: '"But" has the same truth conditions as "and."'
+  walkthrough: |
+    1. "But" signals conjunction.
+    2. Left conjunct: $S$. Right conjunct: $V$.
+    3. The translation is $(S \land V)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "Although the flight was delayed, we arrived on time."'
+  answer: '$(D \land A)$'
+  variableMap:
+    D: The flight was delayed
+    A: We arrived on time
+  hint: '"Although" has the same truth conditions as "and."'
+  walkthrough: |
+    1. "Although" signals conjunction.
+    2. Left conjunct: $D$. Right conjunct: $A$.
+    3. The translation is $(D \land A)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The movie was long, yet it was entertaining."'
+  answer: '$(L \land E)$'
+  variableMap:
+    L: The movie was long
+    E: The movie was entertaining
+  hint: '"Yet" functions as conjunction in logic.'
+  walkthrough: |
+    1. "Yet" signals conjunction with contrast.
+    2. Left conjunct: $L$. Right conjunct: $E$.
+    3. The translation is $(L \land E)$.
+  tags:
+    - but-yet-although
+
+- type: mcq
+  question: '"The weather is cold but sunny." What connective translates "but" here?'
+  answer: 3
+  options:
+    - '$\lor$ (disjunction)'
+    - '$\to$ (conditional)'
+    - '$\land$ (conjunction)'
+    - '$\neg$ (negation)'
+  hint: '"But" has the same truth conditions as "and."'
+  walkthrough: |
+    1. "But" signals contrast, yet its truth conditions match "and."
+    2. The sentence is true when both parts are true.
+    3. The correct connective is $\land$ (conjunction).
+    4. The answer is $\land$ (conjunction).
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "Although the price is high, the quality is excellent."'
+  answer: '$(H \land E)$'
+  variableMap:
+    H: The price is high
+    E: The quality is excellent
+  hint: '"Although" signals conjunction.'
+  walkthrough: |
+    1. "Although" signals conjunction.
+    2. Left conjunct: $H$. Right conjunct: $E$.
+    3. The translation is $(H \land E)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The team lost, but they played well."'
+  answer: '$(L \land W)$'
+  variableMap:
+    L: The team lost
+    W: The team played well
+  hint: '"But" is logically equivalent to "and."'
+  walkthrough: |
+    1. "But" signals conjunction.
+    2. Left conjunct: $L$. Right conjunct: $W$.
+    3. The translation is $(L \land W)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The city is crowded, yet it is safe."'
+  answer: '$(C \land S)$'
+  variableMap:
+    C: The city is crowded
+    S: The city is safe
+  hint: '"Yet" functions the same as "and."'
+  walkthrough: |
+    1. "Yet" signals conjunction.
+    2. Left conjunct: $C$. Right conjunct: $S$.
+    3. The translation is $(C \land S)$.
+  tags:
+    - but-yet-although
+
+- type: mcq
+  question: Which of the following words does NOT signal conjunction?
+  answer: 2
+  options:
+    - but
+    - or
+    - although
+    - yet
+  hint: 'One of these signals disjunction, not conjunction.'
+  walkthrough: |
+    1. "But," "although," and "yet" all signal conjunction.
+    2. "Or" signals disjunction, not conjunction.
+    3. The answer is "or."
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "Although the road was bumpy, the ride was comfortable."'
+  answer: '$(B \land C)$'
+  variableMap:
+    B: The road was bumpy
+    C: The ride was comfortable
+  hint: '"Although" has the same logical meaning as "and."'
+  walkthrough: |
+    1. "Although" signals conjunction.
+    2. Left conjunct: $B$. Right conjunct: $C$.
+    3. The translation is $(B \land C)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The task was simple, yet nobody completed it."'
+  answer: '$(S \land N)$'
+  variableMap:
+    S: The task was simple
+    N: Nobody completed the task
+  hint: '"Yet" has identical truth conditions to "and."'
+  walkthrough: |
+    1. "Yet" signals conjunction.
+    2. Left conjunct: $S$. Right conjunct: $N$.
+    3. The translation is $(S \land N)$.
+  tags:
+    - but-yet-although
+
+- type: mcq
+  question: '"The cake was dry but tasty." Is the tone of "but" captured by $\land$?'
+  answer: 4
+  options:
+    - 'Yes; $\land$ captures the contrast'
+    - No; so the sentence cannot be translated into TFL
+    - 'Yes; $\land$ means "but" specifically'
+    - 'No; $\land$ captures only the truth conditions, not the contrast'
+  hint: 'Logic tracks truth values, not tone.'
+  walkthrough: |
+    1. "But" suggests contrast or surprise.
+    2. $\land$ does not capture tone; it captures truth conditions only.
+    3. The sentence is true when both parts are true, false otherwise.
+    4. $\land$ captures only the truth conditions, not the contrast.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The lecture was boring, but informative."'
+  answer: '$(B \land I)$'
+  variableMap:
+    B: The lecture was boring
+    I: The lecture was informative
+  hint: '"But" is logically "and."'
+  walkthrough: |
+    1. "But" signals conjunction.
+    2. Left conjunct: $B$. Right conjunct: $I$.
+    3. The translation is $(B \land I)$.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "Although it rained, the match continued."'
+  answer: '$(R \land M)$'
+  variableMap:
+    R: It rained
+    M: The match continued
+  hint: '"Although" signals conjunction.'
+  walkthrough: |
+    1. "Although" signals conjunction.
+    2. Left conjunct: $R$. Right conjunct: $M$.
+    3. The translation is $(R \land M)$.
+  tags:
+    - but-yet-although
+
+- type: mcq
+  question: '"She is young but experienced." "She is young and experienced." Do these have the same truth conditions?'
+  answer: 1
+  options:
+    - Yes; both are true exactly when both parts are true
+    - 'No; "but" adds a condition that "and" lacks'
+    - 'No; "but" makes the sentence false when both are true'
+    - 'Only in formal logic, not in English'
+  hint: '"But" differs from "and" in tone only, not in truth conditions.'
+  walkthrough: |
+    1. "But" and "and" differ in tone: "but" suggests contrast.
+    2. Both sentences are true when both parts are true, false otherwise.
+    3. Their truth conditions are identical.
+    4. Yes, both are true exactly when both parts are true.
+  tags:
+    - but-yet-although
+
+- type: formula-builder
+  question: 'Translate: "The server crashed, yet no data was lost."'
+  answer: '$(C \land N)$'
+  variableMap:
+    C: The server crashed
+    N: No data was lost
+  hint: '"Yet" is logically equivalent to "and."'
+  walkthrough: |
+    1. "Yet" signals conjunction.
+    2. Left conjunct: $C$. Right conjunct: $N$.
+    3. The translation is $(C \land N)$.
+  tags:
+    - but-yet-although

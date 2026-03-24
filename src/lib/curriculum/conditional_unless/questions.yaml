@@ -1,0 +1,594 @@
+- type: formula-builder
+  question: 'Translate: "The flight is delayed unless the weather clears."'
+  answer: '$(\neg W \to D)$'
+  variableMap:
+    D: The flight is delayed
+    W: The weather clears
+  hint: 'Replace "unless" with "if not." The clause after "if not" is the antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The flight is delayed if not the weather clears."
+    2. Antecedent: $\neg W$ (the weather does not clear).
+    3. Consequent: $D$ (the flight is delayed).
+    4. The translation is $(\neg W \to D)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless you register, you cannot attend."'
+  answer: '$(\neg R \to C)$'
+  variableMap:
+    R: You register
+    C: You cannot attend
+  hint: '"Unless" means "if not."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not you register, you cannot attend."
+    2. Antecedent: $\neg R$.
+    3. Consequent: $C$.
+    4. The translation is $(\neg R \to C)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The project fails unless the funding arrives."'
+  answer: '$(\neg F \to P)$'
+  variableMap:
+    P: The project fails
+    F: The funding arrives
+  hint: 'The clause after "unless" gets negated to form the antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The project fails if not the funding arrives."
+    2. Antecedent: $\neg F$.
+    3. Consequent: $P$.
+    4. The translation is $(\neg F \to P)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless the bridge is repaired, traffic is rerouted."'
+  answer: '$(\neg B \to T)$'
+  variableMap:
+    B: The bridge is repaired
+    T: Traffic is rerouted
+  hint: '"Unless B" becomes "if not B."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not the bridge is repaired, traffic is rerouted."
+    2. Antecedent: $\neg B$.
+    3. Consequent: $T$.
+    4. The translation is $(\neg B \to T)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "You will be late unless you leave now."'
+  answer: '$(\neg L \to T)$'
+  variableMap:
+    T: You will be late
+    L: You leave now
+  hint: '"Unless you leave now" becomes "if you do not leave now."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "You will be late if you do not leave now."
+    2. Antecedent: $\neg L$.
+    3. Consequent: $T$.
+    4. The translation is $(\neg L \to T)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The experiment succeeds provided that the temperature is stable."'
+  answer: '$(T \to E)$'
+  variableMap:
+    E: The experiment succeeds
+    T: The temperature is stable
+  hint: '"Provided that" works like "if." The clause after it is the antecedent.'
+  walkthrough: |
+    1. "Provided that" introduces the antecedent: "the temperature is stable" = $T$.
+    2. Consequent: "the experiment succeeds" = $E$.
+    3. The translation is $(T \to E)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The match continues provided that there is daylight."'
+  answer: '$(D \to M)$'
+  variableMap:
+    M: The match continues
+    D: There is daylight
+  hint: '"Provided that" = "if."'
+  walkthrough: |
+    1. Antecedent (after "provided that"): $D$.
+    2. Consequent: $M$.
+    3. The translation is $(D \to M)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that you pay the fee, you may park here."'
+  answer: '$(F \to P)$'
+  variableMap:
+    F: You pay the fee
+    P: You may park here
+  hint: '"Provided that" introduces the antecedent.'
+  walkthrough: |
+    1. Antecedent: "You pay the fee" = $F$.
+    2. Consequent: "You may park here" = $P$.
+    3. The translation is $(F \to P)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The website loads provided that the server is online."'
+  answer: '$(S \to W)$'
+  variableMap:
+    S: The server is online
+    W: The website loads
+  hint: '"Provided that" = "if."'
+  walkthrough: |
+    1. Antecedent: "The server is online" = $S$.
+    2. Consequent: "The website loads" = $W$.
+    3. The translation is $(S \to W)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "You get a refund provided that you return the item within 30 days."'
+  answer: '$(R \to G)$'
+  variableMap:
+    R: You return the item within 30 days
+    G: You get a refund
+  hint: '"Provided that" introduces the antecedent.'
+  walkthrough: |
+    1. Antecedent: "You return the item within 30 days" = $R$.
+    2. Consequent: "You get a refund" = $G$.
+    3. The translation is $(R \to G)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The concert is postponed unless the singer recovers."'
+  answer: '$(\neg R \to P)$'
+  variableMap:
+    P: The concert is postponed
+    R: The singer recovers
+  hint: 'Replace "unless" with "if not" and identify the antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The concert is postponed if not the singer recovers."
+    2. Antecedent: $\neg R$ (the singer does not recover).
+    3. Consequent: $P$ (the concert is postponed).
+    4. The translation is $(\neg R \to P)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless you have a ticket, you cannot enter."'
+  answer: '$(\neg T \to C)$'
+  variableMap:
+    T: You have a ticket
+    C: You cannot enter
+  hint: 'The clause after "unless" becomes a negated antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not you have a ticket, you cannot enter."
+    2. Antecedent: $\neg T$.
+    3. Consequent: $C$.
+    4. The translation is $(\neg T \to C)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The alarm rings unless you enter the code."'
+  answer: '$(\neg C \to A)$'
+  variableMap:
+    A: The alarm rings
+    C: You enter the code
+  hint: '"Unless" means "if not."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The alarm rings if not you enter the code."
+    2. Antecedent: $\neg C$.
+    3. Consequent: $A$.
+    4. The translation is $(\neg C \to A)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless the bill passes, the program is canceled."'
+  answer: '$(\neg B \to C)$'
+  variableMap:
+    B: The bill passes
+    C: The program is canceled
+  hint: 'The clause after "unless" gets negated to form the antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not the bill passes, the program is canceled."
+    2. Antecedent: $\neg B$.
+    3. Consequent: $C$.
+    4. The translation is $(\neg B \to C)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The battery dies unless you charge it."'
+  answer: '$(\neg C \to D)$'
+  variableMap:
+    D: The battery dies
+    C: You charge it
+  hint: '"Unless" introduces the negated antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The battery dies if not you charge it."
+    2. Antecedent: $\neg C$.
+    3. Consequent: $D$.
+    4. The translation is $(\neg C \to D)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless the key works, we are locked out."'
+  answer: '$(\neg K \to L)$'
+  variableMap:
+    K: The key works
+    L: We are locked out
+  hint: '"Unless K" becomes "if not K."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not the key works, we are locked out."
+    2. Antecedent: $\neg K$.
+    3. Consequent: $L$.
+    4. The translation is $(\neg K \to L)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The cake burns unless you set the timer."'
+  answer: '$(\neg T \to B)$'
+  variableMap:
+    B: The cake burns
+    T: You set the timer
+  hint: 'Replace "unless" with "if not" to identify the antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The cake burns if not you set the timer."
+    2. Antecedent: $\neg T$.
+    3. Consequent: $B$.
+    4. The translation is $(\neg T \to B)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless the witness testifies, the case is dismissed."'
+  answer: '$(\neg W \to D)$'
+  variableMap:
+    W: The witness testifies
+    D: The case is dismissed
+  hint: 'The clause after "unless" becomes the negated antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not the witness testifies, the case is dismissed."
+    2. Antecedent: $\neg W$.
+    3. Consequent: $D$.
+    4. The translation is $(\neg W \to D)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The flowers wilt unless you water them."'
+  answer: '$(\neg W \to F)$'
+  variableMap:
+    F: The flowers wilt
+    W: You water them
+  hint: '"Unless" means "if not."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The flowers wilt if not you water them."
+    2. Antecedent: $\neg W$.
+    3. Consequent: $F$.
+    4. The translation is $(\neg W \to F)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless the contract is signed, the deal falls through."'
+  answer: '$(\neg S \to D)$'
+  variableMap:
+    S: The contract is signed
+    D: The deal falls through
+  hint: 'The clause following "unless" gets negated.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not the contract is signed, the deal falls through."
+    2. Antecedent: $\neg S$.
+    3. Consequent: $D$.
+    4. The translation is $(\neg S \to D)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The meeting is canceled unless the director attends."'
+  answer: '$(\neg A \to C)$'
+  variableMap:
+    C: The meeting is canceled
+    A: The director attends
+  hint: '"Unless A" becomes "if not A."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The meeting is canceled if not the director attends."
+    2. Antecedent: $\neg A$.
+    3. Consequent: $C$.
+    4. The translation is $(\neg A \to C)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless you apologize, the friendship ends."'
+  answer: '$(\neg A \to E)$'
+  variableMap:
+    A: You apologize
+    E: The friendship ends
+  hint: 'Replace "unless" with "if not" and form the conditional.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not you apologize, the friendship ends."
+    2. Antecedent: $\neg A$.
+    3. Consequent: $E$.
+    4. The translation is $(\neg A \to E)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The system crashes unless you restart it."'
+  answer: '$(\neg R \to C)$'
+  variableMap:
+    C: The system crashes
+    R: You restart it
+  hint: '"Unless" introduces the negated antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The system crashes if not you restart it."
+    2. Antecedent: $\neg R$.
+    3. Consequent: $C$.
+    4. The translation is $(\neg R \to C)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "Unless the evidence is strong, the jury acquits."'
+  answer: '$(\neg E \to A)$'
+  variableMap:
+    E: The evidence is strong
+    A: The jury acquits
+  hint: 'The clause after "unless" becomes the negated antecedent.'
+  walkthrough: |
+    1. Replace "unless" with "if not": "If not the evidence is strong, the jury acquits."
+    2. Antecedent: $\neg E$.
+    3. Consequent: $A$.
+    4. The translation is $(\neg E \to A)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The paint fades unless you apply a sealant."'
+  answer: '$(\neg S \to F)$'
+  variableMap:
+    F: The paint fades
+    S: You apply a sealant
+  hint: '"Unless S" translates to "if not S."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The paint fades if not you apply a sealant."
+    2. Antecedent: $\neg S$.
+    3. Consequent: $F$.
+    4. The translation is $(\neg S \to F)$.
+  tags:
+    - translate-unless
+
+- type: formula-builder
+  question: 'Translate: "The loan is approved provided that you have good credit."'
+  answer: '$(C \to L)$'
+  variableMap:
+    C: You have good credit
+    L: The loan is approved
+  hint: '"Provided that" works like "if." The clause after it is the antecedent.'
+  walkthrough: |
+    1. "Provided that" introduces the antecedent: "you have good credit" = $C$.
+    2. Consequent: "the loan is approved" = $L$.
+    3. The translation is $(C \to L)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that the evidence is valid, the theory stands."'
+  answer: '$(E \to T)$'
+  variableMap:
+    E: The evidence is valid
+    T: The theory stands
+  hint: '"Provided that" = "if."'
+  walkthrough: |
+    1. Antecedent (after "provided that"): $E$.
+    2. Consequent: $T$.
+    3. The translation is $(E \to T)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "You may enter provided that you show identification."'
+  answer: '$(I \to E)$'
+  variableMap:
+    I: You show identification
+    E: You may enter
+  hint: 'The clause after "provided that" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "You show identification" = $I$.
+    2. Consequent: "You may enter" = $E$.
+    3. The translation is $(I \to E)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that the test passes, the software is released."'
+  answer: '$(T \to R)$'
+  variableMap:
+    T: The test passes
+    R: The software is released
+  hint: '"Provided that" introduces the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The test passes" = $T$.
+    2. Consequent: "The software is released" = $R$.
+    3. The translation is $(T \to R)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The deal is final provided that both parties agree."'
+  answer: '$(A \to F)$'
+  variableMap:
+    A: Both parties agree
+    F: The deal is final
+  hint: '"Provided that" = "if."'
+  walkthrough: |
+    1. Antecedent (after "provided that"): $A$.
+    2. Consequent: $F$.
+    3. The translation is $(A \to F)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that the weather permits, the launch proceeds."'
+  answer: '$(W \to L)$'
+  variableMap:
+    W: The weather permits
+    L: The launch proceeds
+  hint: 'The clause after "provided that" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The weather permits" = $W$.
+    2. Consequent: "The launch proceeds" = $L$.
+    3. The translation is $(W \to L)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "You receive a bonus provided that you meet the target."'
+  answer: '$(T \to B)$'
+  variableMap:
+    T: You meet the target
+    B: You receive a bonus
+  hint: '"Provided that" introduces the antecedent.'
+  walkthrough: |
+    1. Antecedent: "You meet the target" = $T$.
+    2. Consequent: "You receive a bonus" = $B$.
+    3. The translation is $(T \to B)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that the foundation is stable, the building is safe."'
+  answer: '$(F \to S)$'
+  variableMap:
+    F: The foundation is stable
+    S: The building is safe
+  hint: '"Provided that" = "if."'
+  walkthrough: |
+    1. Antecedent (after "provided that"): $F$.
+    2. Consequent: $S$.
+    3. The translation is $(F \to S)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The warranty applies provided that you keep the receipt."'
+  answer: '$(R \to W)$'
+  variableMap:
+    R: You keep the receipt
+    W: The warranty applies
+  hint: 'The clause after "provided that" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "You keep the receipt" = $R$.
+    2. Consequent: "The warranty applies" = $W$.
+    3. The translation is $(R \to W)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that the signal is strong, the call connects."'
+  answer: '$(S \to C)$'
+  variableMap:
+    S: The signal is strong
+    C: The call connects
+  hint: '"Provided that" introduces the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The signal is strong" = $S$.
+    2. Consequent: "The call connects" = $C$.
+    3. The translation is $(S \to C)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "You pass the course provided that you complete the assignments."'
+  answer: '$(A \to P)$'
+  variableMap:
+    A: You complete the assignments
+    P: You pass the course
+  hint: '"Provided that" = "if."'
+  walkthrough: |
+    1. Antecedent (after "provided that"): $A$.
+    2. Consequent: $P$.
+    3. The translation is $(A \to P)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that the budget allows, we hire another engineer."'
+  answer: '$(B \to H)$'
+  variableMap:
+    B: The budget allows
+    H: We hire another engineer
+  hint: 'The clause after "provided that" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "The budget allows" = $B$.
+    2. Consequent: "We hire another engineer" = $H$.
+    3. The translation is $(B \to H)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The contract is valid provided that it is witnessed."'
+  answer: '$(W \to V)$'
+  variableMap:
+    W: It is witnessed
+    V: The contract is valid
+  hint: '"Provided that" introduces the antecedent.'
+  walkthrough: |
+    1. Antecedent: "It is witnessed" = $W$.
+    2. Consequent: "The contract is valid" = $V$.
+    3. The translation is $(W \to V)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "Provided that the patient consents, the surgery proceeds."'
+  answer: '$(C \to S)$'
+  variableMap:
+    C: The patient consents
+    S: The surgery proceeds
+  hint: '"Provided that" = "if."'
+  walkthrough: |
+    1. Antecedent (after "provided that"): $C$.
+    2. Consequent: $S$.
+    3. The translation is $(C \to S)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The discount applies provided that you are a member."'
+  answer: '$(M \to D)$'
+  variableMap:
+    M: You are a member
+    D: The discount applies
+  hint: 'The clause after "provided that" is the antecedent.'
+  walkthrough: |
+    1. Antecedent: "You are a member" = $M$.
+    2. Consequent: "The discount applies" = $D$.
+    3. The translation is $(M \to D)$.
+  tags:
+    - translate-provided-that
+
+- type: formula-builder
+  question: 'Translate: "The game is canceled unless the rain stops."'
+  answer: '$(\neg R \to G)$'
+  variableMap:
+    G: The game is canceled
+    R: The rain stops
+  hint: '"Unless" means "if not."'
+  walkthrough: |
+    1. Replace "unless" with "if not": "The game is canceled if not the rain stops."
+    2. Antecedent: $\neg R$.
+    3. Consequent: $G$.
+    4. The translation is $(\neg R \to G)$.
+  tags:
+    - diagnostic

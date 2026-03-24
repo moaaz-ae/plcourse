@@ -1,20 +1,54 @@
 services:
-  db:
-    image: postgres:17
-    command: '-d 1'
+  plcourse-db:
+    image: 'postgres:17-bookworm'
+    restart: unless-stopped
+    shm_size: 256mb
+
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - 'db_data:/var/lib/postgresql/data'
+
     ports:
       - '5432:5432'
+
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=main
+      POSTGRES_USER: '${POSTGRES_USER:-postgres}'
+      POSTGRES_PASSWORD: '${POSTGRES_PASSWORD:-postgres}'
+      POSTGRES_DB: '${POSTGRES_DB:-plcourse_db}'
+
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      test:
+        - CMD-SHELL
+        - 'pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-plcourse_db}'
       interval: 10s
       timeout: 5s
       retries: 5
+      start_period: 10s
+
+  db-test:
+    image: 'postgres:17-bookworm'
+    restart: no
+    profiles:
+      - test
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: main_test
+    command: >
+      postgres
+      -c fsync=off
+      -c synchronous_commit=off
+      -c full_page_writes=off
+    tmpfs: /var/lib/postgresql/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U postgres -d main_test
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 2s
 
 volumes:
   db_data:

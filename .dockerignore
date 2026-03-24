@@ -1,0 +1,13 @@
+.svelte-kit
+node_modules
+build
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+Dockerfile
+.dockerignore
+README.md
+.kamal
+playwright-report

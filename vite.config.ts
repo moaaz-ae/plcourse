@@ -2,10 +2,16 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { loadEnv } from 'vite';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
 	plugins: [tailwindcss(), sveltekit()],
+	watch: {
+		ignored: ['**/test-results/**', '**/playwright-report/**']
+	},
 	test: {
+		env: loadEnv(mode, process.cwd(), ''),
+		fileParallelism: false,
 		expect: { requireAssertions: true },
 		projects: [
 			{
@@ -32,4 +38,4 @@ export default defineConfig({
 			}
 		]
 	}
-});
+}));

@@ -1,0 +1,1378 @@
+- type: mcq
+  question: 'Is this argument sound? 1. All mammals breathe air. 2. Dolphins are mammals. 3. Therefore, dolphins breathe air.'
+  answer: 1
+  options:
+    - Sound; the argument is valid and both premises are true
+    - Not sound; premise 1 is false
+    - Not sound; the argument is invalid
+    - 'Sound, but only for dolphins'
+  hint: 'Check two things: (1) is the argument valid? (2) are all premises actually true?'
+  walkthrough: |
+    1. Validity: if all mammals breathe air and dolphins are mammals, dolphins must breathe air. Valid.
+    2. Premise 1: all mammals breathe air. True.
+    3. Premise 2: dolphins are mammals. True.
+    4. Valid with all true premises: the argument is sound.
+    5. The argument is sound: it is valid and both premises are true.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All reptiles are warm-blooded. 2. Lizards are reptiles. 3. Therefore, lizards are warm-blooded.'
+  answer: 3
+  options:
+    - Sound; the logic is correct
+    - Not sound; the argument is invalid
+    - Not sound; premise 1 is false (reptiles are cold-blooded)
+    - Sound; lizards are indeed warm-blooded
+  hint: Check whether each premise is actually true in reality.
+  walkthrough: |
+    1. Validity: if all reptiles were warm-blooded and lizards are reptiles, lizards would be warm-blooded. Valid.
+    2. Premise 1: all reptiles are warm-blooded. False; reptiles are cold-blooded.
+    3. The argument is valid but has a false premise.
+    4. The argument is not sound because premise 1 is false (reptiles are cold-blooded).
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All planets orbit a star. 2. Earth is a planet. 3. Therefore, Earth orbits a star.'
+  answer: 2
+  options:
+    - Not sound; the conclusion is obvious
+    - Sound; the argument is valid and both premises are true
+    - Not sound; we cannot verify premise 1
+    - 'Sound, but trivially'
+  hint: Soundness requires validity and true premises. Check both.
+  walkthrough: |
+    1. Validity: if all planets orbit a star and Earth is a planet, Earth orbits a star. Valid.
+    2. Premise 1: all planets orbit a star. True.
+    3. Premise 2: Earth is a planet. True.
+    4. Valid with all true premises: sound.
+    5. The argument is sound: it is valid and both premises are true.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. If Paris is in Germany, then Paris is in Europe. 2. Paris is in Germany. 3. Therefore, Paris is in Europe.'
+  answer: 4
+  options:
+    - Sound; the conclusion is true
+    - Not sound; the argument is invalid
+    - Sound; both premises seem reasonable
+    - 'Not sound; premise 2 is false (Paris is in France, not Germany)'
+  hint: 'The conclusion happens to be true, but check whether all premises are true.'
+  walkthrough: |
+    1. Validity: if Paris were in Germany and Germany is in Europe, Paris would be in Europe. Valid.
+    2. Premise 2: Paris is in Germany. False; Paris is in France.
+    3. The argument is valid but has a false premise, so it is not sound.
+    4. The argument is not sound because premise 2 is false (Paris is in France, not Germany).
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. Some birds can fly. 2. Therefore, the Earth is round.'
+  answer: 3
+  options:
+    - Sound; both sentences are true
+    - Not sound; premise 1 is false
+    - Not sound; the argument is invalid (the conclusion does not follow)
+    - Sound; there is nothing wrong with the reasoning
+  hint: Soundness requires validity first. Does the conclusion follow from the premise?
+  walkthrough: |
+    1. The conclusion has nothing to do with the premise.
+    2. We can imagine some birds flying while the Earth is flat; the conclusion does not follow.
+    3. The argument is invalid, so it cannot be sound.
+    4. The argument is not sound because it is invalid: the conclusion does not follow from the premise.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Which argument is valid but unsound? 1. All insects have eight legs. 2. Ants are insects. 3. Therefore, ants have eight legs.'
+  answer: 2
+  options:
+    - It is both valid and sound
+    - It is valid but unsound; premise 1 is false (insects have six legs)
+    - It is invalid and unsound
+    - It is valid but unsound; premise 2 is false
+  hint: 'Check the truth of each premise. Insects have six legs, not eight.'
+  walkthrough: |
+    1. Validity: if all insects had eight legs and ants are insects, ants would have eight legs. Valid.
+    2. Premise 1: all insects have eight legs. False (insects have six legs; arachnids have eight).
+    3. Premise 2: ants are insects. True.
+    4. Valid with a false premise: valid but unsound.
+    5. The argument is valid but unsound because premise 1 is false (insects have six legs).
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Why is the following argument valid but unsound? 1. All oceans are freshwater. 2. The Atlantic is an ocean. 3. Therefore, the Atlantic is freshwater.'
+  answer: 1
+  options:
+    - Premise 1 is false; oceans contain saltwater
+    - Premise 2 is false; the Atlantic is a sea
+    - 'The conclusion is false, making the argument unsound'
+    - The argument is invalid because the conclusion is false
+  hint: 'A valid argument is unsound because of a false premise, not a false conclusion.'
+  walkthrough: |
+    1. Validity: if all oceans were freshwater and the Atlantic is an ocean, the Atlantic would be freshwater. Valid.
+    2. Premise 1 is false: oceans contain saltwater, not freshwater.
+    3. The false premise makes the argument unsound.
+    4. The argument is unsound because premise 1 is false: oceans contain saltwater.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which premise is false? 1. All even numbers are divisible by 3. 2. 10 is an even number. 3. Therefore, 10 is divisible by 3.'
+  answer: 4
+  options:
+    - Premise 2
+    - Both premises
+    - The conclusion
+    - Premise 1
+  hint: 'Is every even number divisible by 3? Think of examples like 2, 4, 8.'
+  walkthrough: |
+    1. Premise 1 claims all even numbers are divisible by 3.
+    2. The number 2 is even but not divisible by 3. Premise 1 is false.
+    3. Premise 2 is true: 10 is even.
+    4. The false premise is premise 1.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: An argument is valid but unsound. Which of the following must be true?
+  answer: 3
+  options:
+    - The conclusion is false
+    - All premises are false
+    - At least one premise is false
+    - The argument is also invalid
+  hint: Unsoundness means validity holds but the premises fail the truth test.
+  walkthrough: |
+    1. A sound argument is valid with all true premises.
+    2. If the argument is valid but unsound, the validity condition is met but the premise condition fails.
+    3. At least one premise must be false.
+    4. At least one premise must be false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which is valid but unsound? 1. All roses are blue. 2. This flower is a rose. 3. Therefore, this flower is blue.'
+  answer: 2
+  options:
+    - Invalid and unsound
+    - Valid but unsound; premise 1 is false
+    - Valid and sound
+    - Valid but unsound; premise 2 is false
+  hint: Are all roses blue in reality?
+  walkthrough: |
+    1. Validity: if all roses were blue and this flower is a rose, it would be blue. Valid.
+    2. Premise 1: all roses are blue. False (roses come in many colors).
+    3. Valid with a false premise: valid but unsound.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'If an argument is sound, what can you conclude about its conclusion?'
+  answer: 1
+  options:
+    - The conclusion must be true
+    - The conclusion is probably true
+    - The conclusion might be true or false
+    - 'Nothing; soundness is about premises, not conclusions'
+  hint: 'Sound = valid + all true premises. What does validity guarantee when premises are true?'
+  walkthrough: |
+    1. A sound argument is valid, so true premises guarantee a true conclusion.
+    2. A sound argument has all true premises.
+    3. Combining these: the conclusion must be true.
+    4. The conclusion must be true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: Can a sound argument have a false conclusion?
+  answer: 3
+  options:
+    - Yes; soundness does not guarantee truth
+    - 'Yes, if one premise is uncertain'
+    - No; a sound argument guarantees a true conclusion
+    - 'No, unless the argument has only one premise'
+  hint: 'Sound = valid + all true premises. Validity + true premises = ?'
+  walkthrough: |
+    1. Validity means: if all premises are true, the conclusion must be true.
+    2. Soundness adds: all premises are actually true.
+    3. So the conclusion must actually be true. A false conclusion is impossible.
+    4. No: a sound argument cannot have a false conclusion.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: Why does soundness guarantee a true conclusion?
+  answer: 4
+  options:
+    - Because soundness is defined as having a true conclusion
+    - Because all premises are false in a sound argument
+    - Because the conclusion is always obvious in a sound argument
+    - 'Because validity ensures true premises lead to a true conclusion, and soundness provides true premises'
+  hint: 'Combine the two requirements: validity (structure) and true premises (content).'
+  walkthrough: |
+    1. Validity guarantees: true premises produce a true conclusion.
+    2. Soundness provides: all premises are actually true.
+    3. The two conditions together force the conclusion to be true.
+    4. Soundness guarantees truth because validity ensures true premises lead to a true conclusion, and soundness provides true premises.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: An argument is sound. Which of the following is impossible?
+  answer: 2
+  options:
+    - The argument has exactly one premise
+    - The conclusion is false
+    - The conclusion is surprising
+    - The argument has more than three premises
+  hint: A sound argument guarantees a true conclusion.
+  walkthrough: |
+    1. A sound argument has true premises and valid structure.
+    2. This combination guarantees the conclusion is true.
+    3. A false conclusion is impossible for a sound argument.
+    4. A false conclusion is impossible for a sound argument.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'Someone presents a sound argument that "ice melts at 0°C." What must be the case?'
+  answer: 1
+  options:
+    - '"Ice melts at 0°C" must be true'
+    - '"Ice melts at 0°C" is probably true'
+    - The argument must have exactly two premises
+    - We need to verify the conclusion independently
+  hint: Soundness guarantees the truth of the conclusion.
+  walkthrough: |
+    1. A sound argument is valid with all true premises.
+    2. The conclusion of a sound argument must be true.
+    3. If the argument for "ice melts at 0°C" is sound, that claim is true.
+    4. "Ice melts at 0°C" must be true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'Why does this argument fail? 1. If it rains, streets get wet. 2. Streets are wet. 3. Therefore, it rained.'
+  answer: 3
+  options:
+    - A false premise (bad content)
+    - A true conclusion cannot come from these premises
+    - 'Bad structure (invalid): the premises do not guarantee the conclusion'
+    - Both premises are false
+  hint: Can both premises be true while the conclusion is false?
+  walkthrough: |
+    1. The streets could be wet from a sprinkler, not rain.
+    2. Both premises can be true while the conclusion is false.
+    3. The argument is invalid: the reasoning structure is flawed.
+    4. The argument fails because of bad structure (invalid): the premises do not guarantee the conclusion.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Why does this argument fail? 1. All spiders are insects. 2. Tarantulas are spiders. 3. Therefore, tarantulas are insects.'
+  answer: 2
+  options:
+    - Bad structure (invalid)
+    - 'Bad premise (unsound): premise 1 is false because spiders are arachnids, not insects'
+    - 'The conclusion is false, making the argument fail'
+    - Both premises are false
+  hint: Is the logical structure correct? Then check the premises.
+  walkthrough: |
+    1. The structure is valid: if all spiders were insects, tarantulas would be insects.
+    2. Premise 1 is false: spiders are arachnids, not insects.
+    3. The argument fails because of a false premise, not bad reasoning.
+    4. The argument fails because of a bad premise (unsound): spiders are arachnids, not insects.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: An argument is invalid. Is it also unsound?
+  answer: 4
+  options:
+    - Not necessarily; invalidity and unsoundness are independent
+    - No; invalidity means the premises are true
+    - Only if a premise is false
+    - 'Yes; soundness requires validity, so an invalid argument is automatically unsound'
+  hint: 'Soundness has two conditions: validity AND true premises.'
+  walkthrough: |
+    1. Soundness requires both validity and all true premises.
+    2. If the argument is invalid, the validity condition fails.
+    3. A failed condition means the argument cannot be sound.
+    4. Yes: an invalid argument is automatically unsound because soundness requires validity.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Which diagnosis is correct? 1. All birds are mammals. 2. Sparrows are birds. 3. Therefore, sparrows are mammals.'
+  answer: 1
+  options:
+    - 'The argument is valid but unsound: premise 1 is false'
+    - The argument is invalid because the conclusion is false
+    - The argument is sound because the logic works
+    - The argument is invalid because premise 1 is false
+  hint: 'Check structure first, then premise truth.'
+  walkthrough: |
+    1. Structure: if all birds were mammals and sparrows are birds, sparrows would be mammals. Valid.
+    2. Premise 1: all birds are mammals. False (birds and mammals are separate classes).
+    3. Valid structure + false premise = valid but unsound.
+    4. The argument is valid but unsound: premise 1 is false.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Which type of failure does this argument have? 1. Roses are red. 2. Therefore, the economy will crash.'
+  answer: 3
+  options:
+    - 'Bad premise (unsound): premise 1 is false'
+    - Both bad structure and bad premise
+    - 'Bad structure (invalid): the conclusion does not follow from the premise'
+    - No failure; the argument is valid
+  hint: Does the conclusion follow from the premise?
+  walkthrough: |
+    1. The conclusion has no connection to the premise.
+    2. We can easily imagine roses being red while the economy does not crash.
+    3. The argument is invalid: the structure is flawed.
+    4. The argument fails because of bad structure (invalid): the conclusion does not follow from the premise.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Is this argument sound? 1. All humans need oxygen. 2. Maria is a human. 3. Therefore, Maria needs oxygen.'
+  answer: 2
+  options:
+    - Not sound; the argument is invalid
+    - Sound; it is valid and both premises are true
+    - Not sound; premise 1 is false
+    - 'Sound, but only if Maria exists'
+  hint: 'Check validity first, then check if all premises are actually true.'
+  walkthrough: |
+    1. Validity: if all humans need oxygen and Maria is human, Maria needs oxygen. Valid.
+    2. Premise 1: all humans need oxygen. True.
+    3. Premise 2: Maria is a human. True.
+    4. Valid with all true premises: sound.
+    5. The argument is sound: it is valid and both premises are true.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: 'Is this argument sound? 1. All dogs are animals. 2. Rex is a dog. 3. Therefore, Rex is an animal.'
+  answer: 1
+  options:
+    - Sound; the argument is valid and both premises are true
+    - Not sound; premise 1 is false
+    - Not sound; the argument is invalid
+    - 'Sound, but only if Rex is real'
+  hint: 'Check validity first, then check whether both premises are actually true.'
+  walkthrough: |
+    1. Validity: if all dogs are animals and Rex is a dog, Rex must be an animal. Valid.
+    2. Premise 1: all dogs are animals. True.
+    3. Premise 2: Rex is a dog. True.
+    4. Valid with all true premises: the argument is sound.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All cats can swim. 2. Whiskers is a cat. 3. Therefore, Whiskers can swim.'
+  answer: 4
+  options:
+    - Sound; cats can swim
+    - Not sound; the argument is invalid
+    - Sound; the logic is correct
+    - Not sound; premise 1 is false (not all cats can swim naturally)
+  hint: Is it true that all cats can swim?
+  walkthrough: |
+    1. Validity: if all cats could swim and Whiskers is a cat, Whiskers could swim. Valid.
+    2. Premise 1: all cats can swim. False; most cats avoid water and are not natural swimmers.
+    3. Valid but with a false premise: not sound.
+    4. The argument is not sound because premise 1 is false.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All squares have four sides. 2. This shape is a square. 3. Therefore, this shape has four sides.'
+  answer: 2
+  options:
+    - Not sound; the argument is invalid
+    - Sound; the argument is valid and both premises are true
+    - Not sound; we cannot verify premise 2
+    - 'Sound, but trivially'
+  hint: Both premises are definitional truths. Is the logic valid?
+  walkthrough: |
+    1. Validity: if all squares have four sides and this shape is a square, it has four sides. Valid.
+    2. Premise 1: all squares have four sides. True by definition.
+    3. Premise 2: this shape is a square. True (given).
+    4. The argument is sound: valid with all true premises.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. Water freezes at 100 degrees Celsius. 2. The pond contains water. 3. Therefore, the pond freezes at 100 degrees Celsius.'
+  answer: 3
+  options:
+    - Sound; the conclusion follows
+    - Not sound; the argument is invalid
+    - Not sound; premise 1 is false (water freezes at 0 degrees Celsius)
+    - Sound; both premises are true
+  hint: At what temperature does water actually freeze?
+  walkthrough: |
+    1. Validity: if water froze at 100C and the pond has water, the pond would freeze at 100C. Valid.
+    2. Premise 1: water freezes at 100 degrees Celsius. False; water freezes at 0 degrees Celsius.
+    3. The argument is valid but not sound due to the false premise.
+    4. The argument is not sound because premise 1 is false.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. Tokyo is in Asia. 2. Therefore, the sun is a star.'
+  answer: 4
+  options:
+    - Sound; both statements are true
+    - Not sound; premise 1 is false
+    - Sound; the conclusion is true
+    - Not sound; the argument is invalid (the conclusion does not follow)
+  hint: Does the conclusion follow logically from the premise?
+  walkthrough: |
+    1. The conclusion "the sun is a star" has no logical connection to "Tokyo is in Asia."
+    2. The premise could be true while the conclusion is false in principle.
+    3. The argument is invalid, so it cannot be sound.
+    4. The argument is not sound because it is invalid.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All metals conduct electricity. 2. Copper is a metal. 3. Therefore, copper conducts electricity.'
+  answer: 1
+  options:
+    - Sound; the argument is valid and both premises are true
+    - Not sound; not all metals conduct electricity
+    - Not sound; the argument is invalid
+    - 'Sound, but only under certain conditions'
+  hint: Do all metals conduct electricity? Is copper a metal?
+  walkthrough: |
+    1. Validity: if all metals conduct electricity and copper is a metal, copper conducts electricity. Valid.
+    2. Premise 1: all metals conduct electricity. True.
+    3. Premise 2: copper is a metal. True.
+    4. The argument is sound: valid with all true premises.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All rivers flow uphill. 2. The Nile is a river. 3. Therefore, the Nile flows uphill.'
+  answer: 2
+  options:
+    - Sound; the logic is valid
+    - Not sound; premise 1 is false (rivers flow downhill)
+    - Not sound; premise 2 is false
+    - Not sound; the argument is invalid
+  hint: Do rivers flow uphill or downhill?
+  walkthrough: |
+    1. Validity: if all rivers flowed uphill and the Nile is a river, the Nile would flow uphill. Valid.
+    2. Premise 1: all rivers flow uphill. False; rivers flow downhill due to gravity.
+    3. The argument is valid but not sound.
+    4. The argument is not sound because premise 1 is false.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All triangles have three sides. 2. This polygon has three sides. 3. Therefore, this polygon is a triangle.'
+  answer: 3
+  options:
+    - Sound; the premises are true
+    - Not sound; premise 1 is false
+    - Not sound; the argument is invalid (the conclusion does not follow from these premises)
+    - Sound; the conclusion is correct
+  hint: 'Does "all A are B" and "X is B" guarantee "X is A"? This is affirming the consequent.'
+  walkthrough: |
+    1. The argument has the form: All A are B. X is B. Therefore X is A.
+    2. This is the fallacy of affirming the consequent; the conclusion does not follow.
+    3. Even though the conclusion happens to be true, the reasoning is invalid.
+    4. The argument is not sound because it is invalid.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All whales are fish. 2. Moby Dick is a whale. 3. Therefore, Moby Dick is a fish.'
+  answer: 4
+  options:
+    - Sound; whales are indeed fish
+    - Not sound; the argument is invalid
+    - Sound; the logic works perfectly
+    - 'Not sound; premise 1 is false (whales are mammals, not fish)'
+  hint: Are whales classified as fish or mammals?
+  walkthrough: |
+    1. Validity: if all whales were fish and Moby Dick is a whale, Moby Dick would be a fish. Valid.
+    2. Premise 1: all whales are fish. False; whales are mammals.
+    3. The argument is valid but has a false premise.
+    4. The argument is not sound because premise 1 is false.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. If it is raining, the ground is wet. 2. It is raining. 3. Therefore, the ground is wet.'
+  answer: 3
+  options:
+    - Not sound; the argument is invalid
+    - Not sound; premise 1 is false
+    - Sound; the argument is valid and both premises are true
+    - 'Sound, but only when it is actually raining'
+  hint: Is this a valid form (modus ponens)? Are both premises true when it is raining?
+  walkthrough: |
+    1. Validity: this is modus ponens (if P then Q, P, therefore Q). Valid.
+    2. Premise 1: if it is raining, the ground is wet. True.
+    3. Premise 2: it is raining. True (given the scenario).
+    4. The argument is sound: valid with all true premises.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All prime numbers are odd. 2. 7 is prime. 3. Therefore, 7 is odd.'
+  answer: 2
+  options:
+    - Sound; the logic is correct and both premises are true
+    - Not sound; premise 1 is false (2 is a prime number that is even)
+    - Not sound; the argument is invalid
+    - Sound; 7 is indeed odd
+  hint: Is every prime number odd? Consider the number 2.
+  walkthrough: |
+    1. Validity: if all primes were odd and 7 is prime, 7 would be odd. Valid.
+    2. Premise 1: all prime numbers are odd. False; 2 is prime and even.
+    3. The conclusion happens to be true, but the argument is not sound.
+    4. The argument is not sound because premise 1 is false.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All humans have hearts. 2. Socrates is a human. 3. Therefore, Socrates has a heart.'
+  answer: 1
+  options:
+    - Sound; valid with all true premises
+    - Not sound; premise 1 is false
+    - Not sound; the argument is invalid
+    - Not sound; Socrates is no longer alive
+  hint: Do all humans have hearts? Is the logic valid?
+  walkthrough: |
+    1. Validity: if all humans have hearts and Socrates is human, Socrates has a heart. Valid.
+    2. Premise 1: all humans have hearts. True.
+    3. Premise 2: Socrates is a human. True.
+    4. The argument is sound: valid with all true premises.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. All birds lay eggs. 2. A robin is a bird. 3. Therefore, a robin lays eggs.'
+  answer: 3
+  options:
+    - Not sound; the argument is invalid
+    - Not sound; premise 1 is false
+    - Sound; the argument is valid and both premises are true
+    - 'Sound, but only for female robins'
+  hint: Do all birds lay eggs? Is the logic valid?
+  walkthrough: |
+    1. Validity: if all birds lay eggs and a robin is a bird, a robin lays eggs. Valid.
+    2. Premise 1: all birds lay eggs. True (as a species characteristic).
+    3. Premise 2: a robin is a bird. True.
+    4. The argument is sound: valid with all true premises.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. No mammals lay eggs. 2. A platypus is a mammal. 3. Therefore, a platypus does not lay eggs.'
+  answer: 4
+  options:
+    - Sound; the logic is valid
+    - Not sound; the argument is invalid
+    - Sound; mammals do not lay eggs
+    - Not sound; premise 1 is false (platypuses and echidnas are egg-laying mammals)
+  hint: Are there any mammals that lay eggs?
+  walkthrough: |
+    1. Validity: if no mammals laid eggs and a platypus is a mammal, it would not lay eggs. Valid.
+    2. Premise 1: no mammals lay eggs. False; monotremes (platypuses, echidnas) do lay eggs.
+    3. The argument is valid but has a false premise.
+    4. The argument is not sound because premise 1 is false.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Is this argument sound? 1. The Earth orbits the Sun. 2. The Moon orbits the Earth. 3. Therefore, bananas are yellow.'
+  answer: 2
+  options:
+    - Sound; all three statements are true
+    - Not sound; the argument is invalid (the conclusion does not follow)
+    - Not sound; premise 2 is false
+    - Sound; there is no false premise
+  hint: 'Does the conclusion follow from the premises, or are they unrelated?'
+  walkthrough: |
+    1. The conclusion about bananas is unrelated to orbital mechanics.
+    2. The premises could be true while the conclusion is false.
+    3. The argument is invalid, so it cannot be sound.
+    4. The argument is not sound because it is invalid.
+  tags:
+    - evaluate-soundness
+
+- type: mcq
+  question: 'Which argument is valid but unsound? 1. All planets are made of cheese. 2. Mars is a planet. 3. Therefore, Mars is made of cheese.'
+  answer: 3
+  options:
+    - Invalid and unsound
+    - Valid and sound
+    - Valid but unsound; premise 1 is false
+    - Valid but unsound; premise 2 is false
+  hint: 'Check whether the structure is valid, then check premise truth.'
+  walkthrough: |
+    1. Validity: if all planets were cheese and Mars is a planet, Mars would be cheese. Valid.
+    2. Premise 1: all planets are made of cheese. False.
+    3. Premise 2: Mars is a planet. True.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which argument is valid but unsound? 1. All fish can walk. 2. A tuna is a fish. 3. Therefore, a tuna can walk.'
+  answer: 1
+  options:
+    - Valid but unsound; premise 1 is false (fish cannot walk)
+    - Valid and sound
+    - Invalid and unsound
+    - Valid but unsound; the conclusion is false
+  hint: Can fish walk? Check the structure and then the premises.
+  walkthrough: |
+    1. Validity: if all fish could walk and a tuna is a fish, a tuna could walk. Valid.
+    2. Premise 1: all fish can walk. False; fish swim, they do not walk.
+    3. Valid structure with a false premise: valid but unsound.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which premise makes this argument unsound? 1. All cars run on water. 2. A Toyota is a car. 3. Therefore, a Toyota runs on water.'
+  answer: 2
+  options:
+    - Premise 2
+    - 'Premise 1 (cars run on fuel, not water)'
+    - Both premises
+    - The conclusion
+  hint: Do cars run on water?
+  walkthrough: |
+    1. The structure is valid: if all cars ran on water and a Toyota is a car, it would run on water.
+    2. Premise 1: all cars run on water. False; cars run on gasoline, diesel, or electricity.
+    3. Premise 2: a Toyota is a car. True.
+    4. Premise 1 is the false premise that makes this argument unsound.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: An argument has valid structure and exactly one false premise. What is its status?
+  answer: 4
+  options:
+    - Sound
+    - Invalid
+    - Neither valid nor invalid
+    - Valid but unsound
+  hint: Soundness requires validity AND all true premises.
+  walkthrough: |
+    1. The argument is valid (given).
+    2. One premise is false, so the "all true premises" condition fails.
+    3. Valid structure + at least one false premise = valid but unsound.
+    4. The argument is valid but unsound.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which argument is valid but unsound? 1. All snakes have legs. 2. Cobras are snakes. 3. Therefore, cobras have legs.'
+  answer: 2
+  options:
+    - Invalid and unsound
+    - Valid but unsound; premise 1 is false (snakes are legless)
+    - Valid and sound
+    - Valid but unsound; premise 2 is false
+  hint: Do snakes have legs?
+  walkthrough: |
+    1. Validity: if all snakes had legs and cobras are snakes, cobras would have legs. Valid.
+    2. Premise 1: all snakes have legs. False; snakes are legless reptiles.
+    3. Premise 2: cobras are snakes. True.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: Can a valid but unsound argument have a true conclusion?
+  answer: 3
+  options:
+    - No; an unsound argument always has a false conclusion
+    - No; the false premise guarantees a false conclusion
+    - Yes; a false premise does not guarantee a false conclusion
+    - Only if all premises are true
+  hint: 'A false premise blocks the soundness guarantee, but the conclusion might still happen to be true.'
+  walkthrough: |
+    1. A false premise means soundness fails, so the conclusion is not guaranteed.
+    2. However, the conclusion could still be true by coincidence.
+    3. Example: "All mammals breathe. Dogs breathe. Therefore dogs breathe" with a broader false premise could still yield truth.
+    4. Yes: a valid but unsound argument can have a true conclusion.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Why is this argument valid but unsound? 1. All humans are immortal. 2. Cleopatra was a human. 3. Therefore, Cleopatra was immortal.'
+  answer: 1
+  options:
+    - Premise 1 is false; humans are mortal
+    - Premise 2 is false
+    - 'The conclusion is false, making it unsound'
+    - The argument is invalid
+  hint: Are humans immortal?
+  walkthrough: |
+    1. Validity: if all humans were immortal and Cleopatra was human, she would be immortal. Valid.
+    2. Premise 1: all humans are immortal. False; all humans are mortal.
+    3. The false premise makes the argument unsound despite valid structure.
+    4. The argument is unsound because premise 1 is false: humans are mortal.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which premise is false? 1. All continents are islands. 2. Africa is a continent. 3. Therefore, Africa is an island.'
+  answer: 3
+  options:
+    - Premise 2
+    - Both premises
+    - Premise 1 (continents are not islands)
+    - The conclusion
+  hint: Are continents classified as islands?
+  walkthrough: |
+    1. Premise 1: all continents are islands. False; continents and islands are distinct categories.
+    2. Premise 2: Africa is a continent. True.
+    3. The false premise is premise 1.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which is valid but unsound? 1. All liquids are flammable. 2. Water is a liquid. 3. Therefore, water is flammable.'
+  answer: 4
+  options:
+    - Valid and sound
+    - Invalid and unsound
+    - Valid but unsound; premise 2 is false
+    - Valid but unsound; premise 1 is false (water is not flammable)
+  hint: Are all liquids flammable? Consider water.
+  walkthrough: |
+    1. Validity: if all liquids were flammable and water is a liquid, water would be flammable. Valid.
+    2. Premise 1: all liquids are flammable. False; water is a liquid and is not flammable.
+    3. Premise 2: water is a liquid. True.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'If the conclusion of a valid argument is false, what can you deduce?'
+  answer: 2
+  options:
+    - The argument is invalid
+    - At least one premise is false (the argument is unsound)
+    - All premises are false
+    - Nothing; conclusions can be false in valid arguments
+  hint: 'In a valid argument, true premises guarantee a true conclusion. What if the conclusion is false?'
+  walkthrough: |
+    1. Validity means: if all premises are true, the conclusion must be true.
+    2. Contrapositive: if the conclusion is false, at least one premise must be false.
+    3. So a valid argument with a false conclusion must have a false premise.
+    4. At least one premise is false, making the argument unsound.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which argument is valid but unsound? 1. All trees are animals. 2. An oak is a tree. 3. Therefore, an oak is an animal.'
+  answer: 3
+  options:
+    - Valid and sound
+    - Invalid and unsound
+    - 'Valid but unsound; premise 1 is false (trees are plants, not animals)'
+    - Valid but unsound; premise 2 is false
+  hint: Are trees classified as animals?
+  walkthrough: |
+    1. Validity: if all trees were animals and an oak is a tree, an oak would be an animal. Valid.
+    2. Premise 1: all trees are animals. False; trees are plants.
+    3. Premise 2: an oak is a tree. True.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Why is this argument valid but unsound? 1. All computers are alive. 2. My laptop is a computer. 3. Therefore, my laptop is alive.'
+  answer: 2
+  options:
+    - The argument is invalid
+    - Premise 1 is false; computers are not alive
+    - Premise 2 is false
+    - 'The conclusion is false, which makes it unsound'
+  hint: Are computers living things?
+  walkthrough: |
+    1. Validity: if all computers were alive and a laptop is a computer, the laptop would be alive. Valid.
+    2. Premise 1: all computers are alive. False; computers are machines, not living things.
+    3. The false premise makes the argument unsound.
+    4. The argument is unsound because premise 1 is false: computers are not alive.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which is valid but unsound? 1. All mountains are underwater. 2. Everest is a mountain. 3. Therefore, Everest is underwater.'
+  answer: 1
+  options:
+    - Valid but unsound; premise 1 is false
+    - Valid and sound
+    - Invalid and unsound
+    - Valid but unsound; premise 2 is false
+  hint: Are all mountains underwater?
+  walkthrough: |
+    1. Validity: if all mountains were underwater and Everest is a mountain, Everest would be underwater. Valid.
+    2. Premise 1: all mountains are underwater. False; most mountains are above water.
+    3. Premise 2: Everest is a mountain. True.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'A sound argument for "water is wet" is presented. What follows?'
+  answer: 2
+  options:
+    - '"Water is wet" is probably true'
+    - '"Water is wet" must be true'
+    - The argument has at least one false premise
+    - We need additional evidence
+  hint: A sound argument guarantees its conclusion.
+  walkthrough: |
+    1. A sound argument is valid with all true premises.
+    2. Validity guarantees the conclusion follows from true premises.
+    3. The conclusion of a sound argument must be true.
+    4. "Water is wet" must be true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'If an argument is sound, can its conclusion be doubted?'
+  answer: 4
+  options:
+    - Yes; soundness only means the logic works
+    - Yes; the premises might be uncertain
+    - 'No, but only if the argument has more than one premise'
+    - No; soundness guarantees the conclusion is true
+  hint: 'Soundness = validity + all true premises. What does that force about the conclusion?'
+  walkthrough: |
+    1. A sound argument is valid, meaning true premises guarantee a true conclusion.
+    2. A sound argument has all true premises.
+    3. These two facts together make the conclusion necessarily true.
+    4. No: soundness guarantees the conclusion is true, so it cannot be doubted.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: Which of the following is true about the conclusion of a sound argument?
+  answer: 1
+  options:
+    - It is guaranteed to be true
+    - It is probably true but not certain
+    - It could be true or false
+    - It is true only if the argument has two premises
+  hint: 'Sound = valid + all true premises. Validity + true premises = true conclusion.'
+  walkthrough: |
+    1. Validity ensures that true premises produce a true conclusion.
+    2. Soundness ensures all premises are actually true.
+    3. Combining these: the conclusion is guaranteed to be true.
+    4. The conclusion of a sound argument is guaranteed to be true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'Suppose an argument is sound and its conclusion is "the sky is blue." What must be the case?'
+  answer: 3
+  options:
+    - The argument might still have a false premise
+    - The conclusion is probably true
+    - '"The sky is blue" is true'
+    - We cannot determine the truth of the conclusion
+  hint: Soundness guarantees the truth of the conclusion.
+  walkthrough: |
+    1. A sound argument has valid structure and all true premises.
+    2. These two conditions guarantee the conclusion is true.
+    3. If the argument is sound, "the sky is blue" must be true.
+    4. "The sky is blue" is true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: Why is it impossible for a sound argument to have a false conclusion?
+  answer: 2
+  options:
+    - Because soundness is defined as having a true conclusion
+    - 'Because validity blocks false conclusions when premises are true, and soundness ensures true premises'
+    - Because the premises are always obvious in sound arguments
+    - Because sound arguments have exactly two premises
+  hint: Combine what validity does (structure) with what soundness adds (true premises).
+  walkthrough: |
+    1. Validity means: whenever all premises are true, the conclusion must be true.
+    2. Soundness means: the argument is valid and all premises are actually true.
+    3. Since the premises are true and validity prevents a false conclusion from true premises, the conclusion must be true.
+    4. Validity blocks false conclusions when premises are true, and soundness ensures true premises.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: An argument is valid and all its premises are true. Is its conclusion true?
+  answer: 4
+  options:
+    - Not necessarily; validity alone does not guarantee truth
+    - Only if the conclusion is obviously true
+    - Only if the argument has more than one premise
+    - 'Yes; this is a sound argument, so the conclusion is true'
+  hint: 'Valid + all true premises = sound. What does soundness guarantee?'
+  walkthrough: |
+    1. Valid + all true premises = sound.
+    2. A sound argument guarantees a true conclusion.
+    3. The conclusion must be true.
+    4. Yes: this is a sound argument, so the conclusion is true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'If you know an argument is sound, do you need to verify its conclusion separately?'
+  answer: 1
+  options:
+    - No; soundness already guarantees the conclusion is true
+    - Yes; soundness only concerns premises
+    - Yes; you always need independent verification
+    - 'No, but only for simple arguments'
+  hint: A sound argument guarantees the truth of its conclusion through valid reasoning from true premises.
+  walkthrough: |
+    1. Soundness means the argument is valid with all true premises.
+    2. Validity guarantees the conclusion follows from the premises.
+    3. Since the premises are true and the logic is valid, the conclusion is guaranteed.
+    4. No: soundness already guarantees the conclusion is true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'A sound argument concludes "all humans are mortal." Is this conclusion true?'
+  answer: 3
+  options:
+    - Probably true
+    - Cannot be determined from soundness alone
+    - Yes; a sound argument guarantees a true conclusion
+    - Only true if we verify it independently
+  hint: Soundness guarantees truth.
+  walkthrough: |
+    1. A sound argument is valid with true premises.
+    2. The conclusion of a sound argument must be true.
+    3. "All humans are mortal" is guaranteed to be true.
+    4. Yes: a sound argument guarantees a true conclusion.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: What distinguishes a sound argument from merely having a true conclusion?
+  answer: 4
+  options:
+    - Sound arguments are longer
+    - Sound arguments have more premises
+    - There is no difference
+    - A sound argument proves the conclusion through valid reasoning from true premises
+  hint: Many statements are true without being supported by sound arguments.
+  walkthrough: |
+    1. A true conclusion can exist without any argument supporting it.
+    2. A sound argument provides valid logical structure plus true premises.
+    3. This means the conclusion is not just true but proven through reasoning.
+    4. A sound argument proves the conclusion through valid reasoning from true premises.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: Which combination guarantees a true conclusion?
+  answer: 2
+  options:
+    - Valid argument with at least one true premise
+    - Valid argument with all true premises (sound argument)
+    - Invalid argument with all true premises
+    - Valid argument with a false premise
+  hint: 'Soundness = validity + all true premises. Only this combination forces a true conclusion.'
+  walkthrough: |
+    1. Validity alone does not guarantee truth; the premises might be false.
+    2. True premises alone do not guarantee truth; the argument might be invalid.
+    3. Only validity combined with all true premises (soundness) guarantees truth.
+    4. A valid argument with all true premises (a sound argument) guarantees a true conclusion.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: An argument is valid but unsound. Is its conclusion guaranteed to be true?
+  answer: 1
+  options:
+    - 'No; without all true premises, the conclusion is not guaranteed'
+    - Yes; validity alone guarantees truth
+    - Yes; the conclusion is always true in valid arguments
+    - No; the conclusion must be false
+  hint: Validity guarantees truth only when combined with true premises.
+  walkthrough: |
+    1. Validity guarantees: IF all premises are true, THEN the conclusion is true.
+    2. An unsound argument has at least one false premise.
+    3. The "if" condition is not met, so the guarantee does not apply.
+    4. No: without all true premises, the conclusion is not guaranteed.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'If someone proves their argument is sound, what have they established about the conclusion?'
+  answer: 3
+  options:
+    - The conclusion is likely true
+    - The conclusion needs further evidence
+    - The conclusion is definitely true
+    - The conclusion is true only in certain contexts
+  hint: A sound argument is the strongest guarantee in deductive logic.
+  walkthrough: |
+    1. A sound argument is valid with all true premises.
+    2. This is the strongest guarantee: the conclusion must be true.
+    3. No further evidence is needed once soundness is established.
+    4. The conclusion is definitely true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: Can a sound argument have premises that are difficult to verify?
+  answer: 2
+  options:
+    - No; sound arguments have obvious premises
+    - 'Yes; the premises must be true, but they need not be easy to verify'
+    - No; soundness requires easily checkable premises
+    - 'Yes, but then the argument is not really sound'
+  hint: 'Soundness requires true premises, not easily verified ones.'
+  walkthrough: |
+    1. Soundness requires validity and all true premises.
+    2. The premises must actually be true, but nothing says they must be obvious.
+    3. A premise can be difficult to verify yet still be true.
+    4. Yes: the premises must be true, but they need not be easy to verify.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: What is the relationship between soundness and the truth of the conclusion?
+  answer: 4
+  options:
+    - Soundness makes the conclusion likely
+    - Soundness is unrelated to the conclusion
+    - Soundness makes the conclusion possible
+    - Soundness guarantees the conclusion is true
+  hint: 'Sound = valid + true premises. What does validity do with true premises?'
+  walkthrough: |
+    1. Validity ensures true premises yield a true conclusion.
+    2. Soundness provides those true premises.
+    3. Together, the conclusion must be true.
+    4. Soundness guarantees the conclusion is true.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'Why does this argument fail? 1. All cats are dogs. 2. Felix is a cat. 3. Therefore, Felix is a dog.'
+  answer: 2
+  options:
+    - Bad structure (invalid)
+    - 'Bad premise (unsound): premise 1 is false because cats are not dogs'
+    - 'The conclusion is false, making it fail'
+    - Both premises are false
+  hint: Is the structure valid? Then check the premises.
+  walkthrough: |
+    1. Structure: if all cats were dogs and Felix is a cat, Felix would be a dog. Valid.
+    2. Premise 1: all cats are dogs. False; cats and dogs are different species.
+    3. The argument fails because of a false premise, not bad reasoning.
+    4. The argument fails because of a bad premise (unsound): cats are not dogs.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Why does this argument fail? 1. If it snows, schools close. 2. Schools are closed. 3. Therefore, it snowed.'
+  answer: 3
+  options:
+    - 'Bad premise (unsound): premise 1 is false'
+    - Both premises are false
+    - 'Bad structure (invalid): schools could close for other reasons'
+    - The argument does not fail
+  hint: Can both premises be true while the conclusion is false? Think of other reasons schools close.
+  walkthrough: |
+    1. Schools could close for holidays, maintenance, or emergencies besides snow.
+    2. Both premises can be true while the conclusion is false.
+    3. The argument commits the fallacy of affirming the consequent.
+    4. The argument fails because of bad structure (invalid): schools could close for other reasons.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'What is wrong with this argument? 1. All fruits are vegetables. 2. Apples are fruits. 3. Therefore, apples are vegetables.'
+  answer: 1
+  options:
+    - 'Bad premise (unsound): premise 1 is false because fruits and vegetables are different categories'
+    - Bad structure (invalid)
+    - 'The conclusion is false, which makes it invalid'
+    - Both premises are false
+  hint: 'Is the logic valid? Then check if "all fruits are vegetables" is true.'
+  walkthrough: |
+    1. Structure: if all fruits were vegetables and apples are fruits, apples would be vegetables. Valid.
+    2. Premise 1: all fruits are vegetables. False; fruits and vegetables are different categories.
+    3. The argument has valid structure but a false premise.
+    4. The argument fails because of a bad premise: fruits and vegetables are different categories.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Diagnose: 1. I studied hard. 2. Therefore, I passed the exam.'
+  answer: 4
+  options:
+    - 'Bad premise (unsound): premise 1 is false'
+    - The argument is sound
+    - 'Bad premise: studying does not exist'
+    - 'Bad structure (invalid): studying hard does not guarantee passing'
+  hint: Does studying hard logically guarantee passing?
+  walkthrough: |
+    1. Someone can study hard and still fail the exam.
+    2. The premise can be true while the conclusion is false.
+    3. The conclusion does not follow from the premise.
+    4. The argument fails because of bad structure (invalid): studying hard does not guarantee passing.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Why does this argument fail? 1. All planets are stars. 2. Jupiter is a planet. 3. Therefore, Jupiter is a star.'
+  answer: 3
+  options:
+    - Bad structure (invalid)
+    - The conclusion is true
+    - 'Bad premise (unsound): premise 1 is false because planets are not stars'
+    - Both premises are false
+  hint: Is the structure valid? Then check whether planets are stars.
+  walkthrough: |
+    1. Structure: if all planets were stars and Jupiter is a planet, Jupiter would be a star. Valid.
+    2. Premise 1: all planets are stars. False; planets and stars are different types of celestial bodies.
+    3. The argument fails due to a false premise.
+    4. The argument fails because of a bad premise: planets are not stars.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'What type of failure? 1. The sky is blue. 2. Therefore, 2 + 2 = 4.'
+  answer: 1
+  options:
+    - 'Bad structure (invalid): the conclusion does not follow from the premise'
+    - 'Bad premise (unsound): the sky is not always blue'
+    - No failure; both statements are true
+    - Both bad structure and bad premise
+  hint: Does the mathematical conclusion follow from an observation about the sky?
+  walkthrough: |
+    1. The conclusion about arithmetic has no connection to the premise about the sky.
+    2. The premise could be true while the conclusion is false (in a different logical scenario).
+    3. The argument is invalid: the conclusion does not follow.
+    4. The argument fails because of bad structure (invalid): the conclusion does not follow from the premise.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Diagnose: 1. If a shape is a square, it has four sides. 2. This shape has four sides. 3. Therefore, this shape is a square.'
+  answer: 2
+  options:
+    - Bad premise (unsound)
+    - 'Bad structure (invalid): having four sides does not mean it is a square (rectangles also have four sides)'
+    - The argument is sound
+    - Both bad structure and bad premise
+  hint: Can a shape have four sides without being a square?
+  walkthrough: |
+    1. A rectangle has four sides but is not a square.
+    2. Both premises can be true while the conclusion is false.
+    3. The argument affirms the consequent: invalid.
+    4. The argument fails because of bad structure (invalid): rectangles also have four sides.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: An argument has valid structure but a false first premise. How does it fail?
+  answer: 3
+  options:
+    - It fails because of bad structure (invalid)
+    - It does not fail; validity is sufficient
+    - It fails because of a bad premise (unsound)
+    - It fails because the conclusion is false
+  hint: 'Valid structure + false premise = what?'
+  walkthrough: |
+    1. The structure is valid, so the reasoning is correct.
+    2. The first premise is false, so the argument is unsound.
+    3. An argument with valid structure but a false premise is unsound.
+    4. It fails because of a bad premise (unsound).
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Diagnose: 1. All students are tall. 2. Maria is a student. 3. Therefore, Maria is tall.'
+  answer: 4
+  options:
+    - Bad structure (invalid)
+    - The argument is sound
+    - Both premises are false
+    - 'Bad premise (unsound): premise 1 is false because not all students are tall'
+  hint: Is it true that all students are tall?
+  walkthrough: |
+    1. Structure: if all students were tall and Maria is a student, Maria would be tall. Valid.
+    2. Premise 1: all students are tall. False; students come in all heights.
+    3. The argument is valid but unsound.
+    4. The argument fails because of a bad premise: not all students are tall.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Diagnose: 1. If it is a weekday, the store is open. 2. The store is open. 3. Therefore, it is a weekday.'
+  answer: 1
+  options:
+    - 'Bad structure (invalid): the store could be open on weekends too'
+    - 'Bad premise (unsound): stores are not always open on weekdays'
+    - The argument is sound
+    - Both bad structure and bad premise
+  hint: Can the store be open when it is not a weekday?
+  walkthrough: |
+    1. Many stores are also open on weekends.
+    2. Both premises can be true while the conclusion is false.
+    3. The argument affirms the consequent: invalid.
+    4. The argument fails because of bad structure (invalid): the store could be open on weekends.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Diagnose: 1. All mammals breathe air. 2. Sharks breathe air. 3. Therefore, sharks are mammals.'
+  answer: 3
+  options:
+    - 'Bad premise (unsound): premise 1 is false'
+    - The argument is sound
+    - 'Bad structure (invalid): the conclusion does not follow (many non-mammals also breathe air)'
+    - 'Bad premise (unsound): premise 2 is false'
+  hint: 'Does "all A are B" and "X is B" prove "X is A"?'
+  walkthrough: |
+    1. The form is: All A are B. X is B. Therefore X is A. This is affirming the consequent.
+    2. Many non-mammals breathe air, so breathing air does not make something a mammal.
+    3. The argument is invalid regardless of premise truth.
+    4. The argument fails because of bad structure (invalid): many non-mammals also breathe air.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'What is wrong with this argument? 1. All Olympic athletes are over 50. 2. Usain Bolt is an Olympic athlete. 3. Therefore, Usain Bolt is over 50.'
+  answer: 2
+  options:
+    - Bad structure (invalid)
+    - 'Bad premise (unsound): premise 1 is false because many Olympic athletes are under 50'
+    - The argument is sound
+    - Both premises are false
+  hint: Are all Olympic athletes over 50?
+  walkthrough: |
+    1. Structure: if all Olympic athletes were over 50 and Bolt is one, he would be over 50. Valid.
+    2. Premise 1: all Olympic athletes are over 50. False; most compete in their 20s and 30s.
+    3. The argument is valid but unsound.
+    4. The argument fails because of a bad premise: many Olympic athletes are under 50.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Diagnose: 1. If you are in London, you are in England. 2. You are in England. 3. Therefore, you are in London.'
+  answer: 4
+  options:
+    - 'Bad premise (unsound): premise 1 is false'
+    - The argument is sound
+    - 'Bad premise (unsound): premise 2 is false'
+    - 'Bad structure (invalid): you could be in Manchester, Birmingham, or another English city'
+  hint: Can you be in England without being in London?
+  walkthrough: |
+    1. You could be in Manchester, Oxford, or any other English city.
+    2. Both premises can be true while the conclusion is false.
+    3. The argument affirms the consequent: invalid.
+    4. The argument fails because of bad structure (invalid): you could be elsewhere in England.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: 'Diagnose: 1. All books have pages. 2. This object has pages. 3. Therefore, this object is a book.'
+  answer: 3
+  options:
+    - 'Bad premise (unsound): premise 1 is false'
+    - The argument is sound
+    - 'Bad structure (invalid): notebooks and magazines also have pages'
+    - 'Bad premise (unsound): premise 2 is false'
+  hint: Can something have pages without being a book?
+  walkthrough: |
+    1. Notebooks, magazines, and calendars all have pages but are not books.
+    2. Both premises can be true while the conclusion is false.
+    3. The argument affirms the consequent: invalid.
+    4. The argument fails because of bad structure (invalid): notebooks and magazines also have pages.
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: An argument fails because the conclusion is completely unrelated to the premises. Which diagnosis applies?
+  answer: 2
+  options:
+    - Bad premise (unsound)
+    - Bad structure (invalid)
+    - Both bad structure and bad premise
+    - The argument does not fail
+  hint: 'If the conclusion does not follow from the premises, the structure is the problem.'
+  walkthrough: |
+    1. When the conclusion is unrelated to the premises, the premises can be true while the conclusion is false.
+    2. This means the argument is invalid.
+    3. The failure is in the structure, not the premises.
+    4. The diagnosis is bad structure (invalid).
+  tags:
+    - diagnose-failure
+
+- type: mcq
+  question: Does soundness guarantee that the conclusion cannot be false?
+  answer: 3
+  options:
+    - No; only validity matters for the conclusion
+    - No; the conclusion might still be false
+    - Yes; soundness makes it impossible for the conclusion to be false
+    - Only if the argument has exactly two premises
+  hint: 'Sound = valid + all true premises. Can the conclusion escape being true?'
+  walkthrough: |
+    1. Validity ensures: if premises are true, the conclusion must be true.
+    2. Soundness ensures: premises are actually true.
+    3. Together, the conclusion cannot be false.
+    4. Yes: soundness makes it impossible for the conclusion to be false.
+  tags:
+    - sound-true-conclusion
+
+- type: mcq
+  question: 'Which argument is valid but unsound? 1. All deserts are cold. 2. The Sahara is a desert. 3. Therefore, the Sahara is cold.'
+  answer: 4
+  options:
+    - Valid and sound
+    - Invalid and unsound
+    - Valid but unsound; premise 2 is false
+    - Valid but unsound; premise 1 is false (many deserts are hot)
+  hint: Are all deserts cold?
+  walkthrough: |
+    1. Validity: if all deserts were cold and the Sahara is a desert, the Sahara would be cold. Valid.
+    2. Premise 1: all deserts are cold. False; many deserts, including the Sahara, are hot.
+    3. Premise 2: the Sahara is a desert. True.
+    4. The argument is valid but unsound because premise 1 is false.
+  tags:
+    - valid-unsound
+
+- type: mcq
+  question: 'Which premise is false? 1. All rivers flow into the ocean. 2. The Nile is a river. 3. Therefore, the Nile flows into the ocean.'
+  answer: 1
+  options:
+    - Premise 1 (some rivers flow into lakes or dry up)
+    - Premise 2
+    - Both premises
+    - Neither; the argument is sound
+  hint: Do all rivers flow into the ocean? Consider rivers that end in lakes or evaporate.
+  walkthrough: |
+    1. Premise 1: all rivers flow into the ocean. False; some rivers flow into lakes or evaporate in deserts.
+    2. Premise 2: the Nile is a river. True.
+    3. The false premise is premise 1.
+  tags:
+    - valid-unsound

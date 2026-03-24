@@ -1,0 +1,708 @@
+- type: truth-table
+  question: 'Complete the truth table for $P \lor \neg P$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$P \lor \neg P$'
+  hiddenFormulas:
+    - '$P \lor \neg P$'
+  hint: 'Evaluate each row. If all T, it is a tautology.'
+  walkthrough: |
+    1. Row 1: T $\lor$ F = T.
+    2. Row 2: F $\lor$ T = T.
+    3. All rows are T.
+    4. Classification: tautology.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \land \neg P$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$P \land \neg P$'
+  hiddenFormulas:
+    - '$P \land \neg P$'
+  hint: 'If all rows are F, it is a contradiction.'
+  walkthrough: |
+    1. Row 1: T $\land$ F = F.
+    2. Row 2: F $\land$ T = F.
+    3. All rows are F.
+    4. Classification: contradiction.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \to Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \to Q$'
+  hiddenFormulas:
+    - '$P \to Q$'
+  hint: 'If there is a mix of T and F, it is a contingency.'
+  walkthrough: |
+    1. Row 1: T. Row 2: F. Row 3: T. Row 4: T.
+    2. Mix of T and F values.
+    3. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land Q) \to P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$(P \land Q)$'
+    - '$(P \land Q) \to P$'
+  hiddenFormulas:
+    - '$(P \land Q) \to P$'
+  hint: 'If all rows are T, it is a tautology.'
+  walkthrough: |
+    1. Row 1: T$\to$T=T. Rows 2-4: F$\to$P=T (vacuous).
+    2. All rows are T.
+    3. Classification: tautology.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \land \neg Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg Q$'
+    - '$P \land \neg Q$'
+  hiddenFormulas:
+    - '$P \land \neg Q$'
+  hint: Mix of T and F means contingency.
+  walkthrough: |
+    1. Row 1: T$\land$F=F. Row 2: T$\land$T=T.
+    2. Row 3: F$\land$F=F. Row 4: F$\land$T=F.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \to P)$.'
+  formulas:
+    - $P$
+    - '$P \to P$'
+    - '$\neg (P \to P)$'
+  hiddenFormulas:
+    - '$\neg (P \to P)$'
+  hint: '$P \to P$ is always true. What does negating it give?'
+  walkthrough: |
+    1. Row 1: $P \to P$ = T$\to$T = T. $\neg$T = F.
+    2. Row 2: $P \to P$ = F$\to$F = T. $\neg$T = F.
+    3. All rows are F.
+    4. Classification: contradiction.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \lor Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \lor Q$'
+  hiddenFormulas:
+    - '$P \lor Q$'
+  hint: Disjunction is false only when both disjuncts are false.
+  walkthrough: |
+    1. Row 1: T$\lor$T = T. Row 2: T$\lor$F = T.
+    2. Row 3: F$\lor$T = T. Row 4: F$\lor$F = F.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q) \land (Q \to P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \to Q$'
+    - '$Q \to P$'
+    - '$(P \to Q) \land (Q \to P)$'
+  hiddenFormulas:
+    - '$(P \to Q) \land (Q \to P)$'
+  hint: 'Compute each conditional, then conjoin them.'
+  walkthrough: |
+    1. Row 1: T$\to$T=T, T$\to$T=T, T$\land$T=T.
+    2. Row 2: T$\to$F=F, F$\to$T=T, F$\land$T=F.
+    3. Row 3: F$\to$T=T, T$\to$F=F, T$\land$F=F.
+    4. Row 4: F$\to$F=T, F$\to$F=T, T$\land$T=T.
+    5. Mix of T and F. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \lor P$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$\neg P \lor P$'
+  hiddenFormulas:
+    - '$\neg P \lor P$'
+  hint: 'This is a disjunction of $\neg P$ and $P$.'
+  walkthrough: |
+    1. Row 1: F$\lor$T = T.
+    2. Row 2: T$\lor$F = T.
+    3. All rows are T.
+    4. Classification: tautology.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \land Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \land Q$'
+  hiddenFormulas:
+    - '$P \land Q$'
+  hint: Conjunction is true only when both conjuncts are true.
+  walkthrough: |
+    1. Row 1: T$\land$T = T. Row 2: T$\land$F = F.
+    2. Row 3: F$\land$T = F. Row 4: F$\land$F = F.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q) \to P$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \lor Q$'
+    - '$(P \lor Q) \to P$'
+  hiddenFormulas:
+    - '$(P \lor Q) \to P$'
+  hint: A conditional is false only when the antecedent is true and the consequent is false.
+  walkthrough: |
+    1. Row 1: T$\to$T = T. Row 2: T$\to$T = T.
+    2. Row 3: T$\to$F = F. Row 4: F$\to$F = T.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+  hiddenFormulas:
+    - '$\neg P$'
+  hint: Negation flips the truth value.
+  walkthrough: |
+    1. Row 1: $\neg$T = F.
+    2. Row 2: $\neg$F = T.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \to \neg P$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$P \to \neg P$'
+  hiddenFormulas:
+    - '$P \to \neg P$'
+  hint: A conditional is false only when the antecedent is true and the consequent is false.
+  walkthrough: |
+    1. Row 1: T$\to$F = F.
+    2. Row 2: F$\to$T = T.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \land \neg P) \to Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$P \land \neg P$'
+    - '$(P \land \neg P) \to Q$'
+  hiddenFormulas:
+    - '$(P \land \neg P) \to Q$'
+  hint: 'The antecedent $P \land \neg P$ is always false. What happens to a conditional with a false antecedent?'
+  walkthrough: |
+    1. $P \land \neg P$ is F on every row (it is a contradiction).
+    2. A conditional with a false antecedent is true regardless of the consequent.
+    3. So $(P \land \neg P) \to Q$ is T on every row.
+    4. Classification: tautology.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg (P \lor \neg P)$.'
+  formulas:
+    - $P$
+    - '$\neg P$'
+    - '$P \lor \neg P$'
+    - '$\neg (P \lor \neg P)$'
+  hiddenFormulas:
+    - '$\neg (P \lor \neg P)$'
+  hint: '$P \lor \neg P$ is always true. What is the negation of something always true?'
+  walkthrough: |
+    1. $P \lor \neg P$ = T on both rows (tautology).
+    2. $\neg$T = F on both rows.
+    3. All rows are F.
+    4. Classification: contradiction.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \leftrightarrow Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \leftrightarrow Q$'
+  hiddenFormulas:
+    - '$P \leftrightarrow Q$'
+  hint: A biconditional is true when both sides have the same truth value.
+  walkthrough: |
+    1. Row 1: T$\leftrightarrow$T = T. Row 2: T$\leftrightarrow$F = F.
+    2. Row 3: F$\leftrightarrow$T = F. Row 4: F$\leftrightarrow$F = T.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $P \to (Q \to P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$Q \to P$'
+    - '$P \to (Q \to P)$'
+  hiddenFormulas:
+    - '$P \to (Q \to P)$'
+  hint: 'Compute the inner conditional first, then the outer one.'
+  walkthrough: |
+    1. Row 1: Q$\to$P = T$\to$T = T; P$\to$T = T$\to$T = T.
+    2. Row 2: Q$\to$P = F$\to$T = T; P$\to$T = T$\to$T = T.
+    3. Row 3: Q$\to$P = T$\to$F = F; P$\to$F = F$\to$F = T.
+    4. Row 4: Q$\to$P = F$\to$F = T; P$\to$T = F$\to$T = T.
+    5. All rows are T. Classification: tautology.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \lor Q) \land \neg (P \land Q)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \lor Q$'
+    - '$P \land Q$'
+    - '$\neg (P \land Q)$'
+    - '$(P \lor Q) \land \neg (P \land Q)$'
+  hiddenFormulas:
+    - '$(P \lor Q) \land \neg (P \land Q)$'
+  hint: 'This formula is true when exactly one of $P$, $Q$ is true (exclusive or).'
+  walkthrough: |
+    1. Row 1: T$\lor$T=T, T$\land$T=T, $\neg$T=F, T$\land$F=F.
+    2. Row 2: T$\lor$F=T, T$\land$F=F, $\neg$F=T, T$\land$T=T.
+    3. Row 3: F$\lor$T=T, F$\land$T=F, $\neg$F=T, T$\land$T=T.
+    4. Row 4: F$\lor$F=F, F$\land$F=F, $\neg$F=T, F$\land$T=F.
+    5. Mix of T and F. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $(P \to Q) \lor (Q \to P)$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$P \to Q$'
+    - '$Q \to P$'
+    - '$(P \to Q) \lor (Q \to P)$'
+  hiddenFormulas:
+    - '$(P \to Q) \lor (Q \to P)$'
+  hint: At least one of the two conditionals is always true.
+  walkthrough: |
+    1. Row 1: T$\to$T=T, T$\to$T=T, T$\lor$T=T.
+    2. Row 2: T$\to$F=F, F$\to$T=T, F$\lor$T=T.
+    3. Row 3: F$\to$T=T, T$\to$F=F, T$\lor$F=T.
+    4. Row 4: F$\to$F=T, F$\to$F=T, T$\lor$T=T.
+    5. All rows are T. Classification: tautology.
+  tags:
+    - classify-formula
+
+- type: truth-table
+  question: 'Complete the truth table for $\neg P \land \neg Q$.'
+  formulas:
+    - $P$
+    - $Q$
+    - '$\neg P$'
+    - '$\neg Q$'
+    - '$\neg P \land \neg Q$'
+  hiddenFormulas:
+    - '$\neg P \land \neg Q$'
+  hint: 'Both $\neg P$ and $\neg Q$ must be true for the conjunction to be true.'
+  walkthrough: |
+    1. Row 1: F$\land$F=F. Row 2: F$\land$T=F.
+    2. Row 3: T$\land$F=F. Row 4: T$\land$T=T.
+    3. Mix of T and F.
+    4. Classification: contingency.
+  tags:
+    - classify-formula
+
+- type: mcq
+  question: "A formula's main operator column reads: T, T, T, T. What is it?"
+  answer: 1
+  options:
+    - Tautology
+    - Contradiction
+    - Contingency
+    - Cannot be determined
+  hint: All T means true on every row.
+  walkthrough: |
+    1. Every row shows T.
+    2. True on every valuation: tautology.
+    3. The formula is a tautology.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: F, F, F, F. What is it?"
+  answer: 3
+  options:
+    - Tautology
+    - Contingency
+    - Contradiction
+    - A valid argument
+  hint: All F means false on every row.
+  walkthrough: |
+    1. Every row shows F.
+    2. False on every valuation: contradiction.
+    3. The formula is a contradiction.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: T, F, T, T. What is it?"
+  answer: 4
+  options:
+    - Tautology
+    - Contradiction
+    - Neither; it is not a formula
+    - Contingency
+  hint: Mix of T and F values.
+  walkthrough: |
+    1. The column has both T and F values.
+    2. True on some rows, false on others.
+    3. The formula is a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: 'A tautology is:'
+  answer: 2
+  options:
+    - True on some rows and false on others
+    - True on every row of its truth table
+    - False on every row of its truth table
+    - A formula with exactly one sentence letter
+  hint: 'Tautologies are always true, regardless of the valuation.'
+  walkthrough: |
+    1. A tautology produces T in every row of the main operator column.
+    2. No valuation makes it false.
+    3. A tautology is true on every row of its truth table.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: What is a contingency?
+  answer: 1
+  options:
+    - A formula that is true on some rows and false on others
+    - A formula that is true on every row
+    - A formula that is false on every row
+    - A formula with no truth table
+  hint: 'Contingent means "depends on the circumstances."'
+  walkthrough: |
+    1. A contingency is true under some valuations and false under others.
+    2. Its truth value depends on the specific assignment of truth values.
+    3. It is neither always true (tautology) nor always false (contradiction).
+    4. A contingency is a formula that is true on some rows and false on others.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: F, T, F, T. What is it?"
+  answer: 3
+  options:
+    - Tautology
+    - Contradiction
+    - Contingency
+    - Cannot classify without seeing the formula
+  hint: Is there a mix of T and F?
+  walkthrough: |
+    1. The column contains both T and F values.
+    2. The formula is true on some rows and false on others.
+    3. The formula is a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: F, F. What type of formula is it?"
+  answer: 2
+  options:
+    - Tautology
+    - Contradiction
+    - Contingency
+    - Cannot be determined from only two rows
+  hint: Two rows means one sentence letter. All F means?
+  walkthrough: |
+    1. The table has two rows, corresponding to one sentence letter.
+    2. Both rows show F.
+    3. False on every valuation means the formula is a contradiction.
+    4. The formula is a contradiction.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: T, T. What type of formula is it?"
+  answer: 4
+  options:
+    - Contingency
+    - Contradiction
+    - Cannot be determined
+    - Tautology
+  hint: 'Two rows, both T.'
+  walkthrough: |
+    1. The table has two rows (one sentence letter).
+    2. Both rows show T.
+    3. True on every valuation: tautology.
+    4. The formula is a tautology.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: T, F, F, T. What is it?"
+  answer: 1
+  options:
+    - Contingency
+    - Tautology
+    - Contradiction
+    - An equivalence
+  hint: 'Are all values the same, or is there a mix?'
+  walkthrough: |
+    1. The column shows T, F, F, T: a mix of T and F.
+    2. The formula is true on rows 1 and 4, false on rows 2 and 3.
+    3. True on some rows and false on others: contingency.
+    4. The formula is a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: 'If a formula has 3 sentence letters and all 8 rows of its main operator column show T, what is it?'
+  answer: 2
+  options:
+    - Contingency
+    - Tautology
+    - Contradiction
+    - Cannot classify with 8 rows
+  hint: 'All T on every row, regardless of how many rows there are.'
+  walkthrough: |
+    1. Three sentence letters produce $2^3 = 8$ rows.
+    2. All 8 rows show T.
+    3. True on every valuation.
+    4. The formula is a tautology.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: 'Can a formula with 2 sentence letters be a contradiction if its main operator column reads F, F, F, T?'
+  answer: 3
+  options:
+    - Yes; most values are F
+    - Yes; the T could be an error
+    - 'No; a contradiction requires all F, and there is a T on row 4'
+    - No; contradictions only have one sentence letter
+  hint: A contradiction must be false on every row without exception.
+  walkthrough: |
+    1. A contradiction requires F on every row.
+    2. Row 4 shows T, so at least one valuation makes the formula true.
+    3. With a mix of T and F, the formula is a contingency, not a contradiction.
+    4. It is not a contradiction because a T appears in the column.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: F, T, T, F. What is it?"
+  answer: 4
+  options:
+    - Tautology
+    - Contradiction
+    - Cannot be determined
+    - Contingency
+  hint: Check whether all values are the same or mixed.
+  walkthrough: |
+    1. The column has F on rows 1 and 4, T on rows 2 and 3.
+    2. A mix of T and F values.
+    3. The formula is true on some rows and false on others.
+    4. The formula is a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: Which of the following is impossible for a main operator column?
+  answer: 3
+  options:
+    - All T
+    - All F
+    - No values at all (empty column)
+    - A mix of T and F
+  hint: Every formula with at least one sentence letter has at least one row in its truth table.
+  walkthrough: |
+    1. All T is a tautology. All F is a contradiction. A mix is a contingency. All three are valid.
+    2. An empty column would mean zero rows, but any formula has at least $2^n$ rows for $n \geq 0$ sentence letters.
+    3. A truth table always has at least one row (even a formula with no letters has one row).
+    4. An empty column is impossible.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: T, T, F, T, T, T, T, T. What type of formula is this?"
+  answer: 1
+  options:
+    - Contingency
+    - Tautology
+    - Contradiction
+    - Cannot classify with 8 rows
+  hint: Is there even one F in the column?
+  walkthrough: |
+    1. Row 3 shows F; all other rows show T.
+    2. The formula is true on most rows but false on at least one.
+    3. A single F is enough to prevent it from being a tautology.
+    4. The formula is a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: 'If a formula is a tautology, can it also be a contingency?'
+  answer: 2
+  options:
+    - Yes; a tautology is a special kind of contingency
+    - No; every formula falls into exactly one of the three categories
+    - Yes; if it has more than two sentence letters
+    - It depends on the main operator
+  hint: 'Tautology, contradiction, and contingency are mutually exclusive.'
+  walkthrough: |
+    1. A tautology is true on every row. A contingency has at least one T and at least one F.
+    2. These conditions are mutually exclusive: a formula cannot be all T and also have an F.
+    3. Every formula falls into exactly one category.
+    4. A tautology cannot also be a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column has 16 rows, all showing F. What type of formula is it?"
+  answer: 3
+  options:
+    - Tautology
+    - Contingency
+    - Contradiction
+    - Cannot classify; too many rows
+  hint: 16 rows means 4 sentence letters. All F on every row.
+  walkthrough: |
+    1. 16 rows corresponds to 4 sentence letters ($2^4 = 16$).
+    2. Every row shows F.
+    3. The formula is false on every valuation.
+    4. The formula is a contradiction.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: 'A truth table has columns for $P$, $Q$, $\neg Q$, and $P \lor \neg Q$. The $P \lor \neg Q$ column reads T, T, F, T. What is the classification?'
+  answer: 4
+  options:
+    - Tautology
+    - Contradiction
+    - Cannot classify without seeing all columns
+    - Contingency
+  hint: Focus on the main operator column. Is there a mix?
+  walkthrough: |
+    1. The main operator column ($P \lor \neg Q$) reads T, T, F, T.
+    2. There is at least one T and at least one F.
+    3. The formula is true on some rows and false on others.
+    4. The formula is a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: T, T, T, T, T, T, T, T. What type is it?"
+  answer: 1
+  options:
+    - Tautology
+    - Contingency
+    - Contradiction
+    - Cannot classify with 8 rows
+  hint: All T on every row.
+  walkthrough: |
+    1. Every row shows T.
+    2. True on every possible valuation.
+    3. Classification: tautology.
+    4. The formula is a tautology.
+  tags:
+    - diagnostic
+
+- type: mcq
+  question: "A formula's main operator column reads: T, F, F, F. What type of formula is it?"
+  answer: 3
+  options:
+    - Tautology
+    - Contradiction
+    - Contingency
+    - Cannot classify without seeing the formula
+  hint: 'Is there a mix of T and F, or are all values the same?'
+  walkthrough: |
+    1. The column has one T and three F values.
+    2. The formula is true on one row and false on three others.
+    3. A mix of T and F means contingency.
+    4. The formula is a contingency.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: How do you distinguish a contradiction from a contingency by looking at the main operator column?
+  answer: 2
+  options:
+    - Contradictions have more F values than T values
+    - A contradiction has all F; a contingency has at least one T and at least one F
+    - Contradictions have only one sentence letter
+    - There is no way to tell from the column alone
+  hint: The classification depends on whether there are any T values in the column.
+  walkthrough: |
+    1. A contradiction is false on every row: all F, no exceptions.
+    2. A contingency has at least one T and at least one F.
+    3. Even one T in the column means the formula is not a contradiction.
+    4. A contradiction has all F; a contingency has at least one T and at least one F.
+  tags:
+    - classify-from-table
+
+- type: mcq
+  question: "A formula's main operator column reads: F, T. What is it?"
+  answer: 4
+  options:
+    - Tautology
+    - Contradiction
+    - Cannot be determined from two rows
+    - Contingency
+  hint: 'Two rows, one F and one T.'
+  walkthrough: |
+    1. The table has two rows (one sentence letter).
+    2. Row 1 is F, row 2 is T: a mix of values.
+    3. True on one row, false on the other.
+    4. The formula is a contingency.
+  tags:
+    - classify-from-table
